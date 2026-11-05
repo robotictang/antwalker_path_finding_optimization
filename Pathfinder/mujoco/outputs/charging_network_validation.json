@@ -1,0 +1,148 @@
+{
+  "destinations": 6,
+  "charging_stations": 3,
+  "continuous_route_checks": 144,
+  "all_routes_clear": true,
+  "station_choices": [
+    {
+      "origin": [
+        -35.0,
+        -20.0
+      ],
+      "selected": "West service bay",
+      "required": 11.612036340809713,
+      "stations": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 38.04302627200709,
+          "distance_m": 63.68839630428146,
+          "estimated_seconds": 79.18402902754926,
+          "energy_percent": 28.83442101760567,
+          "driving_distance_m": 43.22134857372086,
+          "walking_distance_m": 20.4670477305606,
+          "transformations": 4
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 11.612036340809713,
+          "distance_m": 28.389967863613062,
+          "estimated_seconds": 20.781267337910545,
+          "energy_percent": 7.68962907264777,
+          "driving_distance_m": 28.389967863613062,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 33.71073549488773,
+          "distance_m": 94.85965004500315,
+          "estimated_seconds": 65.87928046754864,
+          "energy_percent": 25.36858839591018,
+          "driving_distance_m": 94.85965004500315,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        }
+      ]
+    },
+    {
+      "origin": [
+        35.0,
+        22.0
+      ],
+      "selected": "East service bay",
+      "required": 16.581994178901557,
+      "stations": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 54.21199544793096,
+          "distance_m": 121.03850718451673,
+          "estimated_seconds": 115.4527291936069,
+          "energy_percent": 41.76959635834477,
+          "driving_distance_m": 105.8475480950826,
+          "walking_distance_m": 15.190959089434147,
+          "transformations": 4
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 34.91501868891329,
+          "distance_m": 99.28769144520497,
+          "estimated_seconds": 66.6277975364267,
+          "energy_percent": 26.33201495113063,
+          "driving_distance_m": 99.28769144520497,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 16.581994178901557,
+          "distance_m": 43.14723056200974,
+          "estimated_seconds": 31.330259357459745,
+          "energy_percent": 11.665595343121245,
+          "driving_distance_m": 43.14723056200974,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        }
+      ]
+    },
+    {
+      "origin": [
+        0.0,
+        -20.0
+      ],
+      "selected": "Central plaza",
+      "required": 17.08811365180666,
+      "stations": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 17.08811365180666,
+          "distance_m": 21.200000047683716,
+          "estimated_seconds": 35.69939396829316,
+          "energy_percent": 12.070490921445325,
+          "driving_distance_m": 10.900000047683717,
+          "walking_distance_m": 10.299999999999999,
+          "transformations": 3
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 38.4055212003161,
+          "distance_m": 54.83710915304401,
+          "estimated_seconds": 81.04434740444282,
+          "energy_percent": 29.12441696025288,
+          "driving_distance_m": 29.898257280834112,
+          "walking_distance_m": 24.938851872209902,
+          "transformations": 5
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 27.627814461297177,
+          "distance_m": 58.30655713875114,
+          "estimated_seconds": 62.83694807147237,
+          "energy_percent": 20.502251569037742,
+          "driving_distance_m": 52.15092955936332,
+          "walking_distance_m": 6.155627579387815,
+          "transformations": 3
+        }
+      ]
+    }
+  ],
+  "insufficient_battery_rejected": true,
+  "all_station_resume_checks": true
+}

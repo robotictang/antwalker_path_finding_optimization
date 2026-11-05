@@ -1,0 +1,9 @@
+Phase,Worlds,Methods,Repeats,Attempts
+Development default,8,4,2,64
+Development alternative,8,4,2,64
+Primary planning,24,12,3,864
+Feature removal,8,3,3,72
+0.5 s budget,4,12,1,48
+1.0 s budget,4,12,1,48
+Assisted physics,6,12,1,72
+Total scheduled,—,—,—,1232

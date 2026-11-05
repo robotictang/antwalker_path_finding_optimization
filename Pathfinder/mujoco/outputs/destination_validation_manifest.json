@@ -1,0 +1,19 @@
+{
+  "model_unchanged_from_walking_only_version": true,
+  "model_sha256": "a52ea57e085b7cbf3422282061929173c9a8f38fe0de558e9544163598c6f34f",
+  "code_sha256": {
+    "safe_navigation.py": "b1e3b340dca2effa8aeb702648bf25dbd9295e29f268fc2e8cc383aab23e16cb",
+    "destination_routing.py": "37680f2520992d67d7395174f72bd8ef08de3fef575d55c26dbc2386b73eb610",
+    "preview_multi_place_mission.py": "9d6e662411696cddab959400c2a056e2c69e623035880814653898ddad9e1cc0"
+  },
+  "validation_reports": [
+    "destination_sequence",
+    "destination_input_validation",
+    "destination_recharge",
+    "destination_arrival_hold",
+    "destination_idle",
+    "destination_planner_validation",
+    "destination_optimality_validation",
+    "destination_blocked_validation"
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "run_id": "20261029T004053387654Z",
+  "focal_method": "proposed_v4",
+  "attempts": 72,
+  "layouts": 8,
+  "repeats": 3,
+  "comparisons": [
+    {
+      "baseline": "proposed_v4_no_polish",
+      "wins": 18,
+      "ties": 3,
+      "losses": 0,
+      "both_rejected": 3,
+      "proposed_only_admitted": 0,
+      "baseline_only_admitted": 0,
+      "paired_admitted_trials": 21,
+      "layouts_with_paired_admission": 7,
+      "mean_layout_score_advantage": 0.011235572617292609,
+      "descriptive_layout_bootstrap_95_percent": [
+        0.005681598460596111,
+        0.016584075251763038
+      ],
+      "mean_relative_score_improvement_percent": 0.9321739264253237,
+      "relative_improvement_95_percent": [
+        0.43788335886845964,
+        1.4165586550584082
+      ],
+      "admission_advantage_pp": 0.0,
+      "admission_advantage_95_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "baseline": "proposed_v4_no_landmarks",
+      "wins": 3,
+      "ties": 12,
+      "losses": 6,
+      "both_rejected": 3,
+      "proposed_only_admitted": 0,
+      "baseline_only_admitted": 0,
+      "paired_admitted_trials": 21,
+      "layouts_with_paired_admission": 7,
+      "mean_layout_score_advantage": 0.0005742696694718433,
+      "descriptive_layout_bootstrap_95_percent": [
+        -0.000429866583927455,
+        0.002275853978768616
+      ],
+      "mean_relative_score_improvement_percent": 0.03215906883637402,
+      "relative_improvement_95_percent": [
+        -0.04226435478325401,
+        0.15250666462362442
+      ],
+      "admission_advantage_pp": 0.0,
+      "admission_advantage_95_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "method": "proposed_v4",
+      "label": "Proposed v4 visibility and continuous refinement",
+      "attempts": 24,
+      "admissible": 21,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.875,
+      "mean_predicted_time_s": 33.84364472878955,
+      "mean_predicted_energy_percent": 14.795018239121346,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 1.2822758680127313,
+      "mean_planning_seconds": 0.4583128210457896
+    },
+    {
+      "method": "proposed_v4_no_polish",
+      "label": "V4 control without continuous polishing",
+      "attempts": 24,
+      "admissible": 21,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.875,
+      "mean_predicted_time_s": 34.15763266550936,
+      "mean_predicted_energy_percent": 14.918454034900146,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 1.293511440630024,
+      "mean_planning_seconds": 0.3988620890983536
+    },
+    {
+      "method": "proposed_v4_no_landmarks",
+      "label": "V4 control without landmark diversification",
+      "attempts": 24,
+      "admissible": 21,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.875,
+      "mean_predicted_time_s": 33.86511017757289,
+      "mean_predicted_energy_percent": 14.802065996680088,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 1.2828501376822032,
+      "mean_planning_seconds": 0.25089167095332715
+    }
+  ],
+  "case_verdicts": [
+    {
+      "case": "heldout_01",
+      "repetition": 1,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 0.9245937250900784,
+      "best_admitted_score": 0.9245937250900784,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_01",
+      "repetition": 2,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 0.9245937250900784,
+      "best_admitted_score": 0.9245937250900784,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_01",
+      "repetition": 3,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 0.9245937250900784,
+      "best_admitted_score": 0.9245937250900784,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_02",
+      "repetition": 1,
+      "world_family": "clutter",
+      "verdict": "Another method scored lower",
+      "proposed_score": 1.0706924896089243,
+      "best_admitted_score": 1.0701769012619238,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_02",
+      "repetition": 2,
+      "world_family": "clutter",
+      "verdict": "Another method scored lower",
+      "proposed_score": 1.0706924896089243,
+      "best_admitted_score": 1.0701769012619238,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_02",
+      "repetition": 3,
+      "world_family": "clutter",
+      "verdict": "Another method scored lower",
+      "proposed_score": 1.0706924896089243,
+      "best_admitted_score": 1.0701769012619238,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_03",
+      "repetition": 1,
+      "world_family": "rough",
+      "verdict": "Another method scored lower",
+      "proposed_score": 0.9609377409500632,
+      "best_admitted_score": 0.959991028250573,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_03",
+      "repetition": 2,
+      "world_family": "rough",
+      "verdict": "Another method scored lower",
+      "proposed_score": 0.9609377409500632,
+      "best_admitted_score": 0.959991028250573,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_03",
+      "repetition": 3,
+      "world_family": "rough",
+      "verdict": "Another method scored lower",
+      "proposed_score": 0.9609377409500632,
+      "best_admitted_score": 0.959991028250573,
+      "best_methods": "proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_04",
+      "repetition": 1,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.3329895260402054,
+      "best_admitted_score": 1.3329895260402054,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_04",
+      "repetition": 2,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.3329895260402054,
+      "best_admitted_score": 1.3329895260402054,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_04",
+      "repetition": 3,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.3329895260402054,
+      "best_admitted_score": 1.3329895260402054,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_05",
+      "repetition": 1,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.117339501972149,
+      "best_admitted_score": 1.117339501972149,
+      "best_methods": "proposed_v4, proposed_v4_no_polish, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_05",
+      "repetition": 2,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.117339501972149,
+      "best_admitted_score": 1.117339501972149,
+      "best_methods": "proposed_v4, proposed_v4_no_polish, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_05",
+      "repetition": 3,
+      "world_family": "open",
+      "verdict": "V4 tied best",
+      "proposed_score": 1.117339501972149,
+      "best_admitted_score": 1.117339501972149,
+      "best_methods": "proposed_v4, proposed_v4_no_polish, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_06",
+      "repetition": 1,
+      "world_family": "clutter",
+      "verdict": "All rejected",
+      "proposed_score": null,
+      "best_admitted_score": null,
+      "best_methods": "",
+      "admitted_methods": 0,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_06",
+      "repetition": 2,
+      "world_family": "clutter",
+      "verdict": "All rejected",
+      "proposed_score": null,
+      "best_admitted_score": null,
+      "best_methods": "",
+      "admitted_methods": 0,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_06",
+      "repetition": 3,
+      "world_family": "clutter",
+      "verdict": "All rejected",
+      "proposed_score": null,
+      "best_admitted_score": null,
+      "best_methods": "",
+      "admitted_methods": 0,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_07",
+      "repetition": 1,
+      "world_family": "rough",
+      "verdict": "V4 best score",
+      "proposed_score": 1.4685883359931802,
+      "best_admitted_score": 1.4685883359931802,
+      "best_methods": "proposed_v4",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_07",
+      "repetition": 2,
+      "world_family": "rough",
+      "verdict": "V4 best score",
+      "proposed_score": 1.4685883359931802,
+      "best_admitted_score": 1.4685883359931802,
+      "best_methods": "proposed_v4",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_07",
+      "repetition": 3,
+      "world_family": "rough",
+      "verdict": "V4 best score",
+      "proposed_score": 1.4685883359931802,
+      "best_admitted_score": 1.4685883359931802,
+      "best_methods": "proposed_v4",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_08",
+      "repetition": 1,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 2.1007897564345193,
+      "best_admitted_score": 2.1007897564345193,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_08",
+      "repetition": 2,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 2.1007897564345193,
+      "best_admitted_score": 2.1007897564345193,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    },
+    {
+      "case": "heldout_08",
+      "repetition": 3,
+      "world_family": "corridor",
+      "verdict": "V4 tied best",
+      "proposed_score": 2.1007897564345193,
+      "best_admitted_score": 2.1007897564345193,
+      "best_methods": "proposed_v4, proposed_v4_no_landmarks",
+      "admitted_methods": 3,
+      "total_methods": 3
+    }
+  ],
+  "interpretation": "Paired modeled balanced scores on jointly admitted trials. All admission differences include scheduled pairs. Descriptive 95% bootstrap intervals resample worlds after averaging paired seeds (5000 resamples, seed 6104). Uncorrected multiple comparisons; no hardware or universal superiority claim."
+}

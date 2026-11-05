@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "capture_sha256": "9b442e7e50e78b580afb774b872bdb867ae1126c5e8e4ea6934e4db2e0e9c097",
+  "source_model_sha256": "d21e094915b6447ab7501d3e76e2685debca4947cd525abc0fc4b054329aafa5",
+  "embedded_once_without_modification_in_docx": true,
+  "pdf_page": 2,
+  "width_inches": 4.5,
+  "docx_effective_ppi": 533.3333333333334,
+  "pdf_effective_ppi": 300.0,
+  "physics_steps": 0,
+  "prior_prose_preserved_except_figure_description_and_figure_renumbering": true,
+  "total_figures": 7
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "baseline": "proposed_v4",
+    "nonzero_worlds": 0,
+    "exact_sign_assignments": 1,
+    "exact_two_sided_p": 1.0,
+    "reported_monte_carlo_p": 1.0
+  },
+  {
+    "baseline": "pso_polished",
+    "nonzero_worlds": 22,
+    "exact_sign_assignments": 4194304,
+    "exact_two_sided_p": 1.621246337890625e-05,
+    "reported_monte_carlo_p": 9.99990000099999e-06
+  },
+  {
+    "baseline": "aco_polished",
+    "nonzero_worlds": 20,
+    "exact_sign_assignments": 1048576,
+    "exact_two_sided_p": 7.82012939453125e-05,
+    "reported_monte_carlo_p": 9.99990000099999e-05
+  }
+]

@@ -1,0 +1,52 @@
+"""A staged, physical roadwork obstruction demonstrates on-route detection/replanning.
+
+The global map initially predates the roadwork; the simulated proximity sensor
+updates it within 8 m. This is an explicit demonstration, not a LiDAR pipeline.
+"""
+import numpy as np
+import mujoco
+from safe_navigation import SafeNavigator
+
+
+class RoadworkDemo:
+    def __init__(self,m,d,enabled=True):
+        self.m=m;self.d=d;self.enabled=enabled;self.placed=False;self.detected=False
+        self.position=None;self.events=[]
+        self.mocap=int(m.body_mocapid[m.body('roadwork_obstacle').id])
+
+    def stage(self,mission,nav):
+        if not self.enabled or self.placed or mission.stage!='preview' or mission.divert:return
+        points=mission.full_route
+        distance=0.
+        candidates=[]
+        for a,b in zip(points,points[1:]):
+            length=float(np.linalg.norm(b-a))
+            for t in np.arange(.5,length,.75):
+                along=distance+t
+                if 9.<along<19. and np.linalg.norm(a+(b-a)*t/length-mission.position)>8.5:
+                    candidates.append(a+(b-a)*t/length)
+            distance+=length
+        # Verify that a safe replacement path exists before staging roadwork.
+        for point in candidates:
+            self.d.mocap_pos[self.mocap]=[*point,0.]
+            mujoco.mj_forward(self.m,self.d)
+            fresh=SafeNavigator(self.m,self.d);fresh.current_mode=nav.current_mode;fresh.force_mode=nav.force_mode
+            try:
+                fresh.plan(mission.position,mission.route[-1],mode=mission.mode,yaw=mission.yaw)
+            except RuntimeError:continue
+            self.placed=True;self.position=point.copy()
+            self.events.append(dict(event='roadwork_staged',time=float(self.d.time),position=point.tolist()))
+            print('Roadwork now occupies the planned lane; local detection updates the map within 8 m.',flush=True)
+            return
+        self.d.mocap_pos[self.mocap]=[100.,100.,0.]
+        mujoco.mj_forward(self.m,self.d)
+        self.placed=True
+        self.events.append(dict(event='roadwork_not_staged',reason='No verified safe detour at candidate positions'))
+
+    def sense(self,mission,nav):
+        if self.position is None or self.detected or np.linalg.norm(mission.position-self.position)>8.:return nav
+        self.detected=True
+        fresh=SafeNavigator(self.m,self.d);fresh.current_mode=nav.current_mode;fresh.force_mode=nav.force_mode
+        mission.navigator=fresh;mission.avoid_obstacle()
+        self.events.append(dict(event='roadwork_detected',time=float(self.d.time),distance_m=float(np.linalg.norm(mission.position-self.position))))
+        return fresh

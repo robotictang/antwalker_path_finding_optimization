@@ -1,0 +1,49 @@
+======================================================================================
+🚀 ADVANCED HYBRID HEXAPOD EXPEDITION: BIOMIMETIC WALKING & EXPANDED BIOMES
+======================================================================================
+🗺️  Mission Architecture (Hub-and-Spoke with Full Perimeter Circuits):
+  • Origin Base Camp [0.0, -20.0]: Staging hub visited after each site scan (NOT charging):
+    Base -> Place 1 (Full 360° Round) -> Base -> Place 2 (Full 360° Round) -> ...
+  • Dedicated Battery Charging Station (Pad [0.0, 1.2]):
+    Low-Battery Override (<= 35% RED) -> Diverts directly via middle entrance [0.0, -4.0]!
+    Dwells until SOLID GREEN 🟢 before departing; NEVER charges at Base Depot!
+🐾 Realistic Biomimetic Hexapod Walking Gait (0.95 Hz):
+  • Smooth cycloid swing trajectory with high knee flex, fluid stance thrust & zero dragging
+🏎️  Silky Smooth Wheel Locomotion:
+  • Contact height z = 0.090m, wheel rotational speed w = v / R strictly synchronized with chassis
+📡 High-Resolution 3D LiDAR Visualization:
+  • 7-Beam high-emission neon cyan laser fan (4.5m range, 90° arc) + ground ripple wave rings
+🎮 INTERACTIVE CONTROLS:
+  • Mouse Drag / Scroll: Free Camera Orbit, Zoom & Pan (Zero Lockout!)
+  • K: Toggle Autonomous Mission <-> Manual Keyboard Drive Mode (Space reserved for viewer pause)
+  • WASD / Arrow Keys: Drive & Steer Robot Manually
+  • M: Toggle Morphing Mode (4-Wheel Drive <-> 6-Legged Walker)
+  • C: Cycle Camera Views (Tracking Chase <-> Overhead Map <-> Close-up)
+  • R: Reset / Realign Robot to Base Depot Apron [0.0, -20.0]
+======================================================================================
+💡 [Step 00001] Battery telemetry update -> EMERALD GREEN 🟢 (Full - 100%) (Charge: 100.0%)
+{
+  "steps": 10,
+  "simulation_seconds": 0.16400000000000012,
+  "battery": 99.99313682476138,
+  "position": [
+    -5.564686419703977e-07,
+    -19.99120838630992,
+    0.23942519610377358
+  ],
+  "phase": 0,
+  "target": 1,
+  "stage": "approach",
+  "corridor_index": 1,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "max_walking_tilt_degrees": 0.0,
+  "minimum_foot_bottom": 1.0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "charge_completed": 0,
+  "visited_places": [],
+  "replans": 1,
+  "finite_state": true,
+  "max_solver_warning": 0
+}

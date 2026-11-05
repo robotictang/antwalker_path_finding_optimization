@@ -1,0 +1,177 @@
+{
+  "kind": "synthetic_reference_validation",
+  "cases": 24,
+  "records": [
+    {
+      "seed": 65000,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65001,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65002,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65003,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65004,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65005,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65006,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65007,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65008,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65009,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65010,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65011,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65012,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65013,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65014,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65015,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65016,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65017,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65018,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65019,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65020,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65021,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    },
+    {
+      "seed": 65022,
+      "exact_candidates": 127,
+      "exact_admitted": true,
+      "label_admitted": true,
+      "score_gap": 0.0
+    },
+    {
+      "seed": 65023,
+      "exact_candidates": 127,
+      "exact_admitted": false,
+      "label_admitted": false,
+      "score_gap": null
+    }
+  ],
+  "mismatches": [],
+  "state": "passed",
+  "scope": "Exhaustive subset enumeration on small additive synthetic graphs only. No optimality certificate for full MuJoCo worlds or bounded large searches."
+}

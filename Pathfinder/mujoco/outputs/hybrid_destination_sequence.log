@@ -1,0 +1,665 @@
+Requested: Place 1 (Pine Forest)
+HYBRID DEMO: 1-4 destinations | M transform | A automatic terrain | P fastest/shortest | C camera | B battery test | 0 charge
+ROUTE READY: Place 1 (Pine Forest) | fastest | 49.2 m | estimated 76 s | 7 segments
+Step 2000: moving, destination Place 1 (Pine Forest), battery 94.8%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 4000: moving, destination Place 1 (Pine Forest), battery 89.2%, contacts 0, route errors 0
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+Requested: Place 2 (Rocky Quarry)
+ROUTE READY: Place 2 (Rocky Quarry) | fastest | 45.0 m | estimated 91 s | 8 segments
+Step 6000: moving, destination Place 2 (Rocky Quarry), battery 85.8%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 8000: moving, destination Place 2 (Rocky Quarry), battery 81.0%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 10000: moving, destination Place 2 (Rocky Quarry), battery 76.7%, contacts 0, route errors 0
+ARRIVED: Place 2 (Rocky Quarry). Waiting for next destination.
+Requested: Place 3 (Mud Marsh)
+ROUTE READY: Place 3 (Mud Marsh) | fastest | 57.9 m | estimated 104 s | 6 segments
+Step 12000: moving, destination Place 3 (Mud Marsh), battery 73.3%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 14000: moving, destination Place 3 (Mud Marsh), battery 69.3%, contacts 0, route errors 0
+Step 16000: moving, destination Place 3 (Mud Marsh), battery 63.2%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 3 (Mud Marsh). Waiting for next destination.
+Requested: Place 4 (Sand Clearing)
+ROUTE READY: Place 4 (Sand Clearing) | fastest | 35.9 m | estimated 70 s | 1 segments
+Step 18000: preview, destination Place 4 (Sand Clearing), battery 59.0%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 20000: moving, destination Place 4 (Sand Clearing), battery 55.2%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 22000: moving, destination Place 4 (Sand Clearing), battery 50.1%, contacts 0, route errors 0
+ARRIVED: Place 4 (Sand Clearing). Waiting for next destination.
+Requested: Place 1 (Pine Forest)
+ROUTE READY: Place 1 (Pine Forest) | fastest | 57.9 m | estimated 99 s | 5 segments
+TRANSFORM: legs -> wheels (stationary)
+Step 24000: moving, destination Place 1 (Pine Forest), battery 46.8%, contacts 0, route errors 0
+Transformation complete: wheels
+Step 26000: moving, destination Place 1 (Pine Forest), battery 41.1%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 28000: moving, destination Place 1 (Pine Forest), battery 35.7%, contacts 0, route errors 0
+Battery priority: route to center charger.
+ROUTE READY: Center charging station | fastest | 45.7 m | estimated 69 s | 7 segments
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 30000: moving, destination Center charging station, battery 32.0%, contacts 0, route errors 0
+Step 32000: moving, destination Center charging station, battery 26.0%, contacts 0, route errors 0
+Arrived at charging station.
+Requested: Place 1 (Pine Forest)
+Battery 100%; charging complete.
+ROUTE READY: Place 1 (Pine Forest) | fastest | 49.8 m | estimated 80 s | 8 segments
+Step 34000: moving, destination Place 1 (Pine Forest), battery 99.6%, contacts 0, route errors 0
+Step 36000: moving, destination Place 1 (Pine Forest), battery 94.3%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 38000: moving, destination Place 1 (Pine Forest), battery 88.8%, contacts 0, route errors 0
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+{
+  "steps": 39033,
+  "simulation_seconds": 624.5280000015258,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 57.407999999995454,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.247269678494185,
+        13.399986038207398
+      ]
+    },
+    {
+      "time": 60.19199999999515,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.247268793854742,
+        13.399986525498052
+      ]
+    },
+    {
+      "time": 104.30400000000819,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.258761260938902,
+        16.021004911224466
+      ]
+    },
+    {
+      "time": 107.08800000000912,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.258751519837222,
+        16.021005518697418
+      ]
+    },
+    {
+      "time": 145.72800000000626,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.5211543285612,
+        12.347758300256784
+      ]
+    },
+    {
+      "time": 148.51200000000472,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.521154936750225,
+        12.347758066297317
+      ]
+    },
+    {
+      "time": 210.9599999999701,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.307637605742132,
+        9.853497828278133
+      ]
+    },
+    {
+      "time": 213.74399999996857,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.307693303246106,
+        9.853504807992223
+      ]
+    },
+    {
+      "time": 265.58399999995686,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.239543326726697,
+        -9.954705270697572
+      ]
+    },
+    {
+      "time": 268.36799999996026,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.239541691223716,
+        -9.954705597813101
+      ]
+    },
+    {
+      "time": 310.32000000001153,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.257557568462964,
+        -10.13125669495762
+      ]
+    },
+    {
+      "time": 313.10400000001493,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.257590162306677,
+        -10.131289174748328
+      ]
+    },
+    {
+      "time": 338.64000000004614,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.237153998459712,
+        -10.03610471368984
+      ]
+    },
+    {
+      "time": 341.42400000004955,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.237152200650591,
+        -10.036103819310119
+      ]
+    },
+    {
+      "time": 383.3600000001008,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.260837919894815,
+        -9.736235511264077
+      ]
+    },
+    {
+      "time": 386.1440000001042,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.260876601488148,
+        -9.736198956438239
+      ]
+    },
+    {
+      "time": 440.19200000017025,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.247246820693713,
+        13.399810637812795
+      ]
+    },
+    {
+      "time": 442.97600000017366,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.247246262719191,
+        13.39981122309476
+      ]
+    },
+    {
+      "time": 467.6640000002038,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.267246026099608,
+        13.59596105552179
+      ]
+    },
+    {
+      "time": 470.44800000020723,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.267234861142448,
+        13.59596770457765
+      ]
+    },
+    {
+      "time": 600.368000000052,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.24727889223515,
+        13.399922199083461
+      ]
+    },
+    {
+      "time": 603.1520000000455,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.247278721340377,
+        13.399922835985004
+      ]
+    }
+  ],
+  "position": [
+    -17.90239459694177,
+    15.977905196952623,
+    0.4937055437299629
+  ],
+  "battery": 86.83279060900563,
+  "visited_places": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "destination": 1,
+      "position": [
+        -17.902304697435195,
+        15.977882528865015
+      ],
+      "error_m": 0.10016763285930093,
+      "travel_seconds": 80.0480000000006,
+      "actual_distance_m": 49.149372479302016,
+      "distance_m": 49.19804173782971,
+      "estimated_seconds": 75.7962051657717,
+      "driving_distance_m": 41.7588347972746,
+      "walking_distance_m": 7.439206940555109,
+      "transformations": 1
+    },
+    {
+      "destination": 2,
+      "position": [
+        17.951717725596765,
+        15.912296973556852
+      ],
+      "error_m": 0.10011492830161091,
+      "travel_seconds": 94.92799999998726,
+      "actual_distance_m": 45.05619033763606,
+      "distance_m": 45.01282322425001,
+      "estimated_seconds": 90.71050908346909,
+      "driving_distance_m": 27.408079432388885,
+      "walking_distance_m": 17.60474379186113,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "position": [
+        -17.8999182846483,
+        -9.999415697643178
+      ],
+      "error_m": 0.100083420989606,
+      "travel_seconds": 107.83999999999597,
+      "actual_distance_m": 57.877915526484,
+      "distance_m": 57.88168485499392,
+      "estimated_seconds": 104.0778075445446,
+      "driving_distance_m": 40.5895761517656,
+      "walking_distance_m": 17.292108703228326,
+      "transformations": 2
+    },
+    {
+      "destination": 4,
+      "position": [
+        17.899800280306156,
+        -10.000470548798246
+      ],
+      "error_m": 0.10020082456195878,
+      "travel_seconds": 71.53600000008743,
+      "actual_distance_m": 35.84882259470657,
+      "distance_m": 35.90015079614331,
+      "estimated_seconds": 70.22664341570677,
+      "driving_distance_m": 21.800000002882577,
+      "walking_distance_m": 14.100150793260728,
+      "transformations": 2
+    },
+    {
+      "destination": 1,
+      "position": [
+        -17.902306169669128,
+        15.977883128604914
+      ],
+      "error_m": 0.10016606453796621,
+      "travel_seconds": 84.92799999980207,
+      "actual_distance_m": 49.912045052507814,
+      "distance_m": 49.824816431123956,
+      "estimated_seconds": 79.7493926139793,
+      "driving_distance_m": 42.38560949056885,
+      "walking_distance_m": 7.439206940555109,
+      "transformations": 1
+    }
+  ],
+  "planned_routes": [
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          -0.25,
+          -11.25
+        ],
+        [
+          -1.5,
+          -9.75
+        ],
+        [
+          -8.0,
+          -9.5
+        ],
+        [
+          -9.5,
+          -8.25
+        ],
+        [
+          -10.25,
+          13.5
+        ],
+        [
+          -11.5,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 49.19804173782971,
+      "estimated_seconds": 75.7962051657717,
+      "driving_distance_m": 41.7588347972746,
+      "walking_distance_m": 7.439206940555109,
+      "transformations": 1
+    },
+    {
+      "destination": 2,
+      "mode": "fastest",
+      "points": [
+        [
+          -17.902393994599763,
+          15.977904794729676
+        ],
+        [
+          -9.0,
+          16.0
+        ],
+        [
+          -6.25,
+          18.75
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          10.5,
+          15.0
+        ],
+        [
+          10.5,
+          12.25
+        ],
+        [
+          12.0,
+          10.75
+        ],
+        [
+          15.0,
+          10.75
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 45.01282322425001,
+      "estimated_seconds": 90.71050908346909,
+      "driving_distance_m": 27.408079432388885,
+      "walking_distance_m": 17.60474379186113,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "fastest",
+      "points": [
+        [
+          17.951830122233424,
+          15.91250068638524
+        ],
+        [
+          15.0,
+          10.75
+        ],
+        [
+          11.25,
+          10.75
+        ],
+        [
+          10.0,
+          9.5
+        ],
+        [
+          9.75,
+          -8.75
+        ],
+        [
+          8.75,
+          -9.75
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 57.88168485499392,
+      "estimated_seconds": 104.0778075445446,
+      "driving_distance_m": 40.5895761517656,
+      "walking_distance_m": 17.292108703228326,
+      "transformations": 2
+    },
+    {
+      "destination": 4,
+      "mode": "fastest",
+      "points": [
+        [
+          -17.900150791396285,
+          -9.999416187168633
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 35.90015079614331,
+      "estimated_seconds": 70.22664341570677,
+      "driving_distance_m": 21.800000002882577,
+      "walking_distance_m": 14.100150793260728,
+      "transformations": 2
+    },
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          17.900089358247307,
+          -10.000470092451724
+        ],
+        [
+          -8.0,
+          -9.5
+        ],
+        [
+          -9.5,
+          -8.25
+        ],
+        [
+          -10.25,
+          13.5
+        ],
+        [
+          -11.5,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 57.89202692774827,
+      "estimated_seconds": 99.31787690586509,
+      "driving_distance_m": 43.45142389615644,
+      "walking_distance_m": 14.440603031591825,
+      "transformations": 2
+    },
+    {
+      "destination": "charger",
+      "mode": "fastest",
+      "points": [
+        [
+          -13.745745437480608,
+          15.036458961821179
+        ],
+        [
+          -10.0,
+          13.5
+        ],
+        [
+          -9.25,
+          -8.75
+        ],
+        [
+          -6.5,
+          -9.75
+        ],
+        [
+          -1.0,
+          -9.5
+        ],
+        [
+          0.0,
+          -8.0
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.2000000476837158
+        ]
+      ],
+      "distance_m": 45.745885313626864,
+      "estimated_seconds": 69.37042275331083,
+      "driving_distance_m": 42.67003860585494,
+      "walking_distance_m": 3.075846707771918,
+      "transformations": 1
+    },
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          -0.00028875650481002997,
+          1.1000399338609028
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          -0.5,
+          -9.0
+        ],
+        [
+          -1.75,
+          -9.75
+        ],
+        [
+          -8.0,
+          -9.5
+        ],
+        [
+          -9.5,
+          -8.25
+        ],
+        [
+          -10.25,
+          13.5
+        ],
+        [
+          -11.5,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 49.824816431123956,
+      "estimated_seconds": 79.7493926139793,
+      "driving_distance_m": 42.38560949056885,
+      "walking_distance_m": 7.439206940555109,
+      "transformations": 1
+    }
+  ],
+  "route_mode": "fastest",
+  "charge_completed": 1,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.004311064534906192,
+  "max_body_tilt_degrees": 0.2141341386202041,
+  "finite_state": true,
+  "solver_warnings": 0
+}

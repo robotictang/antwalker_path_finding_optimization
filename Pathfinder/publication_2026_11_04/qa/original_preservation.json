@@ -1,0 +1,12 @@
+{
+  "original_files_checked": 10659,
+  "original_files_missing": [],
+  "original_bytes_changed": [],
+  "original_readme_preserved_at": "docs/legacy_guides/ORIGINAL_ROOT_README.md",
+  "broken_handoff_symbolic_links": [],
+  "preexisting_broken_symbolic_links": [
+    "outputs/hexapod_journal/qa/render_runtime/root/usr/share/doc/libstdc++6"
+  ],
+  "broken_handoff_document_links": [],
+  "note": "Only root README was intentionally replaced; its original bytes are preserved. Frozen scientific files are compared with the pre-handoff inventory."
+}

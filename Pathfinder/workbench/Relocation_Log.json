@@ -1,0 +1,63 @@
+{
+  "scope": "Asset file locations and XML serialization change only in this portable copy. Original archived XML, Python sources and hashes remain authoritative.",
+  "changes": [
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/meshes/base_link.stl",
+      "relocated": "../meshes/base_link.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/meshes/top_cover.stl",
+      "relocated": "../meshes/top_cover.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/meshes/coxa_link.stl",
+      "relocated": "../meshes/coxa_link.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/meshes/femur_link.stl",
+      "relocated": "../meshes/femur_link.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/meshes/tibia_link.stl",
+      "relocated": "../meshes/tibia_link.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/derived_meshes/rs04_actuator_mujoco.stl",
+      "relocated": "derived_meshes/rs04_actuator_mujoco.stl"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_0.png",
+      "relocated": "textures/road_name_0.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_1.png",
+      "relocated": "textures/road_name_1.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_2.png",
+      "relocated": "textures/road_name_2.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_3.png",
+      "relocated": "textures/road_name_3.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_4.png",
+      "relocated": "textures/road_name_4.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_5.png",
+      "relocated": "textures/road_name_5.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_6.png",
+      "relocated": "textures/road_name_6.png"
+    },
+    {
+      "original": "/home/user123456/Downloads/hexapod_asset/mujoco/textures/road_name_7.png",
+      "relocated": "textures/road_name_7.png"
+    }
+  ],
+  "original_sha256": "626013218c442c54c0132b98ceac08b74aa39dd8f98c79d8157331cda2b2111f",
+  "relocated_sha256": "b0d58004d5e62637899bdec90cf2f3705b0a53ac34228a4c6cf734d6a91c2eef"
+}

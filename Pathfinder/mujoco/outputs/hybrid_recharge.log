@@ -1,0 +1,211 @@
+Requested: Place 2 (Rocky Quarry)
+HYBRID DEMO: 1-4 destinations | M transform | A automatic terrain | P fastest/shortest | C camera | B battery test | 0 charge
+ROUTE READY: Place 2 (Rocky Quarry) | fastest | 47.0 m | estimated 77 s | 9 segments
+Battery priority: route to center charger.
+ROUTE READY: Center charging station | fastest | 14.5 m | estimated 19 s | 3 segments
+Step 2000: moving, destination Center charging station, battery 14.8%, contacts 0, route errors 0
+Arrived at charging station.
+Requested: Place 2 (Rocky Quarry)
+Battery 100%; charging complete.
+ROUTE READY: Place 2 (Rocky Quarry) | fastest | 49.8 m | estimated 84 s | 9 segments
+Step 4000: moving, destination Place 2 (Rocky Quarry), battery 97.1%, contacts 0, route errors 0
+Step 6000: moving, destination Place 2 (Rocky Quarry), battery 91.3%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 8000: moving, destination Place 2 (Rocky Quarry), battery 87.4%, contacts 0, route errors 0
+ARRIVED: Place 2 (Rocky Quarry). Waiting for next destination.
+{
+  "steps": 8390,
+  "simulation_seconds": 134.24000000004995,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 102.44800000000757,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.249273903337913,
+        9.649812644920193
+      ]
+    },
+    {
+      "time": 105.2320000000085,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.24927478427556,
+        9.649813107575268
+      ]
+    }
+  ],
+  "position": [
+    17.955085036374594,
+    15.910758380942323,
+    0.4946301142536289
+  ],
+  "battery": 86.68003533011439,
+  "visited_places": [
+    2
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "destination": 2,
+      "position": [
+        17.95495750415948,
+        15.910502981448582
+      ],
+      "error_m": 0.10019252846962212,
+      "travel_seconds": 89.16800000001581,
+      "actual_distance_m": 49.88082163419688,
+      "distance_m": 49.817210235234775,
+      "estimated_seconds": 84.11617005880315,
+      "driving_distance_m": 39.67519715785231,
+      "walking_distance_m": 10.142013077382476,
+      "transformations": 1
+    }
+  ],
+  "planned_routes": [
+    {
+      "destination": 2,
+      "mode": "fastest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          0.25,
+          -16.25
+        ],
+        [
+          1.25,
+          -12.5
+        ],
+        [
+          4.0,
+          -9.75
+        ],
+        [
+          9.5,
+          -9.0
+        ],
+        [
+          10.0,
+          -8.25
+        ],
+        [
+          10.25,
+          9.75
+        ],
+        [
+          11.25,
+          10.75
+        ],
+        [
+          15.5,
+          11.25
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 47.04373163216355,
+      "estimated_seconds": 77.44309518845647,
+      "driving_distance_m": 36.90171855478108,
+      "walking_distance_m": 10.142013077382476,
+      "transformations": 1
+    },
+    {
+      "destination": "charger",
+      "mode": "fastest",
+      "points": [
+        [
+          1.0471207850224837,
+          -13.195869674772394
+        ],
+        [
+          0.0,
+          -8.75
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.2000000476837158
+        ]
+      ],
+      "distance_m": 14.517517875069494,
+      "estimated_seconds": 19.176041412113154,
+      "driving_distance_m": 14.517517875069494,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "destination": 2,
+      "mode": "fastest",
+      "points": [
+        [
+          0.00026952071135365765,
+          1.1000396106030217
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          -8.75
+        ],
+        [
+          1.5,
+          -10.0
+        ],
+        [
+          9.0,
+          -9.25
+        ],
+        [
+          10.0,
+          -8.25
+        ],
+        [
+          10.25,
+          9.75
+        ],
+        [
+          11.25,
+          10.75
+        ],
+        [
+          15.5,
+          11.25
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 49.817210235234775,
+      "estimated_seconds": 84.11617005880315,
+      "driving_distance_m": 39.67519715785231,
+      "walking_distance_m": 10.142013077382476,
+      "transformations": 1
+    }
+  ],
+  "route_mode": "fastest",
+  "charge_completed": 1,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.008026681594631643,
+  "max_body_tilt_degrees": 0.23357145837895507,
+  "finite_state": true,
+  "solver_warnings": 0
+}

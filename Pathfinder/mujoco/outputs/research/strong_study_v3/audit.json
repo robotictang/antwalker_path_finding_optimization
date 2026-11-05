@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "state": "passed",
+  "attempts": 684,
+  "phase_counts": {
+    "v3_development_default": 48,
+    "v3_development_alternative": 48,
+    "v3_heldout_planning": 432,
+    "v3_heldout_ablations": 96,
+    "v3_old_case_seed_diagnostic": 24,
+    "v3_heldout_physics": 36
+  },
+  "independent_development_worlds": 8,
+  "independent_heldout_worlds": 24,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    "Complete and unique paired trial keys",
+    "Development/held-out world and seed separation",
+    "Archived scientific source hashes and physical model hashes",
+    "Frozen parameter selection and ablation switches",
+    "Recomputed resource admission, common scores and geometric lengths",
+    "Mission success and simulation prediction residuals",
+    "Honest uncalibrated energy status"
+  ],
+  "limits": "Integrity audit only; not external hardware validation, proof of novelty, or a publication guarantee."
+}

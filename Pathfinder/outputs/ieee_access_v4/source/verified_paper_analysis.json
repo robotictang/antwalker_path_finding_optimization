@@ -1,0 +1,403 @@
+{
+  "primary_run": "20261029T003112961474Z",
+  "physics_run": "20261029T004156752175Z",
+  "manifest_sha256": "b90f595d0b1f7f1b7bf565802c47598d31500a5d43b21ab36c86f2b333047ddf",
+  "parameter_sha256": "cec48f1e280922f1ad1f5cb1e8d7af8f21ace9c7f6465d36539ce2d2f720175b",
+  "independent_comparisons": [
+    {
+      "baseline": "b1_distance",
+      "wins": 66,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 10.98923637027015,
+      "relative_ci": [
+        9.191406727650685,
+        13.045131401812716
+      ]
+    },
+    {
+      "baseline": "b2_terrain",
+      "wins": 66,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 10.841306771065195,
+      "relative_ci": [
+        9.34138878017969,
+        12.48961350086701
+      ]
+    },
+    {
+      "baseline": "b3_energy",
+      "wins": 66,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 7.252165119512315,
+      "relative_ci": [
+        5.962326325970812,
+        8.644064085999842
+      ]
+    },
+    {
+      "baseline": "b4_weighted",
+      "wins": 66,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 6.783234323221063,
+      "relative_ci": [
+        5.706177297494017,
+        7.958444090059807
+      ]
+    },
+    {
+      "baseline": "b7_greedy",
+      "wins": 51,
+      "ties": 15,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 2.4564037014782145,
+      "relative_ci": [
+        1.2263821808108033,
+        3.994394171313192
+      ]
+    },
+    {
+      "baseline": "pso",
+      "wins": 51,
+      "ties": 15,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 2.070980387017235,
+      "relative_ci": [
+        0.9071088512214657,
+        3.581197792972933
+      ]
+    },
+    {
+      "baseline": "aco",
+      "wins": 51,
+      "ties": 15,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 2.0667609063064916,
+      "relative_ci": [
+        0.9028358908860151,
+        3.5718115522136658
+      ]
+    },
+    {
+      "baseline": "proposed_v1",
+      "wins": 66,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 7.362606756502699,
+      "relative_ci": [
+        6.067831338695322,
+        8.752399052976326
+      ]
+    },
+    {
+      "baseline": "proposed",
+      "wins": 51,
+      "ties": 15,
+      "both_rejected": 3,
+      "proposed_only_admitted": 3,
+      "relative_percent": 2.0163434414709167,
+      "relative_ci": [
+        0.8556310427983583,
+        3.5356753427253755
+      ]
+    },
+    {
+      "baseline": "pso_polished",
+      "ties": 37,
+      "losses": 10,
+      "both_rejected": 3,
+      "wins": 19,
+      "proposed_only_admitted": 3,
+      "relative_percent": 0.7322672024473511,
+      "relative_ci": [
+        0.04586341971828804,
+        1.7659198424569102
+      ]
+    },
+    {
+      "baseline": "aco_polished",
+      "ties": 34,
+      "losses": 13,
+      "both_rejected": 3,
+      "wins": 19,
+      "proposed_only_admitted": 3,
+      "relative_percent": 0.6884840035925126,
+      "relative_ci": [
+        -0.004768506010996101,
+        1.7291154511795472
+      ]
+    }
+  ],
+  "route_components": [
+    {
+      "method": "b1_distance",
+      "label": "Distance A*",
+      "admitted": 66,
+      "distance_m": 21.39478796431197,
+      "estimated_seconds": 39.944643595456675,
+      "energy_percent": 16.249575886560727,
+      "terrain_exposure": 1.1729082603800804
+    },
+    {
+      "method": "b2_terrain",
+      "label": "Terrain A*",
+      "admitted": 66,
+      "distance_m": 21.607605260463764,
+      "estimated_seconds": 39.0599519832252,
+      "energy_percent": 16.433829506148086,
+      "terrain_exposure": 0.5756944401946364
+    },
+    {
+      "method": "b3_energy",
+      "label": "Energy A*",
+      "admitted": 66,
+      "distance_m": 21.39478796431197,
+      "estimated_seconds": 35.5978760377241,
+      "energy_percent": 15.881639081121541,
+      "terrain_exposure": 1.0754193119202775
+    },
+    {
+      "method": "b4_weighted",
+      "label": "Weighted search",
+      "admitted": 66,
+      "distance_m": 21.486839158214114,
+      "estimated_seconds": 34.74909796678616,
+      "energy_percent": 15.919063279181746,
+      "terrain_exposure": 0.872614116031215
+    },
+    {
+      "method": "b7_greedy",
+      "label": "Greedy shortcut",
+      "admitted": 66,
+      "distance_m": 20.590848090210976,
+      "estimated_seconds": 33.256718230964914,
+      "energy_percent": 15.215345452310347,
+      "terrain_exposure": 0.9191593296848823
+    },
+    {
+      "method": "pso",
+      "label": "PSO",
+      "admitted": 66,
+      "distance_m": 20.52576693500643,
+      "estimated_seconds": 33.12482099280954,
+      "energy_percent": 15.16566793101619,
+      "terrain_exposure": 0.9042039829783356
+    },
+    {
+      "method": "aco",
+      "label": "ACO",
+      "admitted": 66,
+      "distance_m": 20.524607316095203,
+      "estimated_seconds": 33.12386298759314,
+      "energy_percent": 15.16480141776415,
+      "terrain_exposure": 0.9057764417341011
+    },
+    {
+      "method": "proposed_v1",
+      "label": "Grid Pareto",
+      "admitted": 66,
+      "distance_m": 21.39478796431197,
+      "estimated_seconds": 35.70401025449888,
+      "energy_percent": 15.8917990743375,
+      "terrain_exposure": 1.0716741201259605
+    },
+    {
+      "method": "proposed",
+      "label": "Corridor Pareto",
+      "admitted": 66,
+      "distance_m": 20.51754886007407,
+      "estimated_seconds": 33.110431153029026,
+      "energy_percent": 15.15953203709401,
+      "terrain_exposure": 0.9018520969069259
+    },
+    {
+      "method": "pso_polished",
+      "label": "PSO + polish",
+      "admitted": 66,
+      "distance_m": 20.231693194832573,
+      "estimated_seconds": 32.602506204822824,
+      "energy_percent": 14.940472660667922,
+      "terrain_exposure": 0.8767774037248812
+    },
+    {
+      "method": "aco_polished",
+      "label": "ACO + polish",
+      "admitted": 66,
+      "distance_m": 20.223484636848895,
+      "estimated_seconds": 32.59060576444204,
+      "energy_percent": 14.934532266884451,
+      "terrain_exposure": 0.873015112706077
+    },
+    {
+      "method": "proposed_v4",
+      "label": "V4 proposal",
+      "admitted": 69,
+      "distance_m": 19.974708458225937,
+      "estimated_seconds": 32.95717236375866,
+      "energy_percent": 14.780384589081166,
+      "terrain_exposure": 1.0366998854729799
+    }
+  ],
+  "prediction": [
+    {
+      "method": "b1_distance",
+      "n": 5,
+      "time_bias_s": -4.007255037626004,
+      "time_mae_s": 4.007255037626004,
+      "time_rmse_s": 4.187753433674596,
+      "battery_ledger_bias_pp": 0.0375581591682824
+    },
+    {
+      "method": "b2_terrain",
+      "n": 5,
+      "time_bias_s": -4.043367318327835,
+      "time_mae_s": 4.043367318327835,
+      "time_rmse_s": 4.196333514834243,
+      "battery_ledger_bias_pp": 0.032334026279568204
+    },
+    {
+      "method": "b3_energy",
+      "n": 5,
+      "time_bias_s": -1.5497919386924763,
+      "time_mae_s": 1.5497919386924763,
+      "time_rmse_s": 1.635248033945572,
+      "battery_ledger_bias_pp": 0.24322533141737496
+    },
+    {
+      "method": "b4_weighted",
+      "n": 5,
+      "time_bias_s": -1.6364856064594733,
+      "time_mae_s": 1.6364856064594733,
+      "time_rmse_s": 1.681978636349655,
+      "battery_ledger_bias_pp": 0.24533228482559935
+    },
+    {
+      "method": "b7_greedy",
+      "n": 5,
+      "time_bias_s": -1.3533851965085582,
+      "time_mae_s": 1.3533851965085582,
+      "time_rmse_s": 1.4722270342520412,
+      "battery_ledger_bias_pp": 0.25540401925918205
+    },
+    {
+      "method": "pso",
+      "n": 5,
+      "time_bias_s": -1.2888406820074507,
+      "time_mae_s": 1.2888406820074507,
+      "time_rmse_s": 1.3840949370355566,
+      "battery_ledger_bias_pp": 0.2567206211249907
+    },
+    {
+      "method": "aco",
+      "n": 5,
+      "time_bias_s": -1.27390774063134,
+      "time_mae_s": 1.27390774063134,
+      "time_rmse_s": 1.3627568982747604,
+      "battery_ledger_bias_pp": 0.2565963293961957
+    },
+    {
+      "method": "proposed_v1",
+      "n": 5,
+      "time_bias_s": -1.6812715713719577,
+      "time_mae_s": 1.6812715713719577,
+      "time_rmse_s": 1.779973130206808,
+      "battery_ledger_bias_pp": 0.22905616207222473
+    },
+    {
+      "method": "proposed",
+      "n": 5,
+      "time_bias_s": -1.27390774063134,
+      "time_mae_s": 1.27390774063134,
+      "time_rmse_s": 1.3627568982747604,
+      "battery_ledger_bias_pp": 0.2565963293961957
+    },
+    {
+      "method": "pso_polished",
+      "n": 5,
+      "time_bias_s": -1.2335297029061807,
+      "time_mae_s": 1.2335297029061807,
+      "time_rmse_s": 1.327712804210136,
+      "battery_ledger_bias_pp": 0.23916878231960545
+    },
+    {
+      "method": "aco_polished",
+      "n": 5,
+      "time_bias_s": -1.2349049038502542,
+      "time_mae_s": 1.2349049038502542,
+      "time_rmse_s": 1.329772450086333,
+      "battery_ledger_bias_pp": 0.23868582577699088
+    },
+    {
+      "method": "proposed_v4",
+      "n": 5,
+      "time_bias_s": -1.2362921242722826,
+      "time_mae_s": 1.2362921242722826,
+      "time_rmse_s": 1.3306948079865588,
+      "battery_ledger_bias_pp": 0.23908310301578056
+    }
+  ],
+  "case_verdict_counts": {
+    "V4 tied best": 35,
+    "Another method scored lower": 14,
+    "All rejected": 3,
+    "V4 best score": 20
+  },
+  "phase_counts": {
+    "v4_development_default": 64,
+    "v4_development_alternative": 64,
+    "v4_heldout_planning": 864,
+    "v4_heldout_ablations": 72,
+    "v4_budget_0p5": 48,
+    "v4_budget_1p0": 48,
+    "v4_heldout_physics": 72
+  },
+  "attempts": 1232,
+  "preparation_mean_s": 0.7796129647322232,
+  "preparation_range_s": [
+    0.5914301838492975,
+    0.9137876470340416
+  ],
+  "audit": {
+    "version": 4,
+    "state": "passed",
+    "attempts": 1232,
+    "phase_counts": {
+      "v4_development_default": 64,
+      "v4_development_alternative": 64,
+      "v4_heldout_planning": 864,
+      "v4_heldout_ablations": 72,
+      "v4_budget_0p5": 48,
+      "v4_budget_1p0": 48,
+      "v4_heldout_physics": 72
+    },
+    "development_worlds": 8,
+    "heldout_worlds": 24,
+    "unique_routes_collision_checked": 189,
+    "recomputed_continuous_metrics": 756,
+    "errors": [],
+    "warnings": [],
+    "scope": "Internal provenance, geometry, score, budget and protocol audit. Not hardware validation, an optimality certificate or proof of universal superiority."
+  },
+  "source_hashes": {
+    "v4_heldout_physics.json": "27da836a32f4aa8e335219b51a65aa9d8f0bb546c95ec09098de0074b90f2daa",
+    "v4_budget_1p0.json": "4c9f4d50e8bb3608bd90ab40cef02ac93a9921c202f2cfb47697f82b1c516105",
+    "manifest.json": "0bcf3a1d520d2a329649c9e3ef5cc7146a63648e5c7b7b7f073409442ba2dad8",
+    "comparison.json": "fff2e19bb18592b9b8f909e491c2cec2d5d91a5969b88c0f7ba72b7cd313199a",
+    "audit.json": "ec4e8bc0865ab53339810149320ad918f12b59e89820d62086dcc7248cfc5c18",
+    "v4_development_alternative.json": "83533e6e476a1f706c750ad3340471c23f9958cabc8f92eee9646a350bea174b",
+    "v4_development_default.json": "36aa4cd7af178c8fda7a34694c5305a7a6eb9b2b0ece6281e7f0df2b916b2b66",
+    "v4_budget_0p5.json": "6ef4aeea1e374089b1b3c2eede344e3dd69f4b0b7a13120349cf768b13c77671",
+    "ablation_comparison.json": "c9d36c93a4b364848b4bf5589a38c5ad6f579ce4517f58b6ad26c52dda7c83c8",
+    "locked_parameters.json": "0ee49513dc8b7c45e4e274e1211a134bc85b57f6811d843010bad8c3cf6a8b42",
+    "v4_heldout_ablations.json": "c1ab8b362a568d7a67ea418db8632314111bc4cd41b3da11a542eeedf918b67a",
+    "v4_heldout_planning.json": "93a7277e8a128e3b77101d71546e3f96cc8db03cc8fbf1f75fbd27411ae49a90",
+    "study_summary.json": "2d3f847fefe3f9b9908e40732cf58f3ca2e6bd2724c218b7ef6aeaec308ef407",
+    "source_lock.json": "b0574465c860803d707e092590c18eafb5aa9ddaa0041cc58c9b9eefc87c7bc4"
+  }
+}

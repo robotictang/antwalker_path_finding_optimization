@@ -1,0 +1,2170 @@
+Requested: Place 2 (Rocky Quarry)
+HYBRID DEMO: keypad 1-4 destinations | KP5 route | KP6 camera | KP7 transform | KP8 automatic | KP9 battery | KP0 charge | KP decimal cancel. Use the button panel at http://127.0.0.1:8767
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 47.3 m | 88 s | 29.3% energy | budget 77.9% / available 100.0%
+Roadwork now occupies the planned lane; local detection updates the map within 8 m.
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+OBSTACLE DETECTED - braking and planning a safe detour
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 72.3 m | 69 s | 26.0% energy | budget 81.1% / available 98.5%
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 2000: moving, destination Place 2 (Rocky Quarry), battery 91.7%, contacts 0, route errors 0
+Step 4000: moving, destination Place 2 (Rocky Quarry), battery 79.8%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 2 (Rocky Quarry). Waiting for next destination.
+Requested: Place 3 (Mud Marsh)
+ROUTE READY: Place 3 (Mud Marsh) | balanced | 60.4 m | 71 s | 28.8% energy | budget 62.5% / available 71.7%
+ROUTE READY: Place 3 (Mud Marsh) | balanced | 59.6 m | 78 s | 28.9% energy | budget 62.6% / available 70.1%
+Step 6000: moving, destination Place 3 (Mud Marsh), battery 68.9%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 8000: moving, destination Place 3 (Mud Marsh), battery 58.0%, contacts 0, route errors 0
+ROUTE READY: Place 3 (Mud Marsh) | balanced | 21.9 m | 38 s | 15.0% energy | budget 45.2% / available 56.3%
+[NAVIGATION HOLD] Replanning to keep the displayed route collision-free
+ROUTE READY: Place 3 (Mud Marsh) | balanced | 20.9 m | 43 s | 15.6% energy | budget 45.9% / available 55.2%
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 10000: moving, destination Place 3 (Mud Marsh), battery 50.6%, contacts 0, route errors 0
+ARRIVED: Place 3 (Mud Marsh). Waiting for next destination.
+Requested: Place 4 (Sand Clearing)
+INSUFFICIENT TASK ENERGY - need 54.3%, have 40.5%; charging first
+ROUTE READY: Center charging station | energy-to-charger | 28.1 m | 48 s | 16.6% energy | budget 22.7% / available 40.5%
+Step 12000: moving, destination Center charging station, battery 37.2%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Step 14000: moving, destination Center charging station, battery 25.1%, contacts 0, route errors 0
+Transformation complete: wheels
+Arrived at charging station.
+Requested: Place 4 (Sand Clearing)
+CHARGED TO 100% - new route to requested destination
+ROUTE READY: Place 4 (Sand Clearing) | balanced | 28.4 m | 47 s | 15.5% energy | budget 44.7% / available 100.0%
+TRANSFORM: wheels -> legs (stationary)
+Step 16000: moving, destination Place 4 (Sand Clearing), battery 96.8%, contacts 0, route errors 0
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 18000: moving, destination Place 4 (Sand Clearing), battery 85.2%, contacts 0, route errors 0
+ARRIVED: Place 4 (Sand Clearing). Waiting for next destination.
+Requested: Place 1 (Pine Forest)
+ROUTE READY: Place 1 (Pine Forest) | balanced | 63.1 m | 83 s | 30.6% energy | budget 79.4% / available 83.9%
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Step 20000: moving, destination Place 1 (Pine Forest), battery 75.0%, contacts 0, route errors 0
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 22000: moving, destination Place 1 (Pine Forest), battery 62.8%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+{
+  "steps": 23738,
+  "simulation_seconds": 379.8080000003573,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 3.0240000000000022,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        5.784967520714474e-06,
+        -20.000047116276985
+      ]
+    },
+    {
+      "time": 6.608000000000005,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -1.3045946883664477e-05,
+        -20.00008575675639
+      ]
+    },
+    {
+      "time": 20.031999999999567,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        2.2377185024264037,
+        -22.80471705952857
+      ]
+    },
+    {
+      "time": 23.615999999999172,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        2.2376955196370787,
+        -22.804717832791532
+      ]
+    },
+    {
+      "time": 67.72799999999597,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        18.073777427242128,
+        7.432664239548017
+      ]
+    },
+    {
+      "time": 71.31199999999717,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        18.073776868883986,
+        7.432664659386278
+      ]
+    },
+    {
+      "time": 102.30400000000752,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.180802922579067,
+        15.77870757745125
+      ]
+    },
+    {
+      "time": 105.88800000000872,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.180814728658717,
+        15.77870584578334
+      ]
+    },
+    {
+      "time": 150.40000000000367,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -9.922891255440888,
+        2.3135034879520795
+      ]
+    },
+    {
+      "time": 153.98400000000169,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -9.922882913312172,
+        2.3134299041591
+      ]
+    },
+    {
+      "time": 197.4399999999776,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.178952465950923,
+        -9.39778710421757
+      ]
+    },
+    {
+      "time": 201.02399999997562,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.178965556707162,
+        -9.397784682505181
+      ]
+    },
+    {
+      "time": 204.75199999997355,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -6.251992132163072,
+        -9.552268285233515
+      ]
+    },
+    {
+      "time": 208.33599999997156,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -6.251995326729695,
+        -9.552268114755222
+      ]
+    },
+    {
+      "time": 222.6879999999636,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        0.06324033263920674,
+        -6.1750509217191745
+      ]
+    },
+    {
+      "time": 226.27199999996162,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        0.06320505729505209,
+        -6.175062175825599
+      ]
+    },
+    {
+      "time": 252.8479999999469,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -0.14505624727290195,
+        -6.736379591438669
+      ]
+    },
+    {
+      "time": 256.4319999999457,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -0.1450561792851763,
+        -6.73637705866325
+      ]
+    },
+    {
+      "time": 267.0239999999586,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        3.829767221895719,
+        -10.165514044542613
+      ]
+    },
+    {
+      "time": 270.607999999963,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        3.8297404462601943,
+        -10.165561096463472
+      ]
+    },
+    {
+      "time": 276.14399999996976,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.735829689985504,
+        -10.351894574956953
+      ]
+    },
+    {
+      "time": 279.72799999997414,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.73582649152402,
+        -10.351894591657278
+      ]
+    },
+    {
+      "time": 309.4720000000105,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.24950339344274,
+        -8.28824844123467
+      ]
+    },
+    {
+      "time": 313.0560000000149,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.250932363763697,
+        -8.288400008170441
+      ]
+    },
+    {
+      "time": 317.1520000000199,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        9.609474651684005,
+        -5.2885112789784845
+      ]
+    },
+    {
+      "time": 320.73600000002426,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        9.609474700402306,
+        -5.288513478989262
+      ]
+    },
+    {
+      "time": 334.81600000004147,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        9.790819321631194,
+        4.81930658012677
+      ]
+    },
+    {
+      "time": 338.40000000004585,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        9.790869368630196,
+        4.819274044611242
+      ]
+    },
+    {
+      "time": 365.3600000000788,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.715700122989869,
+        16.093852060816584
+      ]
+    },
+    {
+      "time": 368.9440000000832,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.715699653507086,
+        16.093850691692044
+      ]
+    }
+  ],
+  "position": [
+    -17.900273093785632,
+    15.996755059226796,
+    0.49326124359780404
+  ],
+  "battery": 52.13027185617074,
+  "visited_places": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "destination": 2,
+      "position": [
+        17.997232116299344,
+        15.900219623482595
+      ],
+      "error_m": 0.0998187593498107,
+      "travel_seconds": 80.56000000000127,
+      "actual_distance_m": 73.64899417560774,
+      "distance_m": 47.28587002016684,
+      "estimated_seconds": 88.37884110320675,
+      "energy_percent": 29.313641218011462,
+      "driving_distance_m": 20.350846222663694,
+      "walking_distance_m": 26.935023797503142,
+      "transformations": 7
+    },
+    {
+      "destination": 3,
+      "position": [
+        -17.900736563627202,
+        -9.988637554241913
+      ],
+      "error_m": 0.09991163582957681,
+      "travel_seconds": 93.59999999998487,
+      "actual_distance_m": 62.38585318568955,
+      "distance_m": 60.412310198518675,
+      "estimated_seconds": 70.74579864563631,
+      "energy_percent": 28.795156227410292,
+      "driving_distance_m": 35.86952489841654,
+      "walking_distance_m": 24.542785300102132,
+      "transformations": 2
+    },
+    {
+      "destination": 4,
+      "position": [
+        17.90647446944781,
+        -10.035142376271015
+      ],
+      "error_m": 0.09991001689040957,
+      "travel_seconds": 48.080000000035085,
+      "actual_distance_m": 28.542478866089706,
+      "distance_m": 28.381226246344564,
+      "estimated_seconds": 46.683075820332384,
+      "energy_percent": 15.45307274420999,
+      "driving_distance_m": 15.804644396074156,
+      "walking_distance_m": 12.576581850270406,
+      "transformations": 3
+    },
+    {
+      "destination": 1,
+      "position": [
+        -17.90024786530374,
+        15.99675993275458
+      ],
+      "error_m": 0.0998047414315354,
+      "travel_seconds": 86.03200000010514,
+      "actual_distance_m": 63.35946335511813,
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4
+    }
+  ],
+  "mission_events": [
+    {
+      "event": "energy_plan_checked",
+      "time": 0.016,
+      "decision": "feasible",
+      "available_percent": 99.99976,
+      "required_percent": 77.88072917055804,
+      "return_energy_percent": 28.190942118434975,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 29.313641218011462,
+      "predicted_destination_percent": 70.68611878198854
+    },
+    {
+      "event": "obstacle_detected",
+      "time": 7.984000000000006,
+      "position": [
+        0.08535122382520871,
+        -19.193816854311212
+      ]
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 8.592000000000006,
+      "decision": "feasible",
+      "available_percent": 98.53846463727851,
+      "required_percent": 81.06729969389298,
+      "return_energy_percent": 34.0667323258047,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 25.987107429309678,
+      "predicted_destination_percent": 72.55135720796883
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 83.60000000000127,
+      "decision": "feasible",
+      "available_percent": 71.74726240294522,
+      "required_percent": 62.46396312753591,
+      "return_energy_percent": 16.37601427461844,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 28.795156227410292,
+      "predicted_destination_percent": 42.95210617553494
+    },
+    {
+      "event": "roadwork_cleared",
+      "time": 90.00000000000341
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 90.60800000000361,
+      "decision": "feasible",
+      "available_percent": 70.13798245379192,
+      "required_percent": 62.595011476207006,
+      "return_energy_percent": 16.37601427461844,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 28.89999490634716,
+      "predicted_destination_percent": 41.23798754744476
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 133.52000000001303,
+      "decision": "feasible",
+      "available_percent": 56.25627455655353,
+      "required_percent": 45.20163062131422,
+      "return_energy_percent": 16.37601427461844,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 14.985290222432937,
+      "predicted_destination_percent": 41.27098433412059
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 143.82400000000732,
+      "decision": "feasible",
+      "available_percent": 55.24959136810642,
+      "required_percent": 45.94910114768824,
+      "return_energy_percent": 16.37601427461844,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 15.58326664353215,
+      "predicted_destination_percent": 39.666324724574274
+    },
+    {
+      "event": "energy_charging_diversion",
+      "reason": "insufficient_energy",
+      "task_requirement_percent": 54.294989739143276,
+      "time": 180.22399999998714,
+      "battery": 40.54930501636526,
+      "position": [
+        -17.900748517579363,
+        -9.988634131434013
+      ],
+      "resume_destination": 4
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 180.22399999998714,
+      "decision": "charging_route",
+      "available_percent": 40.54930501636526,
+      "required_percent": 22.717073272638807,
+      "route_energy_percent": 16.573658618111047,
+      "return_energy_percent": 0.0,
+      "reserve_percent": 2.0
+    },
+    {
+      "event": "charge_complete",
+      "time": 239.6479999999542,
+      "battery": 100.0,
+      "resume_destination": 4
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 239.6639999999542,
+      "decision": "feasible",
+      "available_percent": 99.99975997418433,
+      "required_percent": 44.7202520407523,
+      "return_energy_percent": 15.523128888391854,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 15.45307274420999,
+      "predicted_destination_percent": 84.54668722997434
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 290.76799999998764,
+      "decision": "feasible",
+      "available_percent": 83.91612214178073,
+      "required_percent": 79.43730819154607,
+      "return_energy_percent": 28.152079020410405,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 30.597767532826442,
+      "predicted_destination_percent": 53.318354608954294
+    }
+  ],
+  "roadwork_events": [
+    {
+      "event": "roadwork_staged",
+      "time": 0.0,
+      "position": [
+        2.3514492570346928,
+        -11.525691719598518
+      ]
+    },
+    {
+      "event": "roadwork_detected",
+      "time": 7.983999999999564,
+      "distance_m": 7.995957939967448
+    },
+    {
+      "event": "roadwork_cleared",
+      "time": 90.00000000001806
+    }
+  ],
+  "route_comparison": {
+    "balanced": {
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4
+    },
+    "shortest": {
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4
+    },
+    "fastest": {
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4
+    },
+    "energy": {
+      "distance_m": 64.23800819646769,
+      "estimated_seconds": 83.41229100080736,
+      "energy_percent": 30.530653227856796,
+      "driving_distance_m": 40.8966880321032,
+      "walking_distance_m": 23.341320164364497,
+      "transformations": 4
+    }
+  },
+  "comparison_paths": {
+    "balanced": [
+      [
+        17.906452038029602,
+        -10.035145516984748
+      ],
+      [
+        12.75,
+        -10.75
+      ],
+      [
+        10.0,
+        -8.0
+      ],
+      [
+        10.0,
+        15.5
+      ],
+      [
+        6.75,
+        18.75
+      ],
+      [
+        -8.0,
+        18.75
+      ],
+      [
+        -10.75,
+        16.0
+      ],
+      [
+        -18.0,
+        16.0
+      ]
+    ],
+    "shortest": [
+      [
+        17.906452038029602,
+        -10.035145516984748
+      ],
+      [
+        12.75,
+        -10.75
+      ],
+      [
+        10.0,
+        -8.0
+      ],
+      [
+        10.0,
+        15.5
+      ],
+      [
+        6.75,
+        18.75
+      ],
+      [
+        -8.0,
+        18.75
+      ],
+      [
+        -10.75,
+        16.0
+      ],
+      [
+        -18.0,
+        16.0
+      ]
+    ],
+    "fastest": [
+      [
+        17.906452038029602,
+        -10.035145516984748
+      ],
+      [
+        12.75,
+        -10.75
+      ],
+      [
+        10.0,
+        -8.0
+      ],
+      [
+        10.0,
+        15.5
+      ],
+      [
+        6.75,
+        18.75
+      ],
+      [
+        -8.0,
+        18.75
+      ],
+      [
+        -10.75,
+        16.0
+      ],
+      [
+        -18.0,
+        16.0
+      ]
+    ],
+    "energy": [
+      [
+        17.906452038029602,
+        -10.035145516984748
+      ],
+      [
+        10.75,
+        -10.75
+      ],
+      [
+        10.0,
+        -10.0
+      ],
+      [
+        10.0,
+        15.5
+      ],
+      [
+        6.75,
+        18.75
+      ],
+      [
+        -8.0,
+        18.75
+      ],
+      [
+        -10.75,
+        16.0
+      ],
+      [
+        -18.0,
+        16.0
+      ]
+    ]
+  },
+  "planned_routes": [
+    {
+      "destination": 2,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          1.0,
+          -13.0
+        ],
+        [
+          3.75,
+          -10.0
+        ],
+        [
+          9.5,
+          -9.0
+        ],
+        [
+          10.0,
+          -8.25
+        ],
+        [
+          10.0,
+          9.5
+        ],
+        [
+          11.25,
+          10.75
+        ],
+        [
+          15.0,
+          10.75
+        ],
+        [
+          16.75,
+          12.75
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99976,
+        "required_percent": 77.88072917055804,
+        "return_energy_percent": 28.190942118434975,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 29.313641218011462,
+        "predicted_destination_percent": 70.68611878198854
+      },
+      "pareto_front": [
+        {
+          "distance_m": 47.28587002016684,
+          "estimated_seconds": 88.37884110320675,
+          "energy_percent": 29.313641218011462,
+          "driving_distance_m": 20.350846222663694,
+          "walking_distance_m": 26.935023797503142,
+          "transformations": 7,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.0,
+              -20.0
+            ],
+            [
+              1.0,
+              -13.0
+            ],
+            [
+              3.75,
+              -10.0
+            ],
+            [
+              9.5,
+              -9.0
+            ],
+            [
+              10.0,
+              -8.25
+            ],
+            [
+              10.0,
+              9.5
+            ],
+            [
+              11.25,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              16.75,
+              12.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.9682752992353386
+        },
+        {
+          "distance_m": 71.48729382831453,
+          "estimated_seconds": 73.09932977440873,
+          "energy_percent": 25.87650021087547,
+          "driving_distance_m": 60.88265313552045,
+          "walking_distance_m": 10.60464069279408,
+          "transformations": 3,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.0,
+              -20.0
+            ],
+            [
+              3.25,
+              -25.0
+            ],
+            [
+              21.25,
+              -25.0
+            ],
+            [
+              27.5,
+              -18.75
+            ],
+            [
+              27.5,
+              -2.0
+            ],
+            [
+              18.0,
+              7.5
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.0348368862888937
+        }
+      ],
+      "distance_m": 47.28587002016684,
+      "estimated_seconds": 88.37884110320675,
+      "energy_percent": 29.313641218011462,
+      "driving_distance_m": 20.350846222663694,
+      "walking_distance_m": 26.935023797503142,
+      "transformations": 7
+    },
+    {
+      "destination": 2,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          0.11553009334178269,
+          -18.97663499928142
+        ],
+        [
+          3.25,
+          -25.0
+        ],
+        [
+          21.25,
+          -25.0
+        ],
+        [
+          27.5,
+          -18.75
+        ],
+        [
+          27.5,
+          -2.0
+        ],
+        [
+          18.0,
+          7.5
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 98.53846463727851,
+        "required_percent": 81.06729969389298,
+        "return_energy_percent": 34.0667323258047,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 25.987107429309678,
+        "predicted_destination_percent": 72.55135720796883
+      },
+      "pareto_front": [
+        {
+          "distance_m": 60.89056329371622,
+          "estimated_seconds": 101.87461871391241,
+          "energy_percent": 36.877816370938554,
+          "driving_distance_m": 24.696845995213184,
+          "walking_distance_m": 36.19371729850303,
+          "transformations": 6,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.11553009334178269,
+              -18.97663499928142
+            ],
+            [
+              3.25,
+              -25.0
+            ],
+            [
+              7.75,
+              -25.0
+            ],
+            [
+              14.25,
+              -16.75
+            ],
+            [
+              14.25,
+              -12.25
+            ],
+            [
+              10.5,
+              -7.25
+            ],
+            [
+              10.0,
+              -4.25
+            ],
+            [
+              10.25,
+              9.75
+            ],
+            [
+              11.25,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              16.75,
+              12.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.1930040065015453
+        },
+        {
+          "distance_m": 72.31399081735012,
+          "estimated_seconds": 69.23618942161959,
+          "energy_percent": 25.987107429309678,
+          "driving_distance_m": 60.69302775508688,
+          "walking_distance_m": 11.620963062263236,
+          "transformations": 2,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.11553009334178269,
+              -18.97663499928142
+            ],
+            [
+              3.25,
+              -25.0
+            ],
+            [
+              21.25,
+              -25.0
+            ],
+            [
+              27.5,
+              -18.75
+            ],
+            [
+              27.5,
+              -2.0
+            ],
+            [
+              18.0,
+              7.5
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.027269241410292
+        }
+      ],
+      "distance_m": 72.31399081735012,
+      "estimated_seconds": 69.23618942161959,
+      "energy_percent": 25.987107429309678,
+      "driving_distance_m": 60.69302775508688,
+      "walking_distance_m": 11.620963062263236,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          17.99722340058227,
+          15.90022475807569
+        ],
+        [
+          9.5,
+          16.0
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          -6.25,
+          18.75
+        ],
+        [
+          -9.75,
+          12.5
+        ],
+        [
+          -9.25,
+          4.0
+        ],
+        [
+          -9.75,
+          -6.0
+        ],
+        [
+          -12.0,
+          -8.0
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 71.74726240294522,
+        "required_percent": 62.46396312753591,
+        "return_energy_percent": 16.37601427461844,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 28.795156227410292,
+        "predicted_destination_percent": 42.95210617553494
+      },
+      "pareto_front": [
+        {
+          "distance_m": 60.412310198518675,
+          "estimated_seconds": 70.74579864563631,
+          "energy_percent": 28.795156227410292,
+          "driving_distance_m": 35.86952489841654,
+          "walking_distance_m": 24.542785300102132,
+          "transformations": 2,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              17.99722340058227,
+              15.90022475807569
+            ],
+            [
+              9.5,
+              16.0
+            ],
+            [
+              6.75,
+              18.75
+            ],
+            [
+              -6.25,
+              18.75
+            ],
+            [
+              -9.75,
+              12.5
+            ],
+            [
+              -9.25,
+              4.0
+            ],
+            [
+              -9.75,
+              -6.0
+            ],
+            [
+              -12.0,
+              -8.0
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.9847163914266696
+        }
+      ],
+      "distance_m": 60.412310198518675,
+      "estimated_seconds": 70.74579864563631,
+      "energy_percent": 28.795156227410292,
+      "driving_distance_m": 35.86952489841654,
+      "walking_distance_m": 24.542785300102132,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          16.248940774298184,
+          16.17107894049005
+        ],
+        [
+          9.75,
+          15.75
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          -6.25,
+          18.75
+        ],
+        [
+          -9.75,
+          15.25
+        ],
+        [
+          -9.75,
+          7.5
+        ],
+        [
+          -9.0,
+          4.5
+        ],
+        [
+          -10.0,
+          2.25
+        ],
+        [
+          -10.0,
+          -6.25
+        ],
+        [
+          -12.25,
+          -8.5
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 70.13798245379192,
+        "required_percent": 62.595011476207006,
+        "return_energy_percent": 16.37601427461844,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 28.89999490634716,
+        "predicted_destination_percent": 41.23798754744476
+      },
+      "pareto_front": [
+        {
+          "distance_m": 57.795500948257114,
+          "estimated_seconds": 98.2249115531398,
+          "energy_percent": 35.9547976528024,
+          "driving_distance_m": 21.48079533979031,
+          "walking_distance_m": 36.31470560846681,
+          "transformations": 6,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              16.248940774298184,
+              16.17107894049005
+            ],
+            [
+              16.75,
+              12.75
+            ],
+            [
+              14.5,
+              10.75
+            ],
+            [
+              11.25,
+              10.75
+            ],
+            [
+              10.0,
+              8.25
+            ],
+            [
+              10.0,
+              -8.5
+            ],
+            [
+              6.5,
+              -9.75
+            ],
+            [
+              -17.25,
+              -9.25
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": false,
+          "score": 1.1485970600681845
+        },
+        {
+          "distance_m": 59.63391224963612,
+          "estimated_seconds": 78.39541498617633,
+          "energy_percent": 28.89999490634716,
+          "driving_distance_m": 36.870053822125435,
+          "walking_distance_m": 22.76385842751069,
+          "transformations": 4,
+          "search_weights": [
+            0.2,
+            0.6,
+            0.2
+          ],
+          "points": [
+            [
+              16.248940774298184,
+              16.17107894049005
+            ],
+            [
+              9.75,
+              15.75
+            ],
+            [
+              6.75,
+              18.75
+            ],
+            [
+              -6.25,
+              18.75
+            ],
+            [
+              -9.75,
+              15.25
+            ],
+            [
+              -9.75,
+              7.5
+            ],
+            [
+              -9.0,
+              4.5
+            ],
+            [
+              -10.0,
+              2.25
+            ],
+            [
+              -10.0,
+              -6.25
+            ],
+            [
+              -12.25,
+              -8.5
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.0090238583502327
+        }
+      ],
+      "distance_m": 59.63391224963612,
+      "estimated_seconds": 78.39541498617633,
+      "energy_percent": 28.89999490634716,
+      "driving_distance_m": 36.870053822125435,
+      "walking_distance_m": 22.76385842751069,
+      "transformations": 4
+    },
+    {
+      "destination": 3,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -9.451116869555213,
+          6.079033604013004
+        ],
+        [
+          -9.25,
+          6.25
+        ],
+        [
+          -9.75,
+          -5.0
+        ],
+        [
+          -13.0,
+          -9.25
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 56.25627455655353,
+        "required_percent": 45.20163062131422,
+        "return_energy_percent": 16.37601427461844,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 14.985290222432937,
+        "predicted_destination_percent": 41.27098433412059
+      },
+      "pareto_front": [
+        {
+          "distance_m": 21.93124134030171,
+          "estimated_seconds": 37.52242737202844,
+          "energy_percent": 14.985290222432937,
+          "driving_distance_m": 4.418061710296192,
+          "walking_distance_m": 17.51317963000552,
+          "transformations": 1,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -9.451116869555213,
+              6.079033604013004
+            ],
+            [
+              -9.25,
+              6.25
+            ],
+            [
+              -9.75,
+              -5.0
+            ],
+            [
+              -13.0,
+              -9.25
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.4516834535254456
+        }
+      ],
+      "distance_m": 21.93124134030171,
+      "estimated_seconds": 37.52242737202844,
+      "energy_percent": 14.985290222432937,
+      "driving_distance_m": 4.418061710296192,
+      "walking_distance_m": 17.51317963000552,
+      "transformations": 1
+    },
+    {
+      "destination": 3,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -8.79575221125774,
+          5.127712856860683
+        ],
+        [
+          -10.0,
+          2.25
+        ],
+        [
+          -10.0,
+          -6.25
+        ],
+        [
+          -13.0,
+          -9.25
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 55.24959136810642,
+        "required_percent": 45.94910114768824,
+        "return_energy_percent": 16.37601427461844,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 15.58326664353215,
+        "predicted_destination_percent": 39.666324724574274
+      },
+      "pareto_front": [
+        {
+          "distance_m": 20.91810404096497,
+          "estimated_seconds": 43.257092692994995,
+          "energy_percent": 15.58326664353215,
+          "driving_distance_m": 3.34023692792517,
+          "walking_distance_m": 17.5778671130398,
+          "transformations": 3,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              -8.79575221125774,
+              5.127712856860683
+            ],
+            [
+              -10.0,
+              2.25
+            ],
+            [
+              -10.0,
+              -6.25
+            ],
+            [
+              -13.0,
+              -9.25
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.47281288850862363
+        }
+      ],
+      "distance_m": 20.91810404096497,
+      "estimated_seconds": 43.257092692994995,
+      "energy_percent": 15.58326664353215,
+      "driving_distance_m": 3.34023692792517,
+      "walking_distance_m": 17.5778671130398,
+      "transformations": 3
+    },
+    {
+      "destination": "charger",
+      "mode": "energy",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -17.900748517579363,
+          -9.988634131434013
+        ],
+        [
+          -14.5,
+          -9.25
+        ],
+        [
+          -1.25,
+          -9.75
+        ],
+        [
+          0.0,
+          -8.0
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.2000000476837158
+        ]
+      ],
+      "energy_budget": {
+        "decision": "charging_route",
+        "available_percent": 40.54930501636526,
+        "required_percent": 22.717073272638807,
+        "route_energy_percent": 16.573658618111047,
+        "return_energy_percent": 0.0,
+        "reserve_percent": 2.0
+      },
+      "pareto_front": [
+        {
+          "distance_m": 28.09005088706058,
+          "estimated_seconds": 48.33145528441519,
+          "energy_percent": 16.573658618111047,
+          "driving_distance_m": 12.90341641822299,
+          "walking_distance_m": 15.18663446883759,
+          "transformations": 3,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -17.900748517579363,
+              -9.988634131434013
+            ],
+            [
+              -14.5,
+              -9.25
+            ],
+            [
+              -1.25,
+              -9.75
+            ],
+            [
+              0.0,
+              -8.0
+            ],
+            [
+              0.0,
+              -4.0
+            ],
+            [
+              0.0,
+              1.2000000476837158
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.5524552872703682
+        }
+      ],
+      "distance_m": 28.09005088706058,
+      "estimated_seconds": 48.33145528441519,
+      "energy_percent": 16.573658618111047,
+      "driving_distance_m": 12.90341641822299,
+      "walking_distance_m": 15.18663446883759,
+      "transformations": 3
+    },
+    {
+      "destination": 4,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -0.002298386134932317,
+          1.1001636940190942
+        ],
+        [
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          -8.75
+        ],
+        [
+          1.5,
+          -10.0
+        ],
+        [
+          16.25,
+          -10.5
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99975997418433,
+        "required_percent": 44.7202520407523,
+        "return_energy_percent": 15.523128888391854,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 15.45307274420999,
+        "predicted_destination_percent": 84.54668722997434
+      },
+      "pareto_front": [
+        {
+          "distance_m": 28.381226246344564,
+          "estimated_seconds": 46.683075820332384,
+          "energy_percent": 15.45307274420999,
+          "driving_distance_m": 15.804644396074156,
+          "walking_distance_m": 12.576581850270406,
+          "transformations": 3,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -0.002298386134932317,
+              1.1001636940190942
+            ],
+            [
+              0.0,
+              -4.0
+            ],
+            [
+              0.0,
+              -8.75
+            ],
+            [
+              1.5,
+              -10.0
+            ],
+            [
+              16.25,
+              -10.5
+            ],
+            [
+              18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.5338092640606762
+        }
+      ],
+      "distance_m": 28.381226246344564,
+      "estimated_seconds": 46.683075820332384,
+      "energy_percent": 15.45307274420999,
+      "driving_distance_m": 15.804644396074156,
+      "walking_distance_m": 12.576581850270406,
+      "transformations": 3
+    },
+    {
+      "destination": 1,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          17.906452038029602,
+          -10.035145516984748
+        ],
+        [
+          12.75,
+          -10.75
+        ],
+        [
+          10.0,
+          -8.0
+        ],
+        [
+          10.0,
+          15.5
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          -8.0,
+          18.75
+        ],
+        [
+          -10.75,
+          16.0
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 83.91612214178073,
+        "required_percent": 79.43730819154607,
+        "return_energy_percent": 28.152079020410405,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 30.597767532826442,
+        "predicted_destination_percent": 53.318354608954294
+      },
+      "pareto_front": [
+        {
+          "distance_m": 58.75897858268428,
+          "estimated_seconds": 96.35535599819342,
+          "energy_percent": 34.65979427557432,
+          "driving_distance_m": 25.791618763290174,
+          "walking_distance_m": 32.967359819394105,
+          "transformations": 6,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              17.906452038029602,
+              -10.035145516984748
+            ],
+            [
+              10.25,
+              -10.75
+            ],
+            [
+              1.25,
+              -9.75
+            ],
+            [
+              -8.25,
+              -9.75
+            ],
+            [
+              -9.5,
+              -8.25
+            ],
+            [
+              -9.75,
+              3.5
+            ],
+            [
+              -9.0,
+              4.75
+            ],
+            [
+              -10.5,
+              14.0
+            ],
+            [
+              -13.5,
+              15.75
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": false,
+          "score": 1.1337070380509187
+        },
+        {
+          "distance_m": 63.08013610241063,
+          "estimated_seconds": 83.35475441541082,
+          "energy_percent": 30.597767532826442,
+          "driving_distance_m": 38.95807358037436,
+          "walking_distance_m": 24.122062522036266,
+          "transformations": 4,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              17.906452038029602,
+              -10.035145516984748
+            ],
+            [
+              12.75,
+              -10.75
+            ],
+            [
+              10.0,
+              -8.0
+            ],
+            [
+              10.0,
+              15.5
+            ],
+            [
+              6.75,
+              18.75
+            ],
+            [
+              -8.0,
+              18.75
+            ],
+            [
+              -10.75,
+              16.0
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.06923074814159
+        },
+        {
+          "distance_m": 64.23800819646769,
+          "estimated_seconds": 83.41229100080736,
+          "energy_percent": 30.530653227856796,
+          "driving_distance_m": 40.8966880321032,
+          "walking_distance_m": 23.341320164364497,
+          "transformations": 4,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              17.906452038029602,
+              -10.035145516984748
+            ],
+            [
+              10.75,
+              -10.75
+            ],
+            [
+              10.0,
+              -10.0
+            ],
+            [
+              10.0,
+              15.5
+            ],
+            [
+              6.75,
+              18.75
+            ],
+            [
+              -8.0,
+              18.75
+            ],
+            [
+              -10.75,
+              16.0
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.0764172794000726
+        }
+      ],
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4
+    }
+  ],
+  "route_mode": "balanced",
+  "charge_completed": 1,
+  "minimum_battery_percent": 23.09084975452517,
+  "energy_consumed_percent": 124.77887838930504,
+  "energy_charged_percent": 76.90915024547483,
+  "energy_status": {
+    "decision": "feasible",
+    "available_percent": 52.17698400765395,
+    "required_percent": 41.4695740895469,
+    "return_energy_percent": 28.152079020410405,
+    "reserve_percent": 6.0,
+    "route_energy_percent": 0.2235802512271149,
+    "predicted_destination_percent": 51.95340375642684
+  },
+  "pareto_front": [
+    {
+      "distance_m": 58.75897858268428,
+      "estimated_seconds": 96.35535599819342,
+      "energy_percent": 34.65979427557432,
+      "driving_distance_m": 25.791618763290174,
+      "walking_distance_m": 32.967359819394105,
+      "transformations": 6,
+      "search_weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "points": [
+        [
+          17.906452038029602,
+          -10.035145516984748
+        ],
+        [
+          10.25,
+          -10.75
+        ],
+        [
+          1.25,
+          -9.75
+        ],
+        [
+          -8.25,
+          -9.75
+        ],
+        [
+          -9.5,
+          -8.25
+        ],
+        [
+          -9.75,
+          3.5
+        ],
+        [
+          -9.0,
+          4.75
+        ],
+        [
+          -10.5,
+          14.0
+        ],
+        [
+          -13.5,
+          15.75
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "energy_feasible": false,
+      "score": 1.1337070380509187
+    },
+    {
+      "distance_m": 63.08013610241063,
+      "estimated_seconds": 83.35475441541082,
+      "energy_percent": 30.597767532826442,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.122062522036266,
+      "transformations": 4,
+      "search_weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "points": [
+        [
+          17.906452038029602,
+          -10.035145516984748
+        ],
+        [
+          12.75,
+          -10.75
+        ],
+        [
+          10.0,
+          -8.0
+        ],
+        [
+          10.0,
+          15.5
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          -8.0,
+          18.75
+        ],
+        [
+          -10.75,
+          16.0
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "energy_feasible": true,
+      "score": 1.06923074814159
+    },
+    {
+      "distance_m": 64.23800819646769,
+      "estimated_seconds": 83.41229100080736,
+      "energy_percent": 30.530653227856796,
+      "driving_distance_m": 40.8966880321032,
+      "walking_distance_m": 23.341320164364497,
+      "transformations": 4,
+      "search_weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "points": [
+        [
+          17.906452038029602,
+          -10.035145516984748
+        ],
+        [
+          10.75,
+          -10.75
+        ],
+        [
+          10.0,
+          -10.0
+        ],
+        [
+          10.0,
+          15.5
+        ],
+        [
+          6.75,
+          18.75
+        ],
+        [
+          -8.0,
+          18.75
+        ],
+        [
+          -10.75,
+          16.0
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "energy_feasible": true,
+      "score": 1.0764172794000726
+    }
+  ],
+  "objective_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 1,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.0022068208649786286,
+  "minimum_foot_surface_clearance": -0.001449371681926534,
+  "max_speed_mps": 1.6499999999999735,
+  "max_body_tilt_degrees": 0.487105245102399,
+  "finite_state": true,
+  "solver_warnings": 0
+}

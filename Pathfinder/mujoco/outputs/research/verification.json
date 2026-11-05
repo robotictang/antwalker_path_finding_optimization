@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-28T01:06:37.187745+00:00",
+  "benchmark_run": "20261028T010224323054Z",
+  "attempts": 9,
+  "physics_executions": 6,
+  "successful_missions": 6,
+  "gait_trials": 30,
+  "source_hashes_match": {
+    "research/planning.py": true,
+    "research/swarm.py": true,
+    "research/execution.py": true,
+    "research/telemetry.py": true,
+    "research/run.py": true,
+    "tripod_gait.py": true,
+    "hybrid_locomotion.py": true,
+    "safe_navigation.py": true,
+    "energy_model.py": true,
+    "terrain_profile.py": true,
+    "terrain_classes.py": true,
+    "road_demo.py": true,
+    "multi_place_config.py": true,
+    "hybrid_hexapod_multi_place.xml": true
+  },
+  "unique_case_method_pairs": true,
+  "battery_and_deadline_checks_recomputed": true,
+  "summaries_and_csv_reconciled": true,
+  "physics_penetrations": 0,
+  "terrain_speed_violations": 0,
+  "solver_warnings": 0,
+  "unit_tests_passed": 8,
+  "existing_energy_guard_tests": "passed in preceding implementation; unchanged",
+  "web_build": "passed protected content and compiled runtime checks",
+  "web_api_checks": "HTTP 200 console assets results references gait comparison and snapshot; same-origin job launch 202; cross-origin POST rejected 403; job completion and automatic build observed",
+  "browser_visual_review": "unavailable: CUA reported no available browsers; no visual browser acceptance claimed",
+  "study_limits": [
+    "Three paired scenarios on one underlying scene, not independent maps.",
+    "No statistical superiority claim.",
+    "Original gait calibration was not recorded with automatic source snapshots; rerun for a fully versioned calibration study."
+  ]
+}

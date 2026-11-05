@@ -1,0 +1,30 @@
+Audited v5_development_default
+Audited v5_development_alternative
+Audited v5_fresh_planning
+Audited v5_feature_ablations
+Audited v5_budget_0p5
+Audited v5_budget_1p0
+Audited v5_candidate_cap80
+Audited v5_physics_assistance_1p0
+Audited v5_physics_assistance_0p5
+{
+  "state": "passed",
+  "attempts": 800,
+  "phase_counts": {
+    "v5_development_default": 32,
+    "v5_development_alternative": 32,
+    "v5_fresh_planning": 384,
+    "v5_feature_ablations": 128,
+    "v5_budget_0p5": 32,
+    "v5_budget_1p0": 32,
+    "v5_candidate_cap80": 64,
+    "v5_physics_assistance_1p0": 48,
+    "v5_physics_assistance_0p5": 48
+  },
+  "unique_routes_collision_checked": 143,
+  "recomputed_metrics": 572,
+  "physics_executions": 92,
+  "errors": [],
+  "warnings": [],
+  "scope": "Internal protocol, archived provenance, geometry, resource and numerical validation; no hardware or electrical validation"
+}

@@ -1,0 +1,24 @@
+{
+  "pulsing_red_verified": true,
+  "five_bar_gauge_verified": true,
+  "charging_amber_verified": true,
+  "full_green_verified": true,
+  "red_rgba": [
+    1.0,
+    0.02500000037252903,
+    0.014999999664723873,
+    1.0
+  ],
+  "amber_rgba": [
+    1.0,
+    0.6000000238418579,
+    0.029999999329447746,
+    1.0
+  ],
+  "green_rgba": [
+    0.05999999865889549,
+    1.0,
+    0.20000000298023224,
+    1.0
+  ]
+}

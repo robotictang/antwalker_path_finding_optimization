@@ -1,0 +1,382 @@
+{
+  "version": 3,
+  "manifest_sha256": "6f6d75052a5bb9210300e4af43af07fcddd5c1d52a26c0cb74191e1a96f47a50",
+  "selection": {
+    "chosen": {
+      "pso": "alternative",
+      "aco": "default",
+      "proposed": "default"
+    },
+    "parameters": {
+      "pso": {
+        "particles": 24,
+        "inertia": 0.55,
+        "cognitive": 1.7,
+        "social": 1.3,
+        "velocity_clip": 0.25,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "aco": {
+        "ants": 12,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "evaporation": 0.2,
+        "deposit": 1.0,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "proposed": {
+        "beam_width": 6,
+        "labels_per_state": 8,
+        "archive_size": 16,
+        "max_evaluations": 240,
+        "portfolio": true
+      },
+      "b7_greedy": {
+        "initial_evaluations_per_corridor": 2,
+        "seed_portfolio": true
+      }
+    },
+    "sha256": "3ee0a43a6b219a5f62ea98b857b142f8043817e7ef49e51f1c95293a19090a91",
+    "manifest_sha256": "6f6d75052a5bb9210300e4af43af07fcddd5c1d52a26c0cb74191e1a96f47a50"
+  },
+  "planning_report": {
+    "run_id": "20261028T065751941702Z",
+    "attempts": 432,
+    "layouts": 24,
+    "repeats": 3,
+    "comparisons": [
+      {
+        "baseline": "b1_distance",
+        "wins": 60,
+        "ties": 3,
+        "losses": 0,
+        "both_rejected": 6,
+        "proposed_only_admitted": 3,
+        "baseline_only_admitted": 0,
+        "paired_admitted_trials": 63,
+        "layouts_with_paired_admission": 21,
+        "mean_layout_score_advantage": 0.13398320524093124,
+        "descriptive_layout_bootstrap_95_percent": [
+          0.10176892002057991,
+          0.16475719751894427
+        ],
+        "admission_advantage_pp": 4.166666666666666,
+        "admission_advantage_95_pp": [
+          0.0,
+          12.5
+        ]
+      },
+      {
+        "baseline": "b3_energy",
+        "wins": 63,
+        "ties": 3,
+        "losses": 0,
+        "both_rejected": 6,
+        "proposed_only_admitted": 0,
+        "baseline_only_admitted": 0,
+        "paired_admitted_trials": 66,
+        "layouts_with_paired_admission": 22,
+        "mean_layout_score_advantage": 0.06960763734043018,
+        "descriptive_layout_bootstrap_95_percent": [
+          0.053369890565968754,
+          0.08609936662714987
+        ],
+        "admission_advantage_pp": 0.0,
+        "admission_advantage_95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "baseline": "b7_greedy",
+        "wins": 30,
+        "ties": 36,
+        "losses": 0,
+        "both_rejected": 6,
+        "proposed_only_admitted": 0,
+        "baseline_only_admitted": 0,
+        "paired_admitted_trials": 66,
+        "layouts_with_paired_admission": 22,
+        "mean_layout_score_advantage": 0.006767434549922554,
+        "descriptive_layout_bootstrap_95_percent": [
+          0.001708549773887093,
+          0.013553588282831328
+        ],
+        "admission_advantage_pp": 0.0,
+        "admission_advantage_95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "baseline": "pso",
+        "wins": 3,
+        "ties": 63,
+        "losses": 0,
+        "both_rejected": 6,
+        "proposed_only_admitted": 0,
+        "baseline_only_admitted": 0,
+        "paired_admitted_trials": 66,
+        "layouts_with_paired_admission": 22,
+        "mean_layout_score_advantage": 0.0002447158582838983,
+        "descriptive_layout_bootstrap_95_percent": [
+          0.0,
+          0.0007339043158130516
+        ],
+        "admission_advantage_pp": 0.0,
+        "admission_advantage_95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "baseline": "aco",
+        "wins": 9,
+        "ties": 57,
+        "losses": 0,
+        "both_rejected": 6,
+        "proposed_only_admitted": 0,
+        "baseline_only_admitted": 0,
+        "paired_admitted_trials": 66,
+        "layouts_with_paired_admission": 22,
+        "mean_layout_score_advantage": 0.0004225935227559695,
+        "descriptive_layout_bootstrap_95_percent": [
+          7.297771158891337e-07,
+          0.0010376938552112214
+        ],
+        "admission_advantage_pp": 0.0,
+        "admission_advantage_95_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "summary": [
+      {
+        "method": "b1_distance",
+        "label": "B1 Distance A*",
+        "attempts": 72,
+        "admissible": 63,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.875,
+        "mean_predicted_time_s": 36.7077002821136,
+        "mean_predicted_energy_percent": 15.189221267476878,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.3201883335521893,
+        "mean_planning_seconds": 0.027933952018631518
+      },
+      {
+        "method": "b3_energy",
+        "label": "B3 Energy A*",
+        "attempts": 72,
+        "admissible": 66,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.9166666666666666,
+        "mean_predicted_time_s": 33.701738426356904,
+        "mean_predicted_energy_percent": 15.577936944563183,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.3218961277464225,
+        "mean_planning_seconds": 0.04515300500982752
+      },
+      {
+        "method": "b7_greedy",
+        "label": "B7 Energy + greedy shortcut",
+        "attempts": 72,
+        "admissible": 66,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.9166666666666666,
+        "mean_predicted_time_s": 31.856355838192073,
+        "mean_predicted_energy_percent": 14.857482450627627,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.2590559249559148,
+        "mean_planning_seconds": 0.15291550937723108
+      },
+      {
+        "method": "pso",
+        "label": "B5 PSO with safe A* seed",
+        "attempts": 72,
+        "admissible": 66,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.9166666666666666,
+        "mean_predicted_time_s": 31.338657264693143,
+        "mean_predicted_energy_percent": 14.860338107345209,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.2525332062642762,
+        "mean_planning_seconds": 0.20780708276207507
+      },
+      {
+        "method": "aco",
+        "label": "B6 ACO with safe A* seed",
+        "attempts": 72,
+        "admissible": 66,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.9166666666666666,
+        "mean_predicted_time_s": 31.377810142533924,
+        "mean_predicted_energy_percent": 14.855216219821742,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.2527110839287483,
+        "mean_planning_seconds": 0.2919232304702746
+      },
+      {
+        "method": "proposed",
+        "label": "Proposed adaptive portfolio Pareto refinement",
+        "attempts": 72,
+        "admissible": 66,
+        "executed": 0,
+        "successes": 0,
+        "success_rate": null,
+        "admissible_rate": 0.9166666666666666,
+        "mean_predicted_time_s": 31.324755989203286,
+        "mean_predicted_energy_percent": 14.859368555225938,
+        "mean_task_time_s": null,
+        "mean_positive_work_j": null,
+        "mean_max_tilt_deg": null,
+        "mean_quality_score": 1.2522884904059923,
+        "mean_planning_seconds": 0.16962397055047201
+      }
+    ],
+    "interpretation": "Paired comparison resamples whole independent generated worlds after averaging seeds. Route quality is conditional on joint admission; admission advantage uses all scheduled pairs. Descriptive simulation evidence, not a hardware or universal superiority claim."
+  },
+  "development_attempts": 96,
+  "planning_attempts": 432,
+  "ablation_run_id": "20261028T070002246865Z",
+  "ablation_attempts": 96,
+  "diagnostic_run_id": "20261028T070023658393Z",
+  "diagnostic_attempts": 24,
+  "physics_run_id": "20261028T070120014195Z",
+  "physics_summary": [
+    {
+      "method": "b1_distance",
+      "label": "B1 Distance A*",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 37.56481941836618,
+      "mean_predicted_energy_percent": 15.875401012420665,
+      "mean_task_time_s": 33.18400000000154,
+      "mean_positive_work_j": 8454.1062510745,
+      "mean_max_tilt_deg": 0.15745447140863836,
+      "mean_quality_score": 1.3666034659213364,
+      "mean_planning_seconds": 0.029657831337923806
+    },
+    {
+      "method": "b3_energy",
+      "label": "B3 Energy A*",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 33.02814271026646,
+      "mean_predicted_energy_percent": 15.440831718880363,
+      "mean_task_time_s": 31.400000000002013,
+      "mean_positive_work_j": 7895.02564874017,
+      "mean_max_tilt_deg": 0.15537167111115727,
+      "mean_quality_score": 1.302189580332955,
+      "mean_planning_seconds": 0.04296325634156043
+    },
+    {
+      "method": "b7_greedy",
+      "label": "B7 Energy + greedy shortcut",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 30.49353958261831,
+      "mean_predicted_energy_percent": 14.53795259671164,
+      "mean_task_time_s": 29.38666666666916,
+      "mean_positive_work_j": 7555.065407214854,
+      "mean_max_tilt_deg": 0.1571908333776275,
+      "mean_quality_score": 1.2212516515365281,
+      "mean_planning_seconds": 0.13228190618489558
+    },
+    {
+      "method": "pso",
+      "label": "B5 PSO with safe A* seed",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 30.120622289683382,
+      "mean_predicted_energy_percent": 14.602326459567621,
+      "mean_task_time_s": 28.87200000000232,
+      "mean_positive_work_j": 7563.809127677726,
+      "mean_max_tilt_deg": 0.1564928581299042,
+      "mean_quality_score": 1.2201066958611204,
+      "mean_planning_seconds": 0.1798867292042511
+    },
+    {
+      "method": "aco",
+      "label": "B6 ACO with safe A* seed",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 30.120622289683382,
+      "mean_predicted_energy_percent": 14.602326459567621,
+      "mean_task_time_s": 28.880000000002326,
+      "mean_positive_work_j": 7564.7556182259505,
+      "mean_max_tilt_deg": 0.1573995958535508,
+      "mean_quality_score": 1.2201066958611202,
+      "mean_planning_seconds": 0.24872066431756443
+    },
+    {
+      "method": "proposed",
+      "label": "Proposed adaptive portfolio Pareto refinement",
+      "attempts": 6,
+      "admissible": 6,
+      "executed": 6,
+      "successes": 6,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 30.120622289683382,
+      "mean_predicted_energy_percent": 14.602326459567621,
+      "mean_task_time_s": 28.880000000002326,
+      "mean_positive_work_j": 7564.7556182259505,
+      "mean_max_tilt_deg": 0.1573995958535508,
+      "mean_quality_score": 1.2201066958611202,
+      "mean_planning_seconds": 0.15073836920782924
+    }
+  ],
+  "reference_validation": {
+    "state": "passed",
+    "cases": 24,
+    "mismatches": 0
+  },
+  "energy_calibration": "Nominal simulation coefficients remain uncalibrated. External electrical measurements are required before applying a hardware-fitted profile.",
+  "scope": "Independently generated physical obstacle and shallow-terrain worlds from four procedural families; simulated distribution only, not real-world validation."
+}

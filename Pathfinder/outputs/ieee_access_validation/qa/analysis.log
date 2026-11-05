@@ -1,0 +1,238 @@
+{
+  "attempts": 800,
+  "summary": [
+    {
+      "method": "proposed_v4",
+      "attempts": 96,
+      "admitted": 94,
+      "mean_q": 1.3416608445270168,
+      "mean_planning_s": 0.4703729220430735,
+      "mean_metric_calls": 320.1041666666667,
+      "mean_fitness": 38.4375,
+      "bound_exits": 0
+    },
+    {
+      "method": "pso_polished",
+      "attempts": 96,
+      "admitted": 92,
+      "mean_q": 1.3691386413296274,
+      "mean_planning_s": 0.2986706484977428,
+      "mean_metric_calls": 72.25,
+      "mean_fitness": 70.25,
+      "bound_exits": 0
+    },
+    {
+      "method": "aco_polished",
+      "attempts": 96,
+      "admitted": 92,
+      "mean_q": 1.3690494585227624,
+      "mean_planning_s": 0.4325569273945196,
+      "mean_metric_calls": 51.510416666666664,
+      "mean_fitness": 49.510416666666664,
+      "bound_exits": 0
+    },
+    {
+      "method": "proposed_v5",
+      "attempts": 96,
+      "admitted": 94,
+      "mean_q": 1.3416608445270168,
+      "mean_planning_s": 0.49322507683124667,
+      "mean_metric_calls": 333.96875,
+      "mean_fitness": 39.25,
+      "bound_exits": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "baseline": "proposed_v4",
+      "wins": 0,
+      "ties": 94,
+      "losses": 0,
+      "proposed_only_admitted": 0,
+      "baseline_only_admitted": 0,
+      "both_rejected": 2,
+      "paired_worlds": 47,
+      "mean_relative_percent": 0.0,
+      "relative_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_score_difference": 0.0,
+      "admission_advantage_pp": 0.0,
+      "permutation_p": 1.0,
+      "holm_p": 1.0
+    },
+    {
+      "baseline": "pso_polished",
+      "wins": 34,
+      "ties": 52,
+      "losses": 6,
+      "proposed_only_admitted": 2,
+      "baseline_only_admitted": 0,
+      "both_rejected": 2,
+      "paired_worlds": 46,
+      "mean_relative_percent": 1.4182059408101981,
+      "relative_ci95": [
+        0.24321378209131117,
+        3.4412815244934096
+      ],
+      "mean_score_difference": 0.021943307938878328,
+      "admission_advantage_pp": 2.083333333333333,
+      "permutation_p": 9.99990000099999e-06,
+      "holm_p": 2.999970000299997e-05
+    },
+    {
+      "baseline": "aco_polished",
+      "wins": 32,
+      "ties": 52,
+      "losses": 8,
+      "proposed_only_admitted": 2,
+      "baseline_only_admitted": 0,
+      "both_rejected": 2,
+      "paired_worlds": 46,
+      "mean_relative_percent": 1.4130854143793583,
+      "relative_ci95": [
+        0.23158751426838067,
+        3.4367831742712127
+      ],
+      "mean_score_difference": 0.021854125132013374,
+      "admission_advantage_pp": 2.083333333333333,
+      "permutation_p": 9.99990000099999e-05,
+      "holm_p": 0.0001999980000199998
+    }
+  ],
+  "physics": [
+    {
+      "assistance": 1.0,
+      "method": "proposed_v4",
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 11,
+      "mean_task_s": 29.653818181819872,
+      "mean_work_j": 7104.506310456275,
+      "prediction_bias_s": -1.2580804649949335,
+      "prediction_mae_s": 1.4815176362373028,
+      "outcomes": {
+        "arrived": 11,
+        "timeout": 1
+      }
+    },
+    {
+      "assistance": 1.0,
+      "method": "pso_polished",
+      "scheduled": 12,
+      "admitted": 11,
+      "executed": 11,
+      "successful": 10,
+      "mean_task_s": 32.414400000001066,
+      "mean_work_j": 7215.304202179822,
+      "prediction_bias_s": -1.2051961451258126,
+      "prediction_mae_s": 1.4509770334924188,
+      "outcomes": {
+        "arrived": 10,
+        "timeout": 1,
+        "resource_rejected": 1
+      }
+    },
+    {
+      "assistance": 1.0,
+      "method": "aco_polished",
+      "scheduled": 12,
+      "admitted": 11,
+      "executed": 11,
+      "successful": 10,
+      "mean_task_s": 32.376000000001085,
+      "mean_work_j": 7218.08618663176,
+      "prediction_bias_s": -1.249521810081768,
+      "prediction_mae_s": 1.4953026984483742,
+      "outcomes": {
+        "arrived": 10,
+        "timeout": 1,
+        "resource_rejected": 1
+      }
+    },
+    {
+      "assistance": 1.0,
+      "method": "proposed_v5",
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 11,
+      "mean_task_s": 29.653818181819872,
+      "mean_work_j": 7104.506310456275,
+      "prediction_bias_s": -1.2580804649949335,
+      "prediction_mae_s": 1.4815176362373028,
+      "outcomes": {
+        "arrived": 11,
+        "timeout": 1
+      }
+    },
+    {
+      "assistance": 0.5,
+      "method": "proposed_v4",
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 11,
+      "mean_task_s": 29.67709090909259,
+      "mean_work_j": 7186.3637465410375,
+      "prediction_bias_s": -1.2348077377222089,
+      "prediction_mae_s": 1.4640630907827565,
+      "outcomes": {
+        "arrived": 11,
+        "timeout": 1
+      }
+    },
+    {
+      "assistance": 0.5,
+      "method": "pso_polished",
+      "scheduled": 12,
+      "admitted": 11,
+      "executed": 11,
+      "successful": 10,
+      "mean_task_s": 32.43680000000106,
+      "mean_work_j": 7299.989306252668,
+      "prediction_bias_s": -1.1827961451258193,
+      "prediction_mae_s": 1.434977033492422,
+      "outcomes": {
+        "arrived": 10,
+        "timeout": 1,
+        "resource_rejected": 1
+      }
+    },
+    {
+      "assistance": 0.5,
+      "method": "aco_polished",
+      "scheduled": 12,
+      "admitted": 11,
+      "executed": 11,
+      "successful": 10,
+      "mean_task_s": 32.39680000000108,
+      "mean_work_j": 7302.100801999327,
+      "prediction_bias_s": -1.2287218100817738,
+      "prediction_mae_s": 1.4809026984483764,
+      "outcomes": {
+        "arrived": 10,
+        "timeout": 1,
+        "resource_rejected": 1
+      }
+    },
+    {
+      "assistance": 0.5,
+      "method": "proposed_v5",
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 11,
+      "mean_task_s": 29.67709090909259,
+      "mean_work_j": 7186.3637465410375,
+      "prediction_bias_s": -1.2348077377222089,
+      "prediction_mae_s": 1.4640630907827565,
+      "outcomes": {
+        "arrived": 11,
+        "timeout": 1
+      }
+    }
+  ]
+}

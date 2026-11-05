@@ -1,0 +1,9 @@
+Run only after recording genuine external battery data and completing the metadata fields. No measurements are included.
+
+From package/reproduction/mujoco:
+python3 -m research.electrical_logging --samples ../../electrical_validation/raw_voltage_current.csv --metadata ../../electrical_validation/mission_metadata.json --out ../../electrical_validation/integrated_mission.json
+
+Add integrated observations to electrical_measurements.csv without mixing calibration and held-out maps/missions, then run:
+python3 -m research.calibration --csv ../../electrical_validation/electrical_measurements.csv --metadata ../../electrical_validation/metadata.json --out ../../electrical_validation/fitted_profile.json
+
+Sensor accuracy, measurement boundary, timestamps, actual usable capacity and origin still need human verification. A declared hardware-origin field is not independent proof.

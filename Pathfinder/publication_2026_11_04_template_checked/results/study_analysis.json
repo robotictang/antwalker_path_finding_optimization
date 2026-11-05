@@ -1,0 +1,176 @@
+{
+  "state": "passed",
+  "records": 640,
+  "primary_worlds": 32,
+  "unique_routes_checked": 187,
+  "metric_values_recomputed": 748,
+  "selected_profiles": {
+    "proposed_v4": "default",
+    "pso_polished": "default",
+    "aco_polished": "default",
+    "continuous_pso": "default"
+  },
+  "errors": [],
+  "primary_summary": [
+    {
+      "method": "proposed_v4",
+      "scheduled": 96,
+      "admitted": 93,
+      "mean_q_admitted": 1.1955317478092393,
+      "mean_planning_seconds": 0.3759657198747088,
+      "max_planning_seconds": 0.7756075530051021,
+      "statuses": {
+        "found": 93,
+        "resource_rejected": 3
+      }
+    },
+    {
+      "method": "pso_polished",
+      "scheduled": 96,
+      "admitted": 93,
+      "mean_q_admitted": 1.2107305506406993,
+      "mean_planning_seconds": 0.22260172142697834,
+      "max_planning_seconds": 0.6354713740001898,
+      "statuses": {
+        "found": 93,
+        "resource_rejected": 3
+      }
+    },
+    {
+      "method": "aco_polished",
+      "scheduled": 96,
+      "admitted": 93,
+      "mean_q_admitted": 1.2106969850197582,
+      "mean_planning_seconds": 0.33465146526054923,
+      "max_planning_seconds": 0.8948379089997616,
+      "statuses": {
+        "found": 93,
+        "resource_rejected": 3
+      }
+    },
+    {
+      "method": "continuous_pso",
+      "scheduled": 96,
+      "admitted": 94,
+      "mean_q_admitted": 1.2127618022139495,
+      "mean_planning_seconds": 0.7312554656981926,
+      "max_planning_seconds": 1.2030679360032082,
+      "statuses": {
+        "found": 94,
+        "resource_rejected": 2
+      }
+    },
+    {
+      "method": "proposed_v4_no_landmarks",
+      "scheduled": 96,
+      "admitted": 93,
+      "mean_q_admitted": 1.210805258946557,
+      "mean_planning_seconds": 0.19581282620849075,
+      "max_planning_seconds": 0.586347055999795,
+      "statuses": {
+        "found": 93,
+        "resource_rejected": 3
+      }
+    },
+    {
+      "method": "proposed_v4_no_polish",
+      "scheduled": 96,
+      "admitted": 90,
+      "mean_q_admitted": 1.1840701279958759,
+      "mean_planning_seconds": 0.32924666890600446,
+      "max_planning_seconds": 0.6343590430042241,
+      "statuses": {
+        "found": 90,
+        "resource_rejected": 6
+      }
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "baseline": "pso_polished",
+      "paired_worlds": 31,
+      "mean_improvement_percent": 0.9287344546205419,
+      "median_improvement_percent": 0.0,
+      "ci95_low": 0.02668267225848304,
+      "ci95_high": 2.5231873574776125,
+      "minimum_world_improvement_percent": -0.7079622334743433,
+      "maximum_world_improvement_percent": 23.19395931465605,
+      "worlds_improved_over_0p5_percent": 5,
+      "wins": 29,
+      "ties": 50,
+      "losses": 14,
+      "proposal_only": 0,
+      "baseline_only": 0,
+      "both_rejected": 3
+    },
+    {
+      "baseline": "aco_polished",
+      "paired_worlds": 31,
+      "mean_improvement_percent": 0.920771453589388,
+      "median_improvement_percent": 0.0,
+      "ci95_low": 0.02889026360328216,
+      "ci95_high": 2.5066442174101886,
+      "minimum_world_improvement_percent": -0.8290269141958899,
+      "maximum_world_improvement_percent": 23.19395931465605,
+      "worlds_improved_over_0p5_percent": 5,
+      "wins": 30,
+      "ties": 51,
+      "losses": 12,
+      "proposal_only": 0,
+      "baseline_only": 0,
+      "both_rejected": 3
+    },
+    {
+      "baseline": "continuous_pso",
+      "paired_worlds": 31,
+      "mean_improvement_percent": 0.6900649973841386,
+      "median_improvement_percent": 0.0,
+      "ci95_low": -0.2546952160148965,
+      "ci95_high": 2.3122721663128414,
+      "minimum_world_improvement_percent": -1.7182613241202742,
+      "maximum_world_improvement_percent": 23.202475798113554,
+      "worlds_improved_over_0p5_percent": 5,
+      "wins": 33,
+      "ties": 27,
+      "losses": 33,
+      "proposal_only": 0,
+      "baseline_only": 1,
+      "both_rejected": 2
+    },
+    {
+      "baseline": "proposed_v4_no_landmarks",
+      "paired_worlds": 31,
+      "mean_improvement_percent": 0.9240911154454007,
+      "median_improvement_percent": 0.0,
+      "ci95_low": 0.03590906929626489,
+      "ci95_high": 2.5134067176112285,
+      "minimum_world_improvement_percent": -0.8290269141958899,
+      "maximum_world_improvement_percent": 23.19395931465605,
+      "worlds_improved_over_0p5_percent": 5,
+      "wins": 27,
+      "ties": 57,
+      "losses": 9,
+      "proposal_only": 0,
+      "baseline_only": 0,
+      "both_rejected": 3
+    },
+    {
+      "baseline": "proposed_v4_no_polish",
+      "paired_worlds": 30,
+      "mean_improvement_percent": 0.7941483675896348,
+      "median_improvement_percent": 0.5022841599998147,
+      "ci95_low": 0.4428922189323664,
+      "ci95_high": 1.2086695487833374,
+      "minimum_world_improvement_percent": 0.0,
+      "maximum_world_improvement_percent": 4.041868252386145,
+      "worlds_improved_over_0p5_percent": 15,
+      "wins": 57,
+      "ties": 33,
+      "losses": 0,
+      "proposal_only": 3,
+      "baseline_only": 0,
+      "both_rejected": 3
+    }
+  ],
+  "scope": "Internal provenance, geometry, admission and numeric checks. Same procedural generator families, descriptive unadjusted intervals, no execution or physical validation."
+}

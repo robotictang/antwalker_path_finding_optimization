@@ -1,0 +1,35 @@
+<div id="hexapod-tradeoffs">
+  <h3>Two saved routes: shorter does not always mean faster</h3>
+  <div class="text-small">Earlier Quarry planning snapshot · estimates, not current-scene measurements · lower is better</div>
+  <div id="route-bars"></div>
+</div>
+<style>
+#hexapod-tradeoffs .metric {margin-top:20px}
+#hexapod-tradeoffs .bar-row {display:grid;grid-template-columns:26px minmax(0,1fr) 86px;gap:10px;align-items:center;margin:9px 0}
+#hexapod-tradeoffs .track {background:var(--muted);height:20px}
+#hexapod-tradeoffs .bar {height:100%;background:var(--viz-series-1)}
+#hexapod-tradeoffs .r2 {background:var(--viz-series-2)}
+#hexapod-tradeoffs .number {text-align:right;font-variant-numeric:tabular-nums}
+</style>
+<script>
+(() => {
+const root=document.getElementById('hexapod-tradeoffs');
+const data=[{title:'Distance (metres)',values:[47.28587002016684,70.22147549504699],unit:'m'},
+{title:'Estimated travel time (seconds)',values:[88.37884110320675,72.40070671035897],unit:'s'},
+{title:'Estimated battery used (percentage points)',values:[29.313641218011462,25.512744395280144],unit:'pp'}];
+const area=root.querySelector('#route-bars');
+for(const metric of data){
+ const section=document.createElement('section');section.className='metric';
+ const title=document.createElement('div');title.textContent=metric.title;section.appendChild(title);
+ const max=Math.max(...metric.values);
+ metric.values.forEach((value,i)=>{
+  const row=document.createElement('div');row.className='bar-row';row.setAttribute('role','img');row.setAttribute('aria-label',`Route ${i+1}: ${value.toFixed(1)} ${metric.unit}`);
+  const name=document.createElement('span');name.textContent=`R${i+1}`;
+  const track=document.createElement('div');track.className='track';
+  const bar=document.createElement('div');bar.className='bar'+(i?' r2':'');bar.style.width=`${100*value/max}%`;track.appendChild(bar);
+  const number=document.createElement('span');number.className='number';number.textContent=`${value.toFixed(1)} ${metric.unit}`;
+  row.append(name,track,number);section.appendChild(row);
+ });area.appendChild(section);
+}
+})();
+</script>

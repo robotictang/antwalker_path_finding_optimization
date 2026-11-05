@@ -1,0 +1,76 @@
+Requested: Place 4 (Sand Clearing)
+DESTINATION ROUTING: 1-4 choose place | P fastest/shortest | X cancel | C camera | B battery test | 0 charge
+ROUTE READY: Place 4 (Sand Clearing) | shortest | 25.0 m | estimated 62 s | 4 segments
+Step 2000: moving, destination Place 4 (Sand Clearing), battery 96.5%, contacts 0, route errors 0
+ARRIVED: Place 4 (Sand Clearing). Waiting for next destination.
+Step 4000: arrived, destination Place 4 (Sand Clearing), battery 92.7%, contacts 0, route errors 0
+Step 6000: arrived, destination Place 4 (Sand Clearing), battery 92.7%, contacts 0, route errors 0
+{
+  "steps": 6000,
+  "simulation_seconds": 96.0000000000254,
+  "mode": "walking_only",
+  "position": [
+    17.899608497673402,
+    -10.001206476623427,
+    0.4677374999999999
+  ],
+  "battery": 92.671505128567,
+  "visited_places": [
+    4
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "destination": 4,
+      "position": [
+        17.89973198312898,
+        -10.001247998982267
+      ],
+      "error_m": 0.10027578326149778,
+      "travel_seconds": 62.35199999999474,
+      "actual_distance_m": 24.948198651982008,
+      "distance_m": 25.04709532684079,
+      "estimated_seconds": 61.86119552112033
+    }
+  ],
+  "planned_routes": [
+    {
+      "destination": 4,
+      "mode": "shortest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          0.5,
+          -16.0
+        ],
+        [
+          1.5,
+          -12.75
+        ],
+        [
+          3.75,
+          -10.25
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 25.04709532684079,
+      "estimated_seconds": 61.86119552112033
+    }
+  ],
+  "route_mode": "shortest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": -0.0015982218735096226,
+  "max_body_tilt_degrees": 0.14574677056882546,
+  "finite_state": true,
+  "solver_warnings": 0
+}

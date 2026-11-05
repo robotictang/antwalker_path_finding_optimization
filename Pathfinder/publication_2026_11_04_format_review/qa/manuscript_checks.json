@@ -1,0 +1,15 @@
+{
+  "state": "passed",
+  "figures": 3,
+  "tables": 4,
+  "native_equations": 3,
+  "references": 9,
+  "abstract_words": 162,
+  "approximate_words": 3790,
+  "page_size": "A4",
+  "body_columns": 2,
+  "minimum_font_pt": 10,
+  "author_details": "Pending by user request",
+  "docx_sha256": "9ddf1757ea8b1754ff61656ea5be30afebf548a453e3f5c9dca759248d25f718",
+  "scope": "Structural/numeric document checks; visual review is recorded separately."
+}

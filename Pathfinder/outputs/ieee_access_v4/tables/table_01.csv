@@ -1,0 +1,8 @@
+Symbol,Meaning and units
+D,Body route length (m)
+T,Predicted destination time (s)
+E,Nominal outbound battery use (percentage points)
+H,Integrated terrain difficulty exposure
+"B, B₀",Planner wall allowance (s); available battery (%)
+Q,Fixed normalized balanced route score
+W⁺,Positive actuator work on full motion (J)

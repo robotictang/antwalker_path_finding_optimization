@@ -1,0 +1,7 @@
+# Gravity compensation diagnostic correction
+
+During the ten-page revision on 4 November 2026, source inspection showed that HybridLocomotion.__init__ unconditionally enables gravity compensation on 18 limb bodies. The initial probe cleared body_gravcomp before research.execution.execute created that controller. Therefore the four records marked gravity_compensation=false in realism_probe.json do not establish a compensation-free condition. They duplicate the zero-assistance condition with compensation.
+
+The original sixteen records and input are preserved unchanged. The four mislabeled requests are excluded from the no-compensation comparison. corrected_gravity_probe.json contains four additional post-hoc replays using the same routes, execution function, follower and 180 s limit. An external wrapper clears body_gravcomp after the constructor and records all body values, verifying 18 enabled beforehand and zero afterward. Frozen scientific Python files were not edited; execution/controller hashes are retained in the correction protocol.
+
+All four corrected runs time out at 180 s, with 0.376–0.381 m total motion. The manuscript's comparison therefore uses 12 valid original and 4 corrected runs. In all, 20 execution records are retained. This correction is a diagnostic replay on already observed routes, not additional held-out validation. The original primary planning campaign and its estimates are unchanged.

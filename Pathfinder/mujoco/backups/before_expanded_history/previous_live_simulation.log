@@ -1,0 +1,182 @@
+MISSION CONTROL: http://127.0.0.1:8767
+HYBRID DEMO: keypad 1-4 destinations | KP5 route | KP6 camera | KP7 transform | KP8 automatic | KP9 battery | KP0 charge | KP decimal cancel. Use the button panel at http://127.0.0.1:8767
+Requested: Place 2 (Rocky Quarry)
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 47.3 m | 88 s | 29.3% energy | budget 77.9% / available 100.0%
+Roadwork now occupies the planned lane; local detection updates the map within 8 m.
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+OBSTACLE DETECTED - braking and planning a safe detour
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 72.3 m | 69 s | 26.0% energy | budget 81.1% / available 98.5%
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 2000: moving, destination Place 2 (Rocky Quarry), battery 92.7%, contacts 0, route errors 0
+Step 4000: moving, destination Place 2 (Rocky Quarry), battery 80.7%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Requested: Place 2 (Rocky Quarry)
+Energy demonstration: Quarry requested with 45% battery.
+INSUFFICIENT TASK ENERGY - need 73.6%, have 45.0%; charging first
+ROUTE READY: Center charging station | energy-to-charger | 21.2 m | 41 s | 12.6% energy | budget 17.8% / available 45.0%
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Step 6000: moving, destination Center charging station, battery 40.3%, contacts 0, route errors 0
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Arrived at charging station.
+Step 8000: charging, destination Center charging station, battery 76.2%, contacts 0, route errors 0
+Requested: Place 2 (Rocky Quarry)
+CHARGED TO 100% - new route to requested destination
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 50.5 m | 83 s | 28.4% energy | budget 76.8% / available 100.0%
+Roadwork now occupies the planned lane; local detection updates the map within 8 m.
+OBSTACLE DETECTED - braking and planning a safe detour
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 75.4 m | 105 s | 36.9% energy | budget 94.8% / available 98.3%
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 10000: moving, destination Place 2 (Rocky Quarry), battery 93.2%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 12000: moving, destination Place 2 (Rocky Quarry), battery 81.5%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 38.2 m | 39 s | 14.3% energy | budget 66.5% / available 78.2%
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 29.5 m | 35 s | 13.8% energy | budget 58.5% / available 73.6%
+Step 14000: preview, destination Place 2 (Rocky Quarry), battery 73.5%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 16000: moving, destination Place 2 (Rocky Quarry), battery 63.1%, contacts 0, route errors 0
+ARRIVED: Place 2 (Rocky Quarry). Waiting for next destination.
+Step 18000: arrived, destination Place 2 (Rocky Quarry), battery 59.2%, contacts 0, route errors 0
+Step 20000: arrived, destination Place 2 (Rocky Quarry), battery 58.7%, contacts 0, route errors 0
+Step 22000: arrived, destination Place 2 (Rocky Quarry), battery 58.2%, contacts 0, route errors 0
+Step 24000: arrived, destination Place 2 (Rocky Quarry), battery 57.7%, contacts 0, route errors 0
+Step 26000: arrived, destination Place 2 (Rocky Quarry), battery 57.3%, contacts 0, route errors 0
+Step 28000: arrived, destination Place 2 (Rocky Quarry), battery 56.8%, contacts 0, route errors 0
+Step 30000: arrived, destination Place 2 (Rocky Quarry), battery 56.3%, contacts 0, route errors 0
+Step 32000: arrived, destination Place 2 (Rocky Quarry), battery 55.8%, contacts 0, route errors 0
+Step 34000: arrived, destination Place 2 (Rocky Quarry), battery 55.3%, contacts 0, route errors 0
+Step 36000: arrived, destination Place 2 (Rocky Quarry), battery 54.8%, contacts 0, route errors 0
+Step 38000: arrived, destination Place 2 (Rocky Quarry), battery 54.4%, contacts 0, route errors 0
+Step 40000: arrived, destination Place 2 (Rocky Quarry), battery 53.9%, contacts 0, route errors 0
+Step 42000: arrived, destination Place 2 (Rocky Quarry), battery 53.4%, contacts 0, route errors 0
+Step 44000: arrived, destination Place 2 (Rocky Quarry), battery 52.9%, contacts 0, route errors 0
+Step 46000: arrived, destination Place 2 (Rocky Quarry), battery 52.4%, contacts 0, route errors 0
+Step 48000: arrived, destination Place 2 (Rocky Quarry), battery 52.0%, contacts 0, route errors 0
+Step 50000: arrived, destination Place 2 (Rocky Quarry), battery 51.5%, contacts 0, route errors 0
+Step 52000: arrived, destination Place 2 (Rocky Quarry), battery 51.0%, contacts 0, route errors 0
+Step 54000: arrived, destination Place 2 (Rocky Quarry), battery 50.5%, contacts 0, route errors 0
+Step 56000: arrived, destination Place 2 (Rocky Quarry), battery 50.0%, contacts 0, route errors 0
+Step 58000: arrived, destination Place 2 (Rocky Quarry), battery 49.6%, contacts 0, route errors 0
+Step 60000: arrived, destination Place 2 (Rocky Quarry), battery 49.1%, contacts 0, route errors 0
+Step 62000: arrived, destination Place 2 (Rocky Quarry), battery 48.6%, contacts 0, route errors 0
+Step 64000: arrived, destination Place 2 (Rocky Quarry), battery 48.1%, contacts 0, route errors 0
+Step 66000: arrived, destination Place 2 (Rocky Quarry), battery 47.6%, contacts 0, route errors 0
+Step 68000: arrived, destination Place 2 (Rocky Quarry), battery 47.2%, contacts 0, route errors 0
+Step 70000: arrived, destination Place 2 (Rocky Quarry), battery 46.7%, contacts 0, route errors 0
+Step 72000: arrived, destination Place 2 (Rocky Quarry), battery 46.2%, contacts 0, route errors 0
+Step 74000: arrived, destination Place 2 (Rocky Quarry), battery 45.7%, contacts 0, route errors 0
+Step 76000: arrived, destination Place 2 (Rocky Quarry), battery 45.2%, contacts 0, route errors 0
+Step 78000: arrived, destination Place 2 (Rocky Quarry), battery 44.8%, contacts 0, route errors 0
+Step 80000: arrived, destination Place 2 (Rocky Quarry), battery 44.3%, contacts 0, route errors 0
+Step 82000: arrived, destination Place 2 (Rocky Quarry), battery 43.8%, contacts 0, route errors 0
+Step 84000: arrived, destination Place 2 (Rocky Quarry), battery 43.3%, contacts 0, route errors 0
+Step 86000: arrived, destination Place 2 (Rocky Quarry), battery 42.8%, contacts 0, route errors 0
+Step 88000: arrived, destination Place 2 (Rocky Quarry), battery 42.4%, contacts 0, route errors 0
+Step 90000: arrived, destination Place 2 (Rocky Quarry), battery 41.9%, contacts 0, route errors 0
+Step 92000: arrived, destination Place 2 (Rocky Quarry), battery 41.4%, contacts 0, route errors 0
+Step 94000: arrived, destination Place 2 (Rocky Quarry), battery 40.9%, contacts 0, route errors 0
+Step 96000: arrived, destination Place 2 (Rocky Quarry), battery 40.4%, contacts 0, route errors 0
+Step 98000: arrived, destination Place 2 (Rocky Quarry), battery 40.0%, contacts 0, route errors 0
+Step 100000: arrived, destination Place 2 (Rocky Quarry), battery 39.5%, contacts 0, route errors 0
+Step 102000: arrived, destination Place 2 (Rocky Quarry), battery 39.0%, contacts 0, route errors 0
+Step 104000: arrived, destination Place 2 (Rocky Quarry), battery 38.5%, contacts 0, route errors 0
+INSUFFICIENT TASK ENERGY - need 38.3%, have 38.3%; charging first
+ROUTE READY: Center charging station | energy-to-charger | 49.8 m | 82 s | 28.2% energy | budget 37.3% / available 38.3%
+Step 106000: moving, destination Center charging station, battery 32.4%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 108000: moving, destination Center charging station, battery 20.4%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Step 110000: moving, destination Center charging station, battery 10.4%, contacts 0, route errors 0
+Transformation complete: wheels
+Arrived at charging station.
+CHARGED TO 100% - new route to requested destination
+Step 112000: arrived, destination Place 2 (Rocky Quarry), battery 99.8%, contacts 0, route errors 0
+Step 114000: arrived, destination Place 2 (Rocky Quarry), battery 99.3%, contacts 0, route errors 0
+Step 116000: arrived, destination Place 2 (Rocky Quarry), battery 98.8%, contacts 0, route errors 0
+Step 118000: arrived, destination Place 2 (Rocky Quarry), battery 98.3%, contacts 0, route errors 0
+Step 120000: arrived, destination Place 2 (Rocky Quarry), battery 97.8%, contacts 0, route errors 0
+Step 122000: arrived, destination Place 2 (Rocky Quarry), battery 97.4%, contacts 0, route errors 0
+Step 124000: arrived, destination Place 2 (Rocky Quarry), battery 96.9%, contacts 0, route errors 0
+Requested: Place 1 (Pine Forest)
+ROUTE READY: Place 1 (Pine Forest) | balanced | 50.6 m | 82 s | 28.3% energy | budget 76.6% / available 96.6%
+Route mode: energy
+ROUTE READY: Place 1 (Pine Forest) | energy | 50.6 m | 80 s | 28.2% energy | budget 76.4% / available 96.3%
+Route mode: shortest
+ROUTE READY: Place 1 (Pine Forest) | shortest | 50.6 m | 80 s | 28.2% energy | budget 76.4% / available 96.3%
+Step 126000: moving, destination Place 1 (Pine Forest), battery 95.9%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 128000: moving, destination Place 1 (Pine Forest), battery 85.3%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+ROUTE READY: Place 1 (Pine Forest) | shortest | 14.3 m | 21 s | 8.0% energy | budget 51.2% / available 74.6%
+Step 130000: preview, destination Place 1 (Pine Forest), battery 74.5%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+Requested: Place 3 (Mud Marsh)
+ROUTE READY: Place 3 (Mud Marsh) | shortest | 37.3 m | 57 s | 23.1% energy | budget 55.3% / available 66.3%
+Route mode: fastest
+ROUTE READY: Place 3 (Mud Marsh) | fastest | 37.3 m | 56 s | 23.0% energy | budget 55.2% / available 66.1%
+Step 132000: moving, destination Place 3 (Mud Marsh), battery 65.7%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 134000: moving, destination Place 3 (Mud Marsh), battery 54.5%, contacts 0, route errors 0
+ARRIVED: Place 3 (Mud Marsh). Waiting for next destination.
+Step 136000: arrived, destination Place 3 (Mud Marsh), battery 42.3%, contacts 0, route errors 0
+Routing to charging station
+ROUTE READY: Center charging station | energy-to-charger | 28.1 m | 48 s | 16.6% energy | budget 22.7% / available 42.3%
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Step 138000: moving, destination Center charging station, battery 33.9%, contacts 0, route errors 0
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Arrived at charging station.
+CHARGED TO 100% - new route to requested destination
+Step 140000: arrived, destination Place 3 (Mud Marsh), battery 100.0%, contacts 0, route errors 0
+Step 142000: arrived, destination Place 3 (Mud Marsh), battery 99.5%, contacts 0, route errors 0
+Route mode: balanced
+Route mode: shortest
+Route mode: balanced
+Route mode: fastest
+Route mode: shortest
+Route mode: balanced
+Route mode: fastest
+Step 144000: arrived, destination Place 3 (Mud Marsh), battery 99.0%, contacts 0, route errors 0
+Step 146000: arrived, destination Place 3 (Mud Marsh), battery 98.6%, contacts 0, route errors 0
+Step 148000: arrived, destination Place 3 (Mud Marsh), battery 98.1%, contacts 0, route errors 0
+Step 150000: arrived, destination Place 3 (Mud Marsh), battery 97.6%, contacts 0, route errors 0
+Step 152000: arrived, destination Place 3 (Mud Marsh), battery 97.1%, contacts 0, route errors 0
+Step 154000: arrived, destination Place 3 (Mud Marsh), battery 96.6%, contacts 0, route errors 0
+Step 156000: arrived, destination Place 3 (Mud Marsh), battery 96.2%, contacts 0, route errors 0
+Step 158000: arrived, destination Place 3 (Mud Marsh), battery 95.7%, contacts 0, route errors 0

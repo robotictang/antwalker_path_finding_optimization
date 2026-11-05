@@ -1,0 +1,179 @@
+{
+  "reviewed_at": "2026-10-28",
+  "scope": "Four robotics papers reviewed (three full texts and one publisher abstract/introduction), plus two foundational swarm optimization sources consulted. Not an exhaustive literature review.",
+  "papers": [
+    {
+      "id": "smart_gait",
+      "title": "Smart Gait: A Gait Optimization Framework for Hexapod Robots",
+      "authors": [
+        "Yunpeng Yin",
+        "Feng Gao",
+        "Qiao Sun",
+        "Yue Zhao",
+        "Yuguang Xiao"
+      ],
+      "year": 2024,
+      "venue": "Chinese Journal of Mechanical Engineering 37 article 15",
+      "doi": "10.1186/s10033-024-01000-0",
+      "url": "https://link.springer.com/article/10.1186/s10033-024-01000-0",
+      "full_text_url": "https://link.springer.com/content/pdf/10.1186/s10033-024-01000-0.pdf",
+      "review_status": "full_text_reviewed",
+      "reviewed_version": "Version of record 2024; cross-checked accessible 2023 preprint",
+      "local_pdf": "papers/smart_gait_final.pdf",
+      "summary": "Optimizes swing trajectories, gait period and duty, and online leg-lifting sequences on LittleStrong. Offline dynamics-based trajectory/timing optimization feeds an online gait adapter and whole-body controller. The reported 15.9% improvement belongs to its period/duty comparison and is not a promised battery saving for this robot.",
+      "adaptation": "Expose period, duty, lift and trajectory controls; run a separate matched gait sweep; measure positive mechanical actuator work and tilt/support/contact signals. Call this Smart-Gait-inspired parameter tuning, not a reproduction.",
+      "not_reproduced": [
+        "Full single-leg dynamics objective",
+        "Centroid-support QP",
+        "Online gait adapter and whole-body control"
+      ],
+      "limitations": [
+        "Different robot and actuator properties",
+        "Assisted body control changes balance and effort",
+        "Mechanical work and torque-squared effort are not electrical battery energy"
+      ],
+      "code_url": null,
+      "pdf_sha256": "cf708dc5c60540a9c0228c90a79a0cd8714c129b639592b678f00d0297da6afb"
+    },
+    {
+      "id": "terrain_features",
+      "title": "Hexapod robot motion planning investigation under the influence of multi-dimensional terrain features",
+      "authors": [
+        "Chen Chen",
+        "Junbo Lin",
+        "Bo You",
+        "Jiayu Li",
+        "Biao Gao"
+      ],
+      "year": 2025,
+      "venue": "Frontiers in Neurorobotics 19 article 1605938",
+      "doi": "10.3389/fnbot.2025.1605938",
+      "url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1605938/full",
+      "full_text_url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1605938/pdf",
+      "review_status": "full_text_reviewed",
+      "reviewed_version": "Version of record published 21 May 2025",
+      "local_pdf": "papers/terrain_features.pdf",
+      "summary": "Combines elevation and semantic terrain maps. Footprint-scale windows extract slope, height range, undulation and physical terrain properties for traversal-cost A*. A smaller foothold-cost map and free gait planner support local foot placement. The tested thresholds are platform-specific.",
+      "adaptation": "Create a terrain-aware A* baseline from existing scene height and terrain labels. Keep geometric hazard exposure separate from measured instability; label modeled friction or softness assumptions.",
+      "not_reproduced": [
+        "ERFNet camera semantic segmentation",
+        "Probabilistic sensor map fusion",
+        "Paper-specific free gait state search"
+      ],
+      "limitations": [
+        "Current scene has no deformable mud or sand",
+        "Paper has equation/notation ambiguities; do not silently claim exact formula equivalence",
+        "Robot footprint and thresholds must be recalibrated"
+      ],
+      "code_url": null,
+      "pdf_sha256": "6a8a0580d86282b8348e7d70841283a570a6ba1955af1385ef24c4b56de150e8"
+    },
+    {
+      "id": "energy_delivery",
+      "title": "Energy-Aware Planning for Delivery Tasks Executed by Legged Robots",
+      "authors": [
+        "Shengqiang Chen",
+        "Yiyu Chen",
+        "Zishen Wei",
+        "Quan Nguyen",
+        "Satyandra K. Gupta"
+      ],
+      "year": 2025,
+      "venue": "IEEE CASE 2025 pages 1617\u20131624",
+      "doi": "10.1109/CASE58245.2025.11164088",
+      "url": "https://doi.org/10.1109/CASE58245.2025.11164088",
+      "full_text_url": null,
+      "review_status": "abstract_and_introduction_only",
+      "reviewed_version": "Publisher abstract and introduction; author/DOI metadata cross-checked with Crossref",
+      "local_pdf": null,
+      "summary": "The accessible publisher abstract describes hierarchical energy-aware delivery planning. It compares graph-search instances involving battery replacement, payload splitting and speed reduction to minimize delivery completion time. Full equations and experimental details were not accessible in this review.",
+      "adaptation": "Use explicit battery and safe charger-return constraints plus separately configured service downtime. This is a generic energy-aware baseline inspired by the abstract, not an implementation of the paper.",
+      "not_reproduced": [
+        "Exact energy model and graph formulation",
+        "Payload-splitting strategy",
+        "Paper-specific replacement scheduling or experiments"
+      ],
+      "limitations": [
+        "Full text still required for faithful reproduction",
+        "Charging stops are not physical battery swaps",
+        "Current demonstration charge rate is accelerated"
+      ],
+      "code_url": null
+    },
+    {
+      "id": "state_nav",
+      "title": "STATE-NAV: Stability-Aware Traversability Estimation for Bipedal Navigation on Rough Terrain",
+      "authors": [
+        "Ziwon Yoon",
+        "Lawrence Y. Zhu",
+        "Jingxi Lu",
+        "Lu Gan",
+        "Ye Zhao"
+      ],
+      "year": 2025,
+      "venue": "arXiv 2506.01046v4; author record states accepted to IEEE Robotics and Automation Letters",
+      "doi": "10.48550/arXiv.2506.01046",
+      "url": "https://arxiv.org/abs/2506.01046v4",
+      "full_text_url": "https://arxiv.org/pdf/2506.01046v4",
+      "review_status": "full_text_reviewed",
+      "reviewed_version": "arXiv v4 dated 5 December 2025",
+      "local_pdf": "papers/state_nav.pdf",
+      "summary": "TravFormer learns Digit-specific instability and uncertainty from terrain patches and velocity commands. A risk-sensitive bound selects fast admissible linear/angular commands. TravRRT* minimizes estimated traversal time, and bipedal MPC constrains execution. The authors evaluate MuJoCo and physical Digit navigation.",
+      "adaptation": "Collect hexapod terrain/speed response data and select conservative speeds from an empirical table. Until calibrated, call risk a terrain proxy. Keep the existing waypoint controller; do not call it TravFormer or bipedal MPC.",
+      "not_reproduced": [
+        "BSFA-trained TravFormer",
+        "Bipedal LIPM/ALIP dynamics",
+        "TravRRT* and original MPC"
+      ],
+      "limitations": [
+        "BSFA and biped stability limits do not transfer directly to six legs",
+        "Assisted attitude suppresses fall evidence",
+        "The live author repository has later A* updates; pin the version when reproducing"
+      ],
+      "code_url": "https://github.com/yzwfromk/STATE-NAV",
+      "pdf_sha256": "886c7c918c2baa14d4b0edfdbcd3539d9af3bb066d91c59caad2f009866c6397"
+    },
+    {
+      "id": "pso_foundation",
+      "title": "Particle Swarm Optimization",
+      "authors": [
+        "James Kennedy",
+        "Russell Eberhart"
+      ],
+      "year": 1995,
+      "venue": "Proceedings of ICNN 1995",
+      "url": "https://staff.washington.edu/paymana/swarm/kennedy95-ijcnn.pdf",
+      "review_status": "algorithm_source_consulted",
+      "summary": "Foundational personal-best and swarm-best velocity and position updates.",
+      "adaptation": "Continuous random keys select waypoints in a safe A* seeded route corridor. Fitness is feasibility first, followed by a common distance time energy and terrain score.",
+      "not_reproduced": [
+        "Original function and neural-network benchmarks"
+      ],
+      "limitations": [
+        "A path-refinement adaptation, not an unseeded global planner.",
+        "Corridor choices are restricted to subsequences of the seed."
+      ]
+    },
+    {
+      "id": "aco_foundation",
+      "title": "Ant Colony System A Cooperative Learning Approach to the Traveling Salesman Problem",
+      "authors": [
+        "Marco Dorigo",
+        "Luca Maria Gambardella"
+      ],
+      "year": 1997,
+      "venue": "IEEE Transactions on Evolutionary Computation 1 53\u201366",
+      "url": "https://staff.washington.edu/paymana/swarm/dorigo97-itec.pdf",
+      "review_status": "algorithm_source_consulted",
+      "summary": "Foundational pheromone-mediated construction of discrete solutions. The author bibliography distinguishes Ant System and ACS variants.",
+      "adaptation": "An elitist Ant-System-style ACO constructs routes on forward visible chords, with probabilistic pheromone/heuristic choices, evaporation and deposits. This is not exact ACS and does not reproduce the TSP experiments.",
+      "not_reproduced": [
+        "ACS q0 policy and local pheromone updates",
+        "Original TSP benchmarks"
+      ],
+      "limitations": [
+        "Safe A* seed and finite forward corridor restrict global route exploration."
+      ]
+    }
+  ]
+}

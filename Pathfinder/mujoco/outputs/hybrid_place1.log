@@ -1,0 +1,109 @@
+Requested: Place 1 (Pine Forest)
+HYBRID DEMO: 1-4 destinations | M transform | A automatic terrain | P fastest/shortest | C camera | B battery test | 0 charge
+ROUTE READY: Place 1 (Pine Forest) | fastest | 46.4 m | estimated 71 s | 5 segments
+Step 2000: moving, destination Place 1 (Pine Forest), battery 94.1%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 4000: moving, destination Place 1 (Pine Forest), battery 89.3%, contacts 0, route errors 0
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+{
+  "steps": 4732,
+  "simulation_seconds": 75.7120000000006,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 51.26399999999613,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.253239964593005,
+        13.14992277483262
+      ]
+    },
+    {
+      "time": 54.047999999995824,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.253242016287917,
+        13.149923981941837
+      ]
+    }
+  ],
+  "position": [
+    -17.90344705647113,
+    15.976212451434272,
+    0.49438884231111274
+  ],
+  "battery": 87.93511579451508,
+  "visited_places": [
+    1
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "destination": 1,
+      "position": [
+        -17.903209861434824,
+        15.9761564521895
+      ],
+      "error_m": 0.0996837283394714,
+      "travel_seconds": 74.19199999999864,
+      "actual_distance_m": 46.413412448860825,
+      "distance_m": 46.396852689865874,
+      "estimated_seconds": 71.43193771737968,
+      "driving_distance_m": 38.860400280904116,
+      "walking_distance_m": 7.536452408961759,
+      "transformations": 1
+    }
+  ],
+  "planned_routes": [
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          -0.5,
+          -5.25
+        ],
+        [
+          -10.0,
+          1.75
+        ],
+        [
+          -10.25,
+          13.25
+        ],
+        [
+          -12.0,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 46.396852689865874,
+      "estimated_seconds": 71.43193771737968,
+      "driving_distance_m": 38.860400280904116,
+      "walking_distance_m": 7.536452408961759,
+      "transformations": 1
+    }
+  ],
+  "route_mode": "fastest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.016026604191180224,
+  "max_body_tilt_degrees": 0.09343156911576125,
+  "finite_state": true,
+  "solver_warnings": 0
+}

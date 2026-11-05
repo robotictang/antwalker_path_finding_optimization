@@ -1,0 +1,47 @@
+{
+  "state": "passed_with_research_limitations",
+  "rendered_pages": 14,
+  "all_pages_visually_reviewed": true,
+  "identical_reviewed_prefix_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "figures": 7,
+  "tables": 9,
+  "numbered_equations": 10,
+  "algorithms": 2,
+  "references": 20,
+  "reference_anchors_valid": true,
+  "external_reference_targets_present": true,
+  "paper_tables_match_archived_results": true,
+  "independent_analysis": "11 baseline pair counts, world averaged percentages and 5000-sample whole-world intervals recalculated directly from raw JSON",
+  "scientific_attempts": 1232,
+  "primary_independent_test_worlds": 24,
+  "primary_timing_over_nominal": 39,
+  "primary_max_planning_seconds": 2.0231498039793223,
+  "scientific_source_lock": "19 files unchanged",
+  "template_preserve_only_parts": 30,
+  "accessibility": {
+    "file": "outputs/ieee_access_v4/IEEE_Access_Hexapod_V4_Manuscript.docx",
+    "counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "findings": []
+  },
+  "browser_qa": "unavailable; served snapshot hash verified",
+  "renderer": "canonical Documents renderer with explicit /usr/bin/soffice compatibility override after bundled GLIBC failure",
+  "pending": [
+    "Author affiliation, email, biography, ORCID and declarations",
+    "Human technical and reference approval",
+    "Public data archive location",
+    "Scientific novelty and wider physical validation remain limitations"
+  ],
+  "docx_sha256": "a52f196be3d09cce35fb44df392b96b73048b5fb32c9719329f289157c12736b",
+  "pdf_sha256": "2a85340c86abf758611058bbe6080fa161a590fa46612fb35daa4e1c0d631d8e"
+}

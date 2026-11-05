@@ -1,0 +1,7 @@
+Method,Selected parameters
+PSO,24 particles; inertia 0.55; c₁ 1.70; c₂ 1.30; velocity cap 0.25
+ACO,12 ants; α 1; β 2; evaporation 0.20; deposit 1
+Corridor refiner,8 labels/state; beam width 6; archive cap 16
+V4,"Initial fraction 0.40; roadmap fraction 0.32; 44 nodes; steps 0.75, 0.25, 0.08 m"
+All applicable refiners,240 route evaluations; 40 iterations/corridor for swarms
+Main attempts,"2 s; 40,000 search expansions; 0.25 m grid"

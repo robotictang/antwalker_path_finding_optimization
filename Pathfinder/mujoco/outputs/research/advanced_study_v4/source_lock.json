@@ -1,0 +1,21 @@
+{
+  "research/advanced.py": "96c01a5e10b5f6dd01422345412f5612d237bc35b794698fe3eeb36c35f56b45",
+  "research/advanced_study.py": "93e2565aee5e23a84504f4d05d4284e9450cac093c05d0623ba39078907dc02c",
+  "research/planning.py": "0502389b789b4780c634b220412628a29360702a22066c53581fc85f825de273",
+  "research/swarm.py": "f62d7a73a809b194a23b8540f409040387eee66e110a14dceff2f215467f2aec",
+  "research/run.py": "d5052200031fd61e63e0f25523f5d804d654f12b5c9042d2264949cd8e43c2ba",
+  "research/worlds.py": "909c11f952922fa8c6dab86e0021c43a768560b24dc463276d0ab773974e46e4",
+  "research/reliability.py": "d2a26b2e255893f1fc4ca667b65df609f44ccd542fcd1e53c814ab2171430234",
+  "research/execution.py": "4663b1f8195e41f56525cdbfe2aab58fa3d5031d2c4a5664489449afb74123f7",
+  "research/telemetry.py": "cf9cf802ef303c07bb6d70080e4d151714b8fe865e1ec9c04f718cfc9454e170",
+  "research/calibration.py": "0efdf2fb4080b813304ebd7c642fd3676022cffa0ccfbafdf4805e7f88acdf9b",
+  "safe_navigation.py": "71cc1a465b0e44cad26f6ce6c5fd1fe962293288cfd4209c99b9b03e0ced8d3c",
+  "energy_model.py": "c175e82982ea7eca234ae9ef8411f8c12f42a3891feeb34b94bed848c6784b3a",
+  "terrain_profile.py": "b472521188f0e15b914163e1ecd50883b182db6beb9442cdf2a5ae9aec7a81fd",
+  "terrain_classes.py": "83aad280a77c9a0dd2fa317fafce998baa97a6b56d04906f0140106822cd812c",
+  "road_demo.py": "72f8e5fef19c28e0a949291ca1347970ff64116fb79e5fda027127a04add58fc",
+  "multi_place_config.py": "5ea86fe7a9835d78fa5422d514fdacc02af50e2c4ecb1aaa5a1a64087b3cfebc",
+  "tripod_gait.py": "af6996a344c84bd1d6ed6ca05e2d0ce8b967624e7e0bc5cff8e3087f8dfd7649",
+  "hybrid_locomotion.py": "76a10af0fe066f6389669ee7749d8234ae8ff96e7347e21e6b2baa2806155fdc",
+  "hybrid_hexapod_multi_place.xml": "626013218c442c54c0132b98ceac08b74aa39dd8f98c79d8157331cda2b2111f"
+}

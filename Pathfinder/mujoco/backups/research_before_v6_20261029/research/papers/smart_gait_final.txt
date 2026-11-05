@@ -1,0 +1,817 @@
+Yin et al.                                                                                       Chinese Journal of Mechanical Engineering
+Chinese Journal of Mechanical Engineering  (2024) 37:15
+https://doi.org/10.1186/s10033-024-01000-0
+
+
+
+
+ ORIGINAL ARTICLE                                                                                                                                            Open Access
+
+Smart Gait: A Gait Optimization Framework
+for Hexapod Robots
+Yunpeng Yin1 , Feng Gao1*, Qiao Sun1,2, Yue Zhao3 and Yuguang Xiao1
+
+
+
+  Abstract
+  The current gait planning for legged robots is mostly based on human presets, which cannot match the flexible
+  characteristics of natural mammals. This paper proposes a gait optimization framework for hexapod robots called
+  Smart Gait. Smart Gait contains three modules: swing leg trajectory optimization, gait period & duty optimization,
+  and gait sequence optimization. The full dynamics of a single leg, and the centroid dynamics of the overall robot are
+  considered in the respective modules. The Smart Gait not only helps the robot to decrease the energy consump-
+  tion when in locomotion, mostly, it enables the hexapod robot to determine its gait pattern transitions based on its
+  current state, instead of repeating the formalistic clock-set step cycles. Our Smart Gait framework allows the hexapod
+  robot to behave nimbly as a living animal when in 3D movements for the first time. The Smart Gait framework com-
+  bines offline and online optimizations without any fussy data-driven training procedures, and it can run efficiently
+  on board in real-time after deployment. Various experiments are carried out on the hexapod robot LittleStrong. The
+  results show that the energy consumption is reduced by 15.9% when in locomotion. Adaptive gait patterns can be
+  generated spontaneously both in regular and challenge environments, and when facing external interferences.
+  Keywords Gait optimization, Swing trajectory optimization, Legged robot, Hexapod robot
+
+
+1 Introduction                                                                               achieve flexible behaviors as natural animals. Specifically,
+Legged robots have great off-road abilities. The quad-                                       hexapods have more gait patterns due to the extra legs,
+rupeds like Spot [1], ANYmal [2, 3], HyQ [4] and MIT                                         predefined gaits could not fully leverage all the advantages
+Cheetah series [5–8], and hexapods like Octopus[9] and                                       of hexapods and limit their application in challenging envi-
+Qingzhui [10, 11] showed major progress in locomo-                                           ronments. As these issues are related to the gait control of
+tion control of legged robots, and demonstrated their                                        legged robots, here we propose the Smart Gait framework
+applications in challenging terrains. However, there are                                     for hexapods, introducing three sub modules for gait opti-
+still two deficiencies of legged robots. First, the legged                                   mization to address these deficiencies.
+robot requires repetitive limb motions to move around.
+This leads to high energy consumption. Second, human                                         1.1 Related Works
+designed periodic gait patterns are stiff and rigid, unable to                               The commonly used swing leg trajectories for leg-
+                                                                                             ged robots are geometrically designed, like spline [12]
+                                                                                             or cycloid [13]. But these trajectories didn’t consider
+*Correspondence:                                                                             the dynamics of the leg. MIT Cheetah [14] and its fol-
+Feng Gao
+                                                                                             lower [15] used a Bezier curve for swing trajectory.
+gaofengsjtu@gmail.com
+1
+  State Key Laboratory of Mechanical System and Vibration,                                   They gave out the design principles but without the cri-
+School of Mechanical Engineering, Shanghai Jiao Tong University,                             terions in detail. Other energy based optimizations [16,
+Shanghai 200240, China
+2                                                                                            17] achieved success in swing trajectory design but they
+  Lenovo Corporation, Shanghai, China
+3
+  AI Institute, School of Electronic Information and Electrical Engineering,                 stopped to further discuss the relations between their
+Shanghai Jiao Tong University, Shanghai 200240, China                                        results and the biological swing trajectories.
+
+
+                                           © The Author(s) 2024. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+                                           permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the
+                                           original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or
+                                           other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line
+                                           to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory
+                                           regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this
+                                           licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+Yin et al. Chinese Journal of Mechanical Engineering   (2024) 37:15                                                              Page 2 of 14
+
+
+
+
+  For gait patterns, formerly we have summarized that                      tial counterforce on the fuselage during the swing
+the relations between gait parameters and travel speed in                  phase. To our knowledge, we are the first to generate
+consideration of energy expenditures [18], and also dem-                   a swing trajectory conforming to the biological one.
+onstrated several gait adaptation methods on irregular                     (B). Period & Duty optimization. By considering the
+terrains [11, 19] or in fault-tolerant cases [20]. Central                 swing trajectory loss and the centroid dynamics of
+Pattern Generators (CPGs) [21–23] are powerful tools to                    the robot, it can adjust the swing and contact time
+generate different gait patterns but still limited to peri-                according to different travel speeds. It helps to reduce
+odic movement. To make up for this, Feasible Impulse Set                   energy consumption and leads to a human intuition
+(FIS) [24] was first proposed on MIT Cheetah 3 robot. By                   consistent gait pattern.
+considering the impulse that can be delivered by each leg,                 (C). Gait sequence optimization. By considering the
+it coordinated adaptive lift-off and touch-down events                     swing legs loss and centroid dynamics of the robot,
+of the legs without preset gait patterns. However, due to                  along with the body balance and leg workspace loss,
+the computing complexity of the convex set, it can only                    it allows the robot itself to decide leg lifting timing
+response to single dimensional movements with fixed leg                    according to its online state, to obtain the elegance
+swing time. Our original idea of Smart Gait was inspired                   and flexibility as a living animal. To our knowledge,
+by this scheme and we further developed it. Our Smart                      we are the first to develop this idea in 3D motion of
+Gait can handle 3D locomotion with adaptive swing time.                    legged robots in real time.
+  Gait planning in 3D environments is important for leg-
+ged robots. Free Gait [25] or TOWR [26] are good frame-                 This paper is constructed as follows. Section 2 intro-
+works for route planning, which can generate both body                duces our hexapod robot LittleStrong. Section 3 proposes
+and swing leg trajectories under the constrain of preset              the three modules of our Smart Gait framework progres-
+gait parameters and terrain features. Similar research is             sively. Section 4 carries out five experiments to verify the
+carried out on a hexapod [27] using quasi-static gaits.               feasibility of the sub-modules of the Smart Gait frame-
+By setting a target point, the robot can exert its traffica-          work. And lastly Section 5 draws the conclusions.
+bility after the whole-body planning is solved. However,
+they didn’t talk about unexpected external interferences              2 Robot Overview
+on the robot. Differently, our Smart Gait framework is                The bionic designed LittleStrong [28] is a hexapod robot
+based on online state of the robot but not targeting on               inspired by insects as shown in Figure 1. Its six legs are
+a final point. It concentrating on the energy consump-                symmetrically distributed on both sides of the body,
+tion and the biological flexibility, that generates the gaits         named as Back-Right leg (BR), Back-Left leg (BL), Mid-
+without preset parameters instructed by human. More                   dle-Left leg (ML), Front-Left leg (FL), Front-Right leg
+specifically, Smart Gait decides whether a certain leg in             (FR), Middle-Right leg (MR), respectively. In order to
+contact stage should lift or not at each moment, rather               avoid leg collisions during movement, the middle legs are
+than repeating obstinate step cycles before the final tar-            installed a little farther from the sagittal plane. The robot
+get. Moreover, as Smart Gait is online state based, it can            is about 0.4 m in height, 0.68 m in length and 0.46 m in
+handle external interference as well.                                 width when standing. For each leg, there are 3 DoFs, seri-
+                                                                      ally constructed as hip, thigh and shank joints. Therefore,
+1.2 Contributions                                                    LittleStrong has 18 joints in total. Each joint is driven by
+Legged animals can generate vivid gait patterns or swing              a brushless electric motor with a planetary gear set and
+leg trajectories spontaneously based on their motion                  an embedded encoder. The onboard computer adopts
+states or terrains without precise clock or trajectories in           the GNU/Linux with the Xenomai [29] real-time patch,
+their organisms. To catch up with these natural animals’
+characteristics, here we propose the Smart Gait frame-
+work, making it possible for the hexapod robot to decide
+its own gaits and swing leg trajectories based on its
+online motion states or terrains. We propose three mod-
+ules of gait optimization pregressively in our Smart Gait
+framework. The contributions of Smart Gait framework
+are summarized as follows.
+
+      (A). Swing trajectory optimization. By considering
+      the full dynamics of the leg linkages and the impulse            Figure 1 The hexapod robot LittleStrong, photograph (left),
+                                                                       configuration (right), and coordinate systems
+      loss, it reduces the energy consumption and iner-
+Yin et al. Chinese Journal of Mechanical Engineering   (2024) 37:15                                                               Page 3 of 14
+
+
+
+
+communicating with 18 drivers and an Inertial Measure-                3.1 Trajectory Optimization for Swing Legs
+ment Unit (IMU) through EtherCAT protocol, and get-                   The swing leg trajectory is the curve connecting the lift-
+ting remote commands through ZeroMQ [30]. It runs a                   ing point and the landing point of the swing leg’s tip. Tra-
+Whole-Body Control (WBC) [31] algorithm for motion                    ditionally, there are cycloid or symmetric polynomial
+control.                                                              trajectories. These trajectories are constructed based on
+  The coordinate systems are also defined in Figure 1.                simple geometric features and are convenient to use. How-
+The World Coordinate System (WCS) is fixed with the                   ever, without considering the dynamic characteristics, the
+ground, where the most locomotion planning is in. The                 movements of the swing leg would consume more energy
+Body Coordinate System (BCS) is fixed at the center of its            and have greater impact on the fuselage due to the inertial
+body, and all variables listed in BCS will be marked with             reaction forces brought by unpleasant accelerations and
+a left superscript {B}. Each leg has its own Leg Coordi-              decelerations.
+nate System (LCS), which is fixed with the BCS but takes                 Here, a two-segmented 4th order Bezier curve is used
+the particular leg’s hip joint as its origin. All variables in        for the swing trajectory. First, it has enough optimization
+the LCS will be marked with a left superscript {L}. The               intervals without being too complicated. Second, when
+right subscript {i} is for the leg number in the following            approaching the middle time of swing process, the junc-
+sections.                                                             tion of two sub-Bessel curves helps to reach the preset step
+                                                                      height. The swing trajectory is a 3D spatial curve, and the
+3 Gait Optimization                                                  optimization is carried out in the LCS. Figure 3 shows the
+The architecture of Smart Gait is shown in Figure 2. The              two segments of the 4th order Bezier curve for the right
+offline swing leg trajectory optimization (module A) and              leg (red and blue thick solid line) and its control nodes (red
+gait period & duty optimization (module B) parameter-                 and blue solid points {LN1 ~ LN9}). The thin lines are the leg
+ize the results and store them for online call. The online            links that tracking over the trajectory. The expression of
+Gait Adaptor (module C) takes the real-time state of the              each segmented Bezier curve is:
+robot for the gait sequence optimization. Gait sequence                                    n
+                                                                                           
+contains a signal that shows whether a certain leg in con-                 Lp
+                                                                                sw (t) =         Cnk · (1 − rσ (t))n−k · (rσ (t))k · L N k+σ ,
+tact phase should be lifted. The Gait Scheduler uses the                                   k=0
+optimized gait period & duty and the sequence signal to                                                                                   (1)
+generate the gait rhythm. After that, the gait rhythm and                               n!
+                                                                           Cnk =              , C 0 = 1,
+the reference swing trajectories are handed to WBC [31]                             k!(n − k)! n
+to generate the joint commands for the motors.
+                                                                                  
+                                                                                      0, t < Tsw /2,
+                                                                           σ =
+                                                                                      5, t ≥ Tsw /2,
+
+                                                                                       
+                                                                                             2t/Tsw , t < Tsw /2,
+                                                                           rσ (t) =
+                                                                                           2t/Tsw − 1, t ≥ Tsw /2,
+
+                                                                       where n = 4, LNk+σ is the (k+m)th control node of Bezier
+                                                                      curve; is the combinatorial number; Tsw is the swing
+                                                                      duration; rσ(t)[0,1] is the gait rhythm, a normalized
+
+
+
+
+ Figure 2 Architecture of Smart Gait framework                         Figure 3 Segmented 4th order Bezier curve to be optimized in LCS
+Yin et al. Chinese Journal of Mechanical Engineering       (2024) 37:15                                                             Page 4 of 14
+
+
+
+
+mapping of swing time t. The subscript {σ} is used to dis-                      torque is proportional to the driver’s current), mechani-
+tinguish the two segments of the Bezier curve.                                  cal power loss, and body impact reaction force dur-
+  According to the leg swing trajectory Lpsw(t), the general-                   ing the swing phase. {α, β, γ} are their corresponding
+ized force τ(t) is calculated from the inverse kinematics and                   weights. The swing trajectory shall satisfy the constraints
+the floating base dynamics of the leg:                                          in Eq. (8), namely starting position Lp0, ending position
+                                                                                L
+                                                                               pf, starting and ending velocity Lvd, midpoint height,
+      q J (t) = IK L psw (t) ,                             (2)                  and midpoint velocity continuity. As hbody is the height
+                                                                                of the robot body; hstep is the step height; {vx, vy} are the
+                            L                                                 translational velocity of the robot in horizontal direc-
+      q̇ J (t) = J −1
+                   v q J (t) · ṗsw (t),                                  (3)   tions. This nonlinear optimization equation is solved by
+                                                                                LM [32] method. After obtaining the control nodes, the
+                   −1                                                         segmented Bessel curve, namely the swing trajectory, can
+      q̈ J (t) = J̇ v     q J (t) · L ṗsw (t) + J −1           L
+                                                   v (q J (t)) · p̈sw (t),      be reconstructed as Eq. (1).
+                                                                        (4)       The above process is carried out offline. We store the
+      τ (t) = M(q(t)) · q̈(t) + h(q(t), q̇(t)) + g(q(t)), (5)                   working condition parameters and build a swing trajec-
+                                                                                tory library, and then it can be called online to get the
+where q J (t) ∈ R3 is the vector of joint    angles, obtained
+                                                                              control nodes for the swing trajectory due to different
+from the leg’s inverse kinematics IK L psw (t) . J v q J (t)                    translational velocities of the robot. Since the locomotion
+                                                  T
+is the leg’s Jacobian. q(t) = L q T          T
+                                        FB q J (t)    is a gen-                 control is carried out in the WCS, the transformation of
+eralized vector, in which q FB ∈ R is the generalized
+                                L         6                                     the swing trajectory from the LCS to the WCS can be
+coordinate (position and rotation) of the floating base                         expressed as:
+for the leg. As this swing trajectory is expressed in the                                                                              
+LCS, thus L q FB ≡ 0 (the floating base never moves in                                psw,i (t) = pbody (t) + R(t) B phip,i + Li psw (t) , (10)
+its own coordinate system). M(q(t)) ∈ R9×9 is the gen-
+eralized inertial matrix; h(q(t), q̇(t)) ∈ R9 is the vector                     where pbody and R represent the position and rotation
+for the nonlinear terms; g(q(t)) ∈ R9 is for the grav-                          of the robot, Bphip,i is the ith hip position relative to the
+                              T                                               body, Li psw (t) is the ith leg swing trajectory under its own
+ity; τ (t) = τ T         T
+                FB (t) τ J (t)    is the vector of generalized
+                                                                                LCS.
+forces/torques, where τ FB (t) ∈ R6 is for the floating base                       Figure 4 shows the comparisons of several groups of
+and τ J (t) ∈ R3 is for the joints. Namely, τ FB (t) is the vec-                different swing trajectories in the WCS. As cycloid and
+tor of reaction force / torque of the leg on the fuselage.                      symmetric cubic polynomial are all curves constructed
+   Then, by building and minimizing the cost function that                      based on simple geometric features, they are all in the
+tracking the swing trajectory, the control nodes of Bessel                      same vertical plane coinciding the starting point and the
+curve can be obtained as:                                                       end point. While the optimized trajectory is a spatial
+      L N ∗ = arg min J
+                           L                                                  curve not in this plane.
+                        sw N ,                               (6)
+                    N                                                              In addition, as shown in Figure 5, when the knee bend-
+                                                                                ing direction is consistent with the travel direction, the
+                                                                                first half of the optimized swing trajectory is higher than
+                       2                                   
+Jsw L N = ∫T0 sw α τ J (t) + βτ T                           2
+                                  J (t) · q̇(t) + γ �τ FB (t)� dt,
+                                                                                the second half; and when the knee’s bending direction is
+                                                                          (7)
+                                                                               opposite to the travel direction, the second half of the of
+                           Lp          L
+              
+                              sw (0) = p0 ,                                    the trajectory is higher than the first half. This is consist-
+                          L p (t ) = L p ,
+              
+              
+                              sw f       f                                     ent with the corresponding relationship between the bio-
+                          L ṗ (0) = L v ,
+                               sw         d                                     logical configurations and swing trajectories. In Figure 5,
+      s.t.,                L ṗ (t ) = L v ,                              (8)
+              
+              
+                �              � f
+                               sw         d                                     we track the swing trajectories with a red tag fixed on the
+               z L p (t ) = −hbody + hstep ,                                   side of the experimenter’s shoes when moving forward
+               L sw m
+              
+              
+                    ṗsw (tm - ) = L ṗsw (tm + ),                              (knee forward) and moving back off (knee opposite),
+                                                                                respectively. The experimenter only uses the heel to walk
+                                                                                in order to match the configuration of the robot’s leg (a
+                               �                         �T
+     L
+              pf = −L p0 =          vx Tsw vy Tsw              ,
+                                      −hbody
+                                       2      2                           (9)   three-linkage-model with hip, thigh and shank). Regard-
+                                                                                less of the compression and rebound caused by the elas-
+                            �       �
+                        L v = −v −v 0 T ,
+                           d    x  y
+                                                                                ticity of the shoes’ soles (circled in green), our optimized
+where the cost function of Eq. (7) is composed of three                         swing trajectories is very consistent with the trend of the
+integral items: equivalent electrical power loss (joint                         biological ones. We conducted experiments on the robot
+Yin et al. Chinese Journal of Mechanical Engineering    (2024) 37:15                                                                 Page 5 of 14
+
+
+
+
+ Figure 4 Energy cost of Period & Duty at different given speeds (The flat area will exceed the leg workspace thus not considered)
+
+
+
+
+ Figure 5 Comparison between biological swing trajectories and optimized swing trajectories
+
+
+
+in Section 4.1. It proved that our optimized trajectory has                 phase to the period (contact time/period, λ= Tc/T). The
+lower energy consumption and softer reaction force to                       phase-difference between different legs determines the
+the fuselage.                                                               gait patterns. Figure 6 shows the Tripod-trot [33] gait
+                                                                            pattern commonly used by hexapod robots.
+3.2 Period & Duty Optimization for Gait Cycles                               When in a given moving speed, different gait param-
+The gait cycle of each leg is determined by three param-                    eters will greatly affect the energy consumption of the
+eters: period, duty, and phase-difference when leaving                      robot. This subsection will optimize the gait period &
+contact phase to swing phase. The period T is the time                      duty under the tripod-trot gait pattern (fixed phase-
+duration for a complete step (swing time + contact time,                    differences). Phase-differences optimization will be dis-
+T = Tsw + Tc). Duty λ is the percentage of the contact                      cussed in next subsection.
+Yin et al. Chinese Journal of Mechanical Engineering                      (2024) 37:15                                                                  Page 6 of 14
+
+
+
+
+    Figure 6 Tripod-trot gait pattern for hexapods (The white in the sequence diagram represents the swing phase; the red and blue represent
+    the contact phase, respectively)
+
+
+
+  For the swing legs, the energy consumption comes                                       operator. Since the contact state of each leg is constantly
+from the motion of the leg, namely the dynamic items                                     changing during walking, the torques of contact legs’
+as calculated in Eq. (7). But for the energy consumption                                 joints are distributed by solving a quadratic program-
+of contact legs, it contains two parts. One part is for                                  ming (QP) problem as:
+the motion of the leg itself, and another part is the sup-                                                                                       
+port force for the body. Both leg-dynamics and body-                                        τ ∗c (t) = arg min �A(t) · τ c (t) − b�2W + �τ c (t)�2 ,
+support items need to be considered at the same time.                                                        τ ∈R18
+                                                                                                                                                                (13)
+When the robot moves with a given speed, in the BCS,                                          
+the trajectory Bli(t) of the contact leg is considered as a                                     C(t) · J −T
+                                                                                                         v,i (t) · τ c,i (t) ≤ f lim,i ,
+                                                                                         s.t.,
+uniform line that connects the foot-landing point to the                                                 |τ c (t)| ≤ τ max ,
+                                                                                                         
+foot-lifting point of next step cycle (regardless of turn-                                     f lim,i =
+                                                                                                             f lim , leg i in stance,
+ing). The leg-dynamics subitem of the energy consump-                                                           0, leg i in swing,
+tion for the contact leg can be obtained in the same
+                                                                                         where W is the weight matrix of the quadratic term, and
+way as in Eq. (5). For the body-support subitem, we get
+                                                                                         the inequality constraints represent the friction cone [34]
+the joints’ torques by distributing body gravity to each
+                                                                                         and the extreme values of joint torques respectively. After
+contact leg with a simplified Centroid Balance Control
+                                                                                         getting the joint torques τ ∗c (t), we build the energy cost of
+(CBC)[34] method.
+                                                                                         walking process as:
+            c(t)
+            � −T                                                                                                            
+     
+                  J v,i (t) · τ c,i (t) = mg,                                                 Jst (v, T , ) = 6 · Jsw L N ∗
+               1
+        c(t)                                             (11)                                                              2                       T      
+                                                                                                + ∫T0 α τ J,c (t) + τ ∗c (t) + β τ J,c (t) + τ ∗c (t) · q̇(t) dt.
+       �B               �                        �
+     
+            l i (t) × J −T v,i (t)   · τ c,i (t)   = 0,
+             1                                                                                                                                  (14)
+                                                                                                                                               L
+                                                                   
+                                                                                           The single leg’s swing phase cost Jsw( N*) is obtained
+�                                                       � τ c,1 (t)   �    �             from the previous subsection, and it needs to multiply
+            J −T
+              v,1 (t)      ...        J −T
+                                        v,6 (t)           .  = mg ,
+                                                          . 
+                                                                                         the number of legs by “6”. The second integral item is
+    �B         � −T             �B       �
+       l 1 (t) × J v,1 (t) . . . l 6 (t) × J −T
+                                              v,6 (t)
+                                                          .           0
+�                          ��                           � τ c,6 (t)   � �� �             similarly combined as equivalent electrical power cost
+                          A(t)                           � �� �          b               and mechanical power cost. τ J,c (t) is the torque for leg-
+                                                                τ c (t)
+                                                                                         dynamics, obtained in the same way as Eq. (5); τ ∗c (t) is
+                                                           (12)
+                                                                                         body support torques as previously defined.
+where m is the mass of the robot and g stands for the                                      Figure 7 shows how the period & duty parameters
+gravity. Jv,i(t) is the Jacobian matrix for each leg; c(t) rep-                          influence on energy cost at different given speeds of the
+resents the legs in contact phase; τc(t) is used to repre-                               robot. Note that the cost value is displayed in logarith-
+sent the supporting torques of the contact leg; Bli(t) is the                            mic coordinates. The flat area at the lower right corner
+ith leg tip position in BCS. For the simplification of the                               of each figure represents that this Period & Duty com-
+optimization problem, rotation is not considered in the                                  bination will exceed the leg workspace and cannot be
+offline optimization. Eq. (11) is rewritten to Eq. (12) as                               considered.
+the matrix form. [*]× represents an antisymmetric matrix
+Yin et al. Chinese Journal of Mechanical Engineering    (2024) 37:15                                                                 Page 7 of 14
+
+
+
+
+ Figure 7 Energy cost of Period & Duty at different given speeds (The flat area will exceed the leg workspace thus not considered)
+
+
+
+
+                                                                            from Figure 7, there appears another local minima in
+                                                                            λ<0.5 area, which corresponds to a running gait with fly-
+                                                                            ing phase. This is completely consistent with our human’s
+                                                                            intuition that when the speed increases to a certain stage,
+                                                                            the walking gait should be replaced by the running gait.
+                                                                            However, for the high-speed conditions, the workspace
+                                                                            limitation will become a major constraint factor, and
+                                                                            the adjustments of period & duty will be greatly limited.
+ Figure 8 Relations between speed and optimal gait period & duty            Therefore, this paper will not discuss the high-speed gait
+                                                                            (v>1 (m/s) and λ<0.5). Relevant comparative experiments
+                                                                            are given in Section 4.2.
+  Figure 8 shows the relationship between the optimal
+period & duty at different speeds. Back in Figure 7, we                     3.3 Gait Sequence Optimization for Leg Lifting Events
+notice that the gradient around the optimal period & duty                   The phase-difference of each leg is determined by the
+is very small. Therefore, we add an adjustment region in                    timing that lifting this leg from contact stage to swing
+Figure 8, in which the optimal cost is allowed to fluctu-                   stage. When should the lifting event be taken is the
+ate by 1%. When in a lower speed, the allowed period                        gait sequence concerned. In fact, it is hard to build a
+floating range is large, but as the duty is already at a large              gait sequence library like previous modules due to the
+level, the duty floating range is small. As the target speed                enlarged state parameters scale, and it is difficult to cover
+increases, the period and duty tend to be unchanged, but                    the potential online states of the robot either. So, we
+                                                                            here adopt the online Gait Adapter as shown in Figure 9,
+Yin et al. Chinese Journal of Mechanical Engineering   (2024) 37:15                                                             Page 8 of 14
+
+
+
+
+                                                                       optimization result too much. Here we design the rela-
+                                                                       tionship between the leg swing time and the balance state
+                                                                       of the fuselage. When the robot tends to topple to one
+                                                                       side or fails to reach the preset state, we shorten the leg
+                                                                       swing time on the corresponding side, then this swing leg
+                                                                       can enter contact phase in time to correct the body bal-
+                                                                       ance error:
+                                                                             ∗ = T − t ∗ ,
+                                                                            Tsw,i sw   i                                               (17)
+                                                                                     
+                                                                                        0,       �ti ≤ 0,
+                                                                            �ti∗ =      �ti , 0 < �ti ≤ �tmax ,
+                                                                                      �t , �t
+                                                                                         max      max < �ti ,
+
+                                                                                            T          T
+                                                                                                                            
+ Figure 9 Scheme of online Gait Adapter for gait sequence                   B ω̇ = K
+                                                                                       P    R̂ log Rd R̂      + K D B ωd − B ω̂ , (18)
+ optimization
+
+                                                                                    B               T
+                                                                                        vx B vy
+                                                                            Bn =
+                                                                                       �v� �v� 1
+                                                                                                          ,                            (19)
+which can process the 3D motion of the robot to generate
+the optimal leg lifting sequence.                                                    B            
+   We define a set S to represent the combination of the                    ti =         l i × B n B ω̇,                              (20)
+legs’ current stages:
+                                                                    where Tsw is the benchmark of leg swing time obtained
+                        T          1, C1 ,                           in the previous subsection; ti∗ is the adjust time; ∆tmax
+S : = s = s1 · · · s6 |si =                  i ∈ {1, . . . , 6} ,
+                                     0, C2 ,                           is the maximum allowable adjustment; B ω̇ is the attitude
+                                                                (15)   correction vector derived from a PD control; Rd and Bωd
+                                                                      are the body target posture and angular velocity; R̂ and
+         C1 : leg i in swing stage,                                    B ω̂ are the estimated body posture and angular velocity.
+        C2 : leg i in contact stage.
+                                                                       The log(*) operator maps SO(3) to R3. {KP, KD} are posi-
+  Then the next action of the robot (ideal combination of              tive definite diagonal matrices of corresponding weights,
+legs’ stages in the next moment) should be determined by               respectively; Bn is the generalized target velocity direc-
+the current robot state:                                               tion and Bli is for the tip position of the ith leg in the BCS.
+                                                                     Then the swing time adjustment ∆ti reflects how much
+      sk+1 ∼ pbody , R, v body , ωbody , pfoot , T ∗sw , sk , (16)     earlier the ith swing leg needs to enter contact phase, so
+                                                                       that can generate more driving force for the correction
+                                                                       vector to keep the body balance.
+      sk , sk+1 ∈ S .                                                     For the contact leg, we use the idea of model predic-
+                                                                       tive control for the decisions of leg lifting timing for the
+  That is, which leg should enter the swing stage in the
+                                                                       gait sequence. At each moment, all the potential leg stage
+next moment is related to the robot’s position, rotation,
+                                                                       combinations are traversed to find the best combination
+velocity, angular velocity, feet positions, legs swing time
+                                                                       for execution. The cost function of leg stage combination
+and legs stages at present.
+                                                                       s is as follows:
+  For the swing leg, there is a fact that for natural myri-
+apod animals, each leg’s swing time is not fixed and                                                  T
+                                                                              Js (s) = Jst∗ s, T ∗sw + ∫0 h E(t)dt,                (21)
+even varies between legs in a single step cycle according
+to different motion states. Encouraged by this fact, we
+                                                                                                                         c(t) 
+adjust each leg’s swing time by the current state of the                              2                                              2
+                                                                        E(t) = ëb (t)Q + �ėb (t)�2Qv + �eb (t)�2Qp +
+                                                                                                                              L        
+                                                                                                                               el,i (t) ,
+robot. The benchmark of the leg’s swing time is obtained                                     a                                          Ql
+                                                                                                                           i
+from the previous section (based on tripod-trot gait).
+Although the optimized leg lifting sequence may not
+                                                                            ëb (t) = A(t)τ (t) − b,
+conform to the beat of tripod-trot, but considering that
+the swing phase only takes a small proportion in the
+walking energy cost in Eq. (14), this does not affect the
+Yin et al. Chinese Journal of Mechanical Engineering           (2024) 37:15                                                          Page 9 of 14
+
+
+
+
+ Figure 10 Robot moves with different swing trajectories
+
+
+
+                 T
+      ėb = ∫0 h ëb (t)dt,                                                   full-time-domain can be further compared with the next
+                                                                              forecast moment:
+                                                                                          ∗
+                 T
+      eb = ∫0 h ėb (t)dt,                                                                sc , Js (s∗c ) < Js+ (s∗c ),
+                                                                                    s∗ =                                        (24)
+                                                                                          sc , Js (s∗c ) ≥ Js+ (s∗c ).
+                       
+      L                            0, L l i (t) ≤ L l lim ,                      Js+ (s∗c ) represents the cost value that keep still the leg
+          el,i (t) =       L l (t) − L l
+                              i
+                                                L           L
+                                         lim , l i (t) > l lim ,              stage sc at the current moment but lifting the leg accord-
+                                                                            ing to s∗c in the next forecast moment. If the cost of Js (s∗c )
+where the first item Jst∗ s, T ∗sw is a function similar to                   is less than Js+ (s∗c ), it means that s∗c is the optimal leg lift-
+Eq. (14), but the target leg stage combination s is used                      ing selection and can be executed; otherwise, maintain
+instead of a fixed Tripod-Trot gait pattern, and the swing                    the current leg stage sc.
+time T ∗sw mentioned above is adopted. Th is the predic-                         The three modules of Smart-Gait framework are fully
+tion horizon. Usually, Th should be set greater than one                      established. Experiments are taken in the next section.
+step period (Th≥Tsw+Tc). The second integral item is to
+predict the cost of body balance and leg workspace. ëb (t)
+                                                                              4 Experiments and Results
+is the predictive generalized acceleration deviation of
+                                                                              We conducted several experiments on LittleStrong to
+body balance after Eq. (12). Correspondingly, ėb (t) and
+                                                                              verify each module of our Smart Gait framework. Experi-
+eb (t) are the generalized velocity and position deviation.
+                                                                              ment (4.1) is to verify the energy consumption of the
+And {Qa, Qv, Qp} are their weighting matrices. L el,i (t) is
+                                                                              optimized swing trajectory (Additional file 1); Experi-
+the deviation of the predicted tip position of each con-
+                                                                              ment (4.2) is to verify the outcome of Period & Duty
+tact leg that beyond the workspace constraint in the LCS,
+                                                                              optimization in tripod-trot gait (Additional file 2). Exper-
+with L l i (t) for the tip position and L l lim for the leg work-
+                                                                              iments (4.3) (Additional file 3), Experiments (4.4) (Addi-
+space. Ql is the corresponding weighting matrix.
+                                                                              tional file 4), Experiments (4.5) (Additional file 5) are to
+   Considering that not all leg stage combinations are rea-
+                                                                              verify the gait transitions of the online Gait Adapter.
+sonable for execution when the robot is running, a set Ŝ
+is defined to represent the allowable leg lifting combina-
+tions due to the current leg stages for each moment:                          4.1 Swing Trajectories Comparison
+                                                                           This experiment is to verify the energy consumption of
+                                 1, Ĉ1 ,                                     the optimized swing trajectory. The robot moves with
+      Ŝ : = ŝk ∈ S |ŝk,i =             i ∈ {1, · · · , 6} , (22)
+                                 0, Ĉ2 ,                                     different swing leg trajectories under the same gait pat-
+                                                                              tern, as Figure 10 shows. We compared the energy con-
+                                                                             sumption between cycloid, symmetric cubic polynomial,
+            Ĉ1 : leg i in swing stage, or ready to swing,
+                                                                              and our optimized swing trajectories.
+           Ĉ2 : leg i in contact stage, and will hold still.                   As shown in Figure 11, the relevant test data of the
+  By traversing ∀ŝk ∈ Ŝ , we get the optimal leg lifting                    robot’s back-right leg is shown. The joints velocities and
+combination as:                                                               torques of the cycloidal trajectory are the largest, fol-
+                                                                            lowed by the symmetric cubic polynomial trajectory,
+    s∗c = arg min Js ŝk .                            (23)                    and the joints velocities and torques of our optimized
+               s
+                                                                              trajectory are the smallest. In addition, the angular
+  Now, s∗c is just the optimal leg stage under the cur-                       velocity changing amplitude of the optimized trajectory
+rent state, whether it is the optimal stage in the                            is also the smallest. That is, the required acceleration
+Yin et al. Chinese Journal of Mechanical Engineering      (2024) 37:15                                                                       Page 10 of 14
+
+
+
+
+ Figure 11 Joint velocities and torques of the Back-Right leg of the robot under different swing trajectories (The horizontal axis is the tip position;
+ thus, the contact phase will be compressed)
+
+
+
+and deceleration are gentler, which reduces the inertial                       Table 1 Normalized energy consumption of different swing
+impact force on the fuselage, and benefits to the stability                    trajectories
+of the robot.                                                                  Swing trajectory          Cycloid      Symmetric                 Optimize
+   Since the electric system’s impedance parameters are                                                               polynomial                trajectory
+not obtained, we compare them with normalized relative
+                                                                               Energy consump-           100          86.33                     81.96
+energy consumption (The average of the current magni-                          tion (%)
+tude of the swing leg’s motors). As shown in Table 1, the
+normalized energy consumption with cycloid trajectory
+is defined as 100%. Our optimization trajectory performs                       simplification, we did not consider turning in our opti-
+best in terms of energy consumption.                                           mization model, so in this experiment we converted the
+                                                                               equivalent step size of turning to the translation veloc-
+4.2 Period & Duty Comparison                                                  ity. The experiment proves that at the given speed, the
+This experiment is to verify the benefit of Period &                           average joint power (Figure 13(d)) of the optimized gait
+Duty optimization. The robot walks on ground as Fig-                           period & duty is smaller, reduced by 15.9%.
+ure 12 shows, first using a fixed period & duty, and
+again using the optimized period & duty of Section 3.2.
+results are shown in Figure 13.                                                4.3 Gait Adaptor for Stroll
+  We designed a movement process containing vary-                              This experiment is to verify the feasibility of the Gait
+ing velocities. The control group used fixed gait param-                       Adaptor for online gait sequence optimization. We car-
+eters (Figure 13 (a1) for the velocity, Figure 13(b1) for                      ried out a strolling experiment with the Gait Adaptor
+period & duty, and Figure 13(c1) for gait sequence.                            proposed in Section 3.3, that all step cycles are launched
+Period=0.7 s, Duty=0.52). The experimental group used                          automatically. The motion commands are randomly gen-
+the optimized gait period & duty based on the robot                            erated by a handle remoter. The gait patterns at different
+state (Figure 13(a2) for the velocity, Figure 13(b2) for                       stages are shown in Figure 14. This experiment proves
+period & duty, and Figure 13(c2) for gait sequence). For                       that our Smart Gait algorithm can generate adaptive gait
+Yin et al. Chinese Journal of Mechanical Engineering      (2024) 37:15                                                                 Page 11 of 14
+
+
+
+
+ Figure 12 Screenshot of the experiment for period & duty comparison
+
+
+
+
+                                                                            Figure 14 Screenshots of different gait stage from the stroll (Circles
+                                                                            for swing phase and rods for contact phase)
+
+
+
+                                                                           sequences of 3D motions. As can be seen in Figure 15,
+                                                                           the gait of the robot is not in a fixed or preset pattern, but
+                                                                           totally determined by the current state of the robot and
+                                                                           contains a variety of gait transitions, which shows out
+                                                                           vivid characteristics as living myriapods.
+
+                                                                           4.4 Gait Adaptor for Disturbance Recovery
+                                                                           This experiment is to verify the anti-interference of the
+                                                                           Gait Adaptor for online gait sequence optimization.
+                                                                           When challenged by an external interference, the robot
+                                                                           needs to take an adaptive gait to maintain its balance.
+                                                                           The easiest way is to set a state switch by an <if…else…>
+                                                                           judgement, but this human designed script is just a tech-
+ Figure 13 Results of optimized period & duty experiment: (a1), (a2)
+                                                                           nical method rather than driven by the inherent essence.
+ The estimated velocity and angular velocity of the robot, (b1), (b2)
+ Period & duty, (c1), (c2) Gait cycle, (d) The real time and the average   Here by hiring our Smart Gait framework, the robot suc-
+ torque squared                                                            cessfully makes instinctive responses to two challenges of
+                                                                           external interference.
+Yin et al. Chinese Journal of Mechanical Engineering    (2024) 37:15                                                                  Page 12 of 14
+
+
+
+
+ Figure 15 Estimated velocity of the robot and Smart Gait cycle for the strolling
+
+
+
+  In the first challenge, as shown in Figure 16, when the                    0.4 m/s to cross the trench (Figure 18), and again, moves
+front-right leg of the robot is dragged out, the Smart Gait                  back off in 0.5 m/s (Figure 19).
+will make the robot automatically lift the leg back to the                     When the robot approaches the trench, it stops at its
+original position. And as the balance of the robot body is                   feet and leans forward to accumulate strength. Then it
+also affected by the dragging, the robot voluntarily lifts                   uses two front legs to stride across the trench, after that
+the diagonal back-left leg to maintain its symmetrical                       two middle legs lift and swing in the same phase, and the
+balance.                                                                     back legs transition to staggered phases to stride over
+  In the second challenge, as shown in Figure 17, the                        again. The gait cycle is shown in Figure 18, in which the
+robot was impacted by a side kick when standing stati-                       coherent movements of the robot are very similar to the
+cally, and the Smart Gait quickly makes an adaptive leg                      cross-trench actions as an organism does. Even more, as
+raising motion response. Figure 17(e) shows the gait                         Figure 19 shows, when using a faster speed moving back,
+sequence of the robot, which shows the Smart Gait can                        the robot performs a quasi-jump to overcome the limita-
+handle unexpected interferences online based on the                          tion of the leg working space, as the living animals often
+robot’s real-time state.                                                     does. These actions are totally generated by the Smart
+                                                                             Gait without any human modification (Additional file 6).
+4.5 Gait Adaptor for Trench Crossing
+This challenge is to verify the uneven terrain adaptabil-
+ity of the Gait Adaptor for online gait sequence optimi-
+zation. As shown in Figure 18 and Figure 19, the gap
+between these two boards is 0.25 m’s width, with a virtual
+safe margin of 0.05 m for both sides. So, the virtual trench
+is 0.35 m’s width, a little wider than half of the robot’s
+length. In this experiment, the position of the trench is
+pre-known by the robot. The robot moves forward in
+
+
+
+
+                                                                               Figure 17 Disturbance recovery from body kicks: (a)–(d) Screenshots
+                                                                               of different gait stages, (e) Smart Gait cycle
+
+ Figure 16 Disturbance recovery from foot drags
+Yin et al. Chinese Journal of Mechanical Engineering      (2024) 37:15                                                                     Page 13 of 14
+
+
+
+
+                                                                          Supplementary Information
+                                                                          The online version contains supplementary material available at https://​doi.​
+                                                                          org/​10.​1186/​s10033-​024-​01000-0.
+
+                                                                            Additional file 1. Joint velocities and torques of the Back-Right leg of the
+                                                                            robot under different swing trajectories for Experiment 4.1.
+                                                                            Additional file 2. Results of optimized period & duty for Experiment 4.2.
+                                                                            Additional file 3. Estimated velocity of the robot and Smart Gait cycle for
+                                                                            the strolling for Experiment 4.3.
+                                                                            Additional file 4. Gait stages of the disturbance recovery with body kicks
+                                                                            for Experiment 4.4.
+                                                                            Additional file 5. Gait stages of moving forward and back off to cross a
+ Figure 18 Moving forward to cross a trench (0.4 m/s): (a)                  trench for Experiment 4.5.
+ Approaching, (b) Holding and gearing up, (c) Striding with middle
+                                                                            Additional
+ legs, (d) Striding with back leg, (e) Smart Gait cycle                     file 6. Video of the introduction and experiments of the Smart Gait.
+
+
+                                                                          Acknowledgements
+                                                                          Not applicable.
+
+                                                                          Authors’ Contributions
+                                                                          FG was in charge of the whole trial; YY wrote the manuscript; YX, YZ and QS
+                                                                          assisted with sampling and laboratory analyses. All authors read and approved
+                                                                          the final manuscript.
+ Figure 19 Moving back off to cross a trench (0.5 m/s): (a) Striding
+ with middle legs, (b) quasi jump with front legs, (c) Smart Gait cycle   Funding
+                                                                          Supported by National Key Research and Development Program of China
+                                                                          (Grant No. 2021YFF0306202).
+
+                                                                          Availability of Data and Materials
+                                                                          All data generated or analysed during this study are included in this published
+5 Conclusions                                                            article.
+
+   (1) This paper has presented the Smart Gait frame-                     Declarations
+       work, a meaningful work for gait optimization of
+       hexapod robots. The Smart Gait has three modules:                  Ethics Approval and Consent to Participate
+                                                                          Not applicable.
+       the swing trajectory optimization, the period &
+       duty optimization, and the online Gait Adapted for                 Consent for Publication
+       gait transition.                                                   Not applicable.
+
+   (2) Smart Gait enables the hexapod robot LittleStrong                  Competing Interests
+       to save more energy during locomotion. Promising                   The authors declare no competing financial interests.
+       results are shown in the experiments. Swing trajec-
+       tory optimization reduces energy consumption of                    Received: 5 July 2023 Revised: 16 October 2023 Accepted: 19 January
+       the swing leg to 81.96%. Period & duty optimization                2024
+       saves 15.9% of the energy consumption of the robot.
+   (3) Gait sequence optimization helps the robot to per-
+       form smart behaviors like living-creatures, rather
+       than repeating stubborn steps. It helps to generate                References
+                                                                          [1] S C Niquille. Regarding the pain of SpotMini: Or what a robot’s struggle
+       adaptive gait patterns both in regular and challenge                   to learn reveals about the built environment. Architectural Design, 2019,
+       environments in 3D movements for the first time. It                    89(1): 84-91.
+       also can generate adaptive actions for the hexapod                 [2] M Hutter, C Gehring, D Jud, et al. ANYmal - A highly mobile and dynamic
+                                                                              quadrupedal robot. 2016 IEEE/RSJ International Conference on Intelligent
+       when facing external interferences.                                    Robots and Systems (IROS), 2016.
+   (4) In the future, we will introduce environmental                     [3] T Miki, J Lee, J Hwangbo, et al. Learning robust perceptive locomotion for
+       awareness to our Smart Gait framework, enabling                        quadrupedal robots in the wild. Science Robotics, 2022, 7(62): eabk2822.
+                                                                          [4] C Semini, N G Tsagarakis, E Guglielmino, et al. Design of HyQ – a hydrauli-
+       the robot to adapt to more complex terrains, and                       cally and electrically actuated quadruped robot. Proceedings of the
+       further improve the bionic behavior intelligence of                    Institution of Mechanical Engineers, Part I: Journal of Systems and Control
+       legged robots.                                                         Engineering, 2011.
+                                                                          [5] S Seok, A Wang, Y C Meng, et al. Design principles for highly efficient
+                                                                              quadrupeds and implementation on the MIT Cheetah robot. IEEE, 2013.
+Yin et al. Chinese Journal of Mechanical Engineering          (2024) 37:15                                                                           Page 14 of 14
+
+
+
+
+[6] H W Park, P M Wensing, S Kim. High-speed bounding with the MIT Chee-            [30] P Hintjens. ZeroMQ: messaging for many applications. O’Reilly Media, Inc.,
+     tah 2: Control design and experiments. International Journal of Robotics            2013.
+     Research, 2017, 36(2): 027836491769424.                                        [31] C D Bellicoso, F Jenelten, P Fankhauser, et al. Dynamic locomotion and
+[7] G Bledt, M J Powell, B Katz, et al. MIT Cheetah 3: Design and control of a           whole-body control for quadrupedal robots. IEEE/RSJ International Confer-
+     robust, dynamic quadruped robot. IEEE International Conference of Intel-            ence on Intelligent Robots & Systems, 2017.
+     ligent Robots (IROS) 2018, 2018.                                               [32] A Ranganathan. The levenberg-marquardt algorithm. Tutoral on LM
+[8] B Katz, J D Carlo, S Kim. Mini Cheetah: A platform for pushing the limits            Algorithm, 2004, 11(1): 101-110.
+     of dynamic quadruped control. 2019 International Conference on Robotics        [33] Q Sun, F Gao, X B Chen. Towards dynamic alternating tripod trotting of
+     and Automation (ICRA), 2019.                                                        a pony-sized hexapod robot for disaster rescuing based on multi-modal
+[9] P Yang, F Gao. Leg kinematic analysis and prototype experiments of                   impedance control. Robotica, 2018, 6(7): 1048-1076.
+     walking-operating multifunctional hexapod robot. ARCHIVE Proceedings           [34] M Focchi, A Del Prete, I Havoutis, et al. High-slope terrain locomotion for
+     of the Institution of Mechanical Engineers Part C Journal of Mechanical             torque-controlled quadruped robots. Autonomous Robots, 2017, 41(1):
+     Engineering Science 1989-1996 (vols 203-210), 2014, 228(12): 2217-2232.             259-272.
+[10] Y Zhao, F Gao, Q Sun, et al. Terrain classification and adaptive locomotion
+     for a hexapod robot Qingzhui. Frontiers of Mechanical Engineering, 2021,
+     16: 271–284.                                                                   Yunpeng Yin Born in 1995, is currently a PhD candidate at State
+[11] L Mao, F Gao, Y Tian, et al. Novel method for preventing shin-collisions in    Key Laboratory of Mechanical System and Vibration, School of Mechani-
+     six-legged robots by utilising a robot–terrain interference model. Mecha-
+                                                                                    cal Engineering, Shanghai Jiao Tong University, China. He received his
+     nism and Machine Theory, 2020, 151: 103897.
+[12] C Gehring, S Coros, M Hutler, et al. Practice makes perfect: An optimiza-
+                                                                                    bachelor degree from Xi’an Jiaotong University, China, in 2018. His
+     tion-based approach to controlling agile motions for a quadruped robot.        research interests include legged robots and automation control.
+     IEEE Robotics & Automation Magazine, 2016, 23(1): 34-43.
+[13] G Bhardwaj, U Mishra, N Sukavanam, et al. Planning adaptive brachis-           Feng Gao Born in 1956, is currently a professor at Shanghai Jiao
+     tochrone and circular arc hip trajectory for a toe-foot bipedal robot going    Tong University, China. His research interests include mechanism,
+     downstairs. Journal of Physics: Conference Series, 2021, 1831(1): 012032.      machine theory and legged robots.
+[14] D J Hyun, S Seok, J Lee, et al. High speed trot-running: Implementation
+     of a hierarchical controller using proprioceptive impedance control on         Qiao Sun Born in 1989, is currently an employee of Lenovo Corpo-
+     the MIT Cheetah. International Journal of Robotics Research, 2014, 33(11):
+                                                                                    ration, China. He received his doctor degree from Shanghai Jiao Tong
+     1417-1445.
+[15] X Zeng, S Zhang, H Zhang, et al. Leg trajectory planning for quadruped
+                                                                                    University, China, in 2018.
+     robots with high-speed trot gait. Applied Sciences, 2019, 9(7): 1508.
+[16] T Liao, S Ye, L Chen, et al. Energy efficient swing leg trajectory planning    Yue Zhao Born in 1992, is currently a postdoc at AI Institute, School
+     for quadruped robots walking on rough terrain. 2019 IEEE International         of Electronic Information and Electrical Engineering, Shanghai Jiao Tong
+     Conference on Robotics and Biomimetics (ROBIO), 2019: 2128-2133.               University, China. He received his doctor degree from Shanghai Jiao
+[17] R Khusainov, A Klimchik, E Magid. Swing leg trajectory optimization for        Tong University, China, in 2021.
+     a humanoid robot locomotion. International Conference on Informatics in
+     Control, Automation and Robotics, 2016, 3: 130-141.                            Yuguang Xiao Born in 1992, is currently a PhD candidate at State
+[18] X B Chen, F Gao. Energy expenditure of trotting gait under different
+                                                                                    Key Laboratory of Mechanical System and Vibration, School of Mechani-
+     gait parameters. Chinese Journal of Mechanical Engineering, 2017, 30(4):
+     943-950.
+                                                                                    cal Engineering, Shanghai Jiao Tong University, China.
+[19] Z Chen, F Gao, Q Sun, et al. Ball-on-plate motion planning for six-parallel-
+     legged robots walking on irregular terrains using pure haptic informa-
+     tion. Mechanism and Machine Theory, 2019, 141: 136-150.
+[20] Z Chen, Q Xi, F Gao, et al. Fault-tolerant gait design for quadruped robots
+     with one locked leg using the GF set theory. Mechanism and Machine
+     Theory, 2022, 178: 105069.
+[21] Y Fukuoka, Y Habu, T Fukui. A simple rule for quadrupedal gait generation
+     determined by leg loading feedback: A modeling study. Scientific Reports,
+     2015, 5(1): 1-11.
+[22] A J Ijspeert. Central pattern generators for locomotion control in animals
+     and robots: A review. Neural Networks, 2008, 21(4): 642-653.
+[23] W Ouyang, H Chi, J Pang, et al. Adaptive locomotion control of a hexapod
+     robot via bio-inspired learning. Frontiers in Neurorobotics, 2021, 15:
+     627157.
+[24] C Boussema, M J Powell, G Bledt, et al. Online gait transitions and
+     disturbance recovery for legged robots via the feasible impulse set. IEEE
+     Robotics & Automation Letters, 2019, 4(2): 1611-1618.
+[25] P Fankhauser, C D Bellicoso, C Gehring, et al. Free gait—An architecture
+     for the versatile control of legged robots. 2016 IEEE-RAS 16th International
+     Conference on Humanoid Robots (Humanoids), 2016: 1052-1058.
+[26] A W Winkler, C D Bellicoso, M Hutter, et al. Gait and trajectory optimiza-
+     tion for legged systems through phase-based end-effector parameteriza-
+     tion. IEEE Robotics and Automation Letters, 2018, 3(3): 1560-1567.
+[27] D Valouch, J Faigl. Gait-free planning for hexapod walking robot. 2021
+     European Conference on Mobile Robots (ECMR), 31 Aug.-3 Sept. 2021, 2021:
+     1-8, doi: https://​doi.​org/​10.​1109/​ECMR5​0962.​2021.​95688​34.
+[28] Y P Yin, Y G Xiao, F Gao, Footholds optimization for legged robots walking
+     on complex terrain. Frontiers of Mechanical Engineering 2023, 18(2): 26.
+     https://​doi.​org/​10.​1007/​s11465-​022-​0742-y.
+[29] P Gerum. Xenomai-Implementing a RTOS emulation framework on GNU/
+     Linux. White Paper, Xenomai, 2004: 81.
+

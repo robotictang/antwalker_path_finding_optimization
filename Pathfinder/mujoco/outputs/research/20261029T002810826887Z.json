@@ -1,0 +1,3838 @@
+{
+  "schema_version": 3,
+  "algorithm_version": "visibility_continuous_v4",
+  "run_id": "20261029T002810826887Z",
+  "created_at": "2026-10-29T00:28:10.832772+00:00",
+  "state": "complete",
+  "suite": "v4_debug_physics",
+  "execute": true,
+  "methods": [
+    "proposed_v4",
+    "pso_polished",
+    "aco_polished"
+  ],
+  "repeats": 1,
+  "records": [
+    {
+      "case_id": "debug_physics_01",
+      "method": "pso_polished",
+      "repeat": 0,
+      "seed": 1491000,
+      "status": "arrived",
+      "success": true,
+      "plan": {
+        "method": "pso_polished",
+        "label": "PSO with continuous polishing",
+        "status": "found",
+        "points": [
+          [
+            -3.5,
+            -1.75
+          ],
+          [
+            -0.9243762993762994,
+            2.6743347193347193
+          ],
+          [
+            4.75,
+            13.5
+          ]
+        ],
+        "metrics": {
+          "distance_m": 17.342097586294656,
+          "estimated_seconds": 24.294390082122128,
+          "energy_percent": 12.649611625669763,
+          "driving_distance_m": 0.0,
+          "walking_distance_m": 17.342097586294656,
+          "transformations": 0,
+          "terrain_exposure": 0.055545718152267366
+        },
+        "expanded": 1996,
+        "candidates": [
+          {
+            "distance_m": 17.36048805907799,
+            "estimated_seconds": 24.432279463452588,
+            "energy_percent": 12.67362279741427,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.36048805907799,
+            "transformations": 0,
+            "terrain_exposure": 0.056530755593419364
+          },
+          {
+            "distance_m": 17.34403248030245,
+            "estimated_seconds": 24.315929810118583,
+            "energy_percent": 12.652805936940718,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34403248030245,
+            "transformations": 0,
+            "terrain_exposure": 0.05479731340238558
+          },
+          {
+            "distance_m": 17.43701811636513,
+            "estimated_seconds": 24.73192654140126,
+            "energy_percent": 12.747497103809762,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.43701811636513,
+            "transformations": 0,
+            "terrain_exposure": 0.05702494527380497
+          },
+          {
+            "distance_m": 17.385415243297416,
+            "estimated_seconds": 24.57102640433463,
+            "energy_percent": 12.70159388610159,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.385415243297416,
+            "transformations": 0,
+            "terrain_exposure": 0.05605417988223326
+          },
+          {
+            "distance_m": 17.360613405048422,
+            "estimated_seconds": 24.42180133205152,
+            "energy_percent": 12.672701746873622,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.360613405048422,
+            "transformations": 0,
+            "terrain_exposure": 0.05647999280297923
+          },
+          {
+            "distance_m": 17.458362135083313,
+            "estimated_seconds": 24.82198455695771,
+            "energy_percent": 12.768716733060414,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.458362135083313,
+            "transformations": 0,
+            "terrain_exposure": 0.0562688912742839
+          },
+          {
+            "distance_m": 17.362616917710888,
+            "estimated_seconds": 24.441932769691213,
+            "energy_percent": 12.67580298429579,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.362616917710888,
+            "transformations": 0,
+            "terrain_exposure": 0.05652826015708041
+          },
+          {
+            "distance_m": 17.352973846113226,
+            "estimated_seconds": 24.38979306936921,
+            "energy_percent": 12.665128156950589,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.352973846113226,
+            "transformations": 0,
+            "terrain_exposure": 0.05510640907615176
+          },
+          {
+            "distance_m": 17.348428309955942,
+            "estimated_seconds": 24.351423866715173,
+            "energy_percent": 12.658786064578466,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.348428309955942,
+            "transformations": 0,
+            "terrain_exposure": 0.054818831106469984
+          },
+          {
+            "distance_m": 17.365521927081723,
+            "estimated_seconds": 24.460887094536382,
+            "energy_percent": 12.679327284049442,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.365521927081723,
+            "transformations": 0,
+            "terrain_exposure": 0.055511060036080584
+          },
+          {
+            "distance_m": 17.348575484624625,
+            "estimated_seconds": 24.354808246044705,
+            "energy_percent": 12.659194904251523,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.348575484624625,
+            "transformations": 0,
+            "terrain_exposure": 0.05524501971530239
+          },
+          {
+            "distance_m": 17.342097586294656,
+            "estimated_seconds": 24.294390082122128,
+            "energy_percent": 12.649611625669763,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.342097586294656,
+            "transformations": 0,
+            "terrain_exposure": 0.055545718152267366
+          },
+          {
+            "distance_m": 17.34587535313523,
+            "estimated_seconds": 24.332039532720916,
+            "energy_percent": 12.655429798468722,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34587535313523,
+            "transformations": 0,
+            "terrain_exposure": 0.05468540663830521
+          },
+          {
+            "distance_m": 17.343144122856636,
+            "estimated_seconds": 24.3056099717845,
+            "energy_percent": 12.651298460214463,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.343144122856636,
+            "transformations": 0,
+            "terrain_exposure": 0.05507408940618604
+          },
+          {
+            "distance_m": 17.34633548944516,
+            "estimated_seconds": 24.33661231738789,
+            "energy_percent": 12.656137227222644,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34633548944516,
+            "transformations": 0,
+            "terrain_exposure": 0.05533044141397164
+          }
+        ],
+        "approximate": true,
+        "optimizer": {
+          "algorithm": "pso_polished",
+          "seed": 1491000,
+          "parameters": {
+            "seed_fraction": 0.4,
+            "roadmap_fraction": 0.32,
+            "max_landmarks": 44,
+            "polish_steps": [
+              0.75,
+              0.25,
+              0.08
+            ],
+            "max_evaluations": 240,
+            "initial_parameters": {
+              "particles": 16,
+              "inertia": 0.72,
+              "cognitive": 1.49,
+              "social": 1.49,
+              "velocity_clip": 0.25,
+              "max_iterations": 40,
+              "seed_portfolio": true,
+              "iteration_scope": "per corridor"
+            },
+            "landmark_diversification": false,
+            "continuous_polish": true,
+            "initial_refiner": "pso"
+          },
+          "fitness_evaluations": 57,
+          "visibility_checks": 88,
+          "seed_status": [
+            "found",
+            "found",
+            "found"
+          ],
+          "seed_attempts": [
+            {
+              "stage": "initial",
+              "family": "energy",
+              "status": "found",
+              "expanded": 832
+            },
+            {
+              "stage": "initial",
+              "family": "time",
+              "status": "found",
+              "expanded": 772
+            },
+            {
+              "stage": "initial",
+              "family": "distance",
+              "status": "found",
+              "expanded": 392
+            }
+          ],
+          "resumed_seed": false,
+          "distance_fallback": false,
+          "seed_families": 2,
+          "convergence": [
+            {
+              "evaluations": 1,
+              "elapsed_s": 0.04073922894895077,
+              "score": 1.1312719474403075,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.04159738903399557,
+              "score": 1.1138436598422379,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.09838651993777603,
+              "score": 1.091370115694681,
+              "feasible": true
+            },
+            {
+              "evaluations": 3,
+              "elapsed_s": 0.0995380210224539,
+              "score": 1.0575307865314842,
+              "feasible": true
+            },
+            {
+              "evaluations": 10,
+              "elapsed_s": 0.10735551698599011,
+              "score": 1.052816404041434,
+              "feasible": true
+            },
+            {
+              "evaluations": 18,
+              "elapsed_s": 0.1159763369942084,
+              "score": 1.0490993968595301,
+              "feasible": true
+            },
+            {
+              "evaluations": 23,
+              "elapsed_s": 0.12058092397637665,
+              "score": 1.0418402606897599,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.14723672799300402,
+              "evaluations": 44,
+              "score": 1.0395028118118093,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.1590982199413702,
+              "evaluations": 54,
+              "score": 1.03912766163759,
+              "feasible": true
+            }
+          ],
+          "continuous_moves": 2,
+          "roadmap_nodes": 0,
+          "roadmap_edges": 0,
+          "roadmap_expansions": 0,
+          "representation": "A* seeded incumbent plus geometry landmarks and collision-checked continuous waypoint movement",
+          "seed_and_refinement_share_budget": true,
+          "comparison_scope": "New representation can explore outside old waypoint subsequences. Polished PSO and ACO controls use the same polishing operator and total budget.",
+          "common_quality": "distance/50 + time/90 + energy/30 + 0.25*terrain_exposure/20"
+        },
+        "quality_score": 1.03912766163759,
+        "deadline_ok": true,
+        "battery_ok": true,
+        "terrain_budget_ok": true,
+        "required_battery_percent": 28.762293543135634,
+        "admissible": true,
+        "planning_seconds": 0.16333174402825534,
+        "limits": {
+          "deadline_s": 160.0,
+          "battery_percent": 100.0,
+          "risk_budget": 40.0,
+          "planning_seconds": 2.0,
+          "max_expansions": 40000,
+          "labels_per_state": 8
+        }
+      },
+      "execution": {
+        "outcome": "arrived",
+        "success": true,
+        "destination_reached": true,
+        "task_time_s": 23.18400000000108,
+        "task_distance_m": 17.086313698386682,
+        "task_energy_percent": 10.619468270430062,
+        "elapsed_s": 41.616000000003126,
+        "motion_seconds": 33.616000000003126,
+        "distance_m": 24.57341679566051,
+        "energy_consumed_percent": 15.29931204740368,
+        "battery_percent": 100.0,
+        "minimum_battery_percent": 84.70068795259633,
+        "charging_stops": 1,
+        "modeled_swap_events": 0,
+        "service_seconds": 8.0,
+        "obstacle_contact_substeps": 0,
+        "penetration_substeps": 0,
+        "terrain_speed_violations": 0,
+        "safety_stops": 0,
+        "solver_warnings": 0,
+        "trace": [
+          {
+            "t": 0.4000000000000003,
+            "xy": [
+              -3.4922064109584765,
+              -1.6459536278491587
+            ],
+            "battery": 99.82215097301376,
+            "mode": "legs"
+          },
+          {
+            "t": 0.8000000000000006,
+            "xy": [
+              -3.423297595173815,
+              -1.3953507215505652
+            ],
+            "battery": 99.64801669922215,
+            "mode": "legs"
+          },
+          {
+            "t": 1.2000000000000008,
+            "xy": [
+              -3.303419313265517,
+              -1.1297050396458246
+            ],
+            "battery": 99.46217373765202,
+            "mode": "legs"
+          },
+          {
+            "t": 1.6000000000000012,
+            "xy": [
+              -3.1609754377276857,
+              -0.8677040667938885
+            ],
+            "battery": 99.27586537320288,
+            "mode": "legs"
+          },
+          {
+            "t": 2.0000000000000013,
+            "xy": [
+              -3.008080070159614,
+              -0.6106734621059038
+            ],
+            "battery": 99.0914737233141,
+            "mode": "legs"
+          },
+          {
+            "t": 2.4000000000000017,
+            "xy": [
+              -2.8506324625569177,
+              -0.3558414594520551
+            ],
+            "battery": 98.90720499672472,
+            "mode": "legs"
+          },
+          {
+            "t": 2.800000000000002,
+            "xy": [
+              -2.6915308980270205,
+              -0.10160758686911771
+            ],
+            "battery": 98.72328697680221,
+            "mode": "legs"
+          },
+          {
+            "t": 3.2000000000000024,
+            "xy": [
+              -2.530599978261022,
+              0.15188445027200398
+            ],
+            "battery": 98.53916087008282,
+            "mode": "legs"
+          },
+          {
+            "t": 3.6000000000000028,
+            "xy": [
+              -2.3701045482533516,
+              0.40529875504784046
+            ],
+            "battery": 98.35531392976365,
+            "mode": "legs"
+          },
+          {
+            "t": 4.000000000000003,
+            "xy": [
+              -2.209041854776307,
+              0.6580575962826875
+            ],
+            "battery": 98.17163452945216,
+            "mode": "legs"
+          },
+          {
+            "t": 4.399999999999959,
+            "xy": [
+              -2.0481984831528313,
+              0.9107616182882265
+            ],
+            "battery": 97.98802005383114,
+            "mode": "legs"
+          },
+          {
+            "t": 4.799999999999915,
+            "xy": [
+              -1.8872901084301996,
+              1.1635369161497833
+            ],
+            "battery": 97.80436647255571,
+            "mode": "legs"
+          },
+          {
+            "t": 5.1999999999998705,
+            "xy": [
+              -1.7258609982481503,
+              1.4162812083076355
+            ],
+            "battery": 97.62049522511566,
+            "mode": "legs"
+          },
+          {
+            "t": 5.5999999999998264,
+            "xy": [
+              -1.5649595387496187,
+              1.6696405273739099
+            ],
+            "battery": 97.43647201491991,
+            "mode": "legs"
+          },
+          {
+            "t": 5.999999999999782,
+            "xy": [
+              -1.4033280524032037,
+              1.922495590466488
+            ],
+            "battery": 97.25254853254472,
+            "mode": "legs"
+          },
+          {
+            "t": 6.399999999999738,
+            "xy": [
+              -1.2424453689453767,
+              2.175421943202616
+            ],
+            "battery": 97.06883810344824,
+            "mode": "legs"
+          },
+          {
+            "t": 6.799999999999694,
+            "xy": [
+              -1.0870594239560551,
+              2.4190312832412073
+            ],
+            "battery": 96.89153522374205,
+            "mode": "legs"
+          },
+          {
+            "t": 7.19999999999965,
+            "xy": [
+              -0.9407819817093114,
+              2.6579246481082923
+            ],
+            "battery": 96.71720347995766,
+            "mode": "legs"
+          },
+          {
+            "t": 7.599999999999606,
+            "xy": [
+              -0.7936725284879613,
+              2.919437904525038
+            ],
+            "battery": 96.53172578923288,
+            "mode": "legs"
+          },
+          {
+            "t": 7.999999999999562,
+            "xy": [
+              -0.6509945095225413,
+              3.182512683142786
+            ],
+            "battery": 96.34777419577496,
+            "mode": "legs"
+          },
+          {
+            "t": 8.399999999999519,
+            "xy": [
+              -0.5105403656696782,
+              3.4480889185647543
+            ],
+            "battery": 96.16352596072872,
+            "mode": "legs"
+          },
+          {
+            "t": 8.799999999999475,
+            "xy": [
+              -0.3706401172224072,
+              3.7131676861024623
+            ],
+            "battery": 95.97977035448832,
+            "mode": "legs"
+          },
+          {
+            "t": 9.19999999999943,
+            "xy": [
+              -0.23157697341082648,
+              3.978577335123936
+            ],
+            "battery": 95.79611709704542,
+            "mode": "legs"
+          },
+          {
+            "t": 9.599999999999387,
+            "xy": [
+              -0.09256187575871173,
+              4.243989905971974
+            ],
+            "battery": 95.61247185902036,
+            "mode": "legs"
+          },
+          {
+            "t": 9.999999999999343,
+            "xy": [
+              0.0466338878687887,
+              4.509475543567234
+            ],
+            "battery": 95.4287269339185,
+            "mode": "legs"
+          },
+          {
+            "t": 10.399999999999299,
+            "xy": [
+              0.18537228465636185,
+              4.775486857134079
+            ],
+            "battery": 95.24477115348766,
+            "mode": "legs"
+          },
+          {
+            "t": 10.799999999999255,
+            "xy": [
+              0.32492088604533503,
+              5.041225709513161
+            ],
+            "battery": 95.06078542279586,
+            "mode": "legs"
+          },
+          {
+            "t": 11.19999999999921,
+            "xy": [
+              0.463662215150936,
+              5.307157570010781
+            ],
+            "battery": 94.8769627946373,
+            "mode": "legs"
+          },
+          {
+            "t": 11.599999999999167,
+            "xy": [
+              0.6027135581583852,
+              5.57255961272207
+            ],
+            "battery": 94.69333196457183,
+            "mode": "legs"
+          },
+          {
+            "t": 11.999999999999122,
+            "xy": [
+              0.7415470275359434,
+              5.837999002969961
+            ],
+            "battery": 94.50972493697107,
+            "mode": "legs"
+          },
+          {
+            "t": 12.399999999999078,
+            "xy": [
+              0.8803564022883389,
+              6.103647509749532
+            ],
+            "battery": 94.32600336638033,
+            "mode": "legs"
+          },
+          {
+            "t": 12.799999999999034,
+            "xy": [
+              1.0197328197855209,
+              6.369274876177699
+            ],
+            "battery": 94.14207967445638,
+            "mode": "legs"
+          },
+          {
+            "t": 13.19999999999899,
+            "xy": [
+              1.1584647141145834,
+              6.635431204134753
+            ],
+            "battery": 93.95807989031037,
+            "mode": "legs"
+          },
+          {
+            "t": 13.599999999998946,
+            "xy": [
+              1.2978822632464062,
+              6.90110214879519
+            ],
+            "battery": 93.77420564809114,
+            "mode": "legs"
+          },
+          {
+            "t": 13.999999999998902,
+            "xy": [
+              1.436609209862072,
+              7.1667401791661325
+            ],
+            "battery": 93.5905414108667,
+            "mode": "legs"
+          },
+          {
+            "t": 14.399999999998858,
+            "xy": [
+              1.5755376520403503,
+              7.432153017315123
+            ],
+            "battery": 93.40692084441127,
+            "mode": "legs"
+          },
+          {
+            "t": 14.799999999998814,
+            "xy": [
+              1.7145294092862764,
+              7.697617325436577
+            ],
+            "battery": 93.22326434749112,
+            "mode": "legs"
+          },
+          {
+            "t": 15.19999999999877,
+            "xy": [
+              1.853255305662793,
+              7.963484970087199
+            ],
+            "battery": 93.03940408008968,
+            "mode": "legs"
+          },
+          {
+            "t": 15.599999999998726,
+            "xy": [
+              1.992793709668752,
+              8.229211837072782
+            ],
+            "battery": 92.8553816971311,
+            "mode": "legs"
+          },
+          {
+            "t": 15.999999999998682,
+            "xy": [
+              2.1315449624977925,
+              8.49531273268891
+            ],
+            "battery": 92.67146067695138,
+            "mode": "legs"
+          },
+          {
+            "t": 16.399999999998816,
+            "xy": [
+              2.27072618343865,
+              8.760798999791566
+            ],
+            "battery": 92.48775407756736,
+            "mode": "legs"
+          },
+          {
+            "t": 16.79999999999895,
+            "xy": [
+              2.409511884908657,
+              9.026295615772819
+            ],
+            "battery": 92.30412863503588,
+            "mode": "legs"
+          },
+          {
+            "t": 17.199999999999083,
+            "xy": [
+              2.5483513095948767,
+              9.291794244306642
+            ],
+            "battery": 92.1204972445904,
+            "mode": "legs"
+          },
+          {
+            "t": 17.599999999999216,
+            "xy": [
+              2.6875807881964136,
+              9.557359275259337
+            ],
+            "battery": 91.93667461559198,
+            "mode": "legs"
+          },
+          {
+            "t": 17.99999999999935,
+            "xy": [
+              2.8262888186921806,
+              9.823440483050717
+            ],
+            "battery": 91.75269283898308,
+            "mode": "legs"
+          },
+          {
+            "t": 18.399999999999483,
+            "xy": [
+              2.9658062169149315,
+              10.089150997741276
+            ],
+            "battery": 91.5687453008467,
+            "mode": "legs"
+          },
+          {
+            "t": 18.799999999999617,
+            "xy": [
+              3.1045446633179408,
+              10.355020351709813
+            ],
+            "battery": 91.38495069020179,
+            "mode": "legs"
+          },
+          {
+            "t": 19.19999999999975,
+            "xy": [
+              3.243543402628787,
+              10.62041534460672
+            ],
+            "battery": 91.20133208531087,
+            "mode": "legs"
+          },
+          {
+            "t": 19.599999999999884,
+            "xy": [
+              3.382425448356015,
+              10.885858137695433
+            ],
+            "battery": 91.01771583240657,
+            "mode": "legs"
+          },
+          {
+            "t": 20.000000000000018,
+            "xy": [
+              3.5212073607878667,
+              11.15158213374101
+            ],
+            "battery": 90.83394905280714,
+            "mode": "legs"
+          },
+          {
+            "t": 20.40000000000015,
+            "xy": [
+              3.6606471526928366,
+              11.417234587238836
+            ],
+            "battery": 90.64998853465242,
+            "mode": "legs"
+          },
+          {
+            "t": 20.800000000000285,
+            "xy": [
+              3.7993787351474944,
+              11.683391667352888
+            ],
+            "battery": 90.46600693112997,
+            "mode": "legs"
+          },
+          {
+            "t": 21.20000000000042,
+            "xy": [
+              3.9387310593188656,
+              11.949007850856884
+            ],
+            "battery": 90.28218062208022,
+            "mode": "legs"
+          },
+          {
+            "t": 21.600000000000552,
+            "xy": [
+              4.077464092154814,
+              12.214573744330124
+            ],
+            "battery": 90.09854901603113,
+            "mode": "legs"
+          },
+          {
+            "t": 22.000000000000686,
+            "xy": [
+              4.216350931117405,
+              12.479984783840425
+            ],
+            "battery": 89.9149400888107,
+            "mode": "legs"
+          },
+          {
+            "t": 22.40000000000082,
+            "xy": [
+              4.355429406122351,
+              12.745493963247156
+            ],
+            "battery": 89.73121432604015,
+            "mode": "legs"
+          },
+          {
+            "t": 22.800000000000953,
+            "xy": [
+              4.494153337777398,
+              13.011462533025604
+            ],
+            "battery": 89.54728478755798,
+            "mode": "legs"
+          },
+          {
+            "t": 23.200000000001086,
+            "xy": [
+              4.624928641487723,
+              13.260429963050603
+            ],
+            "battery": 89.37449412119237,
+            "mode": "legs"
+          },
+          {
+            "t": 23.60000000000122,
+            "xy": [
+              4.727604146579641,
+              13.488361223635325
+            ],
+            "battery": 89.20992246127743,
+            "mode": "legs"
+          },
+          {
+            "t": 24.000000000001354,
+            "xy": [
+              4.789492983841664,
+              13.753824527693018
+            ],
+            "battery": 89.02936667945215,
+            "mode": "legs"
+          },
+          {
+            "t": 24.400000000001487,
+            "xy": [
+              4.804219530223218,
+              14.004274475584582
+            ],
+            "battery": 88.86399210934894,
+            "mode": "legs"
+          },
+          {
+            "t": 24.80000000000162,
+            "xy": [
+              4.774901539896642,
+              14.177151382631493
+            ],
+            "battery": 88.73374083790438,
+            "mode": "legs"
+          },
+          {
+            "t": 25.200000000001754,
+            "xy": [
+              4.664862774493658,
+              14.400663364223272
+            ],
+            "battery": 88.5638358411768,
+            "mode": "legs"
+          },
+          {
+            "t": 25.600000000001888,
+            "xy": [
+              4.493471578088481,
+              14.633146824979647
+            ],
+            "battery": 88.37778793733067,
+            "mode": "legs"
+          },
+          {
+            "t": 26.00000000000202,
+            "xy": [
+              4.296600033099842,
+              14.854108781806445
+            ],
+            "battery": 88.1924335841849,
+            "mode": "legs"
+          },
+          {
+            "t": 26.400000000002155,
+            "xy": [
+              4.087288165386788,
+              15.069170614165964
+            ],
+            "battery": 88.00698680288505,
+            "mode": "legs"
+          },
+          {
+            "t": 26.80000000000229,
+            "xy": [
+              3.874658392803293,
+              15.279636077093981
+            ],
+            "battery": 87.8228580801429,
+            "mode": "legs"
+          },
+          {
+            "t": 27.200000000002422,
+            "xy": [
+              3.6599409103305,
+              15.48858380894073
+            ],
+            "battery": 87.6392050628261,
+            "mode": "legs"
+          },
+          {
+            "t": 27.600000000002556,
+            "xy": [
+              3.4439259350149913,
+              15.696712068648248
+            ],
+            "battery": 87.45519861340468,
+            "mode": "legs"
+          },
+          {
+            "t": 28.00000000000269,
+            "xy": [
+              3.227982371810265,
+              15.90495542310768
+            ],
+            "battery": 87.271277851782,
+            "mode": "legs"
+          },
+          {
+            "t": 28.400000000002823,
+            "xy": [
+              3.011176866055344,
+              16.112485699866937
+            ],
+            "battery": 87.08732782098022,
+            "mode": "legs"
+          },
+          {
+            "t": 28.800000000002957,
+            "xy": [
+              2.7949881871343853,
+              16.320323453753954
+            ],
+            "battery": 86.90352409750709,
+            "mode": "legs"
+          },
+          {
+            "t": 29.20000000000309,
+            "xy": [
+              2.578669966063655,
+              16.527588518513653
+            ],
+            "battery": 86.71990933570919,
+            "mode": "legs"
+          },
+          {
+            "t": 29.600000000003224,
+            "xy": [
+              2.362425102384038,
+              16.734929011333236
+            ],
+            "battery": 86.53628978885297,
+            "mode": "legs"
+          },
+          {
+            "t": 30.000000000003357,
+            "xy": [
+              2.1461819155820794,
+              16.942554734861343
+            ],
+            "battery": 86.35252463687533,
+            "mode": "legs"
+          },
+          {
+            "t": 30.40000000000349,
+            "xy": [
+              1.9293359362040137,
+              17.149898104412408
+            ],
+            "battery": 86.16856520492756,
+            "mode": "legs"
+          },
+          {
+            "t": 30.800000000003624,
+            "xy": [
+              1.7129969150423694,
+              17.35794574495789
+            ],
+            "battery": 85.9845832705941,
+            "mode": "legs"
+          },
+          {
+            "t": 31.200000000003758,
+            "xy": [
+              1.4962419608884534,
+              17.565282003805702
+            ],
+            "battery": 85.8007575711798,
+            "mode": "legs"
+          },
+          {
+            "t": 31.60000000000389,
+            "xy": [
+              1.2800892967449482,
+              17.772766912525167
+            ],
+            "battery": 85.61712647025423,
+            "mode": "legs"
+          },
+          {
+            "t": 32.00000000000402,
+            "xy": [
+              1.0638394862242244,
+              17.980055942216058
+            ],
+            "battery": 85.43351779691102,
+            "mode": "legs"
+          },
+          {
+            "t": 32.4000000000038,
+            "xy": [
+              0.8473782514497437,
+              18.187378180485954
+            ],
+            "battery": 85.24979282698078,
+            "mode": "legs"
+          },
+          {
+            "t": 32.80000000000358,
+            "xy": [
+              0.6311033857706827,
+              18.395244935518612
+            ],
+            "battery": 85.06586553517022,
+            "mode": "legs"
+          },
+          {
+            "t": 33.20000000000336,
+            "xy": [
+              0.41413043092096885,
+              18.602629177622635
+            ],
+            "battery": 84.88185852828161,
+            "mode": "legs"
+          },
+          {
+            "t": 33.600000000003135,
+            "xy": [
+              0.20807757989165632,
+              18.80073985487129
+            ],
+            "battery": 84.70641790080869,
+            "mode": "legs"
+          }
+        ],
+        "gait": {
+          "period": 0.6896551724137931,
+          "duty": 0.6,
+          "lift": 0.13,
+          "swing_profile": "quintic"
+        },
+        "locomotion": "walking_only",
+        "energy_multiplier": 0.85,
+        "transforms": 0,
+        "positive_actuator_work_j": 4671.573269964222,
+        "positive_leg_work_j": 4671.573269964222,
+        "absolute_actuator_work_j": 8627.511501394842,
+        "peak_positive_actuator_power_w": 430.27144221537645,
+        "max_tilt_deg": 0.15716941843000426,
+        "rms_tilt_deg": 0.06543772092852904,
+        "mean_contact_feet": 0.0,
+        "minimum_contact_feet": 0,
+        "no_foot_contact_fraction": 1.0,
+        "mean_contact_slip_mps": null,
+        "summed_contact_slip_m": 0.0,
+        "min_support_margin_m": null,
+        "mean_support_margin_m": null,
+        "physics_samples": 8404,
+        "assisted_model": true,
+        "mechanical_work_is_battery_energy": false
+      },
+      "prediction_validation": {
+        "scope": "simulation ledger and assisted execution only; not external battery calibration",
+        "task_time_error_s": -1.1103900821210466,
+        "task_battery_error_pp": -2.0301433552397015,
+        "nominal_return_energy_percent": 5.5602232088387415,
+        "energy_multiplier": 0.85
+      }
+    },
+    {
+      "case_id": "debug_physics_01",
+      "method": "aco_polished",
+      "repeat": 0,
+      "seed": 1491000,
+      "status": "arrived",
+      "success": true,
+      "plan": {
+        "method": "aco_polished",
+        "label": "ACO with continuous polishing",
+        "status": "found",
+        "points": [
+          [
+            -3.5,
+            -1.75
+          ],
+          [
+            -0.9521082315545545,
+            2.6350019555556328
+          ],
+          [
+            4.75,
+            13.5
+          ]
+        ],
+        "metrics": {
+          "distance_m": 17.341868216649225,
+          "estimated_seconds": 24.291923017953856,
+          "energy_percent": 12.649241161917487,
+          "driving_distance_m": 0.0,
+          "walking_distance_m": 17.341868216649225,
+          "transformations": 0,
+          "terrain_exposure": 0.055025540518259225
+        },
+        "expanded": 1996,
+        "candidates": [
+          {
+            "distance_m": 17.371813027201384,
+            "estimated_seconds": 24.48412049000366,
+            "energy_percent": 12.685267176023169,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.371813027201384,
+            "transformations": 0,
+            "terrain_exposure": 0.05637058801910195
+          },
+          {
+            "distance_m": 17.346868899271506,
+            "estimated_seconds": 24.33816211025499,
+            "energy_percent": 12.656600947375317,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.346868899271506,
+            "transformations": 0,
+            "terrain_exposure": 0.05459418833188627
+          },
+          {
+            "distance_m": 17.445470335498555,
+            "estimated_seconds": 24.748479788943037,
+            "energy_percent": 12.754084645678729,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.445470335498555,
+            "transformations": 0,
+            "terrain_exposure": 0.05680823888082913
+          },
+          {
+            "distance_m": 17.391714693726172,
+            "estimated_seconds": 24.587727952930692,
+            "energy_percent": 12.706918207139276,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.391714693726172,
+            "transformations": 0,
+            "terrain_exposure": 0.05586621377227637
+          },
+          {
+            "distance_m": 17.36559184210047,
+            "estimated_seconds": 24.442545514538622,
+            "energy_percent": 12.677626316860781,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.36559184210047,
+            "transformations": 0,
+            "terrain_exposure": 0.055793170416243695
+          },
+          {
+            "distance_m": 17.466676436392646,
+            "estimated_seconds": 24.834056621696043,
+            "energy_percent": 12.774796731320759,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.466676436392646,
+            "transformations": 0,
+            "terrain_exposure": 0.05608150344492273
+          },
+          {
+            "distance_m": 17.367726560982767,
+            "estimated_seconds": 24.46229941147479,
+            "energy_percent": 12.680769536939879,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.367726560982767,
+            "transformations": 0,
+            "terrain_exposure": 0.05632730749786849
+          },
+          {
+            "distance_m": 17.35716135785018,
+            "estimated_seconds": 24.411090441379272,
+            "energy_percent": 12.669635997588804,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.35716135785018,
+            "transformations": 0,
+            "terrain_exposure": 0.05648651062254404
+          },
+          {
+            "distance_m": 17.352013732045588,
+            "estimated_seconds": 24.37292080626706,
+            "energy_percent": 12.662955624275753,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.352013732045588,
+            "transformations": 0,
+            "terrain_exposure": 0.05462666604296038
+          },
+          {
+            "distance_m": 17.37084152348421,
+            "estimated_seconds": 24.48087491772048,
+            "energy_percent": 12.684382421117409,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.37084152348421,
+            "transformations": 0,
+            "terrain_exposure": 0.05688523882141837
+          },
+          {
+            "distance_m": 17.342886122478685,
+            "estimated_seconds": 24.303191815261158,
+            "energy_percent": 12.650915655120494,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.342886122478685,
+            "transformations": 0,
+            "terrain_exposure": 0.05456583694821065
+          },
+          {
+            "distance_m": 17.360039063228747,
+            "estimated_seconds": 24.426122332400972,
+            "energy_percent": 12.672771465760482,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.360039063228747,
+            "transformations": 0,
+            "terrain_exposure": 0.05628086181918461
+          },
+          {
+            "distance_m": 17.350980947803855,
+            "estimated_seconds": 24.374564027374927,
+            "energy_percent": 12.662498944964238,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.350980947803855,
+            "transformations": 0,
+            "terrain_exposure": 0.05484864247265491
+          },
+          {
+            "distance_m": 17.362727459934344,
+            "estimated_seconds": 24.444147774796544,
+            "energy_percent": 12.676078998166714,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.362727459934344,
+            "transformations": 0,
+            "terrain_exposure": 0.05685932865144041
+          },
+          {
+            "distance_m": 17.346980294917586,
+            "estimated_seconds": 24.34107901788552,
+            "energy_percent": 12.656944148350224,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.346980294917586,
+            "transformations": 0,
+            "terrain_exposure": 0.05499955059537196
+          },
+          {
+            "distance_m": 17.34500235304219,
+            "estimated_seconds": 24.32496514408404,
+            "energy_percent": 12.654239751493014,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34500235304219,
+            "transformations": 0,
+            "terrain_exposure": 0.05511800941152423
+          },
+          {
+            "distance_m": 17.344030210764426,
+            "estimated_seconds": 24.31441765031959,
+            "energy_percent": 12.652660935167253,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.344030210764426,
+            "transformations": 0,
+            "terrain_exposure": 0.055386635785375976
+          },
+          {
+            "distance_m": 17.34747596538532,
+            "estimated_seconds": 24.345744545255304,
+            "energy_percent": 12.65768147126121,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34747596538532,
+            "transformations": 0,
+            "terrain_exposure": 0.05435812900472
+          },
+          {
+            "distance_m": 17.341868216649225,
+            "estimated_seconds": 24.291923017953856,
+            "energy_percent": 12.649241161917487,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.341868216649225,
+            "transformations": 0,
+            "terrain_exposure": 0.055025540518259225
+          },
+          {
+            "distance_m": 17.3455565097899,
+            "estimated_seconds": 24.329693515784967,
+            "energy_percent": 12.655017746474913,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.3455565097899,
+            "transformations": 0,
+            "terrain_exposure": 0.05546669641354568
+          },
+          {
+            "distance_m": 17.343751864947208,
+            "estimated_seconds": 24.313515772917448,
+            "energy_percent": 12.652410104962499,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.343751864947208,
+            "transformations": 0,
+            "terrain_exposure": 0.05427678798229119
+          },
+          {
+            "distance_m": 17.34600765144657,
+            "estimated_seconds": 24.334272385592072,
+            "energy_percent": 12.655720416489544,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34600765144657,
+            "transformations": 0,
+            "terrain_exposure": 0.0548096301726242
+          }
+        ],
+        "approximate": true,
+        "optimizer": {
+          "algorithm": "aco_polished",
+          "seed": 1491000,
+          "parameters": {
+            "seed_fraction": 0.4,
+            "roadmap_fraction": 0.32,
+            "max_landmarks": 44,
+            "polish_steps": [
+              0.75,
+              0.25,
+              0.08
+            ],
+            "max_evaluations": 240,
+            "initial_parameters": {
+              "ants": 12,
+              "alpha": 1.0,
+              "beta": 2.0,
+              "evaporation": 0.2,
+              "deposit": 1.0,
+              "max_iterations": 40,
+              "seed_portfolio": true,
+              "iteration_scope": "per corridor"
+            },
+            "landmark_diversification": false,
+            "continuous_polish": true,
+            "initial_refiner": "aco"
+          },
+          "fitness_evaluations": 36,
+          "visibility_checks": 110,
+          "seed_status": [
+            "found",
+            "found",
+            "found"
+          ],
+          "seed_attempts": [
+            {
+              "stage": "initial",
+              "family": "energy",
+              "status": "found",
+              "expanded": 832
+            },
+            {
+              "stage": "initial",
+              "family": "time",
+              "status": "found",
+              "expanded": 772
+            },
+            {
+              "stage": "initial",
+              "family": "distance",
+              "status": "found",
+              "expanded": 392
+            }
+          ],
+          "resumed_seed": false,
+          "distance_fallback": false,
+          "seed_families": 2,
+          "convergence": [
+            {
+              "evaluations": 1,
+              "elapsed_s": 0.038839173037558794,
+              "score": 1.1312719474403075,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.03961794695351273,
+              "score": 1.1138436598422379,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.09620743501000106,
+              "score": 1.091370115694681,
+              "feasible": true
+            },
+            {
+              "evaluations": 5,
+              "elapsed_s": 0.10115557303652167,
+              "score": 1.0608363437276536,
+              "feasible": true
+            },
+            {
+              "evaluations": 6,
+              "elapsed_s": 0.10295177705120295,
+              "score": 1.0486221086511178,
+              "feasible": true
+            },
+            {
+              "evaluations": 7,
+              "elapsed_s": 0.10366702498868108,
+              "score": 1.0430289153173018,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.22326903603971004,
+              "evaluations": 16,
+              "score": 1.0399305270327004,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.23324304004199803,
+              "evaluations": 25,
+              "score": 1.0392724485294556,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.24239789205603302,
+              "evaluations": 33,
+              "score": 1.039076811408422,
+              "feasible": true
+            }
+          ],
+          "continuous_moves": 3,
+          "roadmap_nodes": 0,
+          "roadmap_edges": 0,
+          "roadmap_expansions": 0,
+          "representation": "A* seeded incumbent plus geometry landmarks and collision-checked continuous waypoint movement",
+          "seed_and_refinement_share_budget": true,
+          "comparison_scope": "New representation can explore outside old waypoint subsequences. Polished PSO and ACO controls use the same polishing operator and total budget.",
+          "common_quality": "distance/50 + time/90 + energy/30 + 0.25*terrain_exposure/20"
+        },
+        "quality_score": 1.039076811408422,
+        "deadline_ok": true,
+        "battery_ok": true,
+        "terrain_budget_ok": true,
+        "required_battery_percent": 28.761830463445285,
+        "admissible": true,
+        "planning_seconds": 0.24693737202323973,
+        "limits": {
+          "deadline_s": 160.0,
+          "battery_percent": 100.0,
+          "risk_budget": 40.0,
+          "planning_seconds": 2.0,
+          "max_expansions": 40000,
+          "labels_per_state": 8
+        }
+      },
+      "execution": {
+        "outcome": "arrived",
+        "success": true,
+        "destination_reached": true,
+        "task_time_s": 23.18400000000108,
+        "task_distance_m": 17.086257524812023,
+        "task_energy_percent": 10.619377428912564,
+        "elapsed_s": 41.616000000003126,
+        "motion_seconds": 33.616000000003126,
+        "distance_m": 24.57317916795432,
+        "energy_consumed_percent": 15.29914970278732,
+        "battery_percent": 100.0,
+        "minimum_battery_percent": 84.70085029721268,
+        "charging_stops": 1,
+        "modeled_swap_events": 0,
+        "service_seconds": 8.0,
+        "obstacle_contact_substeps": 0,
+        "penetration_substeps": 0,
+        "terrain_speed_violations": 0,
+        "safety_stops": 0,
+        "solver_warnings": 0,
+        "trace": [
+          {
+            "t": 0.4000000000000003,
+            "xy": [
+              -3.49220653612353,
+              -1.6459536105798922
+            ],
+            "battery": 99.82215283130623,
+            "mode": "legs"
+          },
+          {
+            "t": 0.8000000000000006,
+            "xy": [
+              -3.42332395087052,
+              -1.3952634236723571
+            ],
+            "battery": 99.64799373711776,
+            "mode": "legs"
+          },
+          {
+            "t": 1.2000000000000008,
+            "xy": [
+              -3.303545156172072,
+              -1.1295488734335033
+            ],
+            "battery": 99.46214756770223,
+            "mode": "legs"
+          },
+          {
+            "t": 1.6000000000000012,
+            "xy": [
+              -3.161227323345359,
+              -0.8674738083482765
+            ],
+            "battery": 99.2758386210604,
+            "mode": "legs"
+          },
+          {
+            "t": 2.0000000000000013,
+            "xy": [
+              -3.008461933742624,
+              -0.6103677613325891
+            ],
+            "battery": 99.09144760141028,
+            "mode": "legs"
+          },
+          {
+            "t": 2.4000000000000017,
+            "xy": [
+              -2.8511399059687497,
+              -0.35545826002907205
+            ],
+            "battery": 98.90717808428921,
+            "mode": "legs"
+          },
+          {
+            "t": 2.800000000000002,
+            "xy": [
+              -2.692160898892959,
+              -0.10114872593623525
+            ],
+            "battery": 98.72326012580776,
+            "mode": "legs"
+          },
+          {
+            "t": 3.2000000000000024,
+            "xy": [
+              -2.5313487035201474,
+              0.15241929952468275
+            ],
+            "battery": 98.53913349434802,
+            "mode": "legs"
+          },
+          {
+            "t": 3.6000000000000028,
+            "xy": [
+              -2.3709704618779965,
+              0.4059075331049304
+            ],
+            "battery": 98.35528649000567,
+            "mode": "legs"
+          },
+          {
+            "t": 4.000000000000003,
+            "xy": [
+              -2.21002323382134,
+              0.6587399419151891
+            ],
+            "battery": 98.17160698779654,
+            "mode": "legs"
+          },
+          {
+            "t": 4.399999999999959,
+            "xy": [
+              -2.049294457924689,
+              0.9115170286264869
+            ],
+            "battery": 97.98799236873519,
+            "mode": "legs"
+          },
+          {
+            "t": 4.799999999999915,
+            "xy": [
+              -1.8885003354044,
+              1.1643649331259665
+            ],
+            "battery": 97.80433884163664,
+            "mode": "legs"
+          },
+          {
+            "t": 5.1999999999998705,
+            "xy": [
+              -1.727184893786487,
+              1.417181778767295
+            ],
+            "battery": 97.62046748416883,
+            "mode": "legs"
+          },
+          {
+            "t": 5.5999999999998264,
+            "xy": [
+              -1.5663974349886471,
+              1.6706134562140293
+            ],
+            "battery": 97.43644410838354,
+            "mode": "legs"
+          },
+          {
+            "t": 5.999999999999782,
+            "xy": [
+              -1.4048791218706373,
+              1.9235408366701934
+            ],
+            "battery": 97.25252042448007,
+            "mode": "legs"
+          },
+          {
+            "t": 6.399999999999738,
+            "xy": [
+              -1.2441097508435033,
+              2.1765392282126674
+            ],
+            "battery": 97.0688097591393,
+            "mode": "legs"
+          },
+          {
+            "t": 6.799999999999694,
+            "xy": [
+              -1.0943355346985466,
+              2.411555818987863
+            ],
+            "battery": 96.8975800557574,
+            "mode": "legs"
+          },
+          {
+            "t": 7.19999999999965,
+            "xy": [
+              -0.9445041293614239,
+              2.660086560098167
+            ],
+            "battery": 96.71693701352069,
+            "mode": "legs"
+          },
+          {
+            "t": 7.599999999999606,
+            "xy": [
+              -0.7983251636561485,
+              2.922185927782798
+            ],
+            "battery": 96.5316546991054,
+            "mode": "legs"
+          },
+          {
+            "t": 7.999999999999562,
+            "xy": [
+              -0.6559714846175435,
+              3.1854788058270573
+            ],
+            "battery": 96.34778461675836,
+            "mode": "legs"
+          },
+          {
+            "t": 8.399999999999519,
+            "xy": [
+              -0.5155845361247484,
+              3.45110192960117
+            ],
+            "battery": 96.16355665647082,
+            "mode": "legs"
+          },
+          {
+            "t": 8.799999999999475,
+            "xy": [
+              -0.37564816211323043,
+              3.7161497517158146
+            ],
+            "battery": 95.97982247772723,
+            "mode": "legs"
+          },
+          {
+            "t": 9.19999999999943,
+            "xy": [
+              -0.23648352242635992,
+              3.9815100356745083
+            ],
+            "battery": 95.79616414537138,
+            "mode": "legs"
+          },
+          {
+            "t": 9.599999999999387,
+            "xy": [
+              -0.0973416665084831,
+              4.246863257883999
+            ],
+            "battery": 95.61251605724945,
+            "mode": "legs"
+          },
+          {
+            "t": 9.999999999999343,
+            "xy": [
+              0.04198682060880922,
+              4.5122778634641465
+            ],
+            "battery": 95.42877144987902,
+            "mode": "legs"
+          },
+          {
+            "t": 10.399999999999299,
+            "xy": [
+              0.18086249848832486,
+              4.778214768041469
+            ],
+            "battery": 95.24481755151686,
+            "mode": "legs"
+          },
+          {
+            "t": 10.799999999999255,
+            "xy": [
+              0.3205524393108514,
+              5.043881210181932
+            ],
+            "battery": 95.0608308052118,
+            "mode": "legs"
+          },
+          {
+            "t": 11.19999999999921,
+            "xy": [
+              0.4594348246382382,
+              5.309738714366304
+            ],
+            "battery": 94.87700841431077,
+            "mode": "legs"
+          },
+          {
+            "t": 11.599999999999167,
+            "xy": [
+              0.5986280266019589,
+              5.575066760716532
+            ],
+            "battery": 94.69337743908213,
+            "mode": "legs"
+          },
+          {
+            "t": 11.999999999999122,
+            "xy": [
+              0.7376033370469429,
+              5.840432150217181
+            ],
+            "battery": 94.50977033358394,
+            "mode": "legs"
+          },
+          {
+            "t": 12.399999999999078,
+            "xy": [
+              0.8765545292649036,
+              6.106006237367902
+            ],
+            "battery": 94.32604890030416,
+            "mode": "legs"
+          },
+          {
+            "t": 12.799999999999034,
+            "xy": [
+              1.0160729074500618,
+              6.371558999078197
+            ],
+            "battery": 94.14212522301551,
+            "mode": "legs"
+          },
+          {
+            "t": 13.19999999999899,
+            "xy": [
+              1.1549471106684845,
+              6.637641231560659
+            ],
+            "battery": 93.95812537828574,
+            "mode": "legs"
+          },
+          {
+            "t": 13.599999999998946,
+            "xy": [
+              1.2945066220962766,
+              6.903237569102024
+            ],
+            "battery": 93.77425117559777,
+            "mode": "legs"
+          },
+          {
+            "t": 13.999999999998902,
+            "xy": [
+              1.4333755564963926,
+              7.168801427565344
+            ],
+            "battery": 93.5905869157459,
+            "mode": "legs"
+          },
+          {
+            "t": 14.399999999998858,
+            "xy": [
+              1.5724458622831277,
+              7.434139968417774
+            ],
+            "battery": 93.40696634450366,
+            "mode": "legs"
+          },
+          {
+            "t": 14.799999999998814,
+            "xy": [
+              1.7115795027248564,
+              7.699529927116978
+            ],
+            "battery": 93.22330985543617,
+            "mode": "legs"
+          },
+          {
+            "t": 15.19999999999877,
+            "xy": [
+              1.850447502546964,
+              7.9653233752784995
+            ],
+            "battery": 93.03944958875763,
+            "mode": "legs"
+          },
+          {
+            "t": 15.599999999998726,
+            "xy": [
+              1.990127938784511,
+              8.230975616001665
+            ],
+            "battery": 92.85542720256365,
+            "mode": "legs"
+          },
+          {
+            "t": 15.999999999998682,
+            "xy": [
+              2.129021419573825,
+              8.497002298758016
+            ],
+            "battery": 92.67150618391165,
+            "mode": "legs"
+          },
+          {
+            "t": 16.399999999998816,
+            "xy": [
+              2.2683445430919162,
+              8.762414127057705
+            ],
+            "battery": 92.48779958344136,
+            "mode": "legs"
+          },
+          {
+            "t": 16.79999999999895,
+            "xy": [
+              2.407272151585271,
+              9.02783651415537
+            ],
+            "battery": 92.30417414112866,
+            "mode": "legs"
+          },
+          {
+            "t": 17.199999999999083,
+            "xy": [
+              2.5462534836648505,
+              9.293260884357359
+            ],
+            "battery": 92.12054275120975,
+            "mode": "legs"
+          },
+          {
+            "t": 17.599999999999216,
+            "xy": [
+              2.6856249059706583,
+              9.558751449390382
+            ],
+            "battery": 91.93672012198483,
+            "mode": "legs"
+          },
+          {
+            "t": 17.99999999999935,
+            "xy": [
+              2.8244751560469963,
+              9.82475847031357
+            ],
+            "battery": 91.75273834505707,
+            "mode": "legs"
+          },
+          {
+            "t": 18.399999999999483,
+            "xy": [
+              2.9641345754123285,
+              10.090394364791488
+            ],
+            "battery": 91.56879080699663,
+            "mode": "legs"
+          },
+          {
+            "t": 18.799999999999617,
+            "xy": [
+              3.1030151279323857,
+              10.356189515412916
+            ],
+            "battery": 91.38499619620865,
+            "mode": "legs"
+          },
+          {
+            "t": 19.19999999999975,
+            "xy": [
+              3.242155719801854,
+              10.621510165683858
+            ],
+            "battery": 91.20137759123693,
+            "mode": "legs"
+          },
+          {
+            "t": 19.599999999999884,
+            "xy": [
+              3.3811796437197006,
+              10.88687867845973
+            ],
+            "battery": 91.01776133827892,
+            "mode": "legs"
+          },
+          {
+            "t": 20.000000000000018,
+            "xy": [
+              3.5201035844047555,
+              11.152528447907756
+            ],
+            "battery": 90.8339945584826,
+            "mode": "legs"
+          },
+          {
+            "t": 20.40000000000015,
+            "xy": [
+              3.6596853668007427,
+              11.418106322829702
+            ],
+            "battery": 90.6500340400745,
+            "mode": "legs"
+          },
+          {
+            "t": 20.800000000000285,
+            "xy": [
+              3.798559208796548,
+              11.684189203266387
+            ],
+            "battery": 90.46605243617674,
+            "mode": "legs"
+          },
+          {
+            "t": 21.20000000000042,
+            "xy": [
+              3.9380535041118216,
+              11.949730854929038
+            ],
+            "battery": 90.28222612690294,
+            "mode": "legs"
+          },
+          {
+            "t": 21.600000000000552,
+            "xy": [
+              4.076928480778871,
+              12.215222547884565
+            ],
+            "battery": 90.0985945204006,
+            "mode": "legs"
+          },
+          {
+            "t": 22.000000000000686,
+            "xy": [
+              4.215957180354863,
+              12.480559304903991
+            ],
+            "battery": 89.91498559260158,
+            "mode": "legs"
+          },
+          {
+            "t": 22.40000000000082,
+            "xy": [
+              4.355177570933307,
+              12.745994098045188
+            ],
+            "battery": 89.73125982854687,
+            "mode": "legs"
+          },
+          {
+            "t": 22.800000000000953,
+            "xy": [
+              4.494043657371263,
+              13.011888474349048
+            ],
+            "battery": 89.5473302869679,
+            "mode": "legs"
+          },
+          {
+            "t": 23.200000000001086,
+            "xy": [
+              4.624913676300901,
+              13.260712808632695
+            ],
+            "battery": 89.37458876336316,
+            "mode": "legs"
+          },
+          {
+            "t": 23.60000000000122,
+            "xy": [
+              4.727651474352414,
+              13.488462167630752
+            ],
+            "battery": 89.21009544371587,
+            "mode": "legs"
+          },
+          {
+            "t": 24.000000000001354,
+            "xy": [
+              4.78960200540491,
+              13.753813449551465
+            ],
+            "battery": 89.02957620464397,
+            "mode": "legs"
+          },
+          {
+            "t": 24.400000000001487,
+            "xy": [
+              4.804338784872806,
+              14.004227114486717
+            ],
+            "battery": 88.8642048931812,
+            "mode": "legs"
+          },
+          {
+            "t": 24.80000000000162,
+            "xy": [
+              4.774984662916645,
+              14.1771426892573
+            ],
+            "battery": 88.73392115246229,
+            "mode": "legs"
+          },
+          {
+            "t": 25.200000000001754,
+            "xy": [
+              4.664899262683488,
+              14.400671812395096
+            ],
+            "battery": 88.56399928496069,
+            "mode": "legs"
+          },
+          {
+            "t": 25.600000000001888,
+            "xy": [
+              4.493484926201687,
+              14.633149895306127
+            ],
+            "battery": 88.37794959690453,
+            "mode": "legs"
+          },
+          {
+            "t": 26.00000000000202,
+            "xy": [
+              4.29660258743271,
+              14.85410754413842
+            ],
+            "battery": 88.19259477549012,
+            "mode": "legs"
+          },
+          {
+            "t": 26.400000000002155,
+            "xy": [
+              4.087288011795028,
+              15.069166126383172
+            ],
+            "battery": 88.00714916646805,
+            "mode": "legs"
+          },
+          {
+            "t": 26.80000000000229,
+            "xy": [
+              3.8746568165019406,
+              15.279630408000328
+            ],
+            "battery": 87.82302073525446,
+            "mode": "legs"
+          },
+          {
+            "t": 27.200000000002422,
+            "xy": [
+              3.6599388326768536,
+              15.488577721541986
+            ],
+            "battery": 87.6393677204386,
+            "mode": "legs"
+          },
+          {
+            "t": 27.600000000002556,
+            "xy": [
+              3.443923790962138,
+              15.69670595401943
+            ],
+            "battery": 87.4553613339542,
+            "mode": "legs"
+          },
+          {
+            "t": 28.00000000000269,
+            "xy": [
+              3.2279803467923514,
+              15.904949458222163
+            ],
+            "battery": 87.27144055462729,
+            "mode": "legs"
+          },
+          {
+            "t": 28.400000000002823,
+            "xy": [
+              3.0111750506293498,
+              16.11247991411277
+            ],
+            "battery": 87.08749052941131,
+            "mode": "legs"
+          },
+          {
+            "t": 28.800000000002957,
+            "xy": [
+              2.794986607229682,
+              16.320317939024417
+            ],
+            "battery": 86.9036868065201,
+            "mode": "legs"
+          },
+          {
+            "t": 29.20000000000309,
+            "xy": [
+              2.5786686520386524,
+              16.527583270443618
+            ],
+            "battery": 86.72007205476369,
+            "mode": "legs"
+          },
+          {
+            "t": 29.600000000003224,
+            "xy": [
+              2.362424059328795,
+              16.734924035879146
+            ],
+            "battery": 86.53645251139359,
+            "mode": "legs"
+          },
+          {
+            "t": 30.000000000003357,
+            "xy": [
+              2.146181144115125,
+              16.94255004267172
+            ],
+            "battery": 86.35268735651809,
+            "mode": "legs"
+          },
+          {
+            "t": 30.40000000000349,
+            "xy": [
+              1.929335435335218,
+              17.149893699473846
+            ],
+            "battery": 86.16872792293375,
+            "mode": "legs"
+          },
+          {
+            "t": 30.800000000003624,
+            "xy": [
+              1.7129966877026734,
+              17.35794162340919
+            ],
+            "battery": 85.98474599013699,
+            "mode": "legs"
+          },
+          {
+            "t": 31.200000000003758,
+            "xy": [
+              1.4962420074012126,
+              17.565278168086493
+            ],
+            "battery": 85.80092029028573,
+            "mode": "legs"
+          },
+          {
+            "t": 31.60000000000389,
+            "xy": [
+              1.2800896169050202,
+              17.772763362205
+            ],
+            "battery": 85.6172891888356,
+            "mode": "legs"
+          },
+          {
+            "t": 32.00000000000402,
+            "xy": [
+              1.0638400799911742,
+              17.980052677216154
+            ],
+            "battery": 85.43368051565832,
+            "mode": "legs"
+          },
+          {
+            "t": 32.4000000000038,
+            "xy": [
+              0.8473791187988928,
+              18.1873752014134
+            ],
+            "battery": 85.24995554573579,
+            "mode": "legs"
+          },
+          {
+            "t": 32.80000000000358,
+            "xy": [
+              0.6311045275743099,
+              18.395242241953838
+            ],
+            "battery": 85.0660282539605,
+            "mode": "legs"
+          },
+          {
+            "t": 33.20000000000336,
+            "xy": [
+              0.4141318465874486,
+              18.602626770435393
+            ],
+            "battery": 84.88202124710132,
+            "mode": "legs"
+          },
+          {
+            "t": 33.600000000003135,
+            "xy": [
+              0.2080788406533039,
+              18.80073811872207
+            ],
+            "battery": 84.70658027654986,
+            "mode": "legs"
+          }
+        ],
+        "gait": {
+          "period": 0.6896551724137931,
+          "duty": 0.6,
+          "lift": 0.13,
+          "swing_profile": "quintic"
+        },
+        "locomotion": "walking_only",
+        "energy_multiplier": 0.85,
+        "transforms": 0,
+        "positive_actuator_work_j": 4672.610006338,
+        "positive_leg_work_j": 4672.610006338,
+        "absolute_actuator_work_j": 8629.3901914879,
+        "peak_positive_actuator_power_w": 429.9837116164883,
+        "max_tilt_deg": 0.15714126567551195,
+        "rms_tilt_deg": 0.06544250703261423,
+        "mean_contact_feet": 0.0,
+        "minimum_contact_feet": 0,
+        "no_foot_contact_fraction": 1.0,
+        "mean_contact_slip_mps": null,
+        "summed_contact_slip_m": 0.0,
+        "min_support_margin_m": null,
+        "mean_support_margin_m": null,
+        "physics_samples": 8404,
+        "assisted_model": true,
+        "mechanical_work_is_battery_energy": false
+      },
+      "prediction_validation": {
+        "scope": "simulation ledger and assisted execution only; not external battery calibration",
+        "task_time_error_s": -1.1079230179527748,
+        "task_battery_error_pp": -2.029863733004923,
+        "nominal_return_energy_percent": 5.5602232088387415,
+        "energy_multiplier": 0.85
+      }
+    },
+    {
+      "case_id": "debug_physics_01",
+      "method": "proposed_v4",
+      "repeat": 0,
+      "seed": 1491000,
+      "status": "arrived",
+      "success": true,
+      "plan": {
+        "method": "proposed_v4",
+        "label": "Proposed v4 visibility and continuous refinement",
+        "status": "found",
+        "points": [
+          [
+            -3.5,
+            -1.75
+          ],
+          [
+            -0.9243762993762994,
+            2.6743347193347193
+          ],
+          [
+            4.75,
+            13.5
+          ]
+        ],
+        "metrics": {
+          "distance_m": 17.342097586294656,
+          "estimated_seconds": 24.294390082122128,
+          "energy_percent": 12.649611625669763,
+          "driving_distance_m": 0.0,
+          "walking_distance_m": 17.342097586294656,
+          "transformations": 0,
+          "terrain_exposure": 0.055545718152267366
+        },
+        "expanded": 2011,
+        "candidates": [
+          {
+            "distance_m": 17.36048805907799,
+            "estimated_seconds": 24.432279463452588,
+            "energy_percent": 12.67362279741427,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.36048805907799,
+            "transformations": 0,
+            "terrain_exposure": 0.056530755593419364
+          },
+          {
+            "distance_m": 17.34403248030245,
+            "estimated_seconds": 24.315929810118583,
+            "energy_percent": 12.652805936940718,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34403248030245,
+            "transformations": 0,
+            "terrain_exposure": 0.05479731340238558
+          },
+          {
+            "distance_m": 17.43701811636513,
+            "estimated_seconds": 24.73192654140126,
+            "energy_percent": 12.747497103809762,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.43701811636513,
+            "transformations": 0,
+            "terrain_exposure": 0.05702494527380497
+          },
+          {
+            "distance_m": 17.385415243297416,
+            "estimated_seconds": 24.57102640433463,
+            "energy_percent": 12.70159388610159,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.385415243297416,
+            "transformations": 0,
+            "terrain_exposure": 0.05605417988223326
+          },
+          {
+            "distance_m": 17.360613405048422,
+            "estimated_seconds": 24.42180133205152,
+            "energy_percent": 12.672701746873622,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.360613405048422,
+            "transformations": 0,
+            "terrain_exposure": 0.05647999280297923
+          },
+          {
+            "distance_m": 17.458362135083313,
+            "estimated_seconds": 24.82198455695771,
+            "energy_percent": 12.768716733060414,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.458362135083313,
+            "transformations": 0,
+            "terrain_exposure": 0.0562688912742839
+          },
+          {
+            "distance_m": 17.362616917710888,
+            "estimated_seconds": 24.441932769691213,
+            "energy_percent": 12.67580298429579,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.362616917710888,
+            "transformations": 0,
+            "terrain_exposure": 0.05652826015708041
+          },
+          {
+            "distance_m": 17.352973846113226,
+            "estimated_seconds": 24.38979306936921,
+            "energy_percent": 12.665128156950589,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.352973846113226,
+            "transformations": 0,
+            "terrain_exposure": 0.05510640907615176
+          },
+          {
+            "distance_m": 17.348428309955942,
+            "estimated_seconds": 24.351423866715173,
+            "energy_percent": 12.658786064578466,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.348428309955942,
+            "transformations": 0,
+            "terrain_exposure": 0.054818831106469984
+          },
+          {
+            "distance_m": 17.365521927081723,
+            "estimated_seconds": 24.460887094536382,
+            "energy_percent": 12.679327284049442,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.365521927081723,
+            "transformations": 0,
+            "terrain_exposure": 0.055511060036080584
+          },
+          {
+            "distance_m": 17.348575484624625,
+            "estimated_seconds": 24.354808246044705,
+            "energy_percent": 12.659194904251523,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.348575484624625,
+            "transformations": 0,
+            "terrain_exposure": 0.05524501971530239
+          },
+          {
+            "distance_m": 17.342097586294656,
+            "estimated_seconds": 24.294390082122128,
+            "energy_percent": 12.649611625669763,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.342097586294656,
+            "transformations": 0,
+            "terrain_exposure": 0.055545718152267366
+          },
+          {
+            "distance_m": 17.34587535313523,
+            "estimated_seconds": 24.332039532720916,
+            "energy_percent": 12.655429798468722,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34587535313523,
+            "transformations": 0,
+            "terrain_exposure": 0.05468540663830521
+          },
+          {
+            "distance_m": 17.343144122856636,
+            "estimated_seconds": 24.3056099717845,
+            "energy_percent": 12.651298460214463,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.343144122856636,
+            "transformations": 0,
+            "terrain_exposure": 0.05507408940618604
+          },
+          {
+            "distance_m": 17.34633548944516,
+            "estimated_seconds": 24.33661231738789,
+            "energy_percent": 12.656137227222644,
+            "driving_distance_m": 0.0,
+            "walking_distance_m": 17.34633548944516,
+            "transformations": 0,
+            "terrain_exposure": 0.05533044141397164
+          }
+        ],
+        "approximate": true,
+        "optimizer": {
+          "algorithm": "proposed_v4",
+          "seed": 1491000,
+          "parameters": {
+            "seed_fraction": 0.4,
+            "roadmap_fraction": 0.32,
+            "max_landmarks": 44,
+            "polish_steps": [
+              0.75,
+              0.25,
+              0.08
+            ],
+            "max_evaluations": 240,
+            "initial_parameters": {
+              "beam_width": 6,
+              "labels_per_state": 8,
+              "archive_size": 16,
+              "max_evaluations": 240,
+              "portfolio": true
+            },
+            "landmark_diversification": true,
+            "continuous_polish": true,
+            "initial_refiner": "proposed"
+          },
+          "fitness_evaluations": 19,
+          "visibility_checks": 367,
+          "seed_status": [
+            "found",
+            "found",
+            "found"
+          ],
+          "seed_attempts": [
+            {
+              "stage": "initial",
+              "family": "energy",
+              "status": "found",
+              "expanded": 832
+            },
+            {
+              "stage": "initial",
+              "family": "time",
+              "status": "found",
+              "expanded": 772
+            },
+            {
+              "stage": "initial",
+              "family": "distance",
+              "status": "found",
+              "expanded": 392
+            }
+          ],
+          "resumed_seed": false,
+          "distance_fallback": false,
+          "seed_families": 2,
+          "convergence": [
+            {
+              "evaluations": 1,
+              "elapsed_s": 0.03980581695213914,
+              "score": 1.1312719474403075,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.040626285946927965,
+              "score": 1.1138436598422379,
+              "feasible": true
+            },
+            {
+              "evaluations": 2,
+              "elapsed_s": 0.09751182899344712,
+              "score": 1.091370115694681,
+              "feasible": true
+            },
+            {
+              "evaluations": 3,
+              "elapsed_s": 0.11142630805261433,
+              "score": 1.0418402606897599,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.191314595984295,
+              "evaluations": 6,
+              "score": 1.0395028118118093,
+              "feasible": true
+            },
+            {
+              "elapsed_s": 0.2026490899734199,
+              "evaluations": 16,
+              "score": 1.03912766163759,
+              "feasible": true
+            }
+          ],
+          "continuous_moves": 2,
+          "roadmap_nodes": 23,
+          "roadmap_edges": 112,
+          "roadmap_expansions": 6,
+          "representation": "A* seeded incumbent plus geometry landmarks and collision-checked continuous waypoint movement",
+          "seed_and_refinement_share_budget": true,
+          "comparison_scope": "New representation can explore outside old waypoint subsequences. Polished PSO and ACO controls use the same polishing operator and total budget.",
+          "common_quality": "distance/50 + time/90 + energy/30 + 0.25*terrain_exposure/20"
+        },
+        "quality_score": 1.03912766163759,
+        "deadline_ok": true,
+        "battery_ok": true,
+        "terrain_budget_ok": true,
+        "required_battery_percent": 28.762293543135634,
+        "admissible": true,
+        "planning_seconds": 0.2073955510277301,
+        "limits": {
+          "deadline_s": 160.0,
+          "battery_percent": 100.0,
+          "risk_budget": 40.0,
+          "planning_seconds": 2.0,
+          "max_expansions": 40000,
+          "labels_per_state": 8
+        }
+      },
+      "execution": {
+        "outcome": "arrived",
+        "success": true,
+        "destination_reached": true,
+        "task_time_s": 23.18400000000108,
+        "task_distance_m": 17.086313698386682,
+        "task_energy_percent": 10.619468270430062,
+        "elapsed_s": 41.616000000003126,
+        "motion_seconds": 33.616000000003126,
+        "distance_m": 24.57341679566051,
+        "energy_consumed_percent": 15.29931204740368,
+        "battery_percent": 100.0,
+        "minimum_battery_percent": 84.70068795259633,
+        "charging_stops": 1,
+        "modeled_swap_events": 0,
+        "service_seconds": 8.0,
+        "obstacle_contact_substeps": 0,
+        "penetration_substeps": 0,
+        "terrain_speed_violations": 0,
+        "safety_stops": 0,
+        "solver_warnings": 0,
+        "trace": [
+          {
+            "t": 0.4000000000000003,
+            "xy": [
+              -3.4922064109584765,
+              -1.6459536278491587
+            ],
+            "battery": 99.82215097301376,
+            "mode": "legs"
+          },
+          {
+            "t": 0.8000000000000006,
+            "xy": [
+              -3.423297595173815,
+              -1.3953507215505652
+            ],
+            "battery": 99.64801669922215,
+            "mode": "legs"
+          },
+          {
+            "t": 1.2000000000000008,
+            "xy": [
+              -3.303419313265517,
+              -1.1297050396458246
+            ],
+            "battery": 99.46217373765202,
+            "mode": "legs"
+          },
+          {
+            "t": 1.6000000000000012,
+            "xy": [
+              -3.1609754377276857,
+              -0.8677040667938885
+            ],
+            "battery": 99.27586537320288,
+            "mode": "legs"
+          },
+          {
+            "t": 2.0000000000000013,
+            "xy": [
+              -3.008080070159614,
+              -0.6106734621059038
+            ],
+            "battery": 99.0914737233141,
+            "mode": "legs"
+          },
+          {
+            "t": 2.4000000000000017,
+            "xy": [
+              -2.8506324625569177,
+              -0.3558414594520551
+            ],
+            "battery": 98.90720499672472,
+            "mode": "legs"
+          },
+          {
+            "t": 2.800000000000002,
+            "xy": [
+              -2.6915308980270205,
+              -0.10160758686911771
+            ],
+            "battery": 98.72328697680221,
+            "mode": "legs"
+          },
+          {
+            "t": 3.2000000000000024,
+            "xy": [
+              -2.530599978261022,
+              0.15188445027200398
+            ],
+            "battery": 98.53916087008282,
+            "mode": "legs"
+          },
+          {
+            "t": 3.6000000000000028,
+            "xy": [
+              -2.3701045482533516,
+              0.40529875504784046
+            ],
+            "battery": 98.35531392976365,
+            "mode": "legs"
+          },
+          {
+            "t": 4.000000000000003,
+            "xy": [
+              -2.209041854776307,
+              0.6580575962826875
+            ],
+            "battery": 98.17163452945216,
+            "mode": "legs"
+          },
+          {
+            "t": 4.399999999999959,
+            "xy": [
+              -2.0481984831528313,
+              0.9107616182882265
+            ],
+            "battery": 97.98802005383114,
+            "mode": "legs"
+          },
+          {
+            "t": 4.799999999999915,
+            "xy": [
+              -1.8872901084301996,
+              1.1635369161497833
+            ],
+            "battery": 97.80436647255571,
+            "mode": "legs"
+          },
+          {
+            "t": 5.1999999999998705,
+            "xy": [
+              -1.7258609982481503,
+              1.4162812083076355
+            ],
+            "battery": 97.62049522511566,
+            "mode": "legs"
+          },
+          {
+            "t": 5.5999999999998264,
+            "xy": [
+              -1.5649595387496187,
+              1.6696405273739099
+            ],
+            "battery": 97.43647201491991,
+            "mode": "legs"
+          },
+          {
+            "t": 5.999999999999782,
+            "xy": [
+              -1.4033280524032037,
+              1.922495590466488
+            ],
+            "battery": 97.25254853254472,
+            "mode": "legs"
+          },
+          {
+            "t": 6.399999999999738,
+            "xy": [
+              -1.2424453689453767,
+              2.175421943202616
+            ],
+            "battery": 97.06883810344824,
+            "mode": "legs"
+          },
+          {
+            "t": 6.799999999999694,
+            "xy": [
+              -1.0870594239560551,
+              2.4190312832412073
+            ],
+            "battery": 96.89153522374205,
+            "mode": "legs"
+          },
+          {
+            "t": 7.19999999999965,
+            "xy": [
+              -0.9407819817093114,
+              2.6579246481082923
+            ],
+            "battery": 96.71720347995766,
+            "mode": "legs"
+          },
+          {
+            "t": 7.599999999999606,
+            "xy": [
+              -0.7936725284879613,
+              2.919437904525038
+            ],
+            "battery": 96.53172578923288,
+            "mode": "legs"
+          },
+          {
+            "t": 7.999999999999562,
+            "xy": [
+              -0.6509945095225413,
+              3.182512683142786
+            ],
+            "battery": 96.34777419577496,
+            "mode": "legs"
+          },
+          {
+            "t": 8.399999999999519,
+            "xy": [
+              -0.5105403656696782,
+              3.4480889185647543
+            ],
+            "battery": 96.16352596072872,
+            "mode": "legs"
+          },
+          {
+            "t": 8.799999999999475,
+            "xy": [
+              -0.3706401172224072,
+              3.7131676861024623
+            ],
+            "battery": 95.97977035448832,
+            "mode": "legs"
+          },
+          {
+            "t": 9.19999999999943,
+            "xy": [
+              -0.23157697341082648,
+              3.978577335123936
+            ],
+            "battery": 95.79611709704542,
+            "mode": "legs"
+          },
+          {
+            "t": 9.599999999999387,
+            "xy": [
+              -0.09256187575871173,
+              4.243989905971974
+            ],
+            "battery": 95.61247185902036,
+            "mode": "legs"
+          },
+          {
+            "t": 9.999999999999343,
+            "xy": [
+              0.0466338878687887,
+              4.509475543567234
+            ],
+            "battery": 95.4287269339185,
+            "mode": "legs"
+          },
+          {
+            "t": 10.399999999999299,
+            "xy": [
+              0.18537228465636185,
+              4.775486857134079
+            ],
+            "battery": 95.24477115348766,
+            "mode": "legs"
+          },
+          {
+            "t": 10.799999999999255,
+            "xy": [
+              0.32492088604533503,
+              5.041225709513161
+            ],
+            "battery": 95.06078542279586,
+            "mode": "legs"
+          },
+          {
+            "t": 11.19999999999921,
+            "xy": [
+              0.463662215150936,
+              5.307157570010781
+            ],
+            "battery": 94.8769627946373,
+            "mode": "legs"
+          },
+          {
+            "t": 11.599999999999167,
+            "xy": [
+              0.6027135581583852,
+              5.57255961272207
+            ],
+            "battery": 94.69333196457183,
+            "mode": "legs"
+          },
+          {
+            "t": 11.999999999999122,
+            "xy": [
+              0.7415470275359434,
+              5.837999002969961
+            ],
+            "battery": 94.50972493697107,
+            "mode": "legs"
+          },
+          {
+            "t": 12.399999999999078,
+            "xy": [
+              0.8803564022883389,
+              6.103647509749532
+            ],
+            "battery": 94.32600336638033,
+            "mode": "legs"
+          },
+          {
+            "t": 12.799999999999034,
+            "xy": [
+              1.0197328197855209,
+              6.369274876177699
+            ],
+            "battery": 94.14207967445638,
+            "mode": "legs"
+          },
+          {
+            "t": 13.19999999999899,
+            "xy": [
+              1.1584647141145834,
+              6.635431204134753
+            ],
+            "battery": 93.95807989031037,
+            "mode": "legs"
+          },
+          {
+            "t": 13.599999999998946,
+            "xy": [
+              1.2978822632464062,
+              6.90110214879519
+            ],
+            "battery": 93.77420564809114,
+            "mode": "legs"
+          },
+          {
+            "t": 13.999999999998902,
+            "xy": [
+              1.436609209862072,
+              7.1667401791661325
+            ],
+            "battery": 93.5905414108667,
+            "mode": "legs"
+          },
+          {
+            "t": 14.399999999998858,
+            "xy": [
+              1.5755376520403503,
+              7.432153017315123
+            ],
+            "battery": 93.40692084441127,
+            "mode": "legs"
+          },
+          {
+            "t": 14.799999999998814,
+            "xy": [
+              1.7145294092862764,
+              7.697617325436577
+            ],
+            "battery": 93.22326434749112,
+            "mode": "legs"
+          },
+          {
+            "t": 15.19999999999877,
+            "xy": [
+              1.853255305662793,
+              7.963484970087199
+            ],
+            "battery": 93.03940408008968,
+            "mode": "legs"
+          },
+          {
+            "t": 15.599999999998726,
+            "xy": [
+              1.992793709668752,
+              8.229211837072782
+            ],
+            "battery": 92.8553816971311,
+            "mode": "legs"
+          },
+          {
+            "t": 15.999999999998682,
+            "xy": [
+              2.1315449624977925,
+              8.49531273268891
+            ],
+            "battery": 92.67146067695138,
+            "mode": "legs"
+          },
+          {
+            "t": 16.399999999998816,
+            "xy": [
+              2.27072618343865,
+              8.760798999791566
+            ],
+            "battery": 92.48775407756736,
+            "mode": "legs"
+          },
+          {
+            "t": 16.79999999999895,
+            "xy": [
+              2.409511884908657,
+              9.026295615772819
+            ],
+            "battery": 92.30412863503588,
+            "mode": "legs"
+          },
+          {
+            "t": 17.199999999999083,
+            "xy": [
+              2.5483513095948767,
+              9.291794244306642
+            ],
+            "battery": 92.1204972445904,
+            "mode": "legs"
+          },
+          {
+            "t": 17.599999999999216,
+            "xy": [
+              2.6875807881964136,
+              9.557359275259337
+            ],
+            "battery": 91.93667461559198,
+            "mode": "legs"
+          },
+          {
+            "t": 17.99999999999935,
+            "xy": [
+              2.8262888186921806,
+              9.823440483050717
+            ],
+            "battery": 91.75269283898308,
+            "mode": "legs"
+          },
+          {
+            "t": 18.399999999999483,
+            "xy": [
+              2.9658062169149315,
+              10.089150997741276
+            ],
+            "battery": 91.5687453008467,
+            "mode": "legs"
+          },
+          {
+            "t": 18.799999999999617,
+            "xy": [
+              3.1045446633179408,
+              10.355020351709813
+            ],
+            "battery": 91.38495069020179,
+            "mode": "legs"
+          },
+          {
+            "t": 19.19999999999975,
+            "xy": [
+              3.243543402628787,
+              10.62041534460672
+            ],
+            "battery": 91.20133208531087,
+            "mode": "legs"
+          },
+          {
+            "t": 19.599999999999884,
+            "xy": [
+              3.382425448356015,
+              10.885858137695433
+            ],
+            "battery": 91.01771583240657,
+            "mode": "legs"
+          },
+          {
+            "t": 20.000000000000018,
+            "xy": [
+              3.5212073607878667,
+              11.15158213374101
+            ],
+            "battery": 90.83394905280714,
+            "mode": "legs"
+          },
+          {
+            "t": 20.40000000000015,
+            "xy": [
+              3.6606471526928366,
+              11.417234587238836
+            ],
+            "battery": 90.64998853465242,
+            "mode": "legs"
+          },
+          {
+            "t": 20.800000000000285,
+            "xy": [
+              3.7993787351474944,
+              11.683391667352888
+            ],
+            "battery": 90.46600693112997,
+            "mode": "legs"
+          },
+          {
+            "t": 21.20000000000042,
+            "xy": [
+              3.9387310593188656,
+              11.949007850856884
+            ],
+            "battery": 90.28218062208022,
+            "mode": "legs"
+          },
+          {
+            "t": 21.600000000000552,
+            "xy": [
+              4.077464092154814,
+              12.214573744330124
+            ],
+            "battery": 90.09854901603113,
+            "mode": "legs"
+          },
+          {
+            "t": 22.000000000000686,
+            "xy": [
+              4.216350931117405,
+              12.479984783840425
+            ],
+            "battery": 89.9149400888107,
+            "mode": "legs"
+          },
+          {
+            "t": 22.40000000000082,
+            "xy": [
+              4.355429406122351,
+              12.745493963247156
+            ],
+            "battery": 89.73121432604015,
+            "mode": "legs"
+          },
+          {
+            "t": 22.800000000000953,
+            "xy": [
+              4.494153337777398,
+              13.011462533025604
+            ],
+            "battery": 89.54728478755798,
+            "mode": "legs"
+          },
+          {
+            "t": 23.200000000001086,
+            "xy": [
+              4.624928641487723,
+              13.260429963050603
+            ],
+            "battery": 89.37449412119237,
+            "mode": "legs"
+          },
+          {
+            "t": 23.60000000000122,
+            "xy": [
+              4.727604146579641,
+              13.488361223635325
+            ],
+            "battery": 89.20992246127743,
+            "mode": "legs"
+          },
+          {
+            "t": 24.000000000001354,
+            "xy": [
+              4.789492983841664,
+              13.753824527693018
+            ],
+            "battery": 89.02936667945215,
+            "mode": "legs"
+          },
+          {
+            "t": 24.400000000001487,
+            "xy": [
+              4.804219530223218,
+              14.004274475584582
+            ],
+            "battery": 88.86399210934894,
+            "mode": "legs"
+          },
+          {
+            "t": 24.80000000000162,
+            "xy": [
+              4.774901539896642,
+              14.177151382631493
+            ],
+            "battery": 88.73374083790438,
+            "mode": "legs"
+          },
+          {
+            "t": 25.200000000001754,
+            "xy": [
+              4.664862774493658,
+              14.400663364223272
+            ],
+            "battery": 88.5638358411768,
+            "mode": "legs"
+          },
+          {
+            "t": 25.600000000001888,
+            "xy": [
+              4.493471578088481,
+              14.633146824979647
+            ],
+            "battery": 88.37778793733067,
+            "mode": "legs"
+          },
+          {
+            "t": 26.00000000000202,
+            "xy": [
+              4.296600033099842,
+              14.854108781806445
+            ],
+            "battery": 88.1924335841849,
+            "mode": "legs"
+          },
+          {
+            "t": 26.400000000002155,
+            "xy": [
+              4.087288165386788,
+              15.069170614165964
+            ],
+            "battery": 88.00698680288505,
+            "mode": "legs"
+          },
+          {
+            "t": 26.80000000000229,
+            "xy": [
+              3.874658392803293,
+              15.279636077093981
+            ],
+            "battery": 87.8228580801429,
+            "mode": "legs"
+          },
+          {
+            "t": 27.200000000002422,
+            "xy": [
+              3.6599409103305,
+              15.48858380894073
+            ],
+            "battery": 87.6392050628261,
+            "mode": "legs"
+          },
+          {
+            "t": 27.600000000002556,
+            "xy": [
+              3.4439259350149913,
+              15.696712068648248
+            ],
+            "battery": 87.45519861340468,
+            "mode": "legs"
+          },
+          {
+            "t": 28.00000000000269,
+            "xy": [
+              3.227982371810265,
+              15.90495542310768
+            ],
+            "battery": 87.271277851782,
+            "mode": "legs"
+          },
+          {
+            "t": 28.400000000002823,
+            "xy": [
+              3.011176866055344,
+              16.112485699866937
+            ],
+            "battery": 87.08732782098022,
+            "mode": "legs"
+          },
+          {
+            "t": 28.800000000002957,
+            "xy": [
+              2.7949881871343853,
+              16.320323453753954
+            ],
+            "battery": 86.90352409750709,
+            "mode": "legs"
+          },
+          {
+            "t": 29.20000000000309,
+            "xy": [
+              2.578669966063655,
+              16.527588518513653
+            ],
+            "battery": 86.71990933570919,
+            "mode": "legs"
+          },
+          {
+            "t": 29.600000000003224,
+            "xy": [
+              2.362425102384038,
+              16.734929011333236
+            ],
+            "battery": 86.53628978885297,
+            "mode": "legs"
+          },
+          {
+            "t": 30.000000000003357,
+            "xy": [
+              2.1461819155820794,
+              16.942554734861343
+            ],
+            "battery": 86.35252463687533,
+            "mode": "legs"
+          },
+          {
+            "t": 30.40000000000349,
+            "xy": [
+              1.9293359362040137,
+              17.149898104412408
+            ],
+            "battery": 86.16856520492756,
+            "mode": "legs"
+          },
+          {
+            "t": 30.800000000003624,
+            "xy": [
+              1.7129969150423694,
+              17.35794574495789
+            ],
+            "battery": 85.9845832705941,
+            "mode": "legs"
+          },
+          {
+            "t": 31.200000000003758,
+            "xy": [
+              1.4962419608884534,
+              17.565282003805702
+            ],
+            "battery": 85.8007575711798,
+            "mode": "legs"
+          },
+          {
+            "t": 31.60000000000389,
+            "xy": [
+              1.2800892967449482,
+              17.772766912525167
+            ],
+            "battery": 85.61712647025423,
+            "mode": "legs"
+          },
+          {
+            "t": 32.00000000000402,
+            "xy": [
+              1.0638394862242244,
+              17.980055942216058
+            ],
+            "battery": 85.43351779691102,
+            "mode": "legs"
+          },
+          {
+            "t": 32.4000000000038,
+            "xy": [
+              0.8473782514497437,
+              18.187378180485954
+            ],
+            "battery": 85.24979282698078,
+            "mode": "legs"
+          },
+          {
+            "t": 32.80000000000358,
+            "xy": [
+              0.6311033857706827,
+              18.395244935518612
+            ],
+            "battery": 85.06586553517022,
+            "mode": "legs"
+          },
+          {
+            "t": 33.20000000000336,
+            "xy": [
+              0.41413043092096885,
+              18.602629177622635
+            ],
+            "battery": 84.88185852828161,
+            "mode": "legs"
+          },
+          {
+            "t": 33.600000000003135,
+            "xy": [
+              0.20807757989165632,
+              18.80073985487129
+            ],
+            "battery": 84.70641790080869,
+            "mode": "legs"
+          }
+        ],
+        "gait": {
+          "period": 0.6896551724137931,
+          "duty": 0.6,
+          "lift": 0.13,
+          "swing_profile": "quintic"
+        },
+        "locomotion": "walking_only",
+        "energy_multiplier": 0.85,
+        "transforms": 0,
+        "positive_actuator_work_j": 4671.573269964222,
+        "positive_leg_work_j": 4671.573269964222,
+        "absolute_actuator_work_j": 8627.511501394842,
+        "peak_positive_actuator_power_w": 430.27144221537645,
+        "max_tilt_deg": 0.15716941843000426,
+        "rms_tilt_deg": 0.06543772092852904,
+        "mean_contact_feet": 0.0,
+        "minimum_contact_feet": 0,
+        "no_foot_contact_fraction": 1.0,
+        "mean_contact_slip_mps": null,
+        "summed_contact_slip_m": 0.0,
+        "min_support_margin_m": null,
+        "mean_support_margin_m": null,
+        "physics_samples": 8404,
+        "assisted_model": true,
+        "mechanical_work_is_battery_energy": false
+      },
+      "prediction_validation": {
+        "scope": "simulation ledger and assisted execution only; not external battery calibration",
+        "task_time_error_s": -1.1103900821210466,
+        "task_battery_error_pp": -2.0301433552397015,
+        "nominal_return_energy_percent": 5.5602232088387415,
+        "energy_multiplier": 0.85
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "debug_physics_01",
+      "split": "debug_physics",
+      "layout_id": "debug_physics_world_1491000",
+      "seed": 1491000,
+      "world": {
+        "version": 1,
+        "seed": 1491000,
+        "family": "open",
+        "half_extent": 24.0,
+        "friction_scale": 0.8,
+        "obstacles": [
+          {
+            "x": 6.882729530168149,
+            "y": -6.430393926029971,
+            "sx": 0.48614535375002255,
+            "sy": 0.28907366197946205,
+            "height": 0.3645457807074564
+          },
+          {
+            "x": 11.471546871859541,
+            "y": -10.032517878974677,
+            "sx": 0.47364925350632336,
+            "sy": 0.6636226272833595,
+            "height": 0.7218885544416742
+          },
+          {
+            "x": 4.576420128937372,
+            "y": -10.96766379615178,
+            "sx": 0.3061771317341398,
+            "sy": 0.6177092185718693,
+            "height": 0.38314984155919724
+          },
+          {
+            "x": -3.408058078499554,
+            "y": 3.749637653245003,
+            "sx": 0.5693207905668491,
+            "sy": 0.47154391373163573,
+            "height": 0.5011067527552506
+          },
+          {
+            "x": -6.746127089619398,
+            "y": 9.836639229550453,
+            "sx": 0.47863190231840813,
+            "sy": 0.4222229558615142,
+            "height": 0.5795369986022681
+          }
+        ],
+        "patches": [
+          {
+            "bounds": [
+              -6.124894976263296,
+              -0.15754678103657138,
+              -9.09099681115823,
+              -3.294388048978947
+            ],
+            "grade": 1
+          }
+        ],
+        "tiles": [
+          {
+            "x": -1.7071200505962523,
+            "y": -8.768990106623194,
+            "sx": 0.27535739519404673,
+            "sy": 0.2932205495087642,
+            "height": 0.034223946131087854
+          },
+          {
+            "x": -5.794589606935416,
+            "y": -4.564127307808323,
+            "sx": 0.2917352377651823,
+            "sy": 0.31946961035633153,
+            "height": 0.03601267752710949
+          },
+          {
+            "x": -4.826109710582466,
+            "y": -7.1186522929988705,
+            "sx": 0.21037635878201918,
+            "sy": 0.32049345161101306,
+            "height": 0.04266988895920936
+          },
+          {
+            "x": -0.7172583151192633,
+            "y": -8.451964766595227,
+            "sx": 0.2928550604372007,
+            "sy": 0.2748735590387682,
+            "height": 0.031341596256753014
+          },
+          {
+            "x": -4.790768501148281,
+            "y": -6.698393919943365,
+            "sx": 0.23614017841399426,
+            "sy": 0.21629870690559205,
+            "height": 0.033382221754733835
+          },
+          {
+            "x": -2.4965895892433365,
+            "y": -5.843427795890664,
+            "sx": 0.278256522903664,
+            "sy": 0.29944981310092944,
+            "height": 0.04373386090578597
+          },
+          {
+            "x": -2.9702672371353303,
+            "y": -8.069617134178998,
+            "sx": 0.18536421931909094,
+            "sy": 0.1718939517022383,
+            "height": 0.03063504117733903
+          },
+          {
+            "x": -1.3829047254279683,
+            "y": -5.6937391440806255,
+            "sx": 0.2779494598959623,
+            "sy": 0.2950688491099079,
+            "height": 0.027258144827821698
+          },
+          {
+            "x": -0.9564892570257628,
+            "y": -4.046272643103841,
+            "sx": 0.20405011190068698,
+            "sy": 0.18272251604736364,
+            "height": 0.03150384598439829
+          },
+          {
+            "x": -4.536162278739187,
+            "y": -6.358563805151154,
+            "sx": 0.26594628802352155,
+            "sy": 0.22211914903358015,
+            "height": 0.03936568238598912
+          },
+          {
+            "x": -3.5074415085253725,
+            "y": -8.612234571679323,
+            "sx": 0.19757620213776336,
+            "sy": 0.23888054747789206,
+            "height": 0.026720543963813077
+          },
+          {
+            "x": -2.331811865137752,
+            "y": -3.6043066681402802,
+            "sx": 0.29910031745482923,
+            "sy": 0.2826667170745578,
+            "height": 0.03227477504060251
+          }
+        ],
+        "stations": [
+          {
+            "name": "West station",
+            "key": "west",
+            "pos": [
+              -19.0,
+              -19.0
+            ],
+            "via": []
+          },
+          {
+            "name": "East station",
+            "key": "east",
+            "pos": [
+              19.0,
+              -19.0
+            ],
+            "via": []
+          },
+          {
+            "name": "North station",
+            "key": "north",
+            "pos": [
+              0.0,
+              19.0
+            ],
+            "via": []
+          }
+        ]
+      },
+      "world_sha256": "2a877effb43632b07a68f9ddd8250651b1931d1c47ac4636ffc183b89417c3b7",
+      "variant": 0,
+      "start": [
+        -3.5,
+        -1.75
+      ],
+      "goal": [
+        4.75,
+        13.5
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 0.85,
+      "model_xml": "world_models/20261029T002810826887Z/debug_physics_01.xml",
+      "model_xml_sha256": "3a2ade0241f2e6a49be10924eb3018c8901b8d5bd5f98adb52a9f9788b6a6b64",
+      "model_load_seconds": 0.23507174698170274,
+      "graph_build_seconds": 0.10660339996684343,
+      "preparation_seconds": 0.5507064700359479,
+      "total_preparation_seconds": 0.892381616984494,
+      "return_station": "North station",
+      "return_energy_percent": 5.5602232088387415,
+      "return_route": [
+        [
+          4.75,
+          13.5
+        ],
+        [
+          4.75,
+          14.25
+        ],
+        [
+          0.0,
+          19.0
+        ]
+      ],
+      "map": {
+        "bounds": [
+          -24.0,
+          24.0
+        ],
+        "obstacles": [
+          [
+            [
+              6.396584176418126,
+              -6.719467588009433
+            ],
+            [
+              7.3688748839181715,
+              -6.14132026405051
+            ]
+          ],
+          [
+            [
+              10.997897618353218,
+              -10.696140506258036
+            ],
+            [
+              11.945196125365865,
+              -9.368895251691317
+            ]
+          ],
+          [
+            [
+              4.270242997203232,
+              -11.58537301472365
+            ],
+            [
+              4.882597260671512,
+              -10.349954577579911
+            ]
+          ],
+          [
+            [
+              -3.977378869066403,
+              3.278093739513367
+            ],
+            [
+              -2.838737287932705,
+              4.221181566976639
+            ]
+          ],
+          [
+            [
+              -7.224758991937806,
+              9.41441627368894
+            ],
+            [
+              -6.267495187300989,
+              10.258862185411967
+            ]
+          ]
+        ],
+        "start": [
+          -3.5,
+          -1.75
+        ],
+        "goal": [
+          4.75,
+          13.5
+        ],
+        "terrain_patches": [
+          {
+            "bounds": [
+              -6.124894976263296,
+              -0.15754678103657138,
+              -9.09099681115823,
+              -3.294388048978947
+            ],
+            "grade": 1
+          }
+        ],
+        "world_family": "open"
+      }
+    }
+  ],
+  "locomotion": "walking_only",
+  "resolution_m": 0.25,
+  "planning_budget_s": 2.0,
+  "service": "charge",
+  "service_seconds": 8.0,
+  "versions": {
+    "mujoco": "3.9.0",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "python": "3.10.12"
+  },
+  "hardware": {
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.35",
+    "cpu_count": 4,
+    "cpu_model": "Intel(R) Core(TM) i5-7600 CPU @ 3.50GHz"
+  },
+  "source_sha256": {
+    "research/advanced.py": "96c01a5e10b5f6dd01422345412f5612d237bc35b794698fe3eeb36c35f56b45",
+    "research/planning.py": "0502389b789b4780c634b220412628a29360702a22066c53581fc85f825de273",
+    "research/swarm.py": "f62d7a73a809b194a23b8540f409040387eee66e110a14dceff2f215467f2aec",
+    "research/execution.py": "4663b1f8195e41f56525cdbfe2aab58fa3d5031d2c4a5664489449afb74123f7",
+    "research/telemetry.py": "cf9cf802ef303c07bb6d70080e4d151714b8fe865e1ec9c04f718cfc9454e170",
+    "research/run.py": "957a1994db1f2efe41956971317ec10941dacafff3db8c5ff8bb11a34df20af5",
+    "research/reliability.py": "d2a26b2e255893f1fc4ca667b65df609f44ccd542fcd1e53c814ab2171430234",
+    "research/worlds.py": "909c11f952922fa8c6dab86e0021c43a768560b24dc463276d0ab773974e46e4",
+    "research/strong_study.py": "09f135f7bbedd15ea8483f98a5455451c3d2f91646b91a8a941ab9a97e758289",
+    "research/calibration.py": "0efdf2fb4080b813304ebd7c642fd3676022cffa0ccfbafdf4805e7f88acdf9b",
+    "research/reference_validation.py": "8cea4c17e1e454ec45b3155fd4cbdd1073afb63969e2640ab2c604354eecaf43",
+    "tripod_gait.py": "af6996a344c84bd1d6ed6ca05e2d0ce8b967624e7e0bc5cff8e3087f8dfd7649",
+    "hybrid_locomotion.py": "76a10af0fe066f6389669ee7749d8234ae8ff96e7347e21e6b2baa2806155fdc",
+    "safe_navigation.py": "71cc1a465b0e44cad26f6ce6c5fd1fe962293288cfd4209c99b9b03e0ced8d3c",
+    "energy_model.py": "c175e82982ea7eca234ae9ef8411f8c12f42a3891feeb34b94bed848c6784b3a",
+    "terrain_profile.py": "b472521188f0e15b914163e1ecd50883b182db6beb9442cdf2a5ae9aec7a81fd",
+    "terrain_classes.py": "83aad280a77c9a0dd2fa317fafce998baa97a6b56d04906f0140106822cd812c",
+    "road_demo.py": "72f8e5fef19c28e0a949291ca1347970ff64116fb79e5fda027127a04add58fc",
+    "multi_place_config.py": "5ea86fe7a9835d78fa5422d514fdacc02af50e2c4ecb1aaa5a1a64087b3cfebc",
+    "hybrid_hexapod_multi_place.xml": "626013218c442c54c0132b98ceac08b74aa39dd8f98c79d8157331cda2b2111f"
+  },
+  "source_snapshot": "source_snapshots/20261029T002810826887Z",
+  "caveats": [
+    "Assisted chassis velocity and posture; gravity compensation enabled.",
+    "Positive actuator work is mechanical work, not electrical battery energy.",
+    "Terrain exposure is a geometric and semantic difficulty proxy, not fall probability.",
+    "Controlled research graph and inspired baselines; not exact reproductions of the cited papers.",
+    "Cost averages condition on admissibility or success; compare denominators and paired cases.",
+    "Return route estimates use a common reference heading and the configured reserve allowance.",
+    "Procedurally generated physical worlds from a restricted simulated distribution; not real-world generalization.",
+    "PSO and ACO are A* seeded waypoint refiners, not unseeded global planners.",
+    "All new optimizers share the same feasible-first composite quality and continuous collision checks.",
+    "Seed search, visibility checks and fitness evaluations count toward each method wall budget; operation counts are different primitive types.",
+    "Repeated stochastic seeds share a scene; they are not independent test maps."
+  ],
+  "energy_model": {
+    "status": "uncalibrated_nominal_simulation",
+    "profile": null,
+    "coefficients": {
+      "WALK_PERCENT_PER_M": 0.7,
+      "HOTEL_PERCENT_PER_S": 0.015,
+      "TURN_PERCENT_PER_RAD": 0.08,
+      "START_STOP_PERCENT": 0.1
+    }
+  },
+  "summary": [
+    {
+      "method": "proposed_v4",
+      "label": "Proposed v4 visibility and continuous refinement",
+      "attempts": 1,
+      "admissible": 1,
+      "executed": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 24.294390082122128,
+      "mean_predicted_energy_percent": 12.649611625669763,
+      "mean_task_time_s": 23.18400000000108,
+      "mean_positive_work_j": 4671.573269964222,
+      "mean_max_tilt_deg": 0.15716941843000426,
+      "mean_quality_score": 1.03912766163759,
+      "mean_planning_seconds": 0.2073955510277301
+    },
+    {
+      "method": "pso_polished",
+      "label": "PSO with continuous polishing",
+      "attempts": 1,
+      "admissible": 1,
+      "executed": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 24.294390082122128,
+      "mean_predicted_energy_percent": 12.649611625669763,
+      "mean_task_time_s": 23.18400000000108,
+      "mean_positive_work_j": 4671.573269964222,
+      "mean_max_tilt_deg": 0.15716941843000426,
+      "mean_quality_score": 1.03912766163759,
+      "mean_planning_seconds": 0.16333174402825534
+    },
+    {
+      "method": "aco_polished",
+      "label": "ACO with continuous polishing",
+      "attempts": 1,
+      "admissible": 1,
+      "executed": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "admissible_rate": 1.0,
+      "mean_predicted_time_s": 24.291923017953856,
+      "mean_predicted_energy_percent": 12.649241161917487,
+      "mean_task_time_s": 23.18400000000108,
+      "mean_positive_work_j": 4672.610006338,
+      "mean_max_tilt_deg": 0.15714126567551195,
+      "mean_quality_score": 1.039076811408422,
+      "mean_planning_seconds": 0.24693737202323973
+    }
+  ]
+}

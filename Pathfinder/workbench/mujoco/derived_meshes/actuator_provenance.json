@@ -1,0 +1,33 @@
+{
+  "source": "/home/user123456/Downloads/hexapod_asset/meshes/rs04_actuator.stl",
+  "source_sha256": "2910dd2ce4dcce350aecbc4edaeadba600a5110547888870fbe7e7d21dadfbbb",
+  "source_triangles": 294305,
+  "replacement": "/home/user123456/Downloads/hexapod_asset/mujoco/derived_meshes/rs04_actuator_mujoco.stl",
+  "replacement_sha256": "c23219849d0f0c1e1a813b69cfe7640a9e0843f8e56103a073151e12962b8592",
+  "replacement_triangles": 30000,
+  "source_bounds_mm": [
+    [
+      -60.0,
+      -60.0,
+      -27.200000762939453
+    ],
+    [
+      60.0,
+      60.0,
+      28.5
+    ]
+  ],
+  "replacement_bounds_mm": [
+    [
+      -60.120894558873545,
+      -60.11118978374182,
+      -27.200000762939464
+    ],
+    [
+      60.04919693075965,
+      60.1410920010593,
+      28.461108002033217
+    ]
+  ],
+  "method": "Quadric edge-collapse simplification of the supplied actuator only; no source files modified."
+}

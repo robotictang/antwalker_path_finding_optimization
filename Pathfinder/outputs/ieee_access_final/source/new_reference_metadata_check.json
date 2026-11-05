@@ -1,0 +1,131 @@
+{
+  "10.1109/MRA.2012.2205651": {
+    "title": [
+      "The Open Motion Planning Library"
+    ],
+    "author": [
+      {
+        "given": "Ioan A.",
+        "family": "Sucan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Rice University, Houston, TX 77251 USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mark",
+        "family": "Moll",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Rice University, Houston, TX 77251 USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lydia E.",
+        "family": "Kavraki",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, Rice University, Houston, TX 77005 USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Robotics &amp; Automation Magazine"
+    ],
+    "volume": "19",
+    "issue": "4",
+    "page": "72-82",
+    "published": {
+      "date-parts": [
+        [
+          2012,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1109/mra.2012.2205651"
+  },
+  "10.1109/ROBOT.2000.844730": {
+    "title": [
+      "RRT-connect: An efficient approach to single-query path planning"
+    ],
+    "author": [
+      {
+        "given": "J.J.",
+        "family": "Kuffner",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Stanford",
+            "place": [
+              "Stanford, CA, USA"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "S.M.",
+        "family": "LaValle",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Iowa State University",
+            "place": [
+              "Ames, IA, USA"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Proceedings 2000 ICRA. Millennium Conference. IEEE International Conference on Robotics and Automation. Symposia Proceedings (Cat. No.00CH37065)"
+    ],
+    "volume": null,
+    "issue": null,
+    "page": "995-1001 vol.2",
+    "published": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "DOI": "10.1109/robot.2000.844730"
+  }
+}

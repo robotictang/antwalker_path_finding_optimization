@@ -1,0 +1,1006 @@
+{
+  "world_size_m": [
+    96,
+    96
+  ],
+  "new_road_links": 12,
+  "additional_physical_road_obstacles": 40,
+  "ordered_location_pairs": 20,
+  "objective_route_checks": 80,
+  "all_routes_continuously_clear": true,
+  "comparison_does_not_move_robot": true,
+  "priority_switch_changes_route": true,
+  "shorter_example": {
+    "distance_m": 47.28587002016684,
+    "estimated_seconds": 88.37884110320675,
+    "energy_percent": 29.313641218011462,
+    "driving_distance_m": 20.350846222663694,
+    "walking_distance_m": 26.935023797503142,
+    "transformations": 7,
+    "search_weights": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "points": [
+      [
+        0.0,
+        -20.0
+      ],
+      [
+        1.0,
+        -13.0
+      ],
+      [
+        3.75,
+        -10.0
+      ],
+      [
+        9.5,
+        -9.0
+      ],
+      [
+        10.0,
+        -8.25
+      ],
+      [
+        10.0,
+        9.5
+      ],
+      [
+        11.25,
+        10.75
+      ],
+      [
+        15.0,
+        10.75
+      ],
+      [
+        16.75,
+        12.75
+      ],
+      [
+        18.0,
+        16.0
+      ]
+    ],
+    "id": "R1",
+    "required_battery": 77.88072917055804,
+    "feasible": true
+  },
+  "faster_example": {
+    "distance_m": 70.22147549504699,
+    "estimated_seconds": 72.40070671035897,
+    "energy_percent": 25.512744395280144,
+    "driving_distance_m": 59.72480593083919,
+    "walking_distance_m": 10.4966695642078,
+    "transformations": 3,
+    "search_weights": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "points": [
+      [
+        0.0,
+        -20.0
+      ],
+      [
+        2.75,
+        -25.0
+      ],
+      [
+        8.5,
+        -25.0
+      ],
+      [
+        27.0,
+        -19.25
+      ],
+      [
+        27.5,
+        -18.75
+      ],
+      [
+        27.5,
+        -1.75
+      ],
+      [
+        18.0,
+        7.75
+      ],
+      [
+        18.0,
+        16.0
+      ]
+    ],
+    "id": "R2",
+    "required_battery": 73.1296081421439,
+    "feasible": true
+  },
+  "history_reset_restart_and_incremental_paging": true,
+  "csv_origin_destination_labels": true,
+  "sqlite_integrity": true,
+  "routes": [
+    {
+      "origin": 0,
+      "destination": 1,
+      "mode": "balanced",
+      "distance_m": 50.13393281323217,
+      "estimated_seconds": 91.98143498644954,
+      "energy_percent": 31.151291065985713,
+      "driving_distance_m": 20.84711508028435,
+      "walking_distance_m": 29.286817732947817,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 1,
+      "mode": "shortest",
+      "distance_m": 50.13393281323217,
+      "estimated_seconds": 91.98143498644954,
+      "energy_percent": 31.151291065985713,
+      "driving_distance_m": 20.84711508028435,
+      "walking_distance_m": 29.286817732947817,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 1,
+      "mode": "fastest",
+      "distance_m": 50.56917068232109,
+      "estimated_seconds": 91.4806388794261,
+      "energy_percent": 31.289675730287506,
+      "driving_distance_m": 21.031590545039453,
+      "walking_distance_m": 29.53758013728164,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 1,
+      "mode": "energy",
+      "distance_m": 50.13393281323217,
+      "estimated_seconds": 91.98143498644954,
+      "energy_percent": 31.151291065985713,
+      "driving_distance_m": 20.84711508028435,
+      "walking_distance_m": 29.286817732947817,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 2,
+      "mode": "balanced",
+      "distance_m": 47.28587002016684,
+      "estimated_seconds": 88.37884110320675,
+      "energy_percent": 29.313641218011462,
+      "driving_distance_m": 20.350846222663694,
+      "walking_distance_m": 26.935023797503142,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 2,
+      "mode": "shortest",
+      "distance_m": 47.28587002016684,
+      "estimated_seconds": 88.37884110320675,
+      "energy_percent": 29.313641218011462,
+      "driving_distance_m": 20.350846222663694,
+      "walking_distance_m": 26.935023797503142,
+      "transformations": 7
+    },
+    {
+      "origin": 0,
+      "destination": 2,
+      "mode": "fastest",
+      "distance_m": 71.48729382831453,
+      "estimated_seconds": 74.67012610120364,
+      "energy_percent": 26.025725861920986,
+      "driving_distance_m": 60.88265313552045,
+      "walking_distance_m": 10.60464069279408,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 2,
+      "mode": "energy",
+      "distance_m": 70.22147549504699,
+      "estimated_seconds": 72.40070671035897,
+      "energy_percent": 25.512744395280144,
+      "driving_distance_m": 59.72480593083919,
+      "walking_distance_m": 10.4966695642078,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 3,
+      "mode": "balanced",
+      "distance_m": 29.709119235262506,
+      "estimated_seconds": 48.246121449150536,
+      "energy_percent": 16.194317779935332,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 13.406469689117046,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 3,
+      "mode": "shortest",
+      "distance_m": 27.531069621977963,
+      "estimated_seconds": 58.49305888660218,
+      "energy_percent": 19.515192585045764,
+      "driving_distance_m": 7.605439095229404,
+      "walking_distance_m": 19.92563052674856,
+      "transformations": 5
+    },
+    {
+      "origin": 0,
+      "destination": 3,
+      "mode": "fastest",
+      "distance_m": 29.709119235262506,
+      "estimated_seconds": 48.246121449150536,
+      "energy_percent": 16.194317779935332,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 13.406469689117046,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 3,
+      "mode": "energy",
+      "distance_m": 31.270679931674007,
+      "estimated_seconds": 48.054176402418996,
+      "energy_percent": 15.995459727018346,
+      "driving_distance_m": 19.128320579439684,
+      "walking_distance_m": 12.142359352234324,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 4,
+      "mode": "balanced",
+      "distance_m": 25.793302239883058,
+      "estimated_seconds": 53.031216664087076,
+      "energy_percent": 16.540939062165556,
+      "driving_distance_m": 11.24055166646249,
+      "walking_distance_m": 14.552750573420568,
+      "transformations": 5
+    },
+    {
+      "origin": 0,
+      "destination": 4,
+      "mode": "shortest",
+      "distance_m": 25.793302239883058,
+      "estimated_seconds": 53.031216664087076,
+      "energy_percent": 16.540939062165556,
+      "driving_distance_m": 11.24055166646249,
+      "walking_distance_m": 14.552750573420568,
+      "transformations": 5
+    },
+    {
+      "origin": 0,
+      "destination": 4,
+      "mode": "fastest",
+      "distance_m": 29.709119235262506,
+      "estimated_seconds": 49.031519612547974,
+      "energy_percent": 16.268930605458088,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 13.406469689117046,
+      "transformations": 3
+    },
+    {
+      "origin": 0,
+      "destination": 4,
+      "mode": "energy",
+      "distance_m": 29.449211789792564,
+      "estimated_seconds": 47.40617890334666,
+      "energy_percent": 15.906412887574415,
+      "driving_distance_m": 16.440209776966316,
+      "walking_distance_m": 13.00900201282625,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 0,
+      "mode": "balanced",
+      "distance_m": 49.9394499845208,
+      "estimated_seconds": 93.72975650098175,
+      "energy_percent": 31.356163044866584,
+      "driving_distance_m": 20.453630073232627,
+      "walking_distance_m": 29.485819911288175,
+      "transformations": 7
+    },
+    {
+      "origin": 1,
+      "destination": 0,
+      "mode": "shortest",
+      "distance_m": 49.9394499845208,
+      "estimated_seconds": 93.72975650098175,
+      "energy_percent": 31.356163044866584,
+      "driving_distance_m": 20.453630073232627,
+      "walking_distance_m": 29.485819911288175,
+      "transformations": 7
+    },
+    {
+      "origin": 1,
+      "destination": 0,
+      "mode": "fastest",
+      "distance_m": 49.9394499845208,
+      "estimated_seconds": 93.72975650098175,
+      "energy_percent": 31.356163044866584,
+      "driving_distance_m": 20.453630073232627,
+      "walking_distance_m": 29.485819911288175,
+      "transformations": 7
+    },
+    {
+      "origin": 1,
+      "destination": 0,
+      "mode": "energy",
+      "distance_m": 49.9394499845208,
+      "estimated_seconds": 93.72975650098175,
+      "energy_percent": 31.356163044866584,
+      "driving_distance_m": 20.453630073232627,
+      "walking_distance_m": 29.485819911288175,
+      "transformations": 7
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "mode": "balanced",
+      "distance_m": 43.65797599279841,
+      "estimated_seconds": 61.328059303771404,
+      "energy_percent": 22.292509487677478,
+      "driving_distance_m": 25.033520708658887,
+      "walking_distance_m": 18.624455284139522,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "mode": "shortest",
+      "distance_m": 43.65797599279841,
+      "estimated_seconds": 61.328059303771404,
+      "energy_percent": 22.292509487677478,
+      "driving_distance_m": 25.033520708658887,
+      "walking_distance_m": 18.624455284139522,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "mode": "fastest",
+      "distance_m": 43.65797599279841,
+      "estimated_seconds": 61.328059303771404,
+      "energy_percent": 22.292509487677478,
+      "driving_distance_m": 25.033520708658887,
+      "walking_distance_m": 18.624455284139522,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "mode": "energy",
+      "distance_m": 43.65797599279841,
+      "estimated_seconds": 61.328059303771404,
+      "energy_percent": 22.292509487677478,
+      "driving_distance_m": 25.033520708658887,
+      "walking_distance_m": 18.624455284139522,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "mode": "balanced",
+      "distance_m": 37.43596375129239,
+      "estimated_seconds": 60.78499933766627,
+      "energy_percent": 23.573541409333394,
+      "driving_distance_m": 12.21035395714516,
+      "walking_distance_m": 25.225609794147235,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "mode": "shortest",
+      "distance_m": 37.43596375129239,
+      "estimated_seconds": 60.78499933766627,
+      "energy_percent": 23.573541409333394,
+      "driving_distance_m": 12.21035395714516,
+      "walking_distance_m": 25.225609794147235,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "mode": "fastest",
+      "distance_m": 37.43596375129239,
+      "estimated_seconds": 60.78499933766627,
+      "energy_percent": 23.573541409333394,
+      "driving_distance_m": 12.21035395714516,
+      "walking_distance_m": 25.225609794147235,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "mode": "energy",
+      "distance_m": 37.43596375129239,
+      "estimated_seconds": 60.78499933766627,
+      "energy_percent": 23.573541409333394,
+      "driving_distance_m": 12.21035395714516,
+      "walking_distance_m": 25.225609794147235,
+      "transformations": 3
+    },
+    {
+      "origin": 1,
+      "destination": 4,
+      "mode": "balanced",
+      "distance_m": 63.17766952966369,
+      "estimated_seconds": 87.28883064591155,
+      "energy_percent": 31.11657460822749,
+      "driving_distance_m": 38.958073580374354,
+      "walking_distance_m": 24.21959594928933,
+      "transformations": 5
+    },
+    {
+      "origin": 1,
+      "destination": 4,
+      "mode": "shortest",
+      "distance_m": 58.90284501515105,
+      "estimated_seconds": 101.37602099754469,
+      "energy_percent": 35.504692051264946,
+      "driving_distance_m": 25.29298480527587,
+      "walking_distance_m": 33.60986020987518,
+      "transformations": 7
+    },
+    {
+      "origin": 1,
+      "destination": 4,
+      "mode": "fastest",
+      "distance_m": 63.17766952966369,
+      "estimated_seconds": 87.28883064591155,
+      "energy_percent": 31.11657460822749,
+      "driving_distance_m": 38.958073580374354,
+      "walking_distance_m": 24.21959594928933,
+      "transformations": 5
+    },
+    {
+      "origin": 1,
+      "destination": 4,
+      "mode": "energy",
+      "distance_m": 64.33463141457501,
+      "estimated_seconds": 88.28803074736322,
+      "energy_percent": 31.25851121454619,
+      "driving_distance_m": 40.59008425447318,
+      "walking_distance_m": 23.74454716010183,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 0,
+      "mode": "balanced",
+      "distance_m": 47.107619815510205,
+      "estimated_seconds": 90.87639044743538,
+      "energy_percent": 29.46436132412102,
+      "driving_distance_m": 20.301806368476882,
+      "walking_distance_m": 26.805813447033323,
+      "transformations": 7
+    },
+    {
+      "origin": 2,
+      "destination": 0,
+      "mode": "shortest",
+      "distance_m": 47.107619815510205,
+      "estimated_seconds": 90.87639044743538,
+      "energy_percent": 29.46436132412102,
+      "driving_distance_m": 20.301806368476882,
+      "walking_distance_m": 26.805813447033323,
+      "transformations": 7
+    },
+    {
+      "origin": 2,
+      "destination": 0,
+      "mode": "fastest",
+      "distance_m": 70.12780157268844,
+      "estimated_seconds": 72.85177029462047,
+      "energy_percent": 25.579023772419415,
+      "driving_distance_m": 59.523160879894355,
+      "walking_distance_m": 10.60464069279408,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 0,
+      "mode": "energy",
+      "distance_m": 71.73021971263292,
+      "estimated_seconds": 75.38873668298227,
+      "energy_percent": 26.100642062283793,
+      "driving_distance_m": 61.23355014842511,
+      "walking_distance_m": 10.4966695642078,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 1,
+      "mode": "balanced",
+      "distance_m": 38.38551499325489,
+      "estimated_seconds": 53.72656797983484,
+      "energy_percent": 18.775581993568736,
+      "driving_distance_m": 24.1822558698333,
+      "walking_distance_m": 14.203259123421585,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 1,
+      "mode": "shortest",
+      "distance_m": 44.64976314798275,
+      "estimated_seconds": 64.3372006655481,
+      "energy_percent": 22.627308037516443,
+      "driving_distance_m": 26.41051208708067,
+      "walking_distance_m": 18.239251060902085,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 1,
+      "mode": "fastest",
+      "distance_m": 38.38551499325489,
+      "estimated_seconds": 53.72656797983484,
+      "energy_percent": 18.775581993568736,
+      "driving_distance_m": 24.1822558698333,
+      "walking_distance_m": 14.203259123421585,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 1,
+      "mode": "energy",
+      "distance_m": 38.38551499325489,
+      "estimated_seconds": 53.72656797983484,
+      "energy_percent": 18.775581993568736,
+      "driving_distance_m": 24.1822558698333,
+      "walking_distance_m": 14.203259123421585,
+      "transformations": 3
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "mode": "balanced",
+      "distance_m": 61.54929662585543,
+      "estimated_seconds": 87.73380287064349,
+      "energy_percent": 31.01154111511672,
+      "driving_distance_m": 36.86817038939405,
+      "walking_distance_m": 24.681126236461385,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "mode": "shortest",
+      "distance_m": 57.724563235884624,
+      "estimated_seconds": 103.38199319819448,
+      "energy_percent": 36.489830699741574,
+      "driving_distance_m": 21.48079533979031,
+      "walking_distance_m": 36.24376789609432,
+      "transformations": 7
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "mode": "fastest",
+      "distance_m": 61.5731501529062,
+      "estimated_seconds": 87.83910611254773,
+      "energy_percent": 31.02635177021543,
+      "driving_distance_m": 36.89202391644482,
+      "walking_distance_m": 24.681126236461385,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "mode": "energy",
+      "distance_m": 61.54929662585543,
+      "estimated_seconds": 87.73380287064349,
+      "energy_percent": 31.01154111511672,
+      "driving_distance_m": 36.86817038939405,
+      "walking_distance_m": 24.681126236461385,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 4,
+      "mode": "balanced",
+      "distance_m": 37.70531865384151,
+      "estimated_seconds": 74.62641641866512,
+      "energy_percent": 26.065229759146142,
+      "driving_distance_m": 10.207035782127553,
+      "walking_distance_m": 27.498282871713958,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 4,
+      "mode": "shortest",
+      "distance_m": 37.70531865384151,
+      "estimated_seconds": 74.62641641866512,
+      "energy_percent": 26.065229759146142,
+      "driving_distance_m": 10.207035782127553,
+      "walking_distance_m": 27.498282871713958,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 4,
+      "mode": "fastest",
+      "distance_m": 37.70531865384151,
+      "estimated_seconds": 74.62641641866512,
+      "energy_percent": 26.065229759146142,
+      "driving_distance_m": 10.207035782127553,
+      "walking_distance_m": 27.498282871713958,
+      "transformations": 5
+    },
+    {
+      "origin": 2,
+      "destination": 4,
+      "mode": "energy",
+      "distance_m": 37.70531865384151,
+      "estimated_seconds": 74.62641641866512,
+      "energy_percent": 26.065229759146142,
+      "driving_distance_m": 10.207035782127553,
+      "walking_distance_m": 27.498282871713958,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 0,
+      "mode": "balanced",
+      "distance_m": 29.265278957794084,
+      "estimated_seconds": 47.759619671675416,
+      "energy_percent": 15.884754879777267,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 12.962629411648624,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 0,
+      "mode": "shortest",
+      "distance_m": 27.13200607357461,
+      "estimated_seconds": 58.740763871998055,
+      "energy_percent": 19.298925302560438,
+      "driving_distance_m": 7.613150709575427,
+      "walking_distance_m": 19.518855363999183,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 0,
+      "mode": "fastest",
+      "distance_m": 29.265278957794084,
+      "estimated_seconds": 47.759619671675416,
+      "energy_percent": 15.884754879777267,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 12.962629411648624,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 0,
+      "mode": "energy",
+      "distance_m": 31.270679931674007,
+      "estimated_seconds": 48.19096309749943,
+      "energy_percent": 16.008454463050988,
+      "driving_distance_m": 19.128320579439684,
+      "walking_distance_m": 12.142359352234324,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 1,
+      "mode": "balanced",
+      "distance_m": 37.09793986326094,
+      "estimated_seconds": 59.55690854543332,
+      "energy_percent": 23.11679506967185,
+      "driving_distance_m": 12.566429506064333,
+      "walking_distance_m": 24.53151035719661,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 1,
+      "mode": "shortest",
+      "distance_m": 37.09793986326094,
+      "estimated_seconds": 59.55690854543332,
+      "energy_percent": 23.11679506967185,
+      "driving_distance_m": 12.566429506064333,
+      "walking_distance_m": 24.53151035719661,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 1,
+      "mode": "fastest",
+      "distance_m": 37.09793986326094,
+      "estimated_seconds": 59.55690854543332,
+      "energy_percent": 23.11679506967185,
+      "driving_distance_m": 12.566429506064333,
+      "walking_distance_m": 24.53151035719661,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 1,
+      "mode": "energy",
+      "distance_m": 37.09793986326094,
+      "estimated_seconds": 59.55690854543332,
+      "energy_percent": 23.11679506967185,
+      "driving_distance_m": 12.566429506064333,
+      "walking_distance_m": 24.53151035719661,
+      "transformations": 3
+    },
+    {
+      "origin": 3,
+      "destination": 2,
+      "mode": "balanced",
+      "distance_m": 58.3097962347071,
+      "estimated_seconds": 102.04473009966294,
+      "energy_percent": 36.37612597422559,
+      "driving_distance_m": 22.33298391249529,
+      "walking_distance_m": 35.976812322211806,
+      "transformations": 7
+    },
+    {
+      "origin": 3,
+      "destination": 2,
+      "mode": "shortest",
+      "distance_m": 58.3097962347071,
+      "estimated_seconds": 102.04473009966294,
+      "energy_percent": 36.37612597422559,
+      "driving_distance_m": 22.33298391249529,
+      "walking_distance_m": 35.976812322211806,
+      "transformations": 7
+    },
+    {
+      "origin": 3,
+      "destination": 2,
+      "mode": "fastest",
+      "distance_m": 68.58379630909214,
+      "estimated_seconds": 97.7157220182887,
+      "energy_percent": 34.86145766892263,
+      "driving_distance_m": 40.11500519604892,
+      "walking_distance_m": 28.468791113043228,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 2,
+      "mode": "energy",
+      "distance_m": 69.36740767105593,
+      "estimated_seconds": 97.96004477152027,
+      "energy_percent": 34.88418280537277,
+      "driving_distance_m": 41.30287316169295,
+      "walking_distance_m": 28.06453450936298,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 4,
+      "mode": "balanced",
+      "distance_m": 36.40143762243011,
+      "estimated_seconds": 66.77627768594145,
+      "energy_percent": 23.602056327680124,
+      "driving_distance_m": 12.615740168535496,
+      "walking_distance_m": 23.785697453894613,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 4,
+      "mode": "shortest",
+      "distance_m": 36.40143762243011,
+      "estimated_seconds": 66.77627768594145,
+      "energy_percent": 23.602056327680124,
+      "driving_distance_m": 12.615740168535496,
+      "walking_distance_m": 23.785697453894613,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 4,
+      "mode": "fastest",
+      "distance_m": 36.40143762243011,
+      "estimated_seconds": 66.77627768594145,
+      "energy_percent": 23.602056327680124,
+      "driving_distance_m": 12.615740168535496,
+      "walking_distance_m": 23.785697453894613,
+      "transformations": 5
+    },
+    {
+      "origin": 3,
+      "destination": 4,
+      "mode": "energy",
+      "distance_m": 36.40143762243011,
+      "estimated_seconds": 66.77627768594145,
+      "energy_percent": 23.602056327680124,
+      "driving_distance_m": 12.615740168535496,
+      "walking_distance_m": 23.785697453894613,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 0,
+      "mode": "balanced",
+      "distance_m": 25.35914972791192,
+      "estimated_seconds": 53.8900745162591,
+      "energy_percent": 16.258424508207888,
+      "driving_distance_m": 11.512384107511787,
+      "walking_distance_m": 13.846765620400133,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 0,
+      "mode": "shortest",
+      "distance_m": 25.35914972791192,
+      "estimated_seconds": 53.8900745162591,
+      "energy_percent": 16.258424508207888,
+      "driving_distance_m": 11.512384107511787,
+      "walking_distance_m": 13.846765620400133,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 0,
+      "mode": "fastest",
+      "distance_m": 29.709119235262506,
+      "estimated_seconds": 48.8224966697417,
+      "energy_percent": 16.249073425891496,
+      "driving_distance_m": 16.30264954614546,
+      "walking_distance_m": 13.406469689117046,
+      "transformations": 3
+    },
+    {
+      "origin": 4,
+      "destination": 0,
+      "mode": "energy",
+      "distance_m": 29.449211789792564,
+      "estimated_seconds": 47.368602614003926,
+      "energy_percent": 15.902843140086857,
+      "driving_distance_m": 16.440209776966316,
+      "walking_distance_m": 13.00900201282625,
+      "transformations": 3
+    },
+    {
+      "origin": 4,
+      "destination": 1,
+      "mode": "balanced",
+      "distance_m": 63.177669529663696,
+      "estimated_seconds": 87.43072770051572,
+      "energy_percent": 31.13005482841489,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.219595949289328,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 1,
+      "mode": "shortest",
+      "distance_m": 58.85543305425538,
+      "estimated_seconds": 100.42820881712628,
+      "energy_percent": 35.19106280247508,
+      "driving_distance_m": 25.79182841162671,
+      "walking_distance_m": 33.06360464262866,
+      "transformations": 7
+    },
+    {
+      "origin": 4,
+      "destination": 1,
+      "mode": "fastest",
+      "distance_m": 63.177669529663696,
+      "estimated_seconds": 87.43072770051572,
+      "energy_percent": 31.13005482841489,
+      "driving_distance_m": 38.95807358037436,
+      "walking_distance_m": 24.219595949289328,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 1,
+      "mode": "energy",
+      "distance_m": 64.33463141457503,
+      "estimated_seconds": 87.48577196713167,
+      "energy_percent": 31.062142539921616,
+      "driving_distance_m": 40.896742026057495,
+      "walking_distance_m": 23.437889388517526,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 2,
+      "mode": "balanced",
+      "distance_m": 38.181615242391594,
+      "estimated_seconds": 74.29927370850211,
+      "energy_percent": 26.12278270764161,
+      "driving_distance_m": 10.702089726992146,
+      "walking_distance_m": 27.479525515399445,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 2,
+      "mode": "shortest",
+      "distance_m": 38.181615242391594,
+      "estimated_seconds": 74.29927370850211,
+      "energy_percent": 26.12278270764161,
+      "driving_distance_m": 10.702089726992146,
+      "walking_distance_m": 27.479525515399445,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 2,
+      "mode": "fastest",
+      "distance_m": 38.181615242391594,
+      "estimated_seconds": 74.29927370850211,
+      "energy_percent": 26.12278270764161,
+      "driving_distance_m": 10.702089726992146,
+      "walking_distance_m": 27.479525515399445,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 2,
+      "mode": "energy",
+      "distance_m": 38.181615242391594,
+      "estimated_seconds": 74.29927370850211,
+      "energy_percent": 26.12278270764161,
+      "driving_distance_m": 10.702089726992146,
+      "walking_distance_m": 27.479525515399445,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 3,
+      "mode": "balanced",
+      "distance_m": 36.41875482488959,
+      "estimated_seconds": 67.19884008199533,
+      "energy_percent": 23.64608416143355,
+      "driving_distance_m": 12.632049945946365,
+      "walking_distance_m": 23.786704878943226,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 3,
+      "mode": "shortest",
+      "distance_m": 36.41875482488959,
+      "estimated_seconds": 67.19884008199533,
+      "energy_percent": 23.64608416143355,
+      "driving_distance_m": 12.632049945946365,
+      "walking_distance_m": 23.786704878943226,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 3,
+      "mode": "fastest",
+      "distance_m": 36.41875482488959,
+      "estimated_seconds": 67.19884008199533,
+      "energy_percent": 23.64608416143355,
+      "driving_distance_m": 12.632049945946365,
+      "walking_distance_m": 23.786704878943226,
+      "transformations": 5
+    },
+    {
+      "origin": 4,
+      "destination": 3,
+      "mode": "energy",
+      "distance_m": 36.41875482488959,
+      "estimated_seconds": 67.19884008199533,
+      "energy_percent": 23.64608416143355,
+      "driving_distance_m": 12.632049945946365,
+      "walking_distance_m": 23.786704878943226,
+      "transformations": 5
+    }
+  ]
+}

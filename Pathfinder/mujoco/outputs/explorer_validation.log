@@ -1,0 +1,3 @@
+Requested: Place 1 (Pine Forest)
+Requested: Place 3 (Mud Marsh)
+PASS: 80 routes across 20 ordered pairs; weights change the fixed-start winner; history survives controller reset and DB reopen with From/To CSV labels.

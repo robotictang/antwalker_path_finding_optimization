@@ -1,0 +1,35 @@
+{
+  "route_checks": 144,
+  "all_routes_clear_of_extreme": true,
+  "manual_overrides_cannot_enter_extreme": true,
+  "all_destinations_and_stations_connected": true,
+  "mild_speed": 0.75,
+  "more_uneven_speed": 0.38,
+  "extreme_speed": 0.0,
+  "mild_one_metre": {
+    "distance_m": 1.0,
+    "estimated_seconds": 1.9333333333333331,
+    "energy_percent": 0.829,
+    "driving_distance_m": 0.0,
+    "walking_distance_m": 1.0,
+    "transformations": 0
+  },
+  "more_uneven_one_metre": {
+    "distance_m": 1.0,
+    "estimated_seconds": 3.2315789473684213,
+    "energy_percent": 0.8484736842105263,
+    "driving_distance_m": 0.0,
+    "walking_distance_m": 1.0,
+    "transformations": 0
+  },
+  "road_names": [
+    "Durian Road",
+    "Banana Road",
+    "Wan Road",
+    "Khem Road",
+    "Potato Road",
+    "Tomato Road",
+    "Fishy Road",
+    "Tea Road"
+  ]
+}

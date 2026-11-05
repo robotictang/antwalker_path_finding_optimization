@@ -1,0 +1,3787 @@
+Requested: River camp
+HYBRID DEMO: 6 destinations on panel; keypad 1-4 original destinations | KP5 route | KP6 camera | KP7 transform | KP8 automatic | KP9 battery | KP0 charge | KP decimal cancel. Use the button panel at http://127.0.0.1:8767
+ROUTE READY: River camp | balanced | 64.5 m | 78 s | 25.9% energy | budget 48.2% / available 100.0%
+Roadwork now occupies the planned lane; local detection updates the map within 8 m.
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+OBSTACLE DETECTED - braking and planning a safe detour
+ROUTE READY: River camp | balanced | 65.0 m | 92 s | 32.7% energy | budget 56.7% / available 97.8%
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Step 2000: moving, destination River camp, battery 91.9%, contacts 0, route errors 0
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 4000: moving, destination River camp, battery 80.8%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+ROUTE READY: River camp | balanced | 23.9 m | 18 s | 6.5% energy | budget 23.9% / available 67.5%
+Step 6000: moving, destination River camp, battery 67.3%, contacts 0, route errors 0
+ARRIVED: River camp. Waiting for next destination.
+Requested: Ridge outpost
+INSUFFICIENT TASK ENERGY - need 63.1%, have 60.9%; charging first
+ROUTE READY: West service bay charging station | safe-charger | 28.3 m | 24 s | 7.9% energy | budget 11.9% / available 60.9%
+Step 8000: moving, destination West service bay charging station, battery 58.2%, contacts 0, route errors 0
+Arrived at charging station.
+Requested: Ridge outpost
+CHARGED TO 100% - new route to requested destination
+ROUTE READY: Ridge outpost | balanced | 100.4 m | 67 s | 26.6% energy | budget 53.6% / available 100.0%
+Step 10000: moving, destination Ridge outpost, battery 97.7%, contacts 0, route errors 0
+Step 12000: moving, destination Ridge outpost, battery 85.5%, contacts 0, route errors 0
+ROUTE READY: Ridge outpost | balanced | 6.1 m | 10 s | 2.2% energy | budget 23.1% / available 74.9%
+TRANSFORM: wheels -> legs (stationary)
+Step 14000: moving, destination Ridge outpost, battery 74.0%, contacts 0, route errors 0
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+ARRIVED: Ridge outpost. Waiting for next destination.
+Requested: Place 1 (Pine Forest)
+ROUTE READY: Place 1 (Pine Forest) | balanced | 60.5 m | 55 s | 20.3% energy | budget 67.0% / available 71.6%
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Step 16000: moving, destination Place 1 (Pine Forest), battery 67.1%, contacts 0, route errors 0
+Transformation complete: wheels
+Step 18000: moving, destination Place 1 (Pine Forest), battery 56.6%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 1 (Pine Forest). Waiting for next destination.
+Requested: Place 3 (Mud Marsh)
+INSUFFICIENT TASK ENERGY - need 70.3%, have 49.4%; charging first
+ROUTE READY: West service bay charging station | safe-charger | 92.2 m | 82 s | 28.7% energy | budget 37.9% / available 49.4%
+Step 20000: moving, destination West service bay charging station, battery 45.5%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 22000: moving, destination West service bay charging station, battery 36.4%, contacts 0, route errors 0
+Step 24000: moving, destination West service bay charging station, battery 25.2%, contacts 0, route errors 0
+Arrived at charging station.
+Requested: Place 3 (Mud Marsh)
+CHARGED TO 100% - new route to requested destination
+ROUTE READY: Place 3 (Mud Marsh) | balanced | 28.0 m | 31 s | 11.4% energy | budget 34.6% / available 100.0%
+Step 26000: moving, destination Place 3 (Mud Marsh), battery 97.5%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 3 (Mud Marsh). Waiting for next destination.
+Requested: Place 2 (Rocky Quarry)
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 126.1 m | 114 s | 43.3% energy | budget 83.4% / available 86.2%
+Step 28000: moving, destination Place 2 (Rocky Quarry), battery 86.0%, contacts 0, route errors 0
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 30000: moving, destination Place 2 (Rocky Quarry), battery 74.5%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Step 32000: moving, destination Place 2 (Rocky Quarry), battery 63.4%, contacts 0, route errors 0
+Step 34000: moving, destination Place 2 (Rocky Quarry), battery 51.5%, contacts 0, route errors 0
+ROUTE READY: Place 2 (Rocky Quarry) | balanced | 14.5 m | 25 s | 9.9% energy | budget 41.6% / available 46.9%
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Step 36000: moving, destination Place 2 (Rocky Quarry), battery 41.0%, contacts 0, route errors 0
+ARRIVED: Place 2 (Rocky Quarry). Waiting for next destination.
+Requested: Place 4 (Sand Clearing)
+INSUFFICIENT TASK ENERGY - need 86.7%, have 36.7%; charging first
+ROUTE READY: East service bay charging station | safe-charger | 51.0 m | 49 s | 18.6% energy | budget 25.3% / available 36.7%
+TRANSFORM: legs -> wheels (stationary)
+Step 38000: moving, destination East service bay charging station, battery 28.3%, contacts 0, route errors 0
+Transformation complete: wheels
+Arrived at charging station.
+Step 40000: charging, destination East service bay charging station, battery 27.2%, contacts 0, route errors 0
+Requested: Place 4 (Sand Clearing)
+CHARGED TO 100% - new route to requested destination
+ROUTE READY: Place 4 (Sand Clearing) | balanced | 69.1 m | 78 s | 30.3% energy | budget 63.2% / available 100.0%
+Step 42000: moving, destination Place 4 (Sand Clearing), battery 92.0%, contacts 0, route errors 0
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+TRANSFORM: legs -> wheels (stationary)
+Step 44000: moving, destination Place 4 (Sand Clearing), battery 78.9%, contacts 0, route errors 0
+Transformation complete: wheels
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+ARRIVED: Place 4 (Sand Clearing). Waiting for next destination.
+{
+  "steps": 45573,
+  "simulation_seconds": 729.1680000020255,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 3.0240000000000022,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        0.026401307589681303,
+        -20.001328707260267
+      ]
+    },
+    {
+      "time": 6.608000000000005,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        0.051982240381299505,
+        -20.00250657722031
+      ]
+    },
+    {
+      "time": 26.335999999998872,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        0.308183063326451,
+        -15.17232715321074
+      ]
+    },
+    {
+      "time": 29.919999999998478,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        0.30823026554501687,
+        -15.172349817889113
+      ]
+    },
+    {
+      "time": 31.99999999999825,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        0.204646587369916,
+        -13.852085453514714
+      ]
+    },
+    {
+      "time": 35.58399999999786,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        0.20464677358457392,
+        -13.85208779206443
+      ]
+    },
+    {
+      "time": 51.02399999999616,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -6.822905704808858,
+        -9.427203642464049
+      ]
+    },
+    {
+      "time": 54.60799999999576,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -6.822873017438178,
+        -9.427155716585448
+      ]
+    },
+    {
+      "time": 58.207999999995366,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.519799518741415,
+        -9.126781104446527
+      ]
+    },
+    {
+      "time": 61.79199999999497,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.473337293958528,
+        -9.135242237779407
+      ]
+    },
+    {
+      "time": 89.32800000000319,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -27.820595509305505,
+        -4.627377914364921
+      ]
+    },
+    {
+      "time": 92.91200000000438,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -27.820560112694647,
+        -4.627424067648828
+      ]
+    },
+    {
+      "time": 222.62399999996364,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        30.047868193347252,
+        22.754909738610785
+      ]
+    },
+    {
+      "time": 226.20799999996166,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        30.047866366804616,
+        22.754911748904732
+      ]
+    },
+    {
+      "time": 227.7439999999608,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        30.529460715220893,
+        22.23724419936751
+      ]
+    },
+    {
+      "time": 231.32799999995882,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        30.529448469438552,
+        22.23724572520202
+      ]
+    },
+    {
+      "time": 250.01599999994846,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        26.94254369913078,
+        25.211545337747207
+      ]
+    },
+    {
+      "time": 253.59999999994648,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        26.94254566865242,
+        25.211542981479713
+      ]
+    },
+    {
+      "time": 255.1679999999456,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        26.474620501189655,
+        25.77321118921976
+      ]
+    },
+    {
+      "time": 258.7519999999485,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        26.474641943221627,
+        25.7732200370064
+      ]
+    },
+    {
+      "time": 293.40799999999086,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.719014782778109,
+        16.09493672399769
+      ]
+    },
+    {
+      "time": 296.99199999999524,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.719016260998618,
+        16.09493558508617
+      ]
+    },
+    {
+      "time": 325.1200000000296,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.214955372740654,
+        16.195288355651765
+      ]
+    },
+    {
+      "time": 328.704000000034,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.21494354043601,
+        16.195297760250483
+      ]
+    },
+    {
+      "time": 423.1200000001494,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -27.473137891492165,
+        -4.989027606322353
+      ]
+    },
+    {
+      "time": 426.70400000015377,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -27.47313992702132,
+        -4.989027560796049
+      ]
+    },
+    {
+      "time": 461.3440000001961,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -23.366845270848792,
+        -4.358183101695663
+      ]
+    },
+    {
+      "time": 464.9280000002005,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -23.36685303148663,
+        -4.358217541680652
+      ]
+    },
+    {
+      "time": 488.46400000022925,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -40.13347286991825,
+        12.936868719808837
+      ]
+    },
+    {
+      "time": 492.0480000002336,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -40.13347072442121,
+        12.936867344158664
+      ]
+    },
+    {
+      "time": 504.9600000002494,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -39.74196316486176,
+        20.766327188763952
+      ]
+    },
+    {
+      "time": 508.5440000002538,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -39.74196484322602,
+        20.766336123057968
+      ]
+    },
+    {
+      "time": 561.9360000001416,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.714611390447802,
+        13.729753888644352
+      ]
+    },
+    {
+      "time": 565.5200000001332,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.714610378058808,
+        13.729756026816613
+      ]
+    },
+    {
+      "time": 604.8960000000415,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        21.939869196938098,
+        7.362639159732248
+      ]
+    },
+    {
+      "time": 608.4800000000331,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        21.939891318361042,
+        7.36267491761605
+      ]
+    },
+    {
+      "time": 679.5359999998675,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        11.09993127145529,
+        -35.25002709599821
+      ]
+    },
+    {
+      "time": 683.1199999998591,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        11.09993059431861,
+        -35.24989655690048
+      ]
+    },
+    {
+      "time": 701.8879999998154,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        9.154505813269859,
+        -24.20610795660528
+      ]
+    },
+    {
+      "time": 705.471999999807,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        9.154502980209415,
+        -24.20612082625866
+      ]
+    },
+    {
+      "time": 710.2399999997959,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        12.136030427891528,
+        -19.40544991346638
+      ]
+    },
+    {
+      "time": 713.8239999997876,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        12.136028836218161,
+        -19.405452397534177
+      ]
+    }
+  ],
+  "position": [
+    17.947189198737778,
+    -10.084658797403748,
+    0.49329390544348545
+  ],
+  "battery": 68.91592726273382,
+  "visited_places": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "origin": "Origin depot",
+      "to_name": "River camp",
+      "request_id": "e0aafa6ace",
+      "time": 116.84800000001238,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 39.14744400781095,
+      "destination": 5,
+      "position": [
+        -35.02593082651826,
+        -19.90356316502163
+      ],
+      "error_m": 0.09986225966082254,
+      "travel_seconds": 113.82400000001238,
+      "actual_distance_m": 65.9905956169661,
+      "distance_m": 64.53585650288602,
+      "estimated_seconds": 77.92880957072069,
+      "energy_percent": 25.881667665398147,
+      "driving_distance_m": 51.736353857121316,
+      "walking_distance_m": 12.799502645764699,
+      "transformations": 4
+    },
+    {
+      "origin": "West service bay charging station",
+      "to_name": "Ridge outpost",
+      "request_id": "4f05a029c5",
+      "time": 236.46399999995597,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 28.405158922227663,
+      "destination": 6,
+      "position": [
+        34.91037415192503,
+        21.955836241932833
+      ],
+      "error_m": 0.0999161156659539,
+      "travel_seconds": 82.68799999995417,
+      "actual_distance_m": 100.75868827834883,
+      "distance_m": 100.44985408050421,
+      "estimated_seconds": 66.70921836707608,
+      "energy_percent": 26.5739433095799,
+      "driving_distance_m": 100.44985408050422,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "origin": "Ridge outpost",
+      "to_name": "Forest",
+      "request_id": "021cf9ed98",
+      "time": 307.88800000000856,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 22.239293634710776,
+      "destination": 1,
+      "position": [
+        -17.900174749481316,
+        15.996774430221011
+      ],
+      "error_m": 0.09987734949185005,
+      "travel_seconds": 68.30400000005432,
+      "actual_distance_m": 61.02015205564767,
+      "distance_m": 60.53357673665819,
+      "estimated_seconds": 54.78710858966281,
+      "energy_percent": 20.32431729476879,
+      "driving_distance_m": 53.433576736658196,
+      "walking_distance_m": 7.1,
+      "transformations": 1
+    },
+    {
+      "origin": "West service bay charging station",
+      "to_name": "Marsh",
+      "request_id": "25ab60dec2",
+      "time": 443.9840000001749,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 13.789671305574956,
+      "destination": 3,
+      "position": [
+        -18.064445076470008,
+        -9.92363854018088
+      ],
+      "error_m": 0.09992117106465617,
+      "travel_seconds": 35.28000000004312,
+      "actual_distance_m": 28.178429779987635,
+      "distance_m": 28.034952449728628,
+      "estimated_seconds": 30.79709716597539,
+      "energy_percent": 11.409167795370786,
+      "driving_distance_m": 21.157334209882713,
+      "walking_distance_m": 6.877618239845915,
+      "transformations": 1
+    },
+    {
+      "origin": "Marsh",
+      "to_name": "Quarry",
+      "request_id": "ce7677094c",
+      "time": 584.4160000000892,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 49.547558182135106,
+      "destination": 2,
+      "position": [
+        17.954069136435656,
+        15.911255866702264
+      ],
+      "error_m": 0.09992579958415466,
+      "travel_seconds": 137.4079999999106,
+      "actual_distance_m": 125.95603262412203,
+      "distance_m": 126.06675968945513,
+      "estimated_seconds": 113.66835797321971,
+      "energy_percent": 43.30243538143729,
+      "driving_distance_m": 108.67201000604372,
+      "walking_distance_m": 17.394749683411433,
+      "transformations": 2
+    },
+    {
+      "origin": "East service bay charging station",
+      "to_name": "Desert",
+      "request_id": "f7bb4c13e2",
+      "time": 729.1679999997518,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 31.08407273726769,
+      "destination": 4,
+      "position": [
+        17.947170090501768,
+        -10.084678500549
+      ],
+      "error_m": 0.09980705282102252,
+      "travel_seconds": 80.44799999981251,
+      "actual_distance_m": 69.28657906824026,
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3
+    }
+  ],
+  "mission_events": [
+    {
+      "event": "destination_requested",
+      "time": 0.0,
+      "origin": "Origin depot",
+      "to_name": "River camp",
+      "request_id": "e0aafa6ace",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 0.016,
+      "decision": "feasible",
+      "available_percent": 99.99976,
+      "required_percent": 48.15065298636429,
+      "return_energy_percent": 7.838854723693286,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 25.881667665398147,
+      "predicted_destination_percent": 74.11809233460184
+    },
+    {
+      "event": "obstacle_detected",
+      "time": 11.120000000000008,
+      "position": [
+        0.4771559100049718,
+        -21.255072616650885
+      ]
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 11.728000000000009,
+      "decision": "feasible",
+      "available_percent": 97.8410095899345,
+      "required_percent": 56.712669893470334,
+      "return_energy_percent": 7.838854723693286,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 32.73128119108298,
+      "predicted_destination_percent": 65.10972839885153
+    },
+    {
+      "event": "roadwork_cleared",
+      "time": 90.00000000000341
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 92.92800000000439,
+      "decision": "feasible",
+      "available_percent": 67.45404358563478,
+      "required_percent": 23.890407476891458,
+      "return_energy_percent": 7.838854723693286,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 6.473471257819879,
+      "predicted_destination_percent": 60.9805723278149
+    },
+    {
+      "event": "destination_requested",
+      "time": 116.84800000001238,
+      "origin": "River camp",
+      "to_name": "Ridge outpost",
+      "request_id": "2dc7ee180b",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_charging_diversion",
+      "reason": "insufficient_energy",
+      "task_requirement_percent": 63.08002092950672,
+      "time": 116.86400000001238,
+      "battery": 60.85231596589173,
+      "position": [
+        -35.02593080320496,
+        -19.903563157245213
+      ],
+      "resume_destination": 6
+    },
+    {
+      "event": "charging_station_selected",
+      "time": 116.86400000001238,
+      "origin": "River camp",
+      "to_name": "West service bay charging station",
+      "station": "west",
+      "selection_mode": "balanced",
+      "candidates": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 38.875847353473794,
+          "distance_m": 64.71131303320993,
+          "estimated_seconds": 84.26711287325809,
+          "energy_percent": 29.500677882779037,
+          "driving_distance_m": 44.30237725570043,
+          "walking_distance_m": 20.40893577750951,
+          "transformations": 4
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 11.921769897653808,
+          "distance_m": 28.290164460205418,
+          "estimated_seconds": 23.60125411090732,
+          "energy_percent": 7.937415918123047,
+          "driving_distance_m": 28.290164460205425,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 33.5708840395407,
+          "distance_m": 94.64569819991587,
+          "estimated_seconds": 65.15542124862328,
+          "energy_percent": 25.256707231632564,
+          "driving_distance_m": 94.64569819991588,
+          "walking_distance_m": 0.0,
+          "transformations": 0
+        }
+      ],
+      "battery": 60.85231596589173
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 116.86400000001238,
+      "decision": "charging_route",
+      "selection_mode": "balanced",
+      "station": "West service bay",
+      "available_percent": 60.85231596589173,
+      "required_percent": 11.921769897653808,
+      "route_energy_percent": 7.937415918123047,
+      "return_energy_percent": 0.0,
+      "reserve_percent": 2.0
+    },
+    {
+      "event": "destination_requested",
+      "time": 150.75200000000348,
+      "origin": "West service bay charging station",
+      "to_name": "Ridge outpost",
+      "request_id": "4f05a029c5",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "charge_complete",
+      "origin": "West service bay charging station",
+      "to_name": "West service bay charging station",
+      "time": 150.75200000000348,
+      "battery": 100.0,
+      "resume_destination": 6
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 150.76800000000347,
+      "decision": "feasible",
+      "available_percent": 99.99975997204805,
+      "required_percent": 53.61289125206954,
+      "return_energy_percent": 11.516369692075727,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 26.5739433095799,
+      "predicted_destination_percent": 73.42581666246815
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 218.12799999996614,
+      "decision": "feasible",
+      "available_percent": 74.87961939243867,
+      "required_percent": 23.086518760999766,
+      "return_energy_percent": 11.516369692075727,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 2.152845316724086,
+      "predicted_destination_percent": 72.72677407571459
+    },
+    {
+      "event": "destination_requested",
+      "time": 236.46399999995597,
+      "origin": "Ridge outpost",
+      "to_name": "Forest",
+      "request_id": "021cf9ed98",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 236.5759999999559,
+      "decision": "feasible",
+      "available_percent": 71.59248273733184,
+      "required_percent": 67.03608653692685,
+      "return_energy_percent": 28.504551934772685,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 20.32431729476879,
+      "predicted_destination_percent": 51.268165442563046
+    },
+    {
+      "event": "destination_requested",
+      "time": 307.88800000000856,
+      "origin": "Forest",
+      "to_name": "Marsh",
+      "request_id": "7ae48e1526",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_charging_diversion",
+      "reason": "insufficient_energy",
+      "task_requirement_percent": 70.30848133631758,
+      "time": 307.9040000000086,
+      "battery": 49.35529922935102,
+      "position": [
+        -17.900175992627354,
+        15.99676540501843
+      ],
+      "resume_destination": 3
+    },
+    {
+      "event": "charging_station_selected",
+      "time": 307.9040000000086,
+      "origin": "Forest",
+      "to_name": "West service bay charging station",
+      "station": "west",
+      "selection_mode": "balanced",
+      "candidates": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 71.61300899191039,
+          "distance_m": 148.56188240082935,
+          "estimated_seconds": 157.45574960210175,
+          "energy_percent": 55.69040719352831,
+          "driving_distance_m": 121.15276991440844,
+          "walking_distance_m": 27.40911248642094,
+          "transformations": 5
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 37.90999830081435,
+          "distance_m": 92.24996793354055,
+          "estimated_seconds": 82.14930257362754,
+          "energy_percent": 28.72799864065148,
+          "driving_distance_m": 85.24979122462915,
+          "walking_distance_m": 7.000176708911427,
+          "transformations": 1
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 41.31596543920294,
+          "distance_m": 102.62098624094455,
+          "estimated_seconds": 83.06412894623656,
+          "energy_percent": 31.452772351362352,
+          "driving_distance_m": 95.62080953203312,
+          "walking_distance_m": 7.000176708911427,
+          "transformations": 1
+        }
+      ],
+      "battery": 49.35529922935102
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 307.9040000000086,
+      "decision": "charging_route",
+      "selection_mode": "balanced",
+      "station": "West service bay",
+      "available_percent": 49.35529922935102,
+      "required_percent": 37.90999830081435,
+      "route_energy_percent": 28.72799864065148,
+      "return_energy_percent": 0.0,
+      "reserve_percent": 2.0
+    },
+    {
+      "event": "destination_requested",
+      "time": 405.6800000001281,
+      "origin": "West service bay charging station",
+      "to_name": "Marsh",
+      "request_id": "25ab60dec2",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "charge_complete",
+      "origin": "West service bay charging station",
+      "to_name": "West service bay charging station",
+      "time": 405.6800000001281,
+      "battery": 100.0,
+      "resume_destination": 3
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 405.6960000001281,
+      "decision": "feasible",
+      "available_percent": 99.99975997224573,
+      "required_percent": 34.61748442514681,
+      "return_energy_percent": 11.484819744746664,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 11.409167795370786,
+      "predicted_destination_percent": 88.59059217687494
+    },
+    {
+      "event": "destination_requested",
+      "time": 443.9840000001749,
+      "origin": "Marsh",
+      "to_name": "Quarry",
+      "request_id": "ce7677094c",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 444.0000000001749,
+      "decision": "feasible",
+      "available_percent": 86.21003191603525,
+      "required_percent": 83.43437437706544,
+      "return_energy_percent": 18.645064120215057,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 43.30243538143729,
+      "predicted_destination_percent": 42.90759653459796
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 556.1120000001551,
+      "decision": "feasible",
+      "available_percent": 46.91402139722646,
+      "required_percent": 41.643231972621706,
+      "return_energy_percent": 18.645064120215057,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 9.869521457882309,
+      "predicted_destination_percent": 37.044499939344156
+    },
+    {
+      "event": "destination_requested",
+      "time": 584.4160000000892,
+      "origin": "Quarry",
+      "to_name": "Desert",
+      "request_id": "cfdbb7a34a",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_charging_diversion",
+      "reason": "insufficient_energy",
+      "task_requirement_percent": 86.70050479224523,
+      "time": 584.4320000000891,
+      "battery": 36.662504938235024,
+      "position": [
+        17.95405669813248,
+        15.911224075785181
+      ],
+      "resume_destination": 4
+    },
+    {
+      "event": "charging_station_selected",
+      "time": 584.4320000000891,
+      "origin": "Quarry",
+      "to_name": "East service bay charging station",
+      "station": "east",
+      "selection_mode": "balanced",
+      "candidates": [
+        {
+          "name": "Central plaza",
+          "key": "central",
+          "reachable": true,
+          "required_percent": 70.26802266762999,
+          "distance_m": 131.68136029849043,
+          "estimated_seconds": 149.23382273564866,
+          "energy_percent": 54.614418134104,
+          "driving_distance_m": 98.33371001510203,
+          "walking_distance_m": 33.34765028338842,
+          "transformations": 7
+        },
+        {
+          "name": "West service bay",
+          "key": "west",
+          "reachable": true,
+          "required_percent": 41.27854046239494,
+          "distance_m": 96.50071089339556,
+          "estimated_seconds": 87.31595044662764,
+          "energy_percent": 31.42283236991595,
+          "driving_distance_m": 86.45388947887119,
+          "walking_distance_m": 10.046821414524398,
+          "transformations": 1
+        },
+        {
+          "name": "East service bay",
+          "key": "east",
+          "reachable": true,
+          "required_percent": 25.26273581883452,
+          "distance_m": 50.95357793620954,
+          "estimated_seconds": 49.340287093934016,
+          "energy_percent": 18.610188655067617,
+          "driving_distance_m": 41.980682939925344,
+          "walking_distance_m": 8.972894996284202,
+          "transformations": 1
+        }
+      ],
+      "battery": 36.662504938235024
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 584.4320000000891,
+      "decision": "charging_route",
+      "selection_mode": "balanced",
+      "station": "East service bay",
+      "available_percent": 36.662504938235024,
+      "required_percent": 25.26273581883452,
+      "route_energy_percent": 18.610188655067617,
+      "return_energy_percent": 0.0,
+      "reserve_percent": 2.0
+    },
+    {
+      "event": "destination_requested",
+      "time": 645.6959999999464,
+      "origin": "East service bay charging station",
+      "to_name": "Desert",
+      "request_id": "f7bb4c13e2",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "charge_complete",
+      "origin": "East service bay charging station",
+      "to_name": "East service bay charging station",
+      "time": 645.6959999999464,
+      "battery": 100.0,
+      "resume_destination": 4
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 645.7119999999463,
+      "decision": "feasible",
+      "available_percent": 99.99975997213001,
+      "required_percent": 63.181047978345596,
+      "return_energy_percent": 15.461364869928403,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 30.28347351274807,
+      "predicted_destination_percent": 69.71628645938193
+    }
+  ],
+  "roadwork_events": [
+    {
+      "event": "roadwork_staged",
+      "time": 0.0,
+      "position": [
+        5.626524163602469,
+        -27.37652416360247
+      ]
+    },
+    {
+      "event": "roadwork_detected",
+      "time": 11.11999999999922,
+      "distance_m": 7.999260119088119
+    },
+    {
+      "event": "roadwork_cleared",
+      "time": 90.00000000001806
+    }
+  ],
+  "route_comparison": {
+    "balanced": {
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3
+    },
+    "shortest": {
+      "distance_m": 66.81375962170196,
+      "estimated_seconds": 92.3428926540651,
+      "energy_percent": 30.828139041626436,
+      "driving_distance_m": 42.86035155182961,
+      "walking_distance_m": 23.953408069872353,
+      "transformations": 3
+    },
+    "fastest": {
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3
+    },
+    "energy": {
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3
+    }
+  },
+  "comparison_paths": {
+    "balanced": [
+      [
+        35.074074973155184,
+        -16.93298716947926
+      ],
+      [
+        32.5,
+        -19.5
+      ],
+      [
+        32.5,
+        -34.0
+      ],
+      [
+        31.25,
+        -35.25
+      ],
+      [
+        11.0,
+        -35.25
+      ],
+      [
+        8.5,
+        -32.75
+      ],
+      [
+        8.5,
+        -25.5
+      ],
+      [
+        18.0,
+        -10.0
+      ]
+    ],
+    "shortest": [
+      [
+        35.074074973155184,
+        -16.93298716947926
+      ],
+      [
+        33.25,
+        -24.5
+      ],
+      [
+        32.25,
+        -34.25
+      ],
+      [
+        31.5,
+        -35.0
+      ],
+      [
+        11.25,
+        -34.25
+      ],
+      [
+        8.5,
+        -31.25
+      ],
+      [
+        9.5,
+        -23.25
+      ],
+      [
+        14.25,
+        -16.75
+      ],
+      [
+        18.0,
+        -10.0
+      ]
+    ],
+    "fastest": [
+      [
+        35.074074973155184,
+        -16.93298716947926
+      ],
+      [
+        32.5,
+        -19.5
+      ],
+      [
+        32.5,
+        -34.0
+      ],
+      [
+        31.25,
+        -35.25
+      ],
+      [
+        11.0,
+        -35.25
+      ],
+      [
+        8.5,
+        -32.75
+      ],
+      [
+        8.5,
+        -25.5
+      ],
+      [
+        18.0,
+        -10.0
+      ]
+    ],
+    "energy": [
+      [
+        35.074074973155184,
+        -16.93298716947926
+      ],
+      [
+        32.5,
+        -19.5
+      ],
+      [
+        32.5,
+        -34.0
+      ],
+      [
+        31.25,
+        -35.25
+      ],
+      [
+        11.0,
+        -35.25
+      ],
+      [
+        8.5,
+        -32.75
+      ],
+      [
+        8.5,
+        -25.5
+      ],
+      [
+        18.0,
+        -10.0
+      ]
+    ]
+  },
+  "planned_routes": [
+    {
+      "from_name": "Origin depot",
+      "to_name": "River camp",
+      "request_id": "e0aafa6ace",
+      "origin": "Origin depot",
+      "time": 0.016,
+      "destination": 5,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          0.5,
+          -22.25
+        ],
+        [
+          6.75,
+          -28.5
+        ],
+        [
+          6.75,
+          -31.75
+        ],
+        [
+          5.5,
+          -33.0
+        ],
+        [
+          -22.0,
+          -33.0
+        ],
+        [
+          -29.75,
+          -25.25
+        ],
+        [
+          -29.75,
+          -21.0
+        ],
+        [
+          -30.75,
+          -20.0
+        ],
+        [
+          -35.0,
+          -20.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99976,
+        "required_percent": 48.15065298636429,
+        "return_energy_percent": 7.838854723693286,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 25.881667665398147,
+        "predicted_destination_percent": 74.11809233460184
+      },
+      "pareto_front": [
+        {
+          "distance_m": 61.207454795601954,
+          "estimated_seconds": 93.97311727815249,
+          "energy_percent": 28.509999333597182,
+          "driving_distance_m": 42.99692986712657,
+          "walking_distance_m": 18.210524928475387,
+          "transformations": 6,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.0,
+              -20.0
+            ],
+            [
+              1.5,
+              -23.25
+            ],
+            [
+              6.75,
+              -28.75
+            ],
+            [
+              6.5,
+              -32.0
+            ],
+            [
+              5.25,
+              -33.0
+            ],
+            [
+              -23.25,
+              -31.75
+            ],
+            [
+              -31.75,
+              -22.75
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.0728760515223241
+        },
+        {
+          "distance_m": 64.53585650288602,
+          "estimated_seconds": 77.92880957072069,
+          "energy_percent": 25.881667665398147,
+          "driving_distance_m": 51.736353857121316,
+          "walking_distance_m": 12.799502645764699,
+          "transformations": 4,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.0,
+              -20.0
+            ],
+            [
+              0.5,
+              -22.25
+            ],
+            [
+              6.75,
+              -28.5
+            ],
+            [
+              6.75,
+              -31.75
+            ],
+            [
+              5.5,
+              -33.0
+            ],
+            [
+              -22.0,
+              -33.0
+            ],
+            [
+              -29.75,
+              -25.25
+            ],
+            [
+              -29.75,
+              -21.0
+            ],
+            [
+              -30.75,
+              -20.0
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.006438349155963
+        }
+      ],
+      "distance_m": 64.53585650288602,
+      "estimated_seconds": 77.92880957072069,
+      "energy_percent": 25.881667665398147,
+      "driving_distance_m": 51.736353857121316,
+      "walking_distance_m": 12.799502645764699,
+      "transformations": 4
+    },
+    {
+      "from_name": "Origin depot",
+      "to_name": "River camp",
+      "request_id": "e0aafa6ace",
+      "origin": "Origin depot",
+      "time": 11.728000000000009,
+      "destination": 5,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          0.49035412838794723,
+          -21.47166976149125
+        ],
+        [
+          0.0,
+          -11.25
+        ],
+        [
+          -1.25,
+          -10.0
+        ],
+        [
+          -18.0,
+          -8.5
+        ],
+        [
+          -21.75,
+          -4.75
+        ],
+        [
+          -35.25,
+          -4.75
+        ],
+        [
+          -37.5,
+          -6.5
+        ],
+        [
+          -37.5,
+          -17.5
+        ],
+        [
+          -35.0,
+          -20.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 97.8410095899345,
+        "required_percent": 56.712669893470334,
+        "return_energy_percent": 7.838854723693286,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 32.73128119108298,
+        "predicted_destination_percent": 65.10972839885153
+      },
+      "pareto_front": [
+        {
+          "distance_m": 64.24594459015687,
+          "estimated_seconds": 95.04503789839531,
+          "energy_percent": 34.8284141941271,
+          "driving_distance_m": 32.9829636875906,
+          "walking_distance_m": 31.26298090256627,
+          "transformations": 5,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.49035412838794723,
+              -21.47166976149125
+            ],
+            [
+              0.0,
+              -11.5
+            ],
+            [
+              -1.25,
+              -10.0
+            ],
+            [
+              -19.0,
+              -8.5
+            ],
+            [
+              -21.25,
+              -6.25
+            ],
+            [
+              -29.25,
+              -4.75
+            ],
+            [
+              -36.5,
+              -5.5
+            ],
+            [
+              -37.5,
+              -6.75
+            ],
+            [
+              -37.5,
+              -17.5
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.1673073360854036
+        },
+        {
+          "distance_m": 65.00749498044613,
+          "estimated_seconds": 91.87764613916663,
+          "energy_percent": 32.73128119108298,
+          "driving_distance_m": 38.72053310577606,
+          "walking_distance_m": 26.28696187467008,
+          "transformations": 5,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              0.49035412838794723,
+              -21.47166976149125
+            ],
+            [
+              0.0,
+              -11.25
+            ],
+            [
+              -1.25,
+              -10.0
+            ],
+            [
+              -18.0,
+              -8.5
+            ],
+            [
+              -21.75,
+              -4.75
+            ],
+            [
+              -35.25,
+              -4.75
+            ],
+            [
+              -37.5,
+              -6.5
+            ],
+            [
+              -37.5,
+              -17.5
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.1373517802859947
+        }
+      ],
+      "distance_m": 65.00749498044613,
+      "estimated_seconds": 91.87764613916663,
+      "energy_percent": 32.73128119108298,
+      "driving_distance_m": 38.72053310577606,
+      "walking_distance_m": 26.28696187467008,
+      "transformations": 5
+    },
+    {
+      "from_name": "En route (-27.8, -4.6)",
+      "to_name": "River camp",
+      "request_id": "e0aafa6ace",
+      "origin": "Origin depot",
+      "time": 92.92800000000439,
+      "destination": 5,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -27.82056011688255,
+          -4.627424048980181
+        ],
+        [
+          -36.5,
+          -5.5
+        ],
+        [
+          -37.5,
+          -6.75
+        ],
+        [
+          -37.5,
+          -9.5
+        ],
+        [
+          -35.0,
+          -20.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 67.45404358563478,
+        "required_percent": 23.890407476891458,
+        "return_energy_percent": 7.838854723693286,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 6.473471257819879,
+        "predicted_destination_percent": 60.9805723278149
+      },
+      "pareto_front": [
+        {
+          "distance_m": 23.867488875564582,
+          "estimated_seconds": 17.572743376571477,
+          "energy_percent": 6.473471257819879,
+          "driving_distance_m": 23.867488875564582,
+          "walking_distance_m": 0.0,
+          "transformations": 0,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -27.82056011688255,
+              -4.627424048980181
+            ],
+            [
+              -36.5,
+              -5.5
+            ],
+            [
+              -37.5,
+              -6.75
+            ],
+            [
+              -37.5,
+              -9.5
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.29612828565202726
+        }
+      ],
+      "distance_m": 23.867488875564582,
+      "estimated_seconds": 17.572743376571477,
+      "energy_percent": 6.473471257819879,
+      "driving_distance_m": 23.867488875564582,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "from_name": "River camp",
+      "to_name": "West service bay charging station",
+      "request_id": "2dc7ee180b",
+      "origin": "River camp",
+      "time": 116.86400000001238,
+      "destination": "charger",
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -35.02593080320496,
+          -19.903563157245213
+        ],
+        [
+          -37.5,
+          -9.25
+        ],
+        [
+          -37.5,
+          -6.5
+        ],
+        [
+          -35.25,
+          -4.75
+        ],
+        [
+          -35.0,
+          7.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "charging_route",
+        "selection_mode": "balanced",
+        "station": "West service bay",
+        "available_percent": 60.85231596589173,
+        "required_percent": 11.921769897653808,
+        "route_energy_percent": 7.937415918123047,
+        "return_energy_percent": 0.0,
+        "reserve_percent": 2.0
+      },
+      "pareto_front": [
+        {
+          "distance_m": 28.290164460205418,
+          "estimated_seconds": 23.60125411090732,
+          "energy_percent": 7.937415918123047,
+          "driving_distance_m": 28.290164460205425,
+          "walking_distance_m": 0.0,
+          "transformations": 0,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -35.02593080320496,
+              -19.903563157245213
+            ],
+            [
+              -37.5,
+              -9.25
+            ],
+            [
+              -37.5,
+              -6.5
+            ],
+            [
+              -35.25,
+              -4.75
+            ],
+            [
+              -35.0,
+              7.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.36420665886535636
+        }
+      ],
+      "distance_m": 28.290164460205418,
+      "estimated_seconds": 23.60125411090732,
+      "energy_percent": 7.937415918123047,
+      "driving_distance_m": 28.290164460205425,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "from_name": "West service bay charging station",
+      "to_name": "Ridge outpost",
+      "request_id": "4f05a029c5",
+      "origin": "West service bay charging station",
+      "time": 150.76800000000347,
+      "destination": 6,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -34.99434692241906,
+          6.900268499646287
+        ],
+        [
+          -40.25,
+          13.0
+        ],
+        [
+          -40.25,
+          20.0
+        ],
+        [
+          -27.0,
+          33.25
+        ],
+        [
+          19.5,
+          33.25
+        ],
+        [
+          30.75,
+          22.0
+        ],
+        [
+          35.0,
+          22.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99975997204805,
+        "required_percent": 53.61289125206954,
+        "return_energy_percent": 11.516369692075727,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 26.5739433095799,
+        "predicted_destination_percent": 73.42581666246815
+      },
+      "pareto_front": [
+        {
+          "distance_m": 97.19311141442846,
+          "estimated_seconds": 126.59852969877993,
+          "energy_percent": 37.36398381979576,
+          "driving_distance_m": 79.88329356128826,
+          "walking_distance_m": 17.30981785314022,
+          "transformations": 6,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -34.99434692241906,
+              6.900268499646287
+            ],
+            [
+              -39.5,
+              13.75
+            ],
+            [
+              -39.0,
+              18.75
+            ],
+            [
+              -33.5,
+              26.75
+            ],
+            [
+              -22.5,
+              32.25
+            ],
+            [
+              -10.0,
+              32.75
+            ],
+            [
+              24.25,
+              32.75
+            ],
+            [
+              35.0,
+              22.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.5319928952005126
+        },
+        {
+          "distance_m": 100.44985408050421,
+          "estimated_seconds": 66.70921836707608,
+          "energy_percent": 26.5739433095799,
+          "driving_distance_m": 100.44985408050422,
+          "walking_distance_m": 0.0,
+          "transformations": 0,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              -34.99434692241906,
+              6.900268499646287
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              19.5,
+              33.25
+            ],
+            [
+              30.75,
+              22.0
+            ],
+            [
+              35.0,
+              22.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.2120029097804568
+        }
+      ],
+      "distance_m": 100.44985408050421,
+      "estimated_seconds": 66.70921836707608,
+      "energy_percent": 26.5739433095799,
+      "driving_distance_m": 100.44985408050422,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "from_name": "En route (29.6, 23.3)",
+      "to_name": "Ridge outpost",
+      "request_id": "4f05a029c5",
+      "origin": "West service bay charging station",
+      "time": 218.12799999996614,
+      "destination": 6,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          29.566243434119304,
+          23.272851152648276
+        ],
+        [
+          29.5,
+          23.25
+        ],
+        [
+          30.75,
+          22.0
+        ],
+        [
+          35.0,
+          22.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 74.87961939243867,
+        "required_percent": 23.086518760999766,
+        "return_energy_percent": 11.516369692075727,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 2.152845316724086,
+        "predicted_destination_percent": 72.72677407571459
+      },
+      "pareto_front": [
+        {
+          "distance_m": 5.580847648346048,
+          "estimated_seconds": 15.833416795930418,
+          "energy_percent": 3.3614227268239207,
+          "driving_distance_m": 4.288863776076419,
+          "walking_distance_m": 1.2919838722696289,
+          "transformations": 2,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              29.566243434119304,
+              23.272851152648276
+            ],
+            [
+              35.0,
+              22.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.13319707682750026
+        },
+        {
+          "distance_m": 6.087840969129804,
+          "estimated_seconds": 9.806874962418389,
+          "energy_percent": 2.152845316724086,
+          "driving_distance_m": 6.087840969129804,
+          "walking_distance_m": 0.0,
+          "transformations": 0,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              29.566243434119304,
+              23.272851152648276
+            ],
+            [
+              29.5,
+              23.25
+            ],
+            [
+              30.75,
+              22.0
+            ],
+            [
+              35.0,
+              22.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.10082786910008998
+        }
+      ],
+      "distance_m": 6.087840969129804,
+      "estimated_seconds": 9.806874962418389,
+      "energy_percent": 2.152845316724086,
+      "driving_distance_m": 6.087840969129804,
+      "walking_distance_m": 0.0,
+      "transformations": 0
+    },
+    {
+      "from_name": "Ridge outpost",
+      "to_name": "Forest",
+      "request_id": "021cf9ed98",
+      "origin": "Ridge outpost",
+      "time": 236.5759999999559,
+      "destination": 1,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          34.91037311014043,
+          21.955837003374846
+        ],
+        [
+          30.0,
+          22.75
+        ],
+        [
+          24.25,
+          28.5
+        ],
+        [
+          13.25,
+          28.5
+        ],
+        [
+          3.5,
+          18.75
+        ],
+        [
+          -8.0,
+          18.75
+        ],
+        [
+          -10.75,
+          16.0
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 71.59248273733184,
+        "required_percent": 67.03608653692685,
+        "return_energy_percent": 28.504551934772685,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 20.32431729476879,
+        "predicted_destination_percent": 51.268165442563046
+      },
+      "pareto_front": [
+        {
+          "distance_m": 57.60327025050528,
+          "estimated_seconds": 63.070182905133095,
+          "energy_percent": 22.167953026358617,
+          "driving_distance_m": 46.89127649208439,
+          "walking_distance_m": 10.711993758420885,
+          "transformations": 3,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              34.91037311014043,
+              21.955837003374846
+            ],
+            [
+              23.5,
+              27.25
+            ],
+            [
+              14.0,
+              28.5
+            ],
+            [
+              7.0,
+              22.5
+            ],
+            [
+              -10.5,
+              17.25
+            ],
+            [
+              -12.0,
+              16.0
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.863925660870809
+        },
+        {
+          "distance_m": 60.53357673665819,
+          "estimated_seconds": 54.78710858966281,
+          "energy_percent": 20.32431729476879,
+          "driving_distance_m": 53.433576736658196,
+          "walking_distance_m": 7.1,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              34.91037311014043,
+              21.955837003374846
+            ],
+            [
+              30.0,
+              22.75
+            ],
+            [
+              24.25,
+              28.5
+            ],
+            [
+              13.25,
+              28.5
+            ],
+            [
+              3.5,
+              18.75
+            ],
+            [
+              -8.0,
+              18.75
+            ],
+            [
+              -10.75,
+              16.0
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.8322981429627923
+        },
+        {
+          "distance_m": 60.53052244009144,
+          "estimated_seconds": 54.80054717985569,
+          "energy_percent": 20.324978473801686,
+          "driving_distance_m": 53.43052244009144,
+          "walking_distance_m": 7.1,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              34.91037311014043,
+              21.955837003374846
+            ],
+            [
+              29.75,
+              22.75
+            ],
+            [
+              24.0,
+              28.5
+            ],
+            [
+              14.0,
+              28.5
+            ],
+            [
+              4.25,
+              18.75
+            ],
+            [
+              -8.0,
+              18.75
+            ],
+            [
+              -10.75,
+              16.0
+            ],
+            [
+              -18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.8323348999756494
+        }
+      ],
+      "distance_m": 60.53357673665819,
+      "estimated_seconds": 54.78710858966281,
+      "energy_percent": 20.32431729476879,
+      "driving_distance_m": 53.433576736658196,
+      "walking_distance_m": 7.1,
+      "transformations": 1
+    },
+    {
+      "from_name": "Forest",
+      "to_name": "West service bay charging station",
+      "request_id": "7ae48e1526",
+      "origin": "Forest",
+      "time": 307.9040000000086,
+      "destination": "charger",
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -17.900175992627354,
+          15.99676540501843
+        ],
+        [
+          -10.75,
+          16.0
+        ],
+        [
+          2.5,
+          24.75
+        ],
+        [
+          2.5,
+          29.0
+        ],
+        [
+          -1.75,
+          33.25
+        ],
+        [
+          -27.0,
+          33.25
+        ],
+        [
+          -40.25,
+          20.0
+        ],
+        [
+          -40.25,
+          13.0
+        ],
+        [
+          -35.0,
+          7.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "charging_route",
+        "selection_mode": "balanced",
+        "station": "West service bay",
+        "available_percent": 49.35529922935102,
+        "required_percent": 37.90999830081435,
+        "route_energy_percent": 28.72799864065148,
+        "return_energy_percent": 0.0,
+        "reserve_percent": 2.0
+      },
+      "pareto_front": [
+        {
+          "distance_m": 92.24996793354055,
+          "estimated_seconds": 82.14930257362754,
+          "energy_percent": 28.72799864065148,
+          "driving_distance_m": 85.24979122462915,
+          "walking_distance_m": 7.000176708911427,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              -17.900175992627354,
+              15.99676540501843
+            ],
+            [
+              -10.75,
+              16.0
+            ],
+            [
+              2.5,
+              24.75
+            ],
+            [
+              2.5,
+              29.0
+            ],
+            [
+              -1.75,
+              33.25
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -35.0,
+              7.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.2384564473183517
+        }
+      ],
+      "distance_m": 92.24996793354055,
+      "estimated_seconds": 82.14930257362754,
+      "energy_percent": 28.72799864065148,
+      "driving_distance_m": 85.24979122462915,
+      "walking_distance_m": 7.000176708911427,
+      "transformations": 1
+    },
+    {
+      "from_name": "West service bay charging station",
+      "to_name": "Marsh",
+      "request_id": "25ab60dec2",
+      "origin": "West service bay charging station",
+      "time": 405.6960000001281,
+      "destination": 3,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -35.072481545201555,
+          7.068734284242655
+        ],
+        [
+          -34.5,
+          -0.25
+        ],
+        [
+          -30.0,
+          -4.75
+        ],
+        [
+          -22.75,
+          -4.75
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99975997224573,
+        "required_percent": 34.61748442514681,
+        "return_energy_percent": 11.484819744746664,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 11.409167795370786,
+        "predicted_destination_percent": 88.59059217687494
+      },
+      "pareto_front": [
+        {
+          "distance_m": 25.554554409586792,
+          "estimated_seconds": 58.95465408525132,
+          "energy_percent": 16.554206444680442,
+          "driving_distance_m": 8.80971407587255,
+          "walking_distance_m": 16.74484033371424,
+          "transformations": 3,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -35.072481545201555,
+              7.068734284242655
+            ],
+            [
+              -27.5,
+              1.75
+            ],
+            [
+              -24.75,
+              1.75
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.5726498939131439
+        },
+        {
+          "distance_m": 28.034952449728628,
+          "estimated_seconds": 30.79709716597539,
+          "energy_percent": 11.409167795370786,
+          "driving_distance_m": 21.157334209882713,
+          "walking_distance_m": 6.877618239845915,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "points": [
+            [
+              -35.072481545201555,
+              7.068734284242655
+            ],
+            [
+              -34.5,
+              -0.25
+            ],
+            [
+              -30.0,
+              -4.75
+            ],
+            [
+              -22.75,
+              -4.75
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.42773153689481214
+        },
+        {
+          "distance_m": 28.40679527075745,
+          "estimated_seconds": 30.693857765139672,
+          "energy_percent": 11.23520070820061,
+          "driving_distance_m": 22.139386861912108,
+          "walking_distance_m": 6.267408408845341,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              -35.072481545201555,
+              7.068734284242655
+            ],
+            [
+              -34.5,
+              -0.25
+            ],
+            [
+              -30.0,
+              -4.75
+            ],
+            [
+              -21.75,
+              -4.75
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.42789515324853666
+        },
+        {
+          "distance_m": 28.03453230354146,
+          "estimated_seconds": 30.805254014553263,
+          "energy_percent": 11.415669405235127,
+          "driving_distance_m": 21.142082247966513,
+          "walking_distance_m": 6.892450055574943,
+          "transformations": 1,
+          "search_weights": [
+            0.6,
+            0.2,
+            0.2
+          ],
+          "points": [
+            [
+              -35.072481545201555,
+              7.068734284242655
+            ],
+            [
+              -34.5,
+              -0.25
+            ],
+            [
+              -30.25,
+              -4.5
+            ],
+            [
+              -23.0,
+              -4.5
+            ],
+            [
+              -18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.4278311865801232
+        }
+      ],
+      "distance_m": 28.034952449728628,
+      "estimated_seconds": 30.79709716597539,
+      "energy_percent": 11.409167795370786,
+      "driving_distance_m": 21.157334209882713,
+      "walking_distance_m": 6.877618239845915,
+      "transformations": 1
+    },
+    {
+      "from_name": "Marsh",
+      "to_name": "Quarry",
+      "request_id": "ce7677094c",
+      "origin": "Marsh",
+      "time": 444.0000000001749,
+      "destination": 2,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -18.06440635329004,
+          -9.923697843604664
+        ],
+        [
+          -23.0,
+          -4.5
+        ],
+        [
+          -30.25,
+          -4.5
+        ],
+        [
+          -36.0,
+          1.25
+        ],
+        [
+          -36.0,
+          8.75
+        ],
+        [
+          -40.25,
+          13.0
+        ],
+        [
+          -40.25,
+          20.0
+        ],
+        [
+          -27.0,
+          33.25
+        ],
+        [
+          1.0,
+          33.25
+        ],
+        [
+          3.0,
+          31.25
+        ],
+        [
+          3.0,
+          22.5
+        ],
+        [
+          10.75,
+          14.75
+        ],
+        [
+          10.75,
+          12.0
+        ],
+        [
+          12.0,
+          10.75
+        ],
+        [
+          15.0,
+          10.75
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 86.21003191603525,
+        "required_percent": 83.43437437706544,
+        "return_energy_percent": 18.645064120215057,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 43.30243538143729,
+        "predicted_destination_percent": 42.90759653459796
+      },
+      "pareto_front": [
+        {
+          "distance_m": 117.88320940306805,
+          "estimated_seconds": 190.86513243415777,
+          "energy_percent": 55.331638684999774,
+          "driving_distance_m": 78.08895108826222,
+          "walking_distance_m": 39.79425831480582,
+          "transformations": 8,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -25.0,
+              1.75
+            ],
+            [
+              -27.75,
+              1.75
+            ],
+            [
+              -39.5,
+              13.75
+            ],
+            [
+              -39.5,
+              20.75
+            ],
+            [
+              -33.25,
+              26.75
+            ],
+            [
+              -22.25,
+              32.25
+            ],
+            [
+              -1.25,
+              32.75
+            ],
+            [
+              2.5,
+              27.75
+            ],
+            [
+              2.5,
+              23.0
+            ],
+            [
+              10.25,
+              14.75
+            ],
+            [
+              11.0,
+              11.75
+            ],
+            [
+              12.0,
+              10.75
+            ],
+            [
+              15.25,
+              11.0
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": false,
+          "score": 2.1075919459802948
+        },
+        {
+          "distance_m": 125.44527063710166,
+          "estimated_seconds": 117.51264507790528,
+          "energy_percent": 42.790517339298,
+          "driving_distance_m": 108.9632408679828,
+          "walking_distance_m": 16.482029769118878,
+          "transformations": 2,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -23.0,
+              -3.5
+            ],
+            [
+              -31.25,
+              -3.5
+            ],
+            [
+              -36.0,
+              1.25
+            ],
+            [
+              -36.0,
+              8.75
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              -1.75,
+              33.25
+            ],
+            [
+              3.0,
+              28.5
+            ],
+            [
+              3.0,
+              22.5
+            ],
+            [
+              10.5,
+              15.0
+            ],
+            [
+              10.75,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.7469840157132674
+        },
+        {
+          "distance_m": 126.06544575234545,
+          "estimated_seconds": 113.68693555680166,
+          "energy_percent": 43.32257329109974,
+          "driving_distance_m": 108.62312855338025,
+          "walking_distance_m": 17.44231719896524,
+          "transformations": 2,
+          "search_weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -24.0,
+              -3.5
+            ],
+            [
+              -31.25,
+              -3.5
+            ],
+            [
+              -36.0,
+              1.25
+            ],
+            [
+              -36.0,
+              8.75
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              1.0,
+              33.25
+            ],
+            [
+              3.0,
+              31.25
+            ],
+            [
+              3.0,
+              22.5
+            ],
+            [
+              10.5,
+              15.0
+            ],
+            [
+              10.5,
+              12.25
+            ],
+            [
+              12.0,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.7428609547567506
+        },
+        {
+          "distance_m": 124.45453304887147,
+          "estimated_seconds": 117.63894481751157,
+          "energy_percent": 42.97912525414189,
+          "driving_distance_m": 107.01221584990627,
+          "walking_distance_m": 17.44231719896524,
+          "transformations": 2,
+          "search_weights": [
+            0.6,
+            0.2,
+            0.2
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -24.0,
+              -3.5
+            ],
+            [
+              -31.25,
+              -3.5
+            ],
+            [
+              -34.5,
+              -0.25
+            ],
+            [
+              -34.5,
+              7.25
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              -1.75,
+              33.25
+            ],
+            [
+              3.0,
+              28.5
+            ],
+            [
+              3.0,
+              22.5
+            ],
+            [
+              10.75,
+              14.75
+            ],
+            [
+              10.75,
+              12.0
+            ],
+            [
+              12.0,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.7429425187700216
+        },
+        {
+          "distance_m": 126.06675968945513,
+          "estimated_seconds": 113.66835797321971,
+          "energy_percent": 43.30243538143729,
+          "driving_distance_m": 108.67201000604372,
+          "walking_distance_m": 17.394749683411433,
+          "transformations": 2,
+          "search_weights": [
+            0.2,
+            0.6,
+            0.2
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -23.0,
+              -4.5
+            ],
+            [
+              -30.25,
+              -4.5
+            ],
+            [
+              -36.0,
+              1.25
+            ],
+            [
+              -36.0,
+              8.75
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              1.0,
+              33.25
+            ],
+            [
+              3.0,
+              31.25
+            ],
+            [
+              3.0,
+              22.5
+            ],
+            [
+              10.75,
+              14.75
+            ],
+            [
+              10.75,
+              12.0
+            ],
+            [
+              12.0,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.7425771539205583
+        },
+        {
+          "distance_m": 124.45584698598114,
+          "estimated_seconds": 117.62036723392961,
+          "energy_percent": 42.958987344479446,
+          "driving_distance_m": 107.06109730256973,
+          "walking_distance_m": 17.394749683411433,
+          "transformations": 2,
+          "search_weights": [
+            0.2,
+            0.2,
+            0.6
+          ],
+          "points": [
+            [
+              -18.06440635329004,
+              -9.923697843604664
+            ],
+            [
+              -23.0,
+              -4.5
+            ],
+            [
+              -30.25,
+              -4.5
+            ],
+            [
+              -36.0,
+              1.25
+            ],
+            [
+              -36.0,
+              8.75
+            ],
+            [
+              -40.25,
+              13.0
+            ],
+            [
+              -40.25,
+              20.0
+            ],
+            [
+              -27.0,
+              33.25
+            ],
+            [
+              -1.75,
+              33.25
+            ],
+            [
+              3.0,
+              28.5
+            ],
+            [
+              3.0,
+              22.5
+            ],
+            [
+              10.75,
+              14.75
+            ],
+            [
+              10.75,
+              12.0
+            ],
+            [
+              12.0,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.7426587179338295
+        }
+      ],
+      "distance_m": 126.06675968945513,
+      "estimated_seconds": 113.66835797321971,
+      "energy_percent": 43.30243538143729,
+      "driving_distance_m": 108.67201000604372,
+      "walking_distance_m": 17.394749683411433,
+      "transformations": 2
+    },
+    {
+      "from_name": "En route (9.5, 15.9)",
+      "to_name": "Quarry",
+      "request_id": "ce7677094c",
+      "origin": "Marsh",
+      "time": 556.1120000001551,
+      "destination": 2,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          9.498050817727327,
+          15.852217021278259
+        ],
+        [
+          11.75,
+          11.25
+        ],
+        [
+          15.0,
+          10.75
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 46.91402139722646,
+        "required_percent": 41.643231972621706,
+        "return_energy_percent": 18.645064120215057,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 9.869521457882309,
+        "predicted_destination_percent": 37.044499939344156
+      },
+      "pareto_front": [
+        {
+          "distance_m": 14.458568923463522,
+          "estimated_seconds": 25.27747198818604,
+          "energy_percent": 9.869521457882309,
+          "driving_distance_m": 3.189717408682347,
+          "walking_distance_m": 11.268851514781176,
+          "transformations": 1,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              9.498050817727327,
+              15.852217021278259
+            ],
+            [
+              11.75,
+              11.25
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.29967207564469367
+        },
+        {
+          "distance_m": 15.550263077317705,
+          "estimated_seconds": 25.551882086587685,
+          "energy_percent": 9.675901343022433,
+          "driving_distance_m": 5.403569766093794,
+          "walking_distance_m": 10.146693311223911,
+          "transformations": 1,
+          "search_weights": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "points": [
+            [
+              9.498050817727327,
+              15.852217021278259
+            ],
+            [
+              10.75,
+              10.75
+            ],
+            [
+              15.0,
+              10.75
+            ],
+            [
+              18.0,
+              16.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.30581503575861796
+        }
+      ],
+      "distance_m": 14.458568923463522,
+      "estimated_seconds": 25.27747198818604,
+      "energy_percent": 9.869521457882309,
+      "driving_distance_m": 3.189717408682347,
+      "walking_distance_m": 11.268851514781176,
+      "transformations": 1
+    },
+    {
+      "from_name": "Quarry",
+      "to_name": "East service bay charging station",
+      "request_id": "cfdbb7a34a",
+      "origin": "Quarry",
+      "time": 584.4320000000891,
+      "destination": "charger",
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          17.95405669813248,
+          15.911224075785181
+        ],
+        [
+          19.0,
+          10.0
+        ],
+        [
+          21.5,
+          7.5
+        ],
+        [
+          33.75,
+          7.5
+        ],
+        [
+          40.25,
+          1.0
+        ],
+        [
+          40.25,
+          -11.0
+        ],
+        [
+          35.0,
+          -17.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "charging_route",
+        "selection_mode": "balanced",
+        "station": "East service bay",
+        "available_percent": 36.662504938235024,
+        "required_percent": 25.26273581883452,
+        "route_energy_percent": 18.610188655067617,
+        "return_energy_percent": 0.0,
+        "reserve_percent": 2.0
+      },
+      "pareto_front": [
+        {
+          "distance_m": 50.95357793620954,
+          "estimated_seconds": 49.340287093934016,
+          "energy_percent": 18.610188655067617,
+          "driving_distance_m": 41.980682939925344,
+          "walking_distance_m": 8.972894996284202,
+          "transformations": 1,
+          "search_weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "points": [
+            [
+              17.95405669813248,
+              15.911224075785181
+            ],
+            [
+              19.0,
+              10.0
+            ],
+            [
+              21.5,
+              7.5
+            ],
+            [
+              33.75,
+              7.5
+            ],
+            [
+              40.25,
+              1.0
+            ],
+            [
+              40.25,
+              -11.0
+            ],
+            [
+              35.0,
+              -17.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.7292121975715334
+        }
+      ],
+      "distance_m": 50.95357793620954,
+      "estimated_seconds": 49.340287093934016,
+      "energy_percent": 18.610188655067617,
+      "driving_distance_m": 41.980682939925344,
+      "walking_distance_m": 8.972894996284202,
+      "transformations": 1
+    },
+    {
+      "from_name": "East service bay charging station",
+      "to_name": "Desert",
+      "request_id": "f7bb4c13e2",
+      "origin": "East service bay charging station",
+      "time": 645.7119999999463,
+      "destination": 4,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          35.074074973155184,
+          -16.93298716947926
+        ],
+        [
+          32.5,
+          -19.5
+        ],
+        [
+          32.5,
+          -34.0
+        ],
+        [
+          31.25,
+          -35.25
+        ],
+        [
+          11.0,
+          -35.25
+        ],
+        [
+          8.5,
+          -32.75
+        ],
+        [
+          8.5,
+          -25.5
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99975997213001,
+        "required_percent": 63.181047978345596,
+        "return_energy_percent": 15.461364869928403,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 30.28347351274807,
+        "predicted_destination_percent": 69.71628645938193
+      },
+      "pareto_front": [
+        {
+          "distance_m": 66.81375962170196,
+          "estimated_seconds": 92.3428926540651,
+          "energy_percent": 30.828139041626436,
+          "driving_distance_m": 42.86035155182961,
+          "walking_distance_m": 23.953408069872353,
+          "transformations": 3,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              35.074074973155184,
+              -16.93298716947926
+            ],
+            [
+              33.25,
+              -24.5
+            ],
+            [
+              32.25,
+              -34.25
+            ],
+            [
+              31.5,
+              -35.0
+            ],
+            [
+              11.25,
+              -34.25
+            ],
+            [
+              8.5,
+              -31.25
+            ],
+            [
+              9.5,
+              -23.25
+            ],
+            [
+              14.25,
+              -16.75
+            ],
+            [
+              18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.1299706559185478
+        },
+        {
+          "distance_m": 69.11826130008288,
+          "estimated_seconds": 77.71947883751632,
+          "energy_percent": 30.28347351274807,
+          "driving_distance_m": 47.16791156152745,
+          "walking_distance_m": 21.950349738555424,
+          "transformations": 3,
+          "search_weights": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "points": [
+            [
+              35.074074973155184,
+              -16.93298716947926
+            ],
+            [
+              32.5,
+              -19.5
+            ],
+            [
+              32.5,
+              -34.0
+            ],
+            [
+              31.25,
+              -35.25
+            ],
+            [
+              11.0,
+              -35.25
+            ],
+            [
+              8.5,
+              -32.75
+            ],
+            [
+              8.5,
+              -25.5
+            ],
+            [
+              18.0,
+              -10.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 1.085121369318184
+        }
+      ],
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3
+    }
+  ],
+  "route_mode": "balanced",
+  "charge_completed": 3,
+  "minimum_battery_percent": 17.379277370264717,
+  "energy_consumed_percent": 241.0164826454581,
+  "energy_charged_percent": 209.93240990819157,
+  "energy_status": {
+    "decision": "feasible",
+    "available_percent": 69.14743504851197,
+    "required_percent": 25.834319430534457,
+    "return_energy_percent": 15.461364869928403,
+    "reserve_percent": 6.0,
+    "route_energy_percent": 0.4060906744991625,
+    "predicted_destination_percent": 68.7413443740128
+  },
+  "pareto_front": [
+    {
+      "distance_m": 66.81375962170196,
+      "estimated_seconds": 92.3428926540651,
+      "energy_percent": 30.828139041626436,
+      "driving_distance_m": 42.86035155182961,
+      "walking_distance_m": 23.953408069872353,
+      "transformations": 3,
+      "search_weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "points": [
+        [
+          35.074074973155184,
+          -16.93298716947926
+        ],
+        [
+          33.25,
+          -24.5
+        ],
+        [
+          32.25,
+          -34.25
+        ],
+        [
+          31.5,
+          -35.0
+        ],
+        [
+          11.25,
+          -34.25
+        ],
+        [
+          8.5,
+          -31.25
+        ],
+        [
+          9.5,
+          -23.25
+        ],
+        [
+          14.25,
+          -16.75
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "energy_feasible": true,
+      "score": 1.1299706559185478
+    },
+    {
+      "distance_m": 69.11826130008288,
+      "estimated_seconds": 77.71947883751632,
+      "energy_percent": 30.28347351274807,
+      "driving_distance_m": 47.16791156152745,
+      "walking_distance_m": 21.950349738555424,
+      "transformations": 3,
+      "search_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          35.074074973155184,
+          -16.93298716947926
+        ],
+        [
+          32.5,
+          -19.5
+        ],
+        [
+          32.5,
+          -34.0
+        ],
+        [
+          31.25,
+          -35.25
+        ],
+        [
+          11.0,
+          -35.25
+        ],
+        [
+          8.5,
+          -32.75
+        ],
+        [
+          8.5,
+          -25.5
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "energy_feasible": true,
+      "score": 1.085121369318184
+    }
+  ],
+  "objective_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 2,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.0071665162994418025,
+  "minimum_foot_surface_clearance": 0.0071665162994418025,
+  "minimum_foot_surface_detail": {
+    "step": 5667,
+    "leg": 3,
+    "foot_position": [
+      -28.571879725570753,
+      -3.379775151430701,
+      0.0521665162994418
+    ],
+    "height": 0.0,
+    "mode": "legs",
+    "phase": "LOWER ONTO FOUR WHEELS",
+    "body_z": 0.3976907825372943,
+    "body_xy": [
+      -27.82055973290783,
+      -4.62742295125478
+    ]
+  },
+  "max_speed_mps": 1.65,
+  "max_body_tilt_degrees": 1.3795850458982089,
+  "finite_state": true,
+  "solver_warnings": 0,
+  "terrain_stats": {
+    "0": {
+      "steps": 34704,
+      "max_speed_mps": 1.65
+    },
+    "1": {
+      "steps": 10869,
+      "max_speed_mps": 0.75
+    },
+    "2": {
+      "steps": 0,
+      "max_speed_mps": 0.0
+    },
+    "3": {
+      "steps": 0,
+      "max_speed_mps": 0.0
+    }
+  },
+  "terrain_limit_violations": 0
+}

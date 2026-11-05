@@ -1,0 +1,524 @@
+{
+  "mujoco": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.1109/IROS.2012.6386109"
+  },
+  "smartgait": {
+    "status": "metadata_verified",
+    "doi": "10.1186/s10033-024-01000-0",
+    "title": [
+      "Smart Gait: A Gait Optimization Framework for Hexapod Robots"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-4936-3526",
+        "authenticated-orcid": false,
+        "given": "Yunpeng",
+        "family": "Yin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Feng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qiao",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yue",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuguang",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "Chinese Journal of Mechanical Engineering"
+    ],
+    "volume": "37",
+    "issue": "1",
+    "page": null,
+    "year": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          27
+        ]
+      ]
+    },
+    "updates": []
+  },
+  "terrain": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.3389/fnbot.2025.1605938"
+  },
+  "astar": {
+    "status": "metadata_verified",
+    "doi": "10.1109/tssc.1968.300136",
+    "title": [
+      "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    ],
+    "authors": [
+      {
+        "given": "Peter",
+        "family": "Hart",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Nils",
+        "family": "Nilsson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bertram",
+        "family": "Raphael",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "IEEE Transactions on Systems Science and Cybernetics"
+    ],
+    "volume": "4",
+    "issue": "2",
+    "page": "100-107",
+    "year": {
+      "date-parts": [
+        [
+          1968
+        ]
+      ]
+    },
+    "updates": []
+  },
+  "pso": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.1109/ICNN.1995.488968"
+  },
+  "aco": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.1109/3477.484436"
+  },
+  "evidence": {
+    "status": "publisher_or_project_source",
+    "url": ""
+  },
+  "codex": {
+    "status": "publisher_or_project_source",
+    "url": "https://openai.com/codex/"
+  },
+  "martins": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.1016/0377-2217(84)90077-8"
+  },
+  "visibility": {
+    "status": "metadata_verified",
+    "doi": "10.1145/359156.359164",
+    "title": [
+      "An algorithm for planning collision-free paths among polyhedral obstacles"
+    ],
+    "authors": [
+      {
+        "given": "Tom\u00e1s",
+        "family": "Lozano-P\u00e9rez",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, Cambridge"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael A.",
+        "family": "Wesley",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "Communications of the ACM"
+    ],
+    "volume": "22",
+    "issue": "10",
+    "page": "560-570",
+    "year": {
+      "date-parts": [
+        [
+          1979,
+          10
+        ]
+      ]
+    },
+    "updates": []
+  },
+  "simplifier": {
+    "status": "publisher_or_project_source",
+    "url": "https://ompl.kavrakilab.org/classompl_1_1geometric_1_1PathSimplifier.html"
+  },
+  "anytime": {
+    "status": "publisher_or_project_source",
+    "url": "https://ompl.kavrakilab.org/classompl_1_1geometric_1_1AnytimePathShortening.html"
+  },
+  "rrtstar": {
+    "status": "metadata_verified",
+    "doi": "10.1177/0278364911406761",
+    "title": [
+      "Sampling-based algorithms for optimal motion planning"
+    ],
+    "authors": [
+      {
+        "given": "Sertac",
+        "family": "Karaman",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Emilio",
+        "family": "Frazzoli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "The International Journal of Robotics Research"
+    ],
+    "volume": "30",
+    "issue": "7",
+    "page": "846-894",
+    "year": {
+      "date-parts": [
+        [
+          2011,
+          6
+        ]
+      ]
+    },
+    "updates": []
+  },
+  "delivery": {
+    "status": "metadata_unavailable",
+    "error": "HTTP Error 429: Too Many Requests",
+    "url": "https://doi.org/10.1109/CASE58245.2025.11164088"
+  },
+  "state": {
+    "status": "publisher_or_project_source",
+    "url": "https://arxiv.org/abs/2506.01046v4"
+  },
+  "coco": {
+    "status": "metadata_verified",
+    "doi": "10.1080/10556788.2020.1808977",
+    "title": [
+      "COCO: a platform for comparing continuous optimizers in a black-box setting"
+    ],
+    "authors": [
+      {
+        "given": "Nikolaus",
+        "family": "Hansen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anne",
+        "family": "Auger",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Raymond",
+        "family": "Ros",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "LRI, Universit\u00e9\u00a0Paris-Sud, Orsay, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Olaf",
+        "family": "Mersmann",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computational Statistics, TU Dortmund University, Dortmund, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tea",
+        "family": "Tu\u0161ar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Jo\u017eef Stefan Institute, Ljubljana, Slovenia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dimo",
+        "family": "Brockhoff",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "Optimization Methods and Software"
+    ],
+    "volume": "36",
+    "issue": "1",
+    "page": "114-144",
+    "year": {
+      "date-parts": [
+        [
+          2020,
+          8,
+          25
+        ]
+      ]
+    },
+    "updates": []
+  },
+  "cocoprocedure": {
+    "status": "publisher_or_project_source",
+    "url": "https://numbbo.github.io/coco-doc/experimental-setup/"
+  },
+  "demsar": {
+    "status": "publisher_or_project_source",
+    "url": "https://www.jmlr.org/papers/v7/demsar06a.html"
+  },
+  "mujocodocs": {
+    "status": "publisher_or_project_source",
+    "url": "https://mujoco.readthedocs.io/en/stable/overview.html"
+  },
+  "nsgaii": {
+    "status": "metadata_verified",
+    "doi": "10.1109/4235.996017",
+    "title": [
+      "A fast and elitist multiobjective genetic algorithm: NSGA-II"
+    ],
+    "authors": [
+      {
+        "given": "K.",
+        "family": "Deb",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "A.",
+        "family": "Pratap",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "S.",
+        "family": "Agarwal",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "T.",
+        "family": "Meyarivan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "venue": [
+      "IEEE Transactions on Evolutionary Computation"
+    ],
+    "volume": "6",
+    "issue": "2",
+    "page": "182-197",
+    "year": {
+      "date-parts": [
+        [
+          2002,
+          4
+        ]
+      ]
+    },
+    "updates": []
+  }
+}

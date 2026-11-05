@@ -1,0 +1,821 @@
+[
+  {
+    "key": "mujoco",
+    "doi": "10.1109/IROS.2012.6386109",
+    "status": "registered",
+    "title": [
+      "MuJoCo: A physics engine for model-based control"
+    ],
+    "authors": [
+      {
+        "given": "Emanuel",
+        "family": "Todorov",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tom",
+        "family": "Erez",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuval",
+        "family": "Tassa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2012,
+          10
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/IROS.2012.6386109"
+  },
+  {
+    "key": "smartgait",
+    "doi": "10.1186/s10033-024-01000-0",
+    "status": "registered",
+    "title": [
+      "Smart Gait: A Gait Optimization Framework for Hexapod Robots"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-4936-3526",
+        "authenticated-orcid": false,
+        "given": "Yunpeng",
+        "family": "Yin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Feng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qiao",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yue",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuguang",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          27
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {
+      "has-preprint": [
+        {
+          "id-type": "doi",
+          "id": "10.21203/rs.3.rs-3133021/v1",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "source": "https://api.crossref.org/works/10.1186/s10033-024-01000-0"
+  },
+  {
+    "key": "terrain",
+    "doi": "10.3389/fnbot.2025.1605938",
+    "status": "registered",
+    "title": [
+      "Hexapod robot motion planning investigation under the influence of multi-dimensional terrain features"
+    ],
+    "authors": [
+      {
+        "given": "Chen",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Junbo",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bo",
+        "family": "You",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiayu",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Biao",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          21
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.3389/fnbot.2025.1605938"
+  },
+  {
+    "key": "astar",
+    "doi": "10.1109/TSSC.1968.300136",
+    "status": "registered",
+    "title": [
+      "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    ],
+    "authors": [
+      {
+        "given": "Peter",
+        "family": "Hart",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Nils",
+        "family": "Nilsson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bertram",
+        "family": "Raphael",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1968
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/TSSC.1968.300136"
+  },
+  {
+    "key": "pso",
+    "doi": "10.1109/ICNN.1995.488968",
+    "status": "registered",
+    "title": [
+      "Particle swarm optimization"
+    ],
+    "authors": [
+      {
+        "given": "J.",
+        "family": "Kennedy",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "R.",
+        "family": "Eberhart",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": null,
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/ICNN.1995.488968"
+  },
+  {
+    "key": "aco",
+    "doi": "10.1109/3477.484436",
+    "status": "registered",
+    "title": [
+      "Ant system: optimization by a colony of cooperating agents"
+    ],
+    "authors": [
+      {
+        "given": "M.",
+        "family": "Dorigo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "V.",
+        "family": "Maniezzo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "A.",
+        "family": "Colorni",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1996,
+          2
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/3477.484436"
+  },
+  {
+    "key": "martins",
+    "doi": "10.1016/0377-2217(84)90077-8",
+    "status": "registered",
+    "title": [
+      "On a multicriteria shortest path problem"
+    ],
+    "authors": [
+      {
+        "given": "Ernesto Queir\u00f3s Vieira",
+        "family": "Martins",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1984,
+          5
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1016/0377-2217(84)90077-8"
+  },
+  {
+    "key": "visibility",
+    "doi": "10.1145/359156.359164",
+    "status": "registered",
+    "title": [
+      "An algorithm for planning collision-free paths among polyhedral obstacles"
+    ],
+    "authors": [
+      {
+        "given": "Tom\u00e1s",
+        "family": "Lozano-P\u00e9rez",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Massachusetts Institute of Technology, Cambridge"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael A.",
+        "family": "Wesley",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          1979,
+          10
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1145/359156.359164"
+  },
+  {
+    "key": "rrtstar",
+    "doi": "10.1177/0278364911406761",
+    "status": "registered",
+    "title": [
+      "Sampling-based algorithms for optimal motion planning"
+    ],
+    "authors": [
+      {
+        "given": "Sertac",
+        "family": "Karaman",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA,"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Emilio",
+        "family": "Frazzoli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2011,
+          6
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1177/0278364911406761"
+  },
+  {
+    "key": "delivery",
+    "doi": "10.1109/CASE58245.2025.11164088",
+    "status": "registered",
+    "title": [
+      "Energy-Aware Planning for Delivery Tasks Executed by Legged Robots"
+    ],
+    "authors": [
+      {
+        "given": "Shengqiang",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Southern California,Department of Aerospace and Mechanical Engineering,Los Angeles,CA,90089"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yiyu",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Southern California,Department of Aerospace and Mechanical Engineering,Los Angeles,CA,90089"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zishen",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Southern California,Department of Aerospace and Mechanical Engineering,Los Angeles,CA,90089"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Quan",
+        "family": "Nguyen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Southern California,Department of Aerospace and Mechanical Engineering,Los Angeles,CA,90089"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Satyandra K.",
+        "family": "Gupta",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Southern California,Department of Aerospace and Mechanical Engineering,Los Angeles,CA,90089"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          17
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/CASE58245.2025.11164088"
+  },
+  {
+    "key": "coco",
+    "doi": "10.1080/10556788.2020.1808977",
+    "status": "registered",
+    "title": [
+      "COCO: a platform for comparing continuous optimizers in a black-box setting"
+    ],
+    "authors": [
+      {
+        "given": "Nikolaus",
+        "family": "Hansen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Anne",
+        "family": "Auger",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Raymond",
+        "family": "Ros",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "LRI, Universit\u00e9\u00a0Paris-Sud, Orsay, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Olaf",
+        "family": "Mersmann",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computational Statistics, TU Dortmund University, Dortmund, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tea",
+        "family": "Tu\u0161ar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Jo\u017eef Stefan Institute, Ljubljana, Slovenia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dimo",
+        "family": "Brockhoff",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Randopt Team, Inria, Palaiseau, France"
+          },
+          {
+            "name": "CMAP, CNRS, Ecole Polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          8,
+          25
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1080/10556788.2020.1808977"
+  },
+  {
+    "key": "nsgaii",
+    "doi": "10.1109/4235.996017",
+    "status": "registered",
+    "title": [
+      "A fast and elitist multiobjective genetic algorithm: NSGA-II"
+    ],
+    "authors": [
+      {
+        "given": "K.",
+        "family": "Deb",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "A.",
+        "family": "Pratap",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "S.",
+        "family": "Agarwal",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "T.",
+        "family": "Meyarivan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2002,
+          4
+        ]
+      ]
+    },
+    "update_to": [],
+    "relation": {},
+    "source": "https://api.crossref.org/works/10.1109/4235.996017"
+  }
+]

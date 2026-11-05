@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "development_01",
+      "split": "development",
+      "layout_id": "development_71000",
+      "seed": 71000,
+      "variant": 0,
+      "start": [
+        0.25,
+        -21.25
+      ],
+      "goal": [
+        -17.0,
+        17.0
+      ],
+      "hazard_position": [
+        21.783236705271563,
+        6.898673758124249,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "development_02",
+      "split": "development",
+      "layout_id": "development_71001",
+      "seed": 71001,
+      "variant": 0,
+      "start": [
+        -0.5,
+        -21.25
+      ],
+      "goal": [
+        17.5,
+        17.0
+      ],
+      "hazard_position": [
+        31.719315344313294,
+        -33.27521144631701,
+        0.0
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 85.0,
+      "risk_budget": 25.0,
+      "energy_multiplier": 1.0
+    },
+    {
+      "id": "development_03",
+      "split": "development",
+      "layout_id": "development_71002",
+      "seed": 71002,
+      "variant": 0,
+      "start": [
+        -0.75,
+        -19.75
+      ],
+      "goal": [
+        -18.25,
+        -9.5
+      ],
+      "hazard_position": [
+        -10.112917886199401,
+        -10.230633712562025,
+        0.0
+      ],
+      "deadline_s": 210.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 1.12
+    },
+    {
+      "id": "development_04",
+      "split": "development",
+      "layout_id": "development_71003",
+      "seed": 71003,
+      "variant": 0,
+      "start": [
+        -0.25,
+        -19.75
+      ],
+      "goal": [
+        17.75,
+        -8.75
+      ],
+      "hazard_position": [
+        9.673139058088545,
+        -9.672947465373529,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "heldout_01",
+      "split": "heldout",
+      "layout_id": "heldout_92000",
+      "seed": 92000,
+      "variant": 0,
+      "start": [
+        -1.0,
+        -21.25
+      ],
+      "goal": [
+        -18.5,
+        17.5
+      ],
+      "hazard_position": [
+        29.939558053608206,
+        -12.125674157449328,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "heldout_02",
+      "split": "heldout",
+      "layout_id": "heldout_92001",
+      "seed": 92001,
+      "variant": 0,
+      "start": [
+        -1.25,
+        -20.25
+      ],
+      "goal": [
+        18.5,
+        16.5
+      ],
+      "hazard_position": [
+        30.552795950819593,
+        -15.102990338976344,
+        0.0
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 85.0,
+      "risk_budget": 25.0,
+      "energy_multiplier": 1.0
+    },
+    {
+      "id": "heldout_03",
+      "split": "heldout",
+      "layout_id": "heldout_92002",
+      "seed": 92002,
+      "variant": 0,
+      "start": [
+        -0.75,
+        -20.0
+      ],
+      "goal": [
+        -18.5,
+        -10.5
+      ],
+      "hazard_position": [
+        -5.269181636924132,
+        -9.516828154582884,
+        0.0
+      ],
+      "deadline_s": 210.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 1.12
+    },
+    {
+      "id": "heldout_04",
+      "split": "heldout",
+      "layout_id": "heldout_92003",
+      "seed": 92003,
+      "variant": 0,
+      "start": [
+        0.5,
+        -20.0
+      ],
+      "goal": [
+        17.0,
+        -8.75
+      ],
+      "hazard_position": [
+        1.6401301218771565,
+        -12.492149619073048,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "heldout_05",
+      "split": "heldout",
+      "layout_id": "heldout_92004",
+      "seed": 92004,
+      "variant": 0,
+      "start": [
+        -1.0,
+        -21.5
+      ],
+      "goal": [
+        -34.5,
+        -20.75
+      ],
+      "hazard_position": [
+        -14.247425796273816,
+        -32.70657719755491,
+        0.0
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 85.0,
+      "risk_budget": 25.0,
+      "energy_multiplier": 1.0
+    },
+    {
+      "id": "heldout_06",
+      "split": "heldout",
+      "layout_id": "heldout_92005",
+      "seed": 92005,
+      "variant": 0,
+      "start": [
+        1.0,
+        -21.0
+      ],
+      "goal": [
+        35.25,
+        20.5
+      ],
+      "hazard_position": [
+        30.580993443019896,
+        -27.241686107770896,
+        0.0
+      ],
+      "deadline_s": 210.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 1.12
+    },
+    {
+      "id": "heldout_07",
+      "split": "heldout",
+      "layout_id": "heldout_92006",
+      "seed": 92006,
+      "variant": 0,
+      "start": [
+        0.5,
+        -19.25
+      ],
+      "goal": [
+        -17.5,
+        15.0
+      ],
+      "hazard_position": [
+        -38.82507810780104,
+        13.712977019067303,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "heldout_08",
+      "split": "heldout",
+      "layout_id": "heldout_92007",
+      "seed": 92007,
+      "variant": 0,
+      "start": [
+        0.75,
+        -19.25
+      ],
+      "goal": [
+        18.25,
+        16.5
+      ],
+      "hazard_position": [
+        30.994016131711234,
+        -25.83221349378424,
+        0.0
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 85.0,
+      "risk_budget": 25.0,
+      "energy_multiplier": 1.0
+    },
+    {
+      "id": "heldout_09",
+      "split": "heldout",
+      "layout_id": "heldout_92008",
+      "seed": 92008,
+      "variant": 0,
+      "start": [
+        0.0,
+        -18.75
+      ],
+      "goal": [
+        -17.25,
+        -8.75
+      ],
+      "hazard_position": [
+        -9.070838990379038,
+        -8.552637304329878,
+        0.0
+      ],
+      "deadline_s": 210.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 1.12
+    },
+    {
+      "id": "heldout_10",
+      "split": "heldout",
+      "layout_id": "heldout_92009",
+      "seed": 92009,
+      "variant": 0,
+      "start": [
+        -1.5,
+        -19.25
+      ],
+      "goal": [
+        19.0,
+        -10.75
+      ],
+      "hazard_position": [
+        2.2062036495620223,
+        -10.099284110015601,
+        0.0
+      ],
+      "deadline_s": 110.0,
+      "battery_percent": 70.0,
+      "risk_budget": 15.0,
+      "energy_multiplier": 0.9
+    },
+    {
+      "id": "heldout_11",
+      "split": "heldout",
+      "layout_id": "heldout_92010",
+      "seed": 92010,
+      "variant": 0,
+      "start": [
+        1.25,
+        -20.75
+      ],
+      "goal": [
+        -34.75,
+        -19.5
+      ],
+      "hazard_position": [
+        -19.772738709907824,
+        -31.253828515138782,
+        0.0
+      ],
+      "deadline_s": 160.0,
+      "battery_percent": 85.0,
+      "risk_budget": 25.0,
+      "energy_multiplier": 1.0
+    },
+    {
+      "id": "heldout_12",
+      "split": "heldout",
+      "layout_id": "heldout_92011",
+      "seed": 92011,
+      "variant": 0,
+      "start": [
+        1.25,
+        -20.25
+      ],
+      "goal": [
+        36.25,
+        20.75
+      ],
+      "hazard_position": [
+        25.376429641025993,
+        -34.05804310648676,
+        0.0
+      ],
+      "deadline_s": 210.0,
+      "battery_percent": 100.0,
+      "risk_budget": 40.0,
+      "energy_multiplier": 1.12
+    }
+  ],
+  "profiles": {
+    "default": {
+      "pso": {
+        "particles": 16,
+        "inertia": 0.72,
+        "cognitive": 1.49,
+        "social": 1.49,
+        "velocity_clip": 0.25,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "aco": {
+        "ants": 12,
+        "alpha": 1.0,
+        "beta": 2.0,
+        "evaporation": 0.2,
+        "deposit": 1.0,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "proposed": {
+        "beam_width": 6,
+        "labels_per_state": 8,
+        "archive_size": 16,
+        "max_evaluations": 240,
+        "portfolio": true
+      },
+      "b7_greedy": {
+        "initial_evaluations_per_corridor": 2,
+        "seed_portfolio": true
+      }
+    },
+    "alternative": {
+      "pso": {
+        "particles": 24,
+        "inertia": 0.55,
+        "cognitive": 1.7,
+        "social": 1.3,
+        "velocity_clip": 0.25,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "aco": {
+        "ants": 18,
+        "alpha": 1.0,
+        "beta": 3.0,
+        "evaporation": 0.35,
+        "deposit": 1.0,
+        "max_iterations": 40,
+        "seed_portfolio": true,
+        "iteration_scope": "per corridor"
+      },
+      "proposed": {
+        "beam_width": 6,
+        "labels_per_state": 12,
+        "archive_size": 16,
+        "max_evaluations": 240,
+        "portfolio": true
+      },
+      "b7_greedy": {
+        "initial_evaluations_per_corridor": 2,
+        "seed_portfolio": true
+      }
+    }
+  },
+  "budget_seconds": 2.0,
+  "development_repeats": 2,
+  "test_repeats": 3,
+  "physics_case_ids": [
+    "heldout_02",
+    "heldout_03",
+    "heldout_05",
+    "heldout_06"
+  ],
+  "selection_rule": "Maximize development admission count; then minimize mean admitted common score; exact ties select default. Same two-profile search for every method.",
+  "scope": "Independently seeded task/obstacle-position samples on one fixed terrain scene; not new terrain worlds.",
+  "benchmark_reference": "https://numbbo.github.io/coco-doc/experimental-setup/"
+}

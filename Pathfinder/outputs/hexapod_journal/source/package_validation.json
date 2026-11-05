@@ -1,0 +1,22 @@
+{
+  "documents": [
+    {
+      "file": "Hexapod_Journal_Manuscript.docx",
+      "pages": 15,
+      "figures": 6,
+      "sha256": "a6f7a6c657b8175f3cffdebbe39cf2fbaf9b8ee5525812835817bf401e7ecad0"
+    },
+    {
+      "file": "Hexapod_Supervisor_and_Publication_Guide.docx",
+      "pages": 6,
+      "figures": 1,
+      "sha256": "03f92de8e93d20671d9690326ecdac8cb26a78613193787ad852a8e6165b99f1"
+    }
+  ],
+  "raw_attempts": 168,
+  "source_archive_hashes": "verified",
+  "independent_reanalysis": "passed",
+  "visual_review": "All 15 manuscript pages and all 6 guide pages inspected; final revised pages reinspected and unchanged pages verified pixel-identical.",
+  "placeholder_fields": "Intentional author identities, funding, competing interests and contributions awaiting human completion.",
+  "scientific_status": "Preliminary assisted simulation benchmark; not submission-ready evidence of general superiority."
+}

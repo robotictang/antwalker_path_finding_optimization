@@ -1,0 +1,217 @@
+{
+  "attempts": 1200,
+  "phase_counts": {
+    "v6_budget_0p5": 72,
+    "v6_budget_1p0": 72,
+    "v6_development_alternative": 48,
+    "v6_development_default": 48,
+    "v6_physics_legacy": 12,
+    "v6_physics_reduced": 12,
+    "v6_physics_safe": 72,
+    "v6_primary": 576,
+    "v6_weight_distance": 72,
+    "v6_weight_energy": 72,
+    "v6_weight_terrain": 72,
+    "v6_weight_time": 72
+  },
+  "primary": [
+    {
+      "method": "proposed_v4",
+      "attempts": 96,
+      "admitted": 90,
+      "mean_q": 1.189768831728036,
+      "mean_planning_s": 0.4405829149679145,
+      "mean_metric_calls": 310.875,
+      "outcomes": {
+        "found": 90,
+        "resource_rejected": 6
+      }
+    },
+    {
+      "method": "pso_polished",
+      "attempts": 96,
+      "admitted": 88,
+      "mean_q": 1.1974284953836454,
+      "mean_planning_s": 0.2630720384598438,
+      "mean_metric_calls": 59.0625,
+      "outcomes": {
+        "found": 88,
+        "resource_rejected": 8
+      }
+    },
+    {
+      "method": "aco_polished",
+      "attempts": 96,
+      "admitted": 88,
+      "mean_q": 1.200112273262928,
+      "mean_planning_s": 0.43169275438049226,
+      "mean_metric_calls": 37.645833333333336,
+      "outcomes": {
+        "found": 88,
+        "resource_rejected": 8
+      }
+    },
+    {
+      "method": "ompl_rrtstar",
+      "attempts": 96,
+      "admitted": 77,
+      "mean_q": 1.263812079684236,
+      "mean_planning_s": 1.3651045808207225,
+      "mean_metric_calls": 2722.1354166666665,
+      "outcomes": {
+        "found": 77,
+        "resource_rejected": 8,
+        "no_route": 11
+      }
+    },
+    {
+      "method": "ompl_seeded_rrtstar",
+      "attempts": 96,
+      "admitted": 90,
+      "mean_q": 1.2006244283138279,
+      "mean_planning_s": 1.3832273710722802,
+      "mean_metric_calls": 2396.7083333333335,
+      "outcomes": {
+        "found": 90,
+        "resource_rejected": 6
+      }
+    },
+    {
+      "method": "ompl_rrtconnect",
+      "attempts": 96,
+      "admitted": 78,
+      "mean_q": 1.3329600148715046,
+      "mean_planning_s": 0.06615789833570791,
+      "mean_metric_calls": 14.4375,
+      "outcomes": {
+        "found": 78,
+        "resource_rejected": 18
+      }
+    }
+  ],
+  "physics": [
+    {
+      "phase": "v6_physics_legacy",
+      "method": "proposed_v4",
+      "tracking_policy": "legacy",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 28.99600000000198,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_reduced",
+      "method": "proposed_v4",
+      "tracking_policy": "safe_v6",
+      "assistance": 0.5,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 31.229333333335163,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "proposed_v4",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 31.214666666668496,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "pso_polished",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 31.424000000001715,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "aco_polished",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 31.49866666666834,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "ompl_rrtstar",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 11,
+      "executed": 11,
+      "successful": 11,
+      "mean_destination_s_success_only": 35.048727272727255,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 11,
+        "no_route": 1
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "ompl_seeded_rrtstar",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 31.416000000001716,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    },
+    {
+      "phase": "v6_physics_safe",
+      "method": "ompl_rrtconnect",
+      "tracking_policy": "safe_v6",
+      "assistance": 1.0,
+      "scheduled": 12,
+      "admitted": 12,
+      "executed": 12,
+      "successful": 12,
+      "mean_destination_s_success_only": 35.810666666667416,
+      "mean_safety_stops_executed": 0.0,
+      "outcomes": {
+        "arrived": 12
+      }
+    }
+  ],
+  "physics_numerical_warnings": [],
+  "interpretation": "Descriptive 95% intervals resample whole worlds, not individual repeated seeds. Relative scores are conditional on joint admission. The tested pipeline is assisted simulation and has no measured electrical validation. Native and Python methods use different inner counter primitives; all metric calls are reported."
+}

@@ -1,0 +1,61 @@
+Requested: Place 1 (Pine Forest)
+DESTINATION ROUTING: 1-4 choose place | P fastest/shortest | X cancel | C camera | B battery test | 0 charge
+ROUTE READY: Place 1 (Pine Forest) | fastest | 46.4 m | estimated 114 s | 5 segments
+{
+  "steps": 110,
+  "simulation_seconds": 1.7600000000000013,
+  "mode": "walking_only",
+  "position": [
+    -0.0001419068375073884,
+    -19.977989121954074,
+    0.46678097710595456
+  ],
+  "battery": 99.98711158075487,
+  "visited_places": [],
+  "stage": "moving",
+  "arrivals": [],
+  "planned_routes": [
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          -0.5,
+          -5.25
+        ],
+        [
+          -10.0,
+          1.75
+        ],
+        [
+          -10.25,
+          13.25
+        ],
+        [
+          -12.0,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 46.396852689865874,
+      "estimated_seconds": 114.29458231342664
+    }
+  ],
+  "route_mode": "fastest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.010782093987394423,
+  "max_body_tilt_degrees": 0.03374560572954285,
+  "finite_state": true,
+  "solver_warnings": 0
+}

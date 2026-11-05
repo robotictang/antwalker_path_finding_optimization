@@ -1,0 +1,36 @@
+Audited v6_development_default
+Audited v6_development_alternative
+Audited v6_primary
+Audited v6_weight_distance
+Audited v6_weight_time
+Audited v6_weight_energy
+Audited v6_weight_terrain
+Audited v6_budget_0p5
+Audited v6_budget_1p0
+Audited v6_physics_safe
+Audited v6_physics_legacy
+Audited v6_physics_reduced
+{
+  "state": "passed",
+  "attempts": 1200,
+  "phase_counts": {
+    "v6_development_default": 48,
+    "v6_development_alternative": 48,
+    "v6_primary": 576,
+    "v6_weight_distance": 72,
+    "v6_weight_time": 72,
+    "v6_weight_energy": 72,
+    "v6_weight_terrain": 72,
+    "v6_budget_0p5": 72,
+    "v6_budget_1p0": 72,
+    "v6_physics_safe": 72,
+    "v6_physics_legacy": 12,
+    "v6_physics_reduced": 12
+  },
+  "unique_routes_collision_checked": 298,
+  "recomputed_metrics": 1192,
+  "physics_executions": 95,
+  "errors": [],
+  "warnings": [],
+  "scope": "Internal protocol, archived provenance, geometry, resource and numerical validation; no hardware or electrical validation"
+}

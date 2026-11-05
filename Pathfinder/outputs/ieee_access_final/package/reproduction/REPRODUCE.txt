@@ -1,0 +1,17 @@
+TESTED SCIENTIFIC RUNTIME
+Linux x86_64, Python 3.10.12, MuJoCo 3.9.0, NumPy 2.2.6, SciPy 1.15.3, OMPL 2.0.1. Native isolation requires fork. research_vendor includes the tested CPython 3.10 Linux wheel files and its licenses; another platform needs a compatible installation and a new native provenance record. Use an isolated environment.
+
+From reproduction/mujoco:
+python3 -m unittest research.test_v6 research.test_v5 research.test_v4 research.test_v3 research.test_research research.test_reliability research.test_server
+python3 -m research.final_study --directory outputs/research/reproduction_v6
+
+This creates a new complete campaign. Do not point it at the frozen evidence directory. Wall-clock termination and workload mean route coordinates, profile choices and runtime can vary on another run or computer. The preserved records, not bit-identical fresh outcomes, support this manuscript. Original source/model snapshots are archived separately; the portable model has documented path-only asset edits. Previous manifest and source-lock files are included because final_study checks prior world hashes and the scientific source list.
+
+MANUSCRIPT
+Install python-docx, lxml, NumPy and Matplotlib in an authoring environment. From package root run source/analyze_final.py, then source/build_manuscript.py. They read the included evidence directories and original official template. source/update_manuscript.py is the preparation record with task-host fallback paths; manuscript.md and build_manuscript.py are the portable authored source. render_paper.py is a task-host rendering wrapper; use a compatible Word/PDF renderer elsewhere.
+
+COMPARISON
+Double-click Comparison_Offline.html for the portable primary-data dashboard. Or start python3 -m research.server --port 8771 from reproduction/mujoco and open http://127.0.0.1:8771/comparison/. The compiled dashboard is included. Authoring source is provided under research_dashboard/src/content; rebuilding requires the installed Data plugin runtime. Original frozen run folders remain under evidence and are not automatically populated into the portable server run selector.
+
+ELECTRICAL DATA
+Read electrical_validation/MEASUREMENT_PROTOCOL.md. Templates contain no measurements. Real voltage/current and external measured mission data are required. No real electrical profile or hardware result is supplied.

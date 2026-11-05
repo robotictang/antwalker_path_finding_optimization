@@ -1,0 +1,28 @@
+{
+  "a_docx": "/home/user123456/Downloads/hexapod_asset/outputs/ieee_access_final/template/Access-Template-2024.docx",
+  "b_docx": "/home/user123456/Downloads/hexapod_asset/outputs/ieee_access_final/IEEE_Access_Hexapod_Final_Manuscript.docx",
+  "pages_a": 9,
+  "pages_b": 19,
+  "changed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "num_changed_pages": 19
+}

@@ -1,0 +1,53 @@
+Dispatch: Place 4 (Sand Clearing)
+WALKING ONLY: C camera | B 18% battery | 1-4 dispatch | 0 charge | M wheels unavailable
+Step 2000: approach, place 4, battery 96.2%, contacts 0, route errors 0
+Arrived: Place 4 (Sand Clearing)
+Step 4000: circuit, place 4, battery 92.5%, contacts 0, route errors 0
+Step 6000: circuit, place 4, battery 89.0%, contacts 0, route errors 0
+LOW BATTERY / CHARGE REQUEST: 18.0% -> center charging pad
+Step 8000: circuit, place 4, battery 15.1%, contacts 0, route errors 0
+Step 10000: circuit, place 4, battery 11.4%, contacts 0, route errors 0
+Docked at center pad; charging.
+Charged to 100%; resuming Place 4 (Sand Clearing)
+Step 12000: resume, place 4, battery 99.8%, contacts 0, route errors 0
+Step 14000: resume, place 4, battery 96.0%, contacts 0, route errors 0
+Step 16000: resume, place 4, battery 92.2%, contacts 0, route errors 0
+Step 18000: circuit, place 4, battery 88.5%, contacts 0, route errors 0
+{
+  "steps": 19000,
+  "simulation_seconds": 303.99999999999534,
+  "mode": "walking_only",
+  "position": [
+    10.56520576137181,
+    -9.533696972751967,
+    0.4688190732031525
+  ],
+  "battery": 86.67973813734051,
+  "visited_places": [
+    4
+  ],
+  "scanned_sectors": [
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ]
+  ],
+  "completed_tours": 0,
+  "charge_completed": 1,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": -0.004137224198697068,
+  "max_body_tilt_degrees": 0.6147565842776361,
+  "finite_state": true,
+  "solver_warnings": 0
+}

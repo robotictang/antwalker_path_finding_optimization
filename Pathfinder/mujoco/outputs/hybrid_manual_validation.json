@@ -1,0 +1,93 @@
+{
+  "steps": 700,
+  "simulation_seconds": 11.19999999999921,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 0.4800000000000003,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -7.462434540919317e-07,
+        -19.99999998211982
+      ]
+    },
+    {
+      "time": 3.2640000000000025,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -8.425475805619676e-07,
+        -19.999999325796285
+      ]
+    },
+    {
+      "time": 4.800000000000003,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -8.425465751603971e-07,
+        -19.999999326271226
+      ]
+    },
+    {
+      "time": 7.584000000000006,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -2.141243260376246e-06,
+        -19.999998970764942
+      ]
+    }
+  ],
+  "position": [
+    -8.396395304547197e-07,
+    -19.999997896291173,
+    0.3097328623549447
+  ],
+  "battery": 99.99999779924742,
+  "visited_places": [],
+  "stage": "idle",
+  "arrivals": [],
+  "planned_routes": [],
+  "route_mode": "fastest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.004311133858590097,
+  "max_body_tilt_degrees": 0.0003652939001356824,
+  "finite_state": true,
+  "solver_warnings": 0,
+  "trace": [
+    {
+      "step": 250,
+      "xy": [
+        -8.425488562025482e-07,
+        -19.999999326023712
+      ],
+      "battery": 99.99999895986673,
+      "stage": "idle",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 500,
+      "xy": [
+        -1.894233096203318e-06,
+        -19.99999891517439
+      ],
+      "battery": 99.99999859435617,
+      "stage": "idle",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    }
+  ]
+}

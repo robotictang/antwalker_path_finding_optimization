@@ -1,0 +1,1360 @@
+<mujoco model="open_world_hexapod_expedition">
+  <compiler angle="radian" coordinate="local" autolimits="true" />
+  <option timestep="0.004" iterations="50" solver="Newton" integrator="implicitfast" gravity="0 0 -9.81">
+    <flag contact="enable" frictionloss="enable" />
+  </option>
+  <visual>
+    <global offwidth="1920" offheight="1080" />
+    <quality shadowsize="4096" />
+    <map stiffness="100" shadowscale="0.6" />
+    <headlight ambient="0.48 0.46 0.42" diffuse="0.55 0.53 0.50" specular="0.22 0.22 0.20" />
+  </visual>
+  <asset>
+    <texture name="skybox_tex" type="skybox" builtin="gradient" rgb1="0.45 0.65 0.88" rgb2="0.82 0.90 0.96" width="1024" height="1024" />
+    <mesh name="pine_tall_mesh" file="models/pine_tall.obj" />
+    <mesh name="pine_mid_mesh" file="models/pine_mid.obj" />
+    <mesh name="pine_dense_mesh" file="models/pine_dense.obj" />
+    <mesh name="pine_small_mesh" file="models/pine_small.obj" />
+    <mesh name="rock1_mesh" file="models/granite_rock1.obj" />
+    <mesh name="small_rock_mesh" file="models/granite_rock1.obj" scale="0.40 0.40 0.32" />
+    <mesh name="rock2_mesh" file="models/granite_rock2.obj" />
+    <mesh name="log_mesh" file="models/fallen_log.obj" />
+    <mesh name="mesh_base_link" file="/home/user123456/Downloads/hexapod_asset/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_top_cover" file="/home/user123456/Downloads/hexapod_asset/meshes/top_cover.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_coxa_link" file="/home/user123456/Downloads/hexapod_asset/meshes/coxa_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_femur_link" file="/home/user123456/Downloads/hexapod_asset/meshes/femur_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_tibia_link" file="/home/user123456/Downloads/hexapod_asset/meshes/tibia_link.stl" scale="0.001 0.001 0.001" />
+    <material name="chassis_cad_mat" rgba="0.25 0.25 0.28 1.0" specular="0.45" roughness="0.55" />
+    <material name="carapace_carbon" rgba="0.13 0.14 0.16 1.0" specular="0.85" roughness="0.18" />
+    <material name="coxa_cad_mat" rgba="0.85 0.45 0.10 1.0" specular="0.65" roughness="0.30" />
+    <material name="leg_cad_mat" rgba="0.30 0.30 0.32 1.0" specular="0.55" roughness="0.40" />
+    <material name="rs04_cad_mat" rgba="0.18 0.18 0.20 1.0" specular="0.70" roughness="0.25" />
+    <texture name="earth_ground_tex" type="2d" file="textures/realistic_terrain_earth.png" />
+    <texture name="rock_granite_tex" type="2d" file="textures/realistic_rock_granite.png" />
+    <texture name="bark_wood_tex" type="2d" file="textures/realistic_tree_bark.png" />
+    <texture name="pine_needles_tex" type="2d" file="textures/pine_needles.png" />
+    <texture name="concrete_pad_tex" type="2d" file="textures/concrete_dock_pad.png" />
+    <texture name="kiosk_screen_tex" type="2d" file="textures/kiosk_screen.png" />
+    <texture name="kiosk_lockers_tex" type="2d" file="textures/kiosk_lockers.png" />
+    <texture name="wet_mud_tex" type="2d" file="textures/realistic_wet_mud.png" />
+    <texture name="sand_gravel_tex" type="2d" file="textures/realistic_sand_gravel.png" />
+    <texture name="forest_moss_tex" type="2d" file="textures/realistic_forest_moss_soil.png" />
+    <texture name="dirt_trail_tex" type="2d" file="textures/forest_dirt_path.png" />
+    <material name="world_base_mat" texture="earth_ground_tex" texrepeat="1 1" rgba="0.95 0.95 0.95 1.0" reflectance="0.04" roughness="0.95" />
+    <material name="forest_ground_mat" texture="forest_moss_tex" texrepeat="3 3" rgba="0.88 0.95 0.85 1.0" roughness="0.95" reflectance="0.04" />
+    <material name="dirt_trail_mat" texture="dirt_trail_tex" texrepeat="2 4" rgba="0.85 0.75 0.65 1.0" roughness="0.90" />
+    <material name="quarry_ground_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.75 0.75 0.78 1.0" roughness="0.85" reflectance="0.15" />
+    <material name="mud_marsh_ground_mat" texture="wet_mud_tex" texrepeat="3 3" rgba="0.55 0.45 0.38 1.0" roughness="0.92" reflectance="0.12" />
+    <material name="desert_sand_ground_mat" texture="sand_gravel_tex" texrepeat="3 3" rgba="0.95 0.82 0.58 1.0" roughness="0.90" reflectance="0.10" />
+    <material name="asphalt_highway_mat" texture="earth_ground_tex" texrepeat="2 8" rgba="0.25 0.25 0.28 1.0" reflectance="0.10" roughness="0.88" />
+    <material name="road_stripe_yellow" rgba="0.98 0.82 0.12 1.0" emission="0.45" />
+    <material name="road_stripe_white" rgba="0.95 0.95 0.95 1.0" emission="0.40" />
+    <material name="traffic_cone_orange" rgba="0.98 0.42 0.05 1.0" emission="0.40" />
+    <material name="cone_white_stripe" rgba="0.98 0.98 0.98 1.0" emission="0.50" />
+    <material name="pine_trunk_mat" texture="bark_wood_tex" texrepeat="1 6" rgba="0.52 0.38 0.26 1.0" reflectance="0.05" roughness="0.95" />
+    <material name="pine_foliage_mat" texture="pine_needles_tex" texrepeat="3 3" rgba="0.65 0.85 0.65 1.0" roughness="0.90" reflectance="0.05" />
+    <material name="bush_foliage_mat" rgba="0.28 0.52 0.22 1.0" roughness="0.90" />
+    <material name="broken_slab_mat" texture="rock_granite_tex" texrepeat="1 1" rgba="0.65 0.65 0.68 1.0" reflectance="0.22" roughness="0.78" />
+    <material name="gravel_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.58 0.56 0.54 1.0" roughness="0.92" />
+    <material name="marsh_water_mat" rgba="0.08 0.18 0.16 0.95" specular="0.98" emission="0.10" reflectance="0.95" roughness="0.02" />
+    <material name="mud_berm_mat" texture="wet_mud_tex" texrepeat="2 2" rgba="0.42 0.32 0.24 1.0" roughness="0.95" reflectance="0.08" />
+    <material name="dune_sand_mat" texture="sand_gravel_tex" texrepeat="2 2" rgba="0.88 0.72 0.48 1.0" reflectance="0.10" roughness="0.92" />
+    <material name="sandstone_mat" texture="sand_gravel_tex" texrepeat="1 2" rgba="0.82 0.60 0.42 1.0" reflectance="0.12" roughness="0.88" />
+    <material name="terracotta_mat" rgba="0.78 0.44 0.28 1.0" roughness="0.88" />
+    <material name="granite_rock_mat" texture="rock_granite_tex" texrepeat="2 2" reflectance="0.14" roughness="0.86" />
+    <material name="fallen_log_mat" texture="bark_wood_tex" texrepeat="1 3" reflectance="0.06" roughness="0.92" />
+    <material name="stump_bark_mat" texture="bark_wood_tex" texrepeat="1 2" reflectance="0.06" roughness="0.92" />
+    <material name="stump_heartwood" rgba="0.44 0.30 0.16 1.0" />
+    <material name="tent_canvas_mat" rgba="0.85 0.80 0.68 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="tent_fly_mat" rgba="0.22 0.38 0.26 1.0" reflectance="0.25" roughness="0.75" />
+    <material name="camp_wood_mat" texture="bark_wood_tex" rgba="0.45 0.35 0.25 1.0" roughness="0.85" />
+    <material name="crate_metal_mat" rgba="0.45 0.48 0.52 1.0" reflectance="0.30" />
+    <material name="field_station_metal" rgba="0.78 0.80 0.82 1.0" reflectance="0.35" />
+    <material name="solar_cell_mat" rgba="0.12 0.16 0.28 1.0" reflectance="0.55" specular="0.9" />
+    <material name="survey_flag_orange" rgba="0.95 0.42 0.10 1.0" />
+    <material name="campfire_stone_mat" texture="rock_granite_tex" rgba="0.40 0.40 0.42 1.0" />
+    <material name="campfire_ember_mat" rgba="0.98 0.35 0.05 1.0" emission="0.85" />
+    <material name="reed_green_mat" rgba="0.26 0.48 0.18 1.0" roughness="0.90" />
+    <material name="lily_flower_pink" rgba="0.98 0.65 0.75 1.0" emission="0.20" />
+    <material name="lily_flower_white" rgba="0.98 0.98 0.95 1.0" emission="0.20" />
+    <material name="cactus_flower_yellow" rgba="0.98 0.90 0.15 1.0" emission="0.30" />
+    <material name="mountain_rock_mat" texture="rock_granite_tex" texrepeat="6 6" rgba="0.52 0.52 0.54 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="canyon_red_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.65 0.42 0.30 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="concrete_pad_mat" texture="concrete_pad_tex" texrepeat="2 2" rgba="0.82 0.82 0.84 1.0" reflectance="0.12" roughness="0.85" />
+    <material name="kiosk_pedestal_mat" rgba="0.25 0.28 0.32 1.0" reflectance="0.25" />
+    <material name="kiosk_cabinet_mat" rgba="0.92 0.93 0.95 1.0" reflectance="0.30" />
+    <material name="kiosk_screen_mat" texture="kiosk_screen_tex" rgba="1 1 1 1" emission="0.45" />
+    <material name="kiosk_lockers_mat" texture="kiosk_lockers_tex" rgba="1 1 1 1" reflectance="0.25" />
+    <material name="kiosk_blue_accent" rgba="0.12 0.45 0.85 1.0" reflectance="0.40" />
+    <material name="solar_roof_mat" rgba="0.22 0.28 0.38 1.0" reflectance="0.60" specular="0.8" />
+    <material name="kiosk_led_green" rgba="0.10 0.95 0.25 1.0" emission="0.9" />
+    <material name="hazard_yellow_mat" rgba="0.95 0.80 0.10 1.0" emission="0.25" />
+    <material name="utility_gray_mat" rgba="0.35 0.38 0.42 1.0" reflectance="0.25" />
+    <material name="honda_white_fascia" rgba="0.95 0.96 0.98 1.0" reflectance="0.50" specular="0.80" roughness="0.20" />
+    <material name="honda_cabinet_dark" rgba="0.20 0.22 0.26 1.0" reflectance="0.22" specular="0.35" roughness="0.50" />
+    <material name="honda_bay_pocket" rgba="0.07 0.08 0.10 1.0" reflectance="0.12" roughness="0.70" />
+    <material name="honda_slot_blue_led" rgba="0.05 0.75 1.00 1.0" emission="1.00" />
+    <material name="honda_battery_body" rgba="0.13 0.14 0.16 1.0" reflectance="0.25" roughness="0.40" />
+    <material name="honda_handle_blue" rgba="0.08 0.55 0.98 1.0" emission="0.55" specular="0.70" />
+    <material name="honda_brand_teal" rgba="0.05 0.90 0.95 1.0" emission="0.85" />
+    <material name="honda_grille_gray" rgba="0.15 0.16 0.18 1.0" roughness="0.60" />
+    <material name="chassis_mat" rgba="0.16 0.18 0.20 1.0" reflectance="0.35" roughness="0.55" />
+    <material name="foot_rubber" rgba="0.10 0.10 0.12 1.0" roughness="0.95" />
+    <material name="wheel_mat" rgba="0.12 0.12 0.14 1.0" roughness="0.95" />
+    <material name="rim_alloy_mat" rgba="0.75 0.78 0.82 1.0" reflectance="0.70" specular="0.90" roughness="0.20" />
+    <material name="sensor_mat" rgba="0.08 0.08 0.10 1.0" specular="0.9" />
+    <material name="headlight_lens_mat" rgba="0.95 0.98 1.0 1.0" emission="1.0" />
+    <material name="battery_light" rgba="0.10 0.95 0.25 1.0" emission="1.0" />
+    <material name="battery_halo_mat" rgba="0.10 0.95 0.25 0.35" emission="0.6" />
+    <material name="scan_core_mat" rgba="0.15 0.85 0.95 1.0" emission="0.85" />
+    <material name="carapace_accent_orange" rgba="0.85 0.45 0.10 1.0" emission="0.35" reflectance="0.40" />
+    <material name="carapace_titanium_trim" rgba="0.75 0.78 0.82 1.0" reflectance="0.60" specular="0.75" />
+    <material name="carapace_mat" rgba="0.16 0.18 0.22 1.0" reflectance="0.45" specular="0.70" roughness="0.35" />
+    <material name="battery_box_mat" rgba="0.11 0.12 0.14 1.0" reflectance="0.30" specular="0.60" roughness="0.45" />
+    <material name="pocket_channel_mat" rgba="0.13 0.14 0.16 1.0" reflectance="0.20" roughness="0.65" />
+    <material name="excavator_yellow_mat" rgba="0.95 0.75 0.05 1.0" reflectance="0.40" specular="0.65" />
+    <material name="excavator_tracks_mat" rgba="0.18 0.18 0.20 1.0" roughness="0.90" />
+    <material name="obelisk_hieroglyph_mat" rgba="0.85 0.65 0.45 1.0" roughness="0.85" />
+    <material name="container_teal" rgba="0.12 0.48 0.52 1.0" reflectance="0.30" />
+    <material name="container_orange" rgba="0.85 0.38 0.10 1.0" reflectance="0.30" />
+    <material name="bat_led_mat_1" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_2" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_3" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_4" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_5" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="lidar_laser_mat" rgba="0.05 0.98 0.92 0.95" emission="1.0" />
+    <material name="lidar_cone_mat" rgba="0.05 0.98 0.92 0.18" emission="0.65" />
+    <material name="lidar_wave_ring_mat" rgba="0.05 0.98 0.92 0.35" emission="0.80" />
+    <material name="road_marker_amber" rgba="0.98 0.70 0.05 1.0" emission="0.80" />
+    <material name="sign_green_mat" rgba="0.05 0.45 0.18 1.0" reflectance="0.25" />
+    <material name="sign_post_metal" rgba="0.75 0.75 0.78 1.0" reflectance="0.50" />
+    <material name="antenna_light_red" rgba="0.98 0.05 0.05 1.0" emission="1.0" />
+    <material name="telemetry_beacon_blue" rgba="0.10 0.65 0.98 1.0" emission="0.95" />
+    <material name="service_silver" rgba=".52 .59 .64 1" specular=".45" shininess=".4" />
+    <material name="pack_orange" rgba=".94 .31 .055 1" specular=".45" shininess=".4" />
+    <material name="panel_dark" rgba=".065 .09 .115 1" specular=".45" shininess=".4" />
+    <material name="route_teal" rgba=".18 .31 .14 1" specular=".45" shininess=".4" />
+    <material name="site_identity_1" rgba=".15 .5 .25 1" emission=".25" />
+    <material name="site_identity_2" rgba=".6 .48 .3 1" emission=".25" />
+    <material name="site_identity_3" rgba=".08 .48 .6 1" emission=".25" />
+    <material name="site_identity_4" rgba=".85 .52 .13 1" emission=".25" />
+  </asset>
+  <default>
+    <default class="robot_internal">
+      <geom contype="0" conaffinity="0" friction="1.5 0.05 0.001" />
+      <joint damping="2.5" armature="0.02" />
+    </default>
+    <default class="leg_collision_geom">
+      <geom contype="2" conaffinity="1" friction="1.8 0.08 0.005" solref="0.008 1" solimp="0.95 0.99 0.001" />
+      <joint damping="3.2" armature="0.03" />
+    </default>
+    <default class="foot_geom">
+      <geom type="sphere" size="0.045" material="foot_rubber" contype="2" conaffinity="1" friction="2.8 0.12 0.008" solref="0.005 1" solimp="0.95 0.99 0.001" />
+    </default>
+    <default class="wheel_geom">
+      <geom type="cylinder" size="0.090 0.035" euler="1.5707963 0 0" material="wheel_mat" contype="2" conaffinity="1" friction="2.4 0.08 0.005" solref="0.008 1" solimp="0.95 0.99 0.001" />
+    </default>
+    <default class="visual_only">
+      <geom contype="0" conaffinity="0" density="0.01" />
+    </default>
+  </default>
+  <worldbody>
+    <light name="sun" pos="6.0 -4.0 18.0" dir="-0.35 0.25 -0.9" diffuse="0.95 0.92 0.86" specular="0.35 0.35 0.35" castshadow="true" />
+    <light name="sky_fill" pos="-8.0 8.0 16.0" dir="0.3 -0.3 -0.9" diffuse="0.35 0.42 0.52" specular="0.1 0.1 0.1" castshadow="false" />
+    <geom name="ground" type="plane" size="36.0 36.0 0.1" material="world_base_mat" contype="1" conaffinity="7" friction="1.5 0.05 0.002" />
+    <geom name="zone_floor_p1" type="box" size="9.5 9.0 0.004" pos="-19.0 17.0 0.004" material="forest_ground_mat" contype="0" conaffinity="0" />
+    <geom name="zone_trail_p1" type="box" size="7.0 0.8 0.005" pos="-18.0 16.0 0.005" material="dirt_trail_mat" contype="0" conaffinity="0" />
+    <geom name="zone_floor_p2" type="box" size="9.5 9.0 0.004" pos="19.0 17.0 0.004" material="quarry_ground_mat" contype="0" conaffinity="0" />
+    <geom name="zone_floor_p3" type="box" size="9.5 8.0 0.004" pos="-19.0 -12.0 0.004" material="mud_marsh_ground_mat" contype="0" conaffinity="0" />
+    <geom name="pond_p3_1" type="box" size="4.5 3.0 0.006" pos="-19.5 -13.0 0.006" material="marsh_water_mat" contype="0" conaffinity="0" />
+    <geom name="pond_p3_2" type="cylinder" size="2.5 0.006" pos="-15.0 -8.5 0.006" material="marsh_water_mat" contype="0" conaffinity="0" />
+    <geom name="pond_p3_3" type="cylinder" size="2.0 0.006" pos="-23.0 -10.0 0.006" material="marsh_water_mat" contype="0" conaffinity="0" />
+    <geom name="zone_floor_p4" type="box" size="9.5 8.0 0.004" pos="19.0 -12.0 0.004" material="desert_sand_ground_mat" contype="0" conaffinity="0" />
+    <geom name="dune_ridge_1" type="ellipsoid" size="5.5 1.4 0.18" pos="20.0 -7.0 0.08" euler="0 0 0.25" material="desert_sand_ground_mat" contype="0" conaffinity="0" />
+    <geom name="dune_ridge_2" type="ellipsoid" size="6.0 1.6 0.22" pos="21.0 -15.5 0.10" euler="0 0 -0.15" material="desert_sand_ground_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_center_main" type="box" size="1.60 23.0 0.003" pos="0.0 -1.0 0.003" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_center_line" type="box" size="0.06 23.0 0.005" pos="0.0 -1.0 0.005" material="road_stripe_yellow" contype="0" conaffinity="0" />
+    <geom name="hwy_center_edge_l" type="box" size="0.04 23.0 0.005" pos="-1.50 -1.0 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_center_edge_r" type="box" size="0.04 23.0 0.005" pos=" 1.50 -1.0 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_north_cross" type="box" size="23.0 1.50 0.003" pos="0.0 16.0 0.003" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_north_line" type="box" size="23.0 0.06 0.005" pos="0.0 16.0 0.005" material="road_stripe_yellow" contype="0" conaffinity="0" />
+    <geom name="hwy_north_edge_t" type="box" size="23.0 0.04 0.005" pos="0.0 17.4 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_north_edge_b" type="box" size="23.0 0.04 0.005" pos="0.0 14.6 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_south_cross" type="box" size="23.0 1.50 0.003" pos="0.0 -10.0 0.003" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_south_line" type="box" size="23.0 0.06 0.005" pos="0.0 -10.0 0.005" material="road_stripe_yellow" contype="0" conaffinity="0" />
+    <geom name="hwy_south_edge_t" type="box" size="23.0 0.04 0.005" pos="0.0 -8.6 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_south_edge_b" type="box" size="23.0 0.04 0.005" pos="0.0 -11.4 0.005" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="hwy_west_bypass" type="box" size="1.40 13.0 0.003" pos="-10.0 3.0 0.003" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_west_line" type="box" size="0.05 13.0 0.005" pos="-10.0 3.0 0.005" material="road_stripe_yellow" contype="0" conaffinity="0" />
+    <geom name="hwy_east_bypass" type="box" size="1.40 13.0 0.003" pos=" 10.0 3.0 0.003" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_east_line" type="box" size="0.05 13.0 0.005" pos=" 10.0 3.0 0.005" material="road_stripe_yellow" contype="0" conaffinity="0" />
+    <geom name="hwy_diag_sw" type="box" size="1.40 4.5 0.003" pos="-4.5 -15.5 0.003" euler="0 0  0.65" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="hwy_diag_se" type="box" size="1.40 4.5 0.003" pos=" 4.5 -15.5 0.003" euler="0 0 -0.65" material="asphalt_highway_mat" contype="0" conaffinity="0" />
+    <geom name="mount_n_0" type="cylinder" size="4.40 6.00" pos="-35.0 35.8 6.00" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_0" type="cylinder" size="5.72 3.60" pos="-35.0 34.2 3.60" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_1" type="cylinder" size="4.25 8.90" pos="-30.0 35.8 8.90" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_1" type="cylinder" size="5.53 5.34" pos="-30.0 34.2 5.34" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_2" type="cylinder" size="3.85 10.43" pos="-25.0 35.8 10.43" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_2" type="cylinder" size="5.00 6.26" pos="-25.0 34.2 6.26" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_3" type="cylinder" size="3.28 9.88" pos="-20.0 35.8 9.88" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_3" type="cylinder" size="4.27 5.93" pos="-20.0 34.2 5.93" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_4" type="cylinder" size="2.70 7.51" pos="-15.0 35.8 7.51" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_4" type="cylinder" size="3.51 4.50" pos="-15.0 34.2 4.50" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_5" type="cylinder" size="2.24 4.42" pos="-10.0 35.8 4.42" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_5" type="cylinder" size="2.91 2.65" pos="-10.0 34.2 2.65" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_6" type="cylinder" size="2.01 2.08" pos="-5.0 35.8 2.08" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_6" type="cylinder" size="2.62 1.25" pos="-5.0 34.2 1.25" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_7" type="cylinder" size="2.08 1.58" pos="0.0 35.8 1.58" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_7" type="cylinder" size="2.70 0.95" pos="0.0 34.2 0.95" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_8" type="cylinder" size="2.42 3.16" pos="5.0 35.8 3.16" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_8" type="cylinder" size="3.14 1.90" pos="5.0 34.2 1.90" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_9" type="cylinder" size="2.95 6.08" pos="10.0 35.8 6.08" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_9" type="cylinder" size="3.83 3.65" pos="10.0 34.2 3.65" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_10" type="cylinder" size="3.54 8.96" pos="15.0 35.8 8.96" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_10" type="cylinder" size="4.60 5.37" pos="15.0 34.2 5.37" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_11" type="cylinder" size="4.05 10.45" pos="20.0 35.8 10.45" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_11" type="cylinder" size="5.27 6.27" pos="20.0 34.2 6.27" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_12" type="cylinder" size="4.35 9.85" pos="25.0 35.8 9.85" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_12" type="cylinder" size="5.66 5.91" pos="25.0 34.2 5.91" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_13" type="cylinder" size="4.37 7.44" pos="30.0 35.8 7.44" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_13" type="cylinder" size="5.68 4.46" pos="30.0 34.2 4.46" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_14" type="cylinder" size="4.10 4.35" pos="35.0 35.8 4.35" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_n_b_14" type="cylinder" size="5.34 2.61" pos="35.0 34.2 2.61" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_0" type="cylinder" size="3.00 9.50" pos="-35.0 -35.8 9.50" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_0" type="cylinder" size="3.90 5.70" pos="-35.0 -34.2 5.70" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_1" type="cylinder" size="3.56 8.29" pos="-30.0 -35.8 8.29" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_1" type="cylinder" size="4.63 4.97" pos="-30.0 -34.2 4.97" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_2" type="cylinder" size="3.93 5.38" pos="-25.0 -35.8 5.38" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_2" type="cylinder" size="5.11 3.23" pos="-25.0 -34.2 3.23" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_3" type="cylinder" size="3.97 2.55" pos="-20.0 -35.8 2.55" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_3" type="cylinder" size="5.17 1.53" pos="-20.0 -34.2 1.53" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_4" type="cylinder" size="3.68 1.51" pos="-15.0 -35.8 1.51" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_4" type="cylinder" size="4.78 0.90" pos="-15.0 -34.2 0.90" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_5" type="cylinder" size="3.14 2.89" pos="-10.0 -35.8 2.89" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_5" type="cylinder" size="4.08 1.73" pos="-10.0 -34.2 1.73" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_6" type="cylinder" size="2.56 5.85" pos="-5.0 -35.8 5.85" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_6" type="cylinder" size="3.32 3.51" pos="-5.0 -34.2 3.51" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_7" type="cylinder" size="2.13 8.60" pos="0.0 -35.8 8.60" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_7" type="cylinder" size="2.77 5.16" pos="0.0 -34.2 5.16" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_8" type="cylinder" size="2.00 9.47" pos="5.0 -35.8 9.47" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_8" type="cylinder" size="2.60 5.68" pos="5.0 -34.2 5.68" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_9" type="cylinder" size="2.23 7.93" pos="10.0 -35.8 7.93" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_9" type="cylinder" size="2.90 4.76" pos="10.0 -34.2 4.76" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_10" type="cylinder" size="2.72 4.92" pos="15.0 -35.8 4.92" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_10" type="cylinder" size="3.54 2.95" pos="15.0 -34.2 2.95" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_11" type="cylinder" size="3.31 2.26" pos="20.0 -35.8 2.26" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_11" type="cylinder" size="4.31 1.35" pos="20.0 -34.2 1.35" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_12" type="cylinder" size="3.79 1.56" pos="25.0 -35.8 1.56" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_12" type="cylinder" size="4.93 0.94" pos="25.0 -34.2 0.94" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_13" type="cylinder" size="4.00 3.26" pos="30.0 -35.8 3.26" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_13" type="cylinder" size="5.20 1.95" pos="30.0 -34.2 1.95" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_14" type="cylinder" size="3.85 6.31" pos="35.0 -35.8 6.31" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_s_b_14" type="cylinder" size="5.01 3.79" pos="35.0 -34.2 3.79" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_0" type="cylinder" size="4.00 6.50" pos="-35.8 -33.0 6.50" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_1" type="cylinder" size="3.79 9.48" pos="-35.8 -27.5 9.48" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_2" type="cylinder" size="3.25 10.20" pos="-35.8 -22.0 10.20" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_3" type="cylinder" size="2.65 8.12" pos="-35.8 -16.5 8.12" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_4" type="cylinder" size="2.25 4.82" pos="-35.8 -11.0 4.82" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_5" type="cylinder" size="2.26 2.79" pos="-35.8 -5.5 2.79" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_6" type="cylinder" size="2.66 3.56" pos="-35.8 0.0 3.56" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_7" type="cylinder" size="3.27 6.56" pos="-35.8 5.5 6.56" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_8" type="cylinder" size="3.80 9.52" pos="-35.8 11.0 9.52" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_9" type="cylinder" size="4.00 10.19" pos="-35.8 16.5 10.19" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_10" type="cylinder" size="3.78 8.07" pos="-35.8 22.0 8.07" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_11" type="cylinder" size="3.24 4.76" pos="-35.8 27.5 4.76" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_w_12" type="cylinder" size="2.63 2.77" pos="-35.8 33.0 2.77" material="mountain_rock_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_0" type="cylinder" size="3.30 11.20" pos="35.8 -33.0 11.20" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_1" type="cylinder" size="3.97 10.07" pos="35.8 -27.5 10.07" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_2" type="cylinder" size="4.36 7.30" pos="35.8 -22.0 7.30" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_3" type="cylinder" size="4.32 4.36" pos="35.8 -16.5 4.36" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_4" type="cylinder" size="3.87 2.84" pos="35.8 -11.0 2.84" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_5" type="cylinder" size="3.18 3.55" pos="35.8 -5.5 3.55" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_6" type="cylinder" size="2.54 6.11" pos="35.8 0.0 6.11" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_7" type="cylinder" size="2.21 9.15" pos="35.8 5.5 9.15" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_8" type="cylinder" size="2.33 11.03" pos="35.8 11.0 11.03" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_9" type="cylinder" size="2.84 10.75" pos="35.8 16.5 10.75" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_10" type="cylinder" size="3.54 8.46" pos="35.8 22.0 8.46" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_11" type="cylinder" size="4.14 5.38" pos="35.8 27.5 5.38" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <geom name="mount_e_12" type="cylinder" size="4.40 3.17" pos="35.8 33.0 3.17" material="canyon_red_mat" contype="1" conaffinity="7" />
+    <body name="tower_nw" pos="-31.0 31.0 0">
+      <geom type="cylinder" size="0.12 6.0" pos="0 0 6.0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_117_0" />
+      <geom type="box" size="0.90 0.90 0.08" pos="0 0 12.0" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_117_1" />
+      <geom type="sphere" size="0.12" pos="0 0 12.2" material="antenna_light_red" contype="0" conaffinity="0" name="layout_geom_117_2" />
+      <geom type="cylinder" size="0.08 0.15" pos="0.5 0.5 12.1" euler="0.6 0.6 0" material="headlight_lens_mat" contype="0" conaffinity="0" name="layout_geom_117_3" />
+    </body>
+    <body name="tower_ne" pos="31.0 31.0 0">
+      <geom type="cylinder" size="0.12 6.0" pos="0 0 6.0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_118_0" />
+      <geom type="box" size="0.90 0.90 0.08" pos="0 0 12.0" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_118_1" />
+      <geom type="sphere" size="0.12" pos="0 0 12.2" material="antenna_light_red" contype="0" conaffinity="0" name="layout_geom_118_2" />
+      <geom type="cylinder" size="0.08 0.15" pos="-0.5 0.5 12.1" euler="0.6 -0.6 0" material="headlight_lens_mat" contype="0" conaffinity="0" name="layout_geom_118_3" />
+    </body>
+    <body name="tower_sw" pos="-31.0 -31.0 0">
+      <geom type="cylinder" size="0.12 6.0" pos="0 0 6.0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_119_0" />
+      <geom type="box" size="0.90 0.90 0.08" pos="0 0 12.0" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_119_1" />
+      <geom type="sphere" size="0.12" pos="0 0 12.2" material="antenna_light_red" contype="0" conaffinity="0" name="layout_geom_119_2" />
+    </body>
+    <body name="tower_se" pos="31.0 -31.0 0">
+      <geom type="cylinder" size="0.12 6.0" pos="0 0 6.0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_120_0" />
+      <geom type="box" size="0.90 0.90 0.08" pos="0 0 12.0" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_120_1" />
+      <geom type="sphere" size="0.12" pos="0 0 12.2" material="antenna_light_red" contype="0" conaffinity="0" name="layout_geom_120_2" />
+    </body>
+    <body name="gantry_north" pos="0 10.0 0">
+      <geom type="cylinder" size="0.08 2.0" pos="-3.6 0 2.0" material="sign_post_metal" contype="1" conaffinity="7" name="layout_geom_121_0" />
+      <geom type="cylinder" size="0.08 2.0" pos=" 3.6 0 2.0" material="sign_post_metal" contype="1" conaffinity="7" name="layout_geom_121_1" />
+      <geom type="box" size="3.70 0.08 0.08" pos="0 0 4.00" material="sign_post_metal" contype="0" conaffinity="0" name="layout_geom_121_2" />
+      <geom type="box" size="2.60 0.02 0.40" pos="0 0 4.00" material="sign_green_mat" contype="0" conaffinity="0" name="layout_geom_121_3" />
+    </body>
+    <body name="gantry_south" pos="0 -14.0 0">
+      <geom type="cylinder" size="0.08 2.0" pos="-3.6 0 2.0" material="sign_post_metal" contype="1" conaffinity="7" name="layout_geom_122_0" />
+      <geom type="cylinder" size="0.08 2.0" pos=" 3.6 0 2.0" material="sign_post_metal" contype="1" conaffinity="7" name="layout_geom_122_1" />
+      <geom type="box" size="3.70 0.08 0.08" pos="0 0 4.00" material="sign_post_metal" contype="0" conaffinity="0" name="layout_geom_122_2" />
+      <geom type="box" size="2.60 0.02 0.40" pos="0 0 4.00" material="sign_green_mat" contype="0" conaffinity="0" name="layout_geom_122_3" />
+    </body>
+    <body name="p1_tent" pos="-25.0 16.0 0.0">
+      <geom type="box" size="1.40 1.00 0.75" pos="0 0 0.75" material="tent_canvas_mat" contype="1" conaffinity="7" name="layout_geom_123_0" />
+      <geom type="box" size="1.45 1.05 0.02" pos="0 0 1.52" material="tent_fly_mat" contype="0" conaffinity="0" name="layout_geom_123_1" />
+    </body>
+    <body name="p1_watchtower" pos="-26.0 22.0 0">
+      <geom type="cylinder" size="0.08 2.2" pos="-1.2 -1.2 2.2" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_124_0" />
+      <geom type="cylinder" size="0.08 2.2" pos=" 1.2 -1.2 2.2" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_124_1" />
+      <geom type="cylinder" size="0.08 2.2" pos="-1.2  1.2 2.2" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_124_2" />
+      <geom type="cylinder" size="0.08 2.2" pos=" 1.2  1.2 2.2" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_124_3" />
+      <geom type="box" size="1.40 1.40 0.06" pos="0 0 4.40" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_124_4" />
+      <geom type="box" size="1.50 1.50 0.04" pos="0 0 5.60" material="tent_fly_mat" contype="0" conaffinity="0" name="layout_geom_124_5" />
+    </body>
+    <body name="p1_cabin" pos="-25.0 13.0 0">
+      <geom type="box" size="1.80 1.30 0.90" pos="0 0 0.90" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_125_0" />
+      <geom type="box" size="1.95 1.45 0.04" pos="0 0 1.82" material="pine_trunk_mat" contype="0" conaffinity="0" name="layout_geom_125_1" />
+    </body>
+    <body name="p1_campfire" pos="-18.0 20.0 0">
+      <geom type="cylinder" size="0.65 0.08" pos="0 0 0.08" material="campfire_stone_mat" contype="0" conaffinity="0" name="layout_geom_126_0" />
+      <geom type="cylinder" size="0.45 0.04" pos="0 0 0.12" material="campfire_ember_mat" contype="0" conaffinity="0" name="layout_geom_126_1" />
+      <geom type="cylinder" size="0.06 0.35" pos="0.25 0 0.15" euler="0.3 0.4 0" material="stump_bark_mat" contype="0" conaffinity="0" name="layout_geom_126_2" />
+      <geom type="cylinder" size="0.06 0.35" pos="-0.25 0 0.15" euler="-0.3 0.4 0" material="stump_bark_mat" contype="0" conaffinity="0" name="layout_geom_126_3" />
+    </body>
+    <geom type="cylinder" size="0.05 1.6" pos="-22.0 11.5 0.30" euler="1.5708 0 0" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_127_0" />
+    <geom type="cylinder" size="0.05 1.6" pos="-22.0 11.5 0.60" euler="1.5708 0 0" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_128_0" />
+    <geom type="cylinder" size="0.05 1.6" pos="-19.5 9.5 0.3" euler="1.5708 0 0" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_129_0" />
+    <geom type="cylinder" size="0.05 1.6" pos="-18.0 9.0 0.6" euler="1.5708 0 0" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_130_0" />
+    <body name="p1_wood_rick" pos="-14.5 10.5 0">
+      <geom type="box" size="0.80 0.40 0.45" pos="0 0 0.45" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_131_0" />
+      <geom type="cylinder" size="0.06 0.75" pos="0 -0.15 0.95" euler="0 1.5708 0" material="stump_bark_mat" contype="0" conaffinity="0" name="layout_geom_131_1" />
+    </body>
+    <body name="p1_met_station" pos="-13.0 19.0 0">
+      <geom type="cylinder" size="0.03 1.2" pos="0 0 1.2" material="sign_post_metal" contype="1" conaffinity="7" name="layout_geom_132_0" />
+      <geom type="box" size="0.12 0.10 0.14" pos="0 0 1.40" material="utility_gray_mat" contype="0" conaffinity="0" name="layout_geom_132_1" />
+      <geom type="box" size="0.15 0.20 0.01" pos="0 0.15 1.50" euler="0.45 0 0" material="solar_cell_mat" contype="0" conaffinity="0" name="layout_geom_132_2" />
+      <geom type="cylinder" size="0.01 0.20" pos="0 0 2.45" euler="0 1.5708 0" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_132_3" />
+    </body>
+    <body name="p1_camp_buggy" pos="-22.5 12.0 0" euler="0 0 0.35">
+      <geom type="box" size="0.95 0.60 0.25" pos="0 0 0.35" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_133_0" />
+      <geom type="cylinder" size="0.18 0.08" pos="0.65 0.65 0.18" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_133_1" />
+      <geom type="cylinder" size="0.18 0.08" pos="0.65 -0.65 0.18" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_133_2" />
+      <geom type="cylinder" size="0.18 0.08" pos="-0.65 0.65 0.18" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_133_3" />
+      <geom type="cylinder" size="0.18 0.08" pos="-0.65 -0.65 0.18" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_133_4" />
+    </body>
+    <geom type="box" size="0.45 0.35 0.30" pos="-23.5 17.5 0.3" material="crate_metal_mat" contype="1" conaffinity="7" name="layout_geom_134_0" />
+    <geom type="cylinder" size="0.22 0.40" pos="-21.2 20.2 0.4" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_135_0" />
+    <geom type="cylinder" size="0.22 0.40" pos="-24.7 18.2 0.4" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_136_0" />
+    <body name="p1_spectrometer" pos="-14.5 20.5 0.0">
+      <geom type="box" size="0.45 0.30 0.55" pos="0 0 0.55" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_137_0" />
+      <geom type="box" size="0.35 0.02 0.25" pos="0 -0.31 0.75" material="kiosk_screen_mat" contype="0" conaffinity="0" name="layout_geom_137_1" />
+      <geom type="cylinder" size="0.02 0.40" pos="0.30 0 1.30" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_137_2" />
+      <geom type="sphere" size="0.06" pos="0.30 0 1.72" material="scan_core_mat" contype="0" conaffinity="0" name="layout_geom_137_3" />
+    </body>
+    <body name="p1_telescope" pos="-19.5 22.5 0">
+      <geom type="cylinder" size="0.018 0.65" pos="-0.25 -0.25 0.65" euler="-0.25 -0.25 0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_138_0" />
+      <geom type="cylinder" size="0.018 0.65" pos=" 0.25 -0.25 0.65" euler="-0.25  0.25 0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_138_1" />
+      <geom type="cylinder" size="0.018 0.65" pos=" 0.00  0.30 0.65" euler=" 0.30  0.00 0" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_138_2" />
+      <geom type="cylinder" size="0.06 0.45" pos="0 0 1.35" euler="0.35 0 0" material="chassis_mat" contype="0" conaffinity="0" name="layout_geom_138_3" />
+      <geom type="sphere" size="0.058" pos="0 -0.42 1.20" material="headlight_lens_mat" contype="0" conaffinity="0" name="layout_geom_138_4" />
+    </body>
+    <body name="p1_picnic_table" pos="-15.5 8.0 0.0">
+      <geom type="box" size="0.90 0.45 0.04" pos="0 0 0.72" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_139_0" />
+      <geom type="box" size="0.90 0.18 0.04" pos="0 -0.65 0.42" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_139_1" />
+      <geom type="box" size="0.90 0.18 0.04" pos="0  0.65 0.42" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_139_2" />
+      <geom type="cylinder" size="0.04 0.36" pos="-0.70 0 0.36" material="pine_trunk_mat" contype="0" conaffinity="0" name="layout_geom_139_3" />
+      <geom type="cylinder" size="0.04 0.36" pos=" 0.70 0 0.36" material="pine_trunk_mat" contype="0" conaffinity="0" name="layout_geom_139_4" />
+      <geom type="cylinder" size="0.04 0.08" pos="0.30 0 0.84" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_139_5" />
+    </body>
+    <body name="p1_scout_tent" pos="-26.5 19.5 0.0" euler="0 0 0.45">
+      <geom type="ellipsoid" size="0.95 0.80 0.65" pos="0 0 0.55" material="carapace_accent_orange" contype="1" conaffinity="7" name="layout_geom_140_0" />
+    </body>
+    <body name="p1_info_board" pos="-15.0 11.5 0">
+      <geom type="cylinder" size="0.04 0.90" pos="-0.6 0 0.90" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_141_0" />
+      <geom type="cylinder" size="0.04 0.90" pos=" 0.6 0 0.90" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_141_1" />
+      <geom type="box" size="0.75 0.04 0.45" pos="0 0 1.80" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_141_2" />
+      <geom type="box" size="0.68 0.01 0.38" pos="0 -0.042 1.80" material="kiosk_screen_mat" contype="0" conaffinity="0" name="layout_geom_141_3" />
+    </body>
+    <body name="p1_tree_0" pos="-20.19 24.66 0" euler="-0.03 -0.00 2.80">
+      <geom type="cylinder" size="0.13 2.87" pos="0 0 2.87" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_142_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 1.01" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_142_1" />
+    </body>
+    <body name="p1_tree_1" pos="-20.83 10.93 0" euler="-0.02 -0.03 5.23">
+      <geom type="cylinder" size="0.07 1.97" pos="0 0 1.97" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_143_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.69" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_143_1" />
+    </body>
+    <body name="p1_tree_2" pos="-13.83 11.89 0" euler="0.01 -0.00 5.40">
+      <geom type="cylinder" size="0.14 2.95" pos="0 0 2.95" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_144_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 1.03" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_144_1" />
+    </body>
+    <body name="p1_tree_3" pos="-22.26 20.12 0" euler="-0.02 0.01 5.71">
+      <geom type="cylinder" size="0.11 1.55" pos="0 0 1.55" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_145_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.54" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_145_1" />
+    </body>
+    <body name="p1_tree_4" pos="-16.73 24.17 0" euler="0.03 0.02 6.04">
+      <geom type="cylinder" size="0.11 2.40" pos="0 0 2.40" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_146_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.84" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_146_1" />
+    </body>
+    <body name="p1_tree_5" pos="-23.44 8.77 0" euler="0.03 0.02 0.03">
+      <geom type="cylinder" size="0.13 2.15" pos="0 0 2.15" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_147_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.75" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_147_1" />
+    </body>
+    <body name="p1_tree_6" pos="-14.70 21.61 0" euler="0.03 -0.00 5.75">
+      <geom type="cylinder" size="0.14 3.22" pos="0 0 3.22" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_148_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 1.13" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_148_1" />
+    </body>
+    <body name="p1_tree_7" pos="-22.03 9.19 0" euler="-0.04 0.01 0.68">
+      <geom type="cylinder" size="0.10 1.47" pos="0 0 1.47" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_149_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.51" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_149_1" />
+    </body>
+    <body name="p1_tree_8" pos="-22.45 9.81 0" euler="-0.02 -0.03 3.92">
+      <geom type="cylinder" size="0.12 3.21" pos="0 0 3.21" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_150_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 1.13" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_150_1" />
+    </body>
+    <body name="p1_tree_9" pos="-19.54 23.52 0" euler="-0.03 -0.02 2.00">
+      <geom type="cylinder" size="0.13 3.47" pos="0 0 3.47" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_151_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 1.21" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_151_1" />
+    </body>
+    <body name="p1_tree_10" pos="-20.77 24.53 0" euler="-0.03 -0.02 2.54">
+      <geom type="cylinder" size="0.09 1.88" pos="0 0 1.88" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_152_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.66" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_152_1" />
+    </body>
+    <body name="p1_tree_11" pos="-22.17 20.34 0" euler="0.01 0.00 0.23">
+      <geom type="cylinder" size="0.09 1.67" pos="0 0 1.67" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_153_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.58" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_153_1" />
+    </body>
+    <body name="p1_tree_12" pos="-22.32 20.88 0" euler="0.03 0.02 2.51">
+      <geom type="cylinder" size="0.11 2.92" pos="0 0 2.92" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_154_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 1.02" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_154_1" />
+    </body>
+    <body name="p1_tree_13" pos="-15.21 23.09 0" euler="-0.02 0.01 3.22">
+      <geom type="cylinder" size="0.12 1.72" pos="0 0 1.72" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_155_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.60" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_155_1" />
+    </body>
+    <body name="p1_tree_14" pos="-20.01 24.42 0" euler="0.00 0.02 1.31">
+      <geom type="cylinder" size="0.12 2.93" pos="0 0 2.93" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_156_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 1.03" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_156_1" />
+    </body>
+    <body name="p1_tree_15" pos="-21.96 25.44 0" euler="-0.01 -0.01 3.98">
+      <geom type="cylinder" size="0.14 3.65" pos="0 0 3.65" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_157_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 1.28" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_157_1" />
+    </body>
+    <body name="p1_tree_16" pos="-14.75 23.75 0" euler="0.03 0.02 5.35">
+      <geom type="cylinder" size="0.10 2.65" pos="0 0 2.65" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_158_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.93" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_158_1" />
+    </body>
+    <body name="p1_tree_17" pos="-20.23 24.48 0" euler="0.02 0.01 3.45">
+      <geom type="cylinder" size="0.07 1.14" pos="0 0 1.14" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_159_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.40" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_159_1" />
+    </body>
+    <body name="p1_tree_18" pos="-22.52 20.61 0" euler="0.02 0.02 2.30">
+      <geom type="cylinder" size="0.11 1.77" pos="0 0 1.77" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_160_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.62" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_160_1" />
+    </body>
+    <body name="p1_tree_19" pos="-15.63 23.19 0" euler="0.01 -0.03 0.15">
+      <geom type="cylinder" size="0.12 2.23" pos="0 0 2.23" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_161_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.78" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_161_1" />
+    </body>
+    <body name="p1_tree_20" pos="-19.36 24.93 0" euler="-0.02 -0.02 1.92">
+      <geom type="cylinder" size="0.14 2.16" pos="0 0 2.16" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_162_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.76" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_162_1" />
+    </body>
+    <body name="p1_tree_21" pos="-22.76 19.91 0" euler="0.02 0.02 5.51">
+      <geom type="cylinder" size="0.08 1.71" pos="0 0 1.71" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_163_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.60" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_163_1" />
+    </body>
+    <body name="p1_tree_22" pos="-21.45 22.26 0" euler="-0.04 0.01 0.51">
+      <geom type="cylinder" size="0.09 2.01" pos="0 0 2.01" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_164_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.70" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_164_1" />
+    </body>
+    <body name="p1_tree_23" pos="-22.99 9.71 0" euler="-0.01 -0.03 2.12">
+      <geom type="cylinder" size="0.13 3.43" pos="0 0 3.43" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_165_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 1.20" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_165_1" />
+    </body>
+    <body name="p1_tree_24" pos="-17.04 9.11 0" euler="0.03 -0.02 5.27">
+      <geom type="cylinder" size="0.08 2.26" pos="0 0 2.26" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_166_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.79" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_166_1" />
+    </body>
+    <body name="p1_tree_25" pos="-15.33 9.49 0" euler="0.02 0.01 3.45">
+      <geom type="cylinder" size="0.08 1.43" pos="0 0 1.43" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_167_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.50" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_167_1" />
+    </body>
+    <body name="p1_tree_26" pos="-21.66 24.73 0" euler="-0.04 0.01 4.59">
+      <geom type="cylinder" size="0.12 2.40" pos="0 0 2.40" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_168_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.84" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_168_1" />
+    </body>
+    <body name="p1_tree_27" pos="-20.70 10.06 0" euler="-0.00 -0.03 4.42">
+      <geom type="cylinder" size="0.07 1.90" pos="0 0 1.90" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_169_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.66" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_169_1" />
+    </body>
+    <body name="p1_tree_28" pos="-16.16 9.27 0" euler="0.00 0.01 3.15">
+      <geom type="cylinder" size="0.07 1.93" pos="0 0 1.93" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_170_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.67" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_170_1" />
+    </body>
+    <body name="p1_tree_29" pos="-16.45 24.55 0" euler="0.01 -0.01 5.91">
+      <geom type="cylinder" size="0.07 1.60" pos="0 0 1.60" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_171_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.56" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_171_1" />
+    </body>
+    <body name="p1_tree_30" pos="-17.54 24.50 0" euler="-0.02 -0.02 1.30">
+      <geom type="cylinder" size="0.13 3.04" pos="0 0 3.04" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_172_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 1.06" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_172_1" />
+    </body>
+    <body name="p1_tree_31" pos="-20.15 9.16 0" euler="0.03 -0.04 2.00">
+      <geom type="cylinder" size="0.12 1.82" pos="0 0 1.82" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_173_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.64" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_173_1" />
+    </body>
+    <body name="p1_tree_32" pos="-16.25 23.42 0" euler="-0.01 0.01 3.44">
+      <geom type="cylinder" size="0.10 2.79" pos="0 0 2.79" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_174_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.98" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_174_1" />
+    </body>
+    <body name="p1_tree_33" pos="-24.45 9.41 0" euler="0.04 0.04 2.01">
+      <geom type="cylinder" size="0.14 2.11" pos="0 0 2.11" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_175_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.74" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_175_1" />
+    </body>
+    <body name="p1_tree_34" pos="-14.34 21.96 0" euler="0.04 -0.04 6.12">
+      <geom type="cylinder" size="0.08 2.12" pos="0 0 2.12" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_176_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.74" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_176_1" />
+    </body>
+    <body name="p1_tree_35" pos="-15.06 24.97 0" euler="-0.03 0.02 0.64">
+      <geom type="cylinder" size="0.13 2.88" pos="0 0 2.88" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_177_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 1.01" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_177_1" />
+    </body>
+    <body name="p1_tree_36" pos="-15.05 9.88 0" euler="0.03 -0.02 5.42">
+      <geom type="cylinder" size="0.09 1.94" pos="0 0 1.94" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_178_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.68" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_178_1" />
+    </body>
+    <body name="p1_tree_37" pos="-14.11 22.49 0" euler="-0.01 -0.02 6.05">
+      <geom type="cylinder" size="0.13 2.79" pos="0 0 2.79" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_179_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.98" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_179_1" />
+    </body>
+    <body name="p1_tree_38" pos="-17.42 24.98 0" euler="0.04 0.02 1.85">
+      <geom type="cylinder" size="0.08 1.40" pos="0 0 1.40" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_180_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.49" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_180_1" />
+    </body>
+    <body name="p1_tree_39" pos="-23.37 19.50 0" euler="0.04 0.04 0.49">
+      <geom type="cylinder" size="0.10 2.14" pos="0 0 2.14" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_181_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.75" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_181_1" />
+    </body>
+    <body name="p1_tree_40" pos="-21.20 22.33 0" euler="0.04 -0.01 0.48">
+      <geom type="cylinder" size="0.09 1.43" pos="0 0 1.43" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_182_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.50" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_182_1" />
+    </body>
+    <body name="p1_tree_41" pos="-16.99 24.13 0" euler="-0.04 -0.01 0.28">
+      <geom type="cylinder" size="0.14 3.66" pos="0 0 3.66" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_183_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 1.28" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_183_1" />
+    </body>
+    <body name="p1_tree_42" pos="-13.44 25.28 0" euler="0.03 0.01 2.47">
+      <geom type="cylinder" size="0.10 2.41" pos="0 0 2.41" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_184_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 0.84" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_184_1" />
+    </body>
+    <body name="p1_tree_43" pos="-25.02 9.13 0" euler="0.03 0.04 5.43">
+      <geom type="cylinder" size="0.09 1.34" pos="0 0 1.34" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_185_0" />
+      <geom type="mesh" mesh="pine_dense_mesh" pos="0 0 0.47" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_185_1" />
+    </body>
+    <body name="p1_tree_44" pos="-14.08 24.56 0" euler="-0.02 -0.02 1.29">
+      <geom type="cylinder" size="0.10 1.71" pos="0 0 1.71" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_186_0" />
+      <geom type="mesh" mesh="pine_mid_mesh" pos="0 0 0.60" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_186_1" />
+    </body>
+    <body name="p1_tree_45" pos="-22.79 23.43 0" euler="0.01 0.00 0.71">
+      <geom type="cylinder" size="0.12 2.21" pos="0 0 2.21" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_187_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.77" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_187_1" />
+    </body>
+    <body name="p1_tree_46" pos="-19.22 23.87 0" euler="-0.02 0.00 5.72">
+      <geom type="cylinder" size="0.11 2.26" pos="0 0 2.26" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_188_0" />
+      <geom type="mesh" mesh="pine_small_mesh" pos="0 0 0.79" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_188_1" />
+    </body>
+    <body name="p1_tree_47" pos="-14.08 9.63 0" euler="0.01 -0.02 2.07">
+      <geom type="cylinder" size="0.14 3.00" pos="0 0 3.00" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_189_0" />
+      <geom type="mesh" mesh="pine_tall_mesh" pos="0 0 1.05" material="pine_foliage_mat" contype="0" conaffinity="0" name="layout_geom_189_1" />
+    </body>
+    <body name="p2_excavator" pos="15.0 21.0 0" euler="0 0 -0.45">
+      <geom type="box" size="1.20 0.35 0.25" pos="0 -0.65 0.25" material="excavator_tracks_mat" contype="1" conaffinity="7" name="layout_geom_190_0" />
+      <geom type="box" size="1.20 0.35 0.25" pos="0  0.65 0.25" material="excavator_tracks_mat" contype="1" conaffinity="7" name="layout_geom_190_1" />
+      <geom type="box" size="1.10 0.90 0.65" pos="0 0 1.15" material="excavator_yellow_mat" contype="1" conaffinity="7" name="layout_geom_190_2" />
+      <geom type="box" size="1.40 0.12 0.18" pos="1.40 0.10 2.20" euler="0 0.55 0" material="excavator_yellow_mat" contype="0" conaffinity="0" name="layout_geom_190_3" />
+      <geom type="box" size="0.95 0.10 0.14" pos="2.60 0.10 1.70" euler="0 -0.65 0" material="excavator_yellow_mat" contype="0" conaffinity="0" name="layout_geom_190_4" />
+      <geom type="box" size="0.45 0.35 0.30" pos="3.10 0.10 0.95" material="chassis_mat" contype="1" conaffinity="7" name="layout_geom_190_5" />
+    </body>
+    <body name="p2_dump_truck" pos="24.0 21.0 0" euler="0 0 0.85">
+      <geom type="box" size="1.60 1.10 0.40" pos="0 0 0.85" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_191_0" />
+      <geom type="box" size="0.65 0.95 0.70" pos="-0.85 0 1.55" material="excavator_yellow_mat" contype="1" conaffinity="7" name="layout_geom_191_1" />
+      <geom type="box" size="1.20 1.05 0.55" pos="0.55 0 1.70" euler="0 0.18 0" material="excavator_yellow_mat" contype="1" conaffinity="7" name="layout_geom_191_2" />
+      <geom type="cylinder" size="0.38 0.18" pos="1.10 1.20 0.38" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_191_3" />
+      <geom type="cylinder" size="0.38 0.18" pos="1.10 -1.20 0.38" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_191_4" />
+      <geom type="cylinder" size="0.38 0.18" pos="-1.10 1.20 0.38" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_191_5" />
+      <geom type="cylinder" size="0.38 0.18" pos="-1.10 -1.20 0.38" euler="1.5708 0 0" material="wheel_mat" contype="1" conaffinity="7" name="layout_geom_191_6" />
+    </body>
+    <body name="p2_crane" pos="20.5 22.0 0">
+      <geom type="cylinder" size="0.12 2.80" pos="0 0 2.80" material="excavator_yellow_mat" contype="1" conaffinity="7" name="layout_geom_192_0" />
+      <geom type="box" size="2.80 0.10 0.10" pos="1.20 0 5.60" material="excavator_yellow_mat" contype="0" conaffinity="0" name="layout_geom_192_1" />
+      <geom type="cylinder" size="0.02 1.60" pos="2.40 0 3.90" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_192_2" />
+      <geom type="box" size="0.25 0.25 0.15" pos="2.40 0 2.20" material="chassis_mat" contype="0" conaffinity="0" name="layout_geom_192_3" />
+    </body>
+    <body name="p2_conveyor" pos="29.0 17.5 0.0" euler="0 0.25 0.65">
+      <geom type="box" size="3.20 0.35 0.08" pos="0 0 1.40" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_193_0" />
+      <geom type="cylinder" size="0.05 0.95" pos="-2.2 0 0.95" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_193_1" />
+      <geom type="cylinder" size="0.05 1.65" pos=" 2.2 0 1.65" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_193_2" />
+    </body>
+    <body name="p2_office" pos="25.0 13.0 0">
+      <geom type="box" size="1.80 1.20 0.95" pos="0 0 0.95" material="kiosk_cabinet_mat" contype="1" conaffinity="7" name="layout_geom_194_0" />
+      <geom type="box" size="0.80 0.02 0.40" pos="0 -1.21 1.10" material="kiosk_screen_mat" contype="0" conaffinity="0" name="layout_geom_194_1" />
+    </body>
+    <body name="p2_core_station" pos="23.5 16.0 0">
+      <geom type="box" size="0.55 0.35 0.05" pos="0 0 0.05" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_195_0" />
+      <geom type="cylinder" size="0.02 0.65" pos="0.85 0 0.65" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_195_1" />
+      <geom type="box" size="0.10 0.08 0.08" pos="0.85 0 1.35" material="carapace_accent_orange" contype="0" conaffinity="0" name="layout_geom_195_2" />
+    </body>
+    <body name="p2_rock_crusher" pos="17.5 23.5 0">
+      <geom type="box" size="1.30 1.00 0.85" pos="0 0 1.45" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_196_0" />
+      <geom type="cylinder" size="0.08 0.70" pos="-1.0 -0.8 0.70" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_196_1" />
+      <geom type="cylinder" size="0.08 0.70" pos=" 1.0 -0.8 0.70" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_196_2" />
+      <geom type="cylinder" size="0.08 0.70" pos="-1.0  0.8 0.70" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_196_3" />
+      <geom type="cylinder" size="0.08 0.70" pos=" 1.0  0.8 0.70" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_196_4" />
+      <geom type="box" size="1.10 0.20 0.40" pos="0 -0.95 0.85" euler="0.6 0 0" material="excavator_yellow_mat" contype="0" conaffinity="0" name="layout_geom_196_5" />
+    </body>
+    <body name="p2_sorting_screen" pos="24.5 18.5 0" euler="0 0.30 0.80">
+      <geom type="box" size="1.60 0.55 0.08" pos="0 0 1.20" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_197_0" />
+      <geom type="cylinder" size="0.05 0.60" pos="-1.1 0 0.60" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_197_1" />
+      <geom type="cylinder" size="0.05 1.10" pos=" 1.1 0 1.10" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_197_2" />
+    </body>
+    <body name="p2_floodlight_rig" pos="13.5 13.5 0">
+      <geom type="box" size="0.45 0.40 0.25" pos="0 0 0.25" material="excavator_yellow_mat" contype="1" conaffinity="7" name="layout_geom_198_0" />
+      <geom type="cylinder" size="0.04 1.80" pos="0 0 2.05" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_198_1" />
+      <geom type="box" size="0.30 0.08 0.14" pos="0 0 3.85" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_198_2" />
+      <geom type="cylinder" size="0.07 0.05" pos="-0.16 0.08 3.85" euler="0.4 0 0" material="headlight_lens_mat" contype="0" conaffinity="0" name="layout_geom_198_3" />
+      <geom type="cylinder" size="0.07 0.05" pos=" 0.16 0.08 3.85" euler="0.4 0 0" material="headlight_lens_mat" contype="0" conaffinity="0" name="layout_geom_198_4" />
+    </body>
+    <body name="p2_supply_cache" pos="22.0 11.5 0">
+      <geom type="box" size="0.65 0.45 0.35" pos="0 0 0.35" material="container_orange" contype="1" conaffinity="7" name="layout_geom_199_0" />
+      <geom type="cylinder" size="0.24 0.45" pos="0.85 0 0.45" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_199_1" />
+      <geom type="cylinder" size="0.24 0.45" pos="0.85 0.55 0.45" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_199_2" />
+    </body>
+    <geom name="p2_slab_0" type="box" size="0.92 0.75 0.027" pos="24.77 10.74 0.027" euler="0.05 0.05 3.16" material="broken_slab_mat" contype="1" conaffinity="7" friction="2.2 0.1 0.01" />
+    <geom name="p2_slab_1" type="box" size="0.52 0.68 0.023" pos="22.52 11.18 0.023" euler="-0.04 -0.04 2.20" material="broken_slab_mat" contype="1" conaffinity="7" friction="2.2 0.1 0.01" />
+    <geom name="p2_slab_2" type="box" size="0.74 0.44 0.021" pos="24.54 10.84 0.021" euler="-0.06 -0.06 0.69" material="broken_slab_mat" contype="1" conaffinity="7" friction="2.2 0.1 0.01" />
+    <geom name="p2_slab_3" type="box" size="0.78 0.84 0.023" pos="20.62 10.96 0.023" euler="-0.04 -0.04 0.56" material="broken_slab_mat" contype="1" conaffinity="7" friction="2.2 0.1 0.01" />
+    <geom name="p3_boardwalk_1" type="box" size="4.20 0.55 0.02" pos="-18.0 -12.5 0.02" material="camp_wood_mat" contype="0" conaffinity="0" />
+    <geom name="p3_boardwalk_2" type="box" size="0.55 3.50 0.02" pos="-14.5 -12.5 0.02" material="camp_wood_mat" contype="0" conaffinity="0" />
+    <geom name="p3_boardwalk_3" type="box" size="3.20 0.55 0.02" pos="-21.5 -15.5 0.02" material="camp_wood_mat" contype="0" conaffinity="0" />
+    <body name="p3_stilt_hut" pos="-22.0 -15.0 0.0">
+      <geom type="cylinder" size="0.08 0.85" pos="-1.1 -1.1 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_207_0" />
+      <geom type="cylinder" size="0.08 0.85" pos=" 1.1 -1.1 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_207_1" />
+      <geom type="cylinder" size="0.08 0.85" pos="-1.1  1.1 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_207_2" />
+      <geom type="cylinder" size="0.08 0.85" pos=" 1.1  1.1 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_207_3" />
+      <geom type="box" size="1.30 1.30 0.75" pos="0 0 2.45" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_207_4" />
+      <geom type="box" size="1.45 1.45 0.04" pos="0 0 3.25" material="tent_fly_mat" contype="0" conaffinity="0" name="layout_geom_207_5" />
+    </body>
+    <body name="p3_stilt_hut_2" pos="-23.5 -9.5 0">
+      <geom type="cylinder" size="0.08 0.85" pos="-0.9 -0.9 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_208_0" />
+      <geom type="cylinder" size="0.08 0.85" pos=" 0.9 -0.9 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_208_1" />
+      <geom type="cylinder" size="0.08 0.85" pos="-0.9  0.9 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_208_2" />
+      <geom type="cylinder" size="0.08 0.85" pos=" 0.9  0.9 0.85" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_208_3" />
+      <geom type="box" size="1.10 1.10 0.65" pos="0 0 2.30" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_208_4" />
+    </body>
+    <body name="p3_buoy" pos="-16.5 -6.0 0.05">
+      <geom type="cylinder" size="0.32 0.09" pos="0 0 0.09" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_209_0" />
+      <geom type="cylinder" size="0.02 0.45" pos="0 0 0.50" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_209_1" />
+      <geom type="sphere" size="0.06" pos="0 0 0.98" material="telemetry_beacon_blue" contype="0" conaffinity="0" name="layout_geom_209_2" />
+    </body>
+    <geom type="cylinder" size="0.22 0.002" pos="-17.0 -9.0 0.01" material="reed_green_mat" contype="0" conaffinity="0" name="layout_geom_210_0" />
+    <geom type="sphere" size="0.04" pos="-17.0 -9.0 0.03" material="lily_flower_pink" contype="0" conaffinity="0" name="layout_geom_211_0" />
+    <geom type="cylinder" size="0.22 0.002" pos="-19.5 -11.5 0.01" material="reed_green_mat" contype="0" conaffinity="0" name="layout_geom_212_0" />
+    <geom type="sphere" size="0.04" pos="-19.5 -11.5 0.03" material="lily_flower_white" contype="0" conaffinity="0" name="layout_geom_213_0" />
+    <geom type="cylinder" size="0.22 0.002" pos="-22.0 -14.0 0.01" material="reed_green_mat" contype="0" conaffinity="0" name="layout_geom_214_0" />
+    <geom type="sphere" size="0.04" pos="-22.0 -14.0 0.03" material="lily_flower_pink" contype="0" conaffinity="0" name="layout_geom_215_0" />
+    <body name="p3_mooring_pier" pos="-13.5 -4.0 0.0">
+      <geom type="box" size="0.55 1.80 0.03" pos="0 0 0.15" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_216_0" />
+      <geom type="cylinder" size="0.06 0.25" pos="-0.45 -1.5 0.25" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_216_1" />
+      <geom type="cylinder" size="0.06 0.25" pos=" 0.45 -1.5 0.25" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_216_2" />
+      <geom type="cylinder" size="0.06 0.25" pos="-0.45  1.5 0.25" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_216_3" />
+      <geom type="cylinder" size="0.06 0.25" pos=" 0.45  1.5 0.25" material="pine_trunk_mat" contype="1" conaffinity="7" name="layout_geom_216_4" />
+      <geom type="cylinder" size="0.16 0.03" pos="0.45 0 0.38" euler="0 1.5708 0" material="traffic_cone_orange" contype="0" conaffinity="0" name="layout_geom_216_5" />
+    </body>
+    <body name="p3_rowboat" pos="-15.0 -4.5 0.08" euler="0 0 0.25">
+      <geom type="box" size="0.45 1.10 0.14" pos="0 0 0.10" material="camp_wood_mat" contype="1" conaffinity="7" name="layout_geom_217_0" />
+      <geom type="box" size="0.40 0.15 0.03" pos="0 0 0.20" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_217_1" />
+    </body>
+    <body name="p3_hydro_buoy" pos="-21.0 -10.5 0.05">
+      <geom type="cylinder" size="0.30 0.10" pos="0 0 0.10" material="container_teal" contype="1" conaffinity="7" name="layout_geom_218_0" />
+      <geom type="cylinder" size="0.02 0.50" pos="0 0 0.55" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_218_1" />
+      <geom type="sphere" size="0.07" pos="0 0 1.08" material="scan_core_mat" contype="0" conaffinity="0" name="layout_geom_218_2" />
+    </body>
+    <geom name="p4_col_1" type="cylinder" size="0.25 1.50" pos="21.0 -6.5 1.5" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_2" type="cylinder" size="0.25 1.50" pos="22.0 -7.0 1.5" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_3" type="cylinder" size="0.25 1.50" pos="22.5 -14.0 1.5" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_4" type="cylinder" size="0.25 1.50" pos="24.0 -7.0  1.50" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_5" type="cylinder" size="0.25 1.50" pos="25.0 -9.5 1.5" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_6" type="cylinder" size="0.25 1.50" pos="24.0 -12.0 1.50" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_7" type="cylinder" size="0.25 1.50" pos="18.0 -5.0  1.50" material="sandstone_mat" contype="1" conaffinity="7" />
+    <geom name="p4_col_8" type="cylinder" size="0.25 1.50" pos="18.0 -16.5 1.5" material="sandstone_mat" contype="1" conaffinity="7" />
+    <body name="p4_arch" pos="18.5 -16.5 0.0">
+      <geom type="box" size="0.30 0.30 1.40" pos="-1.2 0 1.40" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_227_0" />
+      <geom type="box" size="0.30 0.30 1.40" pos=" 1.2 0 1.40" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_227_1" />
+      <geom type="box" size="1.60 0.35 0.22" pos="0 0 2.95" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_227_2" />
+    </body>
+    <body name="p4_pylon_gate" pos="15.0 -4.5 0.0">
+      <geom type="box" size="0.45 0.45 1.75" pos="-1.6 0 1.75" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_228_0" />
+      <geom type="box" size="0.45 0.45 1.75" pos=" 1.6 0 1.75" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_228_1" />
+      <geom type="box" size="2.20 0.50 0.22" pos="0 0 3.65" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_228_2" />
+      <geom type="sphere" size="0.16" pos="0 -0.52 3.65" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_228_3" />
+    </body>
+    <body name="p4_ceremonial_altar" pos="24.5 -13.0 0.0">
+      <geom type="box" size="0.75 0.55 0.40" pos="0 0 0.40" material="sandstone_mat" contype="1" conaffinity="7" name="layout_geom_229_0" />
+      <geom type="cylinder" size="0.32 0.08" pos="0 0 0.88" material="campfire_stone_mat" contype="0" conaffinity="0" name="layout_geom_229_1" />
+      <geom type="sphere" size="0.15" pos="0 0 0.94" material="campfire_ember_mat" contype="0" conaffinity="0" name="layout_geom_229_2" />
+    </body>
+    <body name="p4_dig_trench" pos="15.0 -12.5 0">
+      <geom type="box" size="1.20 1.20 0.02" pos="0 0 0.02" material="dune_sand_mat" contype="0" conaffinity="0" name="layout_geom_230_0" />
+      <geom type="cylinder" size="0.02 0.35" pos="-1.1 -1.1 0.35" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_230_1" />
+      <geom type="cylinder" size="0.02 0.35" pos=" 1.1 -1.1 0.35" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_230_2" />
+      <geom type="cylinder" size="0.02 0.35" pos="-1.1  1.1 0.35" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_230_3" />
+      <geom type="cylinder" size="0.02 0.35" pos=" 1.1  1.1 0.35" material="camp_wood_mat" contype="0" conaffinity="0" name="layout_geom_230_4" />
+    </body>
+    <geom name="p4_obelisk_1" type="box" size="0.25 0.25 2.10" pos="14.5 -5.3 2.1" material="obelisk_hieroglyph_mat" contype="1" conaffinity="7" />
+    <geom name="p4_obelisk_2" type="box" size="0.25 0.25 2.10" pos="19.5 -5.0 2.10" material="obelisk_hieroglyph_mat" contype="1" conaffinity="7" />
+    <geom name="p4_obelisk_3" type="box" size="0.25 0.25 2.10" pos="24.5 -14.0 2.10" material="obelisk_hieroglyph_mat" contype="1" conaffinity="7" />
+    <body name="p4_urns" pos="18.0 -5.2 0">
+      <geom type="sphere" size="0.22" pos="0.5 0 0.22" material="terracotta_mat" contype="1" conaffinity="7" name="layout_geom_234_0" />
+      <geom type="cylinder" size="0.10 0.12" pos="0.5 0 0.45" material="terracotta_mat" contype="0" conaffinity="0" name="layout_geom_234_1" />
+      <geom type="sphere" size="0.18" pos="-0.5 0 0.18" material="terracotta_mat" contype="1" conaffinity="7" name="layout_geom_234_2" />
+    </body>
+    <body name="p4_cactus_1" pos="12.0 -15.5 0.0">
+      <geom type="cylinder" size="0.10 0.90" pos="0 0 0.90" material="bush_foliage_mat" contype="1" conaffinity="7" name="layout_geom_235_0" />
+      <geom type="cylinder" size="0.06 0.30" pos="0.25 0 1.10" euler="1.5708 0 0" material="bush_foliage_mat" contype="0" conaffinity="0" name="layout_geom_235_1" />
+    </body>
+    <body name="p4_cactus_2" pos="22.0 -15.0 0.0">
+      <geom type="sphere" size="0.28" pos="0 0 0.28" material="bush_foliage_mat" contype="1" conaffinity="7" name="layout_geom_236_0" />
+      <geom type="sphere" size="0.04" pos="0 0 0.58" material="cactus_flower_yellow" contype="0" conaffinity="0" name="layout_geom_236_1" />
+    </body>
+    <geom name="plaza_foundation" type="box" size="5.50 6.50 0.012" pos="0.0 4.0 0.012" material="concrete_pad_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_apron_chevron_1" type="box" size="1.20 0.15 0.002" pos="0.0 -3.0 0.026" material="hazard_yellow_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_apron_chevron_2" type="box" size="1.20 0.15 0.002" pos="0.0 -1.5 0.026" material="hazard_yellow_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_apron_chevron_3" type="box" size="1.20 0.15 0.002" pos="0.0  0.0 0.026" material="hazard_yellow_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_curb_left" type="box" size="0.20 6.2 0.08" pos="-5.30 4.0 0.08" material="kiosk_pedestal_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_curb_right" type="box" size="0.20 6.2 0.08" pos=" 5.30 4.0 0.08" material="kiosk_pedestal_mat" contype="0" conaffinity="0" />
+    <geom name="plaza_curb_back" type="box" size="5.40 0.20 0.08" pos=" 0.00 10.2 0.08" material="kiosk_pedestal_mat" contype="0" conaffinity="0" />
+    <body name="kiosk_docking_pad" pos="0.000 1.200 0.020">
+      <geom name="dock_plate" type="cylinder" size="2.25 0.015" pos="0 0 0.015" material="concrete_pad_mat" contype="0" conaffinity="0" />
+      <geom name="dock_ring_outer" type="cylinder" size="2.15 0.003" pos="0 0 0.032" material="kiosk_led_green" contype="0" conaffinity="0" />
+      <geom name="dock_ring_mid" type="cylinder" size="1.65 0.004" pos="0 0 0.034" material="kiosk_pedestal_mat" contype="0" conaffinity="0" />
+      <geom name="dock_ring_inner" type="cylinder" size="1.45 0.005" pos="0 0 0.036" material="kiosk_led_green" contype="0" conaffinity="0" />
+      <geom name="dock_center_target" type="cylinder" size="0.55 0.006" pos="0 0 0.038" material="scan_core_mat" contype="0" conaffinity="0" />
+      <geom type="box" size="2.00 0.04 0.004" pos="0 0 0.035" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_244_5" />
+      <geom type="box" size="0.04 2.00 0.004" pos="0 0 0.035" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_244_6" />
+    </body>
+    <body name="kiosk_bollard_l" pos="-3.5 2.0 0">
+      <geom type="cylinder" size="0.14 0.45" pos="0 0 0.45" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_245_0" />
+      <geom type="cylinder" size="0.145 0.06" pos="0 0 0.70" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_245_1" />
+    </body>
+    <body name="kiosk_bollard_r" pos="3.5 2.0 0">
+      <geom type="cylinder" size="0.14 0.45" pos="0 0 0.45" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_246_0" />
+      <geom type="cylinder" size="0.145 0.06" pos="0 0 0.70" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_246_1" />
+    </body>
+    <body name="kiosk_tower" pos="0.000 8.200 0">
+      <geom name="honda_base_pedestal" type="box" size="0.82 0.44 0.12" pos="0 0 0.12" material="honda_cabinet_dark" contype="1" conaffinity="7" />
+      <geom type="cylinder" size="0.025 0.04" pos="-0.75 -0.38 0.04" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_247_1" />
+      <geom type="cylinder" size="0.025 0.04" pos=" 0.75 -0.38 0.04" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_247_2" />
+      <geom type="cylinder" size="0.025 0.04" pos="-0.75  0.38 0.04" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_247_3" />
+      <geom type="cylinder" size="0.025 0.04" pos=" 0.75  0.38 0.04" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_247_4" />
+      <geom name="honda_main_cabinet" type="box" size="0.78 0.40 1.05" pos="0 0 1.25" material="honda_cabinet_dark" contype="1" conaffinity="7" />
+      <geom name="honda_front_frame" type="box" size="0.78 0.008 0.96" pos="0 -0.408 1.15" material="honda_white_fascia" contype="0" conaffinity="0" />
+      <geom name="honda_cowl_box" type="box" size="0.78 0.38 0.08" pos="0 0 2.36" material="honda_white_fascia" contype="1" conaffinity="7" />
+      <geom name="honda_cowl_curve" type="cylinder" size="0.10 0.77" pos="0 -0.36 2.34" euler="0 1.5708 0" material="honda_white_fascia" contype="0" conaffinity="0" />
+      <geom name="honda_cowl_hood" type="box" size="0.77 0.03 0.10" pos="0 -0.410 2.24" material="honda_white_fascia" contype="0" conaffinity="0" />
+      <geom name="honda_brand_emblem" type="box" size="0.26 0.004 0.016" pos="-0.26 -0.432 2.28" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="honda_grille_backing" type="box" size="0.72 0.003 0.16" pos="0 -0.418 1.94" material="honda_grille_gray" contype="0" conaffinity="0" />
+      <geom type="box" size="0.71 0.003 0.010" pos="0 -0.424 2.05" material="honda_cabinet_dark" contype="0" conaffinity="0" name="layout_geom_247_12" />
+      <geom type="box" size="0.71 0.003 0.010" pos="0 -0.424 1.98" material="honda_cabinet_dark" contype="0" conaffinity="0" name="layout_geom_247_13" />
+      <geom type="box" size="0.71 0.003 0.010" pos="0 -0.424 1.91" material="honda_cabinet_dark" contype="0" conaffinity="0" name="layout_geom_247_14" />
+      <geom type="box" size="0.71 0.003 0.010" pos="0 -0.424 1.84" material="honda_cabinet_dark" contype="0" conaffinity="0" name="layout_geom_247_15" />
+      <geom name="honda_screen_bezel" type="box" size="0.16 0.004 0.12" pos="0.28 -0.424 1.94" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="honda_screen_lcd" type="box" size="0.14 0.002 0.10" pos="0.28 -0.429 1.94" material="kiosk_screen_mat" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_1" type="box" size="0.140 0.035 0.115" pos="-0.380 -0.380 1.540" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_1" type="box" size="0.165 0.002 0.135" pos="-0.380 -0.418 1.540" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_1" type="box" size="0.155 0.002 0.125" pos="-0.380 -0.421 1.540" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_1" type="box" size="0.115 0.035 0.085" pos="-0.380 -0.435 1.525" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_1" type="box" size="0.035 0.002 0.028" pos="-0.380 -0.472 1.505" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_1" type="capsule" size="0.012" fromto="-0.445 -0.445 1.595 -0.315 -0.445 1.595" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_1" type="capsule" size="0.015" fromto="-0.418 -0.445 1.595 -0.342 -0.445 1.595" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_2" type="box" size="0.140 0.035 0.115" pos="0.000 -0.380 1.540" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_2" type="box" size="0.165 0.002 0.135" pos="0.000 -0.418 1.540" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_2" type="box" size="0.155 0.002 0.125" pos="0.000 -0.421 1.540" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_2" type="box" size="0.115 0.035 0.085" pos="0.000 -0.435 1.525" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_2" type="box" size="0.035 0.002 0.028" pos="0.000 -0.472 1.505" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_2" type="capsule" size="0.012" fromto="-0.065 -0.445 1.595 0.065 -0.445 1.595" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_2" type="capsule" size="0.015" fromto="-0.038 -0.445 1.595 0.038 -0.445 1.595" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_3" type="box" size="0.140 0.035 0.115" pos="0.380 -0.380 1.540" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_3" type="box" size="0.165 0.002 0.135" pos="0.380 -0.418 1.540" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_3" type="box" size="0.155 0.002 0.125" pos="0.380 -0.421 1.540" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_3" type="box" size="0.115 0.035 0.085" pos="0.380 -0.435 1.525" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_3" type="box" size="0.035 0.002 0.028" pos="0.380 -0.472 1.505" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_3" type="capsule" size="0.012" fromto="0.315 -0.445 1.595 0.445 -0.445 1.595" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_3" type="capsule" size="0.015" fromto="0.342 -0.445 1.595 0.418 -0.445 1.595" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_4" type="box" size="0.140 0.035 0.115" pos="-0.380 -0.380 1.220" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_4" type="box" size="0.165 0.002 0.135" pos="-0.380 -0.418 1.220" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_4" type="box" size="0.155 0.002 0.125" pos="-0.380 -0.421 1.220" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_4" type="box" size="0.115 0.035 0.085" pos="-0.380 -0.435 1.205" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_4" type="box" size="0.035 0.002 0.028" pos="-0.380 -0.472 1.185" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_4" type="capsule" size="0.012" fromto="-0.445 -0.445 1.275 -0.315 -0.445 1.275" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_4" type="capsule" size="0.015" fromto="-0.418 -0.445 1.275 -0.342 -0.445 1.275" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_5" type="box" size="0.140 0.035 0.115" pos="0.000 -0.380 1.220" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_5" type="box" size="0.165 0.002 0.135" pos="0.000 -0.418 1.220" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_5" type="box" size="0.155 0.002 0.125" pos="0.000 -0.421 1.220" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_5" type="box" size="0.115 0.035 0.085" pos="0.000 -0.435 1.205" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_5" type="box" size="0.035 0.002 0.028" pos="0.000 -0.472 1.185" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_5" type="capsule" size="0.012" fromto="-0.065 -0.445 1.275 0.065 -0.445 1.275" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_5" type="capsule" size="0.015" fromto="-0.038 -0.445 1.275 0.038 -0.445 1.275" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_6" type="box" size="0.140 0.035 0.115" pos="0.380 -0.380 1.220" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_6" type="box" size="0.165 0.002 0.135" pos="0.380 -0.418 1.220" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_6" type="box" size="0.155 0.002 0.125" pos="0.380 -0.421 1.220" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_6" type="box" size="0.115 0.035 0.085" pos="0.380 -0.435 1.205" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_6" type="box" size="0.035 0.002 0.028" pos="0.380 -0.472 1.185" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_6" type="capsule" size="0.012" fromto="0.315 -0.445 1.275 0.445 -0.445 1.275" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_6" type="capsule" size="0.015" fromto="0.342 -0.445 1.275 0.418 -0.445 1.275" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_7" type="box" size="0.140 0.035 0.115" pos="-0.380 -0.380 0.900" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_7" type="box" size="0.165 0.002 0.135" pos="-0.380 -0.418 0.900" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_7" type="box" size="0.155 0.002 0.125" pos="-0.380 -0.421 0.900" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_7" type="box" size="0.115 0.035 0.085" pos="-0.380 -0.435 0.885" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_7" type="box" size="0.035 0.002 0.028" pos="-0.380 -0.472 0.865" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_7" type="capsule" size="0.012" fromto="-0.445 -0.445 0.955 -0.315 -0.445 0.955" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_7" type="capsule" size="0.015" fromto="-0.418 -0.445 0.955 -0.342 -0.445 0.955" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_8" type="box" size="0.140 0.035 0.115" pos="0.000 -0.380 0.900" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_8" type="box" size="0.165 0.002 0.135" pos="0.000 -0.418 0.900" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_8" type="box" size="0.155 0.002 0.125" pos="0.000 -0.421 0.900" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_8" type="box" size="0.115 0.035 0.085" pos="0.000 -0.435 0.885" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_8" type="box" size="0.035 0.002 0.028" pos="0.000 -0.472 0.865" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_8" type="capsule" size="0.012" fromto="-0.065 -0.445 0.955 0.065 -0.445 0.955" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_8" type="capsule" size="0.015" fromto="-0.038 -0.445 0.955 0.038 -0.445 0.955" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_9" type="box" size="0.140 0.035 0.115" pos="0.380 -0.380 0.900" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_9" type="box" size="0.165 0.002 0.135" pos="0.380 -0.418 0.900" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_9" type="box" size="0.155 0.002 0.125" pos="0.380 -0.421 0.900" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_9" type="box" size="0.115 0.035 0.085" pos="0.380 -0.435 0.885" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_9" type="box" size="0.035 0.002 0.028" pos="0.380 -0.472 0.865" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_9" type="capsule" size="0.012" fromto="0.315 -0.445 0.955 0.445 -0.445 0.955" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_9" type="capsule" size="0.015" fromto="0.342 -0.445 0.955 0.418 -0.445 0.955" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_10" type="box" size="0.140 0.035 0.115" pos="-0.380 -0.380 0.580" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_10" type="box" size="0.165 0.002 0.135" pos="-0.380 -0.418 0.580" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_10" type="box" size="0.155 0.002 0.125" pos="-0.380 -0.421 0.580" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="bat_body_10" type="box" size="0.115 0.035 0.085" pos="-0.380 -0.435 0.565" material="honda_battery_body" contype="0" conaffinity="0" />
+      <geom name="bat_logo_10" type="box" size="0.035 0.002 0.028" pos="-0.380 -0.472 0.545" material="honda_brand_teal" contype="0" conaffinity="0" />
+      <geom name="bat_handle_10" type="capsule" size="0.012" fromto="-0.445 -0.445 0.635 -0.315 -0.445 0.635" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bat_grip_10" type="capsule" size="0.015" fromto="-0.418 -0.445 0.635 -0.342 -0.445 0.635" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_11" type="box" size="0.140 0.035 0.115" pos="0.000 -0.380 0.580" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_11" type="box" size="0.165 0.002 0.135" pos="0.000 -0.418 0.580" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_11" type="box" size="0.155 0.002 0.125" pos="0.000 -0.421 0.580" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="dock_pin_11_1" type="cylinder" size="0.008 0.015" pos="-0.040 -0.345 0.580" euler="1.5708 0 0" material="field_station_metal" contype="0" conaffinity="0" />
+      <geom name="dock_pin_11_2" type="cylinder" size="0.008 0.015" pos="0.040 -0.345 0.580" euler="1.5708 0 0" material="field_station_metal" contype="0" conaffinity="0" />
+      <geom name="bay_pocket_12" type="box" size="0.140 0.035 0.115" pos="0.380 -0.380 0.580" material="honda_bay_pocket" contype="0" conaffinity="0" />
+      <geom name="bay_bezel_12" type="box" size="0.165 0.002 0.135" pos="0.380 -0.418 0.580" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="bay_halo_12" type="box" size="0.155 0.002 0.125" pos="0.380 -0.421 0.580" material="honda_slot_blue_led" contype="0" conaffinity="0" />
+      <geom name="dock_pin_12_1" type="cylinder" size="0.008 0.015" pos="0.340 -0.345 0.580" euler="1.5708 0 0" material="field_station_metal" contype="0" conaffinity="0" />
+      <geom name="dock_pin_12_2" type="cylinder" size="0.008 0.015" pos="0.420 -0.345 0.580" euler="1.5708 0 0" material="field_station_metal" contype="0" conaffinity="0" />
+    </body>
+    <body name="reserve_pack_1" pos="-1.05 7.60 0.0">
+      <geom name="res_bat_1_body" type="box" size="0.085 0.085 0.17" pos="0 0 0.17" material="honda_battery_body" contype="1" conaffinity="7" />
+      <geom name="res_bat_1_handle" type="capsule" size="0.012" fromto="-0.055 0 0.36 0.055 0 0.36" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="res_bat_1_grip" type="capsule" size="0.015" fromto="-0.035 0 0.36 0.035 0 0.36" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="res_bat_1_logo" type="box" size="0.035 0.002 0.030" pos="0 -0.087 0.20" material="honda_brand_teal" contype="0" conaffinity="0" />
+    </body>
+    <body name="reserve_pack_2" pos="-0.80 7.60 0.0">
+      <geom name="res_bat_2_body" type="box" size="0.085 0.085 0.17" pos="0 0 0.17" material="honda_battery_body" contype="1" conaffinity="7" />
+      <geom name="res_bat_2_handle" type="capsule" size="0.012" fromto="-0.055 0 0.36 0.055 0 0.36" material="honda_cabinet_dark" contype="0" conaffinity="0" />
+      <geom name="res_bat_2_grip" type="capsule" size="0.015" fromto="-0.035 0 0.36 0.035 0 0.36" material="honda_handle_blue" contype="0" conaffinity="0" />
+      <geom name="res_bat_2_logo" type="box" size="0.035 0.002 0.030" pos="0 -0.087 0.20" material="honda_brand_teal" contype="0" conaffinity="0" />
+    </body>
+    <body name="plaza_transformer" pos="-4.50 7.80 0.60">
+      <geom type="box" size="0.60 0.45 0.60" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_250_0" />
+      <geom type="box" size="0.25 0.02 0.35" pos="0 -0.46 0" material="hazard_yellow_mat" contype="0" conaffinity="0" name="layout_geom_250_1" />
+      <geom type="cylinder" size="0.02 0.20" pos="0.20 0 0.70" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_250_2" />
+    </body>
+    <geom name="origin_base_pad" type="box" size="8.00 6.00 0.010" pos="0.000 -20.000 0.010" material="concrete_pad_mat" contype="0" conaffinity="0" />
+    <geom name="heli_ring" type="cylinder" size="2.50 0.002" pos="0.000 -20.000 0.012" material="hazard_yellow_mat" contype="0" conaffinity="0" />
+    <geom name="heli_h_left" type="box" size="0.12 0.85 0.003" pos="-0.650 -20.000 0.013" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="heli_h_right" type="box" size="0.12 0.85 0.003" pos="0.650 -20.000 0.013" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="heli_h_cross" type="box" size="0.65 0.12 0.003" pos="0.000 -20.000 0.013" material="road_stripe_white" contype="0" conaffinity="0" />
+    <geom name="base_container_1" type="box" size="1.20 2.80 1.25" pos="-5.50 -20.0 1.25" material="container_teal" contype="1" conaffinity="7" />
+    <geom name="base_container_2" type="box" size="1.20 2.80 1.25" pos=" 5.50 -20.0 1.25" material="container_orange" contype="1" conaffinity="7" />
+    <body name="base_generator_trailer" pos="-7.80 -20.0 0.45">
+      <geom type="box" size="0.80 0.55 0.45" material="utility_gray_mat" contype="1" conaffinity="7" name="layout_geom_258_0" />
+      <geom type="cylinder" size="0.04 0.35" pos="0.30 0 0.65" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_258_1" />
+    </body>
+    <body name="origin_telemetry_mast" pos="7.80 -20.0 0">
+      <geom type="cylinder" size="0.05 2.50" pos="0 0 2.50" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_259_0" />
+      <geom type="cylinder" size="0.45 0.05" pos="0 0 5.10" euler="0.6 0 0" material="field_station_metal" contype="0" conaffinity="0" name="layout_geom_259_1" />
+      <geom type="sphere" size="0.10" pos="0 0 5.35" material="telemetry_beacon_blue" contype="0" conaffinity="0" name="layout_geom_259_2" />
+    </body>
+    <body name="cone_road_w1" pos="-12.4 -3.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_260_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_260_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_260_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_260_3" />
+    </body>
+    <body name="rock_road_w1" pos="-7.1 2.5 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_261_0" />
+    </body>
+    <body name="cone_road_w2" pos="-12.4 7.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_262_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_262_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_262_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_262_3" />
+    </body>
+    <body name="rock_road_w2" pos="-7.1 -7.0 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_263_0" />
+    </body>
+    <body name="cone_road_w3" pos="-12.35 4.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_264_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_264_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_264_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_264_3" />
+    </body>
+    <body name="barr_road_w1" pos="-7.050000000000001 11.5 0.0">
+      <geom type="box" size="0.55 0.04 0.25" pos="0 0 0.35" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_265_0" />
+      <geom type="cylinder" size="0.03 0.25" pos="-0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_265_1" />
+      <geom type="cylinder" size="0.03 0.25" pos=" 0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_265_2" />
+    </body>
+    <body name="cone_road_e1" pos="12.4 -3.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_266_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_266_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_266_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_266_3" />
+    </body>
+    <body name="rock_road_e1" pos="7.6 2.5 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_267_0" />
+    </body>
+    <body name="cone_road_e2" pos="12.4 7.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_268_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_268_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_268_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_268_3" />
+    </body>
+    <body name="rock_road_e2" pos="7.6 -7.0 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_269_0" />
+    </body>
+    <body name="cone_road_e3" pos="12.35 4.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_270_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_270_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_270_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_270_3" />
+    </body>
+    <body name="barr_road_e1" pos="7.050000000000001 11.5 0.0">
+      <geom type="box" size="0.55 0.04 0.25" pos="0 0 0.35" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_271_0" />
+      <geom type="cylinder" size="0.03 0.25" pos="-0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_271_1" />
+      <geom type="cylinder" size="0.03 0.25" pos=" 0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_271_2" />
+    </body>
+    <body name="rock_road_s1" pos="-6.0 -7.15 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_272_0" />
+    </body>
+    <body name="cone_road_s1" pos="5.0 -12.35 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_273_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_273_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_273_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_273_3" />
+    </body>
+    <body name="cone_road_s2" pos="-2.5 -12.35 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_274_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_274_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_274_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_274_3" />
+    </body>
+    <body name="rock_road_s2" pos="3.0 -7.15 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_275_0" />
+    </body>
+    <body name="cone_road_n1" pos="-5.00 16.35 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_276_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_276_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_276_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_276_3" />
+    </body>
+    <body name="rock_road_n1" pos="5.00 15.65 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_277_0" />
+    </body>
+    <body name="barr_road_n1" pos="0.00 16.35 0">
+      <geom type="box" size="0.55 0.04 0.25" pos="0 0 0.35" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_278_0" />
+      <geom type="cylinder" size="0.03 0.25" pos="-0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_278_1" />
+      <geom type="cylinder" size="0.03 0.25" pos=" 0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_278_2" />
+    </body>
+    <body name="cone_road_c1" pos="-2.45 -15.0 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_279_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_279_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_279_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_279_3" />
+    </body>
+    <body name="rock_road_c1" pos="2.45 -7.5 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_280_0" />
+    </body>
+    <body name="cone_road_c2" pos="2.45 -17.5 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_281_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_281_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_281_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_281_3" />
+    </body>
+    <body name="rock_road_c2" pos="-2.45 -13.0 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_282_0" />
+    </body>
+    <body name="cone_p1_entry" pos="-13.0 18.35 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_283_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_283_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_283_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_283_3" />
+    </body>
+    <body name="cone_p2_entry" pos="13.0 18.35 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_284_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_284_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_284_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_284_3" />
+    </body>
+    <body name="cone_p3_entry" pos="-11.0 -12.65 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_285_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_285_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_285_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_285_3" />
+    </body>
+    <body name="cone_p4_entry" pos="8.5 -12.65 0.0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_286_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_286_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_286_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_286_3" />
+    </body>
+    <body name="cone_p1_1" pos="-6.00 -17.00 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_287_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_287_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_287_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_287_3" />
+    </body>
+    <body name="cone_p1_2" pos="-12.50 2.00 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_288_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_288_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_288_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_288_3" />
+    </body>
+    <body name="cone_p1_3" pos="-12.50 10.00 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_289_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_289_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_289_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_289_3" />
+    </body>
+    <body name="cone_p2_1" pos="6.00 -17.00 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_290_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_290_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_290_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_290_3" />
+    </body>
+    <body name="cone_p2_2" pos="12.50 2.00 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_291_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_291_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_291_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_291_3" />
+    </body>
+    <body name="cone_p2_3" pos="12.50 8.50 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_292_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_292_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_292_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_292_3" />
+    </body>
+    <body name="cone_p3_1" pos="-6.00 -18.50 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_293_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_293_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_293_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_293_3" />
+    </body>
+    <body name="cone_p3_2" pos="-8.50 -14.50 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_294_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_294_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_294_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_294_3" />
+    </body>
+    <body name="cone_p4_1" pos="6.00 -18.50 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_295_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_295_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_295_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_295_3" />
+    </body>
+    <body name="cone_p4_2" pos="8.50 -14.50 0">
+      <geom type="cylinder" size="0.16 0.015" pos="0 0 0.015" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_296_0" />
+      <geom type="cylinder" size="0.10 0.16" pos="0 0 0.16" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_296_1" />
+      <geom type="cylinder" size="0.105 0.05" pos="0 0 0.22" material="cone_white_stripe" contype="0" conaffinity="0" name="layout_geom_296_2" />
+      <geom type="cylinder" size="0.06 0.10" pos="0 0 0.34" material="traffic_cone_orange" contype="1" conaffinity="7" name="layout_geom_296_3" />
+    </body>
+    <body name="rock_p1_1" pos="-12.50 -2.00 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_297_0" />
+    </body>
+    <body name="rock_p2_1" pos="12.50 -2.00 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_298_0" />
+    </body>
+    <body name="rock_p3_1" pos="-12.0 -13.5 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_299_0" />
+    </body>
+    <body name="rock_p4_1" pos="10.00 -15.50 0.12">
+      <geom type="mesh" mesh="small_rock_mesh" material="granite_rock_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_300_0" />
+    </body>
+    <body name="barr_p1_1" pos="-13.0 7.0 0.0">
+      <geom type="box" size="0.55 0.04 0.25" pos="0 0 0.35" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_301_0" />
+      <geom type="cylinder" size="0.03 0.25" pos="-0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_301_1" />
+      <geom type="cylinder" size="0.03 0.25" pos=" 0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_301_2" />
+    </body>
+    <body name="barr_p2_1" pos="13.0 7.0 0.0">
+      <geom type="box" size="0.55 0.04 0.25" pos="0 0 0.35" material="hazard_yellow_mat" contype="1" conaffinity="7" name="layout_geom_302_0" />
+      <geom type="cylinder" size="0.03 0.25" pos="-0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_302_1" />
+      <geom type="cylinder" size="0.03 0.25" pos=" 0.45 0 0.25" material="field_station_metal" contype="1" conaffinity="7" name="layout_geom_302_2" />
+    </body>
+    <body name="stump_p1_1" pos="-12.50 12.00 0">
+      <geom type="cylinder" size="0.25 0.18" pos="0 0 0.18" material="stump_bark_mat" contype="1" conaffinity="7" name="layout_geom_303_0" />
+      <geom type="cylinder" size="0.22 0.01" pos="0 0 0.36" material="stump_heartwood" contype="0" conaffinity="0" name="layout_geom_303_1" />
+    </body>
+    <body name="forest_hurdle_1" pos="-18.00 10.50 0.025" euler="0.00 0.00 0.05">
+      <geom type="cylinder" size="0.050 1.80" euler="0 1.5708 0" material="fallen_log_mat" contype="1" conaffinity="7" friction="2.2 0.08 0.005" name="layout_geom_304_0" />
+    </body>
+    <body name="quarry_step_1" pos="15.50 10.50 0.025" euler="0.03 -0.02 0.42">
+      <geom type="box" size="1.60 0.75 0.025" material="broken_slab_mat" contype="1" conaffinity="7" friction="2.5 0.1 0.01" name="layout_geom_305_0" />
+    </body>
+    <body name="bog_log_1" pos="-12.50 -9.50 0.025" euler="0.00 0.00 0.62">
+      <geom type="cylinder" size="0.050 1.80" euler="0 1.5708 0" material="fallen_log_mat" contype="1" conaffinity="7" friction="2.6 0.12 0.008" name="layout_geom_306_0" />
+    </body>
+    <body name="sand_step_1" pos="13.50 -8.00 0.030" euler="0.02 -0.02 0.25">
+      <geom type="box" size="1.80 0.70 0.030" material="sandstone_mat" contype="1" conaffinity="7" friction="2.0 0.08 0.005" name="layout_geom_307_0" />
+    </body>
+    <body name="boulder_c1" pos="-5.00 -7.00 0.39">
+      <geom type="sphere" size="0.55" material="granite_rock_mat" contype="1" conaffinity="7" friction="1.8 0.05 0.002" name="layout_geom_308_0" />
+    </body>
+    <body name="boulder_c2" pos="5.00 -7.00 0.39">
+      <geom type="sphere" size="0.55" material="granite_rock_mat" contype="1" conaffinity="7" friction="1.8 0.05 0.002" name="layout_geom_309_0" />
+    </body>
+    <body name="stump_c3" pos="-2.8 -7.0 0.0">
+      <geom type="cylinder" size="0.45 0.50" pos="0 0 0.50" material="stump_bark_mat" contype="1" conaffinity="7" name="layout_geom_310_0" />
+    </body>
+    <body name="stump_c4" pos="3.8 -7.0 0.0">
+      <geom type="cylinder" size="0.45 0.50" pos="0 0 0.50" material="stump_bark_mat" contype="1" conaffinity="7" name="layout_geom_311_0" />
+    </body>
+    <body name="boulder_c5" pos="7.0 14.0 0.39">
+      <geom type="sphere" size="0.55" material="granite_rock_mat" contype="1" conaffinity="7" friction="1.8 0.05 0.002" name="layout_geom_312_0" />
+    </body>
+    <body name="robot" pos="0 -20 .48">
+      <freejoint name="root" />
+      <inertial pos="0 0 0.05" mass="35.0" fullinertia="2.14 2.24 4.02 0.0 0.0 0.0" />
+      <geom name="source_visual_base_link_0" type="mesh" mesh="mesh_base_link" rgba="0.25 0.25 0.28 1.0" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+      <geom name="source_visual_base_link_1" type="mesh" mesh="mesh_top_cover" rgba="0.13 0.14 0.16 1.0" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+      <geom name="source_collision_base_link_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.42 0.3 0.14" pos="0 0 0.02" quat="1.0 0.0 0.0 0.0" />
+      <body name="LF_coxa" pos="0.320 0.410 0.1085" quat="1.0 0.0 0.0 0.0">
+        <joint name="LF_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_LF_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba="0.85 0.45 0.1 1.0" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_LF_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="LF_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="LF_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_LF_femur_0" type="mesh" mesh="mesh_femur_link" rgba="0.3 0.3 0.32 1.0" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_LF_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="LF_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="LF_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_LF_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_LF_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="LF_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_LF_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="LM_coxa" pos="0.000 0.410 0.1085" quat="1.0 0.0 0.0 0.0">
+        <joint name="LM_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_LM_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_LM_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="LM_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="LM_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_LM_femur_0" type="mesh" mesh="mesh_femur_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_LM_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="LM_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="LM_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_LM_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_LM_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="LM_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_LM_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="LR_coxa" pos="-0.320 0.410 0.1085" quat="1.0 0.0 0.0 0.0">
+        <joint name="LR_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_LR_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_LR_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="LR_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="LR_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_LR_femur_0" type="mesh" mesh="mesh_femur_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_LR_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="LR_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="LR_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_LR_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_LR_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="LR_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_LR_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RF_coxa" pos="0.320 -0.410 0.1085" quat="1.7948965149208059e-09 0.0 0.0 1.0">
+        <joint name="RF_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_RF_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_RF_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="RF_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="RF_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_RF_femur_0" type="mesh" mesh="mesh_femur_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_RF_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="RF_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="RF_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_RF_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_RF_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="RF_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_RF_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RM_coxa" pos="0.000 -0.410 0.1085" quat="1.7948965149208059e-09 0.0 0.0 1.0">
+        <joint name="RM_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_RM_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_RM_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="RM_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="RM_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_RM_femur_0" type="mesh" mesh="mesh_femur_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_RM_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="RM_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="RM_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_RM_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_RM_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="RM_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_RM_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="RR_coxa" pos="-0.320 -0.410 0.1085" quat="1.7948965149208059e-09 0.0 0.0 1.0">
+        <joint name="RR_hip_joint" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="1.5" />
+        <inertial pos="0 0.078 0.0" mass="2.02" fullinertia="0.009 0.007 0.012 0 0 0" />
+        <geom name="source_visual_RR_coxa_0" type="mesh" mesh="mesh_coxa_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+        <geom name="source_collision_RR_coxa_0" group="3" contype="2" conaffinity="1" density="0" type="box" size="0.06 0.09 0.06" pos="0 0.078 0.0" quat="1.0 0.0 0.0 0.0" />
+        <body name="RR_femur" pos="0 0.157 0" quat="1.0 0.0 0.0 0.0">
+          <joint name="RR_femur_joint" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.0" />
+          <inertial pos="0 0.350 0.0" mass="3.49" fullinertia="0.018 0.082 0.085 0 0 0" />
+          <geom name="source_visual_RR_femur_0" type="mesh" mesh="mesh_femur_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+          <geom name="source_collision_RR_femur_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.06 0.35" pos="0 0.350 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+          <body name="RR_tibia" pos="0 0.700 0" quat="1.0 0.0 0.0 0.0">
+            <joint name="RR_tibia_joint" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.0" />
+            <inertial pos="0 0.380 0.0" mass="4.71" fullinertia="0.215 0.218 0.015 0 0 0" />
+            <geom name="source_visual_RR_tibia_0" type="mesh" mesh="mesh_tibia_link" rgba=".5 .5 .5 1" contype="0" conaffinity="0" density="0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            <geom name="source_collision_RR_tibia_0" group="3" contype="2" conaffinity="1" density="0" type="cylinder" size="0.05 0.38" pos="0 0.380 0.0" quat="0.707106790659974 0.707106771713121 0.0 0.0" />
+            <body name="RR_foot" pos="0 0.764 0" quat="1.0 0.0 0.0 0.0">
+              <inertial pos="0 0 0" mass="0.20" fullinertia="0.0003 0.0003 0.0003 0 0 0" />
+              <geom name="source_collision_RR_foot_0" group="3" contype="2" conaffinity="1" density="0" type="sphere" size="0.045" pos="0 0 0" quat="1.0 0.0 0.0 0.0" />
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <geom name="landscape_bed_-1_0" type="box" size="1.1 1.1 .07" pos="-29.0 -22.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_0" type="ellipsoid" size=".85 .85 .55" pos="-29.0 -22.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_1" type="box" size="1.1 1.1 .07" pos="-29.0 -17.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_1" type="ellipsoid" size=".85 .85 .55" pos="-29.0 -17.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_2" type="box" size="1.1 1.1 .07" pos="-29.0 -12.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_2" type="ellipsoid" size=".85 .85 .55" pos="-29.0 -12.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_3" type="box" size="1.1 1.1 .07" pos="-29.0 -7.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_3" type="ellipsoid" size=".85 .85 .55" pos="-29.0 -7.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_4" type="box" size="1.1 1.1 .07" pos="-29.0 -2.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_4" type="ellipsoid" size=".85 .85 .55" pos="-29.0 -2.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_5" type="box" size="1.1 1.1 .07" pos="-29.0 3.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_5" type="ellipsoid" size=".85 .85 .55" pos="-29.0 3.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_6" type="box" size="1.1 1.1 .07" pos="-29.0 8.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_6" type="ellipsoid" size=".85 .85 .55" pos="-29.0 8.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_7" type="box" size="1.1 1.1 .07" pos="-29.0 13.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_7" type="ellipsoid" size=".85 .85 .55" pos="-29.0 13.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_8" type="box" size="1.1 1.1 .07" pos="-29.0 18.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_8" type="ellipsoid" size=".85 .85 .55" pos="-29.0 18.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_-1_9" type="box" size="1.1 1.1 .07" pos="-29.0 23.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_-1_9" type="ellipsoid" size=".85 .85 .55" pos="-29.0 23.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_0" type="box" size="1.1 1.1 .07" pos="29.0 -22.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_0" type="ellipsoid" size=".85 .85 .55" pos="29.0 -22.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_1" type="box" size="1.1 1.1 .07" pos="29.0 -17.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_1" type="ellipsoid" size=".85 .85 .55" pos="29.0 -17.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_2" type="box" size="1.1 1.1 .07" pos="29.0 -12.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_2" type="ellipsoid" size=".85 .85 .55" pos="29.0 -12.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_3" type="box" size="1.1 1.1 .07" pos="29.0 -7.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_3" type="ellipsoid" size=".85 .85 .55" pos="29.0 -7.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_4" type="box" size="1.1 1.1 .07" pos="29.0 -2.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_4" type="ellipsoid" size=".85 .85 .55" pos="29.0 -2.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_5" type="box" size="1.1 1.1 .07" pos="29.0 3.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_5" type="ellipsoid" size=".85 .85 .55" pos="29.0 3.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_6" type="box" size="1.1 1.1 .07" pos="29.0 8.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_6" type="ellipsoid" size=".85 .85 .55" pos="29.0 8.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_7" type="box" size="1.1 1.1 .07" pos="29.0 13.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_7" type="ellipsoid" size=".85 .85 .55" pos="29.0 13.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_8" type="box" size="1.1 1.1 .07" pos="29.0 18.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_8" type="ellipsoid" size=".85 .85 .55" pos="29.0 18.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_bed_1_9" type="box" size="1.1 1.1 .07" pos="29.0 23.0 .07" material="concrete_pad_mat" contype="0" conaffinity="0" density=".01" />
+    <geom name="landscape_shrub_1_9" type="ellipsoid" size=".85 .85 .55" pos="29.0 23.0 .5" material="route_teal" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_post_1" type="box" size=".07 .07 1." pos="-25 10 1." material="service_silver" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_panel_1" type="box" size=".65 .10 .38" pos="-25 10 1.8" material="site_identity_1" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_1_0" type="box" size=".035 .01 .22" pos="-25.0 9.885 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_post_2" type="box" size=".07 .07 1." pos="25 10 1." material="service_silver" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_panel_2" type="box" size=".65 .10 .38" pos="25 10 1.8" material="site_identity_2" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_2_0" type="box" size=".035 .01 .22" pos="24.85 9.885 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_2_1" type="box" size=".035 .01 .22" pos="25.150000000000002 9.885 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_post_3" type="box" size=".07 .07 1." pos="-25 -18 1." material="service_silver" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_panel_3" type="box" size=".65 .10 .38" pos="-25 -18 1.8" material="site_identity_3" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_3_0" type="box" size=".035 .01 .22" pos="-25.3 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_3_1" type="box" size=".035 .01 .22" pos="-25.0 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_3_2" type="box" size=".035 .01 .22" pos="-24.7 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_post_4" type="box" size=".07 .07 1." pos="25 -18 1." material="service_silver" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_panel_4" type="box" size=".65 .10 .38" pos="25 -18 1.8" material="site_identity_4" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_4_0" type="box" size=".035 .01 .22" pos="24.55 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_4_1" type="box" size=".035 .01 .22" pos="24.85 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_4_2" type="box" size=".035 .01 .22" pos="25.150000000000002 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+    <geom name="wayfinding_digit_4_3" type="box" size=".035 .01 .22" pos="25.45 -18.115 1.8" material="honda_white_fascia" contype="0" conaffinity="0" density=".01" />
+  </worldbody>
+  <actuator>
+    <position name="source_act_LF_hip_joint" joint="LF_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_LF_femur_joint" joint="LF_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_LF_tibia_joint" joint="LF_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+    <position name="source_act_LM_hip_joint" joint="LM_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_LM_femur_joint" joint="LM_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_LM_tibia_joint" joint="LM_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+    <position name="source_act_LR_hip_joint" joint="LR_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_LR_femur_joint" joint="LR_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_LR_tibia_joint" joint="LR_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+    <position name="source_act_RF_hip_joint" joint="RF_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_RF_femur_joint" joint="RF_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_RF_tibia_joint" joint="RF_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+    <position name="source_act_RM_hip_joint" joint="RM_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_RM_femur_joint" joint="RM_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_RM_tibia_joint" joint="RM_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+    <position name="source_act_RR_hip_joint" joint="RR_hip_joint" kp="100" ctrlrange="-0.785 0.785" />
+    <position name="source_act_RR_femur_joint" joint="RR_femur_joint" kp="100" ctrlrange="-1.047 1.047" />
+    <position name="source_act_RR_tibia_joint" joint="RR_tibia_joint" kp="100" ctrlrange="-2.094 0.349" />
+  </actuator>
+</mujoco>

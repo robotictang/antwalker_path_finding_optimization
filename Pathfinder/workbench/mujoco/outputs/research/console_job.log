@@ -1,0 +1,132 @@
+Manifest exploratory 1/4 · open
+Manifest exploratory 2/4 · clutter
+Manifest exploratory 3/4 · rough
+Manifest exploratory 4/4 · corridor
+exploratory_01 · repetition 1 · PSO with continuous polishing · arrived
+exploratory_01 · repetition 1 · OMPL RRTConnect + simplification + polishing · arrived
+exploratory_01 · repetition 1 · ACO with continuous polishing · arrived
+exploratory_01 · repetition 1 · Proposed v4 visibility and continuous refinement · arrived
+exploratory_01 · repetition 1 · OMPL RRT* with common seed + polishing · arrived
+exploratory_01 · repetition 1 · OMPL RRT* + common polishing · arrived
+exploratory_02 · repetition 1 · PSO with continuous polishing · resource_rejected
+exploratory_02 · repetition 1 · Proposed v4 visibility and continuous refinement · resource_rejected
+exploratory_02 · repetition 1 · OMPL RRT* with common seed + polishing · resource_rejected
+exploratory_02 · repetition 1 · ACO with continuous polishing · resource_rejected
+exploratory_02 · repetition 1 · OMPL RRT* + common polishing · no_route
+exploratory_02 · repetition 1 · OMPL RRTConnect + simplification + polishing · resource_rejected
+exploratory_03 · repetition 1 · PSO with continuous polishing · arrived
+exploratory_03 · repetition 1 · Proposed v4 visibility and continuous refinement · arrived
+exploratory_03 · repetition 1 · OMPL RRTConnect + simplification + polishing · arrived
+exploratory_03 · repetition 1 · ACO with continuous polishing · arrived
+exploratory_03 · repetition 1 · OMPL RRT* + common polishing · arrived
+exploratory_03 · repetition 1 · OMPL RRT* with common seed + polishing · arrived
+exploratory_04 · repetition 1 · OMPL RRT* + common polishing · arrived
+exploratory_04 · repetition 1 · ACO with continuous polishing · arrived
+exploratory_04 · repetition 1 · Proposed v4 visibility and continuous refinement · arrived
+exploratory_04 · repetition 1 · PSO with continuous polishing · arrived
+exploratory_04 · repetition 1 · OMPL RRTConnect + simplification + polishing · arrived
+exploratory_04 · repetition 1 · OMPL RRT* with common seed + polishing · arrived
+[
+  {
+    "method": "proposed_v4",
+    "label": "Proposed v4 visibility and continuous refinement",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.299270356356434,
+    "mean_predicted_energy_percent": 15.710219215849861,
+    "mean_task_time_s": 32.554666666668865,
+    "mean_positive_work_j": 8387.338401976527,
+    "mean_max_tilt_deg": 0.1558663914528398,
+    "mean_quality_score": 1.2995247523213966,
+    "mean_planning_seconds": 0.3984559074997378
+  },
+  {
+    "method": "pso_polished",
+    "label": "PSO with continuous polishing",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.310340103639888,
+    "mean_predicted_energy_percent": 15.714299644728314,
+    "mean_task_time_s": 32.56533333333552,
+    "mean_positive_work_j": 8389.32057387667,
+    "mean_max_tilt_deg": 0.15551238163897055,
+    "mean_quality_score": 1.2998858582887043,
+    "mean_planning_seconds": 0.2702619557512662
+  },
+  {
+    "method": "aco_polished",
+    "label": "ACO with continuous polishing",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.299270356356434,
+    "mean_predicted_energy_percent": 15.710219215849861,
+    "mean_task_time_s": 32.554666666668865,
+    "mean_positive_work_j": 8387.338401976527,
+    "mean_max_tilt_deg": 0.1558663914528398,
+    "mean_quality_score": 1.2995247523213966,
+    "mean_planning_seconds": 0.4063752847505384
+  },
+  {
+    "method": "ompl_rrtstar",
+    "label": "OMPL RRT* + common polishing",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.909785254668463,
+    "mean_predicted_energy_percent": 15.940846011919634,
+    "mean_task_time_s": 33.23733333333515,
+    "mean_positive_work_j": 8522.327718382172,
+    "mean_max_tilt_deg": 0.15546616453414205,
+    "mean_quality_score": 1.3193107620829079,
+    "mean_planning_seconds": 1.347466984499988
+  },
+  {
+    "method": "ompl_seeded_rrtstar",
+    "label": "OMPL RRT* with common seed + polishing",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.299270356356434,
+    "mean_predicted_energy_percent": 15.710219215849861,
+    "mean_task_time_s": 32.554666666668865,
+    "mean_positive_work_j": 8387.338401976527,
+    "mean_max_tilt_deg": 0.1558663914528398,
+    "mean_quality_score": 1.2995247523213966,
+    "mean_planning_seconds": 1.3518919664984423
+  },
+  {
+    "method": "ompl_rrtconnect",
+    "label": "OMPL RRTConnect + simplification + polishing",
+    "attempts": 4,
+    "admissible": 3,
+    "executed": 3,
+    "successes": 3,
+    "success_rate": 0.75,
+    "admissible_rate": 0.75,
+    "mean_predicted_time_s": 31.38473069156613,
+    "mean_predicted_energy_percent": 15.750598850732331,
+    "mean_task_time_s": 32.656000000002145,
+    "mean_positive_work_j": 8409.736559208077,
+    "mean_max_tilt_deg": 0.15657205205028263,
+    "mean_quality_score": 1.3028425178014797,
+    "mean_planning_seconds": 0.05633544149895897
+  }
+]

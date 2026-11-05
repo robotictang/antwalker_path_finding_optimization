@@ -1,0 +1,19 @@
+{
+  "state": "complete",
+  "records": 640,
+  "primary_records": 576,
+  "primary_worlds": 32,
+  "choices": {
+    "proposed_v4": "default",
+    "pso_polished": "default",
+    "aco_polished": "default",
+    "continuous_pso": "default"
+  },
+  "primary_run": "20261104T014755850676Z",
+  "scope": [
+    "Same four procedural world families as earlier studies; new seeds do not create independent map sources.",
+    "Planning only. No hardware, electrical energy or unassisted-locomotion claim.",
+    "Protocol frozen locally before runs; not externally preregistered.",
+    "Wall-clock timing is machine/load dependent."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "state": "passed",
+  "reviewed_primary_rows": 576,
+  "run_id": "20261029T073428166601Z",
+  "methods": [
+    "proposed_v4",
+    "pso_polished",
+    "aco_polished",
+    "ompl_rrtstar",
+    "ompl_seeded_rrtstar",
+    "ompl_rrtconnect"
+  ],
+  "snapshot_sha256": "d59202184198cda282d05273a9c6e2a76fe3c4d190733b5bb008c3643cb62d8f",
+  "html_sha256": "fe7e16b6c82723bc70fad4c50ebe28d6d13781199e1e403ec2f1fa0154da4a5b",
+  "exact_http_bytes": true,
+  "final_downloads_available": {
+    "docx": "/api/final-paper?format=docx",
+    "pdf": "/api/final-paper?format=pdf",
+    "zip": "/api/final-paper?format=zip",
+    "preview": "/api/final-paper?format=preview",
+    "csv": "/api/final-paper?format=csv"
+  },
+  "browser_interactive_visual_verification": "Not performed; no enabled browser surface. Build/data/HTTP checks do not certify browser filter, theme or export interaction behavior."
+}

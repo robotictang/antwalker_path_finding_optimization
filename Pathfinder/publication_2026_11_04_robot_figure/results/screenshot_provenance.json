@@ -1,0 +1,68 @@
+{
+  "source": "/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/outputs/research/world_models/20261104T014755850676Z/ij3ctest_01.xml",
+  "source_model_sha256": "d21e094915b6447ab7501d3e76e2685debca4947cd525abc0fc4b054329aafa5",
+  "source_case": "ij3ctest_01",
+  "copied_asset": "figures/simulation_overview.png",
+  "sha256": "9b442e7e50e78b580afb774b872bdb867ae1126c5e8e4ea6934e4db2e0e9c097",
+  "image_size_px": [
+    2400,
+    1500
+  ],
+  "capture": "Direct MuJoCo EGL static render; no physics steps, viewer or HTTP server.",
+  "state": "Walking initialization copied from research/execution.py; not an observed mission outcome.",
+  "camera": {
+    "lookat": [
+      6.75,
+      -7.75,
+      0.62
+    ],
+    "distance": 4.3,
+    "elevation": -29.0,
+    "azimuth": 120.0
+  },
+  "data_time": 0.0,
+  "qpos": [
+    6.75,
+    -7.75,
+    0.5,
+    0.7071067811865476,
+    0.0,
+    0.0,
+    0.7071067811865475,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.4494305574713177,
+    0.29211588604158034,
+    -1.7099997563742226,
+    8.537201244056068e-17,
+    0.26288768620118863,
+    -1.5592447890415588,
+    0.4494305574713179,
+    0.29211588604158034,
+    -1.7099997563742224,
+    0.44943055747131705,
+    0.29211588604158056,
+    -1.709999756374223,
+    8.537201244056069e-17,
+    0.26288768620118885,
+    -1.5592447890415604,
+    -0.4494305574713177,
+    0.29211588604158034,
+    -1.7099997563742226
+  ],
+  "visualization_changes": [
+    "Offscreen resolution 2400 by 1500",
+    "Camera framing",
+    "Labels disabled",
+    "Reflections and shadows disabled",
+    "World obstacle geometry hidden in renderer",
+    "Neutral gray floor display color",
+    "Even headlight illumination in place of world lights"
+  ],
+  "modification": "No image editing, cropping, recoloring, annotation or AI generation; native renderer output.",
+  "manuscript_width_inches": 4.5,
+  "role": "Robot model illustration, not physical validation or a locomotion result."
+}

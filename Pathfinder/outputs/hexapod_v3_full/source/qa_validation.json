@@ -1,0 +1,14 @@
+{
+  "pages": 28,
+  "all_pages_visually_inspected": true,
+  "contents_entries_verified": 27,
+  "internal_links_verified": 27,
+  "external_reference_links": 15,
+  "tables": 17,
+  "figures": 11,
+  "native_equations": 9,
+  "source_evidence_unchanged": true,
+  "docx_sha256": "fb1ea5377fd9f442f368063d4b0144aa8ce2cbe512e2c6a20e2b2041dc143a08",
+  "review_directory": "/home/user123456/Downloads/hexapod_asset/outputs/hexapod_v3_full/qa/delivery_final",
+  "scope": "Full document render and evidence consistency. Does not certify hardware validity or journal acceptance."
+}

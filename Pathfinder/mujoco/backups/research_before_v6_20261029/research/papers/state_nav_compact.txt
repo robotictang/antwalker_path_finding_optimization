@@ -1,0 +1,646 @@
+STATE-NAV: Stability-Aware Traversability
+Estimation for Bipedal Navigation on Rough Terrain
+Ziwon Yoon1 , Lawrence Y. Zhu1 , Jingxi Lu2 , Lu Gan1 , and Ye Zhao1
+Risk-Sensitive Traversability Estimation Traversability-Informed
+RRT* Global Planner
+Self-supervised
+Body-to- Stability-Aware Global
+stance-foot Velocity Map Path
+Angle (BSFA) Instability
+Instability
+Global Elevation
+Map
+MPC ALIP
+arXiv:2506.01046v4 [cs.RO] 5 Dec 2025
+Uncertainty Local Planner Controller
+Command
+Velocity
+Joint Commands
+Figure 1: Overall diagram of the proposed traversability estimation and the navigation framework. A transformer-based bipedal instability estimator, TravFormer,
+is trained using body-to-stance-foot angle (BSFA) instability as a self-supervised signal to generate stability-aware command velocity map from the geometric
+representation of the environment. This map is further used by a hierarchically integrated TravRRT* global planner and MPC local planner to safely navigate
+over diverse rough terrain.
+Abstract—Bipedal robots have advantages in maneuvering terrain that are often inaccessible to wheeled mobile sys-
+human-centered environments, but face greater failure risk tems [1], [2]. Despite their advantages, humanoid robots face
+compared to other stable mobile platforms, such as wheeled significant challenges in maintaining stability and balance,
+or quadrupedal robots. While learning-based traversability has
+been widely studied for these platforms, bipedal traversability has particularly on uneven or dynamically changing terrain [3].
+instead relied on manually designed rules with limited consider- Unlike wheeled or quadrupedal robots, which benefit from
+ation of locomotion stability on rough terrain. In this work, we their more statically stable ground contacts, humanoids have
+present the first learning-based traversability estimation and risk- a higher risk of failure due to their limited support area and
+sensitive navigation framework for bipedal robots operating in elevated center of mass, especially during rapid locomotion
+diverse, uneven environments. TravFormer, a transformer-based
+neural network, is trained to predict bipedal instability with or abrupt terrain transitions. While various control methods
+uncertainty, enabling risk-aware and adaptive planning. Based on have been proposed to address locomotion stability [4], [5],
+the network, we define traversability as stability-aware command traversability and navigation frameworks that account for the
+velocity—the fastest command velocity that keeps instability instability of bipedal locomotion on rough terrains remain
+below a user-defined limit. This velocity-based traversability is in- largely underexplored.
+tegrated into a hierarchical planner that combines traversability-
+informed Rapid Random Tree Star (TravRRT*) for time-efficient Existing works have explored bipedal traversability using
+path planning and Model Predictive Control (MPC) for safe manually designed rules based on geometry [6]–[8], providing
+execution. We validate our method in MuJoCo simulator and the a rough representation of terrain difficulty. However, these
+real world, demonstrating improved stability, time efficiency, and
+manually designed rules often fail to accurately reflect lo-
+robustness across diverse terrains compared with existing meth-
+ods. Project page with code: https://state-nav.github.io/statenav/ comotion stability and performance. Meanwhile, for wheeled
+and quadrupedal robots, extensive research on traversability
+Index Terms—Humanoids, legged robots, traversability, navi-
+estimation has leveraged self-supervised learning with various
+gation, planning, model predictive control, stability. locomotion features such as traction or IMU variances [9]–
+[16]. However, the relevance of these features to humanoid lo-
+I. I NTRODUCTION comotion stability remains uncertain due to the fundamentally
+different locomotion strategies employed by bipedal robots.
+W ITH the rapid advancement of legged robotics, hu-
+manoid robots have garnered significant attention for
+their ability to navigate complex environments with rough
+Furthermore, the greater risk of failure in humanoid loco-
+motion requires them to operate under stricter constraints on
+motion aggressiveness, such as command velocity. This aspect
+1 Institute for Robotics and Intelligent Machines, Georgia Institute of Tech- is often overlooked in traditional navigation planning but is
+nology, Atlanta, GA 30332, USA {zyoon6, lawrencezhu, lgan, crucial for ensuring safe and efficient humanoid navigation.
+yezhao}@gatech.edu To address these problems, we take a data-driven ap-
+2 Electrical and Computer Engineering, University of Southern California,
+Los Angeles, CA 90089, USA jingxil@usc.edu proach to evaluate various locomotion features and identify
+This work was supported in part by the Office of Naval Research (ONR) the one that best correlates with bipedal instability for pre-
+under Grant N000142312223; in part by the National Science Foundation dicting fallover risk. A Transformer-based neural network,
+(NSF) under Grant CMMI-2144309, and Grant FRR-2328254; and in part by
+United States Department of Agriculture (USDA) under Grant 2023-67021- TravFormer, is then trained to predict the identified metric
+41397. from terrain features and commanded velocity using simulated
+data. Instead of directly using the predicted instability as a methods, traversability has been estimated based on manually
+traversability measure, we define traversability as the stability- defined rules based on terrain geometry [18] or supervised
+aware command velocity, i.e., the fastest command veloc- learning with human-labeled semantics [21]. However, both
+ity that maintains predicted instability below a user-defined approaches often fail to capture the complex interaction be-
+threshold, which we use to construct a traversability map over tween robots and environments. More recent efforts have
+the environment, as illustrated in Fig. 1. developed learning-based traversability estimators in a self-
+Estimating traversability as a stability-aware command ve- supervised manner, using supervisory signals derived from
+locity enables stability-prioritized navigation planning. Many various proprioceptive features during locomotion, such as
+traditional planning approaches take traversability as a cost ground reaction wrench analysis [9], foothold scores [10],
+term with tunable weights and jointly optimize it with other traction [11]–[13], statistical features of sensor measurements
+costs such as the path length [6], [11], [14], [16]–[18]. such as IMU data [14], and energy consumption metric [15],
+However, varying path length scales across environments [16]. While these self-supervising features capture specific
+often necessitate re-tuning of weights. On the other hand, aspects of locomotion difficulty of wheeled and quadrupedal
+using stability-aware command velocity mitigates the effort robots, they lack validation regarding their ability to represent
+of manual weight tuning, as terrain difficulty is intrinsically the fallover risk in case of bipedal locomotion.
+encoded in the traversal time via a robot-specific instability
+threshold instead of environment-specific weights. We leverage B. Traversability Estimation and Navigation Planning for
+this representation in a hierarchical Traversability-Informed Bipedal Locomotion
+Rapidly-exploring Random Tree Star (TravRRT*)–Model Pre-
+Traversability for bipedal locomotion on rough terrain re-
+dictive Control (MPC) navigation planning algorithm as shown
+mains largely underexplored. In [6], A* planning samples
+in Fig. 1. The global TravRRT* planner simplifies the planning
+candidate footsteps around nodes and defines traversability as
+objective to navigation time optimization, while leveraging
+the percentage of cells with sufficiently low inclination and
+terrain traversability to guide informed sampling toward safer,
+height proximity within the sampled region. Other works have
+more navigable regions. Additionally, the learned command is
+explored learning-based traversability estimation for traversing
+incorporated as a constraint in the Linear Inverted Pendulum
+tilted flat surfaces based on footstep availability [22], [23],
+Model (LIPM)-based local MPC planner, to generate an opti-
+or adjusting body height to navigate low-ceiling environ-
+mal motion plan that follows the global path while satisfying
+ments [24]. These methods target specific settings and do not
+stability constraints.
+address large-scale navigation across general rough terrain.
+In summary, we propose a learning-based bipedal
+traversability estimation framework that formally incorporates
+locomotion stability, and design a hierarchical planning frame- C. Navigation Planning with Traversability Estimation
+work tailored specifically for humanoid navigation. The key Autonomous navigation systems use traversability at multi-
+contributions of this paper are summarized as follows: ple levels of the planning stack to navigate safely. A common
+• We conduct a comparative analysis of locomotion fea- approach at the global planning level is to define traversability
+tures to determine the best feature reflecting bipedal as a score or cost and combine it with other costs such
+instability–the body-to-stance-foot angle (BSFA)–and use as path length, trading off between locomotion stability and
+it as the supervisory signal guiding the neural network. navigation time [6], [11], [14], [16]–[18]. While incorporating
+• TravFormer is introduced as the first learning-based traversability, the works in [12], [13], [17] use Conditional
+traversability estimator for humanoid robots on diverse Value at Risk (CVaR) to incorporate environmental uncertainty
+rough terrain, predicting instability with uncertainty using into the planning for risk-sensitive navigation.
+self-supervised labels derived from the identified feature. At the local planning level, legged robots have extensively
+• Stability-aware bipedal navigation across diverse environ- employed MPC to handle complex kinodynamic constraints
+ments is achieved by representing traversability as a risk- and generate dynamically feasible motion plans. Depth-
+sensitive stability-aware command velocity, providing ro- integrated MPC incorporates terrain geometry to guide foot-
+bust, consistent performance without extensive gain tun- step placement on uneven ground [25], [26]. Other works [8],
+ing when integrated into the hierarchical TravRRT*–MPC [17] incorporate traversability costs into MPC for further
+framework. refining the path plan from a global planner. However, these
+• We validate the proposed framework in MuJoCo simu- approaches typically fix command velocities and overlook
+lator [19] and real-world experiments using a humanoid, high-level selection of velocity commands.
+Digit, demonstrating that our framework enables the robot
+to navigate diverse rough terrain safely and efficiently. III. I NSTABILITY LEARNING FOR SAFE BIPEDAL
+NAVIGATION PLANNING
+II. R ELATED W ORK A. Instability and Fallover Prediction
+A. Self-Supervised Traversability Learning for Grounded Mo- To identify an effective self-supervised signal to train our
+bile Robots learning-based traversability estimator specifically for bipedal
+Traversability characterizes a robot’s ability to navigate its navigation, we begin by analyzing various locomotion features
+environment by quantifying terrain difficulty [20]. In existing for their correlations to fallover risk in bipedal locomotion.
+We collect walking data from Digit in MuJoCo on randomly Table I: Comparison of McFadden’s R2 and AUC-ROC scores for various
+locomotion features, evaluating their effectiveness in predicting fallover risk.
+generated rough terrains with varying geometries, such as The highest values in each column are shown in bold.
+slopes, bumps, and surface roughness. Digit is controlled using
+McFadden’s R2 AUC-ROC
+a terrain-aware ALIP controller [8], commanded with varying
+linear and angular velocities. The collected data is then parsed Energy (Control Effort) [15] 0.184 0.784
+into gait cycles, and locomotion features are computed as the IMU (PSD) [14] 0.217 0.837
+Root-Mean-Square (RMS) of raw signals per cycle. Each gait Traction [11], [12] 0.097 0.770
+cycle is then labeled with a fallover event: 1 if a fall occurs Tangential/Normal Force Ratio 0.016 0.806
+within two subsequent steps, and 0 otherwise. All candidate Center of Pressure (x-dir) 0.025 0.859
+features are normalized by their RMS during in-place stepping Center of Pressure (y-dir) 0.059 0.879
+on flat ground prior to correlation analysis and training. Body-to-stance-foot angle (Ours) 0.356 0.906
+512
+With this data, we evaluate the correlation between each
+2
+Planning Phase Command Vector
+feature and fallover events via logistic regression. Table I
+Embedding
+Command
+Crop
+summarizes the results using McFadden’s R2 [27] and AUC-
+512
+2
+, Uncertainty
+ROC score [28], where R2 around 0.4 and a score close to 1 Global
+Transformer
+Decoder
+generally indicates a strong relationship. While features com- Map
+MLP
+monly used in grounded mobile robots, such as IMU signals Training Phase
+Self Attention
+Predicted Mean
+Deformable
+ResNet-18
+and traction, show acceptable correlations, the body-to-stance-
+Attention
+Robot-
+Spatial
+Centric
+foot angle (BSFA) described in Fig. 1 leads to better prediction Elevation
+accuracy. This result is reasonable because the bipedal robot Map
+∈ ℝ 16×16
+counteracts its body perturbation by placing its foot further
+from the body to increase control authority [5]. We refer to Figure 2: TravFormer architecture combines convolutional feature extraction
+with attention mechanisms to predict BSFA instability. The model processes
+this per-cycle RMS as BSFA instability δ. Moreover, based on an elevation map patch mego representing local terrain and a command vector
+our dataset, we empirically found that BSFA instability is only a = [v, ω]T . During training, the model uses robot-centric map patches
+marginally influenced by slight variations in foot placement, centered on the robot. At planning time, the global terrain map is divided
+into multiple local patches, which are processed in batch.
+indicating that the metric is robust to small contact-location
+from the elevation map and command, as shown in Fig. 2.
+errors. Based on this finding, we adopt the BSFA instability as
+TravFormer leverages a ResNet-18 backbone [30] for terrain
+the supervisory signal for training our traversability estimation
+feature extraction and incorporates attention mechanisms [31]
+network to predict bipedal instability.
+to focus on stability-critical aspects of the terrain while
+enabling context-aware integration of the command inputs.
+B. Learning Instability The Transformer Decoder treats command embeddings as
+We aim to predict the BSFA instability from the terrain queries and terrain features as keys/values to generate the final
+and the robot state. In this work, we represent the geometrical traversability predictions. We use a two-phase schedule for
+features of the environment using a 2.5D elevation map [29]. stable joint optimization of δ̂ and σ, inspired from [32]
+For the robot state, many components such as instant joint Phase 1 - Mean Squared Error (MSE) Training: In
+values are highly time-varying and hence difficult to consider the initial phase, we train the network to minimize the MSE
+as decision variables in planning. However, other states, such between the network prediction of BSFA instability and the
+as velocity action commands, are relatively less time-varying labels collected in Section. III-A. We train for 10 epochs
+and play a critical role when the learned traversability is during this phase, which we find sufficient to establish a
+later exploited in planning. Hence, we define our instability strong foundation to ensure convergence for the subsequent
+estimation model as follows: uncertainty learning.
+Phase 2 - Gaussian Negative Log-Likelihood (NLL)
+δ = pθδ (mego , a), (1) Training [33]: After initializing with weights from the MSE
+phase, we extend the network with an additional output head to
+where pθδ (·) is the target function that maps mego and a to
+predict both the mean δ̂ and standard deviation σ. The network
+δ. More specifically, mego is a 0.64 m × 0.64 m robot-centric
+is trained to match the predicted BSFA instability distribution
+(yaw-aligned) elevation map patch. a is a command vector
+with the label distribution under a Gaussian assumption:
+(v, w)T with linear velocity v and angular velocity w. We " #
+N
+model δ as a Gaussian distribution with mean δ̂ and standard 1 X (δ̂i − δi )2
+deviation σ, where σ represents the aleatoric uncertainty aris- LGaussianNLL = + log σi , (2)
+N i=1 2 exp(2 log σi )
+ing from perception noise and unmodeled effects of instanta-
+neous joint and robot states, and is subsequently used for risk- where N is the total number of samples in a batch and δ
+sensitive planning. Note that external disturbances introduce denotes the target label collected in Section III-A.
+unmodeled perturbations to the controller, analogous to sensor
+IV. B IPEDAL NAVIGATION P LANNING
+noise and mapping errors, and are therefore implicitly captured
+within the aleatoric uncertainty. A. Traversability as Stability-Aware Command Velocity
+To model this function, we propose TravFormer, a neural While prior work often treats traversability as a tunable cost
+network architecture designed to predict BSFA instability term, such cases are less suitable for bipedal robots, where
+Global Elevation toward more navigable paths. For the cost calculation, the cost
+Map
+Patches cij of an edge connecting a parent node ni = (xi , yi ) to a child
+Crop Stability-Aware
+Instability Command Map node nj = (xj , yj ) is defined as the expected traversal time
+TravFormer
+✅ along the edge, subject to stability constraints:
+pσω(a) < ωlimit
+0.65
+0.65
+0.65
+0.65
+3.65
+0.65
+X  ∆lk ∆θk
+
+amax Iterative pσω(a)
+cij = + ∗ , (5)
+Search ❎ vk∗ ωk
+k∈M
+a ̂ a ∈ ℝa
+where M is the set of uniformly sampled intermediate points
+Figure 3: Stability-aware command-velocity selection via iterative search. along the edge. The ∆lk and ∆θk are the linear displace-
+Starting from the maximum candidate velocity amax , the Iterative Search
+block feeds amax into the TravFormer model and then successively replaces ment and heading change at point k, while vk∗ and ωk∗ are
+it with the next lower candidate sweeping downward until the risk-sensitive the stability-aware linear and angular velocity commands for
+stability criterion is met. that point computed by Eq. (3), (4). By incorporating both
+stability is critical. Instead, we define traversability as the translational and rotational traversal time at each intermediate
+fastest command velocity that satisfies a stability constraint, point, this cost formulation allows the planner to select paths
+while accounting for uncertainty in a risk-sensitive manner. that are not only stable but also time-efficient, accounting for
+Given a user-defined instability limit δlimit and the risk level both translating and turning motions.
+α, we compute the risk-sensitive stability-aware command
+a∗ = (v ∗ , w∗ ), which characterizes the traversability of the
+given local map patch mego : C. MPC Local Planner
+∗ To ensure stable execution of the global path generated by
+vm ego
+= max {v | VaR (pθδ (mego , [v, 0]), α) < δlimit } , (3) the RRT* planner, we formulate an MPC planner that tracks
+∗
+ωm ego
+= max {ω | VaR (pθδ (mego , [0, ω]), α) < δlimit } , (4) waypoints while accounting for the reduced-order bipedal
+walking dynamics. We begin with the LIPM to derive discrete
+where VaR(·) denotes the Value at Risk [17], calculated
+dynamics in the local sagittal direction, assuming the fixed step
+from the predicted mean and variance under a Gaussian
+duration T [5]. The CoM position change ∆xloc q between the
+assumption. This fastest velocity is found approximately by
+sweeping the command velocity from its maximum candidate q th and q + 1th walking steps, along with the CoM velocity
+amax = (0.5 m/s, 0.75 rad/s) downward to zero as in Fig. 3, vqloc , is modeled as a function of the footstep length ufq [8].
+with a resolution ∆a = (0.05 m/s, 0.075 rad/s). For terrains sinh(ωT )
+f
+where the predicted instability exceeds the threshold even at ∆xloc loc
+q (uq ) = vq + (1 − cosh(ωT ))ufq , (6)
+ω
+zero command velocity, we assign minimal values of 0.001 loc
+vq+1 (ufq ) = cosh(ωT )vqloc − ω sinh(ωT )ufq , (7)
+m/s and 0.001 rad/s as the stability-aware command velocities,
+p
+respectively, to penalize traversal through those regions. Note where ω = g/H and g is the gravitational constant and H
+that δlimit is a robot-specific hyperparameter that does not is the CoM height. This local dynamics can be transformed
+need to be adjusted according to environmental conditions, into 2D world coordinate by incorporating the robot heading
+but instead serves to configure the robot’s stability during angle ϕ in the world frame:
+locomotion. In this paper, we use δlimit = 3 and α = 0.97.
+f
+Representing traversability as the fastest command velocity xq+1 = xq + ∆xloc
+q (uq ) cos(ϕq ), (8)
+under an instability constraint allows the planner to generate yq+1 = yq + ∆xloc f
+q (uq ) sin(ϕq ), (9)
+navigation-time-optimal paths without weight tuning, while
+ϕq+1 = ϕq + u∆ϕ
+q , (10)
+keeping instability within acceptable bounds. This velocity can
+also be used to constrain the local MPC planner, ensuring where u∆ϕ is the heading angle change during the step
+q
+stable execution of the high-level navigation plan. q. For better readability, we express the above dynam-
+Remark 1 (Use of risk-sensitive traversability). We observe ics (6)-(10) compactly as xq+1 = Φ(xq , uq ) with the state
+that as command velocity increases, the predicted instability variable xq = (xq , yq , ϕq , vqloc ), and the control variable
+grows in a superlinear manner with increasing uncertainty, uq = (ufq , u∆ϕ
+q ). Using this dynamics model, we formulate
+particularly on steep terrain. By accounting for this behavior, our MPC problem as follows:
+VaR is incorporated to mitigate overestimation of safe veloci- N
+X
+ties and promote stable navigation under uncertainty. min m(xN +1 ) + l(xq , uq ), (11)
+xq ,uq
+q=0
+B. Traversability-Informed RRT* Global Planner s.t. x0 = x̂0 , (12)
+We propose traversability-informed RRT* (TravRRT*) built xq+1 = Φ(xq , uq ), (13)
+upon the works of [34]–[36] to generate a global path that min- vqloc /v ∗ + u∆ϕ ∗
+q /(w T ) ≤ 1, (14)
+imizes navigation time while aiming to keep instability below a
+user-defined limit and risk level. During sample generation, the where x̂0 is the initial state. The cost function includes a termi-
+traversability-informed RRT* samples nodes with probability nal cost m(xN +1 ) which encourages the final heading ϕN +1
+proportional to local traversability, encouraging the search to align with the direction to the local waypoint ϕg and the
+position to reach (xg , yg ), and a running cost l(xq , uq ) which (a) Bird-eye view of rough (b) Initialized elevation map of
+penalizes excessive velocities to promote smooth motion: terrain environment rough terrain environment (a)
+5.0
+0.14
+m(xN +1 ) = wg ∥(xN +1 , yN +1 ) − (xg , yg )∥2 3.0
+0.12
++ wϕ ∥ϕN +1 − ϕg ∥2 ,
+X-axis (m)
+Height (m)
+(15) 1.0 0.10
+0.08
+l(xq , uq ) = wr ((vqloc )2 + (u∆ϕ 2
+q ) ). (16) -1.0
+0.06
+-3.0 0.04
+Additionally, the stability-aware command velocity imposes
+-5.0 0.02
+a constraint (14) to regulate command velocities within the 5.0 3.0 1.0 -1.0 -3.0 -5.0
+Y-axis (m)
+stability limit.
+(c) Traversability map and (d) Traversability map and
+path plans by QuadFoothold path plans by ManualBiped
+V. E XPERIMENTAL R ESULTS 5.0 1.0 5.0 1.0
+A. Learning Instability with TravFormer 3.0 0.8 3.0 0.8
+Traversability Score
+Traversability Score
+X-axis (m)
+X-axis (m)
+1.0 0.6 1.0 0.6
+We collected 72,000 gait cycles data which corresponds to
+8 hours simulation time in total for the network training. For -1.0 0.4 -1.0 0.4
+evaluation, we tested three ablations: (i) TravFormer without -3.0 0.2 -3.0 0.2
+spatial attention, (ii) TravFormer without deformable attention, -5.0 -5.0
+5.0 3.0 1.0 -1.0 -3.0 -5.0 5.0 3.0 1.0 -1.0 -3.0 -5.0
+and (iii) TravFormer with an transformer decoder replaced Y-axis (m) Y-axis (m)
+by an MLP decoder. We report the root mean squared error
+(e) Traversability map and (f) Traversability map and
+(RMSE) and the absolute difference of prediction interval path plans by LearnedInS path plan by STATE (proposed)
+coverage probability (|∆PICP|) for all samples, with results 5.0 1.0 5.0 0.5
+shown in Table II. 3.0 0.8 3.0
+Linear velocity (m/s)
+Traversability Score
+0.4
+X-axis (m)
+X-axis (m)
+Table II: RMSE and |∆PICP| results on 3 ablated variants and the full 1.0 0.6 1.0 0.3
+version of TravFormer. |∆PICP| represents the absolute difference between
+-1.0 0.4 -1.0
+the proportion of ground truth instability values fall within one standard 0.2
+deviation of the predicted range (constructed using predicted instability value -3.0 0.2 -3.0
+0.1
+δ̂ and standard deviation σ, assuming Gaussian distribution) and the ideal
+-5.0 -5.0
+coverage of 68.27%. The best values are marked in bold. 5.0 3.0 1.0 -1.0 -3.0 -5.0 5.0 3.0 1.0 -1.0 -3.0 -5.0
+Y-axis (m) Y-axis (m)
+Variant RMSE |∆PICP| Figure 4: Comparison of estimated traversability maps and paths planned by
+TravFormer (Full) 0.7065 0.0007 the proposed method and baselines. The starting and goal points are marked
+TravFormer w/o Spatial Attention 0.7025 0.0564 by a gray diamond and a yellow star, respectively. (a) Diagonal bird-eye
+TravFormer w/o Deformable Self-Attention 0.6962 0.0098 view of rough terrain environment and the snapshots of the robot traversing
+TravFormer w/ MLP Decoder 0.7958 0.1571 along the path by the proposed method. (b) Initialized elevation map of
+the MuJoCo environment (a). (c), (d), (e) Traversability maps based on (b)
+and path plans by the QuadFoothold [10], ManualBiped [6], and LearnedInS
+The TravFormer variants with the transformer decoder baselines, respectively. Red and yellow paths are the results of different trade-
+achieve similarly strong performance, outperforming the MLP off weight values w = 3 and 0.5. (f) Traversability map based on (b) and the
+decoder by 11.8% in RMSE for instability prediction. Fur- path plan of the proposed method, STATE, with δlimit = 3.
+thermore, the full model—which combines spatial attention
+approach, and wt is the tunable weight [18]. We test two
+with deformable self-attention—achieves the best uncertainty
+different weight parameters w = 0.5 and 3, to evaluate
+estimation among all variants.
+the effect of the weight on the navigation performance. For
+local planning, all planners, including the proposed method
+B. Experimental Setup and the baselines, use the MPC planner introduced in IV-C.
+1) Implementation: We run Digit in MuJoCo simulation Although the baselines do not define traversability in terms
+with point cloud measurements generated by the simulated of velocity, we extend their MPC implementations to include
+sensors. The RRT* has an iteration number of 500, and the a comparable velocity constraint as in (14), ensuring a fair
+MPC planner has a horizon length N of 5 walking steps with comparison. Specifically, each baseline uses its v ∗ , ω ∗ pro-
+wg = 1, wϕ = 5, and wr = 0.1. At the beginning of each test, portional to its respective traversability score, tk amax , where
+the robot turns around in place at the starting location for 20 amax = (0.5 m/s, 0.75 rad/s) is the maximum velocity used
+seconds to scan the environment and initialize the elevation in Section IV-A. In summary, we test the planners as follows:
+map. The elevation map and the traversability of the area are • Stability-Aware Traversability Estimation (STATE):
+kept updated while the robot explores the environment. The planner utilizes the stability-aware command velocity
+2) Planner Benchmarking: To demonstrate the advantages (5), computed with δlimit = 3 and α = 0.97. δlimit = 3
+of the proposed method, we design a set of baselines that is selected since BSFA instability is roughly 2 for stable
+combine different traversability metrics with various global forward walking at 0.5 m/s, so δlimit = 3 gives 50% more
+and local planning strategies. For the cost formulation in global stability margin for stable walking at 0.5 m/s.
+planning, instead of (5),P a trade-off between traversability • Learned Instability (LearnedInS): This method is based
+and path length cij = k∈M (1 + wt (1/tk )) ∆lk is used on the learned risk-sensitive instability output (1), pre-
+for baselines, where tk is the traversability score of each dicted with a maximum linear command velocity input
+(a) Bird-eye view of (b) Initialized Elevation map crafted rules, which might not be fine-tuned to this type of
+ramp environment of ramp environment (a) terrain. Consequently, both planners plan paths that traverse
+5.0
+1.2 the hazardous areas regardless of the traversability cost weight,
+3.0
+1.0 which results in lower success rates and higher instability in
+X-axis (m)
+Height (m)
+1.0 0.8
+Table. III. In contrast, our STATE method and the LearnedInS
+0.6
+-1.0 baseline with a high traversability weight leverage our bipedal
+0.4
+-3.0 0.2
+instability-supervised neural network, assessing stepped areas
+-5.0 0.0 as more dangerous and successfully avoiding them. These
+5.0 3.0 1.0 -1.0 -3.0 -5.0
+Y-axis (m) approaches achieve a 100% success rate and lower instabil-
+(c) Traversability and path plans (d) Traversability and path plans ity records, demonstrating the advantage of a traversability
+by LearnedInS by STATE (proposed) estimator tailored to bipedal stability.
+5.0 1.0 5.0 0.5 2) Benefit of Stability-Aware Command Velocity-based
+3.0 0.8 3.0 Traversability in Global Planning: We then examine the
+Linear velocity (m/s)
+Traversability Score
+0.4
+robustness of the proposed global planning strategy by com-
+X-axis (m)
+X-axis (m)
+1.0 0.6 1.0 0.3
+-1.0 0.4 -1.0
+paring the planning results in different environments. Figs. 4
+0.2
+and 5 depict the path planned by STATE and LearnedInS on
+-3.0 0.2 -3.0
+0.1 rough terrain and ramp environments, respectively. We can
+-5.0 -5.0
+5.0 3.0 1.0 -1.0 -3.0 -5.0 5.0 3.0 1.0 -1.0 -3.0 -5.0 observe that STATE plans a safe and efficient path in both
+Y-axis (m) Y-axis (m)
+environments with a single hyperparameter δlimit . In contrast,
+Figure 5: Comparison of estimated traversability maps and paths planned by
+the proposed method and baselines. The starting and goal points are marked
+the planning results of LearnedInS are highly dependent on
+by a gray diamond and a yellow star, respectively. (a) Diagonal bird-eye view environments. On rough terrain, the weight w = 3 produces
+of ramp environment and the snapshots of the robot traversing along the a safe and time-efficient path, comparable to that of STATE.
+path by the proposed method. (b) Initialized elevation map of the MuJoCo
+environment (a). (c) Traversability map based on (b) and path plans by the
+However, on ramp, the same weight w = 3 results in unsafe
+LearnedInS baseline. Red and yellow paths are the results of different trade- paths with a lower success rate and higher instability, and even
+off weight values w = 3 and 0.5. (d) Traversability map based on (b) and a longer navigation time. This is because the length difference
+the path plan of the proposed method, STATE, with δlimit = 3.
+between the shortcut and detour paths is greater in ramp than
+of (0.5 m/s, 0) and α = 0.97. We take the scaled inverse that in rough terrain, necessitating a higher weight to trigger
+of the instability to generate a traversability score tk , a detour. However, our proposed stability-aware command is
+normalized so that flat terrain has a score of 1, and the environment-agnostic, allowing the planner to choose paths
+higher instability prediction is mapped to a lower score. that maintain a relatively consistent instability level.
+• Manual Traversability Cost Design for Bipeds (Man-
+Remark 2 (Environment-agnostic hyperparameter tuning of
+ualBiped) [6]: This method uses the manual cost design
+introduced in [6], which penalizes the slopes and height
+STATE). For the baseline P traversability score definition t ∈
+[0, 1] with the cost cij = k∈M (1+w(1/tk ))p ∆lk , the hyper-
+differences above certain thresholds. Since this design parameters w and p must be re-tuned for each environment,
+was originally designed to calculate a cost, we apply a since the score and path length have unrelated scales and
+scaled inverse transformation in the same manner as in units. As a result, in ramp environments, we report that no safe
+LearnedInS to obtain a traversability score. paths are obtained with any w smaller than 100 under p = 1
+• Quadrupedal Foothold Score (QuadFoothold) [10]:
+(not tested beyond w = 100), and stable navigation requires
+This method is based on the foothold quality score the introduction of p = 2. However, with p = 2, LearnedInS
+proposed in [10], originally developed for indicating valid selects an overly conservative path on rough terrain, resulting
+area that quadrupeds can reliably take its foothold on. in a longer navigation time of 38.3 s. In contrast, tuning δlimit
+3) Testing Environments: We validate our approach in in STATE is intuitive and robot-specific, requiring no iterative
+various simulated environments. We test the algorithms 10 tuning across environments. These results highlight the main
+times each in three 10 m x 10 m MuJoCo environments in Figs. advantage of STATE: defining traversability by stability-aware
+4-6: rough terrain, ramp, challenging terrain, respectively. velocity enables consistent and environment-agnostic path
+planning without tedious hyperparameter tuning.
+C. Results 3) Benefit of Stability-Aware Command Velocity-based
+1) Benefit of Traversability Learning for Bipedal Locomo- Traversability in MPC Local Planning: Next, we evaluate how
+tion: We first evaluate how well the proposed traversability stability-aware command velocity improves the execution of
+measures the difficulty in bipedal locomotion in comparison to global paths in the local MPC planner. Although a global path
+prior methods. Fig. 4 illustrates the traversability maps and the may be traversable, it often includes regions requiring delicate
+path plans generated by each planner in rough terrain scenario. locomotion, making terrain-aware velocity regulation critical.
+We observe that the QuadFoothold baseline primarily detects To evaluate the differences that arise only from local MPC
+risk along the edges of the gray stepping stones, but fails planning behavior, we use challenging terrain environment
+to capture the overall difficulty of the region. ManualBiped with a baseline weight setting of w = 3, where both the pro-
+baseline also underestimates the risk posed by the gray stepped posed method and LearnedInS generate nearly identical global
+regions, likely due to manually chosen thresholds and hand- paths but the paths contain slopes and rough terrains that
+Table III: Navigation results for rough terrain and ramp environments. Success rate is recorded by counting the number of trials that succeeded in reaching
+the goal. Maximum instability values are taken from the instability recording of each successful trial, and then averaged across the trials. Path smoothness is
+computed as the mean magnitude of angular acceleration within each successful trial, then averaged across the trials, which increases when the robot changes
+its heading more often. The best values among the planners are marked in bold, and all other values are annotated with the percentage difference relative to
+the best value.
+Traversability Estimation STATE (proposed) LearnedInS ManualBiped QuadFoothold
+Global Planner Hyperparameter δlimit = 3 w = 0.5 w=3 w = 0.5 w=3 w = 0.5 w=3
+Rough Success Rate 100% 90% 100% 90% 90% 80% 70%
+terrain Max Instability 4.82 (+0%) 7.90 (+64%) 5.37 (+11%) 7.09 (+47%) 8.31 (+72%) 7.50 (+56%) 7.36 (+53%)
+Path Smoothness 0.079 (+0%) 0.119 (+50%) 0.086 (+8.2%) 0.106 (+34%) 0.124 (+56%) 0.114 (+44%) 0.102 (+29%)
+32.6 s 37.3 s 36.3 s 29.7 s 24.3 s 24.6 s 24.1 s
+Navigation Time
+(+33%) (+55%) (+51%) (+23%) (+0.8%) (+2.1%) (+0%)
+Ramp Success Rate 100% 80% 80% 20% 70% 20% 50%
+Max Instability 4.67 (+0%) 7.19 (+54%) 7.39 (+58%) 6.51 (+39%) 5.69 (+21%) 6.89 (+47%) 6.61 (+41%)
+Path Smoothness 0.062 (+0%) 0.150 (+143%) 0.156 (+152%) 0.152 (+146%) 0.115 (+86%) 0.148 (+139%) 0.135 (+118%)
+38.7 s 40.8 s 42.6 s 39.1 s 35.0 s 28.9 s 29.5 s
+Navigation Time
+(+34%) (+41%) (+47%) (+35%) (+21%) (+0%) (+2.1%)
+STATE (proposed) Traversability Map
+The Real World Environment
+LearnedInS
+ManualBiped and Path Plan
+QuadFoothold
+Start
+Goal
+X-axis (m)
+Figure 6: Path plans of the proposed method and the baselines with the
+weight w = 3 in challenging terrain environment. The starting and goal
+points are marked by a gray diamond and a yellow star, respectively. Green,
+X-axis (m)
+yellow, blue, and red paths are by the proposed method (STATE), LearnedInS,
+ManualBiped, and QuadFoothold planners, respectively.
+Table IV: Navigation results for challenging terrain environment. Evaluation
+metrics are calculated in the same way as Table. III.
+STATE LearnedInS ManualBiped QuadFoodhold
+Success Rate 80% 60% 30% 20%
+6.54 7.32 6.35 12.5
+Max Instability
+(+3.0%) (+15%) (+0%) (+97%)
+X-axis (m)
+0.153 0.166 0.246 0.164
+Path Smoothness
+(+0%) (+8.5%) (+61%) (+7.2%)
+61.6 s 73.5 s 255.3 s 49.5 s
+Navigation Time
+(+24%) (+48%) (+416%) (+0%)
+demand the robot careful speed regulation, as shown in Fig. 6. Y-axis (m)
+The navigation results are summarized in Table IV. Note Figure 7: Real-world demonstration of the proposed navigation stack. The left
+column presents the testing environments with the robot’s executed trajectories
+that MPC planners without command constraints, commonly overlaid in green. Robot snapshots are extracted from the supplementary
+used in prior works, consistently failed and are excluded. The video and superimposed for visualization. The right column displays the
+proposed algorithm achieves the highest success rate—though traversability map and path plan generated by STATE.
+not 100%—while maintaining a favorable balance between
+instability and navigation time shown in Table IV. This 4) Real-World Validation: Beyond simulation, we further
+improvement is attributed to a more effective adaptation of validate the proposed framework in real-world settings. The
+motion aggressiveness to terrain conditions: accelerating in robot perceives its environment using a ZED 2i stereo camera
+favorable terrain and modulating speed in unstable terrain. By mounted on the chest, providing both point cloud perception
+contrast, the linear scaling in baselines cannot fully capture and localization. All algorithms are run on an external laptop
+the nonlinear relationship between terrain, command, and with an Intel Core i7-12700H CPU and an NVIDIA RTX
+locomotion stability. The full simulation results of all four 3060 Mobile GPU. The framework is transferred to hardware
+methods are shown in the supplementary video. with minimal modifications by increasing the MPC horizon
+length to 7 and reducing the number of TravRRT* iterations [13] X. Cai, S. Ancha, L. Sharma, P. R. Osteen, B. Bucher, S. Phillips, J. Wang,
+M. Everett, N. Roy, and J. P. How, “EVORA: Deep evidential traversability
+to 400. The perception and localization modules operate con- learning for risk-aware off-road autonomy,” IEEE Transactions on Robotics,
+currently, with the traversability map and global plan updated vol. 40, pp. 3756–3777, 2024.
+[14] M. G. Castro, S. Triest, W. Wang, J. M. Gregory, F. Sanchez, J. G. Rogers, and
+every 5 s, and the MPC local planner running at 3 Hz, S. Scherer, “How does it feel? self-supervised costmap learning for off-road vehicle
+ensuring real-time performance. We test the system in three traversability,” in 2023 IEEE International Conference on Robotics and Automation
+(ICRA). IEEE, 2023, pp. 931–938.
+outdoor environments, as shown in Fig. 7. With this navigation [15] L. Gan, J. W. Grizzle, R. M. Eustice, and M. Ghaffari, “Energy-based legged
+stack, TravRRT* generates safe navigation paths that avoid robots terrain traversability modeling via deep inverse reinforcement learning,”
+IEEE Robotics and Automation Letters, vol. 7, no. 4, pp. 8807–8814, 2022.
+untraversable regions identified by TravFormer, while the local [16] B. Yang, L. Wellhausen, T. Miki, M. Liu, and M. Hutter, “Real-time optimal
+MPC planner adaptively slows down when crossing ground navigation planning using learned motion costs,” in 2021 IEEE International
+Conference on Robotics and Automation (ICRA). IEEE, 2021, pp. 9283–9289.
+obstacles or slopes and accelerates on flat terrain to maintain [17] A. Dixit, D. D. Fan, K. Otsu, S. Dey, A.-A. Agha-Mohammadi, and J. W.
+time efficiency. The robot reaches the goal in 54, 32, and Burdick, “STEP: Stochastic traversability evaluation and planning for risk-aware
+navigation; results from the darpa subterranean challenge,” IEEE Transactions on
+34 s with maximum BSFA instabilities of 3.4, 2.0, and 1.7, Field Robotics, vol. 2, pp. 81–99, 2025.
+respectively, illustrating the practicality of the framework in [18] M. Wermelinger, P. Fankhauser, R. Diethelm, P. Krüsi, R. Siegwart, and M. Hutter,
+“Navigation planning for legged robots in challenging terrain,” in 2016 IEEE/RSJ
+real world settings. Full experiments, including active velocity International Conference on Intelligent Robots and Systems (IROS). IEEE, 2016,
+modulation, are provided in the supplementary video. pp. 1184–1189.
+[19] E. Todorov, T. Erez, and Y. Tassa, “MuJoCo: A physics engine for model-based
+control,” in 2012 IEEE/RSJ International Conference on Intelligent Robots and
+Systems (IROS). IEEE, 2012, pp. 5026–5033.
+VI. C ONCLUSION AND F UTURE W ORKS [20] P. Papadakis, “Terrain traversability analysis methods for unmanned ground
+vehicles: A survey,” Engineering Applications of Artificial Intelligence, vol. 26,
+This work presents the first learning-based traversability no. 4, pp. 1373–1385, 2013.
+estimator and navigation framework for bipedal locomotion [21] T. Guan, D. Kothandaraman, R. Chandra, A. J. Sathyamoorthy, K. Weerakoon,
+and D. Manocha, “GA-Nav: Efficient terrain segmentation for robot navigation
+on diverse rough terrain. Future directions include leveraging in unstructured outdoor environments,” IEEE Robotics and Automation Letters,
+the large field of view of humanoids for active exploration vol. 7, no. 3, pp. 8138–8145, 2022.
+[22] Y. Lin and D. Berenson, “Humanoid navigation in uneven terrain using learned
+of unseen environments. Additionally, incorporating terrain estimates of traversability,” in 2017 IEEE-RAS 17th International Conference on
+property estimation using semantic perception would be an Humanoid Robotics (Humanoids). IEEE, 2017, pp. 9–16.
+[23] Y.-C. Lin and D. Berenson, “Long-horizon humanoid navigation planning using
+interesting direction for enhancing robustness. traversability estimates and previous experience,” Autonomous Robots, vol. 45,
+no. 6, pp. 937–956, 2021.
+[24] Z. Li, J. Zeng, S. Chen, and K. Sreenath, “Autonomous navigation of underactuated
+R EFERENCES bipedal robots in height-constrained environments,” The International Journal of
+Robotics Research (IJRR), vol. 42, no. 8, pp. 565–585, 2023.
+[1] Z. Gu, J. Li, W. Shen, W. Yu, Z. Xie, S. McCrory, X. Cheng, A. Shamsah, R. Grif- [25] R. Grandia, F. Jenelten, S. Yang, F. Farshidian, and M. Hutter, “Perceptive
+fin, C. K. Liu et al., “Humanoid locomotion and manipulation: Current progress locomotion through nonlinear model-predictive control,” IEEE Transactions on
+and challenges in control, planning, and learning,” IEEE/ASME Transactions on Robotics, vol. 39, no. 5, pp. 3402–3421, 2023.
+Mechatronics, 2025. [26] B. Acosta and M. Posa, “Bipedal walking on constrained footholds with MPC
+[2] E. Krotkov, D. Hackett, L. Jackel, M. Perschbacher, J. Pippine, J. Strauss, G. Pratt, footstep control,” in 2023 IEEE-RAS 22nd International Conference on Humanoid
+and C. Orlowski, “The DARPA robotics challenge finals: Results and perspectives,” Robots (Humanoids). IEEE, 2023, pp. 1–8.
+The DARPA robotics challenge finals: Humanoid robots to the rescue, pp. 1–26, [27] D. McFadden, “Quantitative methods for analysing travel behaviour of individuals:
+2018. some recent developments,” in Behavioural travel modelling. Routledge, 2021,
+[3] J.-K. Huang and J. W. Grizzle, “Efficient anytime CLF reactive planning system pp. 279–318.
+for a bipedal robot on undulating terrain,” IEEE Transactions on Robotics, vol. 39, [28] J. A. Hanley and B. J. McNeil, “The meaning and use of the area under a receiver
+no. 3, pp. 2093–2110, 2023. operating characteristic (ROC) curve.” Radiology, vol. 143, no. 1, pp. 29–36, 1982.
+[4] S. Kajita, F. Kanehiro, K. Kaneko, K. Fujiwara, K. Harada, K. Yokoi, and [29] T. Miki, L. Wellhausen, R. Grandia, F. Jenelten, T. Homberger, and M. Hutter,
+H. Hirukawa, “Biped walking pattern generation by using preview control of “Elevation mapping for locomotion and navigation using GPU,” in 2022 IEEE/RSJ
+zero-moment point,” in 2003 IEEE International Conference on Robotics and International Conference on Intelligent Robots and Systems (IROS). IEEE, 2022,
+Automation (ICRA), vol. 2. IEEE, 2003, pp. 1620–1626. pp. 2273–2280.
+[5] G. Gibson, O. Dosunmu-Ogunbi, Y. Gong, and J. Grizzle, “Terrain-adaptive, [30] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image
+ALIP-based bipedal locomotion controller via model predictive control and virtual recognition,” in Proceedings of the IEEE Conference on Computer Vision and
+constraints,” in 2022 IEEE/RSJ International Conference on Intelligent Robots and Pattern Recognition (CVPR), June 2016.
+Systems (IROS). IEEE, 2022, pp. 6724–6731. [31] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser,
+[6] S. McCrory, B. Mishra, R. Griffin, J. Pratt, and H. E. Sevil, “Bipedal navigation and I. Polosukhin, “Attention is all you need,” Advances in neural information
+planning over rough terrain using traversability models,” in SoutheastCon 2023. processing systems (NIPS), vol. 30, 2017.
+IEEE, 2023, pp. 89–95. [32] W. Liu, D. Caruso, E. Ilg, J. Dong, A. I. Mourikis, K. Daniilidis, V. Kumar, and
+[7] K. Muenprasitivej, J. Jiang, A. Shamsah, S. Coogan, and Y. Zhao, “Bipedal safe J. Engel, “Tlio: Tight learned inertial odometry,” IEEE Robotics and Automation
+navigation over uncertain rough terrain: Unifying terrain mapping and locomotion Letters, vol. 5, no. 4, pp. 5653–5660, 2020.
+stability,” in 2024 IEEE/RSJ International Conference on Intelligent Robots and [33] A. Kendall and Y. Gal, “What uncertainties do we need in bayesian deep learning
+Systems (IROS). IEEE, 2024, pp. 11 264–11 271. for computer vision?” Advances in neural information processing systems (NIPS),
+[8] A. Shamsah, J. Jiang, Z. Yoon, S. Coogan, and Y. Zhao, “Terrain-aware model vol. 30, 2017.
+predictive control of heterogeneous bipedal and aerial robot coordination for search [34] S. Karaman and E. Frazzoli, “Sampling-based algorithms for optimal motion
+and rescue tasks,” IEEE International Conference on Robotics and Automation planning,” The International Journal of Robotics Research (IJRR), vol. 30, no. 7,
+(ICRA), 2025. pp. 846–894, 2011.
+[9] L. Wellhausen, A. Dosovitskiy, R. Ranftl, K. Walas, C. Cadena, and M. Hut- [35] W. Chen, R. Khardon, and L. Liu, “Adaptive robotic information gathering via
+ter, “Where should I walk? predicting terrain properties from images via self- non-stationary gaussian processes,” The International Journal of Robotics Research
+supervised learning,” IEEE Robotics and Automation Letters, vol. 4, no. 2, pp. (IJRR), vol. 43, no. 4, pp. 405–436, 2024.
+1509–1516, 2019. [36] J. D. Gammell, S. S. Srinivasa, and T. D. Barfoot, “Informed RRT*: Optimal
+sampling-based path planning focused via direct sampling of an admissible
+[10] L. Wellhausen and M. Hutter, “Rough terrain navigation for legged robots using
+ellipsoidal heuristic,” in 2014 IEEE/RSJ International Conference on Intelligent
+reachability planning and template learning,” in 2021 IEEE/RSJ International
+Robots and Systems (IROS). IEEE, 2014, pp. 2997–3004.
+Conference on Intelligent Robots and Systems (IROS). IEEE, 2021, pp. 6914–
+6921.
+[11] J. Frey, M. Mattamala, N. Chebrolu, C. Cadena, M. Fallon, and M. Hutter, “Fast
+traversability estimation for wild visual navigation,” in Proceedings of Robotics:
+Science and Systems (RSS), Daegu, Republic of Korea, July 2023.
+[12] X. Cai, M. Everett, L. Sharma, P. R. Osteen, and J. P. How, “Probabilistic
+traversability model for risk-aware motion planning in off-road environments,”
+in 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems
+(IROS). IEEE, 2023, pp. 11 297–11 304.

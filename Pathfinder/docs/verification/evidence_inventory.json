@@ -1,0 +1,118 @@
+{
+  "package_payloads_checked": 1027,
+  "package_hash_mismatches": [],
+  "phase_counts": {
+    "v6_budget_0p5": 72,
+    "v6_budget_1p0": 72,
+    "v6_development_alternative": 48,
+    "v6_development_default": 48,
+    "v6_physics_legacy": 12,
+    "v6_physics_reduced": 12,
+    "v6_physics_safe": 72,
+    "v6_primary": 576,
+    "v6_weight_distance": 72,
+    "v6_weight_energy": 72,
+    "v6_weight_terrain": 72,
+    "v6_weight_time": 72
+  },
+  "total_scheduled_records": 1200,
+  "primary_worlds": 48,
+  "primary_summary": [
+    {
+      "method": "proposed_v4",
+      "scheduled": 96,
+      "admitted": 90,
+      "mean_planning_s": 0.4405829149679145,
+      "statuses": {
+        "found": 90,
+        "resource_rejected": 6
+      }
+    },
+    {
+      "method": "pso_polished",
+      "scheduled": 96,
+      "admitted": 88,
+      "mean_planning_s": 0.2630720384598438,
+      "statuses": {
+        "found": 88,
+        "resource_rejected": 8
+      }
+    },
+    {
+      "method": "aco_polished",
+      "scheduled": 96,
+      "admitted": 88,
+      "mean_planning_s": 0.43169275438049226,
+      "statuses": {
+        "found": 88,
+        "resource_rejected": 8
+      }
+    },
+    {
+      "method": "ompl_rrtstar",
+      "scheduled": 96,
+      "admitted": 77,
+      "mean_planning_s": 1.3651045808207225,
+      "statuses": {
+        "found": 77,
+        "resource_rejected": 8,
+        "no_route": 11
+      }
+    },
+    {
+      "method": "ompl_seeded_rrtstar",
+      "scheduled": 96,
+      "admitted": 90,
+      "mean_planning_s": 1.3832273710722802,
+      "statuses": {
+        "found": 90,
+        "resource_rejected": 6
+      }
+    },
+    {
+      "method": "ompl_rrtconnect",
+      "scheduled": 96,
+      "admitted": 78,
+      "mean_planning_s": 0.06615789833570791,
+      "statuses": {
+        "found": 78,
+        "resource_rejected": 18
+      }
+    }
+  ],
+  "independently_recalculated_paired_means": [
+    {
+      "baseline": "pso_polished",
+      "jointly_admitted_worlds": 44,
+      "mean_relative_percent": 0.23994289553879697,
+      "median_relative_percent": 0.0
+    },
+    {
+      "baseline": "aco_polished",
+      "jointly_admitted_worlds": 44,
+      "mean_relative_percent": 0.47318986122014134,
+      "median_relative_percent": 0.0
+    },
+    {
+      "baseline": "ompl_rrtstar",
+      "jointly_admitted_worlds": 41,
+      "mean_relative_percent": 7.840400042560764,
+      "median_relative_percent": 2.6947272398911237
+    },
+    {
+      "baseline": "ompl_seeded_rrtstar",
+      "jointly_admitted_worlds": 45,
+      "mean_relative_percent": 0.8166392393726015,
+      "median_relative_percent": 0.0
+    },
+    {
+      "baseline": "ompl_rrtconnect",
+      "jointly_admitted_worlds": 42,
+      "mean_relative_percent": 8.940472880067654,
+      "median_relative_percent": 2.8058189877426587
+    }
+  ],
+  "paired_csv_matches": true,
+  "attempt_csv_keys_match": true,
+  "scope": "Read-only hash, record-key, admission, timing and paired-mean reconciliation. No new experiments or external literature verification."
+}

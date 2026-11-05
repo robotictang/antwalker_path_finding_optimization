@@ -1,0 +1,21 @@
+VERSION 4 EVIDENCE AND REPRODUCTION NOTES
+
+Raw records are preserved under evidence/mujoco/outputs/research. Their source_snapshot and model_xml entries are relative to that outputs/research directory. Manifest, source_lock, locked_parameters, comparison and audit files are in its advanced_study_v4 folder. Whole-world bootstrap intervals are descriptive and do not correct for multiple comparisons.
+
+The complete campaign contains 1,232 scheduled attempts: 128 development, 864 primary planning, 72 feature removal, 96 shorter budget, 72 physics. Planning and physics must not be pooled to inflate an independent test sample. Main primary test has 24 worlds, not 72 independent worlds.
+
+reproduction/mujoco contains the implementation and test sources used in the working project; source_snapshots are the exact per-run scientific archives. Raw XML asset references intentionally retain the original /home/user123456/Downloads/hexapod_asset paths to preserve their recorded hashes. Meshes and model assets are included. On the original computer, run from the original mujoco workspace:
+
+python3 -m research.audit_advanced_study
+python3 -m unittest research.test_research research.test_reliability research.test_server research.test_v3 research.test_v4
+python3 -m research.advanced_study
+
+The last command resumes verified completed phases; it does not manufacture additional trials. On another machine, restore the original asset paths or explicitly relocate references in a separate copy. A relocated rerun has new source/model hashes and belongs in a new study directory. Never replace the archived XML or source files while claiming their original hashes. The audit also checks the prior v3 manifest; that manifest is included as historical context, not pooled observations.
+
+requirements.txt and recorded versions in each phase describe dependencies. Wall-clock limits can produce different endpoints under a different workload or machine. This bundle is evidence and source code, not a self-installing virtual environment. Plot scripts additionally need matplotlib, listed in source/plot-requirements.txt. The frozen physics uses body assistance and uncalibrated nominal energy; this is not electrical hardware validation.
+
+Dashboard authored content is in reproduction/mujoco/research_dashboard/src/content with its reviewed src/data.json snapshot. It depends on the installed Data app runtime; the delivered standalone HTML works without that runtime. No publication, sharing, or hosted site destination was changed.
+
+All_1232_Attempts.csv leaves success blank for planning-only rows. On scheduled physics rows, false includes rejected missions and unsuccessful executions. Use physics_executed to distinguish them. Raw recorded JSON is unchanged. Every_Experiment.csv is the 72 primary world/repetition verdicts, not 864 independent maps.
+
+SHA256SUMS.json covers the archived payload; outer Delivery_SHA256.json covers the delivered files except itself. The old version 3 Word manuscript remains separate and is not a version 4 paper.

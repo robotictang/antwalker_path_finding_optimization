@@ -1,0 +1,110 @@
+[
+  {
+    "title": "1 Research question and contribution",
+    "page": 2
+  },
+  {
+    "title": "2 Related work and adaptation boundaries",
+    "page": 3
+  },
+  {
+    "title": "3 Research system and evidence flow",
+    "page": 4
+  },
+  {
+    "title": "4 Procedural worlds and terrain representation",
+    "page": 5
+  },
+  {
+    "title": "5 Robot simulation and measurement scope",
+    "page": 6
+  },
+  {
+    "title": "6 Multiobjective optimization in simple terms",
+    "page": 6
+  },
+  {
+    "title": "7 Cost model and mission constraints",
+    "page": 7
+  },
+  {
+    "title": "8 Adaptive common initialization",
+    "page": 8
+  },
+  {
+    "title": "9 Baselines and particle swarm refinement",
+    "page": 9
+  },
+  {
+    "title": "10 Ant colony route refinement",
+    "page": 10
+  },
+  {
+    "title": "11 Proposed bounded Pareto resource labels",
+    "page": 11
+  },
+  {
+    "title": "12 Experimental protocol and fairness",
+    "page": 11
+  },
+  {
+    "title": "13 Parameter selection and analysis",
+    "page": 12
+  },
+  {
+    "title": "14 Held out planning outcomes",
+    "page": 14
+  },
+  {
+    "title": "15 Paired route quality and uncertainty",
+    "page": 15
+  },
+  {
+    "title": "16 Worked example from a saved test world",
+    "page": 16
+  },
+  {
+    "title": "17 Feature removal and timeout diagnosis",
+    "page": 17
+  },
+  {
+    "title": "18 Assisted physics results",
+    "page": 18
+  },
+  {
+    "title": "19 Forecast validation and data reliability",
+    "page": 19
+  },
+  {
+    "title": "20 External electrical calibration workflow",
+    "page": 20
+  },
+  {
+    "title": "21 Limitations and publication readiness",
+    "page": 21
+  },
+  {
+    "title": "22 How to develop a stronger proposed method",
+    "page": 22
+  },
+  {
+    "title": "23 Preparing a journal submission",
+    "page": 22
+  },
+  {
+    "title": "References",
+    "page": 24
+  },
+  {
+    "title": "Appendix A Step by step website experiments",
+    "page": 25
+  },
+  {
+    "title": "Appendix B Troubleshooting and reproduction",
+    "page": 26
+  },
+  {
+    "title": "Appendix C Simple explanation for a supervisor",
+    "page": 27
+  }
+]

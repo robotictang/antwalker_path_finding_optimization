@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "tables": 14,
+  "figures": 11,
+  "display_equations": 10,
+  "algorithms": 3,
+  "references": 23,
+  "unique_new_record_keys": 1200,
+  "template_parts_preserved": 30,
+  "template_sha256": "c30433ce4e817bf4fba6dc69e6e4d5bf7fc1f8e7b0126374c65926dbd5d5b1bb",
+  "docx_sha256": "7a926519736623a3c31ae26dc8eb1ee98366ccbf74f0a281d1c4fe33513a7afb",
+  "scope": "OOXML, references, source-template retention, CSV completeness and paired-count arithmetic. Visual page inspection is separate."
+}

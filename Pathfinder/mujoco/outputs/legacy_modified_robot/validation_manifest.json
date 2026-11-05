@@ -1,0 +1,66 @@
+{
+  "files": {
+    "preview_multi_place_mission.py": "e58d3b969952dc927a8e86c735c67a8bf18673d85d229eed0ef2f062060d341b",
+    "safe_navigation.py": "6b1f3cfa889f29c0b69b316d43bdfe2f3e7e5645d999b985f7abe42a14dd1e3c",
+    "tripod_gait.py": "ce41ca65e8f3bb56e68e6499988e538ed28a86fd6dade683f9d7ed0288d3fa59",
+    "design_enhancements.py": "106dcc033c7638a59b034d6a4181bfde957bd090802d3935282a0a4fff78de83",
+    "hybrid_hexapod_multi_place.xml": "eecd7b0aa65bd291dc2c76aaa315b37cb58b1da3ab9396801aec1d0bc0fb5dbc"
+  },
+  "full_mission": {
+    "steps": 60000,
+    "simulation_seconds": 960.0040000031277,
+    "battery": 66.63672346927636,
+    "position": [
+      -17.89325900284863,
+      15.128652856955586,
+      0.4683986283304395
+    ],
+    "phase": 0,
+    "target": 1,
+    "stage": "circuit",
+    "corridor_index": 0,
+    "collision_substeps": 0,
+    "obstacle_contact_substeps": 0,
+    "max_walking_tilt_degrees": 0.03016203220141237,
+    "minimum_foot_bottom": 0.013015744871090182,
+    "safety_stops": 0,
+    "route_failures": 0,
+    "charge_completed": 2,
+    "visited_places": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "replans": 151,
+    "finite_state": true,
+    "max_solver_warning": 0
+  },
+  "desert_recharge": {
+    "steps": 15000,
+    "simulation_seconds": 240.00399999980345,
+    "battery": 91.38662787163723,
+    "position": [
+      10.922264356165089,
+      -11.126528672293597,
+      0.46832139728839506
+    ],
+    "phase": 0,
+    "target": 4,
+    "stage": "circuit",
+    "corridor_index": 1,
+    "collision_substeps": 0,
+    "obstacle_contact_substeps": 0,
+    "max_walking_tilt_degrees": 0.03016941840825076,
+    "minimum_foot_bottom": 0.013015579073321001,
+    "safety_stops": 0,
+    "route_failures": 0,
+    "charge_completed": 1,
+    "visited_places": [
+      4
+    ],
+    "replans": 30,
+    "finite_state": true,
+    "max_solver_warning": 0
+  }
+}

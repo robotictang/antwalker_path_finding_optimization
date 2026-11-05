@@ -1,0 +1,2309 @@
+{
+  "steps": 35000,
+  "simulation_seconds": 560.0000000012177,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 51.26399999999613,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.253239964593005,
+        13.14992277483262
+      ]
+    },
+    {
+      "time": 54.047999999995824,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.253242016287917,
+        13.149923981941837
+      ]
+    },
+    {
+      "time": 98.44800000000623,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.258111815985236,
+        16.024113204169364
+      ]
+    },
+    {
+      "time": 101.23200000000716,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.258146013960772,
+        16.024155651290116
+      ]
+    },
+    {
+      "time": 133.34400000001312,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.362460254021196,
+        18.0581903668345
+      ]
+    },
+    {
+      "time": 136.12800000001158,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.362460491325491,
+        18.058191360461695
+      ]
+    },
+    {
+      "time": 136.16000000001156,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.362460491292593,
+        18.058191360483026
+      ]
+    },
+    {
+      "time": 138.94400000001002,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.362459931437852,
+        18.058188418368413
+      ]
+    },
+    {
+      "time": 140.4480000000092,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.362462403725997,
+        18.058190654895412
+      ]
+    },
+    {
+      "time": 143.23200000000764,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.362463603965764,
+        18.058188676790934
+      ]
+    },
+    {
+      "time": 197.9679999999773,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.268809068448604,
+        10.206306933033515
+      ]
+    },
+    {
+      "time": 200.75199999997577,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.268872416682127,
+        10.20641914678966
+      ]
+    },
+    {
+      "time": 241.88799999995297,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.415567300088615,
+        -6.129506290091367
+      ]
+    },
+    {
+      "time": 244.67199999995142,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -10.415567397476119,
+        -6.129506447476814
+      ]
+    },
+    {
+      "time": 289.39199999998596,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.257897135849722,
+        -10.107662217008889
+      ]
+    },
+    {
+      "time": 292.17599999998936,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -10.257845015552189,
+        -10.107657378492636
+      ]
+    },
+    {
+      "time": 317.7600000000206,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.187080418973261,
+        -10.02968608286179
+      ]
+    },
+    {
+      "time": 320.544000000024,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        10.187080227971588,
+        -10.029687908931393
+      ]
+    },
+    {
+      "time": 365.31200000007874,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.287057577865516,
+        -5.896106024495692
+      ]
+    },
+    {
+      "time": 368.09600000008214,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        10.287159337466,
+        -5.896084922382874
+      ]
+    }
+  ],
+  "position": [
+    -4.3807144789266275,
+    5.527016752508886,
+    0.30973286235021213
+  ],
+  "battery": 47.079170648470466,
+  "visited_places": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "stage": "blocked",
+  "arrivals": [
+    {
+      "destination": 1,
+      "position": [
+        -17.903209861434824,
+        15.9761564521895
+      ],
+      "error_m": 0.0996837283394714,
+      "travel_seconds": 74.19199999999864,
+      "actual_distance_m": 46.413412448860825,
+      "distance_m": 46.396852689865874,
+      "estimated_seconds": 71.43193771737968,
+      "driving_distance_m": 38.860400280904116,
+      "walking_distance_m": 7.536452408961759,
+      "transformations": 1
+    },
+    {
+      "destination": 2,
+      "position": [
+        17.899959411371707,
+        16.002469081956182
+      ],
+      "error_m": 0.1000710534510436,
+      "travel_seconds": 87.8239999999964,
+      "actual_distance_m": 37.94350739057977,
+      "distance_m": 37.72030001894509,
+      "estimated_seconds": 75.50130816974831,
+      "driving_distance_m": 23.13280962020246,
+      "walking_distance_m": 14.587490398742629,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "position": [
+        -17.90503315702583,
+        -9.967669896535739
+      ],
+      "error_m": 0.10031917490933862,
+      "travel_seconds": 100.15999999996356,
+      "actual_distance_m": 46.179371544690255,
+      "distance_m": 45.60849779550615,
+      "estimated_seconds": 87.00491157718471,
+      "driving_distance_m": 27.737934548799686,
+      "walking_distance_m": 17.870563246706478,
+      "transformations": 2
+    },
+    {
+      "destination": 4,
+      "position": [
+        17.90007033917095,
+        -10.000385907851099
+      ],
+      "error_m": 0.09993040597475221,
+      "travel_seconds": 71.42400000008729,
+      "actual_distance_m": 35.866772375679034,
+      "distance_m": 35.905253008930075,
+      "estimated_seconds": 69.9153752955414,
+      "driving_distance_m": 21.80000880118027,
+      "walking_distance_m": 14.105244207749806,
+      "transformations": 2
+    }
+  ],
+  "planned_routes": [
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          0.0,
+          -20.0
+        ],
+        [
+          -0.5,
+          -5.25
+        ],
+        [
+          -10.0,
+          1.75
+        ],
+        [
+          -10.25,
+          13.25
+        ],
+        [
+          -12.0,
+          14.5
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 46.396852689865874,
+      "estimated_seconds": 71.43193771737968,
+      "driving_distance_m": 38.860400280904116,
+      "walking_distance_m": 7.536452408961759,
+      "transformations": 1
+    },
+    {
+      "destination": 2,
+      "mode": "fastest",
+      "points": [
+        [
+          -17.90344705647113,
+          15.976212451434272
+        ],
+        [
+          -8.75,
+          16.0
+        ],
+        [
+          -6.0,
+          18.5
+        ],
+        [
+          9.5,
+          18.5
+        ],
+        [
+          12.75,
+          16.0
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 37.72030001894509,
+      "estimated_seconds": 75.50130816974831,
+      "driving_distance_m": 23.13280962020246,
+      "walking_distance_m": 14.587490398742629,
+      "transformations": 2
+    },
+    {
+      "destination": 2,
+      "mode": "fastest",
+      "points": [
+        [
+          10.362460491292593,
+          18.058191360483026
+        ],
+        [
+          11.75,
+          16.25
+        ],
+        [
+          18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 8.534213192042131,
+      "estimated_seconds": 28.377668671762887,
+      "driving_distance_m": 0.8829789753885379,
+      "walking_distance_m": 7.651234216653594,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "fastest",
+      "points": [
+        [
+          17.900056452196758,
+          16.00247257510659
+        ],
+        [
+          14.75,
+          10.75
+        ],
+        [
+          10.75,
+          10.25
+        ],
+        [
+          -8.75,
+          -5.0
+        ],
+        [
+          -12.25,
+          -8.0
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 45.60849779550615,
+      "estimated_seconds": 87.00491157718471,
+      "driving_distance_m": 27.737934548799686,
+      "walking_distance_m": 17.870563246706478,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "fastest",
+      "points": [
+        [
+          14.465720247050891,
+          10.648477473314935
+        ],
+        [
+          11.25,
+          10.5
+        ],
+        [
+          7.25,
+          9.25
+        ],
+        [
+          -7.0,
+          -4.75
+        ],
+        [
+          -8.75,
+          -5.0
+        ],
+        [
+          -12.25,
+          -8.0
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 39.85189561870423,
+      "estimated_seconds": 71.09070934072125,
+      "driving_distance_m": 28.400104763981425,
+      "walking_distance_m": 11.451790854722805,
+      "transformations": 2
+    },
+    {
+      "destination": 3,
+      "mode": "fastest",
+      "points": [
+        [
+          -6.339588225697416,
+          -4.084753337046001
+        ],
+        [
+          -10.5,
+          -6.5
+        ],
+        [
+          -12.25,
+          -8.0
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 13.203443211382002,
+      "estimated_seconds": 30.443436199694524,
+      "driving_distance_m": 5.337490377961129,
+      "walking_distance_m": 7.865952833420874,
+      "transformations": 1
+    },
+    {
+      "destination": 3,
+      "mode": "fastest",
+      "points": [
+        [
+          -6.653414096010249,
+          -4.330480043131956
+        ],
+        [
+          -8.75,
+          -5.0
+        ],
+        [
+          -12.25,
+          -8.0
+        ],
+        [
+          -18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 12.89856292964308,
+      "estimated_seconds": 30.363647144085952,
+      "driving_distance_m": 5.032610096222207,
+      "walking_distance_m": 7.865952833420874,
+      "transformations": 1
+    },
+    {
+      "destination": 4,
+      "mode": "fastest",
+      "points": [
+        [
+          -17.905238513128392,
+          -9.967736233272234
+        ],
+        [
+          18.0,
+          -10.0
+        ]
+      ],
+      "distance_m": 35.905253008930075,
+      "estimated_seconds": 69.9153752955414,
+      "driving_distance_m": 21.80000880118027,
+      "walking_distance_m": 14.105244207749806,
+      "transformations": 2
+    },
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          17.900283282497725,
+          -10.000386063273032
+        ],
+        [
+          11.5,
+          -6.75
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          -3.25,
+          5.25
+        ],
+        [
+          -6.5,
+          5.5
+        ],
+        [
+          -11.25,
+          14.25
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 46.44574605289718,
+      "estimated_seconds": 86.83805383449226,
+      "driving_distance_m": 30.824593572726897,
+      "walking_distance_m": 15.621152480170286,
+      "transformations": 2
+    },
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          -4.051713404842531,
+          5.500073587002479
+        ],
+        [
+          -6.5,
+          5.5
+        ],
+        [
+          -11.25,
+          14.25
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 19.377603312623968,
+      "estimated_seconds": 38.72883081649038,
+      "driving_distance_m": 11.670829133911298,
+      "walking_distance_m": 7.706774178712671,
+      "transformations": 1
+    },
+    {
+      "destination": 1,
+      "mode": "fastest",
+      "points": [
+        [
+          -4.2963555635661015,
+          5.522568976288286
+        ],
+        [
+          -6.5,
+          5.5
+        ],
+        [
+          -11.25,
+          14.25
+        ],
+        [
+          -18.0,
+          16.0
+        ]
+      ],
+      "distance_m": 19.13307672165084,
+      "estimated_seconds": 38.38725714717854,
+      "driving_distance_m": 11.42630254293817,
+      "walking_distance_m": 7.706774178712671,
+      "transformations": 1
+    }
+  ],
+  "route_mode": "fastest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 3,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.012304147798008855,
+  "max_body_tilt_degrees": 0.18770111428916916,
+  "finite_state": true,
+  "solver_warnings": 0,
+  "trace": [
+    {
+      "step": 250,
+      "xy": [
+        -0.030437964188629978,
+        -18.46925839373861
+      ],
+      "battery": 99.60078472287663,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 500,
+      "xy": [
+        -0.14121826384671007,
+        -15.08339887445216
+      ],
+      "battery": 98.773248619142,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 750,
+      "xy": [
+        -0.2636790780548063,
+        -11.697852004862408
+      ],
+      "battery": 97.94569640212157,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 1000,
+      "xy": [
+        -0.3876465734939044,
+        -8.312358409858145
+      ],
+      "battery": 97.118143899621,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 1250,
+      "xy": [
+        -0.4947626779017147,
+        -5.39242039547924
+      ],
+      "battery": 96.38376347998755,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 1500,
+      "xy": [
+        -2.1701687594567987,
+        -3.604081024732702
+      ],
+      "battery": 95.7307975397364,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 1750,
+      "xy": [
+        -4.938775089762958,
+        -1.655962376741793
+      ],
+      "battery": 94.90368364374041,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 2000,
+      "xy": [
+        -7.746366119571265,
+        0.23982747620038955
+      ],
+      "battery": 94.07614027882255,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 2250,
+      "xy": [
+        -9.917488286050503,
+        1.6952735604961342
+      ],
+      "battery": 93.40337466492537,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 2500,
+      "xy": [
+        -10.403323750859228,
+        4.366759837130086
+      ],
+      "battery": 92.69800430527057,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 2750,
+      "xy": [
+        -10.384502669880808,
+        7.752517568715778
+      ],
+      "battery": 91.87080114111262,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 3000,
+      "xy": [
+        -10.306268312358792,
+        11.139330526226706
+      ],
+      "battery": 91.0432568163397,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 3250,
+      "xy": [
+        -10.253239913639375,
+        13.14992291111074
+      ],
+      "battery": 90.49099815134366,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": true
+    },
+    {
+      "step": 3500,
+      "xy": [
+        -10.581292273416567,
+        13.577943569981574
+      ],
+      "battery": 90.22949369221656,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 3750,
+      "xy": [
+        -11.903524394946459,
+        14.438764759547862
+      ],
+      "battery": 89.76389886838098,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 4000,
+      "xy": [
+        -13.306509297664302,
+        14.844456508461823
+      ],
+      "battery": 89.32110925213897,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 4250,
+      "xy": [
+        -14.937835654325905,
+        15.246035804049281
+      ],
+      "battery": 88.83510348880121,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 4500,
+      "xy": [
+        -16.564625496134635,
+        15.646447684587878
+      ],
+      "battery": 88.35003452719563,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 4750,
+      "xy": [
+        -17.904329471951673,
+        15.976435158895669
+      ],
+      "battery": 87.93485239520889,
+      "stage": "preview",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 5000,
+      "xy": [
+        -17.815934605674332,
+        16.048995336585413
+      ],
+      "battery": 87.80378088428198,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 5250,
+      "xy": [
+        -16.18547526524027,
+        16.119271181026047
+      ],
+      "battery": 87.32550284260982,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 5500,
+      "xy": [
+        -14.507465247235892,
+        16.092315522039836
+      ],
+      "battery": 86.8398572226692,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 5750,
+      "xy": [
+        -12.829935009326285,
+        16.06528967943452
+      ],
+      "battery": 86.35430733049681,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 6000,
+      "xy": [
+        -11.155274283518994,
+        16.038452440370772
+      ],
+      "battery": 85.86933186007973,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 6250,
+      "xy": [
+        -10.25814702716411,
+        16.02415748229198
+      ],
+      "battery": 85.53986481371186,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": true
+    },
+    {
+      "step": 6500,
+      "xy": [
+        -8.91047189446318,
+        16.002524153556745
+      ],
+      "battery": 85.12029452722355,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 6750,
+      "xy": [
+        -6.930865644329382,
+        17.400798340146924
+      ],
+      "battery": 84.47484158815224,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 7000,
+      "xy": [
+        -5.617726153295687,
+        18.686881670420547
+      ],
+      "battery": 83.95176238534204,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 7250,
+      "xy": [
+        -2.2967045445964596,
+        18.865513554370416
+      ],
+      "battery": 83.13488832724364,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 7500,
+      "xy": [
+        1.089570197156849,
+        18.78065465501008
+      ],
+      "battery": 82.3074120706606,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 7750,
+      "xy": [
+        4.475516149782471,
+        18.669949429895723
+      ],
+      "battery": 81.4798608755765,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 8000,
+      "xy": [
+        7.861350664348143,
+        18.555693452544688
+      ],
+      "battery": 80.65230851827155,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 8250,
+      "xy": [
+        9.920420859207114,
+        18.315837591157848
+      ],
+      "battery": 80.08274053032358,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 8500,
+      "xy": [
+        10.362460491454478,
+        18.058191360378398
+      ],
+      "battery": 79.83037759844308,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": true
+    },
+    {
+      "step": 8750,
+      "xy": [
+        10.362462090490522,
+        18.058190005592568
+      ],
+      "battery": 79.82497618161007,
+      "stage": "preview",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 9000,
+      "xy": [
+        10.49588372013724,
+        17.942128466078227
+      ],
+      "battery": 79.65631004130837,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 9250,
+      "xy": [
+        11.496727317257438,
+        16.602615210757605
+      ],
+      "battery": 79.17170721820327,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 9500,
+      "xy": [
+        12.594766789048089,
+        16.134708203352066
+      ],
+      "battery": 78.76499549861336,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 9750,
+      "xy": [
+        14.272591084260338,
+        16.09202473463054
+      ],
+      "battery": 78.27932121870076,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 10000,
+      "xy": [
+        15.946837354423735,
+        16.050733862071144
+      ],
+      "battery": 77.79436982470153,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 10250,
+      "xy": [
+        17.626447312089635,
+        16.009183156422306
+      ],
+      "battery": 77.3083447407824,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 10500,
+      "xy": [
+        17.909094281734237,
+        15.987561186217716
+      ],
+      "battery": 77.15479244099605,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 10750,
+      "xy": [
+        17.244717062871775,
+        14.652798467684601
+      ],
+      "battery": 76.70140538762288,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 11000,
+      "xy": [
+        16.343112017875313,
+        13.242065360345453
+      ],
+      "battery": 76.21655826347455,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 11250,
+      "xy": [
+        15.435714519187785,
+        11.825223676181693
+      ],
+      "battery": 75.73005648088025,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 11500,
+      "xy": [
+        14.703065806244838,
+        10.739319640282934
+      ],
+      "battery": 75.31698513510439,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 11750,
+      "xy": [
+        13.977664964459315,
+        10.597599935866294
+      ],
+      "battery": 75.09624715969295,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 12000,
+      "xy": [
+        12.298015071402345,
+        10.536219144417014
+      ],
+      "battery": 74.6100893983894,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 12250,
+      "xy": [
+        10.930843084075027,
+        10.411757571118345
+      ],
+      "battery": 74.1844152116989,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 12500,
+      "xy": [
+        10.268872548845849,
+        10.206419282029364
+      ],
+      "battery": 73.89575046994784,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": true
+    },
+    {
+      "step": 12750,
+      "xy": [
+        8.201546117558221,
+        9.552886644255278
+      ],
+      "battery": 73.3121169283473,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 13000,
+      "xy": [
+        6.391593821491435,
+        8.586603125525624
+      ],
+      "battery": 72.74543730347449,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 13250,
+      "xy": [
+        3.941565412121794,
+        6.25445614071195
+      ],
+      "battery": 71.91882520682984,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 13500,
+      "xy": [
+        1.5473639728136512,
+        3.857722838748645
+      ],
+      "battery": 71.09128342925975,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 13750,
+      "xy": [
+        -0.8403120063381434,
+        1.4544059007218375
+      ],
+      "battery": 70.2637310864686,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 14000,
+      "xy": [
+        -3.227209991742316,
+        -0.9496842675045936
+      ],
+      "battery": 69.43617868147125,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 14250,
+      "xy": [
+        -5.614001080283236,
+        -3.3538804445786203
+      ],
+      "battery": 68.60862629350854,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 14500,
+      "xy": [
+        -6.6264445133254775,
+        -4.310642606376407
+      ],
+      "battery": 68.25395929648873,
+      "stage": "stopping",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 14750,
+      "xy": [
+        -7.823629421275096,
+        -4.803818630427768
+      ],
+      "battery": 67.91259023417895,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 15000,
+      "xy": [
+        -9.67812230769867,
+        -5.51908553292544
+      ],
+      "battery": 67.35891588665072,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 15250,
+      "xy": [
+        -10.415567398092774,
+        -6.129506448003151
+      ],
+      "battery": 67.01742594832913,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": true
+    },
+    {
+      "step": 15500,
+      "xy": [
+        -11.297005788952788,
+        -7.019076762989958
+      ],
+      "battery": 66.6169356907203,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 15750,
+      "xy": [
+        -12.259499837704158,
+        -7.992840312203136
+      ],
+      "battery": 66.19292864847776,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 16000,
+      "xy": [
+        -13.818509457617253,
+        -8.578239577282615
+      ],
+      "battery": 65.70935473860482,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 16250,
+      "xy": [
+        -15.404943651267095,
+        -9.117434544662084
+      ],
+      "battery": 65.22424224078243,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 16500,
+      "xy": [
+        -16.992587731003596,
+        -9.657363172787036
+      ],
+      "battery": 64.73885338432815,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 16750,
+      "xy": [
+        -17.906945191931747,
+        -9.968335945442128
+      ],
+      "battery": 64.44296595788174,
+      "stage": "preview",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 17000,
+      "xy": [
+        -17.41945509969588,
+        -10.121723405836596
+      ],
+      "battery": 64.19318480502976,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 17250,
+      "xy": [
+        -15.744413414550362,
+        -10.126503958632599
+      ],
+      "battery": 63.7081458423192,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 17500,
+      "xy": [
+        -14.065010869393625,
+        -10.120077078126725
+      ],
+      "battery": 63.22226256753115,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 17750,
+      "xy": [
+        -12.39083862489385,
+        -10.113742682478263
+      ],
+      "battery": 62.737425400534626,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 18000,
+      "xy": [
+        -10.70873922249288,
+        -10.109368389209566
+      ],
+      "battery": 62.251002878856426,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 18250,
+      "xy": [
+        -10.257845366318213,
+        -10.107658022348469
+      ],
+      "battery": 62.01082277431788,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": true
+    },
+    {
+      "step": 18500,
+      "xy": [
+        -7.6018584537465035,
+        -10.097326026304913
+      ],
+      "battery": 61.32962128841737,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 18750,
+      "xy": [
+        -4.214120623993397,
+        -10.084421015247482
+      ],
+      "battery": 60.50206880648252,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 19000,
+      "xy": [
+        -0.8263830712943118,
+        -10.071541906286324
+      ],
+      "battery": 59.67451639966517,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 19250,
+      "xy": [
+        2.5613543860468027,
+        -10.0586624095428
+      ],
+      "battery": 58.846964011629126,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 19500,
+      "xy": [
+        5.949092218192353,
+        -10.045799723479243
+      ],
+      "battery": 58.019411561412674,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 19750,
+      "xy": [
+        9.33683024649139,
+        -10.032914450464846
+      ],
+      "battery": 57.19185905480074,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 20000,
+      "xy": [
+        10.187080228617091,
+        -10.029687908920323
+      ],
+      "battery": 56.87180632961108,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": true
+    },
+    {
+      "step": 20250,
+      "xy": [
+        11.492882682216589,
+        -10.024760493775497
+      ],
+      "battery": 56.46064369676188,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 20500,
+      "xy": [
+        13.16909483637002,
+        -10.018253506356926
+      ],
+      "battery": 55.9753984281195,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 20750,
+      "xy": [
+        14.846166162388071,
+        -10.012058782715812
+      ],
+      "battery": 55.48998147252742,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 21000,
+      "xy": [
+        16.52565644746606,
+        -10.005744481134638
+      ],
+      "battery": 55.004080728645526,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 21250,
+      "xy": [
+        17.89918527469459,
+        -10.000354727763048
+      ],
+      "battery": 54.59090488838465,
+      "stage": "preview",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 21500,
+      "xy": [
+        17.796895881544707,
+        -9.828443339381469
+      ],
+      "battery": 54.441399618417165,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 21750,
+      "xy": [
+        16.33119624554802,
+        -9.059371135720067
+      ],
+      "battery": 53.959593271490654,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 22000,
+      "xy": [
+        14.815115778396626,
+        -8.334935254483684
+      ],
+      "battery": 53.4735387097554,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 22250,
+      "xy": [
+        13.304788551487725,
+        -7.612570955195449
+      ],
+      "battery": 52.988701072341364,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 22500,
+      "xy": [
+        11.792762733105784,
+        -6.889836122112585
+      ],
+      "battery": 52.503525105042726,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 22750,
+      "xy": [
+        10.625869619287224,
+        -6.137070923365284
+      ],
+      "battery": 52.07524671973142,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 23000,
+      "xy": [
+        10.287159272941972,
+        -5.8960850843129275
+      ],
+      "battery": 51.842072044214405,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": true
+    },
+    {
+      "step": 23250,
+      "xy": [
+        8.06811118079118,
+        -4.316621984200431
+      ],
+      "battery": 51.14731965466561,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 23500,
+      "xy": [
+        5.307611532251491,
+        -2.352805140468172
+      ],
+      "battery": 50.31976714998239,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 23750,
+      "xy": [
+        2.559891651610506,
+        -0.3982518111585192
+      ],
+      "battery": 49.49537132370752,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 24000,
+      "xy": [
+        0.9549718439465705,
+        0.948407228519378
+      ],
+      "battery": 48.92571526985864,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 24250,
+      "xy": [
+        -1.4350843928459474,
+        3.3465715706791848
+      ],
+      "battery": 48.0985133844804,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 24500,
+      "xy": [
+        -3.1889708862617665,
+        5.181733217309645
+      ],
+      "battery": 47.440811451041824,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 24750,
+      "xy": [
+        -4.195104838793793,
+        5.514911445200035
+      ],
+      "battery": 47.1380442483987,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 25000,
+      "xy": [
+        -4.380578405829742,
+        5.527010145293983
+      ],
+      "battery": 47.079265130807016,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 25250,
+      "xy": [
+        -4.380581482374424,
+        5.527012865546298
+      ],
+      "battery": 47.07926278099963,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 25500,
+      "xy": [
+        -4.380584748501959,
+        5.527009794836839
+      ],
+      "battery": 47.07926052541911,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 25750,
+      "xy": [
+        -4.380588038582182,
+        5.527012590720453
+      ],
+      "battery": 47.07925818452978,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 26000,
+      "xy": [
+        -4.380591793237283,
+        5.527011666325108
+      ],
+      "battery": 47.07925575617463,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 26250,
+      "xy": [
+        -4.380595413121994,
+        5.527010978498125
+      ],
+      "battery": 47.07925332051494,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 26500,
+      "xy": [
+        -4.380598489666676,
+        5.527013698750432
+      ],
+      "battery": 47.07925097070755,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 26750,
+      "xy": [
+        -4.380601755794211,
+        5.5270106280409665
+      ],
+      "battery": 47.07924871512703,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 27000,
+      "xy": [
+        -4.380605045874435,
+        5.527013423924573
+      ],
+      "battery": 47.0792463742377,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 27250,
+      "xy": [
+        -4.380608800529536,
+        5.527012499529222
+      ],
+      "battery": 47.07924394588255,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 27500,
+      "xy": [
+        -4.380612420414248,
+        5.527011811702226
+      ],
+      "battery": 47.07924151022286,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 27750,
+      "xy": [
+        -4.38061549695893,
+        5.527014531954524
+      ],
+      "battery": 47.07923916041547,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 28000,
+      "xy": [
+        -4.380618763086464,
+        5.527011461245045
+      ],
+      "battery": 47.07923690483495,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 28250,
+      "xy": [
+        -4.3806220531666895,
+        5.52701425712864
+      ],
+      "battery": 47.079234563945626,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 28500,
+      "xy": [
+        -4.380625807821791,
+        5.527013332733277
+      ],
+      "battery": 47.07923213559048,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 28750,
+      "xy": [
+        -4.380629427706503,
+        5.527012644906271
+      ],
+      "battery": 47.07922969993079,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 29000,
+      "xy": [
+        -4.380632504251188,
+        5.527015365158559
+      ],
+      "battery": 47.0792273501234,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 29250,
+      "xy": [
+        -4.380635770378723,
+        5.5270122944490705
+      ],
+      "battery": 47.079225094542885,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 29500,
+      "xy": [
+        -4.3806390604589485,
+        5.527015090332655
+      ],
+      "battery": 47.07922275365356,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 29750,
+      "xy": [
+        -4.380642815114052,
+        5.5270141659372785
+      ],
+      "battery": 47.079220325298415,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 30000,
+      "xy": [
+        -4.380646434998764,
+        5.5270134781102636
+      ],
+      "battery": 47.07921788963873,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 30250,
+      "xy": [
+        -4.3806495115434485,
+        5.527016198362535
+      ],
+      "battery": 47.07921553983134,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 30500,
+      "xy": [
+        -4.380652777670985,
+        5.527013127653033
+      ],
+      "battery": 47.07921328425082,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 30750,
+      "xy": [
+        -4.38065606775121,
+        5.527015923536606
+      ],
+      "battery": 47.079210943361495,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 31000,
+      "xy": [
+        -4.380659822406313,
+        5.52701499914122
+      ],
+      "battery": 47.07920851500635,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 31250,
+      "xy": [
+        -4.380663442291026,
+        5.527014311314189
+      ],
+      "battery": 47.07920607934666,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 31500,
+      "xy": [
+        -4.38066651883571,
+        5.527017031566453
+      ],
+      "battery": 47.07920372953927,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 31750,
+      "xy": [
+        -4.3806697849632465,
+        5.527013960856944
+      ],
+      "battery": 47.079201473958754,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 32000,
+      "xy": [
+        -4.380673075043471,
+        5.527016756740509
+      ],
+      "battery": 47.07919913306943,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 32250,
+      "xy": [
+        -4.380676829698573,
+        5.5270158323451115
+      ],
+      "battery": 47.079196704714285,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 32500,
+      "xy": [
+        -4.380680449583286,
+        5.527015144518072
+      ],
+      "battery": 47.0791942690546,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 32750,
+      "xy": [
+        -4.38068352612797,
+        5.527017864770324
+      ],
+      "battery": 47.07919191924721,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 33000,
+      "xy": [
+        -4.380686792255507,
+        5.527014794060803
+      ],
+      "battery": 47.07918966366669,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 33250,
+      "xy": [
+        -4.380690082335733,
+        5.527017589944356
+      ],
+      "battery": 47.079187322777365,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 33500,
+      "xy": [
+        -4.380693836990839,
+        5.527016665548945
+      ],
+      "battery": 47.07918489442222,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 33750,
+      "xy": [
+        -4.380697456875551,
+        5.527015977721893
+      ],
+      "battery": 47.07918245876253,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 34000,
+      "xy": [
+        -4.380700533420238,
+        5.527018697974129
+      ],
+      "battery": 47.07918010895514,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 34250,
+      "xy": [
+        -4.380703799547775,
+        5.527015627264602
+      ],
+      "battery": 47.079177853374624,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 34500,
+      "xy": [
+        -4.380707089628001,
+        5.52701842314814
+      ],
+      "battery": 47.0791755124853,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 34750,
+      "xy": [
+        -4.380710844283107,
+        5.527017498752719
+      ],
+      "battery": 47.079173084130154,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    },
+    {
+      "step": 35000,
+      "xy": [
+        -4.380714464167819,
+        5.527016810925658
+      ],
+      "battery": 47.079170648470466,
+      "stage": "blocked",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": false
+    }
+  ]
+}

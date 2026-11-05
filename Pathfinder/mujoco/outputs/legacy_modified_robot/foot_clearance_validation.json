@@ -1,0 +1,27 @@
+{
+  "steps": 6000,
+  "simulation_seconds": 96.0040000000254,
+  "battery": 89.49625173680052,
+  "position": [
+    19.550773603426908,
+    -13.296029453136642,
+    0.4683896082649981
+  ],
+  "phase": 0,
+  "target": 4,
+  "stage": "circuit",
+  "corridor_index": 3,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "max_walking_tilt_degrees": 0.03016941840825076,
+  "minimum_foot_bottom": 0.013015579073321001,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "charge_completed": 0,
+  "visited_places": [
+    4
+  ],
+  "replans": 12,
+  "finite_state": true,
+  "max_solver_warning": 0
+}

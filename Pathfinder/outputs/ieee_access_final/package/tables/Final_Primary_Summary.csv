@@ -1,0 +1,7 @@
+method,attempts,admitted,mean_q,mean_planning_s,mean_metric_calls,outcomes
+proposed_v4,96,90,1.189768831728036,0.4405829149679145,310.875,"{'found': 90, 'resource_rejected': 6}"
+pso_polished,96,88,1.1974284953836454,0.2630720384598438,59.0625,"{'found': 88, 'resource_rejected': 8}"
+aco_polished,96,88,1.200112273262928,0.43169275438049226,37.645833333333336,"{'found': 88, 'resource_rejected': 8}"
+ompl_rrtstar,96,77,1.263812079684236,1.3651045808207225,2722.1354166666665,"{'found': 77, 'resource_rejected': 8, 'no_route': 11}"
+ompl_seeded_rrtstar,96,90,1.2006244283138279,1.3832273710722802,2396.7083333333335,"{'found': 90, 'resource_rejected': 6}"
+ompl_rrtconnect,96,78,1.3329600148715046,0.06615789833570791,14.4375,"{'found': 78, 'resource_rejected': 18}"

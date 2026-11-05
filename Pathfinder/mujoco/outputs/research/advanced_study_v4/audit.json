@@ -1,0 +1,21 @@
+{
+  "version": 4,
+  "state": "passed",
+  "attempts": 1232,
+  "phase_counts": {
+    "v4_development_default": 64,
+    "v4_development_alternative": 64,
+    "v4_heldout_planning": 864,
+    "v4_heldout_ablations": 72,
+    "v4_budget_0p5": 48,
+    "v4_budget_1p0": 48,
+    "v4_heldout_physics": 72
+  },
+  "development_worlds": 8,
+  "heldout_worlds": 24,
+  "unique_routes_collision_checked": 189,
+  "recomputed_continuous_metrics": 756,
+  "errors": [],
+  "warnings": [],
+  "scope": "Internal provenance, geometry, score, budget and protocol audit. Not hardware validation, an optimality certificate or proof of universal superiority."
+}

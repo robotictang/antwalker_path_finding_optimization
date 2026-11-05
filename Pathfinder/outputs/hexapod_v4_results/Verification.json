@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-29T00:54:09.538566+00:00",
+  "automated_tests": {
+    "count": 30,
+    "status": "passed",
+    "command": "python3 -m unittest research.test_research research.test_reliability research.test_server research.test_v3 research.test_v4"
+  },
+  "scientific_audit": {
+    "version": 4,
+    "state": "passed",
+    "attempts": 1232,
+    "phase_counts": {
+      "v4_development_default": 64,
+      "v4_development_alternative": 64,
+      "v4_heldout_planning": 864,
+      "v4_heldout_ablations": 72,
+      "v4_budget_0p5": 48,
+      "v4_budget_1p0": 48,
+      "v4_heldout_physics": 72
+    },
+    "development_worlds": 8,
+    "heldout_worlds": 24,
+    "unique_routes_collision_checked": 189,
+    "recomputed_continuous_metrics": 756,
+    "errors": [],
+    "warnings": [],
+    "scope": "Internal provenance, geometry, score, budget and protocol audit. Not hardware validation, an optimality certificate or proof of universal superiority."
+  },
+  "static_figures": "visually reviewed",
+  "website_build": "verified separate-data build and exact served HTML/snapshot hashes",
+  "browser_interaction_qa": "not performed: no browser surface available",
+  "csv_semantics": "success blank on planning-only rows; raw recorded flags unchanged in archived JSON"
+}

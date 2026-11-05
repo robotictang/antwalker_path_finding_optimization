@@ -1,0 +1,416 @@
+{
+  "ordered_pairs_checked": 20,
+  "modes_per_pair": 2,
+  "routes": [
+    {
+      "source": 0,
+      "target": 1,
+      "options": {
+        "shortest": {
+          "distance_m": 49.64047608349488,
+          "estimated_seconds": 85.85396814786854,
+          "driving_distance_m": 20.413033699010878,
+          "walking_distance_m": 29.227442384484004,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 49.64047608349488,
+          "estimated_seconds": 85.85396814786854,
+          "driving_distance_m": 20.413033699010878,
+          "walking_distance_m": 29.227442384484004,
+          "transformations": 6
+        }
+      }
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "options": {
+        "shortest": {
+          "distance_m": 47.04373163216355,
+          "estimated_seconds": 82.59571446153176,
+          "driving_distance_m": 20.34301433614387,
+          "walking_distance_m": 26.700717296019686,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 71.48729382831453,
+          "estimated_seconds": 67.93932977440873,
+          "driving_distance_m": 60.88265313552045,
+          "walking_distance_m": 10.60464069279408,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "options": {
+        "shortest": {
+          "distance_m": 27.147434060992886,
+          "estimated_seconds": 52.5011031396441,
+          "driving_distance_m": 7.603639373195403,
+          "walking_distance_m": 19.54379468779748,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 29.709119235262506,
+          "estimated_seconds": 43.08612144915053,
+          "driving_distance_m": 16.30264954614546,
+          "walking_distance_m": 13.406469689117046,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "options": {
+        "shortest": {
+          "distance_m": 25.48353077549544,
+          "estimated_seconds": 47.87536118745055,
+          "driving_distance_m": 11.019262323274493,
+          "walking_distance_m": 14.464268452220947,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 29.709119235262506,
+          "estimated_seconds": 43.87151961254798,
+          "driving_distance_m": 16.30264954614546,
+          "walking_distance_m": 13.406469689117046,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 0,
+      "options": {
+        "shortest": {
+          "distance_m": 49.674782847183316,
+          "estimated_seconds": 87.15894639872913,
+          "driving_distance_m": 20.34159528512123,
+          "walking_distance_m": 29.333187562062086,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 49.674782847183316,
+          "estimated_seconds": 87.15894639872913,
+          "driving_distance_m": 20.34159528512123,
+          "walking_distance_m": 29.333187562062086,
+          "transformations": 6
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "options": {
+        "shortest": {
+          "distance_m": 44.636484026949134,
+          "estimated_seconds": 57.75556715673927,
+          "driving_distance_m": 26.12044002779283,
+          "walking_distance_m": 18.5160439991563,
+          "transformations": 2
+        },
+        "fastest": {
+          "distance_m": 44.636484026949134,
+          "estimated_seconds": 57.75556715673927,
+          "driving_distance_m": 26.12044002779283,
+          "walking_distance_m": 18.5160439991563,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "options": {
+        "shortest": {
+          "distance_m": 37.034422378541905,
+          "estimated_seconds": 55.07912365489464,
+          "driving_distance_m": 12.224773837580262,
+          "walking_distance_m": 24.809648540961643,
+          "transformations": 2
+        },
+        "fastest": {
+          "distance_m": 37.034422378541905,
+          "estimated_seconds": 55.07912365489464,
+          "driving_distance_m": 12.224773837580262,
+          "walking_distance_m": 24.809648540961643,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "options": {
+        "shortest": {
+          "distance_m": 58.663010759071454,
+          "estimated_seconds": 94.43189750246997,
+          "driving_distance_m": 25.39966519223224,
+          "walking_distance_m": 33.263345566839206,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 63.17766952966369,
+          "estimated_seconds": 82.12883064591155,
+          "driving_distance_m": 38.958073580374354,
+          "walking_distance_m": 24.21959594928933,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "options": {
+        "shortest": {
+          "distance_m": 46.751666956012826,
+          "estimated_seconds": 85.44797163639768,
+          "driving_distance_m": 19.725514837380587,
+          "walking_distance_m": 27.02615211863223,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 71.48729382831453,
+          "estimated_seconds": 68.51570499499992,
+          "driving_distance_m": 60.88265313552045,
+          "walking_distance_m": 10.60464069279408,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "options": {
+        "shortest": {
+          "distance_m": 37.55198561217114,
+          "estimated_seconds": 47.606371614455675,
+          "driving_distance_m": 22.94939542183998,
+          "walking_distance_m": 14.602590190331151,
+          "transformations": 2
+        },
+        "fastest": {
+          "distance_m": 37.55198561217114,
+          "estimated_seconds": 47.606371614455675,
+          "driving_distance_m": 22.94939542183998,
+          "walking_distance_m": 14.602590190331151,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "options": {
+        "shortest": {
+          "distance_m": 58.21313426508004,
+          "estimated_seconds": 98.42917026958533,
+          "driving_distance_m": 22.188347350850634,
+          "walking_distance_m": 36.024786914229395,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 68.50179986613801,
+          "estimated_seconds": 93.65960208128382,
+          "driving_distance_m": 40.0939880999351,
+          "walking_distance_m": 28.407811766202915,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "options": {
+        "shortest": {
+          "distance_m": 37.56225954181993,
+          "estimated_seconds": 70.9494972060247,
+          "driving_distance_m": 8.789675854389865,
+          "walking_distance_m": 28.77258368743006,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 61.50609665440988,
+          "estimated_seconds": 69.93531400949159,
+          "driving_distance_m": 42.50426765808691,
+          "walking_distance_m": 19.001828996322963,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 0,
+      "options": {
+        "shortest": {
+          "distance_m": 27.105457740186704,
+          "estimated_seconds": 53.53579962685155,
+          "driving_distance_m": 7.62630460210738,
+          "walking_distance_m": 19.479153138079326,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 29.709119235262506,
+          "estimated_seconds": 43.66249666974171,
+          "driving_distance_m": 16.30264954614546,
+          "walking_distance_m": 13.406469689117046,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "options": {
+        "shortest": {
+          "distance_m": 37.04564025048754,
+          "estimated_seconds": 54.42543076261044,
+          "driving_distance_m": 12.4808467865997,
+          "walking_distance_m": 24.564793463887835,
+          "transformations": 2
+        },
+        "fastest": {
+          "distance_m": 37.04564025048754,
+          "estimated_seconds": 54.42543076261044,
+          "driving_distance_m": 12.4808467865997,
+          "walking_distance_m": 24.564793463887835,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "options": {
+        "shortest": {
+          "distance_m": 57.76910571374509,
+          "estimated_seconds": 96.10363409137545,
+          "driving_distance_m": 21.87176411422026,
+          "walking_distance_m": 35.897341599524836,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 68.69286050988433,
+          "estimated_seconds": 92.83506272331037,
+          "driving_distance_m": 40.11500519604891,
+          "walking_distance_m": 28.577855313835403,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "options": {
+        "shortest": {
+          "distance_m": 36.31839775566745,
+          "estimated_seconds": 61.1635531623453,
+          "driving_distance_m": 12.608768390322034,
+          "walking_distance_m": 23.709629365345414,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 36.31839775566745,
+          "estimated_seconds": 61.1635531623453,
+          "driving_distance_m": 12.608768390322034,
+          "walking_distance_m": 23.709629365345414,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 4,
+      "target": 0,
+      "options": {
+        "shortest": {
+          "distance_m": 25.291966317910084,
+          "estimated_seconds": 48.85712061457642,
+          "driving_distance_m": 11.333791353001592,
+          "walking_distance_m": 13.958174964908492,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 29.709119235262506,
+          "estimated_seconds": 43.66249666974171,
+          "driving_distance_m": 16.30264954614546,
+          "walking_distance_m": 13.406469689117046,
+          "transformations": 2
+        }
+      }
+    },
+    {
+      "source": 4,
+      "target": 1,
+      "options": {
+        "shortest": {
+          "distance_m": 58.524218559349315,
+          "estimated_seconds": 94.4686946937279,
+          "driving_distance_m": 25.456292730621634,
+          "walking_distance_m": 33.06792582872768,
+          "transformations": 6
+        },
+        "fastest": {
+          "distance_m": 63.177669529663696,
+          "estimated_seconds": 82.27072770051572,
+          "driving_distance_m": 38.95807358037436,
+          "walking_distance_m": 24.219595949289328,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "options": {
+        "shortest": {
+          "distance_m": 37.301998236385536,
+          "estimated_seconds": 68.60264086823757,
+          "driving_distance_m": 9.195656362709872,
+          "walking_distance_m": 28.106341873675664,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 37.301998236385536,
+          "estimated_seconds": 68.60264086823757,
+          "driving_distance_m": 9.195656362709872,
+          "walking_distance_m": 28.106341873675664,
+          "transformations": 4
+        }
+      }
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "options": {
+        "shortest": {
+          "distance_m": 36.2282526184236,
+          "estimated_seconds": 61.477905982262776,
+          "driving_distance_m": 12.675470830558655,
+          "walking_distance_m": 23.552781787864944,
+          "transformations": 4
+        },
+        "fastest": {
+          "distance_m": 36.2282526184236,
+          "estimated_seconds": 61.477905982262776,
+          "driving_distance_m": 12.675470830558655,
+          "walking_distance_m": 23.552781787864944,
+          "transformations": 4
+        }
+      }
+    }
+  ],
+  "distance_astar_matches_dijkstra": true,
+  "time_astar_matches_dijkstra": true,
+  "reference_distance_m": 51.25304832720497,
+  "reference_grid_time_seconds": 91.4636974466773,
+  "grid_resolution_m": 0.25,
+  "swept_radius_m": 1.82,
+  "tracking_margin_m": 0.12,
+  "driving_speed": 1.65,
+  "walking_speed": 0.75,
+  "transform_cost_seconds": 4.8
+}

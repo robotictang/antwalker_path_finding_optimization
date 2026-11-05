@@ -1,0 +1,621 @@
+<mujoco model="hybrid_hexapod_pathfinding_demo">
+  <compiler angle="radian" coordinate="local" autolimits="true" />
+  <option timestep="0.004" iterations="50" solver="Newton" integrator="implicitfast" gravity="0 0 -9.81">
+    <flag contact="enable" frictionloss="enable" />
+  </option>
+  <visual>
+    <global offwidth="1920" offheight="1080" />
+    <quality shadowsize="4096" />
+    <map stiffness="100" shadowscale="0.6" />
+    <headlight ambient="0.48 0.46 0.42" diffuse="0.55 0.53 0.50" specular="0.22 0.22 0.20" />
+  </visual>
+  <asset>
+    <texture name="skybox_tex" type="skybox" builtin="gradient" rgb1="0.45 0.65 0.88" rgb2="0.82 0.90 0.96" width="1024" height="1024" />
+    <mesh name="mesh_base_link" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_top_cover" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/meshes/top_cover.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_coxa_link" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/meshes/coxa_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_femur_link" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/meshes/femur_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_tibia_link" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/meshes/tibia_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="mesh_rs04_actuator" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/derived_meshes/rs04_actuator_mujoco.stl" scale="0.001 0.001 0.001" />
+    <material name="chassis_cad_mat" rgba="0.25 0.25 0.28 1.0" specular="0.45" roughness="0.55" />
+    <material name="carapace_carbon" rgba=".19 .23 .27 1" specular="0.85" roughness="0.18" />
+    <material name="coxa_cad_mat" rgba="0.85 0.45 0.10 1.0" specular="0.65" roughness="0.30" />
+    <material name="leg_cad_mat" rgba="0.30 0.30 0.32 1.0" specular="0.55" roughness="0.40" />
+    <material name="rs04_cad_mat" rgba="0.18 0.18 0.20 1.0" specular="0.70" roughness="0.25" />
+    <texture name="earth_ground_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_terrain_earth.png" />
+    <texture name="rock_granite_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_rock_granite.png" />
+    <texture name="bark_wood_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_tree_bark.png" />
+    <texture name="pine_needles_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/pine_needles.png" />
+    <texture name="concrete_pad_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/concrete_dock_pad.png" />
+    <texture name="kiosk_screen_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/kiosk_screen.png" />
+    <texture name="kiosk_lockers_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/kiosk_lockers.png" />
+    <texture name="wet_mud_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_wet_mud.png" />
+    <texture name="sand_gravel_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_sand_gravel.png" />
+    <texture name="forest_moss_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/realistic_forest_moss_soil.png" />
+    <texture name="dirt_trail_tex" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/forest_dirt_path.png" />
+    <material name="world_base_mat" texture="earth_ground_tex" texrepeat="1 1" rgba="0.95 0.95 0.95 1.0" reflectance="0.04" roughness="0.95" />
+    <material name="forest_ground_mat" texture="forest_moss_tex" texrepeat="3 3" rgba="0.88 0.95 0.85 1.0" roughness="0.95" reflectance="0.04" />
+    <material name="dirt_trail_mat" texture="dirt_trail_tex" texrepeat="2 4" rgba="0.85 0.75 0.65 1.0" roughness="0.90" />
+    <material name="quarry_ground_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.75 0.75 0.78 1.0" roughness="0.85" reflectance="0.15" />
+    <material name="mud_marsh_ground_mat" texture="wet_mud_tex" texrepeat="3 3" rgba="0.55 0.45 0.38 1.0" roughness="0.92" reflectance="0.12" />
+    <material name="desert_sand_ground_mat" texture="sand_gravel_tex" texrepeat="3 3" rgba="0.95 0.82 0.58 1.0" roughness="0.90" reflectance="0.10" />
+    <material name="asphalt_highway_mat" texture="earth_ground_tex" texrepeat="2 8" rgba="0.25 0.25 0.28 1.0" reflectance="0.10" roughness="0.88" />
+    <material name="road_stripe_yellow" rgba="0.98 0.82 0.12 1.0" emission="0.45" />
+    <material name="road_stripe_white" rgba="0.95 0.95 0.95 1.0" emission="0.40" />
+    <material name="traffic_cone_orange" rgba="0.98 0.42 0.05 1.0" emission="0.40" />
+    <material name="cone_white_stripe" rgba="0.98 0.98 0.98 1.0" emission="0.50" />
+    <material name="pine_trunk_mat" texture="bark_wood_tex" texrepeat="1 6" rgba="0.52 0.38 0.26 1.0" reflectance="0.05" roughness="0.95" />
+    <material name="pine_foliage_mat" texture="pine_needles_tex" texrepeat="3 3" rgba="0.65 0.85 0.65 1.0" roughness="0.90" reflectance="0.05" />
+    <material name="bush_foliage_mat" rgba="0.28 0.52 0.22 1.0" roughness="0.90" />
+    <material name="broken_slab_mat" texture="rock_granite_tex" texrepeat="1 1" rgba="0.65 0.65 0.68 1.0" reflectance="0.22" roughness="0.78" />
+    <material name="gravel_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.58 0.56 0.54 1.0" roughness="0.92" />
+    <material name="marsh_water_mat" rgba="0.08 0.18 0.16 0.95" specular="0.98" emission="0.10" reflectance="0.95" roughness="0.02" />
+    <material name="mud_berm_mat" texture="wet_mud_tex" texrepeat="2 2" rgba="0.42 0.32 0.24 1.0" roughness="0.95" reflectance="0.08" />
+    <material name="dune_sand_mat" texture="sand_gravel_tex" texrepeat="2 2" rgba="0.88 0.72 0.48 1.0" reflectance="0.10" roughness="0.92" />
+    <material name="sandstone_mat" texture="sand_gravel_tex" texrepeat="1 2" rgba="0.82 0.60 0.42 1.0" reflectance="0.12" roughness="0.88" />
+    <material name="terracotta_mat" rgba="0.78 0.44 0.28 1.0" roughness="0.88" />
+    <material name="granite_rock_mat" texture="rock_granite_tex" texrepeat="2 2" reflectance="0.14" roughness="0.86" />
+    <material name="fallen_log_mat" texture="bark_wood_tex" texrepeat="1 3" reflectance="0.06" roughness="0.92" />
+    <material name="stump_bark_mat" texture="bark_wood_tex" texrepeat="1 2" reflectance="0.06" roughness="0.92" />
+    <material name="stump_heartwood" rgba="0.44 0.30 0.16 1.0" />
+    <material name="tent_canvas_mat" rgba="0.85 0.80 0.68 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="tent_fly_mat" rgba="0.22 0.38 0.26 1.0" reflectance="0.25" roughness="0.75" />
+    <material name="camp_wood_mat" texture="bark_wood_tex" rgba="0.45 0.35 0.25 1.0" roughness="0.85" />
+    <material name="crate_metal_mat" rgba="0.45 0.48 0.52 1.0" reflectance="0.30" />
+    <material name="field_station_metal" rgba="0.78 0.80 0.82 1.0" reflectance="0.35" />
+    <material name="solar_cell_mat" rgba="0.12 0.16 0.28 1.0" reflectance="0.55" specular="0.9" />
+    <material name="survey_flag_orange" rgba="0.95 0.42 0.10 1.0" />
+    <material name="campfire_stone_mat" texture="rock_granite_tex" rgba="0.40 0.40 0.42 1.0" />
+    <material name="campfire_ember_mat" rgba="0.98 0.35 0.05 1.0" emission="0.85" />
+    <material name="reed_green_mat" rgba="0.26 0.48 0.18 1.0" roughness="0.90" />
+    <material name="lily_flower_pink" rgba="0.98 0.65 0.75 1.0" emission="0.20" />
+    <material name="lily_flower_white" rgba="0.98 0.98 0.95 1.0" emission="0.20" />
+    <material name="cactus_flower_yellow" rgba="0.98 0.90 0.15 1.0" emission="0.30" />
+    <material name="mountain_rock_mat" texture="rock_granite_tex" texrepeat="6 6" rgba="0.52 0.52 0.54 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="canyon_red_mat" texture="rock_granite_tex" texrepeat="4 4" rgba="0.65 0.42 0.30 1.0" reflectance="0.15" roughness="0.85" />
+    <material name="concrete_pad_mat" texture="concrete_pad_tex" texrepeat="2 2" rgba="0.82 0.82 0.84 1.0" reflectance="0.12" roughness="0.85" />
+    <material name="kiosk_pedestal_mat" rgba="0.25 0.28 0.32 1.0" reflectance="0.25" />
+    <material name="kiosk_cabinet_mat" rgba="0.92 0.93 0.95 1.0" reflectance="0.30" />
+    <material name="kiosk_screen_mat" texture="kiosk_screen_tex" rgba="1 1 1 1" emission="0.45" />
+    <material name="kiosk_lockers_mat" texture="kiosk_lockers_tex" rgba="1 1 1 1" reflectance="0.25" />
+    <material name="kiosk_blue_accent" rgba="0.12 0.45 0.85 1.0" reflectance="0.40" />
+    <material name="solar_roof_mat" rgba="0.22 0.28 0.38 1.0" reflectance="0.60" specular="0.8" />
+    <material name="kiosk_led_green" rgba="0.10 0.95 0.25 1.0" emission="0.9" />
+    <material name="hazard_yellow_mat" rgba="0.95 0.80 0.10 1.0" emission="0.25" />
+    <material name="utility_gray_mat" rgba="0.35 0.38 0.42 1.0" reflectance="0.25" />
+    <material name="honda_white_fascia" rgba="0.95 0.96 0.98 1.0" reflectance="0.50" specular="0.80" roughness="0.20" />
+    <material name="honda_cabinet_dark" rgba="0.20 0.22 0.26 1.0" reflectance="0.22" specular="0.35" roughness="0.50" />
+    <material name="honda_bay_pocket" rgba="0.07 0.08 0.10 1.0" reflectance="0.12" roughness="0.70" />
+    <material name="honda_slot_blue_led" rgba="0.05 0.75 1.00 1.0" emission="1.00" />
+    <material name="honda_battery_body" rgba="0.13 0.14 0.16 1.0" reflectance="0.25" roughness="0.40" />
+    <material name="honda_handle_blue" rgba="0.08 0.55 0.98 1.0" emission="0.55" specular="0.70" />
+    <material name="honda_brand_teal" rgba="0.05 0.90 0.95 1.0" emission="0.85" />
+    <material name="honda_grille_gray" rgba="0.15 0.16 0.18 1.0" roughness="0.60" />
+    <material name="chassis_mat" rgba="0.16 0.18 0.20 1.0" reflectance="0.35" roughness="0.55" />
+    <material name="foot_rubber" rgba="0.10 0.10 0.12 1.0" roughness="0.95" />
+    <material name="wheel_mat" rgba="0.12 0.12 0.14 1.0" roughness="0.95" />
+    <material name="rim_alloy_mat" rgba="0.75 0.78 0.82 1.0" reflectance="0.70" specular="0.90" roughness="0.20" />
+    <material name="sensor_mat" rgba="0.08 0.08 0.10 1.0" specular="0.9" />
+    <material name="headlight_lens_mat" rgba="0.95 0.98 1.0 1.0" emission="1.0" />
+    <material name="battery_light" rgba="0.10 0.95 0.25 1.0" emission="1.0" />
+    <material name="battery_halo_mat" rgba="0.10 0.95 0.25 0.35" emission="0.6" />
+    <material name="scan_core_mat" rgba="0.15 0.85 0.95 1.0" emission="0.85" />
+    <material name="carapace_accent_orange" rgba="0.85 0.45 0.10 1.0" emission="0.35" reflectance="0.40" />
+    <material name="carapace_titanium_trim" rgba="0.75 0.78 0.82 1.0" reflectance="0.60" specular="0.75" />
+    <material name="carapace_mat" rgba="0.16 0.18 0.22 1.0" reflectance="0.45" specular="0.70" roughness="0.35" />
+    <material name="battery_box_mat" rgba="0.11 0.12 0.14 1.0" reflectance="0.30" specular="0.60" roughness="0.45" />
+    <material name="pocket_channel_mat" rgba="0.13 0.14 0.16 1.0" reflectance="0.20" roughness="0.65" />
+    <material name="excavator_yellow_mat" rgba="0.95 0.75 0.05 1.0" reflectance="0.40" specular="0.65" />
+    <material name="excavator_tracks_mat" rgba="0.18 0.18 0.20 1.0" roughness="0.90" />
+    <material name="obelisk_hieroglyph_mat" rgba="0.85 0.65 0.45 1.0" roughness="0.85" />
+    <material name="container_teal" rgba="0.12 0.48 0.52 1.0" reflectance="0.30" />
+    <material name="container_orange" rgba="0.85 0.38 0.10 1.0" reflectance="0.30" />
+    <material name="bat_led_mat_1" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_2" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_3" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_4" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="bat_led_mat_5" rgba="0.10 0.98 0.25 1.0" emission="0.95" />
+    <material name="lidar_laser_mat" rgba="0.05 0.98 0.92 0.95" emission="1.0" />
+    <material name="lidar_cone_mat" rgba="0.05 0.98 0.92 0.18" emission="0.65" />
+    <material name="lidar_wave_ring_mat" rgba="0.05 0.98 0.92 0.35" emission="0.80" />
+    <material name="road_marker_amber" rgba="0.98 0.70 0.05 1.0" emission="0.80" />
+    <material name="sign_green_mat" rgba="0.05 0.45 0.18 1.0" reflectance="0.25" />
+    <material name="sign_post_metal" rgba="0.75 0.75 0.78 1.0" reflectance="0.50" />
+    <material name="antenna_light_red" rgba="0.98 0.05 0.05 1.0" emission="1.0" />
+    <material name="telemetry_beacon_blue" rgba="0.10 0.65 0.98 1.0" emission="0.95" />
+    <material name="service_silver" rgba=".52 .59 .64 1" specular=".45" shininess=".4" />
+    <material name="pack_orange" rgba=".94 .31 .055 1" specular=".45" shininess=".4" />
+    <material name="panel_dark" rgba=".065 .09 .115 1" specular=".45" shininess=".4" />
+    <material name="route_teal" rgba=".18 .31 .14 1" specular=".45" shininess=".4" />
+    <material name="site_identity_1" rgba=".15 .5 .25 1" emission=".25" />
+    <material name="site_identity_2" rgba=".6 .48 .3 1" emission=".25" />
+    <material name="site_identity_3" rgba=".08 .48 .6 1" emission=".25" />
+    <material name="site_identity_4" rgba=".85 .52 .13 1" emission=".25" />
+    <texture name="road_name_tex_0" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_0.png" />
+    <material name="road_name_mat_0" texture="road_name_tex_0" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_1" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_1.png" />
+    <material name="road_name_mat_1" texture="road_name_tex_1" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_2" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_2.png" />
+    <material name="road_name_mat_2" texture="road_name_tex_2" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_3" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_3.png" />
+    <material name="road_name_mat_3" texture="road_name_tex_3" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_4" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_4.png" />
+    <material name="road_name_mat_4" texture="road_name_tex_4" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_5" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_5.png" />
+    <material name="road_name_mat_5" texture="road_name_tex_5" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_6" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_6.png" />
+    <material name="road_name_mat_6" texture="road_name_tex_6" texrepeat="1 1" texuniform="false" />
+    <texture name="road_name_tex_7" type="2d" file="/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/workbench/mujoco/textures/road_name_7.png" />
+    <material name="road_name_mat_7" texture="road_name_tex_7" texrepeat="1 1" texuniform="false" />
+  </asset>
+  <default>
+    <default class="robot_internal">
+      <geom contype="0" conaffinity="0" friction="1.5 0.05 0.001" />
+      <joint damping="2.5" armature="0.02" />
+    </default>
+    <default class="leg_collision_geom">
+      <geom contype="2" conaffinity="1" friction="1.8 0.08 0.005" solref="0.008 1" solimp="0.95 0.99 0.001" />
+      <joint damping="3.2" armature="0.03" />
+    </default>
+    <default class="foot_geom">
+      <geom type="sphere" size="0.045" material="foot_rubber" contype="2" conaffinity="1" friction="2.8 0.12 0.008" solref="0.005 1" solimp="0.95 0.99 0.001" />
+    </default>
+    <default class="wheel_geom">
+      <geom type="cylinder" size="0.15 .06" euler="1.5707963 0 0" material="wheel_mat" contype="2" conaffinity="1" friction="1.8 .02 .001" solref="0.008 1" solimp="0.95 0.99 0.001" />
+    </default>
+    <default class="visual_only">
+      <geom contype="0" conaffinity="0" density="0.01" />
+    </default>
+  </default>
+  <worldbody>
+    <light name="sun" pos="6.0 -4.0 18.0" dir="-0.35 0.25 -0.9" diffuse="0.95 0.92 0.86" specular="0.35 0.35 0.35" castshadow="true" />
+    <light name="sky_fill" pos="-8.0 8.0 16.0" dir="0.3 -0.3 -0.9" diffuse="0.35 0.42 0.52" specular="0.1 0.1 0.1" castshadow="false" />
+    <body name="robot" pos="0 -20 0.31">
+      <freejoint name="root" />
+      <geom type="mesh" mesh="mesh_base_link" material="chassis_cad_mat" class="visual_only" />
+      <geom name="chassis_tub" type="box" size="0.42 0.40 0.10" pos="0 0 0.08" group="3" contype="2" conaffinity="1" friction="1.8 0.08 0.005" />
+      <geom name="box_coll" type="box" size="0.24 0.20 0.10" pos="0 0 0.18" group="3" contype="2" conaffinity="1" friction="1.8 0.08 0.005" />
+      <geom name="carapace_coll" type="box" size=".73 .96 .19" pos="0 0 .54" group="3" contype="2" conaffinity="1" friction="1.8 0.08 0.005" />
+      <geom name="top_cover_mesh" type="mesh" mesh="mesh_top_cover" material="carapace_carbon" class="visual_only" />
+      <geom name="spine_accent" type="box" size="0.520 0.045 0.006" pos="0.000 0.000 0.723" material="carapace_accent_orange" class="visual_only" />
+      <geom name="ridge_trim_L" type="box" size="0.420 0.015 0.006" pos="0.000 0.890 0.715" material="carapace_accent_orange" class="visual_only" />
+      <geom name="ridge_trim_R" type="box" size="0.420 0.015 0.006" pos="0.000 -0.890 0.715" material="carapace_accent_orange" class="visual_only" />
+      <geom name="eye_headlight_L" type="cylinder" size="0.042 0.010" pos="0.640  0.340 0.600" euler="0 1.95 0" material="headlight_lens_mat" class="visual_only" />
+      <geom name="eye_headlight_R" type="cylinder" size="0.042 0.010" pos="0.640 -0.340 0.600" euler="0 1.95 0" material="headlight_lens_mat" class="visual_only" />
+      <geom name="eye_bezel_L" type="cylinder" size="0.046 0.005" pos="0.638  0.340 0.600" euler="0 1.95 0" material="carapace_accent_orange" class="visual_only" />
+      <geom name="eye_bezel_R" type="cylinder" size="0.046 0.005" pos="0.638 -0.340 0.600" euler="0 1.95 0" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_lobe_FL_main" type="cylinder" size="0.22 0.045" pos="0.48  0.28 0.44" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_lobe_FL_dome" type="ellipsoid" size="0.20 0.18 0.045" pos="0.54  0.28 0.44" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_lobe_FR_main" type="cylinder" size="0.22 0.045" pos="0.48 -0.28 0.44" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_lobe_FR_dome" type="ellipsoid" size="0.20 0.18 0.045" pos="0.54 -0.28 0.44" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_front_apron" type="box" size="0.16 0.28 0.04" pos="0.46 0.00 0.44" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_front_lip" type="capsule" size="0.018" fromto="0.58 -0.38 0.44 0.58 0.38 0.44" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="pocket_tray_L" type="box" size="0.46 0.065 0.035" pos="0.00  0.86 0.58" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_tray_R" type="box" size="0.46 0.065 0.035" pos="0.00 -0.86 0.58" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_guide_rail_L" type="box" size="0.50 0.014 0.014" pos="0.00  0.915 0.605" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="pocket_guide_rail_R" type="box" size="0.50 0.014 0.014" pos="0.00 -0.915 0.605" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="pocket_socket_LF" type="box" size="0.05 0.012 0.055" pos=" 0.32  0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_socket_LM" type="box" size="0.05 0.012 0.055" pos=" 0.00  0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_socket_LR" type="box" size="0.05 0.012 0.055" pos="-0.32  0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_socket_RF" type="box" size="0.05 0.012 0.055" pos=" 0.32 -0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_socket_RM" type="box" size="0.05 0.012 0.055" pos=" 0.00 -0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_socket_RR" type="box" size="0.05 0.012 0.055" pos="-0.32 -0.925 0.64" material="carapace_accent_orange" class="visual_only" />
+      <geom name="pocket_rear_cowl" type="cylinder" size="0.36 0.04" pos="-0.42 0 0.42" material="carapace_accent_orange" class="visual_only" />
+      <geom name="bat_led_1" type="box" size=".014 .004 .009" pos="0.072 0.24 0.9" material="bat_led_mat_1" class="visual_only" />
+      <geom name="bat_led_2" type="box" size=".014 .004 .009" pos="0.036 0.24 0.9" material="bat_led_mat_2" class="visual_only" />
+      <geom name="bat_led_3" type="box" size=".014 .004 .009" pos="0.0 0.24 0.9" material="bat_led_mat_3" class="visual_only" />
+      <geom name="bat_led_4" type="box" size=".014 .004 .009" pos="-0.036 0.24 0.9" material="bat_led_mat_4" class="visual_only" />
+      <geom name="bat_led_5" type="box" size=".014 .004 .009" pos="-0.072 0.24 0.9" material="bat_led_mat_5" class="visual_only" />
+      <geom name="beacon_retaining_ring" type="cylinder" size="0.054 0.008" pos="0.0 0.0 0.965" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="battery_beacon_dome" type="sphere" size="0.056" pos="0.0 0.0 1.0030000000000001" material="battery_light" class="visual_only" />
+      <geom name="battery_beacon_halo" type="cylinder" size="0.095 0.018" pos="0.0 0.0 0.999" material="battery_halo_mat" class="visual_only" />
+      <geom name="antenna_base" type="cylinder" size="0.010 0.014" pos="-0.16 0.13 0.95" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="antenna_mast" type="capsule" size="0.0035" fromto="-0.16 0.13 0.963 -0.16 0.13 1.185" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="antenna_tip_light" type="sphere" size="0.014" pos="-0.16 0.13 1.195" material="battery_light" class="visual_only" />
+      <geom name="bat_status_strip" type="box" size="0.010 0.150 0.010" pos="-0.700  0.000 0.520" material="battery_light" class="visual_only" />
+      <body name="bottom_sensor_bay" pos="0.22 0.0 -0.05">
+        <geom name="bottom_sensor_casing" type="box" size="0.07 0.10 0.022" pos="0 0 0.01" material="chassis_mat" class="visual_only" />
+        <geom name="bottom_sensor_window" type="cylinder" size="0.038 0.005" pos="0.02 0 -0.015" material="sensor_mat" class="visual_only" />
+        <joint name="lidar_pan" type="hinge" axis="0 0 1" range="-1.4 1.4" damping="0.08" />
+        <geom name="bottom_sensor_optic" type="cylinder" size="0.032 0.012" pos="0.02 0 -0.02" material="scan_core_mat" class="visual_only" />
+        <geom name="bottom_sensor_lens" type="box" size="0.014 0.018 0.010" pos="0.04 0 -0.02" material="sensor_mat" class="visual_only" />
+      </body>
+      <geom name="front_axle_subframe" type="box" size="0.08 0.22 0.04" pos="0.44 0.0 -0.06" material="chassis_cad_mat" class="visual_only" />
+      <geom name="front_bullbar" type="capsule" size="0.015" fromto="0.48 -0.22 -0.05 0.48 0.22 -0.05" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="front_susp_arm_L" type="capsule" size="0.012" fromto="0.40 0.16 0.02 0.48 0.22 -0.12" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="front_susp_arm_R" type="capsule" size="0.012" fromto="0.40 -0.16 0.02 0.48 -0.22 -0.12" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="rear_axle_subframe" type="box" size="0.08 0.22 0.04" pos="-0.44 0.0 -0.06" material="chassis_cad_mat" class="visual_only" />
+      <geom name="rear_towbar" type="capsule" size="0.015" fromto="-0.48 -0.22 -0.05 -0.48 0.22 -0.05" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="rear_susp_arm_L" type="capsule" size="0.012" fromto="-0.40 0.16 0.02 -0.48 0.22 -0.12" material="carapace_titanium_trim" class="visual_only" />
+      <geom name="rear_susp_arm_R" type="capsule" size="0.012" fromto="-0.40 -0.16 0.02 -0.48 -0.22 -0.12" material="carapace_titanium_trim" class="visual_only" />
+      <body name="wheel_FL" pos="0.5 0.56 -.16">
+        <joint name="wheel_FL_joint" type="hinge" axis="0 1 0" damping="0.2" armature="0.05" />
+        <geom class="wheel_geom" name="tire_FL" />
+        <geom type="cylinder" size="0.10333333333333333 0.06685714285714285" euler="1.5707963 0 0" material="rim_alloy_mat" class="visual_only" />
+        <geom type="cylinder" size="0.04 0.07028571428571427" euler="1.5707963 0 0" material="carapace_accent_orange" class="visual_only" />
+        <geom type="cylinder" size="0.02 0.07371428571428569" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.11333333333333334 0.06514285714285713" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.07 0.06857142857142856 0.0" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 0.06857142857142856 0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 0.06857142857142856 0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 0.06857142857142856 -0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 0.06857142857142856 -0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <inertial mass="1.5" pos="0 0 0" diaginertia=".01024 .016875 .01024" />
+        <geom name="tread_FL_0" type="box" size=".012 .062 .004" pos="0.146 0 0.0" euler="0 1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_1" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 0.04511648117874232" euler="0 1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_2" type="box" size=".012 .062 .004" pos="0.11811648117874232 0 0.08581664683470107" euler="0 0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_3" type="box" size=".012 .062 .004" pos="0.08581664683470107 0 0.11811648117874232" euler="0 0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_4" type="box" size=".012 .062 .004" pos="0.045116481178742326 0 0.1388542513790924" euler="0 0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_5" type="box" size=".012 .062 .004" pos="8.939921633775677e-18 0 0.146" euler="0 0.0 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_6" type="box" size=".012 .062 .004" pos="-0.045116481178742306 0 0.13885425137909244" euler="0 -0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_7" type="box" size=".012 .062 .004" pos="-0.08581664683470105 0 0.11811648117874232" euler="0 -0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_8" type="box" size=".012 .062 .004" pos="-0.11811648117874231 0 0.08581664683470108" euler="0 -0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_9" type="box" size=".012 .062 .004" pos="-0.1388542513790924 0 0.04511648117874233" euler="0 -1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_10" type="box" size=".012 .062 .004" pos="-0.146 0 1.7879843267551354e-17" euler="0 -1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_11" type="box" size=".012 .062 .004" pos="-0.13885425137909244 0 -0.04511648117874224" euler="0 -1.8849555921538754 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_12" type="box" size=".012 .062 .004" pos="-0.11811648117874234 0 -0.08581664683470105" euler="0 -2.199114857512855 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_13" type="box" size=".012 .062 .004" pos="-0.08581664683470108 0 -0.11811648117874231" euler="0 -2.5132741228718345 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_14" type="box" size=".012 .062 .004" pos="-0.04511648117874234 0 -0.1388542513790924" euler="0 -2.827433388230814 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_15" type="box" size=".012 .062 .004" pos="-2.681976490132703e-17 0 -0.146" euler="0 -3.141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_16" type="box" size=".012 .062 .004" pos="0.04511648117874229 0 -0.13885425137909244" euler="0 -3.4557519189487724 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_17" type="box" size=".012 .062 .004" pos="0.08581664683470104 0 -0.11811648117874234" euler="0 -3.7699111843077517 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_18" type="box" size=".012 .062 .004" pos="0.11811648117874231 0 -0.08581664683470111" euler="0 -4.084070449666731 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FL_19" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 -0.04511648117874235" euler="0 -4.39822971502571 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+      </body>
+      <body name="wheel_FR" pos="0.5 -0.56 -.16">
+        <joint name="wheel_FR_joint" type="hinge" axis="0 1 0" damping="0.2" armature="0.05" />
+        <geom class="wheel_geom" name="tire_FR" />
+        <geom type="cylinder" size="0.10333333333333333 0.06685714285714285" euler="1.5707963 0 0" material="rim_alloy_mat" class="visual_only" />
+        <geom type="cylinder" size="0.04 0.07028571428571427" euler="1.5707963 0 0" material="carapace_accent_orange" class="visual_only" />
+        <geom type="cylinder" size="0.02 0.07371428571428569" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.11333333333333334 0.06514285714285713" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.07 -0.06857142857142856 0.0" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 -0.06857142857142856 0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 -0.06857142857142856 0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 -0.06857142857142856 -0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 -0.06857142857142856 -0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <inertial mass="1.5" pos="0 0 0" diaginertia=".01024 .016875 .01024" />
+        <geom name="tread_FR_0" type="box" size=".012 .062 .004" pos="0.146 0 0.0" euler="0 1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_1" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 0.04511648117874232" euler="0 1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_2" type="box" size=".012 .062 .004" pos="0.11811648117874232 0 0.08581664683470107" euler="0 0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_3" type="box" size=".012 .062 .004" pos="0.08581664683470107 0 0.11811648117874232" euler="0 0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_4" type="box" size=".012 .062 .004" pos="0.045116481178742326 0 0.1388542513790924" euler="0 0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_5" type="box" size=".012 .062 .004" pos="8.939921633775677e-18 0 0.146" euler="0 0.0 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_6" type="box" size=".012 .062 .004" pos="-0.045116481178742306 0 0.13885425137909244" euler="0 -0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_7" type="box" size=".012 .062 .004" pos="-0.08581664683470105 0 0.11811648117874232" euler="0 -0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_8" type="box" size=".012 .062 .004" pos="-0.11811648117874231 0 0.08581664683470108" euler="0 -0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_9" type="box" size=".012 .062 .004" pos="-0.1388542513790924 0 0.04511648117874233" euler="0 -1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_10" type="box" size=".012 .062 .004" pos="-0.146 0 1.7879843267551354e-17" euler="0 -1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_11" type="box" size=".012 .062 .004" pos="-0.13885425137909244 0 -0.04511648117874224" euler="0 -1.8849555921538754 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_12" type="box" size=".012 .062 .004" pos="-0.11811648117874234 0 -0.08581664683470105" euler="0 -2.199114857512855 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_13" type="box" size=".012 .062 .004" pos="-0.08581664683470108 0 -0.11811648117874231" euler="0 -2.5132741228718345 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_14" type="box" size=".012 .062 .004" pos="-0.04511648117874234 0 -0.1388542513790924" euler="0 -2.827433388230814 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_15" type="box" size=".012 .062 .004" pos="-2.681976490132703e-17 0 -0.146" euler="0 -3.141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_16" type="box" size=".012 .062 .004" pos="0.04511648117874229 0 -0.13885425137909244" euler="0 -3.4557519189487724 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_17" type="box" size=".012 .062 .004" pos="0.08581664683470104 0 -0.11811648117874234" euler="0 -3.7699111843077517 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_18" type="box" size=".012 .062 .004" pos="0.11811648117874231 0 -0.08581664683470111" euler="0 -4.084070449666731 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_FR_19" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 -0.04511648117874235" euler="0 -4.39822971502571 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+      </body>
+      <body name="wheel_RL" pos="-0.5 0.56 -.16">
+        <joint name="wheel_RL_joint" type="hinge" axis="0 1 0" damping="0.2" armature="0.05" />
+        <geom class="wheel_geom" name="tire_RL" />
+        <geom type="cylinder" size="0.10333333333333333 0.06685714285714285" euler="1.5707963 0 0" material="rim_alloy_mat" class="visual_only" />
+        <geom type="cylinder" size="0.04 0.07028571428571427" euler="1.5707963 0 0" material="carapace_accent_orange" class="visual_only" />
+        <geom type="cylinder" size="0.02 0.07371428571428569" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.11333333333333334 0.06514285714285713" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.07 0.06857142857142856 0.0" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 0.06857142857142856 0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 0.06857142857142856 0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 0.06857142857142856 -0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 0.06857142857142856 -0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <inertial mass="1.5" pos="0 0 0" diaginertia=".01024 .016875 .01024" />
+        <geom name="tread_RL_0" type="box" size=".012 .062 .004" pos="0.146 0 0.0" euler="0 1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_1" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 0.04511648117874232" euler="0 1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_2" type="box" size=".012 .062 .004" pos="0.11811648117874232 0 0.08581664683470107" euler="0 0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_3" type="box" size=".012 .062 .004" pos="0.08581664683470107 0 0.11811648117874232" euler="0 0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_4" type="box" size=".012 .062 .004" pos="0.045116481178742326 0 0.1388542513790924" euler="0 0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_5" type="box" size=".012 .062 .004" pos="8.939921633775677e-18 0 0.146" euler="0 0.0 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_6" type="box" size=".012 .062 .004" pos="-0.045116481178742306 0 0.13885425137909244" euler="0 -0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_7" type="box" size=".012 .062 .004" pos="-0.08581664683470105 0 0.11811648117874232" euler="0 -0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_8" type="box" size=".012 .062 .004" pos="-0.11811648117874231 0 0.08581664683470108" euler="0 -0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_9" type="box" size=".012 .062 .004" pos="-0.1388542513790924 0 0.04511648117874233" euler="0 -1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_10" type="box" size=".012 .062 .004" pos="-0.146 0 1.7879843267551354e-17" euler="0 -1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_11" type="box" size=".012 .062 .004" pos="-0.13885425137909244 0 -0.04511648117874224" euler="0 -1.8849555921538754 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_12" type="box" size=".012 .062 .004" pos="-0.11811648117874234 0 -0.08581664683470105" euler="0 -2.199114857512855 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_13" type="box" size=".012 .062 .004" pos="-0.08581664683470108 0 -0.11811648117874231" euler="0 -2.5132741228718345 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_14" type="box" size=".012 .062 .004" pos="-0.04511648117874234 0 -0.1388542513790924" euler="0 -2.827433388230814 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_15" type="box" size=".012 .062 .004" pos="-2.681976490132703e-17 0 -0.146" euler="0 -3.141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_16" type="box" size=".012 .062 .004" pos="0.04511648117874229 0 -0.13885425137909244" euler="0 -3.4557519189487724 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_17" type="box" size=".012 .062 .004" pos="0.08581664683470104 0 -0.11811648117874234" euler="0 -3.7699111843077517 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_18" type="box" size=".012 .062 .004" pos="0.11811648117874231 0 -0.08581664683470111" euler="0 -4.084070449666731 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RL_19" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 -0.04511648117874235" euler="0 -4.39822971502571 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+      </body>
+      <body name="wheel_RR" pos="-0.5 -0.56 -.16">
+        <joint name="wheel_RR_joint" type="hinge" axis="0 1 0" damping="0.2" armature="0.05" />
+        <geom class="wheel_geom" name="tire_RR" />
+        <geom type="cylinder" size="0.10333333333333333 0.06685714285714285" euler="1.5707963 0 0" material="rim_alloy_mat" class="visual_only" />
+        <geom type="cylinder" size="0.04 0.07028571428571427" euler="1.5707963 0 0" material="carapace_accent_orange" class="visual_only" />
+        <geom type="cylinder" size="0.02 0.07371428571428569" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.11333333333333334 0.06514285714285713" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.07 -0.06857142857142856 0.0" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 -0.06857142857142856 0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 -0.06857142857142856 0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="-0.05666666666666667 -0.06857142857142856 -0.04116666666666667" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <geom type="cylinder" size="0.008333333333333333 0.006857142857142856" pos="0.021666666666666667 -0.06857142857142856 -0.0665" euler="1.5707963 0 0" material="carapace_titanium_trim" class="visual_only" />
+        <inertial mass="1.5" pos="0 0 0" diaginertia=".01024 .016875 .01024" />
+        <geom name="tread_RR_0" type="box" size=".012 .062 .004" pos="0.146 0 0.0" euler="0 1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_1" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 0.04511648117874232" euler="0 1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_2" type="box" size=".012 .062 .004" pos="0.11811648117874232 0 0.08581664683470107" euler="0 0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_3" type="box" size=".012 .062 .004" pos="0.08581664683470107 0 0.11811648117874232" euler="0 0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_4" type="box" size=".012 .062 .004" pos="0.045116481178742326 0 0.1388542513790924" euler="0 0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_5" type="box" size=".012 .062 .004" pos="8.939921633775677e-18 0 0.146" euler="0 0.0 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_6" type="box" size=".012 .062 .004" pos="-0.045116481178742306 0 0.13885425137909244" euler="0 -0.3141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_7" type="box" size=".012 .062 .004" pos="-0.08581664683470105 0 0.11811648117874232" euler="0 -0.6283185307179586 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_8" type="box" size=".012 .062 .004" pos="-0.11811648117874231 0 0.08581664683470108" euler="0 -0.9424777960769379 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_9" type="box" size=".012 .062 .004" pos="-0.1388542513790924 0 0.04511648117874233" euler="0 -1.2566370614359172 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_10" type="box" size=".012 .062 .004" pos="-0.146 0 1.7879843267551354e-17" euler="0 -1.5707963267948966 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_11" type="box" size=".012 .062 .004" pos="-0.13885425137909244 0 -0.04511648117874224" euler="0 -1.8849555921538754 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_12" type="box" size=".012 .062 .004" pos="-0.11811648117874234 0 -0.08581664683470105" euler="0 -2.199114857512855 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_13" type="box" size=".012 .062 .004" pos="-0.08581664683470108 0 -0.11811648117874231" euler="0 -2.5132741228718345 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_14" type="box" size=".012 .062 .004" pos="-0.04511648117874234 0 -0.1388542513790924" euler="0 -2.827433388230814 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_15" type="box" size=".012 .062 .004" pos="-2.681976490132703e-17 0 -0.146" euler="0 -3.141592653589793 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_16" type="box" size=".012 .062 .004" pos="0.04511648117874229 0 -0.13885425137909244" euler="0 -3.4557519189487724 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_17" type="box" size=".012 .062 .004" pos="0.08581664683470104 0 -0.11811648117874234" euler="0 -3.7699111843077517 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_18" type="box" size=".012 .062 .004" pos="0.11811648117874231 0 -0.08581664683470111" euler="0 -4.084070449666731 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+        <geom name="tread_RR_19" type="box" size=".012 .062 .004" pos="0.1388542513790924 0 -0.04511648117874235" euler="0 -4.39822971502571 0" material="wheel_mat" contype="0" conaffinity="0" density=".01" />
+      </body>
+      <body name="coxa_LF" pos="0.320 0.410 0.1085" euler="0 0 0" gravcomp="1">
+        <joint name="coxa_joint_LF" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_LF" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_LF" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_LF" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_LF" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_LF" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_LF" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_LF" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_LF" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_LF" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_LF" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_LF" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_LF" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_LF" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <body name="coxa_LM" pos="0.000 0.410 0.1085" euler="0 0 0" gravcomp="1">
+        <joint name="coxa_joint_LM" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_LM" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_LM" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_LM" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_LM" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_LM" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_LM" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_LM" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_LM" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_LM" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_LM" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_LM" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_LM" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_LM" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <body name="coxa_LR" pos="-0.320 0.410 0.1085" euler="0 0 0" gravcomp="1">
+        <joint name="coxa_joint_LR" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_LR" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_LR" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_LR" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_LR" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_LR" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_LR" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_LR" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_LR" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_LR" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_LR" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_LR" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_LR" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_LR" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <body name="coxa_RF" pos="0.320 -0.410 0.1085" euler="0 0 3.14159265" gravcomp="1">
+        <joint name="coxa_joint_RF" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_RF" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_RF" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_RF" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_RF" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_RF" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_RF" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_RF" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_RF" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_RF" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_RF" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_RF" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_RF" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_RF" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <body name="coxa_RM" pos="0.000 -0.410 0.1085" euler="0 0 3.14159265" gravcomp="1">
+        <joint name="coxa_joint_RM" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_RM" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_RM" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_RM" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_RM" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_RM" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_RM" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_RM" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_RM" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_RM" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_RM" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_RM" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_RM" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_RM" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <body name="coxa_RR" pos="-0.320 -0.410 0.1085" euler="0 0 3.14159265" gravcomp="1">
+        <joint name="coxa_joint_RR" type="hinge" axis="0 0 1" range="-0.785 0.785" damping="2.5" armature="0.02" />
+        <geom type="mesh" mesh="mesh_coxa_link" material="coxa_cad_mat" class="visual_only" />
+        <geom name="geom_coxa_RR" type="box" size="0.06 0.09 0.06" pos="0 0.078 0" group="3" class="leg_collision_geom" />
+        <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0.020" material="rs04_cad_mat" class="visual_only" />
+        <body name="femur_RR" pos="0 0.157 0" gravcomp="1">
+          <joint name="femur_joint_RR" type="hinge" axis="1 0 0" range="-1.047 1.047" damping="2.5" armature="0.02" />
+          <geom type="mesh" mesh="mesh_femur_link" material="leg_cad_mat" class="visual_only" />
+          <geom name="geom_femur_RR" type="cylinder" size="0.05 0.35" pos="0 0.350 0" euler="1.5707963 0 0" group="3" class="leg_collision_geom" />
+          <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+          <geom name="hook_mount_RR" type="box" size="0.022 0.032 0.015" pos="0 .615 .042" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_shank_RR" type="capsule" size="0.009" fromto="0 .615 .042 0 .639 -.025" material="carapace_titanium_trim" class="visual_only" />
+          <geom name="hook_claw_RR" type="capsule" size="0.008" fromto="0 .639 -.025 0 .639 -.044" material="carapace_accent_orange" class="visual_only" />
+          <geom name="hook_tip_RR" type="sphere" size="0.010" pos="0 .639 -.048" material="carapace_titanium_trim" class="visual_only" />
+          <body name="tibia_RR" pos="0 0.700 0" gravcomp="1">
+            <joint name="tibia_joint_RR" type="hinge" axis="1 0 0" range="-2.094 0.349" damping="2.5" armature="0.02" />
+            <geom type="mesh" mesh="mesh_tibia_link" material="leg_cad_mat" class="visual_only" />
+            <geom name="geom_tibia_RR" type="cylinder" size="0.04 0.38" pos="0 0.380 0" euler="1.5708 0 0" group="3" class="leg_collision_geom" />
+            <geom type="mesh" mesh="mesh_rs04_actuator" pos="0 0 0" euler="0 1.5707963 0" material="rs04_cad_mat" class="visual_only" />
+            <geom name="foot_RR" pos="0 0.764 0" group="3" class="foot_geom" />
+            <geom type="sphere" size="0.045" pos="0 0.764 0" material="foot_rubber" class="visual_only" />
+            <inertial mass="4.71" pos="0 .38 0" diaginertia="0.215 0.218 0.015" />
+          </body>
+          <geom name="service_guard_RR" type="box" size=".040 .085 .008" pos="0 .13 .065" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+          <inertial mass="3.49" pos="0 .35 0" diaginertia="0.018 0.082 0.085" />
+        </body>
+        <inertial mass="2.02" pos="0 .078 0" diaginertia="0.009 0.007 0.012" />
+      </body>
+      <geom name="battery_cassette" type="box" size=".245 .220 .075" pos="0 0 .855" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_service_lid" type="box" size=".253 .227 .009" pos="0 0 .946" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_seal" type="box" size=".256 .230 .004" pos="0 0 .934" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_endcap_-1" type="box" size=".016 .220 .072" pos="-0.245 0 .855" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_latch_-1" type="box" size=".025 .012 .024" pos="0 -0.237 .853" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_0" type="box" size=".006 .003 .023" pos="-0.14 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_1" type="box" size=".006 .003 .023" pos="-0.1 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_2" type="box" size=".006 .003 .023" pos="-0.06000000000000001 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_3" type="box" size=".006 .003 .023" pos="-0.020000000000000018 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_4" type="box" size=".006 .003 .023" pos="0.01999999999999999 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_5" type="box" size=".006 .003 .023" pos="0.06 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_6" type="box" size=".006 .003 .023" pos="0.09999999999999998 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_-1_7" type="box" size=".006 .003 .023" pos="0.14 -0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="handle_standoff_-1_-0.11" type="cylinder" size=".008 .024" pos="-0.11 -0.17 .974" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="handle_standoff_-1_0.11" type="cylinder" size=".008 .024" pos="0.11 -0.17 .974" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_grab_handle_-1" type="capsule" size=".009" fromto="-.11 -0.17 .998 .11 -0.17 .998" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_fastener_-1_-0.3" type="cylinder" size=".012 .004" pos="-0.3 -0.62 .705" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_mount_-1_-0.3" type="cylinder" size=".024 .20" pos="-0.3 -0.34 .46" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_fastener_-1_0.3" type="cylinder" size=".012 .004" pos="0.3 -0.62 .705" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_mount_-1_0.3" type="cylinder" size=".024 .20" pos="0.3 -0.34 .46" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_0" type="box" size=".075 .009 .004" pos="-0.23 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_1" type="box" size=".075 .009 .004" pos="-0.15500000000000003 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_2" type="box" size=".075 .009 .004" pos="-0.08000000000000002 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_3" type="box" size=".075 .009 .004" pos="-0.005000000000000032 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_4" type="box" size=".075 .009 .004" pos="0.06999999999999998 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_-1_5" type="box" size=".075 .009 .004" pos="0.145 -0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_endcap_1" type="box" size=".016 .220 .072" pos="0.245 0 .855" material="pack_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_latch_1" type="box" size=".025 .012 .024" pos="0 0.237 .853" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_0" type="box" size=".006 .003 .023" pos="-0.14 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_1" type="box" size=".006 .003 .023" pos="-0.1 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_2" type="box" size=".006 .003 .023" pos="-0.06000000000000001 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_3" type="box" size=".006 .003 .023" pos="-0.020000000000000018 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_4" type="box" size=".006 .003 .023" pos="0.01999999999999999 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_5" type="box" size=".006 .003 .023" pos="0.06 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_6" type="box" size=".006 .003 .023" pos="0.09999999999999998 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_vent_1_7" type="box" size=".006 .003 .023" pos="0.14 0.224 .855" material="panel_dark" contype="0" conaffinity="0" density=".01" />
+      <geom name="handle_standoff_1_-0.11" type="cylinder" size=".008 .024" pos="-0.11 0.17 .974" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="handle_standoff_1_0.11" type="cylinder" size=".008 .024" pos="0.11 0.17 .974" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_grab_handle_1" type="capsule" size=".009" fromto="-.11 0.17 .998 .11 0.17 .998" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_fastener_1_-0.3" type="cylinder" size=".012 .004" pos="-0.3 0.62 .705" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_mount_1_-0.3" type="cylinder" size=".024 .20" pos="-0.3 0.34 .46" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_fastener_1_0.3" type="cylinder" size=".012 .004" pos="0.3 0.62 .705" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="cover_mount_1_0.3" type="cylinder" size=".024 .20" pos="0.3 0.34 .46" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_0" type="box" size=".075 .009 .004" pos="-0.23 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_1" type="box" size=".075 .009 .004" pos="-0.15500000000000003 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_2" type="box" size=".075 .009 .004" pos="-0.08000000000000002 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_3" type="box" size=".075 .009 .004" pos="-0.005000000000000032 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_4" type="box" size=".075 .009 .004" pos="0.06999999999999998 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="deck_vent_1_5" type="box" size=".075 .009 .004" pos="0.145 0.48 .715" material="service_silver" contype="0" conaffinity="0" density=".01" />
+      <geom name="battery_box_collision" type="box" size=".27 .25 .12" pos="0 0 .855" group="3" contype="2" conaffinity="1" mass="3.5" />
+      <inertial mass="46" pos="0 0 .18" diaginertia="4.5 4.8 7.5" />
+      <geom name="wheel_arm_FL" type="capsule" size="0.022" fromto="0.4 0.38 -0.015 0.5 0.56 -0.16" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_damper_FL" type="capsule" size="0.016" fromto="0.4 0.38 0.08 0.5 0.56 -0.1" material="carapace_accent_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_arm_FR" type="capsule" size="0.022" fromto="0.4 -0.38 -0.015 0.5 -0.56 -0.16" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_damper_FR" type="capsule" size="0.016" fromto="0.4 -0.38 0.08 0.5 -0.56 -0.1" material="carapace_accent_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_arm_RL" type="capsule" size="0.022" fromto="-0.4 0.38 -0.015 -0.5 0.56 -0.16" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_damper_RL" type="capsule" size="0.016" fromto="-0.4 0.38 0.08 -0.5 0.56 -0.1" material="carapace_accent_orange" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_arm_RR" type="capsule" size="0.022" fromto="-0.4 -0.38 -0.015 -0.5 -0.56 -0.16" material="carapace_titanium_trim" contype="0" conaffinity="0" density=".01" />
+      <geom name="wheel_damper_RR" type="capsule" size="0.016" fromto="-0.4 -0.38 0.08 -0.5 -0.56 -0.1" material="carapace_accent_orange" contype="0" conaffinity="0" density=".01" />
+    </body>
+    <geom name="research_ground" type="plane" pos="0 0 0" size="24.0 24.0 0.1" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".62 .65 .59 1" /><geom name="research_obstacle_0" type="box" pos="4.035658695201363 11.97437076239579 0.3009162191978282" size="0.6346585098847859 0.37435441715590767 0.3009162191978282" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_1" type="box" pos="-2.291711852018457 13.303289391873825 0.2864375098927072" size="0.784942881362517 0.6634517151742214 0.2864375098927072" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_2" type="box" pos="9.092493081210492 1.9986761815592686 0.203491720902727" size="0.7918394026728854 0.30856063685956975 0.203491720902727" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_3" type="box" pos="-2.5341830494963666 -11.1283248636555 0.2728701690740959" size="0.3041075345076468 0.3621421381475015 0.2728701690740959" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_4" type="box" pos="5.3122824053738285 -10.273079152430276 0.2557842075163196" size="0.5449943013002125 0.6397447190418518 0.2557842075163196" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_5" type="box" pos="-10.726836571668766 -10.39671236522416 0.178127646680857" size="0.4190968219987238 0.31567888092360813 0.178127646680857" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_obstacle_6" type="box" pos="-9.960150479600259 6.15473360959561 0.34237144834863387" size="0.25058963572165704 0.2579225410351658 0.34237144834863387" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".42 .36 .3 1" /><geom name="research_pad_0" type="box" pos="11.747793982443547 -7.660131240470449 0.01" size="2.878866223815738 2.731906310746538 0.01" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".38 .31 .2 1" /><geom name="research_pad_1" type="box" pos="-12.196993032483725 1.8283092429604242 0.01" size="2.2451666223267814 2.5080577821414742 0.01" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".38 .31 .2 1" /><geom name="research_pad_2" type="box" pos="11.08037854605562 -3.6444380303664126 0.01" size="2.941731932224286 3.9436931063314766 0.01" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".38 .31 .2 1" /><geom name="research_pad_3" type="box" pos="-7.984142506109359 -3.570913875141626 0.01" size="2.36662829440955 3.730456599735078 0.01" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".38 .31 .2 1" /><geom name="research_tile_0" type="box" pos="11.242382300461603 -7.645181899486653 0.020190168322530455" size="0.2874925503067576 0.2674849448425307 0.020190168322530455" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_1" type="box" pos="12.799434192980524 -9.344219713513105 0.02472200331857835" size="0.26239755032869766 0.3490921134309857 0.02472200331857835" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_2" type="box" pos="11.727243589152236 -8.424836444217853 0.03143099560786941" size="0.29747859976234053 0.30966878543579257 0.03143099560786941" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_3" type="box" pos="9.92506200071623 -7.693481120684016 0.03926347275838153" size="0.311153037048304 0.2137084297690216 0.03926347275838153" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_4" type="box" pos="13.669039547743754 -7.26990127233783 0.04019528813781818" size="0.2988231729888451 0.24256636596018039 0.04019528813781818" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_5" type="box" pos="10.227757161633498 -7.613505175749676 0.020869474151202463" size="0.17715776278006654 0.26800178036075695 0.020869474151202463" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_6" type="box" pos="10.62597626453488 -6.8386853382942006 0.021009529937749346" size="0.23681724446153984 0.3339952193970378 0.021009529937749346" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_7" type="box" pos="10.730026344457169 -7.632269691062403 0.02068546189392829" size="0.26430632228006123 0.3324999715450445 0.02068546189392829" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_8" type="box" pos="10.026181556746707 -6.038902104858719 0.023296173147229152" size="0.1643612639710962 0.22821292968283452 0.023296173147229152" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_9" type="box" pos="11.626359029853045 -7.484601662522817 0.035705552524374025" size="0.23790857792251974 0.27840443893521544 0.035705552524374025" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_10" type="box" pos="9.941516067984557 -6.246206475186716 0.02012467005017726" size="0.2685034931278303 0.18582222629109826 0.02012467005017726" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_11" type="box" pos="10.773184115833413 -9.351680159905579 0.036315264795003604" size="0.20333741987501402 0.2580336838100401 0.036315264795003604" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_12" type="box" pos="-11.232255681333761 2.1525534147811403 0.0406699479558929" size="0.2151744041540511 0.20538955178465296 0.0406699479558929" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_13" type="box" pos="-12.882843346119008 1.0646707511164344 0.037060162677825796" size="0.3343220046091456 0.23269726055596218 0.037060162677825796" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_14" type="box" pos="-13.77916472658247 3.169007159354414 0.030546225627991676" size="0.19969928829678485 0.2509358806912353 0.030546225627991676" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_15" type="box" pos="-11.807676614842652 0.5939491635200487 0.03384472987695662" size="0.3117053504347204 0.2259098869064964 0.03384472987695662" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_16" type="box" pos="-10.415905613159234 0.9461179770574175 0.033338037824868806" size="0.32369677399751146 0.19020237432863932 0.033338037824868806" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_17" type="box" pos="-14.079028766858555 3.159651815526553 0.025664166938582124" size="0.2751196808528804 0.19686771843189257 0.025664166938582124" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_18" type="box" pos="-13.058909316206336 3.415840366757404 0.02552931185594468" size="0.16489231838177087 0.18367551174806035 0.02552931185594468" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_19" type="box" pos="-12.401295127614299 3.7349424414336383 0.022170152643714927" size="0.2580669254685499 0.27544170886583164 0.022170152643714927" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_20" type="box" pos="-13.948433653994224 3.0935828262129834 0.03525569185450873" size="0.28363371464952325 0.27754784628771967 0.03525569185450873" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_21" type="box" pos="-11.207149774679191 0.6746045186831233 0.03089411305114486" size="0.25652941792469874 0.17028678412392764 0.03089411305114486" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_22" type="box" pos="-13.041519023279502 2.507823039130039 0.04176408968161875" size="0.2535926463907663 0.26638648961753636 0.04176408968161875" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_23" type="box" pos="-13.595110081165192 2.624715779365583 0.04226596767272958" size="0.32481761518084734 0.31810657635079065 0.04226596767272958" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_24" type="box" pos="9.076735618263275 -1.1541233334379983 0.0372227124587068" size="0.22145915856395 0.2184328411934834 0.0372227124587068" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_25" type="box" pos="11.485292084723206 -2.5820102152326587 0.026903336069442965" size="0.2971785215822875 0.21796879753676157 0.026903336069442965" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_26" type="box" pos="13.660949474349835 -0.3296211139800622 0.030410767375451883" size="0.34081291243105005 0.19761208646213319 0.030410767375451883" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_27" type="box" pos="9.098882711100531 -6.017611942240058 0.03535691909655361" size="0.24024921034581315 0.32728181791441613 0.03535691909655361" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_28" type="box" pos="9.332771259233219 -2.9888263265425365 0.04034995457494318" size="0.33066870553905026 0.3232022802156239 0.04034995457494318" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_29" type="box" pos="10.941187890825482 -2.097424109384824 0.02893228431001874" size="0.272581332215358 0.20799309396317553 0.02893228431001874" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_30" type="box" pos="9.098055247883686 -4.964719700198533 0.03735703077166394" size="0.18098271024681667 0.216773411453978 0.03735703077166394" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_31" type="box" pos="8.564626610965831 -4.890767875009802 0.029777456492019315" size="0.27797942896901073 0.16173043227667278 0.029777456492019315" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_32" type="box" pos="10.118027487337164 -1.6422056180336968 0.03632121121939625" size="0.18800850640999298 0.3169335556576893 0.03632121121939625" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_33" type="box" pos="12.543217089027305 -6.480893283258191 0.02576973814561271" size="0.19697830968438612 0.2622959225809882 0.02576973814561271" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_34" type="box" pos="8.661992973785225 -2.6228872636139275 0.03174448339496856" size="0.2753256490866112 0.1673052578606321 0.03174448339496856" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_35" type="box" pos="11.151459256994182 -3.9126708311433953 0.02930568029635986" size="0.16259474400106755 0.1978157078681495 0.02930568029635986" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_36" type="box" pos="-9.15963505030943 -0.2749029610376592 0.029073426696525136" size="0.22227158947618048 0.32384128176846055 0.029073426696525136" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_37" type="box" pos="-8.029890069959524 -0.5376664846726102 0.02447354140953416" size="0.30329480022910915 0.3095107169131273 0.02447354140953416" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_38" type="box" pos="-6.644106222119429 -6.362327361428847 0.03749584190190397" size="0.3221512186832007 0.1878707096544687 0.03749584190190397" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_39" type="box" pos="-7.058119997522736 -5.096584837188217 0.03240958007343442" size="0.27802394263849606 0.19755197227831905 0.03240958007343442" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_40" type="box" pos="-6.097790555894205 -0.42507363072618354 0.0337719833654539" size="0.20403606168650815 0.22678402195361752 0.0337719833654539" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_41" type="box" pos="-6.925442059126315 -4.879594874469181 0.03923177897141428" size="0.31420156585706843 0.23802995782307002 0.03923177897141428" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_42" type="box" pos="-9.63256465819783 -5.487089574811456 0.03411582919516011" size="0.3099112437276939 0.27759535096869553 0.03411582919516011" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_43" type="box" pos="-8.4659215491376 -3.7321236160386095 0.026324056483108774" size="0.3160734650467364 0.31660765700692767 0.026324056483108774" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_44" type="box" pos="-6.409320391202444 -1.2844949835051267 0.025568669391960293" size="0.2649168865601629 0.23414111852200745 0.025568669391960293" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_45" type="box" pos="-6.403355673959097 -5.058624950046334 0.02597959416553165" size="0.21540938488412453 0.17435733136491555 0.02597959416553165" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_46" type="box" pos="-7.785505042797021 -0.6385898997890722 0.025724653114782323" size="0.18896294650888887 0.3047302669210157 0.025724653114782323" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /><geom name="research_tile_47" type="box" pos="-7.767581176504711 -6.483953923353929 0.021601235610633956" size="0.2510997536119858 0.3403392272616299 0.021601235610633956" contype="1" conaffinity="7" friction="1.3 .02 .002" rgba=".4 .37 .3 1" /></worldbody>
+  <actuator>
+    <velocity name="act_wheel_FL" joint="wheel_FL_joint" kv="50" ctrlrange="-35 35" forcerange="-30 30" />
+    <velocity name="act_wheel_FR" joint="wheel_FR_joint" kv="50" ctrlrange="-35 35" forcerange="-30 30" />
+    <velocity name="act_wheel_RL" joint="wheel_RL_joint" kv="50" ctrlrange="-35 35" forcerange="-30 30" />
+    <velocity name="act_wheel_RR" joint="wheel_RR_joint" kv="50" ctrlrange="-35 35" forcerange="-30 30" />
+    <position name="act_LF_hip" joint="coxa_joint_LF" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_LF_femur" joint="femur_joint_LF" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_LF_tibia" joint="tibia_joint_LF" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_LM_hip" joint="coxa_joint_LM" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_LM_femur" joint="femur_joint_LM" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_LM_tibia" joint="tibia_joint_LM" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_LR_hip" joint="coxa_joint_LR" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_LR_femur" joint="femur_joint_LR" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_LR_tibia" joint="tibia_joint_LR" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_RF_hip" joint="coxa_joint_RF" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_RF_femur" joint="femur_joint_RF" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_RF_tibia" joint="tibia_joint_RF" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_RM_hip" joint="coxa_joint_RM" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_RM_femur" joint="femur_joint_RM" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_RM_tibia" joint="tibia_joint_RM" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_RR_hip" joint="coxa_joint_RR" kp="350" kv="25" ctrlrange="-0.785 0.785" forcerange="-60 60" />
+    <position name="act_RR_femur" joint="femur_joint_RR" kp="450" kv="35" ctrlrange="-1.047 1.047" forcerange="-60 60" />
+    <position name="act_RR_tibia" joint="tibia_joint_RR" kp="450" kv="35" ctrlrange="-2.094 0.349" forcerange="-60 60" />
+    <position name="act_lidar_pan" joint="lidar_pan" kp="50" kv="5" ctrlrange="-1.4 1.4" />
+  </actuator>
+</mujoco>

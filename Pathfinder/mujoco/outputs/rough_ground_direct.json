@@ -1,0 +1,431 @@
+{
+  "steps": 1409,
+  "simulation_seconds": 22.544000000000867,
+  "mode": "hybrid_demo",
+  "transformations": [
+    {
+      "time": 3.0240000000000022,
+      "event": "begin",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -36.00547950081561,
+        -23.95258005505815
+      ]
+    },
+    {
+      "time": 6.608000000000005,
+      "event": "complete",
+      "from_mode": "wheels",
+      "to_mode": "legs",
+      "position": [
+        -36.01074977991288,
+        -23.92636204186719
+      ]
+    },
+    {
+      "time": 18.943999999999686,
+      "event": "begin",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -35.03232623566475,
+        -20.17903305278669
+      ]
+    },
+    {
+      "time": 22.52799999999929,
+      "event": "complete",
+      "from_mode": "legs",
+      "to_mode": "wheels",
+      "position": [
+        -35.03238114261202,
+        -20.179051359766927
+      ]
+    }
+  ],
+  "position": [
+    -35.032381156419376,
+    -20.179051354994872,
+    0.30973261301904526
+  ],
+  "battery": 95.54321921658116,
+  "visited_places": [
+    5
+  ],
+  "stage": "arrived",
+  "arrivals": [
+    {
+      "origin": "En route (-36.0, -24.0)",
+      "to_name": "River camp",
+      "request_id": "8ca29d8532",
+      "time": 22.54399999999929,
+      "status": "arrived",
+      "mode": "balanced",
+      "actual_energy_percent": 4.456780783418778,
+      "destination": 5,
+      "position": [
+        -35.032381149674,
+        -20.17905135726681
+      ],
+      "error_m": 0.18195583912943644,
+      "travel_seconds": 19.51999999999929,
+      "actual_distance_m": 3.984761794318955,
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    }
+  ],
+  "mission_events": [
+    {
+      "event": "destination_requested",
+      "time": 0.0,
+      "origin": "En route (-36.0, -24.0)",
+      "to_name": "River camp",
+      "request_id": "8ca29d8532",
+      "status": "requested",
+      "mode": "balanced"
+    },
+    {
+      "event": "energy_plan_checked",
+      "time": 0.016,
+      "decision": "feasible",
+      "available_percent": 99.99976,
+      "required_percent": 20.852009597580476,
+      "return_energy_percent": 7.838854723693286,
+      "reserve_percent": 6.0,
+      "route_energy_percent": 4.042752954371094,
+      "predicted_destination_percent": 95.9570070456289
+    }
+  ],
+  "roadwork_events": [],
+  "route_comparison": {
+    "balanced": {
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    },
+    "shortest": {
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    },
+    "fastest": {
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    },
+    "energy": {
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    }
+  },
+  "comparison_paths": {
+    "balanced": [
+      [
+        -36.0,
+        -24.0
+      ],
+      [
+        -35.75,
+        -23.75
+      ],
+      [
+        -35.0,
+        -20.0
+      ]
+    ],
+    "shortest": [
+      [
+        -36.0,
+        -24.0
+      ],
+      [
+        -35.75,
+        -23.75
+      ],
+      [
+        -35.0,
+        -20.0
+      ]
+    ],
+    "fastest": [
+      [
+        -36.0,
+        -24.0
+      ],
+      [
+        -35.75,
+        -23.75
+      ],
+      [
+        -35.0,
+        -20.0
+      ]
+    ],
+    "energy": [
+      [
+        -36.0,
+        -24.0
+      ],
+      [
+        -35.75,
+        -23.75
+      ],
+      [
+        -35.0,
+        -20.0
+      ]
+    ]
+  },
+  "planned_routes": [
+    {
+      "from_name": "En route (-36.0, -24.0)",
+      "to_name": "River camp",
+      "request_id": "8ca29d8532",
+      "origin": "En route (-36.0, -24.0)",
+      "time": 0.016,
+      "destination": 5,
+      "mode": "balanced",
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "points": [
+        [
+          -36.0,
+          -24.0
+        ],
+        [
+          -35.75,
+          -23.75
+        ],
+        [
+          -35.0,
+          -20.0
+        ]
+      ],
+      "energy_budget": {
+        "decision": "feasible",
+        "available_percent": 99.99976,
+        "required_percent": 20.852009597580476,
+        "return_energy_percent": 7.838854723693286,
+        "reserve_percent": 6.0,
+        "route_energy_percent": 4.042752954371094,
+        "predicted_destination_percent": 95.9570070456289
+      },
+      "pareto_front": [
+        {
+          "distance_m": 4.177818025787863,
+          "estimated_seconds": 21.428590371000304,
+          "energy_percent": 4.042752954371094,
+          "driving_distance_m": 0.9178235124466998,
+          "walking_distance_m": 3.2599945133411623,
+          "transformations": 2,
+          "search_weights": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "points": [
+            [
+              -36.0,
+              -24.0
+            ],
+            [
+              -35.75,
+              -23.75
+            ],
+            [
+              -35.0,
+              -20.0
+            ]
+          ],
+          "energy_feasible": true,
+          "score": 0.15213674696493237
+        }
+      ],
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2
+    }
+  ],
+  "route_mode": "balanced",
+  "charge_completed": 0,
+  "minimum_battery_percent": 95.54321921658116,
+  "energy_consumed_percent": 4.456780783418778,
+  "energy_charged_percent": 0.0,
+  "energy_status": {
+    "decision": "feasible",
+    "available_percent": 95.54849979286126,
+    "required_percent": 16.715523647451032,
+    "return_energy_percent": 7.838854723693286,
+    "reserve_percent": 6.0,
+    "route_energy_percent": 0.7335641942675403,
+    "predicted_destination_percent": 94.81493559859372
+  },
+  "pareto_front": [
+    {
+      "distance_m": 4.177818025787863,
+      "estimated_seconds": 21.428590371000304,
+      "energy_percent": 4.042752954371094,
+      "driving_distance_m": 0.9178235124466998,
+      "walking_distance_m": 3.2599945133411623,
+      "transformations": 2,
+      "search_weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "points": [
+        [
+          -36.0,
+          -24.0
+        ],
+        [
+          -35.75,
+          -23.75
+        ],
+        [
+          -35.0,
+          -20.0
+        ]
+      ],
+      "energy_feasible": true,
+      "score": 0.15213674696493237
+    }
+  ],
+  "objective_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.019275741816201883,
+  "minimum_foot_surface_clearance": 0.0032841871411782436,
+  "minimum_foot_surface_detail": {
+    "step": 695,
+    "leg": 4,
+    "foot_position": [
+      -34.190452320148495,
+      -23.649683832031442,
+      0.08328418714117825
+    ],
+    "height": 0.035,
+    "mode": "legs",
+    "phase": "GROUNDED TRIPOD WALK",
+    "body_z": 0.544294466514502,
+    "body_xy": [
+      -35.61494485474404,
+      -23.32254590906445
+    ]
+  },
+  "max_speed_mps": 0.7499999996091582,
+  "max_body_tilt_degrees": 1.731154176184016,
+  "finite_state": true,
+  "solver_warnings": 0,
+  "terrain_stats": {
+    "0": {
+      "steps": 309,
+      "max_speed_mps": 0.7499999996091582
+    },
+    "1": {
+      "steps": 0,
+      "max_speed_mps": 0.0
+    },
+    "2": {
+      "steps": 1100,
+      "max_speed_mps": 0.37999999998616224
+    },
+    "3": {
+      "steps": 0,
+      "max_speed_mps": 0.0
+    }
+  },
+  "terrain_limit_violations": 0,
+  "trace": [
+    {
+      "step": 250,
+      "xy": [
+        -36.00732205361887,
+        -23.94227878042277
+      ],
+      "battery": 99.32490993286294,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "wheels",
+      "transforming": true
+    },
+    {
+      "step": 500,
+      "xy": [
+        -35.906933818017684,
+        -23.759612296581885
+      ],
+      "battery": 99.03711204663466,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 750,
+      "xy": [
+        -35.54494081651046,
+        -22.995316323015953
+      ],
+      "battery": 98.20799729335452,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 1000,
+      "xy": [
+        -35.271943156275576,
+        -21.500998804495964
+      ],
+      "battery": 97.08313908076661,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": false
+    },
+    {
+      "step": 1250,
+      "xy": [
+        -35.03238076434845,
+        -20.179051996338806
+      ],
+      "battery": 95.58138246971134,
+      "stage": "moving",
+      "charging": false,
+      "locomotion": "legs",
+      "transforming": true
+    }
+  ]
+}

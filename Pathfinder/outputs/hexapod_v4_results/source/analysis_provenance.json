@@ -1,0 +1,28 @@
+{
+  "primary_run": "20261029T003112961474Z",
+  "manifest_sha256": "b90f595d0b1f7f1b7bf565802c47598d31500a5d43b21ab36c86f2b333047ddf",
+  "case_verdict_counts": {
+    "V4 tied best": 35,
+    "Another method scored lower": 14,
+    "All rejected": 3,
+    "V4 best score": 20
+  },
+  "files": {
+    "v4_heldout_physics.json": "27da836a32f4aa8e335219b51a65aa9d8f0bb546c95ec09098de0074b90f2daa",
+    "v4_budget_1p0.json": "4c9f4d50e8bb3608bd90ab40cef02ac93a9921c202f2cfb47697f82b1c516105",
+    "manifest.json": "0bcf3a1d520d2a329649c9e3ef5cc7146a63648e5c7b7b7f073409442ba2dad8",
+    "comparison.json": "fff2e19bb18592b9b8f909e491c2cec2d5d91a5969b88c0f7ba72b7cd313199a",
+    "audit.json": "ec4e8bc0865ab53339810149320ad918f12b59e89820d62086dcc7248cfc5c18",
+    "v4_development_alternative.json": "83533e6e476a1f706c750ad3340471c23f9958cabc8f92eee9646a350bea174b",
+    "v4_development_default.json": "36aa4cd7af178c8fda7a34694c5305a7a6eb9b2b0ece6281e7f0df2b916b2b66",
+    "v4_budget_0p5.json": "6ef4aeea1e374089b1b3c2eede344e3dd69f4b0b7a13120349cf768b13c77671",
+    "ablation_comparison.json": "c9d36c93a4b364848b4bf5589a38c5ad6f579ce4517f58b6ad26c52dda7c83c8",
+    "locked_parameters.json": "0ee49513dc8b7c45e4e274e1211a134bc85b57f6811d843010bad8c3cf6a8b42",
+    "v4_heldout_ablations.json": "c1ab8b362a568d7a67ea418db8632314111bc4cd41b3da11a542eeedf918b67a",
+    "v4_heldout_planning.json": "93a7277e8a128e3b77101d71546e3f96cc8db03cc8fbf1f75fbd27411ae49a90",
+    "study_summary.json": "2d3f847fefe3f9b9908e40732cf58f3ca2e6bd2724c218b7ef6aeaec308ef407",
+    "source_lock.json": "b0574465c860803d707e092590c18eafb5aa9ddaa0041cc58c9b9eefc87c7bc4"
+  },
+  "physics_complete": true,
+  "audit_available": true
+}

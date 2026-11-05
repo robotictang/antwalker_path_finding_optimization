@@ -1,0 +1,15 @@
+{
+  "state": "passed",
+  "payload_files": 527,
+  "zip_bytes": 68000515,
+  "zip_sha256": "01c8f5db55695970b4090b8db8621e14ed6450936ec6dacc5aa7a1e5b0c8599d",
+  "checks": [
+    "CRC",
+    "every payload SHA-256",
+    "scientific source lock",
+    "all phase snapshots and model hashes",
+    "raw phase copy identity"
+  ],
+  "exclusions": "Caches, mutable live databases, duplicate latest.json, console/live logs; original historical packages remain outside this bundle.",
+  "scope": "Archive integrity and dependency inspection; not a clean-environment execution test."
+}

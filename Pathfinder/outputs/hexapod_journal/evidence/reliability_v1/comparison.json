@@ -1,0 +1,94 @@
+{
+  "run_id": "20261028T013210063968Z",
+  "attempts": 108,
+  "layouts": 12,
+  "repeats": 3,
+  "comparisons": [
+    {
+      "baseline": "pso",
+      "wins": 4,
+      "ties": 5,
+      "losses": 0,
+      "both_rejected": 27,
+      "proposed_only_admitted": 0,
+      "baseline_only_admitted": 0,
+      "paired_admitted_trials": 9,
+      "layouts_with_paired_admission": 3,
+      "mean_layout_score_advantage": 0.0015202127305009088,
+      "descriptive_layout_bootstrap_95_percent": [
+        0.0,
+        0.0038474130757051306
+      ]
+    },
+    {
+      "baseline": "aco",
+      "wins": 3,
+      "ties": 6,
+      "losses": 0,
+      "both_rejected": 27,
+      "proposed_only_admitted": 0,
+      "baseline_only_admitted": 0,
+      "paired_admitted_trials": 9,
+      "layouts_with_paired_admission": 3,
+      "mean_layout_score_advantage": 6.509180683907563e-05,
+      "descriptive_layout_bootstrap_95_percent": [
+        0.0,
+        0.0001952754205172269
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "method": "pso",
+      "label": "B5 PSO with safe A* seed",
+      "attempts": 36,
+      "admissible": 9,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.25,
+      "mean_predicted_time_s": 66.71947528465711,
+      "mean_predicted_energy_percent": 33.06547284081504,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 2.7982639349413168,
+      "mean_planning_seconds": 0.5847714943552597
+    },
+    {
+      "method": "aco",
+      "label": "B6 ACO with safe A* seed",
+      "attempts": 36,
+      "admissible": 9,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.25,
+      "mean_predicted_time_s": 66.64640623885822,
+      "mean_predicted_energy_percent": 33.05198034508924,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 2.796808814017655,
+      "mean_planning_seconds": 0.7368266266696284
+    },
+    {
+      "method": "proposed",
+      "label": "Proposed portfolio Pareto refinement",
+      "attempts": 36,
+      "admissible": 9,
+      "executed": 0,
+      "successes": 0,
+      "success_rate": null,
+      "admissible_rate": 0.25,
+      "mean_predicted_time_s": 66.64642943794293,
+      "mean_predicted_energy_percent": 33.05199287259499,
+      "mean_task_time_s": null,
+      "mean_positive_work_j": null,
+      "mean_max_tilt_deg": null,
+      "mean_quality_score": 2.796743722210816,
+      "mean_planning_seconds": 0.5165543047462253
+    }
+  ],
+  "interpretation": "Positive score advantage favors proposed. Paired quality includes only jointly admitted trials; separate counts retain all other outcomes. Bootstrap resamples whole sampled layouts, after averaging paired seeds within each layout. Small conditional interval on a fixed terrain; no broad significance or publication claim."
+}

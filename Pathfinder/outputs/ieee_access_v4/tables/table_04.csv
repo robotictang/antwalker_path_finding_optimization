@@ -1,0 +1,13 @@
+Method,Admitted,Mean Q,Plan s
+Distance A*,66/72,1.428039,0.0320
+Terrain A*,66/72,1.421142,0.1240
+Energy A*,66/72,1.366258,0.0546
+Weighted search,66/72,1.357381,0.4479
+Greedy shortcut,66/72,1.300004,0.1802
+PSO,66/72,1.295394,0.2529
+ACO,66/72,1.295351,0.3668
+Grid Pareto,66/72,1.367730,1.5794
+Corridor Pareto,66/72,1.294836,0.1976
+PSO + polish,66/72,1.275859,0.3013
+ACO + polish,66/72,1.275318,0.4041
+V4 proposal,69/72,1.271323,0.4500

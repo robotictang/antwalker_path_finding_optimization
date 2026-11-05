@@ -1,0 +1,47 @@
+{
+  "manifest_sha256": "4f64ed95cf9067944f016058e79c0e6ae2855ca6a1b2635c0adc2e857b956fbe",
+  "chosen": {
+    "pso": "default",
+    "aco": "default",
+    "proposed": "default"
+  },
+  "parameters": {
+    "pso": {
+      "particles": 16,
+      "inertia": 0.72,
+      "cognitive": 1.49,
+      "social": 1.49,
+      "velocity_clip": 0.25,
+      "max_iterations": 40,
+      "seed_portfolio": true,
+      "iteration_scope": "per corridor"
+    },
+    "aco": {
+      "ants": 12,
+      "alpha": 1.0,
+      "beta": 2.0,
+      "evaporation": 0.2,
+      "deposit": 1.0,
+      "max_iterations": 40,
+      "seed_portfolio": true,
+      "iteration_scope": "per corridor"
+    },
+    "proposed": {
+      "beam_width": 6,
+      "labels_per_state": 8,
+      "archive_size": 16,
+      "max_evaluations": 240,
+      "portfolio": true
+    },
+    "b7_greedy": {
+      "initial_evaluations_per_corridor": 2,
+      "seed_portfolio": true
+    }
+  },
+  "sha256": "d3865dc74a377e0198b431f35d9453d70ee56a7f602c0b86283bab08c3140bad",
+  "selection_rule": "Maximize development admission count; then minimize mean admitted common score; exact ties select default. Same two-profile search for every method.",
+  "development_runs": {
+    "default": "20261028T013044676067Z",
+    "alternative": "20261028T013126915853Z"
+  }
+}

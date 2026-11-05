@@ -1,0 +1,26 @@
+DESTINATION ROUTING: 1-4 choose place | P fastest/shortest | X cancel | C camera | B battery test | 0 charge
+{
+  "steps": 1000,
+  "simulation_seconds": 15.999999999998682,
+  "mode": "walking_only",
+  "position": [
+    -1.1474314403888596e-18,
+    -20.00000000000002,
+    0.4677374999999999
+  ],
+  "battery": 100.0,
+  "visited_places": [],
+  "stage": "idle",
+  "arrivals": [],
+  "planned_routes": [],
+  "route_mode": "fastest",
+  "charge_completed": 0,
+  "collision_substeps": 0,
+  "obstacle_contact_substeps": 0,
+  "safety_stops": 0,
+  "route_failures": 0,
+  "minimum_foot_bottom": 0.010782093987394423,
+  "max_body_tilt_degrees": 3.8178003335340896e-11,
+  "finite_state": true,
+  "solver_warnings": 0
+}

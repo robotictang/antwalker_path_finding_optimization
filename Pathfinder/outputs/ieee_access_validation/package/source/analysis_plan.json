@@ -1,0 +1,15 @@
+{
+  "purpose": "Analysis rules saved after primary execution began but before inspection of held-out score outcomes; not externally preregistered",
+  "primary_unit": "Independent procedural world; average repeated paired seeds within world",
+  "primary_population": "All 48 frozen V5 test worlds, 2 repetitions per core method",
+  "score_population": "Jointly admitted matched world/repetition pairs only; report all other admission categories separately",
+  "score_effect": "100*(baselineQ-V5Q)/baselineQ, averaged within world then across worlds",
+  "uncertainty": "5000 whole-world percentile bootstrap samples, seed 6104, descriptive 95% intervals",
+  "tests": "Exploratory two-sided sign-flip permutation tests on world-mean score differences, 100000 Monte Carlo samples, seed 7421, plus-one correction; Holm adjustment across the three primary V5 contrasts",
+  "secondary": "Admission, planning runtime, actual metric calls, feature removal, shorter budgets, 80 candidate ceiling, execution outcomes and work are reported separately",
+  "subgroups": "All four map families; no selecting only favorable maps or replacing test cases",
+  "physics": "Scheduled-denominator success and executed-denominator success both reported; failures retained; assistance 0.5 is velocity blending rather than a halving of physical force or energy",
+  "limits": "Restricted simulator, related baselines, eight-world development search, nominal battery, no hardware, no claim of universal superiority; inference conditional on jointly admitted worlds",
+  "timing_note": "First saved 2026-10-29 02:37:05 UTC; primary started 02:36:20 UTC. Original purpose incorrectly described development as still running. Only this timing description was corrected; analysis rules remain unchanged.",
+  "first_saved_sha256": "f13c169aca85a9abe1cd69f0c5bfde9565b5e5eb202ababceaf16d2ea4f3618e"
+}

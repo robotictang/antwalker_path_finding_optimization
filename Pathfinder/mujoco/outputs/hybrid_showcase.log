@@ -1,0 +1,7 @@
+Manual transformation requested: legs
+TRANSFORM: wheels -> legs (stationary)
+Transformation complete: legs
+Manual transformation requested: wheels
+TRANSFORM: legs -> wheels (stationary)
+Transformation complete: wheels
+Saved restored-wheel, walking, low-battery, and transformation previews.

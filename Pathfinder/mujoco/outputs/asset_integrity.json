@@ -1,0 +1,57 @@
+{
+  "source_directory": "/home/user123456/Downloads/hexapod_asset/meshes",
+  "mesh_sha256": {
+    "base_link.stl": "210a3d1b09ab9e8d079e5259597e9d95787eaa22b558b19b792b4a1f4780268b",
+    "coxa_link.stl": "b4c05c84454a851506ba5a840eb07bda07f1e5c6c96219711b208a5882cfd9c1",
+    "femur_link.stl": "e674fc93e8d17ef34cd18a4176230153f60e97560b8e5907464c1deecce98fc6",
+    "tibia_link.stl": "7e2c881d2fb49ef0db8839f053d3bb21be5533971ee0320d47a583e074337ea6",
+    "rs04_actuator.stl": "2910dd2ce4dcce350aecbc4edaeadba600a5110547888870fbe7e7d21dadfbbb",
+    "top_cover.stl": "1447f070e36ad9e9e018630617ec951b3a5db011fd38d8a4f626887ed0f961e3"
+  },
+  "mission_mode": "hybrid demonstration: wheels on smooth terrain, legs on rough terrain",
+  "errors": [],
+  "actuator_replacement": {
+    "source": "/home/user123456/Downloads/hexapod_asset/meshes/rs04_actuator.stl",
+    "source_sha256": "2910dd2ce4dcce350aecbc4edaeadba600a5110547888870fbe7e7d21dadfbbb",
+    "source_triangles": 294305,
+    "replacement": "/home/user123456/Downloads/hexapod_asset/mujoco/derived_meshes/rs04_actuator_mujoco.stl",
+    "replacement_sha256": "c23219849d0f0c1e1a813b69cfe7640a9e0843f8e56103a073151e12962b8592",
+    "replacement_triangles": 30000,
+    "source_bounds_mm": [
+      [
+        -60.0,
+        -60.0,
+        -27.200000762939453
+      ],
+      [
+        60.0,
+        60.0,
+        28.5
+      ]
+    ],
+    "replacement_bounds_mm": [
+      [
+        -60.120894558873545,
+        -60.11118978374182,
+        -27.200000762939464
+      ],
+      [
+        60.04919693075965,
+        60.1410920010593,
+        28.461108002033217
+      ]
+    ],
+    "method": "Quadric edge-collapse simplification of the supplied actuator only; no source files modified."
+  },
+  "actuator_mounting": "Restored demonstration joint mounts use the authorized reduced RS04 mesh.",
+  "foot_policy": "Restored visible rubber feet and matching contact spheres are part of the demonstration assembly.",
+  "visual_policy": "Prior demonstration design restored with procedural wheels, battery enclosure/status lights, hook latches, cover detailing, and scanner hardware. Original source STL and URDF files are unchanged.",
+  "demo_additions": [
+    "four 300 mm tires with beadlock rims and tread",
+    "wider axle stance and visual suspension links",
+    "top battery cassette with latches, vents, handles and 5-bar charge gauge",
+    "pulsing low-battery beacon",
+    "phased wheel/leg transformation"
+  ],
+  "dynamics_scope": "Assisted chassis velocity/height/attitude and kinematic transformation joints; ideal limb gravity compensation. Visual suspension linkage is not a validated suspension model."
+}

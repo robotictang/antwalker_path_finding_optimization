@@ -1,0 +1,4 @@
+[NO SAFE ROUTE] Requested destination plus safe charger return exceeds full battery capacity. Choose a nearer task or add a charger.
+INSUFFICIENT TASK ENERGY - need 38.2%, have 37.7%; charging first
+ROUTE READY: Center charging station | energy-to-charger | 49.9 m | 81 s | 28.2% energy | budget 37.2% / available 37.7%
+PASS: {'full_capacity_infeasible_task_stops_without_charging_loop': True, 'idle_returns_before_losing_charger_reserve': True, 'idle_departure_battery': 37.73843764804372, 'idle_charger_requirement': 37.23867764804372}
