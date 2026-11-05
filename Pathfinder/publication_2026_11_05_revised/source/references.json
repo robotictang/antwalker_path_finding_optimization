@@ -1,0 +1,48 @@
+{
+  "mujoco": {
+    "text": "E. Todorov, T. Erez, and Y. Tassa, \"MuJoCo: A physics engine for model-based control,\" in Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst., 2012, pp. 5026\u20135033, doi: 10.1109/IROS.2012.6386109.",
+    "url": "https://doi.org/10.1109/IROS.2012.6386109"
+  },
+  "astar": {
+    "text": "P. E. Hart, N. J. Nilsson, and B. Raphael, \"A formal basis for the heuristic determination of minimum cost paths,\" IEEE Trans. Syst. Sci. Cybern., vol. 4, no. 2, pp. 100\u2013107, 1968, doi: 10.1109/TSSC.1968.300136.",
+    "url": "https://doi.org/10.1109/TSSC.1968.300136"
+  },
+  "pso": {
+    "text": "J. Kennedy and R. Eberhart, \"Particle swarm optimization,\" in Proc. ICNN Int. Conf. Neural Netw., vol. 4, 1995, pp. 1942\u20131948, doi: 10.1109/ICNN.1995.488968.",
+    "url": "https://doi.org/10.1109/ICNN.1995.488968"
+  },
+  "aco": {
+    "text": "M. Dorigo, V. Maniezzo, and A. Colorni, \"Ant system: Optimization by a colony of cooperating agents,\" IEEE Trans. Syst., Man, Cybern. B, vol. 26, no. 1, pp. 29\u201341, 1996, doi: 10.1109/3477.484436.",
+    "url": "https://doi.org/10.1109/3477.484436"
+  },
+  "visibility": {
+    "text": "T. Lozano-P\u00e9rez and M. A. Wesley, \"An algorithm for planning collision-free paths among polyhedral obstacles,\" Commun. ACM, vol. 22, no. 10, pp. 560\u2013570, 1979, doi: 10.1145/359156.359164.",
+    "url": "https://doi.org/10.1145/359156.359164"
+  },
+  "smartgait": {
+    "text": "Y. Yin, F. Gao, Q. Sun, Y. Zhao, and Y. Xiao, \"Smart Gait: A gait optimization framework for hexapod robots,\" Chin. J. Mech. Eng., vol. 37, Art. no. 15, 2024, doi: 10.1186/s10033-024-01000-0.",
+    "url": "https://doi.org/10.1186/s10033-024-01000-0"
+  },
+  "terrain": {
+    "text": "C. Chen, J. Lin, B. You, J. Li, and B. Gao, \"Hexapod robot motion planning investigation under the influence of multi-dimensional terrain features,\" Front. Neurorobot., vol. 19, Art. no. 1605938, 2025, doi: 10.3389/fnbot.2025.1605938.",
+    "url": "https://doi.org/10.3389/fnbot.2025.1605938"
+  },
+  "cocoprocedure": {
+    "text": "COCO Project, \"COCO: The experimental procedure,\" 2016. [Online]. Available: https://numbbo.github.io/coco-doc/experimental-setup/. Accessed: Nov. 4, 2026.",
+    "url": "https://numbbo.github.io/coco-doc/experimental-setup/"
+  },
+  "bootstrap": {
+    "text": "B. Efron, \"Bootstrap methods: Another look at the jackknife,\" Ann. Statist., vol. 7, no. 1, pp. 1-26, 1979, doi: 10.1214/aos/1176344552.",
+    "url": "https://doi.org/10.1214/aos/1176344552"
+  },
+  "rcsp": {
+    "text": "T.-Y. Ma, \"An A* label-setting algorithm for multimodal resource constrained shortest path problem,\" Procedia Soc. Behav. Sci., vol. 111, pp. 330-339, 2014, doi: 10.1016/j.sbspro.2014.01.066.",
+    "url": "https://doi.org/10.1016/j.sbspro.2014.01.066",
+    "verified": "Publisher abstract and author institutional publication record inspected 5 November 2026."
+  },
+  "safepso": {
+    "text": "B. Guo, Y. Sun, and Y. Chen, \"Safe path planning of mobile robot based on improved particle swarm optimization,\" Trans. Inst. Meas. Control, vol. 47, no. 9, pp. 1715-1724, 2025, doi: 10.1177/01423312241264860.",
+    "url": "https://doi.org/10.1177/01423312241264860",
+    "verified": "Publisher abstract and publication metadata inspected 5 November 2026; online first 2024, issue year 2025. No paywalled-method claim made."
+  }
+}

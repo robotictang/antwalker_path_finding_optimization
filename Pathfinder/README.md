@@ -2,13 +2,13 @@
 
 **Start here if you are taking over the paper.** This project studies how a simulated six-legged robot chooses routes while respecting a deadline, a modeled battery allowance and terrain limits. There is a substantial draft and saved evidence. It remains a simulation study for supervisor review, with author details and physical validation outstanding.
 
-Updated on 4 November 2026. Start with the [revised robot illustration manuscript](publication_2026_11_04_robot_figure/README.md) with the smaller static model capture on page 2. The guides below describe the original 3 November handoff. Read the [newcomer guide](docs/PROJECT_GUIDE.md), then the [paper continuation plan](docs/PAPER_ROADMAP.md). The [file map](docs/FILE_MAP.md) explains which code and data to open.
+Updated on 5 November 2026. Start with the [revised IJ3C manuscript](publication_2026_11_05_revised/README.md), focused on constrained planning and stage-removal results. The guides below describe the original 3 November handoff. Read the [newcomer guide](docs/PROJECT_GUIDE.md), then the [paper continuation plan](docs/PAPER_ROADMAP.md). The [file map](docs/FILE_MAP.md) explains which code and data to open.
 
 ## Find the right material
 
 | Your task | Start here |
 |---|---|
-| Read the latest 10-page IJ3C article | [Current PDF](paper/current_manuscript.pdf) and [Word file](paper/current_manuscript.docx) |
+| Read the latest 9-page IJ3C article | [Current PDF](paper/current_manuscript.pdf) and [Word file](paper/current_manuscript.docx) |
 | Read the separate plain-language revision | [Plain-language PDF](paper/plain_language_manuscript.pdf) and [Word copy](paper/plain_language_manuscript.docx) |
 | Edit the latest Word draft | [Current DOCX](paper/current_manuscript.docx) |
 | Understand manuscript generation | [Paper editing notes](paper/README.md) |

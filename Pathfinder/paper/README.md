@@ -1,22 +1,17 @@
 # Current paper workspace
 
-The current manuscript is the template-checked illustrated plain-language revision. It has 10 pages, 7 figures, 9 tables and 3 equations. A new static MuJoCo model capture appears as Figure 1 on page 2, centered at 4.5 inches wide. The live demo remains stopped.
+The current IJ3C revision is **Constrained Route Planning for a Simulated Hexapod**, with 9 pages, three figures, five tables and three equations. It retains the robot illustration and presents the planning stages with pseudocode and selected settings.
 
 - [Current Word manuscript](current_manuscript.docx)
 - [Current PDF](current_manuscript.pdf)
-- [Plain-language Word link](plain_language_manuscript.docx)
-- [Plain-language PDF link](plain_language_manuscript.pdf)
-- [Template compliance review](../publication_2026_11_04_robot_figure/Template_Review.md)
-- [Revision notes](../publication_2026_11_04_robot_figure/Review_Changes.md)
-- [Evidence map](../publication_2026_11_04_robot_figure/Evidence_Map.md)
-- [Source](manuscript_source/) and [figures](figures/)
-- [Results](tables/) and [frozen study](current_study/)
-- Review snapshots are generated locally; see [Git storage notes](../GIT_STORAGE.md).
+- [Complete revision overview](../publication_2026_11_05_revised/README.md)
+- [Template review](../publication_2026_11_05_revised/Template_Review.md)
+- [Revision notes](../publication_2026_11_05_revised/Review_Changes.md)
+- [Evidence map](../publication_2026_11_05_revised/Evidence_Map.md)
+- [Source](manuscript_source/), [figures](figures/) and [results](tables/)
+- [Unchanged planning study](current_study/)
+- [Preceding preserved manuscript](../publication_2026_11_04_robot_figure/README.md)
 
-Both sets of manuscript links now open the same illustrated revision. The [preceding plain-language copy](../publication_2026_11_04_plain_language/README.md), [earlier ten-page paper](../publication_2026_11_04_ten_page/README.md) and [first IJ3C revision](../publication_2026_11_04/README.md) remain preserved.
+The current_manuscript and plain_language_manuscript shortcuts open the same revised article. They are relative symbolic links, so editing through a shortcut changes its target. Shared evidence links retain the preceding revision rather than duplicating large files. The older review ZIP, if present, remains a historical snapshot and is not the current manuscript.
 
-These entries are relative symbolic links; editing a linked file changes its target. The ZIP is a saved snapshot. Author/contact fields remain unfilled at the user's request. The [deferred disclosure](../publication_2026_11_04_robot_figure/Deferred_Disclosure.md) remains separate for supervisor consultation. No submission has been made.
-
-The current revision fixes duplicate Word heading and caption style definitions and was checked against the retained IJ3C instructions and sample. All ten final pages were visually reviewed; manuscript text and numerical results remain unchanged. The preceding illustrated revision is preserved in publication_2026_11_04_illustrated.
-
-The new image was captured at 2400 by 1500 pixels without advancing physics. Only its caption and explanatory paragraph changed in the article. The previous template-checked revision and original screenshot remain preserved.
+Author/contact fields remain as previously deferred, and [Deferred_Disclosure.md](../publication_2026_11_05_revised/Deferred_Disclosure.md) remains separate for supervisor consultation. No submission or new simulation was made for this editorial revision.

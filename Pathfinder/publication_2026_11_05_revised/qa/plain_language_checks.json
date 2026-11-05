@@ -1,0 +1,14 @@
+{
+  "state": "passed",
+  "self_contained_wording_patterns": 14,
+  "no_local_file_dependency": true,
+  "no_unsupported_data_availability_promise": true,
+  "map24_metrics_checked": 10,
+  "map24_per_repetition_component_order_checked": true,
+  "first_map_overlap_verified": true,
+  "tables_in_order": 5,
+  "figures_in_order": 3,
+  "primary_data_sha256": "51f6557fb475a011f6ddaead54bec9a06c22f26c70dad05e28ad6fc1fb77e9e0",
+  "docx_sha256": "84d9b70f16422c78c378b11d10833f431e4cfe1036fdd74d5de1492c5e4c2d6b",
+  "scope": "Wording and raw-data reconciliation; statistical intervals and actual simulation limits are retained as facts"
+}

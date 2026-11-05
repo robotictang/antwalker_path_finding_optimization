@@ -6,11 +6,11 @@ Start with the current paper, then follow its results back to the saved records 
 
 ## Start here
 
-1. Read the latest manuscript: [PDF](Pathfinder/publication_2026_11_04_robot_figure/IJ3C_Manuscript.pdf) or [editable Word document](Pathfinder/publication_2026_11_04_robot_figure/IJ3C_Manuscript.docx).
-2. Open the [current revision overview](Pathfinder/publication_2026_11_04_robot_figure/README.md) and [evidence map](Pathfinder/publication_2026_11_04_robot_figure/Evidence_Map.md) to understand which records support the article.
+1. Read the latest manuscript: [PDF](Pathfinder/publication_2026_11_05_revised/IJ3C_Manuscript.pdf) or [editable Word document](Pathfinder/publication_2026_11_05_revised/IJ3C_Manuscript.docx).
+2. Open the [current revision overview](Pathfinder/publication_2026_11_05_revised/README.md) and [evidence map](Pathfinder/publication_2026_11_05_revised/Evidence_Map.md) to understand which records support the article.
 3. Use the folder map below to find the code, data or earlier drafts you need.
 
-The current manuscript is the **10-page IJ3C revision with the smaller robot illustration**, stored in `publication_2026_11_04_robot_figure/`. Its main planning campaign contains 640 records, including 576 primary attempts on 32 test maps. Older IEEE drafts and campaigns remain available as history; their counts and comparisons describe different experiments.
+The current manuscript is the **9-page IJ3C revision focused on constrained planning and stage-removal comparisons**, stored in `publication_2026_11_05_revised/`. Its main planning campaign contains 640 records, including 576 primary attempts on 32 test maps. Older IEEE drafts and campaigns remain available as history; their counts and comparisons describe different experiments.
 
 ## Folder map
 
@@ -18,7 +18,7 @@ The current manuscript is the **10-page IJ3C revision with the smaller robot ill
 Pathfinder/
 ├── README.md                    Detailed project handoff
 ├── paper/                       Shortcuts to the current paper and its material
-├── publication_2026_11_04_*/     Preserved manuscript revisions
+├── publication_2026_11_*/     Preserved manuscript revisions
 ├── workbench/                   Research working copy and environment notes
 │   └── mujoco/
 │       ├── research/            Planners, study protocols, execution and tests
@@ -39,19 +39,19 @@ Pathfinder/
 
 | What you want to do | Where to look |
 |---|---|
-| Read or edit the current paper | [Latest revision](Pathfinder/publication_2026_11_04_robot_figure/) |
-| Read the article as plain text | [Assembled manuscript](Pathfinder/publication_2026_11_04_robot_figure/IJ3C_Manuscript.md) |
-| Find the narrative used by the builder | [Article source](Pathfinder/publication_2026_11_04_robot_figure/source/article.md) and [source scripts](Pathfinder/publication_2026_11_04_robot_figure/source/) |
-| Inspect the paper's tables and computed comparisons | [Current results](Pathfinder/publication_2026_11_04_robot_figure/results/) |
-| Inspect individual planning attempts and returned routes | [Raw primary records](Pathfinder/publication_2026_11_04_robot_figure/raw_study/primary.json) |
-| Check the study design and selected parameters | [Manifest](Pathfinder/publication_2026_11_04_robot_figure/raw_study/manifest.json) and [locked parameters](Pathfinder/publication_2026_11_04_robot_figure/raw_study/locked_parameters.json) |
-| Locate the article's images | [Publication figures](Pathfinder/publication_2026_11_04_robot_figure/figures/) |
-| Check template formatting and revision decisions | [Template review](Pathfinder/publication_2026_11_04_robot_figure/Template_Review.md) and [revision notes](Pathfinder/publication_2026_11_04_robot_figure/Review_Changes.md) |
+| Read or edit the current paper | [Latest revision](Pathfinder/publication_2026_11_05_revised/) |
+| Read the article as plain text | [Assembled manuscript](Pathfinder/publication_2026_11_05_revised/IJ3C_Manuscript.md) |
+| Find the narrative used by the builder | [Article source](Pathfinder/publication_2026_11_05_revised/source/article.md) and [source scripts](Pathfinder/publication_2026_11_05_revised/source/) |
+| Inspect the paper's tables and computed comparisons | [Current results](Pathfinder/publication_2026_11_05_revised/results/) |
+| Inspect individual planning attempts and returned routes | [Raw primary records](Pathfinder/publication_2026_11_05_revised/raw_study/primary.json) |
+| Check the study design and selected parameters | [Manifest](Pathfinder/publication_2026_11_05_revised/raw_study/manifest.json) and [locked parameters](Pathfinder/publication_2026_11_05_revised/raw_study/locked_parameters.json) |
+| Locate the article's images | [Publication figures](Pathfinder/publication_2026_11_05_revised/figures/) |
+| Check template formatting and revision decisions | [Template review](Pathfinder/publication_2026_11_05_revised/Template_Review.md) and [revision notes](Pathfinder/publication_2026_11_05_revised/Review_Changes.md) |
 | Understand or extend the research implementation | [Workbench](Pathfinder/workbench/README.md) and [research code](Pathfinder/workbench/mujoco/research/) |
 | Browse an older campaign interactively | Download and open the [offline comparison HTML](Pathfinder/outputs/ieee_access_final/package/Comparison_Offline.html); it covers the earlier V6 campaign |
 | Find previous drafts and engineering snapshots | [Archive index](Pathfinder/archive/README.md), [original backups](Pathfinder/mujoco/backups/) and [older outputs](Pathfinder/outputs/) |
 
-Within the latest publication folder, `raw_study/` contains saved planning inputs and records; `results/` contains analyses and motion diagnostics; `source/` contains the article builder and checking scripts; `template/` retains the journal instructions and sample; and `qa/` contains retained verification reports. Its [evidence map](Pathfinder/publication_2026_11_04_robot_figure/Evidence_Map.md) explains how these pieces support specific claims.
+Within the latest publication folder, `raw_study/` contains saved planning inputs and records; `results/` contains analyses and motion diagnostics; `source/` contains the article builder and checking scripts; `template/` retains the journal instructions and sample; and `qa/` contains retained verification reports. Its [evidence map](Pathfinder/publication_2026_11_05_revised/Evidence_Map.md) explains how these pieces support specific claims.
 
 ## Read the code in this order
 
@@ -81,7 +81,8 @@ These folders preserve successive revisions of the article; they are not separat
 | [publication_2026_11_04_plain_language](Pathfinder/publication_2026_11_04_plain_language/) | Separate plain-language revision |
 | [publication_2026_11_04_illustrated](Pathfinder/publication_2026_11_04_illustrated/) | Added demonstration screenshot |
 | [publication_2026_11_04_template_checked](Pathfinder/publication_2026_11_04_template_checked/) | Further template and Word-style corrections |
-| **[publication_2026_11_04_robot_figure](Pathfinder/publication_2026_11_04_robot_figure/)** | **Current revision with a smaller, direct MuJoCo model capture** |
+| [publication_2026_11_04_robot_figure](Pathfinder/publication_2026_11_04_robot_figure/) | Preserved version with the direct MuJoCo model capture |
+| **[publication_2026_11_05_revised](Pathfinder/publication_2026_11_05_revised/)** | **Current revision with focused claims, algorithm/settings and combined displays** |
 
 The background [project guide](Pathfinder/docs/PROJECT_GUIDE.md), [file map](Pathfinder/docs/FILE_MAP.md) and [paper roadmap](Pathfinder/docs/PAPER_ROADMAP.md) preserve earlier handoff context. Some passages describe the previous IEEE manuscript. Use the current revision and its evidence map for the latest article's methods and results.
 

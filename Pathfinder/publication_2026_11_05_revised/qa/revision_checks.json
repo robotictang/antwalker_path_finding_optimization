@@ -1,0 +1,11 @@
+{
+  "state": "passed",
+  "preserved_evidence_and_prior_manuscript_hashes": 23,
+  "numeric_tables_reconciled": 4,
+  "figures": 3,
+  "tables": 5,
+  "robot_image_original_bytes_embedded_once": true,
+  "new_experiments": 0,
+  "docx_sha256": "84d9b70f16422c78c378b11d10833f431e4cfe1036fdd74d5de1492c5e4c2d6b",
+  "scope": "Editorial revision of unchanged evidence; raw-data reconciliation, not hardware validation."
+}

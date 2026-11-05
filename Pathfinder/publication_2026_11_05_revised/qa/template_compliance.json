@@ -1,0 +1,55 @@
+{
+  "state": "passed",
+  "instruction_source": "template/IJ3C_template.docx",
+  "sample_source": "template/IJ3C_Sample-file.docx",
+  "instruction_sha256": "a7bdcba81fd8ea64527320d66b539783d99b407bac91e40c1334aed144c36455",
+  "sample_sha256": "334ab83afc15d1ab416e3fe1746aaeb12482a469faa51f4c090c1c85833afc0e",
+  "pages": 9,
+  "actual_word_split_count_including_tables_equations": 6202,
+  "abstract_words": 186,
+  "keywords": [
+    "Hexapod",
+    "planning",
+    "optimization",
+    "simulation",
+    "reproducibility"
+  ],
+  "styles_unique": true,
+  "all_used_styles_defined": true,
+  "role_font_sizes_pt": {
+    "Normal": 10,
+    "Body Text": 10,
+    "Abstract Text": 10,
+    "Author": 11,
+    "Title": 16,
+    "Heading 1": 11,
+    "Heading 2": 10.5,
+    "Caption": 10
+  },
+  "margins_mm": 25.011944444444442,
+  "column_gap_mm": 7.478888888888888,
+  "section_column_pattern": [
+    1,
+    2,
+    1,
+    2,
+    2
+  ],
+  "main_headings": "1 through 8, Arabic numerals, left aligned",
+  "native_equations": "1 through 3, right aligned numbers",
+  "figures": "1 through 3, sequential first mentions",
+  "tables": "1 through 5, sequential first mentions",
+  "references": "1 through 11, checked by check_manuscript.py",
+  "editorial_revision": true,
+  "saved_study_results_unchanged": true,
+  "visual_review": "All final pages inspected at original resolution after the content and display revision.",
+  "unresolved_author_fields": [
+    "Author names and affiliations",
+    "Corresponding author email"
+  ],
+  "acknowledgment": "Omitted at user request; deferred text retained separately.",
+  "precedence": "Written instructions control Arabic left-aligned headings; the older sample uses a different heading convention.",
+  "source_delivery": "PDF for initial submission; retained instructions specify .doc source after acceptance. This editable revision is DOCX.",
+  "docx_sha256": "84d9b70f16422c78c378b11d10833f431e4cfe1036fdd74d5de1492c5e4c2d6b",
+  "pdf_sha256": "1230e24845c4fcd6b50de105d6661839b615d5622c9165bb0c9ee9adfdbbb675"
+}
