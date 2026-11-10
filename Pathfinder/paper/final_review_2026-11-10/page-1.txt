@@ -1,0 +1,107 @@
+1
+Constrained Route Planning for a Simulated Hexapod
+Jin Wayne Foo,  Juo Wei Lai1, Latifah Mohammed Abdulrahman1, Gulhajar Melebayeva1, Wen Zer 
+Goo1, Anfel Fodil1, Tiong Yew Tang1
+Research Center for Human Machine Collaboration (HUMAC), Faculty of Engineering and 
+Technology, Sunway University No. 5, Jalan Universiti, Bandar Sunway, 47500 Selangor Darul, 
+Ehsan, Malaysia.
+waynejinfoo123@gmail.com, tiongyewt@sunway.edu.my 
+Abstract
+In this work we assess landmark search and final  
+local  modification  in  body-route  planning  for  a  
+simulated  hexapod.  Obstacle-clearance,  deadline,  
+nominal battery and terrain-exposure constraints are  
+shared  by  six  configurations.  Parameter  selection  
+includes 64 trials and 8 development maps, the main  
+test includes 576 trials and 32 maps, resulting in 640  
+planning  trials.  The  complete  planner,  Constrained 
+Landmark  Route  Planning  (CLRP)  achieves  
+acceptance of 93/96 main-test attempts as compared to 
+94/96  for  coordinate-based  particle  swarm  
+optimization  (PSO-C)  and  90/96  for  the  planner  
+without final adjustment. Removing landmark search 
+retains 93 acceptances and reduces mean search time  
+from  0.376  to  0.196  s.  Complete  CLRP  has  a  
+conditional  mean  paired-map  relative  score  
+improvement of 0.924% over this reduced version.  
+The  mean  paired-map  relative  score  improvement  
+against PSO-C is 0.690%, the zero median and the  
+descriptive 95 % bootstrap interval is [−0.255, 2.312]  
+%. This statistical interval contains zero and does not  
+demonstrate  a  mean  score  advantage.  A  separate 
+diagnostic  comprises  16  executions :  four  missions 
+under four assistance conditions.  Full and half-scale  
+assistance each finish all four missions.  Both zero-
+assistance conditions complete none and time out at  
+180  s. Assisted  executions  have  no  detected  foot  
+contact under the six-foot criterion.  Results quantify  
+the planning tradeoffs and dependence on direct body  
+assistance.  The  nominal  battery  costs  are  model  
+outputs  which  are  not  physically  or  electrically  
+validated.
+Keywords: Hexapod;  planning;  optimization;  
+simulation; reproducibility
+1 Introduction
+The movement path  of a robot should not have  
+obstacles and meet the conditions of the task. Even a 
+short route can miss its deadline or leave insufficient  
+battery reserve to reach a charging station. The current 
+model considers walking speed in different terrain,  
+time of turns and nominal battery use, and exposure to 
+difficult  terrain.  These  costs  must  be  taken  into  
+consideration when selecting the route, and should be  
+determined  separately  whether  all  the  task  
+requirements  are  met.  In  this  work,  we  want  to  
+examine how landmark search and the resulting final 
+local  route  refinement  during  planning  affects  
+acceptance, route score and computation in MuJoCo  
+[1]  whilst  controlling  for  map,  evaluator  and  task  
+constraints.  The  complete  planner  (CLRP)  features 
+initial corridor search, more links around obstacles and 
+terrain  boundaries,  and  local  refinement  of  
+intermediate  route  coordinates.  The  two  particle  
+swarm  and  ant-inspired  planners  which  select  the  
+points  from  the  initial  routes,  the  particle  swarm  
+planner  which  modifies  the  coordinates  of  the  
+intermediate points, and the two versions of CLRP  
+with the elimination of one search stage are analyzed.  
+The  experiment  is  not  intended  to  provide  a  new  
+swarm update rule but to assess the configurations  
+used.  The  study  contrasts  between  three  goals:  
+accepting  with  resource  limitation,  differences  in  
+scores of accepted attempts for both approaches, and  
+the  number  of  computations  required  to  determine 
+routes.  Eight  development  maps  are  used  to  pick  
+configurations prior to  the major evaluation on 32  
+maps  with  three  paired  repetitions.  Stage-removal  
+comparisons are used to determine if adding more  
+search will make an accepted route better or change  
+the level of acceptance. There are four separate maps  
+that investigate dependence on direct body support,  
+separating  route  acceptance  from  locomotion  
+validation.  The  assumptions  of  walking  speed  and 
+turning,  along  with  the  two-dimensional  body-
+clearance  envelope  depend  on  the  hexapod  
+application. The map and pose are given directly to the 
+planner which then plans body trajectories and not  
+complete sequences of foot placements. The results are 
+for  the  geometry  and  nominal  resource  model  
+specified. This is a consistent framework to evaluate  
+the  planning  stages.  Battery  cost  and  assisted  
+movement is  not a measurement of physical robot  
+performance.
+2 Related Literature
+A* uses the sum of the cost incurred to reach a point 
+and a heuristic estimate of the remaining cost [2]. The 
+particle  swarm  optimization  updates  the  candidate  
+solutions by using particle motion and the best position 
+of each particle and the swarm [3]. The ant system  
+bases on pheromone and heuristic information to guide 
+route construction [4]. A visibility graph is a graph that 
+links  points  by  straight  line  segments  that  are  
+unobstructed  [5].  The  initial  search,  population  
+updates  and  graph  connections  employed  here  are  
+based on these proven methods. The best candidate  
+found by the constrained search is not guaranteed to be 
+the  best  candidate  in  the  world.  Under  resource  
+constraints, routing is more than just minimizing the  

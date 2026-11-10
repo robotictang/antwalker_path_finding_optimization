@@ -1,0 +1,58 @@
+[
+  {
+    "paragraph": 32,
+    "change": "Remove duplicated layout label",
+    "removed": " Algorithm 1.",
+    "highlight": false
+  },
+  {
+    "paragraph": 44,
+    "change": "Remove duplicated layout label",
+    "removed": " Table 1. Selected search settings: noL omits landmark search; noP omits final adjustment.",
+    "highlight": false
+  },
+  {
+    "paragraph": 1,
+    "change": "Remove six inconsistent single-affiliation superscripts",
+    "highlight": false
+  },
+  {
+    "table": 3,
+    "change": "Remove prior formatting-only cell highlights",
+    "count": 7,
+    "highlight": false
+  },
+  {
+    "table": 1,
+    "change": "Adjust column widths and cell padding; labels and numbers retained",
+    "widths": [
+      1010,
+      2110,
+      1200
+    ],
+    "highlight": false
+  },
+  {
+    "table": 4,
+    "change": "Adjust column widths and cell padding; labels and numbers retained",
+    "widths": [
+      1114,
+      900,
+      650,
+      1011,
+      645
+    ],
+    "highlight": false
+  },
+  {
+    "table": 5,
+    "change": "Adjust column widths and cell padding; labels and numbers retained",
+    "widths": [
+      1438,
+      800,
+      938,
+      1144
+    ],
+    "highlight": false
+  }
+]

@@ -1,0 +1,122 @@
+3
+assistance acts on the velocity of the free body. Body  
+assistance limits the vertical velocity and roll/pitch  
+rates  once  per  controller  frame.  Also  modifies  
+horizontal velocity and yaw-rate per physics step. At  
+assistance scale 1 the horizontal velocity is set equal to 
+the requested velocity. At scale 0.5, each correction  
+will keep 50% of the current velocity and add 50% of  
+the requested velocity. This mixture is used 4 times in 
+each controller frame. At scale 0, these direct body-
+velocity  corrections  are  disabled. The  scale  is  for  
+velocity blending and not for a support force. Ground  
+truth position, heading, obstacle geometry and terrain  
+information is directly accessed from the simulator  
+and passed to the planner. These inputs are not based  
+on measurement from the sensors. Each method has  
+the  same  starting  point,  starting  orientation,  
+destination and estimated time of return to charging  
+station. Comparisons of the route choice choices are  
+thus on the same known map. Not including sensor  
+noise, localization errors and map reconstruction.
+3.2 Route geometry
+A path P is an ordered sequence of points that lie on 
+the horizontal plane. The first and last points are the  
+given starting and ending. Each point is connected by  
+a straight segment, in order. The spacing of the first  
+search grid is 0.25 m and the directions of the motion  
+are  eight.  Diagonal  movement  is  not  allowed  at  
+blocked grid corners. All returned segments will have 
+to undergo the same clearance test with the planar  
+obstacle geometry. The radius of the robot is defined  
+as 1.82 m, tracking margin is 0.12 m and the tolerance 
+of segment clearance is 0.005 m. These values are used 
+for planning clearance model. The analysis assumes a 
+trajectory for the robot body and does not generate  
+three  dimensional  foot-placement  trajectories.  The  
+terrain map is used to specify areas having varying  
+walking-speed and difficulty values. Terrain difficulty 
+at each grid location is determined by equations (1)  
+and (2).
+d  =  clip( g ,  0 ,  2) (1)
+g  =  1
+4 ( s
+0.25  +  h
+0.12  +  u
+0.04  +  f ) (2)
+The clip function maps the intermediate value g to  
+the final difficulty d in [0, 2]. The variables s, h and u 
+represent slope (in radians), height range (in meters)  
+and  the  standard  deviation  of  the  sampled  ground 
+heights (in meters) of the population, respectively, and 
+f represents the semantic softness.  The heights are  
+sampled in nine locations with offsets of −1.82, 0 and 
+1.82 m on each horizontal axis. Slope is the arctangent 
+of the gradient magnitude of the footprint-averaged  
+sampled height field on the 0.25 m grid. The values of 
+f for the various terrain grades tested (grades 0, 1, 2)  
+are  0,  0.25,  and  0.60,  respectively.  Terrain-grade  
+requests are made with a 1.1 m buffer around patch  
+boundaries.  Difficulty  is  sampled  at  intervals  no  
+greater than 0.125 m along each route segment.  The 
+difficulty for each route sample is the one of the closest 
+grid cell. Segment exposure = length of segment x the 
+mean  sampled  difficulty.  The  sum  of  segment  
+exposures is the total exposure R. This amount is based 
+on a terrain map and does not reflect an estimate of slip 
+likelihood.
+3.3 Route score and acceptance
+ The route evaluator returns distance D in meters,  
+estimated travel time T in seconds, nominal battery use 
+E in percentage points and terrain exposure R. First  
+heading is π/2 radians. Predicted time assumes that  
+travel is at terrain-dependent speed limits, headings  
+change  at  1  rad/s,  and  there  is  an  acceleration  
+allowance.  For terrain grades 0, 1 and 2 , the speed  
+limits are 0.75, 0.65 and 0.38 m/s, respectively. The  
+four quantities are combined together in a score Q in  
+equation  (3)  lower  values  of  Q  are  better.  The  
+denominators represent one score unit in terms of 50  
+m of distance, 90 s of predicted time, 30 nominal  
+battery percentage points or 80 exposure units. These  
+fixed trade-offs were not based on robot measurements 
+or optimized to the results of the main-test.
+Q ( P )  =  D
+50  +  T
+90  +  E
+30  +  R
+80 (3)
+Acceptance" means that the predicted time of arrival 
+is  within  the  deadline,  the  exposure  is  within  the  
+terrain  limit,  and  the  required  nominal  battery  
+allowance is within the battery available. The required 
+allowance is given by equation (4). Subscript return  
+represents the nominal battery consumption of a route 
+from the destination to a charging station. The fixed  
+reserve requirements are the 1.25 multiplier and the  
+additional six percentage points.
+Breq  =  1.25( E  +  Ereturn)  +  6 (4)
+The battery cost model is defined as 0.70 percentage 
+points per walking meter and 0.015 per second, 0.08  
+per turning radian and a 0.10 start/stop allowance.  
+These coefficients have not been adjusted to electrical 
+measurements.  The  four  score  terms  are  not  
+independent physical outcomes since distance, travel  
+time and turning also contribute to E. When they are  
+combined they reflect a fixed preference of these route 
+properties. The six-point reserve gives an allowance  
+and the 1.25 multiplier applies to the outward-and-
+return cost. Both rules are not statistically calibrated  
+probability of accomplishing a physical mission. The  
+same  parameters  are  used  for  all  evaluations.  No  
+sensitivity testing is done for different score weights  
+or reserve settings. In this paper, battery use refers to  
+the output of this equation-based model. The route  
+score is not a conversion from mechanical to electrical 
+battery work. The charging station and return path are 
+predetermined  at  the  start  of  each  trial  prior  to  
+comparing planners. In turn, the planners choose an  
+outward path to follow, within the same limitation.  
+The  destination  deadline  is  for  the  outward  leg.  
+Outward and return routes are included in the motion  
+experiment,  as  well  as  eight  seconds  of  simulated 

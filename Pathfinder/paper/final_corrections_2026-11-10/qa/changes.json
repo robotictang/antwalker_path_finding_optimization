@@ -1,0 +1,254 @@
+[
+  {
+    "paragraph": 2,
+    "old": "Research Center for Human Machine Collaboration (HUMAC)",
+    "new": "Research Centre for Human-Machine Collaboration (HUMAC)",
+    "reason": "Official institutional name",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 2,
+    "old": "Sunway University No. 5",
+    "new": "Sunway University, No. 5",
+    "reason": "Affiliation punctuation",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 2,
+    "old": "Selangor Darul, Ehsan",
+    "new": "Selangor Darul Ehsan",
+    "reason": "Postal address punctuation",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 5,
+    "old": "the zero median and the descriptive 95 % bootstrap interval is [−0.255, 2.312] %",
+    "new": "the median is zero, and the descriptive 95% bootstrap interval is [−0.255, 2.312]%",
+    "reason": "Repair abstract grammar; values unchanged",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 8,
+    "old": "refinement during planning affects",
+    "new": "refinement during planning affect",
+    "reason": "Subject–verb agreement",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 10,
+    "old": "The ant system bases on",
+    "new": "Ant System uses",
+    "reason": "Repair sentence construction",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 10,
+    "old": "the best candidate in the world",
+    "new": "a global optimum",
+    "reason": "Precise optimization terminology",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 10,
+    "old": "minimizing the length one route",
+    "new": "minimizing route length",
+    "reason": "Repair sentence construction",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 10,
+    "old": "Does not make use of or test their controller.",
+    "new": "The present study does not use or test their controller.",
+    "reason": "Give the sentence a subject",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 18,
+    "old": "No physical measurements of motor torque-speed characteristics, battery depletion or robot mass.",
+    "new": "Motor torque–speed characteristics, battery depletion and robot mass were not physically measured.",
+    "reason": "Repair sentence fragment",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 18,
+    "old": "Also modifies horizontal velocity",
+    "new": "It also modifies horizontal velocity",
+    "reason": "Give the sentence a subject",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 18,
+    "old": "route choice choices",
+    "new": "route choices",
+    "reason": "Remove duplicated word",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 18,
+    "old": "Not including sensor noise, localization errors and map reconstruction.",
+    "new": "Sensor noise, localization errors and map reconstruction are not included.",
+    "reason": "Repair sentence fragment",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 27,
+    "old": "Acceptance\" means",
+    "new": "Acceptance means",
+    "reason": "Remove stray quotation mark",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 29,
+    "old": "Both rules are not statistically calibrated probability",
+    "new": "Neither rule provides a statistically calibrated probability",
+    "reason": "Repair sentence construction",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 29,
+    "old": "The candidate ranking process first determines if routes meet all constraints, and then if they do not.",
+    "new": "Candidates are ranked first by feasibility, then by total normalized violation, and finally by Q.",
+    "reason": "State ranking order clearly",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 42,
+    "old": "Does not only focus on the impact of representation.",
+    "new": "The comparison does not isolate the effect of representation.",
+    "reason": "Repair fragment and clarify comparison scope",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 66,
+    "old": "Last 25% of time; CLRP steps",
+    "new": "Reserved 25% time allowance; CLRP steps",
+    "reason": "Distinguish reserved allowance from realized refinement timing",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 70,
+    "old": "Start and destination proposals are sampled between −17 and 17 m (with a starting distance of 12–26 m) on each axis. Proposals are moved to free grid locations and kept if their eventual separation is ≥ 10 m.",
+    "new": "Start and destination coordinates are sampled between −17 and 17 m on each axis, with an initial Euclidean separation of 12–26 m. The endpoints are then moved to free grid locations and retained if their final Euclidean separation is at least 10 m.",
+    "reason": "Report Euclidean separation separately from coordinate bounds",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 72,
+    "old": "The alternative CLRP profile consists of a combination of initial-search fraction of 0.55, extra-point fraction of 0.25, 60 points, 12 labels per state, and local move sizes of 0.50, 0.15 and 0.05 m. All other settings are unchanged from their respective default settings.",
+    "new": "In all four alternative profiles, the initial-search time fraction is 0.55 and the local-refinement move sizes are 0.50, 0.15 and 0.05 m. Alternative CLRP additionally uses a landmark-search time fraction of 0.25 and a maximum of 60 landmark points. Its executed initial refiner retains eight labels per state. Apart from these changes and the method-specific settings listed above, other effective settings remain at their respective defaults.",
+    "reason": "Describe executed settings and shared alternative changes",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 72,
+    "old": "Exact ties",
+    "new": "exact ties",
+    "reason": "Correct capitalization",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 72,
+    "old": "576 shots",
+    "new": "576 planning attempts",
+    "reason": "Use study terminology",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 78,
+    "old": "Mission times are completed and includes",
+    "new": "Completed mission times include",
+    "reason": "Repair sentence construction",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 133,
+    "old": "Search effort for all 96 search efforts for each method",
+    "new": "Search effort across all 96 attempts for each method",
+    "reason": "Remove duplicated wording",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 172,
+    "old": "relative score improvements achieved with paired-maps",
+    "new": "relative score effects across paired maps",
+    "reason": "Use a signed-effect term for negative and positive observations",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 172,
+    "old": "figure 2",
+    "new": "Figure 2",
+    "reason": "Consistent figure reference",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 172,
+    "old": "For the noP comparison, it is leave-one-map-out, remain positive,",
+    "new": "For the noP comparison, the leave-one-map-out means remain positive,",
+    "reason": "Repair sentence construction",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 177,
+    "old": "This is why you are seeing the scores of the returned routes vary, but it does not specify one particular internal factor in the optimizer.",
+    "new": "The returned routes therefore have different scores, although this does not identify a particular internal cause in the optimizer.",
+    "reason": "Use direct scientific prose without attributing an untested mechanism",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 179,
+    "old": "black squares",
+    "new": "black shapes",
+    "reason": "Caption includes rectangular corridor barriers",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 180,
+    "old": "It is a one instance",
+    "new": "It is one instance",
+    "reason": "Remove incorrect article",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 206,
+    "old": "Under the tested settings final local adjustment is more accepted and gives lower scores in more accepted attempts than landmark search.",
+    "new": "Under the tested settings, final local adjustment has a larger observed acceptance effect and gives lower scores in more accepted attempts than landmark search.",
+    "reason": "Clarify the observed stage-removal comparison",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 206,
+    "old": "a loss of recorded computation",
+    "new": "a reduction in recorded computation",
+    "reason": "Describe lower recorded computation unambiguously",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 206,
+    "old": "map 24 has significant impact",
+    "new": "Map 24 has a strong influence",
+    "reason": "Avoid implying an unperformed significance test",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 206,
+    "old": "non-corridor action",
+    "new": "non-corridor attempt",
+    "reason": "Use study terminology",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 206,
+    "old": "corridor actions",
+    "new": "corridor attempts",
+    "reason": "Use study terminology",
+    "highlight": "yellow"
+  },
+  {
+    "paragraph": 208,
+    "old": "the description 95% bootstrap interval",
+    "new": "the descriptive 95% bootstrap interval",
+    "reason": "Correct word choice",
+    "highlight": "yellow"
+  }
+]
