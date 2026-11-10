@@ -1,0 +1,3328 @@
+[
+  {
+    "doi": "10.1109/IROS.2012.6386109",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T10:41:45Z",
+        "timestamp": 1794048105022,
+        "version": "4.8.0"
+      },
+      "reference-count": 13,
+      "publisher": "IEEE",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "published-print": {
+        "date-parts": [
+          [
+            2012,
+            10
+          ]
+        ]
+      },
+      "DOI": "10.1109/iros.2012.6386109",
+      "type": "proceedings-article",
+      "created": {
+        "date-parts": [
+          [
+            2013,
+            1,
+            2
+          ]
+        ],
+        "date-time": "2013-01-02T23:15:05Z",
+        "timestamp": 1357168505000
+      },
+      "page": "5026-5033",
+      "source": "Crossref",
+      "is-referenced-by-count": 3313,
+      "title": [
+        "MuJoCo: A physics engine for model-based control"
+      ],
+      "prefix": "10.1109",
+      "author": [
+        {
+          "given": "Emanuel",
+          "family": "Todorov",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tom",
+          "family": "Erez",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuval",
+          "family": "Tassa",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-17452-0_15"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/1529282.1529543"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/IROS.2012.6386181"
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4899-7560-7"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/1778765.1778810"
+        },
+        {
+          "key": "ref6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/1409060.1409117"
+        },
+        {
+          "key": "ref7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/3596711.3596785"
+        },
+        {
+          "key": "ref8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/(SICI)1097-0207(19960815)39:15<2673::AID-NME972>3.0.CO;2-I"
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/IROS.2012.6386025"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.15607/RSS.2010.VI.022"
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ROBOT.2010.5509739"
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICRA.2011.5979814"
+        },
+        {
+          "key": "ref13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/BioRob.2012.6290710"
+        }
+      ],
+      "event": {
+        "name": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2012)",
+        "location": "Vilamoura-Algarve, Portugal",
+        "start": {
+          "date-parts": [
+            [
+              2012,
+              10,
+              7
+            ]
+          ]
+        },
+        "end": {
+          "date-parts": [
+            [
+              2012,
+              10,
+              12
+            ]
+          ]
+        }
+      },
+      "container-title": [
+        "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems"
+      ],
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx5/6363628/6385431/06386109.pdf?arnumber=6386109",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            25
+          ]
+        ],
+        "date-time": "2026-10-25T07:18:12Z",
+        "timestamp": 1792912692000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://ieeexplore.ieee.org/document/6386109/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2012,
+            10
+          ]
+        ]
+      },
+      "references-count": 13,
+      "URL": "https://doi.org/10.1109/iros.2012.6386109",
+      "relation": {},
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2012,
+            10
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1109/TSSC.1968.300136",
+    "error": "HTTP Error 429: Too Many Requests",
+    "csl_metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T12:50:52Z",
+        "timestamp": 1794055852313,
+        "version": "4.8.0"
+      },
+      "reference-count": 8,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "issue": "2",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1968,
+                1,
+                1
+              ]
+            ],
+            "date-time": "1968-01-01T00:00:00Z",
+            "timestamp": -63158400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            1968
+          ]
+        ]
+      },
+      "DOI": "10.1109/tssc.1968.300136",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2008,
+            7,
+            18
+          ]
+        ],
+        "date-time": "2008-07-18T14:53:58Z",
+        "timestamp": 1216392838000
+      },
+      "page": "100-107",
+      "source": "Crossref",
+      "is-referenced-by-count": 10094,
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "prefix": "10.1109",
+      "volume": "4",
+      "author": [
+        {
+          "given": "Peter",
+          "family": "Hart",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nils",
+          "family": "Nilsson",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bertram",
+          "family": "Raphael",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/opre.8.2.224"
+        },
+        {
+          "key": "ref2",
+          "article-title": "3",
+          "volume-title": "Finite Graphs and Networks: An Introduction with Applications",
+          "author": "Busacker",
+          "year": "1965"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1515/9781400874651",
+          "volume-title": "Applied Dynamic Programming",
+          "author": "Bellman",
+          "year": "1962"
+        },
+        {
+          "key": "ref4",
+          "article-title": "Realization of a geometry-theorem proving machine",
+          "volume-title": "Computers and Thought",
+          "author": "Gelernter",
+          "year": "1963"
+        },
+        {
+          "key": "ref5",
+          "article-title": "Some studies in machine learning using the game of checkers",
+          "volume-title": "Computers and Thought",
+          "author": "Samuel",
+          "year": "1963"
+        },
+        {
+          "key": "ref6",
+          "article-title": "The shortest path through a maze",
+          "volume-title": "Proc. Internat’l Symp. on Theory of Switching",
+          "author": "Moore"
+        },
+        {
+          "key": "ref7",
+          "volume-title": "The Annals of the Computation Laboratory of Harvard University",
+          "volume": "30",
+          "year": "1959"
+        },
+        {
+          "key": "ref8",
+          "volume-title": "Computers and Thought",
+          "author": "Feigenbaum",
+          "year": "1963"
+        }
+      ],
+      "container-title": "IEEE Transactions on Systems Science and Cybernetics",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx5/4082035/4082123/04082128.pdf?arnumber=4082128",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            23
+          ]
+        ],
+        "date-time": "2024-01-23T17:11:17Z",
+        "timestamp": 1706029877000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://ieeexplore.ieee.org/document/4082128/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1968
+          ]
+        ]
+      },
+      "references-count": 8,
+      "journal-issue": {
+        "issue": "2"
+      },
+      "URL": "http://dx.doi.org/10.1109/TSSC.1968.300136",
+      "relation": {},
+      "ISSN": [
+        "0536-1567"
+      ],
+      "subject": [],
+      "container-title-short": "IEEE Trans. Syst. Sci. Cyber.",
+      "published": {
+        "date-parts": [
+          [
+            1968
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1109/ICNN.1995.488968",
+    "error": "HTTP Error 429: Too Many Requests",
+    "csl_metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T03:28:49Z",
+        "timestamp": 1794022129472,
+        "version": "4.8.0"
+      },
+      "reference-count": 9,
+      "publisher": "IEEE",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "DOI": "10.1109/icnn.1995.488968",
+      "type": "proceedings-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            11,
+            19
+          ]
+        ],
+        "date-time": "2002-11-19T13:30:57Z",
+        "timestamp": 1037712657000
+      },
+      "page": "1942-1948",
+      "source": "Crossref",
+      "is-referenced-by-count": 42576,
+      "title": "Particle swarm optimization",
+      "prefix": "10.1109",
+      "volume": "4",
+      "author": [
+        {
+          "given": "J.",
+          "family": "Kennedy",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "R.",
+          "family": "Eberhart",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref1",
+          "volume-title": "Handbook of Genetic Algorithms",
+          "year": "1991"
+        },
+        {
+          "key": "ref2",
+          "volume-title": "Neural Network PC Tools: A Practical Guide",
+          "author": "Eberhart",
+          "year": "1990"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1469-1809.1936.tb02137.x"
+        },
+        {
+          "key": "ref4",
+          "article-title": "A stochastic nonlinear model for coordinated bird flocks",
+          "volume-title": "The Ubiquity of Chaos",
+          "author": "Heppner",
+          "year": "1990"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.7551/mitpress/1090.001.0001",
+          "volume-title": "Adaptation in Natural and Artificial Systems",
+          "author": "Holland",
+          "year": "1992"
+        },
+        {
+          "key": "ref6",
+          "article-title": "Swarms, phase transitions, and collective intelligence",
+          "volume-title": "Artificial Life III",
+          "author": "Millonas",
+          "year": "1994"
+        },
+        {
+          "key": "ref7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/357318.357320"
+        },
+        {
+          "key": "ref8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/37402.37406"
+        },
+        {
+          "key": "ref9",
+          "volume-title": "Sociobiology: The new synthesis",
+          "author": "Wilson",
+          "year": "1975"
+        }
+      ],
+      "event": "ICNN'95 - International Conference on Neural Networks",
+      "container-title": "Proceedings of ICNN'95 - International Conference on Neural Networks",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx2/3505/10434/00488968.pdf?arnumber=488968",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            1,
+            23
+          ]
+        ],
+        "date-time": "2024-01-23T17:11:38Z",
+        "timestamp": 1706029898000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://ieeexplore.ieee.org/document/488968/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            null
+          ]
+        ]
+      },
+      "references-count": 9,
+      "URL": "http://dx.doi.org/10.1109/ICNN.1995.488968",
+      "relation": {},
+      "subject": []
+    }
+  },
+  {
+    "doi": "10.1109/3477.484436",
+    "error": "HTTP Error 429: Too Many Requests",
+    "csl_metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T02:24:06Z",
+        "timestamp": 1794018246732,
+        "version": "4.8.0"
+      },
+      "reference-count": 34,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1996,
+                2,
+                1
+              ]
+            ],
+            "date-time": "1996-02-01T00:00:00Z",
+            "timestamp": 823132800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            1996,
+            2
+          ]
+        ]
+      },
+      "DOI": "10.1109/3477.484436",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            8,
+            24
+          ]
+        ],
+        "date-time": "2002-08-24T15:45:59Z",
+        "timestamp": 1030203959000
+      },
+      "page": "29-41",
+      "source": "Crossref",
+      "is-referenced-by-count": 9183,
+      "title": "Ant system: optimization by a colony of cooperating agents",
+      "prefix": "10.1109",
+      "volume": "26",
+      "author": [
+        {
+          "given": "M.",
+          "family": "Dorigo",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "V.",
+          "family": "Maniezzo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.",
+          "family": "Colorni",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref33",
+          "author": "schwefel",
+          "year": "1975",
+          "journal-title": "Evolutionsstrategie und numerische optimierung"
+        },
+        {
+          "key": "ref32",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.7551/mitpress/5236.001.0001",
+          "author": "rumelhart",
+          "year": "1986",
+          "journal-title": "Parallel Distributed Processing Explorations in the Microstructure of Cogniton"
+        },
+        {
+          "key": "ref31",
+          "author": "reinelt",
+          "year": "1990",
+          "journal-title": "TSPLIB 1 0"
+        },
+        {
+          "key": "ref30",
+          "author": "rechenberg",
+          "year": "1973",
+          "journal-title": "Evolutionsstrategie"
+        },
+        {
+          "key": "ref34",
+          "article-title": "scheduling problems and travelling salesman: the genetic edge recombination operator",
+          "author": "whitley",
+          "year": "1989",
+          "journal-title": "Proc Third Int Conf on Genetic Algorithms"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0022-5193(83)80007-1"
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "crossref",
+          "first-page": "295",
+          "DOI": "10.1080/08927014.1989.9525500",
+          "article-title": "collective patterns and decision-making",
+          "volume": "1",
+          "author": "denebourg",
+          "year": "1989",
+          "journal-title": "\\it Ethology Ecology \\char 46 Evolution"
+        },
+        {
+          "key": "ref12",
+          "author": "dorigo",
+          "year": "1992",
+          "journal-title": "Optimization learning and natural algorithms"
+        },
+        {
+          "key": "ref13",
+          "author": "dorigo",
+          "year": "1991",
+          "journal-title": "Positive feedback as a search strategy"
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TSMC.1974.4309370"
+        },
+        {
+          "key": "ref15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1057/jors.1977.29"
+        },
+        {
+          "key": "ref16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01585701"
+        },
+        {
+          "key": "ref17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/ijoc.1.3.190"
+        },
+        {
+          "key": "ref18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/ijoc.2.1.4"
+        },
+        {
+          "key": "ref19",
+          "author": "goldberg",
+          "year": "1989",
+          "journal-title": "\\it Genetic Algorithms in Search Optimization \\char 46 Machine Learning"
+        },
+        {
+          "key": "ref4",
+          "author": "boyd",
+          "year": "1989",
+          "journal-title": "Travel Software Package"
+        },
+        {
+          "key": "ref28",
+          "author": "maniezzo",
+          "year": "1994",
+          "journal-title": "The ant system applied to the quadratic assignment problem"
+        },
+        {
+          "key": "ref3",
+          "first-page": "520",
+          "article-title": "the immune recruitment mechanism: a selective evolutionary strategy",
+          "author": "bersini",
+          "year": "1991",
+          "journal-title": "Proc Fourth Int Conf Genetic Algorithms"
+        },
+        {
+          "key": "ref27",
+          "doi-asserted-by": "crossref",
+          "first-page": "498",
+          "DOI": "10.1287/opre.21.2.498",
+          "article-title": "an effective heuristic algorithm for the tsp",
+          "volume": "21",
+          "author": "lin",
+          "year": "1973",
+          "journal-title": "Oper Res"
+        },
+        {
+          "key": "ref6",
+          "first-page": "134",
+          "article-title": "distributed optimization by ant colonies",
+          "author": "colorni",
+          "year": "1991",
+          "journal-title": "Proc First Europ Conf Artificial Life"
+        },
+        {
+          "key": "ref29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/opre.16.1.150"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0377-2217(84)90093-6"
+        },
+        {
+          "key": "ref8",
+          "first-page": "39",
+          "article-title": "ant system for job&mdash;shop scheduling",
+          "volume": "34",
+          "author": "colorni",
+          "year": "0",
+          "journal-title": "JORBEL&#x2014 Belgian J Oper Res Statist Comp Sci"
+        },
+        {
+          "key": "ref7",
+          "first-page": "509",
+          "article-title": "an investigation of some properties of an ant algorithm",
+          "author": "colorni",
+          "year": "1992",
+          "journal-title": "Proc Parallel Problem Solving from Nature Conference (PPSN 92)"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/ijoc.4.4.387"
+        },
+        {
+          "key": "ref9",
+          "author": "colorni",
+          "year": "1993",
+          "journal-title": "Heuristics from nature for hard combinatorial problems"
+        },
+        {
+          "key": "ref1",
+          "author": "aarts",
+          "year": "1988",
+          "journal-title": "Simulated Annealing and Boltzmann Machines"
+        },
+        {
+          "key": "ref20",
+          "article-title": "empiric analysis of heuristics",
+          "author": "golden",
+          "year": "1985",
+          "journal-title": "The Travelling Salesman Problem"
+        },
+        {
+          "key": "ref22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0167-5060(08)70356-X"
+        },
+        {
+          "key": "ref21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-642-75118-9_32"
+        },
+        {
+          "key": "ref24",
+          "doi-asserted-by": "crossref",
+          "first-page": "671",
+          "DOI": "10.1126/science.220.4598.671",
+          "article-title": "optimization by simulated annealing",
+          "volume": "220",
+          "author": "kirkpatrick",
+          "year": "1983",
+          "journal-title": "Sci"
+        },
+        {
+          "key": "ref23",
+          "author": "holland",
+          "year": "1975",
+          "journal-title": "Adaptations in Natural and Artificial Systems"
+        },
+        {
+          "key": "ref26",
+          "author": "lawler",
+          "year": "1985",
+          "journal-title": "The Travelling Salesman Problem"
+        },
+        {
+          "key": "ref25",
+          "first-page": "85",
+          "article-title": "computer-aided layout design",
+          "volume": "9",
+          "author": "krarup",
+          "year": "1978",
+          "journal-title": "Mathemat Prog Study"
+        }
+      ],
+      "container-title": "IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx1/3477/10246/00484436.pdf?arnumber=484436",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            11,
+            29
+          ]
+        ],
+        "date-time": "2021-11-29T15:07:04Z",
+        "timestamp": 1638198424000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/484436/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1996,
+            2
+          ]
+        ]
+      },
+      "references-count": 34,
+      "journal-issue": {
+        "issue": "1"
+      },
+      "URL": "http://dx.doi.org/10.1109/3477.484436",
+      "relation": {},
+      "ISSN": [
+        "1083-4419",
+        "1941-0492"
+      ],
+      "subject": [],
+      "container-title-short": "IEEE Trans. Syst., Man, Cybern. B",
+      "published": {
+        "date-parts": [
+          [
+            1996,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1145/359156.359164",
+    "error": "HTTP Error 429: Too Many Requests",
+    "csl_metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T10:46:07Z",
+        "timestamp": 1794048367849,
+        "version": "4.8.0"
+      },
+      "reference-count": 10,
+      "publisher": "Association for Computing Machinery (ACM)",
+      "issue": "10",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1979,
+                10,
+                1
+              ]
+            ],
+            "date-time": "1979-10-01T00:00:00Z",
+            "timestamp": 307584000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "dl.acm.org"
+        ],
+        "crossmark-restriction": true
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            1979,
+            10
+          ]
+        ]
+      },
+      "DOI": "10.1145/359156.359164",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2002,
+            7,
+            27
+          ]
+        ],
+        "date-time": "2002-07-27T07:34:59Z",
+        "timestamp": 1027755299000
+      },
+      "page": "560-570",
+      "update-policy": "https://doi.org/10.1145/crossmark-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 1718,
+      "title": "An algorithm for planning collision-free paths among polyhedral obstacles",
+      "prefix": "10.1145",
+      "volume": "22",
+      "author": [
+        {
+          "given": "Tomás",
+          "family": "Lozano-Pérez",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Massachusetts Institute of Technology, Cambridge"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michael A.",
+          "family": "Wesley",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "IBM Thomas J. Watson Research Center, Yorktown Heights, NY"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "320",
+      "published-online": {
+        "date-parts": [
+          [
+            1979,
+            10
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_1_1_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0010-4485(76)90006-3"
+        },
+        {
+          "key": "e_1_2_1_2_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1145/359046.359048"
+        },
+        {
+          "key": "e_1_2_1_3_2",
+          "volume-title": "Cantab Press",
+          "author": "Braid I.C.",
+          "year": "1973"
+        },
+        {
+          "key": "e_1_2_1_4_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TSSC.1968.300136"
+        },
+        {
+          "key": "e_1_2_1_5_2",
+          "volume-title": "Va.",
+          "author": "Ignat'yev M.B.",
+          "year": "1973"
+        },
+        {
+          "key": "e_1_2_1_6_2",
+          "volume-title": "Mass.",
+          "author": "Lozano",
+          "year": "1976"
+        },
+        {
+          "key": "e_1_2_1_7_2",
+          "unstructured": "Lyusternik L.A. Convex Figures and Polyhedra. Dover Publications N.Y. 1963. (Translated from the Russian by T.J. Smith; original copyright Moscow 1956. )  Lyusternik L.A. Convex Figures and Polyhedra. Dover Publications N.Y. 1963. (Translated from the Russian by T.J. Smith; original copyright Moscow 1956. )"
+        },
+        {
+          "key": "e_1_2_1_8_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.21236/ADA459660"
+        },
+        {
+          "key": "e_1_2_1_9_2",
+          "volume-title": "Calif.",
+          "author": "Udupa S.",
+          "year": "1977"
+        },
+        {
+          "key": "e_1_2_1_10_2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Will P.M. and Grossman D.D. An experimental system for computer controlled mechanical assembly. IEEE Trans. Comptrs. (1975) 879-888.  Will P.M. and Grossman D.D. An experimental system for computer controlled mechanical assembly. IEEE Trans. Comptrs. (1975) 879-888.",
+          "DOI": "10.1109/T-C.1975.224333"
+        }
+      ],
+      "container-title": "Communications of the ACM",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://dl.acm.org/doi/10.1145/359156.359164",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://dl.acm.org/doi/pdf/10.1145/359156.359164",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            18
+          ]
+        ],
+        "date-time": "2025-06-18T18:48:47Z",
+        "timestamp": 1750272527000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://dl.acm.org/doi/10.1145/359156.359164"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1979,
+            10
+          ]
+        ]
+      },
+      "references-count": 10,
+      "journal-issue": {
+        "issue": "10",
+        "published-print": {
+          "date-parts": [
+            [
+              1979,
+              10
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1145/359156.359164"
+      ],
+      "URL": "http://dx.doi.org/10.1145/359156.359164",
+      "relation": {},
+      "ISSN": [
+        "0001-0782",
+        "1557-7317"
+      ],
+      "subject": [],
+      "container-title-short": "Commun. ACM",
+      "published": {
+        "date-parts": [
+          [
+            1979,
+            10
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "1979-10-01",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.sbspro.2014.01.066",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            10,
+            7
+          ]
+        ],
+        "date-time": "2025-10-07T14:24:41Z",
+        "timestamp": 1759847081096
+      },
+      "reference-count": 16,
+      "publisher": "Elsevier BV",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                2,
+                1
+              ]
+            ],
+            "date-time": "2014-02-01T00:00:00Z",
+            "timestamp": 1391212800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                2,
+                18
+              ]
+            ],
+            "date-time": "2014-02-18T00:00:00Z",
+            "timestamp": 1392681600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 17,
+          "URL": "http://creativecommons.org/licenses/by-nc-nd/3.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Procedia - Social and Behavioral Sciences"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2014,
+            2
+          ]
+        ]
+      },
+      "DOI": "10.1016/j.sbspro.2014.01.066",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2014,
+            2,
+            18
+          ]
+        ],
+        "date-time": "2014-02-18T02:32:08Z",
+        "timestamp": 1392690728000
+      },
+      "page": "330-339",
+      "source": "Crossref",
+      "is-referenced-by-count": 9,
+      "special_numbering": "C",
+      "title": [
+        "An A* Label-setting Algorithm for Multimodal Resource Constrained Shortest Path Problem"
+      ],
+      "prefix": "10.1016",
+      "volume": "111",
+      "author": [
+        {
+          "given": "Tai-Yu",
+          "family": "Ma",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "reference": [
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0005",
+          "doi-asserted-by": "crossref",
+          "first-page": "295",
+          "DOI": "10.1002/net.3230130212",
+          "article-title": "Shortest chain subject to side constraints",
+          "volume": "13",
+          "author": "Aneja",
+          "year": "1983",
+          "journal-title": "Networks"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0010",
+          "unstructured": "Bar-Gera, H. (2011). Transportation network test problems. http://www.bgu.ac.il/∼bargera/tntp/."
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0015",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Barrett, C, Bisset, K, Holzer, M., Konjevod, G., Marathe, M., & Wagner D (2008). Engineering Label-Constrained Shortest-Path Algorithms. Fleischer R, Xu J. eds. LNCS, 5034, pp.27-37. Springer.",
+          "DOI": "10.1007/978-3-540-68880-8_5"
+        },
+        {
+          "issue": "3",
+          "key": "10.1016/j.sbspro.2014.01.066_bib0020",
+          "doi-asserted-by": "crossref",
+          "first-page": "809",
+          "DOI": "10.1137/S0097539798337716",
+          "article-title": "Formal-language constrained path problems",
+          "volume": "30",
+          "author": "Barrett",
+          "year": "2000",
+          "journal-title": "SIAM Journal of Computing"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0025",
+          "doi-asserted-by": "crossref",
+          "first-page": "379",
+          "DOI": "10.1002/net.3230190402",
+          "article-title": "An Algorithm for the Resource Constrained Shortest Path Problem",
+          "volume": "19",
+          "author": "Beasley",
+          "year": "1989",
+          "journal-title": "Networks"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0030",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Festa, P. (2006). Shortest path algorithms. In: Handbook of optimization in telecommunications, pp.185-210. Springer.",
+          "DOI": "10.1007/978-0-387-30165-5_8"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0035",
+          "unstructured": "Garey, M., & Johnson, D. (1979). Computer and intractability: a guide to the theory of NP-completeness. Freeman and company."
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0040",
+          "doi-asserted-by": "crossref",
+          "first-page": "293",
+          "DOI": "10.1002/net.3230100403",
+          "article-title": "A Dual Algorithm for the Constrained Shortest Path Problem",
+          "volume": "10",
+          "author": "Handler",
+          "year": "1980",
+          "journal-title": "Networks"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0045",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Hart, P.E., Nilsson, N.J., & Raphael, B. (1968). A Formal Basis for the Heuristic Determination of Minimum Cost Paths. IEEE Transactions on System Science and Cybernetics, SSC-4(2), 100-107.",
+          "DOI": "10.1109/TSSC.1968.300136"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0050",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Ikeda, T., Hsu, M.Y., Imai, H., Nishimura, S., Shimoura, H., Hashimoto, T., Tenmoku, K., & Mitoh, K. (1994). A Fast Algorithm for Finding Better Routes by AI Search Techniques. Proceeding of Vehicle Navigation and Information Systems Conference, IEEE, 291-296.",
+          "DOI": "10.1109/VNIS.1994.396824"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0055",
+          "first-page": "225",
+          "article-title": "Shortest viable path algorithm in multimodal networks",
+          "volume": "35",
+          "author": "Lozano",
+          "year": "2001",
+          "journal-title": "Transportation Research Part A"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0060",
+          "doi-asserted-by": "crossref",
+          "first-page": "853",
+          "DOI": "10.1016/S0191-2615(01)00038-8",
+          "volume": "36",
+          "author": "Lozano",
+          "year": "2002",
+          "journal-title": "Shortest viable hyperpath in multimodal networks Transportation Research Part B"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0065",
+          "unstructured": "Mendelzo, A.O., & Wood, P.T., (1989). Finding regular simple paths in graph databases. Proceedings of the 15th international conference on very large data bases, 185-193."
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0070",
+          "unstructured": "Pajor, T., (2009). Multi-Modal Route Planning. PhD thesis, Universität Karlsruhe, Germany."
+        },
+        {
+          "issue": "3",
+          "key": "10.1016/j.sbspro.2014.01.066_bib0075",
+          "doi-asserted-by": "crossref",
+          "first-page": "278",
+          "DOI": "10.1287/trsc.37.3.278.16042",
+          "article-title": "Time-Dependent Label-Constrained Shortest Path Problems with Applications",
+          "volume": "37",
+          "author": "Sherali",
+          "year": "2003",
+          "journal-title": "Transportation Science"
+        },
+        {
+          "key": "10.1016/j.sbspro.2014.01.066_bib0080",
+          "unstructured": "Ziegelmann, M., (2001). Constrained shortest paths and related algorithms. PhD thesis, Universität des Saarlandes."
+        }
+      ],
+      "container-title": [
+        "Procedia - Social and Behavioral Sciences"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S1877042814000676?httpAccept=text/xml",
+          "content-type": "text/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S1877042814000676?httpAccept=text/plain",
+          "content-type": "text/plain",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2019,
+            8,
+            7
+          ]
+        ],
+        "date-time": "2019-08-07T14:32:35Z",
+        "timestamp": 1565188355000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1877042814000676"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2014,
+            2
+          ]
+        ]
+      },
+      "references-count": 16,
+      "alternative-id": [
+        "S1877042814000676"
+      ],
+      "URL": "https://doi.org/10.1016/j.sbspro.2014.01.066",
+      "relation": {},
+      "ISSN": [
+        "1877-0428"
+      ],
+      "issn-type": [
+        {
+          "value": "1877-0428",
+          "type": "print"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1177/01423312241264860",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            22
+          ]
+        ],
+        "date-time": "2026-09-22T07:41:22Z",
+        "timestamp": 1790062882370,
+        "version": "4.0.1"
+      },
+      "reference-count": 43,
+      "publisher": "SAGE Publications",
+      "issue": "9",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                19
+              ]
+            ],
+            "date-time": "2024-08-19T00:00:00Z",
+            "timestamp": 1724025600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://journals.sagepub.com/page/policies/text-and-data-mining-license"
+        }
+      ],
+      "funder": [
+        {
+          "name": "Entrepreneurship, Innovation Plan of Jiangsu Province",
+          "award": [
+            "JSSCBS20210641"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "JSSCBS20210641"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jiangsu Funding Program for Excellent Postdoctoral Talent",
+          "award": [
+            "2023ZB246"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "2023ZB246"
+              ]
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/501100001809",
+          "name": "National Natural Science Foundation of China",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "62103293"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "62103293"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/501100001809",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/501100010881",
+          "name": "Suzhou Municipal Science and Technology Bureau",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "SYG202138"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "SYG202138"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/501100010881",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/501100004608",
+          "name": "Natural Science Foundation of Jiangsu Province",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "BK20210709"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "BK20210709"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/501100004608",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "journals.sagepub.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Transactions of the Institute of Measurement and Control"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            6
+          ]
+        ]
+      },
+      "abstract": "<jats:p>Path planning is a fundamental aspect of mobile robot navigation, playing a crucial role in enabling robots to autonomously navigate while avoiding obstacles. Nevertheless, traditional path planning algorithms face navigation challenges, including obstacle avoidance and the potential for getting stuck in local minima or deadlocks along the path. To tackle these challenges, the study proposes an enhanced path planning method based on control barrier function (CBF). This approach introduces a safety velocity adjustment mechanism based on CBF and combines it with the particle swarm optimization (PSO), adjusting the safe speed in global planning and addressing the issue of local minima. Experimental simulations are conducted to validate the flexibility and global optimization performance of the proposed path planning method across various obstacle scenarios.</jats:p>",
+      "DOI": "10.1177/01423312241264860",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            19
+          ]
+        ],
+        "date-time": "2024-08-19T05:14:11Z",
+        "timestamp": 1724044451000
+      },
+      "page": "1715-1724",
+      "update-policy": "https://doi.org/10.1177/sage-journals-update-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 19,
+      "title": [
+        "Safe path planning of mobile robot based on improved particle swarm optimization"
+      ],
+      "prefix": "10.1177",
+      "volume": "47",
+      "author": [
+        {
+          "given": "Bingbing",
+          "family": "Guo",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Mechanical and Electrical Engineering, Soochow University, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuan",
+          "family": "Sun",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Mechanical and Electrical Engineering, Soochow University, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9960-9040",
+          "authenticated-orcid": false,
+          "given": "Yiyang",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Mechanical and Electrical Engineering, Soochow University, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "179",
+      "published-online": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            19
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_3_2_2_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/CDC51059.2022.9993278"
+        },
+        {
+          "key": "e_1_3_2_3_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/CDC.2014.7040372"
+        },
+        {
+          "key": "e_1_3_2_4_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TAC.2016.2638961"
+        },
+        {
+          "key": "e_1_3_2_5_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0142331218824393"
+        },
+        {
+          "key": "e_1_3_2_6_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TASE.2022.3183610"
+        },
+        {
+          "key": "e_1_3_2_7_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TNNLS.2022.3209154"
+        },
+        {
+          "key": "e_1_3_2_8_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TII.2022.3168434"
+        },
+        {
+          "key": "e_1_3_2_9_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3390/app12157796"
+        },
+        {
+          "key": "e_1_3_2_10_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMECH.2022.3164101"
+        },
+        {
+          "key": "e_1_3_2_11_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3390/s22239036"
+        },
+        {
+          "key": "e_1_3_2_12_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.conengprac.2024.105991"
+        },
+        {
+          "key": "e_1_3_2_13_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3390/machines10100931"
+        },
+        {
+          "key": "e_1_3_2_14_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.eswa.2021.115445"
+        },
+        {
+          "key": "e_1_3_2_15_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/09544070211014319"
+        },
+        {
+          "key": "e_1_3_2_16_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/MRA.2022.3174699"
+        },
+        {
+          "key": "e_1_3_2_17_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICRA48891.2023.10160857"
+        },
+        {
+          "key": "e_1_3_2_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/LRA.2023.3236577"
+        },
+        {
+          "key": "e_1_3_2_19_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.cie.2022.108123"
+        },
+        {
+          "key": "e_1_3_2_20_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0142331219897992"
+        },
+        {
+          "key": "e_1_3_2_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIV.2021.3123341"
+        },
+        {
+          "key": "e_1_3_2_22_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIE.2021.3070508"
+        },
+        {
+          "key": "e_1_3_2_23_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.mechmachtheory.2021.104606"
+        },
+        {
+          "key": "e_1_3_2_24_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TII.2020.3034280"
+        },
+        {
+          "key": "e_1_3_2_25_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/01423312211024798"
+        },
+        {
+          "key": "e_1_3_2_26_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/CDC45484.2021.9682803"
+        },
+        {
+          "key": "e_1_3_2_27_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.cie.2021.107230"
+        },
+        {
+          "key": "e_1_3_2_28_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s40430-023-04048-6"
+        },
+        {
+          "key": "e_1_3_2_29_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0142331220966419"
+        },
+        {
+          "key": "e_1_3_2_30_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/cpe.6801"
+        },
+        {
+          "key": "e_1_3_2_31_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/01423312231186684"
+        },
+        {
+          "key": "e_1_3_2_32_1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Singletary A Klingebiel K Bourne J et al. (2021) Comparative analysis of control barrier functions and artificial potential fields for obstacle avoidance. In: 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) Prague 27 September pp. 8129–8136. New York: IEEE.",
+          "DOI": "10.1109/IROS51168.2021.9636670"
+        },
+        {
+          "key": "e_1_3_2_33_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/JSYST.2022.3192573"
+        },
+        {
+          "key": "e_1_3_2_34_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/LRA.2023.3290819"
+        },
+        {
+          "key": "e_1_3_2_35_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0142331221998832"
+        },
+        {
+          "key": "e_1_3_2_36_1",
+          "unstructured": "Taylor A Singletary A Yue Y et al. (2020a) Learning for safety-critical control with control barrier functions. In: Proceedings of the 2nd conference on learning for dynamics and control Online New York10–11 June pp. 708–717. PMLR. https://proceedings.mlr.press/v120/"
+        },
+        {
+          "key": "e_1_3_2_37_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/LCSYS.2020.3009082"
+        },
+        {
+          "key": "e_1_3_2_38_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/LRA.2021.3067310"
+        },
+        {
+          "key": "e_1_3_2_39_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.sigpro.2024.109448"
+        },
+        {
+          "key": "e_1_3_2_40_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3390/act12100393"
+        },
+        {
+          "key": "e_1_3_2_41_1",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Yan B Shi P Lim CP et al. (2024) Security and safety-critical learning-based collaborative control for multiagent systems. Epub ahead of print 26 January. DOI: 10.1109/TNNLS.2024.3350679.",
+          "DOI": "10.1109/TNNLS.2024.3350679"
+        },
+        {
+          "key": "e_1_3_2_42_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.rcim.2021.102302"
+        },
+        {
+          "key": "e_1_3_2_43_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.compag.2022.107274"
+        },
+        {
+          "key": "e_1_3_2_44_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ress.2024.109966"
+        }
+      ],
+      "container-title": [
+        "Transactions of the Institute of Measurement and Control"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/01423312241264860",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/full-xml/10.1177/01423312241264860",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://journals.sagepub.com/doi/pdf/10.1177/01423312241264860",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            5,
+            1
+          ]
+        ],
+        "date-time": "2026-05-01T15:11:11Z",
+        "timestamp": 1777648271000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://journals.sagepub.com/doi/10.1177/01423312241264860"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            19
+          ]
+        ]
+      },
+      "references-count": 43,
+      "journal-issue": {
+        "issue": "9",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              6
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1177/01423312241264860"
+      ],
+      "URL": "https://doi.org/10.1177/01423312241264860",
+      "relation": {},
+      "ISSN": [
+        "0142-3312",
+        "1477-0369"
+      ],
+      "issn-type": [
+        {
+          "value": "0142-3312",
+          "type": "print"
+        },
+        {
+          "value": "1477-0369",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            19
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1186/s10033-024-01000-0",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            6
+          ]
+        ],
+        "date-time": "2026-10-06T11:05:15Z",
+        "timestamp": 1791284715587,
+        "version": "4.1.0"
+      },
+      "reference-count": 34,
+      "publisher": "Elsevier BV",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                27
+              ]
+            ],
+            "date-time": "2024-02-27T00:00:00Z",
+            "timestamp": 1708992000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                2,
+                27
+              ]
+            ],
+            "date-time": "2024-02-27T00:00:00Z",
+            "timestamp": 1708992000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/501100012166",
+          "name": "National Key Research and Development Program of China",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "2021YFF0306202"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "2021YFF0306202"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/501100012166",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "link.springer.com"
+        ],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Chin. J. Mech. Eng."
+      ],
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>\n                    The current gait planning for legged robots is mostly based on human presets, which cannot match the flexible characteristics of natural mammals. This paper proposes a gait optimization framework for hexapod robots called Smart Gait. Smart Gait contains three modules: swing leg trajectory optimization, gait period &amp; duty optimization, and gait sequence optimization. The full dynamics of a single leg, and the centroid dynamics of the overall robot are considered in the respective modules. The Smart Gait not only helps the robot to decrease the energy consumption when in locomotion, mostly, it enables the hexapod robot to determine its gait pattern transitions based on its current state, instead of repeating the formalistic clock-set step cycles. Our Smart Gait framework allows the hexapod robot to behave nimbly as a living animal when in 3D movements for the first time. The Smart Gait framework combines offline and online optimizations without any fussy data-driven training procedures, and it can run efficiently on board in real-time after deployment. Various experiments are carried out on the hexapod robot\n                    <jats:italic>LittleStrong</jats:italic>\n                    . The results show that the energy consumption is reduced by 15.9% when in locomotion. Adaptive gait patterns can be generated spontaneously both in regular and challenge environments, and when facing external interferences.\n                  </jats:p>",
+      "DOI": "10.1186/s10033-024-01000-0",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            26
+          ]
+        ],
+        "date-time": "2024-02-26T23:40:13Z",
+        "timestamp": 1708990813000
+      },
+      "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 13,
+      "title": [
+        "Smart Gait: A Gait Optimization Framework for Hexapod Robots"
+      ],
+      "prefix": "10.1016",
+      "volume": "37",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4936-3526",
+          "authenticated-orcid": false,
+          "given": "Yunpeng",
+          "family": "Yin",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Feng",
+          "family": "Gao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qiao",
+          "family": "Sun",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yue",
+          "family": "Zhao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuguang",
+          "family": "Xiao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "published-online": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            27
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "issue": "1",
+          "key": "1000_CR1",
+          "doi-asserted-by": "publisher",
+          "first-page": "84",
+          "DOI": "10.1002/ad.2394",
+          "volume": "89",
+          "author": "SC Niquille",
+          "year": "2019",
+          "unstructured": "S C Niquille. Regarding the pain of SpotMini: Or what a robot's struggle to learn reveals about the built environment. Architectural Design, 2019, 89(1): 84-91.",
+          "journal-title": "Architectural Design"
+        },
+        {
+          "key": "1000_CR2",
+          "doi-asserted-by": "crossref",
+          "unstructured": "M Hutter, C Gehring, D Jud, et al. ANYmal - A highly mobile and dynamic quadrupedal robot. 2016 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2016.",
+          "DOI": "10.1109/IROS.2016.7758092"
+        },
+        {
+          "issue": "62",
+          "key": "1000_CR3",
+          "doi-asserted-by": "publisher",
+          "first-page": "eabk2822",
+          "DOI": "10.1126/scirobotics.abk2822",
+          "volume": "7",
+          "author": "T Miki",
+          "year": "2019",
+          "unstructured": "T Miki, J Lee, J Hwangbo, et al. Learning robust perceptive locomotion for quadrupedal robots in the wild. Science Robotics, 2022, 7(62): eabk2822.",
+          "journal-title": "Science Robotics"
+        },
+        {
+          "key": "1000_CR4",
+          "doi-asserted-by": "crossref",
+          "unstructured": "C Semini, N G Tsagarakis, E Guglielmino, et al. Design of HyQ – a hydraulically and electrically actuated quadruped robot. Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering, 2011.",
+          "DOI": "10.1177/0959651811402275"
+        },
+        {
+          "key": "1000_CR5",
+          "doi-asserted-by": "crossref",
+          "unstructured": "S Seok, A Wang, Y C Meng, et al. Design principles for highly efficient quadrupeds and implementation on the MIT Cheetah robot. IEEE, 2013.",
+          "DOI": "10.1109/ICRA.2013.6631038"
+        },
+        {
+          "issue": "2",
+          "key": "1000_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "027836491769424",
+          "DOI": "10.1177/0278364917694244",
+          "volume": "36",
+          "author": "HW Park",
+          "year": "2017",
+          "unstructured": "H W Park, P M Wensing, S Kim. High-speed bounding with the MIT Cheetah 2: Control design and experiments. International Journal of Robotics Research, 2017, 36(2): 027836491769424.",
+          "journal-title": "International Journal of Robotics Research"
+        },
+        {
+          "key": "1000_CR7",
+          "doi-asserted-by": "crossref",
+          "unstructured": "G Bledt, M J Powell, B Katz, et al. MIT Cheetah 3: Design and control of a robust, dynamic quadruped robot. IEEE International Conference of Intelligent Robots (IROS) 2018, 2018.",
+          "DOI": "10.1109/IROS.2018.8593885"
+        },
+        {
+          "key": "1000_CR8",
+          "doi-asserted-by": "crossref",
+          "unstructured": "B Katz, J D Carlo, S Kim. Mini Cheetah: A platform for pushing the limits of dynamic quadruped control. 2019 International Conference on Robotics and Automation (ICRA), 2019.",
+          "DOI": "10.1109/ICRA.2019.8793865"
+        },
+        {
+          "key": "1000_CR9",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P Yang, F Gao. Leg kinematic analysis and prototype experiments of walking-operating multifunctional hexapod robot. ARCHIVE Proceedings of the Institution of Mechanical Engineers Part C Journal of Mechanical Engineering Science 1989-1996 (vols 203-210), 2014, 228(12): 2217-2232.",
+          "DOI": "10.1177/0954406213516087"
+        },
+        {
+          "key": "1000_CR10",
+          "doi-asserted-by": "publisher",
+          "first-page": "271",
+          "DOI": "10.1007/s11465-020-0623-1",
+          "volume": "16",
+          "author": "Y Zhao",
+          "year": "2021",
+          "unstructured": "Y Zhao, F Gao, Q Sun, et al. Terrain classification and adaptive locomotion for a hexapod robot Qingzhui. Frontiers of Mechanical Engineering, 2021, 16: 271–284.",
+          "journal-title": "Frontiers of Mechanical Engineering"
+        },
+        {
+          "key": "1000_CR11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.mechmachtheory.2020.103897",
+          "volume": "151",
+          "author": "L Mao",
+          "year": "2020",
+          "unstructured": "L Mao, F Gao, Y Tian, et al. Novel method for preventing shin-collisions in six-legged robots by utilising a robot–terrain interference model. Mechanism and Machine Theory, 2020, 151: 103897.",
+          "journal-title": "Mechanism and Machine Theory"
+        },
+        {
+          "issue": "1",
+          "key": "1000_CR12",
+          "doi-asserted-by": "publisher",
+          "first-page": "34",
+          "DOI": "10.1109/MRA.2015.2505910",
+          "volume": "23",
+          "author": "C Gehring",
+          "year": "2016",
+          "unstructured": "C Gehring, S Coros, M Hutler, et al. Practice makes perfect: An optimization-based approach to controlling agile motions for a quadruped robot. IEEE Robotics & Automation Magazine, 2016, 23(1): 34-43.",
+          "journal-title": "IEEE Robotics & Automation Magazine"
+        },
+        {
+          "issue": "1",
+          "key": "1000_CR13",
+          "first-page": "012032",
+          "volume": "1831",
+          "author": "G Bhardwaj",
+          "year": "2021",
+          "unstructured": "G Bhardwaj, U Mishra, N Sukavanam, et al. Planning adaptive brachistochrone and circular arc hip trajectory for a toe-foot bipedal robot going downstairs. Journal of Physics: Conference Series, 2021, 1831(1): 012032.",
+          "journal-title": "Journal of Physics: Conference Series"
+        },
+        {
+          "issue": "11",
+          "key": "1000_CR14",
+          "doi-asserted-by": "publisher",
+          "first-page": "1417",
+          "DOI": "10.1177/0278364914532150",
+          "volume": "33",
+          "author": "DJ Hyun",
+          "year": "2014",
+          "unstructured": "D J Hyun, S Seok, J Lee, et al. High speed trot-running: Implementation of a hierarchical controller using proprioceptive impedance control on the MIT Cheetah. International Journal of Robotics Research, 2014, 33(11): 1417-1445.",
+          "journal-title": "International Journal of Robotics Research"
+        },
+        {
+          "issue": "7",
+          "key": "1000_CR15",
+          "doi-asserted-by": "publisher",
+          "first-page": "1508",
+          "DOI": "10.3390/app9071508",
+          "volume": "9",
+          "author": "X Zeng",
+          "year": "2019",
+          "unstructured": "X Zeng, S Zhang, H Zhang, et al. Leg trajectory planning for quadruped robots with high-speed trot gait. Applied Sciences, 2019, 9(7): 1508.",
+          "journal-title": "Applied Sciences"
+        },
+        {
+          "key": "1000_CR16",
+          "doi-asserted-by": "crossref",
+          "unstructured": "T Liao, S Ye, L Chen, et al. Energy efficient swing leg trajectory planning for quadruped robots walking on rough terrain. 2019 IEEE International Conference on Robotics and Biomimetics (ROBIO), 2019: 2128-2133.",
+          "DOI": "10.1109/ROBIO49542.2019.8961550"
+        },
+        {
+          "key": "1000_CR17",
+          "doi-asserted-by": "crossref",
+          "unstructured": "R Khusainov, A Klimchik, E Magid. Swing leg trajectory optimization for a humanoid robot locomotion. International Conference on Informatics in Control, Automation and Robotics, 2016, 3: 130-141.",
+          "DOI": "10.5220/0006011401300141"
+        },
+        {
+          "issue": "4",
+          "key": "1000_CR18",
+          "doi-asserted-by": "publisher",
+          "first-page": "943",
+          "DOI": "10.1007/s10033-017-0110-8",
+          "volume": "30",
+          "author": "X-B Chen",
+          "year": "2017",
+          "unstructured": "X B Chen, F Gao. Energy expenditure of trotting gait under different gait parameters. Chinese Journal of Mechanical Engineering, 2017, 30(4): 943-950.",
+          "journal-title": "Chinese Journal of Mechanical Engineering"
+        },
+        {
+          "key": "1000_CR19",
+          "doi-asserted-by": "publisher",
+          "first-page": "136",
+          "DOI": "10.1016/j.mechmachtheory.2019.07.009",
+          "volume": "141",
+          "author": "Z Chen",
+          "year": "2019",
+          "unstructured": "Z Chen, F Gao, Q Sun, et al. Ball-on-plate motion planning for six-parallel-legged robots walking on irregular terrains using pure haptic information. Mechanism and Machine Theory, 2019, 141: 136-150.",
+          "journal-title": "Mechanism and Machine Theory"
+        },
+        {
+          "key": "1000_CR20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.mechmachtheory.2022.105069",
+          "volume": "178",
+          "author": "Z Chen",
+          "year": "2022",
+          "unstructured": "Z Chen, Q Xi, F Gao, et al. Fault-tolerant gait design for quadruped robots with one locked leg using the GF set theory. Mechanism and Machine Theory, 2022, 178: 105069.",
+          "journal-title": "Mechanism and Machine Theory"
+        },
+        {
+          "issue": "1",
+          "key": "1000_CR21",
+          "doi-asserted-by": "publisher",
+          "first-page": "1",
+          "DOI": "10.1038/srep08169",
+          "volume": "5",
+          "author": "Y Fukuoka",
+          "year": "2015",
+          "unstructured": "Y Fukuoka, Y Habu, T Fukui. A simple rule for quadrupedal gait generation determined by leg loading feedback: A modeling study. Scientific Reports, 2015, 5(1): 1-11.",
+          "journal-title": "Scientific reports"
+        },
+        {
+          "issue": "4",
+          "key": "1000_CR22",
+          "doi-asserted-by": "publisher",
+          "first-page": "642",
+          "DOI": "10.1016/j.neunet.2008.03.014",
+          "volume": "21",
+          "author": "AJ Ijspeert",
+          "year": "2008",
+          "unstructured": "A J Ijspeert. Central pattern generators for locomotion control in animals and robots: A review. Neural Networks, 2008, 21(4): 642-653.",
+          "journal-title": "Neural networks"
+        },
+        {
+          "key": "1000_CR23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3389/fnbot.2021.627157",
+          "volume": "15",
+          "author": "W Ouyang",
+          "year": "2021",
+          "unstructured": "W Ouyang, H Chi, J Pang, et al. Adaptive locomotion control of a hexapod robot via bio-inspired learning. Frontiers in Neurorobotics, 2021, 15: 627157.",
+          "journal-title": "Frontiers in Neurorobotics"
+        },
+        {
+          "issue": "2",
+          "key": "1000_CR24",
+          "doi-asserted-by": "publisher",
+          "first-page": "1611",
+          "DOI": "10.1109/LRA.2019.2896723",
+          "volume": "4",
+          "author": "C Boussema",
+          "year": "2019",
+          "unstructured": "C Boussema, M J Powell, G Bledt, et al. Online gait transitions and disturbance recovery for legged robots via the feasible impulse set. IEEE Robotics & Automation Letters, 2019, 4(2): 1611-1618.",
+          "journal-title": "IEEE Robotics & Automation Letters"
+        },
+        {
+          "key": "1000_CR25",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P Fankhauser, C D Bellicoso, C Gehring, et al. Free gait—An architecture for the versatile control of legged robots. 2016 IEEE-RAS 16th International Conference on Humanoid Robots (Humanoids), 2016: 1052-1058.",
+          "DOI": "10.1109/HUMANOIDS.2016.7803401"
+        },
+        {
+          "issue": "3",
+          "key": "1000_CR26",
+          "doi-asserted-by": "publisher",
+          "first-page": "1560",
+          "DOI": "10.1109/LRA.2018.2798285",
+          "volume": "3",
+          "author": "AW Winkler",
+          "year": "2018",
+          "unstructured": "A W Winkler, C D Bellicoso, M Hutter, et al. Gait and trajectory optimization for legged systems through phase-based end-effector parameterization. IEEE Robotics and Automation Letters, 2018, 3(3): 1560-1567.",
+          "journal-title": "IEEE Robotics and Automation Letters"
+        },
+        {
+          "key": "1000_CR27",
+          "doi-asserted-by": "publisher",
+          "unstructured": "D Valouch, J Faigl. Gait-free planning for hexapod walking robot. 2021 European Conference on Mobile Robots (ECMR), 31 Aug.-3 Sept. 2021, 2021: 1-8, doi: https://doi.org/10.1109/ECMR50962.2021.9568834.",
+          "DOI": "10.1109/ECMR50962.2021.9568834"
+        },
+        {
+          "issue": "2",
+          "key": "1000_CR28",
+          "doi-asserted-by": "publisher",
+          "first-page": "26",
+          "DOI": "10.1007/s11465-022-0742-y",
+          "volume": "18",
+          "author": "YP Yin",
+          "year": "2023",
+          "unstructured": "Y P Yin, Y G Xiao, F Gao, Footholds optimization for legged robots walking on complex terrain. Frontiers of Mechanical Engineering 2023, 18(2): 26. https://doi.org/10.1007/s11465-022-0742-y.",
+          "journal-title": "Frontiers of Mechanical Engineering"
+        },
+        {
+          "key": "1000_CR29",
+          "unstructured": "P Gerum. Xenomai-Implementing a RTOS emulation framework on GNU/Linux. White Paper, Xenomai, 2004: 81."
+        },
+        {
+          "key": "1000_CR30",
+          "unstructured": "P Hintjens. ZeroMQ: messaging for many applications. O'Reilly Media, Inc., 2013."
+        },
+        {
+          "key": "1000_CR31",
+          "doi-asserted-by": "crossref",
+          "unstructured": "C D Bellicoso, F Jenelten, P Fankhauser, et al. Dynamic locomotion and whole-body control for quadrupedal robots. IEEE/RSJ International Conference on Intelligent Robots & Systems, 2017.",
+          "DOI": "10.1109/IROS.2017.8206174"
+        },
+        {
+          "issue": "1",
+          "key": "1000_CR32",
+          "first-page": "101",
+          "volume": "11",
+          "author": "A Ranganathan",
+          "year": "2004",
+          "unstructured": "A Ranganathan. The levenberg-marquardt algorithm. Tutoral on LM Algorithm, 2004, 11(1): 101-110.",
+          "journal-title": "Tutoral on LM Algorithm"
+        },
+        {
+          "issue": "7",
+          "key": "1000_CR33",
+          "doi-asserted-by": "publisher",
+          "first-page": "1048",
+          "DOI": "10.1017/S026357471800022X",
+          "volume": "6",
+          "author": "Q Sun",
+          "year": "2018",
+          "unstructured": "Q Sun, F Gao, X B Chen. Towards dynamic alternating tripod trotting of a pony-sized hexapod robot for disaster rescuing based on multi-modal impedance control. Robotica, 2018, 6(7): 1048-1076.",
+          "journal-title": "Robotica"
+        },
+        {
+          "issue": "1",
+          "key": "1000_CR34",
+          "doi-asserted-by": "publisher",
+          "first-page": "259",
+          "DOI": "10.1007/s10514-016-9573-1",
+          "volume": "41",
+          "author": "M Focchi",
+          "year": "2017",
+          "unstructured": "M Focchi, A Del Prete, I Havoutis, et al. High-slope terrain locomotion for torque-controlled quadruped robots. Autonomous Robots, 2017, 41(1): 259-272.",
+          "journal-title": "Autonomous Robots"
+        }
+      ],
+      "container-title": [
+        "Chinese Journal of Mechanical Engineering"
+      ],
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://link.springer.com/content/pdf/10.1186/s10033-024-01000-0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://link.springer.com/article/10.1186/s10033-024-01000-0/fulltext.html",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://link.springer.com/content/pdf/10.1186/s10033-024-01000-0.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            8
+          ]
+        ],
+        "date-time": "2026-01-08T06:54:07Z",
+        "timestamp": 1767855247000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://cjme.springeropen.com/articles/10.1186/s10033-024-01000-0"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            27
+          ]
+        ]
+      },
+      "references-count": 34,
+      "journal-issue": {
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              12
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "1000"
+      ],
+      "URL": "https://doi.org/10.1186/s10033-024-01000-0",
+      "relation": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.21203/rs.3.rs-3133021/v1",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "ISSN": [
+        "2192-8258"
+      ],
+      "issn-type": [
+        {
+          "value": "2192-8258",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            2,
+            27
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "5 July 2023",
+          "order": 1,
+          "name": "received",
+          "label": "Received",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "16 October 2023",
+          "order": 2,
+          "name": "revised",
+          "label": "Revised",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "19 January 2024",
+          "order": 3,
+          "name": "accepted",
+          "label": "Accepted",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "27 February 2024",
+          "order": 4,
+          "name": "first_online",
+          "label": "First Online",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "order": 1,
+          "name": "Ethics",
+          "group": {
+            "name": "EthicsHeading",
+            "label": "Declarations"
+          }
+        },
+        {
+          "value": "Not applicable.",
+          "order": 2,
+          "name": "Ethics",
+          "group": {
+            "name": "EthicsHeading",
+            "label": "Ethics Approval and Consent to Participate"
+          }
+        },
+        {
+          "value": "Not applicable.",
+          "order": 3,
+          "name": "Ethics",
+          "group": {
+            "name": "EthicsHeading",
+            "label": "Consent for Publication"
+          }
+        },
+        {
+          "value": "The authors declare no competing financial interests.",
+          "order": 4,
+          "name": "Ethics",
+          "group": {
+            "name": "EthicsHeading",
+            "label": "Competing Interests"
+          }
+        }
+      ],
+      "article-number": "15"
+    }
+  },
+  {
+    "doi": "10.3389/fnbot.2025.1605938",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            1
+          ]
+        ],
+        "date-time": "2026-10-01T21:47:37Z",
+        "timestamp": 1790891257249,
+        "version": "4.1.0"
+      },
+      "reference-count": 19,
+      "publisher": "Frontiers Media SA",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                5,
+                21
+              ]
+            ],
+            "date-time": "2025-05-21T00:00:00Z",
+            "timestamp": 1747785600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "frontiersin.org"
+        ],
+        "crossmark-restriction": true
+      },
+      "short-container-title": [
+        "Front. Neurorobot."
+      ],
+      "abstract": "<jats:p>To address the challenges arising from the coupled interactions between multi-dimensional terrain features—encompassing both geometric and physical properties of complex field environments—and the locomotion stability of hexapod robots, this paper presents a comprehensive motion planning framework incorporating multi-dimensional terrain information. The proposed methodology systematically extracts multi-dimensional geometric and physical terrain features from a multi-layered environmental map. Based on these features, a traversal cost map is synthesized, and an enhanced A* algorithm is developed that incorporates terrain traversal metrics to optimize path planning safety across complex field environments. Furthermore, the framework introduces a foothold cost map derived from multi-dimensional terrain data, coupled with a fault-tolerant free gait planning algorithm based on foothold cost evaluation. This approach enables dynamic gait modulation to enhance overall locomotion stability while maintaining safe trajectory planning. The efficacy of the proposed framework is validated through both simulation studies and physical experiments on a hexapod robotic platform. Experimental results demonstrate that, compared to conventional hexapod motion planning approaches, the proposed multi-dimensional terrain-aware planning framework significantly enhances both locomotion safety and stability across complex field environments.</jats:p>",
+      "DOI": "10.3389/fnbot.2025.1605938",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            21
+          ]
+        ],
+        "date-time": "2025-05-21T01:25:55Z",
+        "timestamp": 1747790755000
+      },
+      "update-policy": "https://doi.org/10.3389/crossmark-policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 9,
+      "title": [
+        "Hexapod robot motion planning investigation under the influence of multi-dimensional terrain features"
+      ],
+      "prefix": "10.3389",
+      "volume": "19",
+      "author": [
+        {
+          "given": "Chen",
+          "family": "Chen",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Junbo",
+          "family": "Lin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bo",
+          "family": "You",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jiayu",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Biao",
+          "family": "Gao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "1965",
+      "published-online": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            21
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "ref1",
+          "first-page": "104",
+          "article-title": "A comparison of search-based planners for a legged robot",
+          "author": "Arain",
+          "year": "2013"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "first-page": "142",
+          "DOI": "10.3390/robotics13100142",
+          "article-title": "Control of a hexapod robot considering terrain interaction",
+          "volume": "13",
+          "author": "Arrigoni",
+          "year": "2024",
+          "journal-title": "Robotics"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "first-page": "2017",
+          "DOI": "10.1016/j.asej.2020.11.005",
+          "article-title": "Development of quadruped walking robots: a review",
+          "volume": "12",
+          "author": "Biswal",
+          "year": "2021",
+          "journal-title": "Ain Shams Eng. J."
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "first-page": "012157",
+          "DOI": "10.1088/1742-6596/1754/1/012157",
+          "article-title": "Model design and gait planning of hexapod climbing robot",
+          "volume": "1754",
+          "author": "Cai",
+          "year": "2021",
+          "journal-title": "J. Phys. Conf. Ser."
+        },
+        {
+          "key": "ref5",
+          "first-page": "3573",
+          "article-title": "Grid-based motion planning using advanced motions for hexapod robots",
+          "author": "Cheah",
+          "year": "2018"
+        },
+        {
+          "key": "ref6",
+          "doi-asserted-by": "publisher",
+          "first-page": "1",
+          "DOI": "10.3901/JME.2015.07.001",
+          "article-title": "Key technology analysis of BigDog quadruped robot",
+          "volume": "51",
+          "author": "Ding",
+          "year": "2015",
+          "journal-title": "J. Mech. Eng."
+        },
+        {
+          "key": "ref7",
+          "doi-asserted-by": "publisher",
+          "first-page": "7083",
+          "DOI": "10.1109/LRA.2022.3180439",
+          "article-title": "These maps are made for walking: real-time terrain property estimation for mobile robots",
+          "volume": "7",
+          "author": "Ewen",
+          "year": "2022",
+          "journal-title": "IEEE Robot. Automat. Lett."
+        },
+        {
+          "key": "ref8",
+          "doi-asserted-by": "publisher",
+          "first-page": "3019",
+          "DOI": "10.1109/LRA.2018.2849506",
+          "article-title": "Probabilistic terrain mapping for mobile robots with uncertain localization",
+          "volume": "3",
+          "author": "Fankhauser",
+          "year": "2018",
+          "journal-title": "IEEE Robot. Automat. Lett."
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "first-page": "3705",
+          "DOI": "10.3390/s19173705",
+          "article-title": "CPG-based gait generation of the curved-leg hexapod robot with smooth gait transition",
+          "volume": "19",
+          "author": "Long",
+          "year": "2019",
+          "journal-title": "Sensors"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "first-page": "263",
+          "DOI": "10.1109/TITS.2017.2750080",
+          "article-title": "ERFNet: efficient residual factorized ConvNet for real-time semantic segmentation",
+          "volume": "19",
+          "author": "Romera",
+          "year": "2018",
+          "journal-title": "IEEE Trans. Intell. Transp. Syst."
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "first-page": "135",
+          "DOI": "10.1108/IR-01-2022-0028",
+          "article-title": "Improved A* algorithm and model predictive control- based path planning and tracking framework for hexapod robots",
+          "volume": "50",
+          "author": "Wang",
+          "year": "2022",
+          "journal-title": "Ind. Robot Int. J. Robot. Res. Appl."
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "first-page": "10901",
+          "DOI": "10.1109/TII.2023.3240758",
+          "article-title": "Hierarchical free gait motion planning for hexapod robots using deep reinforcement learning",
+          "volume": "19",
+          "author": "Wang",
+          "year": "2023",
+          "journal-title": "IEEE Trans. Ind. Inf."
+        },
+        {
+          "key": "ref13",
+          "doi-asserted-by": "publisher",
+          "first-page": "5148",
+          "DOI": "10.1109/ICRA.2015.7139916",
+          "article-title": "Planning and execution of dynamic whole-body locomotion for a hydraulic quadruped on challenging terrain",
+          "author": "Winkler",
+          "year": "2015",
+          "journal-title": "Comput. Res. Reposit."
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "first-page": "100",
+          "DOI": "10.3901/JME.2021.01.100",
+          "article-title": "Instability adjustment and fault-tolerant gait design for hexapod robot single leg failure",
+          "volume": "57",
+          "author": "You",
+          "year": "2021",
+          "journal-title": "J. Mech. Eng."
+        },
+        {
+          "key": "ref15",
+          "doi-asserted-by": "publisher",
+          "first-page": "103401",
+          "DOI": "10.1016/j.robot.2019.103401",
+          "article-title": "Enhancing adaptability with local reactive behaviors for hexapod walking robot via sensory feedback integrated central pattern generator",
+          "volume": "124",
+          "author": "Yu",
+          "year": "2020",
+          "journal-title": "Robot. Auton. Syst."
+        },
+        {
+          "key": "ref16",
+          "doi-asserted-by": "publisher",
+          "first-page": "4891",
+          "DOI": "10.11591/ijece.v11i6.pp4891-4906",
+          "article-title": "A one decade survey of autonomous mobile robot systems",
+          "volume": "11",
+          "author": "Zghair",
+          "year": "2021",
+          "journal-title": "Int. J. Electric. Comput. Eng."
+        },
+        {
+          "key": "ref17",
+          "doi-asserted-by": "publisher",
+          "first-page": "1",
+          "DOI": "10.1177/1687814019838369",
+          "article-title": "A free gait controller designed for a heavy load hexapod robot",
+          "volume": "11",
+          "author": "Zha",
+          "year": "2019",
+          "journal-title": "Adv. Mech. Eng."
+        },
+        {
+          "key": "ref18",
+          "doi-asserted-by": "publisher",
+          "first-page": "2456",
+          "DOI": "10.3390/electronics12112456",
+          "article-title": "Mobile robot path planning algorithm based on RRT_Connect",
+          "volume": "12",
+          "author": "Zhang",
+          "year": "2023",
+          "journal-title": "Electronics"
+        },
+        {
+          "key": "ref19",
+          "doi-asserted-by": "publisher",
+          "first-page": "125",
+          "DOI": "10.1016/j.robot.2017.08.012",
+          "article-title": "A study of arbitrary gait pattern generation for turning of a bioinspired hexapod robot",
+          "volume": "97",
+          "author": "Zhu",
+          "year": "2017",
+          "journal-title": "Robot. Auton. Syst."
+        }
+      ],
+      "container-title": [
+        "Frontiers in Neurorobotics"
+      ],
+      "original-title": [],
+      "link": [
+        {
+          "URL": "https://www.frontiersin.org/articles/10.3389/fnbot.2025.1605938/full",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            21
+          ]
+        ],
+        "date-time": "2025-05-21T01:25:56Z",
+        "timestamp": 1747790756000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.frontiersin.org/articles/10.3389/fnbot.2025.1605938/full"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            21
+          ]
+        ]
+      },
+      "references-count": 19,
+      "alternative-id": [
+        "10.3389/fnbot.2025.1605938"
+      ],
+      "URL": "https://doi.org/10.3389/fnbot.2025.1605938",
+      "relation": {},
+      "ISSN": [
+        "1662-5218"
+      ],
+      "issn-type": [
+        {
+          "value": "1662-5218",
+          "type": "electronic"
+        }
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            21
+          ]
+        ]
+      },
+      "article-number": "1605938"
+    }
+  },
+  {
+    "doi": "10.1214/aos/1176344552",
+    "error": "HTTP Error 429: Too Many Requests",
+    "csl_metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            7
+          ]
+        ],
+        "date-time": "2026-11-07T03:52:58Z",
+        "timestamp": 1794023578587,
+        "version": "4.8.0"
+      },
+      "reference-count": 0,
+      "publisher": "Institute of Mathematical Statistics",
+      "issue": "1",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            1979,
+            1,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:p>We discuss the following problem: given a random sample $\\mathbf{X} = (X_1, X_2, \\cdots, X_n)$ from an unknown probability distribution $F$, estimate the sampling distribution of some prespecified random variable $R(\\mathbf{X}, F)$, on the basis of the observed data $\\mathbf{x}$. (Standard jackknife theory gives an approximate mean and variance in the case $R(\\mathbf{X}, F) = \\theta(\\hat{F}) - \\theta(F), \\theta$ some parameter of interest.) A general method, called the \"bootstrap,\" is introduced, and shown to work satisfactorily on a variety of estimation problems. The jackknife is shown to be a linear approximation method for the bootstrap. The exposition proceeds by a series of examples: variance of the sample median, error rates in a linear discriminant analysis, ratio estimation, estimating regression parameters, etc.</jats:p>",
+      "DOI": "10.1214/aos/1176344552",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2007,
+            12,
+            17
+          ]
+        ],
+        "date-time": "2007-12-17T15:20:07Z",
+        "timestamp": 1197904807000
+      },
+      "page": "1-26",
+      "source": "Crossref",
+      "is-referenced-by-count": 13267,
+      "title": "Bootstrap Methods: Another Look at the Jackknife",
+      "prefix": "10.1214",
+      "volume": "7",
+      "author": [
+        {
+          "given": "B.",
+          "family": "Efron",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "108",
+      "container-title": "The Annals of Statistics",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://projecteuclid.org/download/pdf_1/euclid.aos/1176344552",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            16
+          ]
+        ],
+        "date-time": "2026-10-16T19:13:27Z",
+        "timestamp": 1792178007000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.full"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            1979,
+            1,
+            1
+          ]
+        ]
+      },
+      "references-count": 0,
+      "journal-issue": {
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              1979,
+              1,
+              1
+            ]
+          ]
+        }
+      },
+      "URL": "http://dx.doi.org/10.1214/aos/1176344552",
+      "relation": {},
+      "ISSN": [
+        "0090-5364",
+        "2168-8966"
+      ],
+      "subject": [],
+      "container-title-short": "Ann. Statist.",
+      "published": {
+        "date-parts": [
+          [
+            1979,
+            1,
+            1
+          ]
+        ]
+      }
+    }
+  }
+]

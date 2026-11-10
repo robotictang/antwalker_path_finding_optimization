@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-10",
+  "source": "/home/dewayne/Downloads/NoReferences(1).docx",
+  "source_sha256": "1628c0a4df261e42f4e83d27561e09de2e17157f532851ac4d21802696e6f1d2",
+  "source_unmodified": true,
+  "output": "/home/dewayne/Desktop/Github/antwalker_path_finding_optimization/Pathfinder/paper/NoReferences-Minimal-Factual-Corrections-Highlighted.docx",
+  "output_sha256": "84f930cf0d53df19dd7d0136b9fcaee924458b12d869820b868655579153e213",
+  "textual_replacements": 69,
+  "changed_paragraphs": 28,
+  "formatting_only_cells": 7,
+  "all_replacements_yellow": true,
+  "total_yellow_runs": 76,
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "table_text_and_numbers_unchanged": true,
+  "equation_xml_unchanged": true,
+  "drawing_xml_unchanged": true,
+  "other_package_parts_unchanged": true,
+  "abstract_words": 222,
+  "rendered_pages": 9,
+  "review_status": "Passed final visual inspection",
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_notes": "All nine final rendered pages inspected. Highlighted replacements are legible. Table 3 sample sizes remain on one line after highlighted cell-padding adjustments. No new clipping or overlap."
+}

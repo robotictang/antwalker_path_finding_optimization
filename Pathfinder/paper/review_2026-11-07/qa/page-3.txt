@@ -1,0 +1,120 @@
+3
+certain  bodies,  and  the  latter  directly  changes  the  
+velocity of the free body.
+Body  assistance  limits  vertical  movement  and  
+roll/pitch  rates  once  every  controller  cycle.  It  also 
+changes the horizontal velocity and the yaw rate with  
+each iteration of the physics. At assistance level 1 the  
+horizontal speed is adjusted to the desired speed. An  
+adjustment at scale 0.5 maintains 50% of the current  
+speed while adding 50% of the desired speed. The  
+mixture is used four times per controller frame. The  
+support  operation  at  scale  0  preserves  these  body  
+velocities. The scale is a measure of the amalgamation 
+of velocities, not a force of support.
+The planner obtains the exact position, orientation,  
+obstacle dimensions and terrain information directly  
+from the simulator. These inputs are not based on  
+sensor  readings.  All  methods  start  from  the  same  
+starting point, in the same main direction, to the same  
+end point and estimated return to the charging station  
+in each trial. The study therefore looks at route choices 
+on an identical, known map. Sensor noise, localisation 
+errors and map reconstruction are not considered by  
+the input model.
+3.2 Route geometry
+A trajectory P is a sequence of points located on the 
+horizontal plane. The start and end points indicate the  
+specified starting and ending locations. The points are 
+connected  by  straight  segments  in  order.  The  first 
+search grid has a separation of 0.25 meters and eight  
+possible directions to go. No diagonal moves through  
+blocked grid corners allowed.
+Every  returned  segment  must  undergo  the  same 
+clearance  analysis  in  accordance  with  the  planar  
+obstacle configuration. The robot’s radius is set to 1.82 
+m, the tracking margin is set to 0.12 m and the segment 
+clearance tolerance is set to 0.005 m. These values  
+provide the framework for planning clearance. The  
+analysis considers only a path for the robot body and  
+does not compute distinct 3D foot-placement paths.
+The topographical map shows different areas with  
+different pedestrian speed limits and challenge levels.  
+The equations (1) and (2) are used to assess the terrain 
+complexity at every grid point.
+d  =  clip( g ,  0 ,  2) (1)
+g  =  1
+4 ( s
+0.25  +  h
+0.12  +  u
+0.04  +  f ) (2)
+Here, the clip function restricts the first argument to 
+the range [0, 2]. s slope (radians) h height range (m) u 
+population  standard  deviation  of  sampled  ground  
+elevations  (m)  f  semantic  softness  Heights  are  
+measured at nine positions with offsets of -1.82, 0, and 
+1.82 m in each horizontal direction. The slope is the  
+arctangent of the magnitude of the gradient of the  
+average sampled elevation, computed on a 0.25 m grid 
+. The values of f evaluated for the terrain inclines of 0, 
+1 and 2 are 0, 0.25 and 0.60 respectively. Queries on  
+terrain grade include a 1.1 m buffer around the patch  
+edges. The difficulty is assessed at intervals not greater 
+than 0.125 m along each segment of the route. All  
+route samples use the challenge level of the closest  
+grid  cell.  Segment  exposure  is  the  segment  length 
+multiplied by the average difficulty sampled for the  
+segment. Total exposure R is the sum over segments . 
+The figure is from the topographical map and does not 
+represent an estimated probability of slipping.
+3.3 Route score and acceptance
+The route assessor calculates distance D (in meters), 
+estimated outward travel time T (in seconds), normal  
+battery  usage  E  (in  percentage  points)  and  terrain  
+exposure R. The title is in radians (π/2). The expected 
+time  includes  transit  at  speed  limits  imposed  by  
+terrain, turns at 1 rad/s, and allowance for acceleration. 
+The speed limits for flat, gentle and steep terrain are  
+0.75, 0.65 and 0.38 m/s respectively.
+Equation  (3)  integrates  the  four  variables  into  a 
+single score Q. Lower scores are preferred. The values 
+are  representative  of  one  score  unit  in  50  meters  
+distance, in 90 seconds expected time, in 30 nominal  
+battery percentage points, or in 80 exposure units.  
+They were fixed trade-offs for the experiment and  
+were  not  derived  from  robotic  measurements  or  
+adjusted to the main test results.
+Q( P )  =  D
+50  +  T
+90  +  E
+30  +  R
+80 (3)
+Acceptance means that the expected arrival time is  
+within the deadline, the exposure is within the terrain  
+restrictions and the required nominal battery capacity  
+is within the battery resources provided. The required  
+nominal  battery  allocation  is  given  by  (4).  The  
+subscript  return  indicates  the  nominal  battery  
+consumption  for  a  trip  from  the  destination  to  a  
+charging  station.  The  1.25  multiplier  and  the  
+additional  6  percentage  points  are  reserve  
+requirements .
+Breq  =  1.25( E  +  Ereturn)  +  6 (4)
+The  battery  cost  model  assigns  0.70  percentage  
+points per metre walked, 0.015 per second, 0.08 per  
+radian turned and an allowance of 0.10 for starting and 
+stopping.  These  coefficients  were  not  fitted  to  
+electrical measurements. E is also influenced by the  
+distance, travel time and turning, so the four scoring  
+components are not independent physical outcomes.  
+The fact that they are integrated is a clear sign that  
+there is a bias toward these route features. The 1.25  
+multiplier increases the expected cost for the outward  
+and return by 25%. The six-point reserve adds a fixed 
+allowance. Neither guideline is a statistically validated 
+probability  of  succeeding  at  a  physical  task.  All  
+assessments have the same criteria. The response to  
+different levels of weight or reserves has not been  
+studied. Battery usage in this document is the result of 
+this model using equations. The route score cannot be 
+substituted  for  the  others.  Mechanical  joint  

@@ -1,0 +1,105 @@
+7
+deadline of the planner is independent of the execution 
+constraint  that  incomplete  tasks  expire  after  180  
+seconds.  Mission  completion  times  are  simulated  
+station operations of eight seconds.
+Once the locomotion controller is initialised, we  
+check the gravity compensation. At that point, the no-
+compensation  condition  sets  all  leg-body  
+compensation values to zero. The first four executions, 
+where  initialisation  restored  compensation,  were  
+omitted and rerun after confirming that compensation  
+was  removed.  Finally,  the  comparison  includes  16 
+runs, four missions for each of the four conditions. The 
+pathways evaluated previously provide an analysis of  
+the execution framework, not a new testing array for  
+movement.
+Each physics interval of 0.004 second captures foot 
+contact. If the measured contact distance is less than  
+0.002  m,  then  any  of  the  six  foot  geometries  are  
+deemed to be in contact with an external geometry.  
+Mean contact feet is the average number of feet found 
+in contact for each sample. The no-contact fraction is  
+the percent of samples where no foot contacts are  
+found. The detector only picks up the six feet. Counts  
+do not include interactions with  other parts  of the  
+robot.
+The body tilt is calculated from the body alignment. 
+Assisted executions modify directly the roll and pitch  
+angular  velocities  by  using  a  feedback  of  
+orientation.The  assisted  controller  behaviour  is  
+characterised by a low tilt. Positive actuator work is  
+computed by multiplying actuator force times actuator 
+velocity . This only takes positive power, which is  
+integrated over time and summed over all actuators . It 
+does not include work due to instantaneous changes in 
+the velocity of the body. These metrics characterise the 
+model  motion  and  actuator  performance  under  the 
+specified assistance parameters.
+6 Results
+6.1 Accepted routes and paired scores
+None of the 640 planning ventures results in a trial  
+error being recorded. In the development process the  
+standard  profile  for  each  elementary  method  is  
+defined. Table 2 shows the acceptance frequencies for 
+the  main  test  and  average  search  duration.  CLRP, 
+PSO-P,  ACO-P and  CLRP noL  satisfied  93  of  96  
+attempts, PSO-C satisfied 94 and CLRP noP satisfied  
+90.  Each  unsuccessful  attempt  at  primary  testing  
+violates a restriction on resources.
+Table 2. Accepted main-test routes and mean search 
+time.
+Method Accepted / 96 Mean time (s)
+CLRP 93 0.376
+PSO-P 93 0.223
+ACO-P 93 0.335
+Method Accepted / 96 Mean time (s)
+PSO-C 94 0.731
+CLRP noL 93 0.196
+CLRP noP 90 0.329
+CLRP obtained 33 accepted attempts with lower  
+scores, 27 accepted attempts with the same scores, and 
+33 accepted attempts with higher scores than PSO-C.  
+PSO-C only permits one try. CLRP only permits zero  
+tries,  both  reject  two.  The  mean  improvement  of  
+paired-map relative score is 0.690% , with median 0  
+and 95% bootstrap confidence interval [ −0.255 , 2.312 
+] % . The range includes zero.
+Table 3 shows the means and intervals for all five  
+comparisons. The comparisons CLRP vs PSO-P and  
+CLRP vs ACO-P have both median values equal to  
+zero. Compared with CLRP noL, the full CLRP has 27 
+attempts that give lower scores, 57 ties and 9 attempts 
+that give higher scores. Compared with CLRP noP, the 
+full CLRP has 57 attempts that give lower scores, 33  
+ties,  zero  attempts  that  give  higher  scores  and  3  
+attempts that are accepted only by the full CLRP. The 
+scoring and acceptance effects of each removed stage  
+are different results.
+Table 3. Paired score differences favoring CLRP; n is 
+the number of paired maps.
+Control n Mean 
+(%) 95% interval (%)
+PSO-P 31 0.929 [0.027, 2.523]
+ACO-P 31 0.921 [0.029, 2.507]
+PSO-C 31 0.690 [-0.255, 2.312]
+CLRP 
+noL 31 0.924 [0.036, 2.513]
+CLRP 
+noP 30 0.794 [0.443, 1.209]
+Table  2  shows  all  96  experiments  for  each  
+technique. In the map-level examination only mutually 
+confirmed attempts are considered and averaged per  
+map  in  Table  3.  The  comparison  with  CLRP  noP 
+consists of 30 paired  maps; the other comparisons  
+consist  of  31  pairs  of  maps.  Conditional  score  
+comparisons do not replace acceptance outcomes for  
+the entire sample.
+6.2 Map types and computation
+“Every denial of resources is done on corridor maps. 
+Every technique processes all 24 attempts for the open, 
+disordered,  and  rugged  categories.  The  acceptance  
+counts for corridors are 21 of 24 for CLRP, PSO-P,  
+ACO-P and CLRP noL; 22 of 24 for PSO-C; and 18 of 
+24  for  CLRP noP.  There  are  eight  maps  for  each  
+category, each replicated three times. These numbers  

@@ -1,0 +1,78 @@
+2
+the planar robot trajectories studied here. Here a small 
+set of initial search labels and landmarks are followed 
+by  continuous  refinement  of  points,  with  a  single  
+evaluator  determining  due  dates,  battery  return  
+capacity and terrain.
+Guo et al. [7] propose a hybrid approach for mobile 
+robots trajectory planning based on particle swarm  
+optimization  and  control  barrier  function  velocity  
+adjustments. Their safety mechanism ties planning to  
+speed  control.  The  current  comparison  retains  the  
+segment-clearance test, and compares acceptance and  
+score under the same resource constraints. It does not  
+run, or evaluate, their controller. This is important  
+because changing the collision model, initialization or 
+execution method will affect both the comparison and 
+the optimizer.
+Also  the  hexapod  investigations  lead  to  better  
+measurements below the body-route level. Yin et al.  
+improve  swing  trajectories,  gait  timing  and  gait  
+sequence on  LittleStrong  [8].  Chen  et al.  integrate  
+topographical  characteristics  with  travel  expenses,  
+foot  positioning  and  movement  strategies  in  both  
+simulated and experimental studies [9]. The current  
+work  presents  a  static  gait  controller,  the  input  of 
+terrain data and the investigation of elimination of  
+body-route phases. Its individual assistance evaluation 
+outcomes are not substitutes for the physical and foot-
+placement Examinations in those studies.
+These  questions  boil  down  to  a  specific  
+experimental question: how the acceptance and route  
+scores change when we add the landmark search and  
+the final adjustments under a single evaluator. The  
+comprehensive configurations are compared as they  
+have  different  initialization  processes  and  route  
+representations. They aren’t duplicates of each and  
+every planner referenced. The research describes such 
+decisions  throughout  both  route  assessments  and  
+geometric  queries,  in  line  with  the  emphasis  on  
+initialization,  parameter  selection  and  termination  
+criteria of the COCO procedure [10]. The contrast is  
+about  the  assigned  implementations  and  resource  
+framework.
+3 Robot and planning model
+3.1 Robot model and body assistance
+The robot model has six limbs, each of which has  
+three movable joints. The imported model has a total  
+mass of 97.52 kg and a base mass of 35 kg. In the built 
+MuJoCo model, the total robot mass is 113.32kg and  
+the  base  mass  is  46kg.  The  assembly  consists  of  
+wheels  and  a  scanner  .  23  actuators  in  total  .  All 
+experiments are in walking mode; wheels and scanner 
+are included in the simulated mass.
+The MuJoCo robot is shown in a static picture in its 
+ambulation  pose  in  Figure  1.  From  the  stationary  
+perspective the assembly with the wheels and scanner 
+is visible. The adjacent obstacles are hidden for clarity. 
+The results of the planning in Section 6 make use of  
+the maps and task restrictions described in Section 5.
+Figure 1. Static view of the simulated hexapod in its walking configuration. The wheels and scanner remain part 
+of the assembly.
+The imported robot has specifications of 60 Nm  
+torque and 20 rad/s angular velocity for the leg joints  
+constraints.  These  are  defined  limits  in  the  
+specification. The study does not include any actual  
+measurements of motor torque-speed characteristics,  
+battery depletion or robot weight. Here the platform  
+under consideration is the constructed simulation, with 
+the imported mass values differentiating the source  
+model from the assembled model.
+MuJoCo  moves  the  physics  forward  by  0.004  
+seconds. The motion controller runs once every four  
+physics  steps,  or  once  every  0.016  seconds.  g  =  
+acceleration  due  to  gravity  (9.81  m/s^2)  In  the  
+conventional config, 18 leg structures are activated for 
+gravity compensation. The gravity compensation and  
+direct body assistance are two different mechanisms:  
+the  former  compensates  the  effects  of  gravity  on  

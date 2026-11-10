@@ -1,0 +1,87 @@
+7
+angular velocities using orientation feedback, so low  
+tilt  describes  the  assisted  controller’s  behavior.  
+Positive actuator work is calculated by multiplying  
+actuator  force  by  actuator  velocity,  retaining  only  
+positive power, integrating over time and summing  
+over actuators. It excludes work introduced by direct  
+changes to body velocity. These metrics describe the  
+model’s motion and actuator work under the specified 
+assistance condition.
+6 Results
+6.1 Accepted routes and paired scores
+All 640 planning attempts finish without a logged  
+trial error. Development selects the default profile for  
+each  base  method.  Table  2  reports  main-test  
+acceptance  counts  and  mean  search  times.  CLRP,  
+PSO-P, ACO-P and CLRP noL each accept 93 of 96  
+attempts; PSO-C accepts 94 and CLRP noP accepts  
+90.  Every  rejected  main-test  attempt  violates  a  
+resource constraint.
+Table 2. Accepted main-test routes and mean search 
+time.
+Method Accepted / 96 Mean time (s)
+CLRP 93 0.376
+PSO-P 93 0.223
+ACO-P 93 0.335
+PSO-C 94 0.731
+CLRP noL 93 0.196
+CLRP noP 90 0.329
+Against PSO-C, CLRP has 33 lower-score paired  
+accepted  attempts,  27  ties  and  33  higher-score  
+attempts. PSO-C alone accepts one attempt; CLRP  
+alone accepts none, and both reject two. The mean  
+paired-map relative score improvement is 0.690%, the 
+median  is  zero,  and  the  descriptive  95%  bootstrap 
+interval is [−0.255, 2.312]%. The interval includes  
+zero.
+Table 3 shows the means and intervals for all five  
+comparisons.  The  CLRP-versus-PSO-P  and  CLRP-
+versus-ACO-P comparisons both have zero medians.  
+Compared with CLRP noL, complete CLRP has 27  
+lower-score paired accepted attempts, 57 ties and nine 
+higher-score  attempts.  Compared  with  CLRP  noP,  
+complete CLRP has 57 lower-score attempts, 33 ties,  
+no higher-score attempts and three attempts accepted  
+only by complete CLRP. The scoring and acceptance  
+effects of each removed stage are separate results.
+Table 3. Paired score differences favoring CLRP; n is 
+the number of paired maps.
+Control n Mean 
+(%) 95% interval (%)
+PSO-P 31 0.929 [0.027, 2.523]
+ACO-P 31 0.921 [0.029, 2.507]
+PSO-C 31 0.690 [-0.255, 2.312]
+CLRP 
+noL 31 0.924 [0.036, 2.513]
+CLRP 
+noP 30 0.794 [0.443, 1.209]
+Table 2 includes all 96 trials for each method. The  
+map-level analysis in Table 3 considers only mutually 
+accepted  attempts  averaged  within  each  map.  The  
+comparison  with  CLRP  noP  consists  of  30  paired 
+maps; the other comparisons comprise 31 paired maps. 
+Conditional  score  comparisons  do  not  replace  the  
+acceptance results for the full sample.
+6.2 Map types and computation
+All  resource  rejections  occur  on  corridor  maps.  
+Every method accepts 24 of 24 attempts in each of the 
+open,  cluttered  and  rough  families.  Corridor  
+acceptance counts are 21 of 24 for CLRP, PSO-P,  
+ACO-P and CLRP noL; 22 of 24 for PSO-C; and 18 of 
+24 for CLRP noP. Each family contains eight maps  
+with three repetitions per map. These counts locate the 
+additional  PSO-C  acceptance  and  the  three  
+acceptances lost when final adjustment is removed.
+Table 4 reports search effort across all 96 attempts  
+per method. PSO-C reaches the 240-route evaluation  
+limit in 84 of 96 attempts; no other method reaches this 
+limit. Median route-evaluation counts are 33 for CLRP 
+and 21 when landmark search is removed. Median  
+geometric-clearance query counts are 1,033 for CLRP, 
+2,142.5 for PSO-C and 146.5 for CLRP noL. Shared  
+map  preparation  takes  a  median  of  0.715  s  and  a 
+maximum of 0.895 s and is excluded from individual  
+search timers. A route evaluation calculates metrics for 
+an entire route; a clearance query can reject a segment 
+before a complete route is evaluated.

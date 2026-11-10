@@ -1,0 +1,138 @@
+5
+coordinate change in the swarm iterations is capped at 
+±2  m.  The  range  of  the  particle  positions  on  the  
+horizontal axes is limited to [−24, 24] m (Table 1).  
+Proposals that don't pass the clearance test are denied. 
+If particle proposals do not enhance the initial best  
+route, then the initial best route is available, and the  
+final  adjustment  shares  the  common  evaluation  
+ceiling.  The  route  representations  and  initial-route  
+procedures are different between PSO-C and PSO-P.  
+The evaluation is done to assess the total impact of  
+these  decisions  in  implementation.  Does  not  only  
+focus  on  the  impact  of  representation.  The  results 
+reported  are  for  the  set  route  objective  and  
+configuration.
+4.3 Elimination of planning stages and search 
+limits
+CLRP noL is without landmark search, and CLRP  
+noP is without final local adjustment, or polishing. The 
+selected CLRP settings for the stages that are retained 
+are also carried over to both variants. In particular, noP 
+discards  the  last  adjustment  and  preserves  the  
+operations in the first refiner. These comparisons are  
+made to assess the impact if one stage is taken off the  
+selected planner. The down-tuned variants will not be 
+re-tuned on the primary-test maps. The chosen search  
+parameters are shown in table 1. Table 1. Selected  
+search settings: noL omits landmark search; noP omits 
+final adjustment.
+Table 1. Selected search settings; noL omits 
+landmark search and noP omits final adjustment.
+Metho
+d Search settings
+Final 
+adjustme
+nt
+CLRP
+Initial fraction 0.40; 
+landmark fraction 0.32; 44 
+nodes; initial beam 6, 
+labels/state 8, candidates 
+16
+Steps 
+0.75, 0.25, 
+0.08 m
+CLRP 
+noL
+CLRP initial settings; no 
+landmark stage
+Same as 
+CLRP
+CLRP 
+noP
+CLRP initial and 
+landmark settings Omitted
+PSO-P
+16 particles; 40 
+iterations/corridor; inertia 
+0.72; coefficients 1.49; 
+velocity clip 0.25
+Same as 
+CLRP
+ACO-P
+12 ants; 40 
+iterations/corridor; 
+pheromone/heuristic 
+exponents 1/2; 
+evaporation 0.20; deposit 
+1
+Same as 
+CLRP
+PSO-C
+12 particles; 40 iterations; 
+inertia 0.65; coefficients 
+1.4; perturbation and 
+velocity clip 2 m
+Last 25% 
+of time; 
+CLRP 
+steps
+Each method is given a search-time limit of 2 s and 
+a limit of 240 collision-free routes evaluated.  Route 
+evaluations during method initialization  are also part  
+of this total. Rejected proposals are collision checked  
+(not  complete  route)  and  the  result  counts  as  a  
+geometric  query.  A  method  may  stop  below  both  
+limits when its search procedures end.  PSO-C may  
+take up the evaluation limit before time limit. The wall 
+timer  contains  initialization  and  refinement  for  the 
+particular method. Shared map preparation takes place 
+prior  to  the  methods  running,  and  involves  
+preparations of the scenes, construction of common  
+graphs,  return-route  preparation  and  calculation  of  
+destination-based lower bounds. Reported search time 
+thus includes only some planning by all methods, and  
+excludes preparation common to all methods for a  
+given case.
+5 Experimental design
+5.1 Maps and task limits
+The study uses eight development maps with seeds  
+from 2130000 to 2130007 and 32 main-test maps with 
+seeds  from  2140000  to  2140031.  The  map  types  
+alternate between open, cluttered, rough and corridor. 
+There are two development maps and eight main-test  
+maps for each category. The horizontal range of each  
+map is from −24 to 24 m. Open, Cluttered, Rough and 
+Corridor maps have 5, 16, 7 and 4 generated obstacles 
+respectively. There are also two interrupted barriers on 
+the corridor maps. The four families of maps have 1,  
+2, 4 and 3 terrain patches, respectively. Obstacles,  
+shallow terrain tiles and areas which affect walking  
+speed and exposure are defined by each map. The  
+same geometry and terrain is given to all six planners  
+for a specific case. Start and destination proposals are  
+sampled  between  −17  and  17  m  (with  a  starting  
+distance  of  12–26  m)  on  each  axis.  Proposals  are 
+moved to free grid locations and kept if their eventual 
+separation is ≥ 10 m. Deadlines are 45, 70, 110 and  
+160 s. Available nominal battery levels are 45%, 65%, 
+85% and 100%, and exposure limits are 10, 20 and 40. 
+The  overall  distance  to  the  charging  station  is  
+determined in advance prior to comparing the different 
+methods. The nominal battery cost coefficients are the 
+same  for  all  maps.  Changing  battery  allowances  
+changes  the  available  resource  limit  and  not  the  
+nominal battery use assigned to a meter or a turn. The 
+experiment modifies the geometry of the maps and  
+task  constraints.  It  does  not  measure  a  variety  of  
+physical battery characteristics.
+5.2 Parameter selection and repeated tests
+Two parameter profiles are used for each of the four 
+base methods and tested on the development maps.  
+The  profile  that  has  more  accepted  attempts  gets  
+picked first.  When acceptance counts are equal, the  
+profile with the lowest mean score among accepted  
+attempts  is chosen.  The default profile is  used for  
+Exact ties. All of the base methods use the default, and 
+both reduced forms of the CLRP do the same. The  

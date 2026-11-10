@@ -1,0 +1,170 @@
+Object 1/content.xml
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <mi>d</mi>
+      <mtext> </mtext>
+      <mtext>=</mtext>
+      <mtext> </mtext>
+      <mi mathvariant="italic">clip</mi>
+      <mo stretchy="false">(</mo>
+      <mi>g</mi>
+      <mi>,</mi>
+      <mtext> </mtext>
+      <mn>0</mn>
+      <mi>,</mi>
+      <mtext> </mtext>
+      <mn>2</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <annotation encoding="StarMath 5.0">d " ""="" " clip \( g ," "0," "2\)</annotation>
+  </semantics>
+</math>
+
+Object 5/content.xml
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <mi>&#948;</mi>
+      <mtext> </mtext>
+      <mtext>=</mtext>
+      <mtext> </mtext>
+      <mn>100</mn>
+      <mtext> </mtext>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>Q</mi>
+            <mi>c</mi>
+          </msub>
+          <mtext> </mtext>
+          <mi>&#8722;</mi>
+          <mtext> </mtext>
+          <msub>
+            <mi>Q</mi>
+            <mi>v</mi>
+          </msub>
+        </mrow>
+        <msub>
+          <mi>Q</mi>
+          <mi>c</mi>
+        </msub>
+      </mfrac>
+    </mrow>
+    <annotation encoding="StarMath 5.0">&#948; " ""="" "100" " {{Q} rsub {c} " "&#8722;" " {Q} rsub {v}} over {{Q} rsub {c}}</annotation>
+  </semantics>
+</math>
+
+Object 4/content.xml
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <msub>
+        <mi>B</mi>
+        <mi mathvariant="italic">req</mi>
+      </msub>
+      <mtext> </mtext>
+      <mtext>=</mtext>
+      <mtext> </mtext>
+      <mn>1.25</mn>
+      <mo stretchy="false">(</mo>
+      <mi>E</mi>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <msub>
+        <mi>E</mi>
+        <mi mathvariant="italic">return</mi>
+      </msub>
+      <mo stretchy="false">)</mo>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mn>6</mn>
+    </mrow>
+    <annotation encoding="StarMath 5.0">{B} rsub {req} " ""="" "1.25\( E " ""+"" " {E} rsub {return} \)" ""+"" "6</annotation>
+  </semantics>
+</math>
+
+Object 3/content.xml
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <mi>Q</mi>
+      <mo stretchy="false">(</mo>
+      <mi>P</mi>
+      <mo stretchy="false">)</mo>
+      <mtext> </mtext>
+      <mtext>=</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>D</mi>
+        <mn>50</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>T</mi>
+        <mn>90</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>E</mi>
+        <mn>30</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>R</mi>
+        <mn>80</mn>
+      </mfrac>
+    </mrow>
+    <annotation encoding="StarMath 5.0">Q\(P\) " ""="" " {D} over {50} " ""+"" " {T} over {90} " ""+"" " {E} over {30} " ""+"" " {R} over {80}</annotation>
+  </semantics>
+</math>
+
+Object 2/content.xml
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <semantics>
+    <mrow>
+      <mi>g</mi>
+      <mtext> </mtext>
+      <mtext>=</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mn>1</mn>
+        <mn>4</mn>
+      </mfrac>
+      <mo stretchy="false">(</mo>
+      <mfrac>
+        <mi>s</mi>
+        <mn>0.25</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>h</mi>
+        <mn>0.12</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mfrac>
+        <mi>u</mi>
+        <mn>0.04</mn>
+      </mfrac>
+      <mtext> </mtext>
+      <mtext>+</mtext>
+      <mtext> </mtext>
+      <mi>f</mi>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <annotation encoding="StarMath 5.0">g " ""="" " {1} over {4} \( {s} over {0.25} " ""+"" " {h} over {0.12} " ""+"" " {u} over {0.04} " ""+"" " f \)</annotation>
+  </semantics>
+</math>
+

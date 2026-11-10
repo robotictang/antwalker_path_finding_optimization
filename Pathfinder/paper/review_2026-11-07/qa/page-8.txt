@@ -1,0 +1,72 @@
+8
+identify the additional PSO-C acceptance and the three 
+acceptances lost when removing the last adjustment.
+Table 4. Search effort for all 96 attempts by method. 
+PSO-C reaches the 240-route evaluation limit in 84 out 
+of  96  trials  whereas  no  other  method  reaches  this 
+benchmark. The median counts for route evaluation  
+are 33 for CLRP and 21 without landmark search. For 
+CLRP, PSO-C and CLRP noL the median number of  
+geometric-clearance  queries  is  1033,  2142.5  and  
+146.5, respectively. The time to prepare shared maps  
+is  on  average  0.715  seconds  (maximum  0.895  
+seconds) and is not included in the individual search  
+times. Clearance Inquiry can reject a section before the 
+entire route is evaluated . Route Assessment calculates 
+metrics for the entire route .
+Table 4. Search work over 96 attempts; evaluations 
+count complete collision-free routes.
+Method Median 
+s Max s Median 
+evals At 240
+CLRP 0.368 0.776 33 0
+PSO-P 0.199 0.635 46 0
+ACO-P 0.296 0.895 32.5 0
+PSO-C 0.724 1.203 240 84
+CLRP noL 0.166 0.586 21 0
+CLRP noP 0.338 0.634 5 0
+All searches complete in 2 seconds or less. The  
+longest  recorded  search  time  is  1.203  seconds  for  
+PSO-C.  Conventional  constraints  do  not  suggest  
+uniform search exertion: PSO-C exhausts the route-
+assessment  threshold  in  most  trials,  while  other  
+configurations stop at lower totals. The times are for  
+the shared-desktop setting in Section 5.3 and do not  
+include the shared preparation time.
+6.3 Variation across maps
+Figure 2 shows the relative score improvements of  
+all 31 paired maps over PSO-C, which spans from  
+−1.718%  to  23.202%.  Map  24  shows  the  largest  
+positive effect. Removing it changes the mean of the  
+remaining 30 paired maps from the full sample mean  
+of  0.690%  to  −0.060%.  The  leave-one-map-out  
+approach for noP comparison presents a positive result 
+between  0.682%  and  0.822%.  These  retrospective  
+summaries assess impact on the unmodified primary  
+sample.
+Figure 2. Average over jointly accepted repetitions of 
+the CLRP score difference against PSO-C on each 
+paired map. Positive values favor CLRP. All points 
+remain in the primary mean.
+Map 24 continues to be included in the main dataset 
+used to calculate the mean and bootstrap interval. Its  
+effect accounts for the positive mean, zero median and 
+equal number of pairs with lower and higher scores,  
+compared  with  PSO-C.  The  exclusion  calculation  
+measures the concentration of the outcome. This is not 
+a reason to exclude the map from the main analysis.
+6.4 Selected route comparison
+Map 24 is in the corridor family. Both techniques  
+handle all three iterations. CLRP is able to generate the 
+same route with a distance of 20.803 m and a score of 
+1.310 in every iteration. The average distance for PSO-
+C is 27.135m and the average score is 1.706. For PSO-
+C, the expected time, normal battery cost and exposure 
+are  32.959  seconds,  15.446  percentage  points  and  
+1.012 for CLRP, respectively.
+All four score components are lower in CLRP for  
+each  of  the  paired  repetitions.  Figure  3  shows  
+repetition zero. PSO-C has a longer trajectory toward  
+the west. This helps to explain the variability in the  
+scores of the routes returned, but does not identify any 
+particular internal component of the optimizer.

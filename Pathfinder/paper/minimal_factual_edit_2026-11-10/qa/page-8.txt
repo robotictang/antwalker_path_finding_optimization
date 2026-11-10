@@ -1,0 +1,82 @@
+8
+Table 4. Search work over 96 attempts; evaluations 
+count complete collision-free routes.
+Method Media
+n s
+Max 
+s
+Median 
+evals
+At 
+240
+CLRP 0.368 0.776 33 0
+PSO-P 0.199 0.635 46 0
+ACO-P 0.296 0.895 32.5 0
+PSO-C 0.724 1.203 240 84
+CLRP noL 0.166 0.586 21 0
+CLRP noP 0.338 0.634 5 0
+All searches are completed in 2 s or less. Common 
+route-evaluation  limits  do  not  imply  equal  search  
+effort: the PSO-C configuration reaches the limit in  
+most searches, while others terminate at a lower count. 
+These elapsed times are for the shared-desktop use  
+case  described  in  Section  5.3,  and  do  not  include 
+shared preparation time.
+6.3 Variation across maps
+All 31 relative score improvements achieved with  
+paired-maps  are  shown  in  figure  2,  from  minus  
+1.718% to plus 23.202%. The highest gain is on Map  
+24. The full 31-map mean is 0.690%; omitting Map 24 
+gives −0.060% over the remaining 30 maps.  For the  
+noP  comparison,  it  is  leave-one-map-out,  remain  
+positive, ranging from 0.682% to 0.822%. These post  
+hoc summaries are computed as influence within the  
+unchanged primary sample.
+Figure 2. Average over jointly accepted repetitions of 
+the CLRP score difference against PSO-C on each 
+paired map. Positive values favor CLRP. All points 
+remain in the primary mean.
+Map 24 is still in the main dataset that the mean and 
+bootstrap interval is computed from. This map drives 
+the positive mean, which coexists with a zero map-
+level  median  and  equal  attempt-level  lower-  and  
+higher-score  counts  against  PSO-C.  Omission  
+calculation is a measure of concentration of the result. 
+It is not sufficient to warrant the exclusion of the map 
+from the main analysis.
+6.4 Selected route comparison
+All  three  repetitions  are  acceptable  for  both  
+methods. In the CLRP, the route is repeated the same  
+distance in each repetition, 20.803 m, and score 1.310. 
+PSO-C has a mean distance of 27.135 m and a mean  
+score  of  1.706.  CLRP's  predicted  time,  nominal  
+battery  cost  and  exposure  are  32.959  s,  15.446  
+percentage points and 1.012, respectively, compared  
+to PSO-C means of 42.584 s, 20.066 percentage points 
+and  1.665.  CLRP  scores  are  lower  in  all  four  
+components for each paired repetition. Repetition zero 
+is shown in Figure 3. PSO-C goes down a longer road 
+to the west. This is why you are seeing the scores of  
+the returned routes vary, but it does not specify one  
+particular internal factor in the optimizer.
+Figure 3. Routes on corridor map 24, repetition 0. 
+The circle and star are the start and finish points. The 
+black squares are obstacles; amber is terrain. This 
+example is chosen post hoc because it has the largest 
+positive paired-map effect.
+This  example  was  chosen  following  the  main  
+analysis as it has the most powerful paired-map effect 
+with PSO-C and it is positive. It is a one instance in  
+Figure 2 and is not a typical improvement. Complete  
+distribution and the zero median are also necessary for 
+the interpretation of the comparison.
+6.5 Assistance diagnostic
+Full and half-scale assistance each finish all four  
+missions. All unfulfilled missions will time-out after  
+180 s under both zero-assistance conditions. Table 5  
+shows a mixing of the completion and foot contact  
+measures for the 16 valid executions, of which eight  
+complete.  GC  refers  to  leg-body  gravity  
+compensation. Each contact range is a summary of  
+four missions: mean feet is the average number of feet 
+detected  in  contact  per  physics  sample,  no-contact 

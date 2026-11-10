@@ -1,0 +1,27 @@
+{
+  "review_date": "2026-11-07",
+  "timezone": "Asia/Kuala_Lumpur",
+  "source_path": "/home/dewayne/Desktop/Github/antwalker_path_finding_optimization/Pathfinder/paper/Pathfinder-Robot-CLRP-IJ3C-V2.odt",
+  "source_sha256": "53b0c0d45f841779763e0309580a591282badf44af99958e724b00e26f8c96f4",
+  "original_unmodified": true,
+  "review_render_pages": 11,
+  "review_render_fonts": [
+    "/BAAAAA+LiberationSerif",
+    "/CAAAAA+LiberationSerif-Bold",
+    "/DAAAAA+LiberationSerif-Italic",
+    "/EAAAAA+OpenSymbol"
+  ],
+  "font_caveat": "Review runtime substitutes Liberation Serif; final submission PDF TNR embedding must be checked.",
+  "original_abstract_whitespace_words": 250,
+  "replacement_abstract_whitespace_words": 204,
+  "official_files": {
+    "IJ3C_template.doc": "cb36299c93ca2dea9a54610059fb60d7e75fd3e0409c91db279f0b84a73c022a",
+    "IJ3C_Sample-file.doc": "77592e37db3ec82f2c8f22b6d333d3379462d5602cd837af0ea51d17313e3130"
+  },
+  "qa_scope": "Stored records and source independently reanalyzed; no new simulation or hardware measurement; all 11 review-render pages visually inspected.",
+  "deliverables": {
+    "Fact_Check_and_Writing_Review.md": "3a6e87442e4567dc12b365f9b89689e26b21d30bfda6588258d131ea17aa253c",
+    "Suggested_Replacements.md": "7c427c2334dcdcb8ca68c216dda074ca9c5dd9205d7f72d622a67644f5e20926"
+  },
+  "second_review": "Numerical and methods reviewers checked both final reports; terrain clip definition and initial-corridor wording corrected."
+}

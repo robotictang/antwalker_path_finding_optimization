@@ -1,0 +1,100 @@
+4
+zero. Larger positive excesses are divided by their  
+corresponding  limits  and  summed.  Lower  total  
+normalized violation ranks first, followed by lower Q  
+when total normalized violations are equal. Among  
+accepted  routes,  lower  Q  ranks  first.  A  rejected  
+candidate cannot replace an accepted route.
+4 Planning methods
+4.1 Complete planner
+CLRP has three stages. The first explores initial  
+corridors under time, battery and terrain constraints. A 
+corridor is an initial route through free space from  
+which later stages generate alternatives. The second  
+stage  adds  connections  through  points  around  
+obstacles  and  terrain  boundaries.  The  final  stage  
+adjusts  routes  by  deleting  internal  points,  moving  
+points  toward  their  projections  onto  neighboring  
+segments, replacing points with midpoints and moving 
+point coordinates.
+The best-ranked route is retained throughout the  
+search and is replaced only when a candidate improves 
+its  rank.  Proposed  routes  must  pass  the  common  
+segment-clearance  test  before  their  costs  are  
+evaluated.  Repeated  route  geometries  reuse  cached 
+evaluations. These rules also apply to the final local-
+adjustment stage shared by the evaluated planners.
+Table  1  shows  the  time  fractions  of  CLRP,  the 
+landmark  cap,  the  size  of  local  moves  and  the  
+parameters for initial searches. These settings limit the 
+options considered in a trial.
+A graph connection and a full route evaluation are  
+counted separately. A line segment can be discarded  
+by graph search before it is included in a complete  
+route.  Graph  search  also  retains  alternatives  with  
+different  headings  and  resource  costs.  The  local-
+adjustment stage changes a whole sequence of route  
+points.  A  common  limit  on  full  route  evaluations  
+therefore does not imply equal numbers of geometric  
+queries across methods.
+Algorithm 1 describes the complete CLRP method. 
+Every stage uses the same evaluator and ranking rule.  
+Route  evaluations  performed  during  initialization  
+count toward the common ceiling.
+Algorithm 1. Complete CLRP route search.
+Inputs: known obstacle geometry and terrain; start, 
+destination and initial heading; task constraints and 
+fixed return allowance; random seed; a 2 s search-
+time limit, a 240-route-evaluation limit and a shared 
+40,000-expansion limit.
+1. Run the initial resource-aware refiner for up to 
+40% of the nominal search time. Charge its route 
+evaluations to the shared limit and retain its best 
+available route.
+2. Test the direct start-to-destination route if budget 
+remains. Reject invalid or blocked geometry. 
+Evaluate valid routes using the common metrics 
+and constraint-ranking rule; reuse cached 
+evaluations for repeated geometry.
+3. Collect the initial route’s internal points, inflated 
+obstacle corners and points around terrain 
+boundaries. Remove duplicate, out-of-bounds and 
+blocked points. Sort the remaining candidates by 
+the sum of their distances to the start and 
+destination. Retain at most 44 points, including the 
+start and destination.
+4. Build collision-free visibility connections. Search 
+the resulting graph with heading-aware states using 
+score, time and battery weighting in turn. Limit 
+this stage to its 32% nominal-time allocation and at 
+most 40,000 minus the expansions used by the 
+initial refiner. Evaluate complete routes with the 
+common ranking rule.
+5. Adjust the best retained route by testing internal-
+point deletion, movement halfway toward the 
+neighboring-segment projection, midpoint 
+replacement and moves in eight directions at step 
+sizes of 0.75, 0.25 and 0.08 m. Retain only 
+improvements in rank. At each step size, stop after 
+three passes, a pass with no improvement, or 
+exhaustion of the shared budget.
+Output: the best retained route and its metrics, or the 
+initial search status if no route is retained. Accepted 
+routes always rank ahead of rejected routes.
+4.2 PSO and ant controls
+PSO-P and ACO-P select subsequences of points  
+from the initial corridors and perform the common  
+final  local-adjustment  stage.  Table  1  lists  the  
+parameters for population sizes, update coefficients  
+and iteration limits.
+PSO-C  uses  continuous  coordinates  for  internal  
+path points. It starts with the same configured initial  
+corridor search as CLRP. The longest segments are  
+bisected until the path has at least six internal points.  
+The subdivision preserves the current corners. Start  
+and  end  points  remain  fixed.  The  particle  
+representation keeps a fixed number of internal points 
+during swarm search; their x and y coordinates may  
+change within the map.
+PSO-C initializes all particles except the first with  
+Gaussian perturbations of internal point coordinates,  
