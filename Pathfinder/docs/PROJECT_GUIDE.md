@@ -65,7 +65,7 @@ Version names can identify a planner, a campaign or a manuscript revision. Final
 
 The current paper's S1–S3 total is **3,232 scheduled records**, not 3,232 independent worlds. Those campaigns have 24, 48 and 48 primary test worlds. Methods, repeated seeds and replay phases reuse worlds. The earlier reliability/V3 studies are additional history; do not combine every directory as though it were one predeclared experiment.
 
-The latest draft is [Resource Constrained Hexapod Route Planning With Safe Tracking and External Planner Comparisons](../paper/previous_ieee_manuscript.pdf), prepared 29 October 2026, 19 pages. Its title page explicitly says review draft, not submitted, no DOI. It uses `TOMATO` and institution/email placeholders. Those labels do not verify authorship.
+The earlier IEEE draft is [Resource Constrained Hexapod Route Planning With Safe Tracking and External Planner Comparisons](../paper/archive/reference-links/previous_ieee_manuscript.pdf), prepared 29 October 2026, 19 pages. Its title page explicitly says review draft, not submitted, no DOI. It uses `TOMATO` and institution/email placeholders. Those labels do not verify authorship.
 
 ## The latest results in plain language
 
@@ -88,13 +88,13 @@ The saved descriptive 95% whole-world intervals are approximately [0.040%, 0.471
 
 The revised safe follower completes **12/12** scheduled proposal missions on the selected final routes. The legacy follower also completes **12/12** on those same routes. A known earlier failure motivated the revision, but the final completion counts do not show a success-rate gain. Reduced assistance remains assistance. Across all V6 physics phases, 96 records were scheduled and 95 executed; the unadmitted record remains visible.
 
-Sources: [primary summary](../paper/previous_ieee_tables/Final_Primary_Summary.csv), [paired comparisons](../paper/previous_ieee_tables/Final_Paired_Comparison.csv), [physics summary](../paper/previous_ieee_tables/Final_Physics_Summary.csv), [raw V6 study](../mujoco/outputs/research/final_validation_v6/), [handoff arithmetic check](verification/evidence_inventory.json).
+Sources: [primary summary](../paper/archive/reference-links/previous_ieee_tables/Final_Primary_Summary.csv), [paired comparisons](../paper/archive/reference-links/previous_ieee_tables/Final_Paired_Comparison.csv), [physics summary](../paper/archive/reference-links/previous_ieee_tables/Final_Physics_Summary.csv), [raw V6 study](../mujoco/outputs/research/final_validation_v6/), [handoff arithmetic check](verification/evidence_inventory.json).
 
 ## What has and has not been demonstrated
 
 There is substantial software, saved routes/data, source/model provenance, analysis, figures, a manuscript, a compiled dashboard, and electrical-measurement templates. This handoff verified package hashes, reran the existing V6 internal audit and passed 50 tests in the portable workbench. That supports internal consistency; it does not establish simulator realism.
 
-The [execution loop](../mujoco/research/execution.py) explicitly overwrites or blends chassis velocity and attitude. Gravity compensation remains enabled. Smooth simulated motion is therefore not proof of unassisted robot balance. Mechanical actuator work is a simulated measurement; it excludes the physical cost of assistance and is not battery electrical energy. Terrain exposure is a difficulty proxy, not a measured fall probability. The [electrical templates](../paper/electrical_validation/MEASUREMENT_PROTOCOL.md) contain no hardware measurements.
+The [execution loop](../mujoco/research/execution.py) explicitly overwrites or blends chassis velocity and attitude. Gravity compensation remains enabled. Smooth simulated motion is therefore not proof of unassisted robot balance. Mechanical actuator work is a simulated measurement; it excludes the physical cost of assistance and is not battery electrical energy. Terrain exposure is a difficulty proxy, not a measured fall probability. The [electrical templates](../paper/archive/reference-links/electrical_validation/MEASUREMENT_PROTOCOL.md) contain no hardware measurements.
 
 No physical robot trials, calibrated battery savings, learned perception or unassisted locomotion validation were established in this review. The draft discloses substantial AI assistance in code, experiments, analysis and writing. Keep that provenance accurate, verify the cited literature and technical content, and agree authorship with the supervisor.
 

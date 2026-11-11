@@ -6,15 +6,15 @@ Paths below are relative to Pathfinder. Original locations are retained because 
 
 | Location | Purpose |
 |---|---|
-| [paper/current_manuscript.docx](../paper/current_manuscript.docx) | Latest review draft, linked to `outputs/ieee_access_final/IEEE_Access_Hexapod_Final_Manuscript.docx` |
-| [paper/current_manuscript.pdf](../paper/current_manuscript.pdf) | Matching 19-page reading copy in the final package |
+| [Current IJ3C Word manuscript](../paper/latest/Pathfinder-IJ3C-Final.docx) | Working copy of the current paper |
+| [Archived IEEE manuscript](../paper/archive/reference-links/previous_ieee_manuscript.pdf) | 19-page reading copy from the earlier IEEE package |
 | [source/manuscript.md](../outputs/ieee_access_final/source/manuscript.md) | Builder input with equation/table/figure markers; not a fully rendered article |
 | [source/analyze_final.py](../outputs/ieee_access_final/source/analyze_final.py) | Reads saved JSON, computes comparisons, writes tables/figures/analysis |
 | [source/build_manuscript.py](../outputs/ieee_access_final/source/build_manuscript.py) | Builds Word from narrative, generated material and template |
 | [source/final_analysis.json](../outputs/ieee_access_final/source/final_analysis.json) | Saved detailed final analysis, including paired effects and regimes |
 | [source/check_manuscript.py](../outputs/ieee_access_final/source/check_manuscript.py) | Existing structural/quantitative DOCX and CSV checks; writes QA output |
 | [package/](../outputs/ieee_access_final/package/) | Frozen portable delivery with DOCX/PDF, evidence, code, tables and checksums |
-| [paper/offline_comparison.html](../paper/offline_comparison.html) | Portable visualization of the final 576 primary records |
+| [Offline comparison](../paper/archive/reference-links/offline_comparison.html) | Portable visualization of the earlier IEEE study's 576 primary records |
 
 ## Scientific code
 
@@ -46,7 +46,7 @@ For the statement “V4 admitted 90/96 final primary attempts”:
 1. Open [v6_primary.json](../mujoco/outputs/research/final_validation_v6/v6_primary.json).
 2. Filter its `records` to `method == "proposed_v4"`. There are 96 records across 48 `case_id` values and two `repeat` values.
 3. Count `plan.admissible == true`: 90. Do not use the top-level `success` field as a planning-admission flag; planning-only records have no executed mission success.
-4. Compare with [Final_Primary_Summary.csv](../paper/previous_ieee_tables/Final_Primary_Summary.csv).
+4. Compare with [Final_Primary_Summary.csv](../paper/archive/reference-links/previous_ieee_tables/Final_Primary_Summary.csv).
 5. For a score comparison, pair records by `(case_id, repeat)`, keep jointly admitted pairs, calculate `100 × (baseline_Q − proposal_Q) / baseline_Q`, average repetitions within worlds, then average worlds.
 
 The [manifest](../mujoco/outputs/research/final_validation_v6/manifest.json) defines cases/protocol. [locked_parameters.json](../mujoco/outputs/research/final_validation_v6/locked_parameters.json) records selected settings. [source_lock.json](../mujoco/outputs/research/final_validation_v6/source_lock.json) identifies scientific sources. Per-run `source_snapshot` and case `model_xml` fields locate archived source/model bytes beneath `mujoco/outputs/research/`.

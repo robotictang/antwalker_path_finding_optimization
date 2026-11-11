@@ -33,7 +33,7 @@ That second example was not run during the handoff. It is a learning example, no
 
 ## Console and saved comparisons
 
-`python3 -m research.server --port 8771` starts the inherited local console. That UI workflow was not browser-tested in this handoff. The copy does not contain the original raw run history, and final-download endpoints retain assumptions about the old delivery layout. Read the existing final data using [the offline comparison](../paper/offline_comparison.html) or [frozen JSON](../mujoco/outputs/research/final_validation_v6/) instead.
+`python3 -m research.server --port 8771` starts the inherited local console. That UI workflow was not browser-tested in this handoff. The copy does not contain the original raw run history, and final-download endpoints retain assumptions about the old delivery layout. Read the existing final data using [the offline comparison](../paper/archive/reference-links/offline_comparison.html) or [frozen JSON](../mujoco/outputs/research/final_validation_v6/) instead.
 
 The original interactive demo launchers and top-level Isaac asset utilities are not a verified workflow in this reproduction copy. Use the scientific `research.run` entry point for learning. GUI scene behavior, dashboard rebuilding, live downloads and hardware were not validated here.
 

@@ -2,7 +2,7 @@
 
 **4 November update:** The [IJ3C revision](../publication_2026_11_04/README.md) and [readiness assessment](../publication_2026_11_04/READINESS.md) supersede this guide for current results and publication status. The text below preserves the 3 November handoff context; manuscript links refer to the previous IEEE draft.
 
-Start from the [current Word draft](../paper/previous_ieee_manuscript.docx) and [19-page PDF](../paper/previous_ieee_manuscript.pdf). The immediate task is to verify the contribution with your supervisor and decide which evidence needs strengthening. The remaining work is scientific positioning, validation and authorship, not simply adding pages. No manuscript text was changed during this handoff.
+Start from the [earlier IEEE Word draft](../paper/archive/reference-links/previous_ieee_manuscript.docx) and [19-page PDF](../paper/archive/reference-links/previous_ieee_manuscript.pdf). The immediate task is to verify the contribution with your supervisor and decide which evidence needs strengthening. The remaining work is scientific positioning, validation and authorship, not simply adding pages. No manuscript text was changed during this handoff.
 
 ## Agree the scope
 
@@ -40,7 +40,7 @@ The article carries much of the original S1 narrative before adding S2/S3. A rev
 
 For a simulation paper, stronger controls could give the native planner a heading-state objective or give swarm methods unrestricted continuous waypoint representations. These address whether gains depend on representation and adapter choices. If landmarks are central to the contribution, test their benefit across broader independent map sources.
 
-For physical relevance, first obtain a dynamically actuated controller without chassis velocity overwrites, then validate locomotion and record genuine synchronized voltage/current and mission measurements. Use disjoint calibration and validation maps/missions. The [existing electrical protocol](../paper/electrical_validation/MEASUREMENT_PROTOCOL.md) is a workflow, not completed validation or a sample-size justification.
+For physical relevance, first obtain a dynamically actuated controller without chassis velocity overwrites, then validate locomotion and record genuine synchronized voltage/current and mission measurements. Use disjoint calibration and validation maps/missions. The [existing electrical protocol](../paper/archive/reference-links/electrical_validation/MEASUREMENT_PROTOCOL.md) is a workflow, not completed validation or a sample-size justification.
 
 Before testing, specify the question, practical effect threshold, independent map unit, failures, development process, profile selection and computational allowance. Select sample size from variability, desired precision, runtime and the intended claim with supervisory/statistical input. More repeated seeds alone do not add independent maps.
 
