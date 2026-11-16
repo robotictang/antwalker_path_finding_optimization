@@ -1,0 +1,41 @@
+{
+  "name": "per_motor_mission_completion_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.50,
+  "speed_fractions": [1.0, 0.65],
+  "transition_s": 2.0,
+  "edge_deadline_s": 235,
+  "resolution_m": 0.12,
+  "bootstrap_seed": 261113,
+  "thermal_settings": [
+    {"id": "cooling_100", "heating_multiplier": 0.49, "cooling_time_constant_s": 100, "warm_c": 67, "cool_c": 45},
+    {"id": "cooling_120", "heating_multiplier": 0.46, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "warm_start", "heating_multiplier": 0.45, "cooling_time_constant_s": 120, "warm_c": 68, "cool_c": 48}
+  ],
+  "reactive": {"trigger_c": 67.0, "resume_c": 65.5, "speed_fraction": 0.65, "ramp_s": 2.0},
+  "maps": [
+    {"id": "fan_left_ridge", "family": "single_fan", "deadline_s": 225, "stages": [
+      {"turn_m": 7.8, "bank_m": 7.0, "offsets_m": [-3.1, 0, 3.3], "banks_deg": [-9, 9, 7], "shifts_m": [-0.45, 0.25, 0.35]}
+    ]},
+    {"id": "fan_right_ridge", "family": "single_fan", "deadline_s": 225, "stages": [
+      {"turn_m": 8.2, "bank_m": 6.6, "offsets_m": [-3.4, 0, 3.15], "banks_deg": [-7.5, -8.5, 10], "shifts_m": [0.25, -0.4, -0.2]}
+    ]},
+    {"id": "fan_staggered", "family": "single_fan", "deadline_s": 225, "stages": [
+      {"turn_m": 8.0, "bank_m": 7.4, "offsets_m": [-3.2, 0, 3.45], "banks_deg": [-10, 8, 8.5], "shifts_m": [0.65, -0.55, -0.1]}
+    ]},
+    {"id": "fan_then_split", "family": "two_junctions", "deadline_s": 355, "stages": [
+      {"turn_m": 7.6, "bank_m": 3.7, "offsets_m": [-3.2, 0, 3.2], "banks_deg": [-8, 10, 9], "shifts_m": [-0.25, 0.4, 0.15]},
+      {"turn_m": 6.25, "bank_m": 3.6, "offsets_m": [-2.1, 2.03], "banks_deg": [-9, 7], "shifts_m": [0.3, -0.35]}
+    ]},
+    {"id": "split_then_fan", "family": "two_junctions", "deadline_s": 355, "stages": [
+      {"turn_m": 6.3, "bank_m": 4, "offsets_m": [-2.03, 2.2], "banks_deg": [-7, 10], "shifts_m": [-0.3, 0.35]},
+      {"turn_m": 7.8, "bank_m": 3.3, "offsets_m": [-3.35, 0, 3.17], "banks_deg": [-9.5, -9, 8], "shifts_m": [0.3, -0.25, -0.1]}
+    ]},
+    {"id": "fan_with_merge_detour", "family": "two_junctions", "deadline_s": 355, "stages": [
+      {"turn_m": 7.7, "bank_m": 4.4, "offsets_m": [-3.28, 0, 3.5], "banks_deg": [-10, 7, 8.5], "shifts_m": [0.25, -0.45, -0.3]},
+      {"turn_m": 6.4, "bank_m": 3.2, "offsets_m": [-2.25, 1.95], "banks_deg": [-8, 9.5], "shifts_m": [-0.2, 0.2]}
+    ]}
+  ]
+}

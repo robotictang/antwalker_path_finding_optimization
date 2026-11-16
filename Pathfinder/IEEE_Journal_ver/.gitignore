@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+/Hexapod_Model/*.obj
+/results/*
+!/results/README.md

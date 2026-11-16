@@ -1,0 +1,33 @@
+{
+  "name": "thermal_margin_transfer_v1",
+  "base_config": "connected_pilot.json",
+  "resolution_m": 0.10,
+  "deadline_s": 550,
+  "edge_deadline_s": 220,
+  "speed_fractions": [1.0, 0.8, 0.65],
+  "transition_s": 2.0,
+  "margin_grid_c": [0, 0.5, 0.75],
+  "thermal_settings": [
+    {"id": "reference", "heating_multiplier": 0.45, "cooling_time_constant_s": 100},
+    {"id": "cooling_120", "heating_multiplier": 0.45, "cooling_time_constant_s": 120},
+    {"id": "cooling_120_higher_heat", "heating_multiplier": 0.455, "cooling_time_constant_s": 120}
+  ],
+  "maps": [
+    {"id": "late_left_bank", "stages": [
+      {"left_bank_deg": 7, "right_bank_deg": 10, "left_offset_m": 1.92, "right_offset_m": 2.15, "turn_length_m": 6.25},
+      {"left_bank_deg": 10.5, "right_bank_deg": 8, "left_bank_shift_m": 0.4, "right_bank_shift_m": -0.25, "bank_length_m": 3.3},
+      {"left_bank_deg": 6.5, "right_bank_deg": 9, "left_offset_m": 2.1, "right_offset_m": 1.88, "bank_length_m": 3.15}
+    ]},
+    {"id": "wide_exit_bank", "stages": [
+      {"left_bank_deg": 9.5, "right_bank_deg": 7, "left_bank_shift_m": -0.3, "right_bank_shift_m": 0.2},
+      {"left_bank_deg": 7.5, "right_bank_deg": 10.5, "left_offset_m": 1.9, "right_offset_m": 2.12, "bank_length_m": 3.4},
+      {"left_bank_deg": 10, "right_bank_deg": 6.5, "left_offset_m": 2.24, "right_offset_m": 1.84, "turn_length_m": 6.65}
+    ]},
+    {"id": "four_stage_alternating", "stages": [
+      {"left_bank_deg": 7, "right_bank_deg": 9, "left_bank_shift_m": 0.25, "right_bank_shift_m": -0.25},
+      {"left_bank_deg": 9.5, "right_bank_deg": 6.5, "left_offset_m": 2.12, "right_offset_m": 1.88, "turn_length_m": 6.3},
+      {"left_bank_deg": 7.5, "right_bank_deg": 10, "left_bank_shift_m": -0.25, "right_bank_shift_m": 0.3, "bank_length_m": 3.35},
+      {"left_bank_deg": 10, "right_bank_deg": 8, "left_offset_m": 2.07, "right_offset_m": 1.92, "turn_length_m": 6.15}
+    ]}
+  ]
+}

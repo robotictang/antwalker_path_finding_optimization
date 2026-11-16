@@ -1,0 +1,24 @@
+{
+  "name": "connected_cross_slope_development_pilot",
+  "terrain": {
+    "bank_deg": 8,
+    "branch_offset_m": 2,
+    "turn_length_m": 6,
+    "bank_length_m": 3,
+    "resolution_m": 0.10
+  },
+  "command_speed_m_s": 0.12,
+  "deadline_s": 130,
+  "max_corridor_drift_m": 0.85,
+  "goal_radius_m": 0.55,
+  "starting_temperatures_c": {"warm": 66.0, "cool": 45.0},
+  "thermal": {
+    "ambient_c": 25.0,
+    "derate_start_c": 67.0,
+    "limit_c": 70.0,
+    "time_constant_s": 100.0,
+    "rise_at_reference_c": 60.0,
+    "reference_torque_nm": 55.0,
+    "torque_fraction_at_limit": 0.75
+  }
+}
