@@ -1,0 +1,71 @@
+{
+  "name": "matched_published_speed_junction_pause_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.5,
+  "pause_s": 12.0,
+  "speed_fractions": [1.0, 0.65],
+  "transition_s": 2.0,
+  "edge_deadline_s": 245,
+  "resolution_m": 0.12,
+  "progress_bin_m": 0.3,
+  "forecast_step_s": 0.5,
+  "bootstrap_seed": 261127,
+  "thermal_settings": [
+    {"id": "slower_cooling", "heating_multiplier": 0.46, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "near_boundary", "heating_multiplier": 0.44, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "warm_start", "heating_multiplier": 0.45, "cooling_time_constant_s": 120, "warm_c": 68, "cool_c": 48}
+  ],
+  "reactive": {"trigger_c": 67.0, "resume_c": 65.5, "speed_fraction": 0.65, "ramp_s": 2.0},
+  "maps": [
+    {"id": "matched_alternating_balanced", "family": "alternating", "deadline_s": 347, "stages": [
+      {"turn_m": 6.62, "bank_m": 4.29, "offsets_m": [-2.14, 2.24], "banks_deg": [-7.5, 8.4], "shifts_m": [-0.36, 0.28]},
+      {"turn_m": 6.74, "bank_m": 4.43, "offsets_m": [-2.19, 2.11], "banks_deg": [8.3, -7.2], "shifts_m": [0.23, -0.35]}
+    ]},
+    {"id": "matched_alternating_long_entry", "family": "alternating", "deadline_s": 359, "stages": [
+      {"turn_m": 7.21, "bank_m": 4.94, "offsets_m": [-2.33, 2.15], "banks_deg": [8.5, -9.4], "shifts_m": [0.35, -0.40]},
+      {"turn_m": 6.67, "bank_m": 4.08, "offsets_m": [-2.14, 2.26], "banks_deg": [-7.8, 8.8], "shifts_m": [-0.28, 0.22]}
+    ]},
+    {"id": "matched_alternating_long_exit", "family": "alternating", "deadline_s": 370, "stages": [
+      {"turn_m": 6.86, "bank_m": 4.38, "offsets_m": [-2.15, 2.30], "banks_deg": [-8.8, 7.9], "shifts_m": [0.46, -0.31]},
+      {"turn_m": 7.37, "bank_m": 5.13, "offsets_m": [-2.30, 2.22], "banks_deg": [9.5, -8.7], "shifts_m": [-0.41, 0.23]}
+    ]},
+    {"id": "matched_alternating_offset", "family": "alternating", "deadline_s": 356, "stages": [
+      {"turn_m": 6.92, "bank_m": 4.64, "offsets_m": [-2.31, 2.09], "banks_deg": [9.1, -7.4], "shifts_m": [-0.50, 0.37]},
+      {"turn_m": 6.84, "bank_m": 4.34, "offsets_m": [-2.10, 2.31], "banks_deg": [-8.2, 9.3], "shifts_m": [0.34, -0.49]}
+    ]},
+    {"id": "matched_persistent_balanced", "family": "persistent", "deadline_s": 347, "stages": [
+      {"turn_m": 6.69, "bank_m": 4.18, "offsets_m": [-2.10, 2.23], "banks_deg": [7.6, -8.2], "shifts_m": [0.31, -0.18]},
+      {"turn_m": 6.70, "bank_m": 4.52, "offsets_m": [-2.19, 2.16], "banks_deg": [8.4, -7.5], "shifts_m": [-0.34, 0.29]}
+    ]},
+    {"id": "matched_persistent_long_entry", "family": "persistent", "deadline_s": 365, "stages": [
+      {"turn_m": 7.36, "bank_m": 5.02, "offsets_m": [-2.18, 2.33], "banks_deg": [-9.3, 8.6], "shifts_m": [-0.39, 0.43]},
+      {"turn_m": 6.77, "bank_m": 4.14, "offsets_m": [-2.26, 2.15], "banks_deg": [-7.9, 9.0], "shifts_m": [0.23, -0.30]}
+    ]},
+    {"id": "matched_persistent_long_exit", "family": "persistent", "deadline_s": 367, "stages": [
+      {"turn_m": 6.64, "bank_m": 4.41, "offsets_m": [-2.14, 2.25], "banks_deg": [8.2, -9.0], "shifts_m": [0.34, -0.45]},
+      {"turn_m": 7.43, "bank_m": 5.09, "offsets_m": [-2.30, 2.18], "banks_deg": [9.4, -8.6], "shifts_m": [-0.32, 0.41]}
+    ]},
+    {"id": "matched_persistent_offset", "family": "persistent", "deadline_s": 359, "stages": [
+      {"turn_m": 6.90, "bank_m": 4.10, "offsets_m": [-2.35, 2.12], "banks_deg": [-8.3, 7.3], "shifts_m": [-0.18, 0.48]},
+      {"turn_m": 7.11, "bank_m": 4.66, "offsets_m": [-2.11, 2.33], "banks_deg": [-9.1, 8.4], "shifts_m": [0.42, -0.51]}
+    ]},
+    {"id": "matched_shared_entry", "family": "same_sign_stage", "deadline_s": 347, "stages": [
+      {"turn_m": 6.57, "bank_m": 4.36, "offsets_m": [-2.17, 2.20], "banks_deg": [-7.8, -8.6], "shifts_m": [0.25, -0.32]},
+      {"turn_m": 6.76, "bank_m": 4.50, "offsets_m": [-2.23, 2.15], "banks_deg": [8.3, -7.6], "shifts_m": [-0.42, 0.28]}
+    ]},
+    {"id": "matched_shared_exit", "family": "same_sign_stage", "deadline_s": 360, "stages": [
+      {"turn_m": 6.85, "bank_m": 4.28, "offsets_m": [-2.20, 2.25], "banks_deg": [-8.0, 9.2], "shifts_m": [-0.37, 0.23]},
+      {"turn_m": 7.12, "bank_m": 4.64, "offsets_m": [-2.16, 2.32], "banks_deg": [7.8, 8.7], "shifts_m": [0.43, -0.35]}
+    ]},
+    {"id": "matched_shared_reversal", "family": "same_sign_stage", "deadline_s": 364, "stages": [
+      {"turn_m": 7.08, "bank_m": 4.46, "offsets_m": [-2.26, 2.18], "banks_deg": [8.6, 7.2], "shifts_m": [0.32, -0.48]},
+      {"turn_m": 7.15, "bank_m": 4.43, "offsets_m": [-2.22, 2.29], "banks_deg": [-8.4, -9.1], "shifts_m": [-0.44, 0.24]}
+    ]},
+    {"id": "matched_shared_long_exit", "family": "same_sign_stage", "deadline_s": 373, "stages": [
+      {"turn_m": 6.97, "bank_m": 4.52, "offsets_m": [-2.14, 2.29], "banks_deg": [8.2, -7.7], "shifts_m": [0.23, -0.38]},
+      {"turn_m": 7.41, "bank_m": 5.01, "offsets_m": [-2.34, 2.19], "banks_deg": [-9.3, -8.3], "shifts_m": [-0.41, 0.48]}
+    ]}
+  ]
+}

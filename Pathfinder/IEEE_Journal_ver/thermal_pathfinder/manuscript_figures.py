@@ -14,6 +14,7 @@ from .margin_profiles import digest
 from .mission_profiles import arguments, design
 from .pause_confirmation import CONFIG, OUTPUT
 from .pause_forecast_study import METHODS, read
+from .published_speed_baseline import DEFAULT_OUTPUT as PUBLISHED_OUTPUT, METHOD as PUBLISHED_METHOD
 
 BLUE = "#0072B2"
 ORANGE = "#D55E00"
@@ -21,7 +22,9 @@ GRAY = "#525b65"
 
 
 def save(fig, output, name):
-    fig.savefig(output / f"{name}.svg")
+    vector = output / f"{name}.svg"
+    fig.savefig(vector)
+    vector.write_text("\n".join(line.rstrip() for line in vector.read_text().splitlines()) + "\n")
     fig.savefig(output / f"{name}.png", dpi=400)
     plt.close(fig)
 
@@ -76,14 +79,26 @@ def plot_routes(config, results, output):
     save(fig, output, "junction_paths_and_temperatures")
 
 
-def plot_benchmark(results, output):
+def plot_benchmark(results, output, published):
     audit = read(results / "confirmation_audit.json")["primary"]
     screen = read(results / "screening_diagnostic.json")
     if any(digest(results / name) != sha for name, sha in screen["source_sha256"].items()):
         raise ValueError("Screening inputs changed")
     fig, (counts, forecasts) = plt.subplots(1, 2, figsize=(7.05, 2.75), layout="constrained",
                                             gridspec_kw={"width_ratios": [1.04, 1]})
-    order = list(METHODS)
+    entries = dict(zip(METHODS, ("Fixed reactive", "Time-only fallback", "Per-motor forecast"), strict=True))
+    outcomes = {method: audit["by_method"][method]["outcomes"] for method in METHODS}
+    if published.is_dir():
+        comparison = read(published / "summary.json")
+        reference = read(published / "manifest.json")["reference_hashes"]
+        if any(digest(results / name) != checksum for name, checksum in reference.items()):
+            raise ValueError("Published controller comparison uses a different benchmark")
+        outcomes[PUBLISHED_METHOD] = comparison["outcomes"][PUBLISHED_METHOD]
+        entries[PUBLISHED_METHOD] = "Published controller (adapted)"
+    order = list(entries)
+    known = {"completed", "no_route", "thermal_limit", "deadline"}
+    for counts_by_outcome in outcomes.values():
+        counts_by_outcome["other"] = sum(value for key, value in counts_by_outcome.items() if key not in known)
     y = np.arange(len(order))
     left = np.zeros(len(order), dtype=int)
     for status, label, color, fg in (
@@ -91,8 +106,11 @@ def plot_benchmark(results, output):
         ("no_route", "Rejected", "#cfd7de", "#17202a"),
         ("thermal_limit", "Thermal stop", ORANGE, "#13191f"),
         ("deadline", "Deadline", "#56616e", "white"),
+        ("other", "Other failure", "#c9a14e", "#17202a"),
     ):
-        values = np.array([audit["by_method"][method]["outcomes"].get(status, 0) for method in order])
+        values = np.array([outcomes[method].get(status, 0) for method in order])
+        if not np.any(values):
+            continue
         counts.barh(y, values, left=left, height=0.58, color=color, label=label, edgecolor="white", linewidth=0.5)
         for row, (origin, value) in enumerate(zip(left, values, strict=True)):
             if value >= 4:
@@ -100,8 +118,8 @@ def plot_benchmark(results, output):
             elif value:
                 counts.text(origin + value / 2, row + 0.39, str(value), ha="center", va="center", color="#17202a", fontsize=8)
         left += values
-    counts.set(xlim=(0, 72), ylim=(2.63, -0.57), xticks=(0, 24, 48, 72), xlabel="Starts",
-               yticks=y, yticklabels=("Fixed reactive", "Time-only fallback", "Per-motor forecast"))
+    counts.set(xlim=(0, 72), ylim=(len(order) - 0.37, -0.57), xticks=(0, 24, 48, 72), xlabel="Starts",
+               yticks=y, yticklabels=tuple(entries.values()))
     counts.set_title("(a) Planner outcomes", loc="left")
     counts.legend(ncol=2, loc="upper center", bbox_to_anchor=(0.55, -0.28), frameon=False,
                   columnspacing=0.85, handlelength=1.1)
@@ -132,12 +150,13 @@ def main():
     parser = arguments(__doc__)
     parser.set_defaults(config=CONFIG, output=OUTPUT)
     parser.add_argument("--figures", type=Path, default=Path("docs/figures"))
+    parser.add_argument("--published", type=Path, default=PUBLISHED_OUTPUT)
     args = parser.parse_args()
     args.figures.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.titlesize": 9,
                          "axes.spines.top": False, "axes.spines.right": False, "svg.fonttype": "none"})
     plot_routes(args.config, args.output, args.figures)
-    plot_benchmark(args.output, args.figures)
+    plot_benchmark(args.output, args.figures, args.published)
 
 
 if __name__ == "__main__":

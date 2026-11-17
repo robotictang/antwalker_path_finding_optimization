@@ -29,6 +29,16 @@ uv run --python 3.12 --with-requirements requirements.txt --with matplotlib==3.1
 
 The PNG previews and editable SVGs are in [docs/figures](docs/figures/).
 
+## Reproduce the published-controller comparison
+
+After reproducing the frozen 12-course benchmark, run:
+
+~~~bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.published_speed_baseline --workers 14
+~~~
+
+The [published speed comparison](docs/published_speed_baseline.md) describes the hexapod adaptation and provides the paired replay results.
+
 ## Run the larger fixed-planner pause benchmark
 
 After reproducing the four-course pause forecast study:
@@ -226,6 +236,25 @@ The hexapod completed 2 m on flat ground and on each 8° cross-slope with joint 
 | Right side | Ground rises to the left | 67.0 °C | 68.1 °C |
 
 All four executions finished below the modeled 70 °C limit. Every baseline chose the right-rising route in both starts and completed both. The pilot observed a change in route preference and peak temperature. A completion advantage is an open question for the larger study.
+
+## Matched test of a junction pause
+
+The adapted published thermal speed controller runs in both arms. One arm can plan a 12 s junction pause in addition to all no-pause options. The [protocol](docs/matched_pause_protocol.md) fixes 72 paired warm starts on 12 fresh courses. The pause-load estimate comes from the existing confirmation archive. Enabling the pause raised completion from 25 to 29 and thermal stops from two to four. The same-route controls confirmed three physical recoveries. [Paired results](results/matched_pause/summary.json) · [Independent audit](results/matched_pause/audit.json)
+
+```bash
+.venv/bin/python -m thermal_pathfinder.matched_pause freeze
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.matched_pause profiles --workers 14
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.matched_pause execute --workers 14
+.venv/bin/python -m thermal_pathfinder.matched_pause_audit
+```
+
+Regenerate the matched-results figure from the saved plans and replays:
+
+```bash
+uv run --python 3.12 --with-requirements requirements.txt --with matplotlib==3.10.3 python -m thermal_pathfinder.matched_pause_figure
+```
+
+Use the same unused `--output` directory for each step of a repeat. The [results index](results/README.md) describes the saved forecasts and physics traces.
 
 ## Project layout
 
