@@ -1,0 +1,36 @@
+{
+  "name": "reactive_slowdown_forecast_held_out_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.50,
+  "speed_fractions": [1.0, 0.65],
+  "transition_s": 2.0,
+  "edge_deadline_s": 235,
+  "resolution_m": 0.12,
+  "progress_bin_m": 0.30,
+  "forecast_step_s": 0.50,
+  "bootstrap_seed": 261117,
+  "thermal_settings": [
+    {"id": "slower_cooling", "heating_multiplier": 0.46, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "near_boundary", "heating_multiplier": 0.44, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "warm_start", "heating_multiplier": 0.45, "cooling_time_constant_s": 120, "warm_c": 68, "cool_c": 48}
+  ],
+  "reactive": {"trigger_c": 67.0, "resume_c": 65.5, "speed_fraction": 0.65, "ramp_s": 2.0},
+  "maps": [
+    {"id": "offset_shallow_fan", "family": "single_fan", "deadline_s": 222, "stages": [
+      {"turn_m": 7.95, "bank_m": 6.1, "offsets_m": [-3.25, 0, 3.4], "banks_deg": [8.5, -7, -9.5], "shifts_m": [0.45, -0.35, 0.15]}
+    ]},
+    {"id": "offset_steep_fan", "family": "single_fan", "deadline_s": 230, "stages": [
+      {"turn_m": 8.3, "bank_m": 6.85, "offsets_m": [-3.3, 0, 3.15], "banks_deg": [-8, 9.5, 10], "shifts_m": [0.4, -0.35, 0.45]}
+    ]},
+    {"id": "crossed_split", "family": "two_junctions", "deadline_s": 345, "stages": [
+      {"turn_m": 6.8, "bank_m": 4.55, "offsets_m": [-2.18, 2.15], "banks_deg": [-7.5, 9.5], "shifts_m": [-0.5, 0.3]},
+      {"turn_m": 6.65, "bank_m": 4.3, "offsets_m": [-2.12, 2.28], "banks_deg": [10, -8.5], "shifts_m": [0.3, -0.27]}
+    ]},
+    {"id": "staggered_split", "family": "two_junctions", "deadline_s": 355, "stages": [
+      {"turn_m": 7.05, "bank_m": 4.4, "offsets_m": [-2.25, 2.08], "banks_deg": [7, 9], "shifts_m": [-0.25, 0.43]},
+      {"turn_m": 7.15, "bank_m": 4.25, "offsets_m": [-2.1, 2.34], "banks_deg": [-10, -7.5], "shifts_m": [0.35, -0.3]}
+    ]}
+  ]
+}

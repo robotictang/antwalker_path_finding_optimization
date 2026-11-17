@@ -1,0 +1,47 @@
+{
+  "name": "reactive_joint_margin_transfer_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.50,
+  "speed_fractions": [1.0, 0.65],
+  "transition_s": 2.0,
+  "edge_deadline_s": 245,
+  "resolution_m": 0.12,
+  "progress_bin_m": 0.30,
+  "forecast_step_s": 0.50,
+  "bootstrap_seed": 261118,
+  "calibration": {
+    "temperature_grid_c": [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 0.75, 1.0],
+    "deadline_grid_s": [0.0, 0.25, 0.50, 1.0, 2.0, 3.0, 5.0, 8.0, 10.0]
+  },
+  "thermal_settings": [
+    {"id": "slower_cooling", "heating_multiplier": 0.46, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "near_boundary", "heating_multiplier": 0.44, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "warm_start", "heating_multiplier": 0.45, "cooling_time_constant_s": 120, "warm_c": 68, "cool_c": 48}
+  ],
+  "reactive": {"trigger_c": 67.0, "resume_c": 65.5, "speed_fraction": 0.65, "ramp_s": 2.0},
+  "maps": [
+    {"id": "reverse_banked_fan", "family": "single_fan", "deadline_s": 216, "stages": [
+      {"turn_m": 7.76, "bank_m": 6.38, "offsets_m": [-3.16, 0, 3.27], "banks_deg": [8.8, -8.2, -6.8], "shifts_m": [-0.32, 0.31, 0.28]}
+    ]},
+    {"id": "early_rise_fan", "family": "single_fan", "deadline_s": 225, "stages": [
+      {"turn_m": 8.14, "bank_m": 6.17, "offsets_m": [-3.26, 0, 3.37], "banks_deg": [-8.7, 8.7, 7.3], "shifts_m": [-0.57, -0.21, 0.23]}
+    ]},
+    {"id": "late_bank_fan", "family": "single_fan", "deadline_s": 237, "stages": [
+      {"turn_m": 8.39, "bank_m": 6.52, "offsets_m": [-3.45, 0, 3.29], "banks_deg": [7.4, 9.3, -9.4], "shifts_m": [0.48, 0.29, -0.54]}
+    ]},
+    {"id": "crossover_banks", "family": "two_junctions", "deadline_s": 341, "stages": [
+      {"turn_m": 6.78, "bank_m": 4.18, "offsets_m": [-2.14, 2.11], "banks_deg": [7.7, -9.3], "shifts_m": [-0.32, 0.35]},
+      {"turn_m": 6.59, "bank_m": 4.54, "offsets_m": [-2.07, 2.24], "banks_deg": [-8.0, 9.1], "shifts_m": [0.36, -0.24]}
+    ]},
+    {"id": "unequal_banks", "family": "two_junctions", "deadline_s": 352, "stages": [
+      {"turn_m": 6.94, "bank_m": 3.83, "offsets_m": [-2.23, 2.12], "banks_deg": [-9.4, -6.8], "shifts_m": [-0.41, 0.32]},
+      {"turn_m": 7.14, "bank_m": 4.42, "offsets_m": [-2.13, 2.32], "banks_deg": [7.4, 9.5], "shifts_m": [0.26, -0.37]}
+    ]},
+    {"id": "long_entry_split", "family": "two_junctions", "deadline_s": 367, "stages": [
+      {"turn_m": 7.34, "bank_m": 3.98, "offsets_m": [-2.34, 2.22], "banks_deg": [-8.0, 9.8], "shifts_m": [-0.35, 0.45]},
+      {"turn_m": 7.08, "bank_m": 4.84, "offsets_m": [-2.26, 2.31], "banks_deg": [8.8, -6.7], "shifts_m": [0.43, -0.32]}
+    ]}
+  ]
+}

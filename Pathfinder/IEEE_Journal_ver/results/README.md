@@ -19,3 +19,19 @@ The thermal-margin transfer run uses the same artifacts under `results/thermal_m
 The continuous-profile comparison stores a source and input checksum manifest, nominal route profiles and their traces, `forecasts.json` with paired forecasts and observed outcomes, and `summary.json` with peak errors and admission counts. It uses the saved transfer outcomes as the evaluation reference.
 
 The mission-completion benchmark writes its frozen `manifest.json`, generated scenes, `edge_profiles.json`, `plans.json`, `executions.json`, and `summary.json` under `results/mission_completion`. Nominal and warm traces are stored separately. The summary includes map-level paired effects and planning-time measurements.
+
+The disagreement study keeps a reference manifest and writes `summary.json` plus new traces in `results/discordant_replays`. The matched bank-order study reuses the mission-completion artifact layout in `results/matched_load_order`. Its summary includes course-order pairs and the nominal femur loading check.
+
+The reactive-forecast comparison uses `results/reactive_forecast`. Its `forecast_manifest.json` hashes the forecast source and all nominal profiles, including excluded branches. In addition to the paired `plans.json` and warm `executions.json`, `schedule_forecasts.json` records each method's predicted peak and elapsed time for the same set of selected schedules and fastest probes.
+
+The reactive-margin transfer experiment uses `results/reactive_margin_transfer`. Its `calibration.json` freezes the development inputs, grid, selected margins, and leave-one-course-out diagnostics. The separate `evaluation_manifest.json`, `plans.json`, `schedule_forecasts.json`, `executions.json`, and `summary.json` record the held-out comparison and its nominal and warm traces.
+
+The exhaustive schedule audit uses `results/schedule_audit`. Its manifest records the source and archive hashes and lists the new replays. The summary lists every schedule's forecast, screening reasons, simulation outcome, and trace hash, plus the fastest and coolest observed finishes for each adverse start.
+
+The junction-pause study uses `results/junction_pause`. The manifest identifies the original trace for every baseline schedule and the warm replay traces record temperatures, joint torque and body position. The summary includes thermal change and body displacement during the pause and an exact zero-pause trace check.
+
+The junction-pause transfer study uses `results/junction_pause_transfer`. Its manifest freezes the schedule for each start and records the archived inputs and reused trace hashes. The summary gives paired outcomes, per-run pause telemetry, and the result of applying a pause only as a fallback on original rejections.
+
+The pause forecast study writes its inferred motor loads and hashes in `results/pause_forecast/pause_model.json`. Its `archived_evaluation.json` checks prediction errors and screening on the previous transfer schedules. The new-course `plans.json`, `executions.json`, and `summary.json` give the decisions, trace references and paired outcomes.
+
+The larger fixed-planner benchmark uses `results/pause_forecast_confirmation`. Its `confirmation_lock.json` ties the model, comparison rules and 12 course definitions to the previous implementation. The standard pause-forecast outputs are supplemented by `confirmation_audit.json`, with independent paired-trace checks and breakdowns by course, family and thermal setting.

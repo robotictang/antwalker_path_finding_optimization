@@ -15,6 +15,119 @@ uv pip install --python .venv/bin/python -r requirements.txt
 
 The default configuration is [experiments/connected_pilot.json](experiments/connected_pilot.json). Use `--config` and `--output` for alternate runs. The runner saves the scene, planning decisions, execution outcomes, and traces in [results/connected_pilot](results/connected_pilot). Inspect the scene with `.venv/bin/python -m mujoco.viewer --mjcf=results/connected_pilot/scene.xml`.
 
+## IEEE Access review package
+
+The [editable LaTeX source](manuscript/ieee-access/README.md) uses the official IEEE Access class. Open the [compiled review PDF](output/pdf/hexapod-junction-pause-ieee-access-review.pdf) or download the [portable LaTeX archive](output/hexapod-junction-pause-ieee-access-source.zip). The byline and corresponding-author details are placeholders in [author-details.tex](manuscript/ieee-access/author-details.tex).
+
+## Manuscript and figures
+
+The [integrated manuscript](docs/manuscript.md) describes the simulation, planner, and benchmark. Regenerate both figures from the audited records after running the benchmark and screening diagnostic:
+
+~~~bash
+uv run --python 3.12 --with-requirements requirements.txt --with matplotlib==3.10.3 python -m thermal_pathfinder.manuscript_figures
+~~~
+
+The PNG previews and editable SVGs are in [docs/figures](docs/figures/).
+
+## Run the larger fixed-planner pause benchmark
+
+After reproducing the four-course pause forecast study:
+
+```bash
+.venv/bin/python -m thermal_pathfinder.pause_confirmation freeze
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/pause_forecast_confirmation.json --output results/pause_forecast_confirmation --workers 14
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.pause_forecast_study --config experiments/pause_forecast_confirmation.json --output results/pause_forecast_confirmation --workers 14
+.venv/bin/python -m thermal_pathfinder.pause_confirmation audit
+```
+
+The [benchmark report](docs/pause_forecast_confirmation.md) records the design and the 10-point practical completion criterion. The [manuscript draft](docs/manuscript_results_discussion.md) includes a post hoc check of the 48 time-only fallback schedules. Run `.venv/bin/python -m thermal_pathfinder.pause_screening_diagnostic` to reproduce that check from the saved traces.
+
+## Forecast per-motor cooling before selecting a pause
+
+With the junction-pause development and transfer results available:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/pause_forecast.json --output results/pause_forecast --workers 12
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.pause_forecast_study --workers 12
+```
+
+The [forecast study](docs/pause_forecast.md) evaluates the per-motor pause model on archived schedules and compares its fallback planner with the time-only planner on four new courses.
+
+## Test the fixed junction pause on other courses
+
+After reproducing the junction-pause development test and both archived reactive studies:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.junction_pause_transfer --workers 12
+```
+
+The [transfer study](docs/junction_pause_transfer.md) compares the same schedule with and without the fixed 12-second pause, using four previously evaluated two-stage courses outside pause development.
+
+## Test an in-place crawl at a junction
+
+After reproducing the exhaustive schedule audit:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.junction_pause --workers 12
+```
+
+The [junction-pause study](docs/junction_pause.md) tests three pause durations on the unequal-banks start for which all original schedules overheated.
+
+## Audit adverse reactive planning decisions
+
+After reproducing both reactive forecast and margin transfer comparisons:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.schedule_audit --workers 12
+```
+
+The [audit](docs/schedule_audit.md) exhausts the available route-and-speed schedules for each adverse start and compares simulated outcomes with the forecast screens.
+
+## Test whether recalibrated reactive margins transfer
+
+With the archived reactive-forecast outputs in `results/reactive_forecast`:
+
+```bash
+.venv/bin/python -m thermal_pathfinder.reactive_margin
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/reactive_margin_transfer.json --output results/reactive_margin_transfer --workers 12
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.reactive_margin_study --workers 12
+```
+
+The [protocol](docs/reactive_margin_protocol.md) freezes the calibration grid and six new courses. The comparison uses two reactive planners with different margins and the earlier stitched planner as a reference. On the six new courses, the calibrated planner finished 21/36 starts and the fixed reactive planner finished 22/36. See the [results](docs/reactive_margin_transfer.md).
+
+## Test forecasts that account for reactive slowdown
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/reactive_forecast.json --output results/reactive_forecast --workers 12
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.reactive_study --workers 12
+```
+
+The [protocol](docs/reactive_forecast_protocol.md) specifies four new courses and three forecasts using the same per-motor starting temperatures, route and speed options, and adaptive execution controller. The runner records selected schedules, comparable forecasts on the replay set, warm trace checks, and paired completion. The reactive forecast improved peak and time accuracy but completed 12/24 starts, compared with 13/24 for the existing forecast. See the [results](docs/reactive_forecast.md).
+
+## Reproduce the disagreement and bank-order follow-ups
+
+Run the original mission-completion benchmark first. Its saved executions provide the adaptive reference for the seven disagreements. The diagnostic replays schedules with the reactive speed override disabled while keeping torque derating in place.
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.discordant_replays --workers 4
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/matched_load_order.json --output results/matched_load_order --workers 12
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_completion --config experiments/matched_load_order.json --output results/matched_load_order --workers 12
+.venv/bin/python -m thermal_pathfinder.load_order_analysis
+```
+
+The [matched-course protocol](docs/matched_load_order_protocol.md) specifies three pairs whose stages appear in opposite orders. The original thermal margin, adaptive controller, planning-time budget, and completion target carry forward.
+
+For the supplemental thermal settings, reuse the audited nominal profiles:
+
+```bash
+.venv/bin/python -m thermal_pathfinder.prepare_load_order
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_completion --config experiments/matched_load_order_boundary.json --output results/matched_load_order_boundary --workers 12
+.venv/bin/python -m thermal_pathfinder.load_order_analysis --config experiments/matched_load_order_boundary.json --output results/matched_load_order_boundary
+```
+
+See the [seven-case replay report](docs/discordant_replays.md) and [matched bank-order results](docs/matched_load_order.md).
+
+
 ## Run the mission-completion benchmark
 
 ```bash

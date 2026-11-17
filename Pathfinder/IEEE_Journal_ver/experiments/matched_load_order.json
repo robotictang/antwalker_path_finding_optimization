@@ -1,0 +1,279 @@
+{
+  "name": "matched_bank_order_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.5,
+  "speed_fractions": [
+    1.0,
+    0.65
+  ],
+  "transition_s": 2.0,
+  "edge_deadline_s": 235,
+  "resolution_m": 0.12,
+  "bootstrap_seed": 261116,
+  "thermal_settings": [
+    {
+      "id": "cooling_120",
+      "heating_multiplier": 0.46,
+      "cooling_time_constant_s": 120,
+      "warm_c": 67,
+      "cool_c": 45
+    },
+    {
+      "id": "warm_start",
+      "heating_multiplier": 0.45,
+      "cooling_time_constant_s": 120,
+      "warm_c": 68,
+      "cool_c": 48
+    }
+  ],
+  "reactive": {
+    "trigger_c": 67.0,
+    "resume_c": 65.5,
+    "speed_fraction": 0.65,
+    "ramp_s": 2.0
+  },
+  "maps": [
+    {
+      "id": "shallow_banks_negative_first",
+      "family": "shallow_banks",
+      "order": "negative_first",
+      "deadline_s": 330,
+      "stages": [
+        {
+          "turn_m": 6.9,
+          "bank_m": 4.5,
+          "offsets_m": [
+            -2.05,
+            2.1
+          ],
+          "shifts_m": [
+            -0.2,
+            0.25
+          ],
+          "banks_deg": [
+            -8,
+            -6.5
+          ]
+        },
+        {
+          "turn_m": 6.9,
+          "bank_m": 4.5,
+          "offsets_m": [
+            -2.05,
+            2.1
+          ],
+          "shifts_m": [
+            -0.2,
+            0.25
+          ],
+          "banks_deg": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shallow_banks_positive_first",
+      "family": "shallow_banks",
+      "order": "positive_first",
+      "deadline_s": 330,
+      "stages": [
+        {
+          "turn_m": 6.9,
+          "bank_m": 4.5,
+          "offsets_m": [
+            -2.05,
+            2.1
+          ],
+          "shifts_m": [
+            -0.2,
+            0.25
+          ],
+          "banks_deg": [
+            7,
+            9
+          ]
+        },
+        {
+          "turn_m": 6.9,
+          "bank_m": 4.5,
+          "offsets_m": [
+            -2.05,
+            2.1
+          ],
+          "shifts_m": [
+            -0.2,
+            0.25
+          ],
+          "banks_deg": [
+            -8,
+            -6.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "long_banks_negative_first",
+      "family": "long_banks",
+      "order": "negative_first",
+      "deadline_s": 350,
+      "stages": [
+        {
+          "turn_m": 7.3,
+          "bank_m": 5.8,
+          "offsets_m": [
+            -2.18,
+            2.02
+          ],
+          "shifts_m": [
+            0.3,
+            -0.25
+          ],
+          "banks_deg": [
+            -9.5,
+            -7.5
+          ]
+        },
+        {
+          "turn_m": 7.3,
+          "bank_m": 5.8,
+          "offsets_m": [
+            -2.18,
+            2.02
+          ],
+          "shifts_m": [
+            0.3,
+            -0.25
+          ],
+          "banks_deg": [
+            6.5,
+            8.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "long_banks_positive_first",
+      "family": "long_banks",
+      "order": "positive_first",
+      "deadline_s": 350,
+      "stages": [
+        {
+          "turn_m": 7.3,
+          "bank_m": 5.8,
+          "offsets_m": [
+            -2.18,
+            2.02
+          ],
+          "shifts_m": [
+            0.3,
+            -0.25
+          ],
+          "banks_deg": [
+            6.5,
+            8.5
+          ]
+        },
+        {
+          "turn_m": 7.3,
+          "bank_m": 5.8,
+          "offsets_m": [
+            -2.18,
+            2.02
+          ],
+          "shifts_m": [
+            0.3,
+            -0.25
+          ],
+          "banks_deg": [
+            -9.5,
+            -7.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wide_banks_negative_first",
+      "family": "wide_banks",
+      "order": "negative_first",
+      "deadline_s": 350,
+      "stages": [
+        {
+          "turn_m": 7.55,
+          "bank_m": 4.8,
+          "offsets_m": [
+            -2.27,
+            2.23
+          ],
+          "shifts_m": [
+            -0.35,
+            0.3
+          ],
+          "banks_deg": [
+            -10,
+            -7
+          ]
+        },
+        {
+          "turn_m": 7.55,
+          "bank_m": 4.8,
+          "offsets_m": [
+            -2.27,
+            2.23
+          ],
+          "shifts_m": [
+            -0.35,
+            0.3
+          ],
+          "banks_deg": [
+            8,
+            10.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wide_banks_positive_first",
+      "family": "wide_banks",
+      "order": "positive_first",
+      "deadline_s": 350,
+      "stages": [
+        {
+          "turn_m": 7.55,
+          "bank_m": 4.8,
+          "offsets_m": [
+            -2.27,
+            2.23
+          ],
+          "shifts_m": [
+            -0.35,
+            0.3
+          ],
+          "banks_deg": [
+            8,
+            10.5
+          ]
+        },
+        {
+          "turn_m": 7.55,
+          "bank_m": 4.8,
+          "offsets_m": [
+            -2.27,
+            2.23
+          ],
+          "shifts_m": [
+            -0.35,
+            0.3
+          ],
+          "banks_deg": [
+            -10,
+            -7
+          ]
+        }
+      ]
+    }
+  ]
+}

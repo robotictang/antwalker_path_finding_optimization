@@ -1,0 +1,39 @@
+{
+  "name": "per_motor_pause_forecast_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.50,
+  "pause_s": 12.0,
+  "speed_fractions": [1.0, 0.65],
+  "transition_s": 2.0,
+  "edge_deadline_s": 245,
+  "resolution_m": 0.12,
+  "progress_bin_m": 0.30,
+  "forecast_step_s": 0.50,
+  "bootstrap_seed": 261119,
+  "thermal_settings": [
+    {"id": "slower_cooling", "heating_multiplier": 0.46, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "near_boundary", "heating_multiplier": 0.44, "cooling_time_constant_s": 120, "warm_c": 67, "cool_c": 45},
+    {"id": "warm_start", "heating_multiplier": 0.45, "cooling_time_constant_s": 120, "warm_c": 68, "cool_c": 48}
+  ],
+  "reactive": {"trigger_c": 67.0, "resume_c": 65.5, "speed_fraction": 0.65, "ramp_s": 2.0},
+  "maps": [
+    {"id": "opposite_banks", "deadline_s": 348, "stages": [
+      {"turn_m": 6.72, "bank_m": 4.18, "offsets_m": [-2.22, 2.17], "banks_deg": [8.4, -8.8], "shifts_m": [0.32, -0.47]},
+      {"turn_m": 6.63, "bank_m": 4.85, "offsets_m": [-2.17, 2.24], "banks_deg": [-9.1, 7.7], "shifts_m": [-0.23, 0.41]}
+    ]},
+    {"id": "staggered_banks", "deadline_s": 355, "stages": [
+      {"turn_m": 6.54, "bank_m": 4.70, "offsets_m": [-2.17, 2.20], "banks_deg": [-8.4, 7.3], "shifts_m": [-0.54, 0.36]},
+      {"turn_m": 7.14, "bank_m": 3.94, "offsets_m": [-2.18, 2.35], "banks_deg": [9.9, -7.2], "shifts_m": [0.29, -0.30]}
+    ]},
+    {"id": "deep_second_bank", "deadline_s": 363, "stages": [
+      {"turn_m": 7.17, "bank_m": 3.81, "offsets_m": [-2.24, 2.11], "banks_deg": [7.2, -9.0], "shifts_m": [0.17, -0.31]},
+      {"turn_m": 6.94, "bank_m": 5.10, "offsets_m": [-2.28, 2.25], "banks_deg": [9.8, -9.1], "shifts_m": [-0.36, 0.37]}
+    ]},
+    {"id": "long_junction_approach", "deadline_s": 372, "stages": [
+      {"turn_m": 7.31, "bank_m": 4.13, "offsets_m": [-2.33, 2.10], "banks_deg": [-7.8, -9.5], "shifts_m": [0.43, -0.28]},
+      {"turn_m": 7.27, "bank_m": 4.27, "offsets_m": [-2.29, 2.31], "banks_deg": [-8.6, 8.2], "shifts_m": [-0.24, 0.38]}
+    ]}
+  ]
+}
