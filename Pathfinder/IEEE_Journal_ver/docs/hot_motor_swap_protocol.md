@@ -1,0 +1,21 @@
+# Can swapping the hot motors change which route can finish?
+
+Replay each profiled route under both initial temperature assignments in continuous MuJoCo simulation. Compare route selection using motor identities against route selection using only the mean and maximum starting temperatures. Keep the speed governor, walking policy, motor model, deadline, and thermal admission rule common. Run without junction pauses so the comparison isolates information available when choosing the route.
+
+## Courses and starts
+
+The configuration fixes 12 new two-stage courses with two branches per stage. Four retain the bank signs across stages, four reverse the signs, and four have a stage whose branches bank in the same direction. The geometry was generated with Python's seeded random generator (261120) within ranges comparable to the earlier matched pause courses. Stage lengths alternate which stage is longer across variants. Deadlines are projected course length divided by 0.108 m/s, rounded to whole seconds. Course geometry, settings, and analysis rules were fixed before any new nominal or warm runs.
+
+Use the three thermal settings from the matched pause benchmark. One starting assignment places the nine warm temperatures on the left and the nine cool temperatures on the right. The other swaps the sides. The exact temperature multiset, mean, and maximum are shared within each pair. The 36 course–setting pairs give 72 distinct starting scenarios. The nominal profiles at 65% and 100% speed support a branch when both finish. Replay every route formed from supported branches regardless of what either planner forecasts. With full support there are 96 nominal profiles and 288 warm walks. Report any loss of route coverage; a branch without both profiles does not have a warm replay outcome.
+
+## Route decisions
+
+Use the adapted gait-period thermal speed controller in the forecast and in continuous execution. Temperature and locomotion state carry through the junction. The per-motor planner forecasts each route using the actual assignment. The aggregate planner reconstructs the two possible assignments using the mean and maximum and the known nine-warm, nine-cool design. It averages forecast peak and arrival time across the two equally likely assignments and makes one shared route choice for the pair. Both planners screen forecast peak strictly below 69.50 °C and forecast arrival at or before the deadline. Rank eligible routes by earliest forecast arrival, then lower forecast peak, then route identifier. The nominal data and execution governor are shared, and both governors use the true temperatures for speed control during execution. Forecasts and planner decisions are recorded before any warm physics execution.
+
+## Outcomes
+
+A route is finishable if the replay reaches the goal by its deadline and avoids the thermal stop and any other execution failure. The primary outcome is the number of course–setting pairs with nonempty and disjoint finishable route sets. Such a pair requires different routes for the two starts to both finish. Also count pairs where the single finishable route for each side differs and pairs with a thermal crossover. A thermal crossover requires one route that finishes left-warm and stops thermally right-warm, and another that finishes right-warm and stops thermally left-warm. A common finishable route can coexist with a thermal crossover. Retain all pairs as the denominator and report which of these results occur on more than one course.
+
+Report per-planner completions, thermal stops, other failures, and rejections on all 72 starts. Identify paired gains and losses, and report the completion difference with a descriptive interval from resampling the courses. Compare with the inherited practical benchmark of ten additional percentage points and zero added thermal stops. Count how often the per-motor planner switches its choice, and report the choices and actual outcomes in pairs with a necessary route change. The exhaustive finishable sets and their best possible completion count use hindsight. They provide a reference for the choices made before execution.
+
+Conclusions apply to this simulator, profiled course network, assumed motor model, and the tested temperature assignments.

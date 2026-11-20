@@ -15,7 +15,22 @@ uv pip install --python .venv/bin/python -r requirements.txt
 
 The default configuration is [experiments/connected_pilot.json](experiments/connected_pilot.json). Use `--config` and `--output` for alternate runs. The runner saves the scene, planning decisions, execution outcomes, and traces in [results/connected_pilot](results/connected_pilot). Inspect the scene with `.venv/bin/python -m mujoco.viewer --mjcf=results/connected_pilot/scene.xml`.
 
+## Run the exhaustive hot-motor swap test
+
+The [protocol](docs/hot_motor_swap_protocol.md) fixes 12 new courses and three thermal settings. The test replays every supported route under both mirrored starts using the same thermal speed controller. It compares choices made with individual motor temperatures against choices made with the mean and maximum.
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.mission_profiles --config experiments/hot_motor_swap.json --output results/hot_motor_swap --workers 14
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m thermal_pathfinder.hot_motor_swap --workers 14
+```
+
+See the [verified results](docs/hot_motor_swap.md) for the route reversals and planner comparison.
+
+Use an unused output directory for a new nominal run. Restarting the warm-run command in the same output directory checks the frozen inputs and resumes from the audited replay checkpoint.
+
 ## IEEE Access review package
+
+Version 3 leads with the exhaustive hot-motor swap study. Open the [review PDF](output/pdf/hexapod-hot-motor-swap-ieee-access-v3.pdf), [editable LaTeX](manuscript/ieee-access-v3-hot-motor-swap/README.md), or [source ZIP](output/hexapod-hot-motor-swap-ieee-access-v3-source.zip).
 
 The [editable LaTeX source](manuscript/ieee-access/README.md) uses the official IEEE Access class. Open the [compiled review PDF](output/pdf/hexapod-junction-pause-ieee-access-review.pdf) or download the [portable LaTeX archive](output/hexapod-junction-pause-ieee-access-source.zip). The byline and corresponding-author details are placeholders in [author-details.tex](manuscript/ieee-access/author-details.tex).
 

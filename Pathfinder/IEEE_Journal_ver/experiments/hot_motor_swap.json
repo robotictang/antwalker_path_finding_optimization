@@ -1,0 +1,516 @@
+{
+  "name": "hot_motor_swap_exhaustive_v1",
+  "base_config": "connected_pilot.json",
+  "planning_budget_s": 2.0,
+  "minimum_gain_pp": 10.0,
+  "thermal_margin_c": 0.5,
+  "speed_fractions": [
+    1.0,
+    0.65
+  ],
+  "transition_s": 2.0,
+  "edge_deadline_s": 245,
+  "resolution_m": 0.12,
+  "progress_bin_m": 0.3,
+  "forecast_step_s": 0.5,
+  "bootstrap_seed": 261120,
+  "thermal_settings": [
+    {
+      "id": "slower_cooling",
+      "heating_multiplier": 0.46,
+      "cooling_time_constant_s": 120,
+      "warm_c": 67,
+      "cool_c": 45
+    },
+    {
+      "id": "near_boundary",
+      "heating_multiplier": 0.44,
+      "cooling_time_constant_s": 120,
+      "warm_c": 67,
+      "cool_c": 45
+    },
+    {
+      "id": "warm_start",
+      "heating_multiplier": 0.45,
+      "cooling_time_constant_s": 120,
+      "warm_c": 68,
+      "cool_c": 48
+    }
+  ],
+  "reactive": {
+    "trigger_c": 67.0,
+    "resume_c": 65.5,
+    "speed_fraction": 0.65,
+    "ramp_s": 2.0
+  },
+  "maps": [
+    {
+      "id": "swap_alternating_01",
+      "family": "alternating",
+      "deadline_s": 358,
+      "stages": [
+        {
+          "turn_m": 6.77,
+          "bank_m": 5.14,
+          "offsets_m": [
+            -2.15,
+            2.23
+          ],
+          "banks_deg": [
+            -8.38,
+            8.17
+          ],
+          "shifts_m": [
+            0.01,
+            -0.17
+          ]
+        },
+        {
+          "turn_m": 6.74,
+          "bank_m": 4.51,
+          "offsets_m": [
+            -2.12,
+            2.12
+          ],
+          "banks_deg": [
+            7.86,
+            -7.9
+          ],
+          "shifts_m": [
+            0.44,
+            -0.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_alternating_02",
+      "family": "alternating",
+      "deadline_s": 358,
+      "stages": [
+        {
+          "turn_m": 7.05,
+          "bank_m": 4.76,
+          "offsets_m": [
+            -2.23,
+            2.14
+          ],
+          "banks_deg": [
+            8.18,
+            -8.92
+          ],
+          "shifts_m": [
+            -0.45,
+            -0.3
+          ]
+        },
+        {
+          "turn_m": 6.8,
+          "bank_m": 4.17,
+          "offsets_m": [
+            -2.19,
+            2.27
+          ],
+          "banks_deg": [
+            -8.54,
+            8.31
+          ],
+          "shifts_m": [
+            0.07,
+            0.33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_alternating_03",
+      "family": "alternating",
+      "deadline_s": 358,
+      "stages": [
+        {
+          "turn_m": 6.71,
+          "bank_m": 4.37,
+          "offsets_m": [
+            -2.33,
+            2.22
+          ],
+          "banks_deg": [
+            -7.56,
+            7.31
+          ],
+          "shifts_m": [
+            0.3,
+            -0.43
+          ]
+        },
+        {
+          "turn_m": 7.08,
+          "bank_m": 4.7,
+          "offsets_m": [
+            -2.25,
+            2.26
+          ],
+          "banks_deg": [
+            7.9,
+            -8.63
+          ],
+          "shifts_m": [
+            0.08,
+            0.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_alternating_04",
+      "family": "alternating",
+      "deadline_s": 352,
+      "stages": [
+        {
+          "turn_m": 6.53,
+          "bank_m": 4.53,
+          "offsets_m": [
+            -2.34,
+            2.31
+          ],
+          "banks_deg": [
+            7.41,
+            -7.67
+          ],
+          "shifts_m": [
+            -0.22,
+            0.26
+          ]
+        },
+        {
+          "turn_m": 6.8,
+          "bank_m": 4.84,
+          "offsets_m": [
+            -2.22,
+            2.25
+          ],
+          "banks_deg": [
+            -7.36,
+            7.94
+          ],
+          "shifts_m": [
+            0.38,
+            0.16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_persistent_01",
+      "family": "persistent",
+      "deadline_s": 353,
+      "stages": [
+        {
+          "turn_m": 6.97,
+          "bank_m": 4.84,
+          "offsets_m": [
+            -2.26,
+            2.23
+          ],
+          "banks_deg": [
+            -9.54,
+            8.87
+          ],
+          "shifts_m": [
+            0.04,
+            0.4
+          ]
+        },
+        {
+          "turn_m": 6.45,
+          "bank_m": 4.46,
+          "offsets_m": [
+            -2.33,
+            2.13
+          ],
+          "banks_deg": [
+            -8.16,
+            7.55
+          ],
+          "shifts_m": [
+            0.1,
+            0.13
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_persistent_02",
+      "family": "persistent",
+      "deadline_s": 358,
+      "stages": [
+        {
+          "turn_m": 6.92,
+          "bank_m": 5.0,
+          "offsets_m": [
+            -2.28,
+            2.34
+          ],
+          "banks_deg": [
+            8.5,
+            -7.86
+          ],
+          "shifts_m": [
+            -0.07,
+            0.42
+          ]
+        },
+        {
+          "turn_m": 6.8,
+          "bank_m": 4.2,
+          "offsets_m": [
+            -2.24,
+            2.28
+          ],
+          "banks_deg": [
+            8.64,
+            -7.61
+          ],
+          "shifts_m": [
+            0.34,
+            -0.09
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_persistent_03",
+      "family": "persistent",
+      "deadline_s": 355,
+      "stages": [
+        {
+          "turn_m": 6.55,
+          "bank_m": 4.57,
+          "offsets_m": [
+            -2.2,
+            2.23
+          ],
+          "banks_deg": [
+            -8.15,
+            8.49
+          ],
+          "shifts_m": [
+            0.33,
+            -0.08
+          ]
+        },
+        {
+          "turn_m": 6.91,
+          "bank_m": 4.89,
+          "offsets_m": [
+            -2.36,
+            2.14
+          ],
+          "banks_deg": [
+            -8.59,
+            8.47
+          ],
+          "shifts_m": [
+            -0.18,
+            0.27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_persistent_04",
+      "family": "persistent",
+      "deadline_s": 355,
+      "stages": [
+        {
+          "turn_m": 6.51,
+          "bank_m": 4.31,
+          "offsets_m": [
+            -2.33,
+            2.24
+          ],
+          "banks_deg": [
+            9.1,
+            -7.39
+          ],
+          "shifts_m": [
+            -0.26,
+            -0.19
+          ]
+        },
+        {
+          "turn_m": 6.95,
+          "bank_m": 5.11,
+          "offsets_m": [
+            -2.18,
+            2.25
+          ],
+          "banks_deg": [
+            9.03,
+            -7.79
+          ],
+          "shifts_m": [
+            0.28,
+            -0.33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_same_sign_stage_01",
+      "family": "same_sign_stage",
+      "deadline_s": 353,
+      "stages": [
+        {
+          "turn_m": 6.86,
+          "bank_m": 4.8,
+          "offsets_m": [
+            -2.29,
+            2.3
+          ],
+          "banks_deg": [
+            -8.2,
+            -9.11
+          ],
+          "shifts_m": [
+            -0.28,
+            -0.21
+          ]
+        },
+        {
+          "turn_m": 6.6,
+          "bank_m": 4.39,
+          "offsets_m": [
+            -2.16,
+            2.26
+          ],
+          "banks_deg": [
+            -8.36,
+            8.8
+          ],
+          "shifts_m": [
+            -0.31,
+            0.18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_same_sign_stage_02",
+      "family": "same_sign_stage",
+      "deadline_s": 364,
+      "stages": [
+        {
+          "turn_m": 7.38,
+          "bank_m": 5.19,
+          "offsets_m": [
+            -2.29,
+            2.23
+          ],
+          "banks_deg": [
+            7.84,
+            8.12
+          ],
+          "shifts_m": [
+            0.0,
+            0.19
+          ]
+        },
+        {
+          "turn_m": 6.49,
+          "bank_m": 4.41,
+          "offsets_m": [
+            -2.23,
+            2.15
+          ],
+          "banks_deg": [
+            7.9,
+            -8.36
+          ],
+          "shifts_m": [
+            0.32,
+            0.24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_same_sign_stage_03",
+      "family": "same_sign_stage",
+      "deadline_s": 356,
+      "stages": [
+        {
+          "turn_m": 6.57,
+          "bank_m": 4.31,
+          "offsets_m": [
+            -2.21,
+            2.35
+          ],
+          "banks_deg": [
+            -9.01,
+            8.71
+          ],
+          "shifts_m": [
+            0.11,
+            -0.3
+          ]
+        },
+        {
+          "turn_m": 7.17,
+          "bank_m": 4.63,
+          "offsets_m": [
+            -2.12,
+            2.19
+          ],
+          "banks_deg": [
+            -8.14,
+            -7.28
+          ],
+          "shifts_m": [
+            0.31,
+            0.02
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swap_same_sign_stage_04",
+      "family": "same_sign_stage",
+      "deadline_s": 366,
+      "stages": [
+        {
+          "turn_m": 6.73,
+          "bank_m": 4.57,
+          "offsets_m": [
+            -2.21,
+            2.36
+          ],
+          "banks_deg": [
+            7.83,
+            -9.04
+          ],
+          "shifts_m": [
+            -0.09,
+            0.05
+          ]
+        },
+        {
+          "turn_m": 7.18,
+          "bank_m": 5.17,
+          "offsets_m": [
+            -2.18,
+            2.18
+          ],
+          "banks_deg": [
+            7.36,
+            8.04
+          ],
+          "shifts_m": [
+            0.36,
+            -0.22
+          ]
+        }
+      ]
+    }
+  ]
+}
