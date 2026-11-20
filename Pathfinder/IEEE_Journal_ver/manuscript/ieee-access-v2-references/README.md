@@ -7,6 +7,6 @@ Select **pdfLaTeX**. With TeX Live installed, build from this directory:
     pdflatex -halt-on-error -interaction=nonstopmode manuscript.tex
     pdflatex -halt-on-error -interaction=nonstopmode manuscript.tex
 
-The bibliography is embedded in the source. There is no separate BibTeX step.
+The bibliography is embedded in the source. There is no separate BibTeX step. The included `placeins.sty` keeps figures and tables before the bibliography.
 
 The byline, affiliations and corresponding-author fields in **author-details.tex** are review placeholders. Confirm author order, affiliations, email, biographies and funding information before preparing the submission version. Journal-assigned publication metadata uses placeholders.

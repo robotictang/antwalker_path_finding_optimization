@@ -22,6 +22,7 @@
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{etoolbox}
+\usepackage{placeins}
 \hypersetup{pdftitle={Thermal Screening of Junction Pauses for Hexapod Route Planning in Simulation},
   pdfsubject={IEEE Access author-review draft, Version 2 with expanded references}, pdfkeywords={hexapod, simulation, thermal management}}
 \AtBeginDocument{%
@@ -412,6 +413,13 @@ Pause-exit motor, simulated entry & 16 & 0.030 \ensuremath{{}^{\circ}\mathrm{C}}
 \section{Earlier Planner Comparisons}
 \label{app:earlier-benchmark}
 
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=.78\textwidth]{figures/junction_paths_and_temperatures.png}
+\caption{Chassis position and maximum motor temperature for the two additional completions. The upper panel shows branch centerlines in gray and the simulated chassis traces in blue and orange. The lower panel marks each 12 s pause with a shade matching its trace. Dots at the ends mark mission completion.}
+\label{fig:paths}
+\end{figure*}
+
 \subsection{Planner Rules}
 
 A separate reactive speed rule used by the three frozen-benchmark planners ramps the speed cap toward 65\% over 2 s when the hottest motor reaches 67 \ensuremath{{}^{\circ}\mathrm{C}}, and begins restoring it at or below 65.50 \ensuremath{{}^{\circ}\mathrm{C}}. The forward command takes the lesser of planned speed and this cap. The planned speed commands were 65\% or 100\% of nominal speed, which gave 16 route and speed schedules per course. After junction crossing, the planned stage command changed at 0.5 of nominal speed per second. A pause set the forward speed command to zero while the crawl phase continued.
@@ -471,6 +479,13 @@ The per-motor fallback recovered two of the fixed planner's rejected starts and 
 
 Table~\ref{tab:course-outcomes} shows concentration of the two gains on the shallow alternating-bank course. They occurred in the near-boundary setting, one for each initial warm-side assignment, where totals across all courses were 13 of 24 finishes for the pause forecaster and 11 of 24 for the fixed planner. The other settings yielded the same completion counts under both policies. For each recovered start, the chosen schedule used 65\% planned speed on the first stage and 100\% on the second.
 
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=.89\textwidth]{figures/benchmark_outcomes_and_screening.png}
+\caption{Planner outcomes over 72 starts and the 48 attempted time-only pause schedules. The right panel shows plotted forecasts and observed outcomes. The shaded region spans the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} planning cutoff (dashed) to the 70 \ensuremath{{}^{\circ}\mathrm{C}} execution stop (dotted).}
+\label{fig:screening}
+\end{figure*}
+
 \begin{table*}[!t]
 \caption{Courses and completions out of six starts per planner per course}
 \label{tab:course-outcomes}
@@ -506,33 +521,6 @@ Same-sign stage & First & 37.85 & 348 & 2 & 3 & 2 & 4 \\
 
 Fig.~\ref{fig:paths} shows the two additional finishes. Exchanging the warm side reversed the selected branch on each stage. The left-warm walk finished at 340.02 s with a peak of 68.96 \ensuremath{{}^{\circ}\mathrm{C}}. The right-warm walk finished at 341.44 s with a peak of 69.21 \ensuremath{{}^{\circ}\mathrm{C}}. Against the 342 s deadline, the observed time headroom was 1.98 and 0.56 s, respectively. These replays demonstrate both a switch in route choice and a completed mission following each mirrored choice.
 
-\begin{figure*}[!t]
-\centering
-\includegraphics[width=.78\textwidth]{figures/junction_paths_and_temperatures.png}
-\caption{Chassis position and maximum motor temperature for the two additional completions. The upper panel shows branch centerlines in gray and the simulated chassis traces in blue and orange. The lower panel marks each 12 s pause with a shade matching its trace. Dots at the ends mark mission completion.}
-\label{fig:paths}
-\end{figure*}
-
-\begin{figure*}[!t]
-\centering
-\includegraphics[width=.89\textwidth]{figures/benchmark_outcomes_and_screening.png}
-\caption{Planner outcomes over 72 starts and the 48 attempted time-only pause schedules. The right panel shows plotted forecasts and observed outcomes. The shaded region spans the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} planning cutoff (dashed) to the 70 \ensuremath{{}^{\circ}\mathrm{C}} execution stop (dotted).}
-\label{fig:screening}
-\end{figure*}
-
-\subsection{Published-Controller Comparison}
-
-The comparison applied the adapted speed controller after the earlier three-planner benchmark and reused the same 72 starting scenarios. The route selection evaluated the four routes with zero pause and applied the same ranking and cutoff as the matched controller arm. The control law and route ranking therefore both differ from those in the three-planner comparison.
-
-The adapted speed rule finished 30 of 72 starts and recorded three thermal stops. It finished 14 starts missed by the pause forecaster, and the pause forecaster finished four missed by the adapted method. The net difference for the pause forecaster was $-13.9$ percentage points. Both shallow alternating-bank starts recovered by the pause forecaster reached the junction under the adapted rule and later overheated. The third thermal stop, on the early alternating-bank course, occurred before the junction. All 72 controller decisions stayed under budget (maximum 0.065 s). All 33 selected replays were audited against their traces.
-
-\subsection{Fixed-Candidate Screening And Pause Reachability}
-\label{sec:screen-diagnostic}
-
-In the post hoc analysis, all 48 fixed time-only fallback candidates passed the complete forecast's time gate. At the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} cutoff, the screen rejected 38 stopped walks and nine finishes. One finish passed the screen. The per-motor planner selected different paused schedules for its two additional completions. The time-only fallback also finished both starts. Table~\ref{tab:screen-counts} distinguishes the disposition of these individual schedules from completion rates for the planners.
-
-The eight starts that only the time-only planner completed had forecasts from 69.504 to 69.882 \ensuremath{{}^{\circ}\mathrm{C}}. All eight finished within the simulated thermal limit and deadline and failed the 0.50 \ensuremath{{}^{\circ}\mathrm{C}} forecast margin. Applying the 70.00 \ensuremath{{}^{\circ}\mathrm{C}} cutoff to the same forecasts admitted ten finishes and one stopped walk.
-
 \begin{table}[!t]
 \caption{Post hoc screening of 48 fixed time-only fallback schedules}
 \label{tab:screen-counts}
@@ -551,6 +539,19 @@ cutoff & Admit & Reject & Admit & Reject \\
 \end{tabular}
 \end{table}
 
+\subsection{Published-Controller Comparison}
+
+The comparison applied the adapted speed controller after the earlier three-planner benchmark and reused the same 72 starting scenarios. The route selection evaluated the four routes with zero pause and applied the same ranking and cutoff as the matched controller arm. The control law and route ranking therefore both differ from those in the three-planner comparison.
+
+The adapted speed rule finished 30 of 72 starts and recorded three thermal stops. It finished 14 starts missed by the pause forecaster, and the pause forecaster finished four missed by the adapted method. The net difference for the pause forecaster was $-13.9$ percentage points. Both shallow alternating-bank starts recovered by the pause forecaster reached the junction under the adapted rule and later overheated. The third thermal stop, on the early alternating-bank course, occurred before the junction. All 72 controller decisions stayed under budget (maximum 0.065 s). All 33 selected replays were audited against their traces.
+
+\subsection{Fixed-Candidate Screening And Pause Reachability}
+\label{sec:screen-diagnostic}
+
+In the post hoc analysis, all 48 fixed time-only fallback candidates passed the complete forecast's time gate. At the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} cutoff, the screen rejected 38 stopped walks and nine finishes. One finish passed the screen. The per-motor planner selected different paused schedules for its two additional completions. The time-only fallback also finished both starts. Table~\ref{tab:screen-counts} distinguishes the disposition of these individual schedules from completion rates for the planners.
+
+The eight starts that only the time-only planner completed had forecasts from 69.504 to 69.882 \ensuremath{{}^{\circ}\mathrm{C}}. All eight finished within the simulated thermal limit and deadline and failed the 0.50 \ensuremath{{}^{\circ}\mathrm{C}} forecast margin. Applying the 70.00 \ensuremath{{}^{\circ}\mathrm{C}} cutoff to the same forecasts admitted ten finishes and one stopped walk.
+
 Of the 38 stops, 28 occurred before the junction and 10 occurred after reaching it. The pause did not activate in the 28 approach-stage runs.
 
 Fig.~\ref{fig:screening} plots the assessed schedules against both forecast admission criteria.
@@ -559,7 +560,11 @@ Fig.~\ref{fig:screening} plots the assessed schedules against both forecast admi
 
 In a separate exhaustive schedule check, 52 no-pause schedule-and-start combinations on four earlier starts produced five finishes, 45 thermal stops, and two deadline misses. The only finishing schedule on the left-warm crossed split had 0.135 \ensuremath{{}^{\circ}\mathrm{C}} of predicted thermal headroom and 4.69 s of predicted time headroom. A schedule on the left-warm unequal-banks course had 0.185 \ensuremath{{}^{\circ}\mathrm{C}} and 13.81 s of predicted headroom and overheated. All 16 schedules overheated on that start. A rule based solely on shared minimum thresholds that admits the first schedule also admits the second, because its forecast headroom is larger in both variables.
 
+% Flush the appendix figures and tables before the reference list.
+\FloatBarrier
+\raggedbottom
 \begin{thebibliography}{00}
+\interlinepenalty=10000
 \bibitem{trujillo2009}
 S. Trujillo and M. Cutkosky, \textquotedblleft{}Thermally constrained motor operation for a climbing robot,\textquotedblright{} in \emph{Proc. IEEE Int. Conf. Robot. Autom.}, May 2009, pp. 2362--2367, doi: \href{https://doi.org/10.1109/ROBOT.2009.5152870}{\nolinkurl{10.1109/ROBOT.2009.5152870}}.
 
@@ -573,16 +578,16 @@ A. De, G. Lynch, A. Johnson, and D. Koditschek, \textquotedblleft{}Motor sizing 
 W. Lin, L. Qian, X. Luo, and C. Liang, \textquotedblleft{}Temperature distribution prediction of the quadruped robot based on the lumped-parameter thermal networks,\textquotedblright{} \emph{Robot}, vol. 47, no. 2, pp. 188--199, 2025, doi: \href{https://robot.sia.cn/en/article/doi/10.13973/j.cnki.robot.240208}{\nolinkurl{10.13973/j.cnki.robot.240208}}.
 
 \bibitem{tan2018heat}
-W. X. Tan, M. Brandão, K. Hashimoto, and A. Takanishi, \textquotedblleft{}Trajectory Optimization for High-Power Robots with Motor Temperature Constraints,\textquotedblright{} in \emph{Proc. Towards Auton. Robot. Syst. (TAROS)}, 2018, pp. 3--14, doi: \href{https://doi.org/10.1007/978-3-319-96728-8_1}{\nolinkurl{10.1007/978-3-319-96728-8_1}}.
+W. X. Tan, M. Brandão, K. Hashimoto, and A. Takanishi, \textquotedblleft{}Trajectory optimization for high-power robots with motor temperature constraints,\textquotedblright{} in \emph{Proc. Towards Auton. Robot. Syst. (TAROS)}, 2018, pp. 3--14, doi: \href{https://doi.org/10.1007/978-3-319-96728-8_1}{\nolinkurl{10.1007/978-3-319-96728-8_1}}.
 
 \bibitem{kawaharazuka2020}
-K. Kawaharazuka et al., \textquotedblleft{}Estimation and Control of Motor Core Temperature With Online Learning of Thermal Model Parameters: Application to Musculoskeletal Humanoids,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 5, no. 3, pp. 4273--4280, 2020, doi: \href{https://doi.org/10.1109/LRA.2020.2990889}{\nolinkurl{10.1109/LRA.2020.2990889}}.
+K. Kawaharazuka \emph{et al.}, \textquotedblleft{}Estimation and control of motor core temperature with online learning of thermal model parameters: Application to musculoskeletal humanoids,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 5, no. 3, pp. 4273--4280, 2020, doi: \href{https://doi.org/10.1109/LRA.2020.2990889}{\nolinkurl{10.1109/LRA.2020.2990889}}.
 
 \bibitem{debenedittis2026}
-D. De Benedittis, F. Angelini, R. Incerpi, L. Pallottino, and M. Garabini, \textquotedblleft{}Keep It Cool: Optimal Control of Robotic Systems Under Temperature Constraints,\textquotedblright{} \emph{IEEE Trans. Control Syst. Technol.}, vol. 34, no. 6, pp. 3128--3139, Nov. 2026, doi: \href{https://doi.org/10.1109/TCST.2026.3721130}{\nolinkurl{10.1109/TCST.2026.3721130}}.
+D. De Benedittis, F. Angelini, R. Incerpi, L. Pallottino, and M. Garabini, \textquotedblleft{}Keep it cool: Optimal control of robotic systems under temperature constraints,\textquotedblright{} \emph{IEEE Trans. Control Syst. Technol.}, vol. 34, no. 6, pp. 3128--3139, Nov. 2026, doi: \href{https://doi.org/10.1109/TCST.2026.3721130}{\nolinkurl{10.1109/TCST.2026.3721130}}.
 
 \bibitem{wan2026}
-Y. Wan et al., \textquotedblleft{}Learning to balance motor thermal safety and quadrupedal locomotion performance with residual policy,\textquotedblright{} arXiv preprint \href{https://arxiv.org/abs/2605.27046v3}{arXiv:2605.27046v3}, 2026.
+Y. Wan \emph{et al.}, \textquotedblleft{}Learning to balance motor thermal safety and quadrupedal locomotion performance with residual policy,\textquotedblright{} arXiv preprint \href{https://arxiv.org/abs/2605.27046v3}{arXiv:2605.27046v3}, 2026.
 
 \bibitem{segas2026}
 R. Ségas, B. Opra, L. Ghafari, and T. Stewart, \textquotedblleft{}From temperature-limited to battery-limited legged locomotion,\textquotedblright{} arXiv preprint \href{https://arxiv.org/abs/2611.22231}{arXiv:2611.22231}, 2026.
@@ -594,16 +599,16 @@ J. Faigl and P. Čížek, \textquotedblleft{}Adaptive locomotion control of hexa
 I. Brodoline, E. Sauvageot, S. Viollet, and J. R. Serres, \textquotedblleft{}Shaping the energy curves of a servomotor-based hexapod robot,\textquotedblright{} \emph{Sci. Rep.}, vol. 14, no. 1, Art. no. 11675, 2024, doi: \href{https://doi.org/10.1038/s41598-024-62184-y}{\nolinkurl{10.1038/s41598-024-62184-y}}.
 
 \bibitem{jorgensen2019}
-S. J. Jorgensen, J. Holley, F. Mathis, J. S. Mehling, and L. Sentis, \textquotedblleft{}Thermal Recovery of Multi-Limbed Robots With Electric Actuators,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 4, no. 2, pp. 1077--1084, 2019, doi: \href{https://doi.org/10.1109/LRA.2019.2894068}{\nolinkurl{10.1109/LRA.2019.2894068}}.
+S. J. Jorgensen, J. Holley, F. Mathis, J. S. Mehling, and L. Sentis, \textquotedblleft{}Thermal recovery of multi-limbed robots with electric actuators,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 4, no. 2, pp. 1077--1084, 2019, doi: \href{https://doi.org/10.1109/LRA.2019.2894068}{\nolinkurl{10.1109/LRA.2019.2894068}}.
 
 \bibitem{zhao2021}
 Y. Zhao, F. Gao, Q. Sun, and Y. Yin, \textquotedblleft{}Terrain classification and adaptive locomotion for a hexapod robot Qingzhui,\textquotedblright{} \emph{Front. Mech. Eng.}, vol. 16, no. 2, pp. 271--284, 2021, doi: \href{https://doi.org/10.1007/s11465-020-0623-1}{\nolinkurl{10.1007/s11465-020-0623-1}}.
 
 \bibitem{ding2024}
-L. Ding et al., \textquotedblleft{}Motion planning and contact force distribution for heavy-duty hexapod robots walking on unknown rugged terrains,\textquotedblright{} \emph{J. Field Robot.}, vol. 41, no. 6, pp. 1680--1701, 2024, doi: \href{https://doi.org/10.1002/rob.22338}{\nolinkurl{10.1002/rob.22338}}.
+L. Ding \emph{et al.}, \textquotedblleft{}Motion planning and contact force distribution for heavy-duty hexapod robots walking on unknown rugged terrains,\textquotedblright{} \emph{J. Field Robot.}, vol. 41, no. 6, pp. 1680--1701, 2024, doi: \href{https://doi.org/10.1002/rob.22338}{\nolinkurl{10.1002/rob.22338}}.
 
 \bibitem{gehring2015}
-C. Gehring et al., \textquotedblleft{}Dynamic trotting on slopes for quadrupedal robots,\textquotedblright{} in \emph{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.}, Sep. 2015, pp. 5129--5135, doi: \href{https://doi.org/10.1109/IROS.2015.7354099}{\nolinkurl{10.1109/IROS.2015.7354099}}.
+C. Gehring \emph{et al.}, \textquotedblleft{}Dynamic trotting on slopes for quadrupedal robots,\textquotedblright{} in \emph{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.}, Sep. 2015, pp. 5129--5135, doi: \href{https://doi.org/10.1109/IROS.2015.7354099}{\nolinkurl{10.1109/IROS.2015.7354099}}.
 
 \bibitem{focchi2017}
 M. Focchi, A. del Prete, I. Havoutis, R. Featherstone, D. G. Caldwell, and C. Semini, \textquotedblleft{}High-slope terrain locomotion for torque-controlled quadruped robots,\textquotedblright{} \emph{Auton. Robots}, vol. 41, no. 1, pp. 259--272, 2017, doi: \href{https://doi.org/10.1007/s10514-016-9573-1}{\nolinkurl{10.1007/s10514-016-9573-1}}.
@@ -615,37 +620,37 @@ L. Righetti, J. Buchli, M. Mistry, M. Kalakrishnan, and S. Schaal, \textquotedbl
 M. Luneckas, T. Luneckas, D. Udris, D. Plonis, R. Maskeliunas, and R. Damasevicius, \textquotedblleft{}Energy-efficient walking over irregular terrain: a case of hexapod robot,\textquotedblright{} \emph{Metrol. Meas. Syst.}, vol. 26, no. 4, pp. 645--660, 2019, doi: \href{https://doi.org/10.24425/mms.2019.130562}{\nolinkurl{10.24425/mms.2019.130562}}.
 
 \bibitem{luneckas2021}
-M. Luneckas et al., \textquotedblleft{}Hexapod Robot Gait Switching for Energy Consumption and Cost of Transport Management Using Heuristic Algorithms,\textquotedblright{} \emph{Appl. Sci.}, vol. 11, no. 3, Art. no. 1339, 2021, doi: \href{https://doi.org/10.3390/app11031339}{\nolinkurl{10.3390/app11031339}}.
+M. Luneckas \emph{et al.}, \textquotedblleft{}Hexapod robot gait switching for energy consumption and cost of transport management using heuristic algorithms,\textquotedblright{} \emph{Appl. Sci.}, vol. 11, no. 3, Art. no. 1339, 2021, doi: \href{https://doi.org/10.3390/app11031339}{\nolinkurl{10.3390/app11031339}}.
 
 \bibitem{seok2015}
-S. Seok et al., \textquotedblleft{}Design Principles for Energy-Efficient Legged Locomotion and Implementation on the MIT Cheetah Robot,\textquotedblright{} \emph{IEEE/ASME Trans. Mechatronics}, vol. 20, no. 3, pp. 1117--1129, 2015, doi: \href{https://doi.org/10.1109/TMECH.2014.2339013}{\nolinkurl{10.1109/TMECH.2014.2339013}}.
+S. Seok \emph{et al.}, \textquotedblleft{}Design principles for energy-efficient legged locomotion and implementation on the MIT Cheetah robot,\textquotedblright{} \emph{IEEE/ASME Trans. Mechatronics}, vol. 20, no. 3, pp. 1117--1129, 2015, doi: \href{https://doi.org/10.1109/TMECH.2014.2339013}{\nolinkurl{10.1109/TMECH.2014.2339013}}.
 
 \bibitem{schperberg2025}
-A. Schperberg, M. Menner, and S. D. Di Cairano, \textquotedblleft{}Energy-Efficient Motion Planner for Legged Robots,\textquotedblright{} in \emph{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.}, Oct. 2025, pp. 18888--18895, doi: \href{https://doi.org/10.1109/IROS60139.2025.11246509}{\nolinkurl{10.1109/IROS60139.2025.11246509}}.
+A. Schperberg, M. Menner, and S. D. Di Cairano, \textquotedblleft{}Energy-efficient motion planner for legged robots,\textquotedblright{} in \emph{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.}, Oct. 2025, pp. 18888--18895, doi: \href{https://doi.org/10.1109/IROS60139.2025.11246509}{\nolinkurl{10.1109/IROS60139.2025.11246509}}.
 
 \bibitem{hauser2008}
-K. Hauser, T. Bretl, J.-C. Latombe, K. Harada, and B. Wilcox, \textquotedblleft{}Motion Planning for Legged Robots on Varied Terrain,\textquotedblright{} \emph{Int. J. Robot. Res.}, vol. 27, no. 11--12, pp. 1325--1349, 2008, doi: \href{https://doi.org/10.1177/0278364908098447}{\nolinkurl{10.1177/0278364908098447}}.
+K. Hauser, T. Bretl, J.-C. Latombe, K. Harada, and B. Wilcox, \textquotedblleft{}Motion planning for legged robots on varied terrain,\textquotedblright{} \emph{Int. J. Robot. Res.}, vol. 27, no. 11--12, pp. 1325--1349, 2008, doi: \href{https://doi.org/10.1177/0278364908098447}{\nolinkurl{10.1177/0278364908098447}}.
 
 \bibitem{valouch2021}
-D. Valouch and J. Faigl, \textquotedblleft{}Gait-Free Planning for Hexapod Walking Robot,\textquotedblright{} in \emph{Proc. Eur. Conf. Mobile Robots}, Aug. 2021, pp. 1--8, doi: \href{https://doi.org/10.1109/ECMR50962.2021.9568834}{\nolinkurl{10.1109/ECMR50962.2021.9568834}}.
+D. Valouch and J. Faigl, \textquotedblleft{}Gait-free planning for hexapod walking robot,\textquotedblright{} in \emph{Proc. Eur. Conf. Mobile Robots}, Aug. 2021, pp. 1--8, doi: \href{https://doi.org/10.1109/ECMR50962.2021.9568834}{\nolinkurl{10.1109/ECMR50962.2021.9568834}}.
 
 \bibitem{jenelten2020}
-F. Jenelten, T. Miki, A. E. Vijayan, M. Bjelonic, and M. Hutter, \textquotedblleft{}Perceptive Locomotion in Rough Terrain – Online Foothold Optimization,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 5, no. 4, pp. 5370--5376, 2020, doi: \href{https://doi.org/10.1109/LRA.2020.3007427}{\nolinkurl{10.1109/LRA.2020.3007427}}.
+F. Jenelten, T. Miki, A. E. Vijayan, M. Bjelonic, and M. Hutter, \textquotedblleft{}Perceptive locomotion in rough terrain -- Online foothold optimization,\textquotedblright{} \emph{IEEE Robot. Autom. Lett.}, vol. 5, no. 4, pp. 5370--5376, 2020, doi: \href{https://doi.org/10.1109/LRA.2020.3007427}{\nolinkurl{10.1109/LRA.2020.3007427}}.
 
 \bibitem{mastalli2020}
-C. Mastalli, I. Havoutis, M. Focchi, D. G. Caldwell, and C. Semini, \textquotedblleft{}Motion Planning for Quadrupedal Locomotion: Coupled Planning, Terrain Mapping, and Whole-Body Control,\textquotedblright{} \emph{IEEE Trans. Robot.}, vol. 36, no. 6, pp. 1635--1648, 2020, doi: \href{https://doi.org/10.1109/TRO.2020.3003464}{\nolinkurl{10.1109/TRO.2020.3003464}}.
+C. Mastalli, I. Havoutis, M. Focchi, D. G. Caldwell, and C. Semini, \textquotedblleft{}Motion planning for quadrupedal locomotion: Coupled planning, terrain mapping, and whole-body control,\textquotedblright{} \emph{IEEE Trans. Robot.}, vol. 36, no. 6, pp. 1635--1648, 2020, doi: \href{https://doi.org/10.1109/TRO.2020.3003464}{\nolinkurl{10.1109/TRO.2020.3003464}}.
 
 \bibitem{brandao2016}
-M. Brandão, K. Hashimoto, J. Santos-Victor, and A. Takanishi, \textquotedblleft{}Footstep Planning for Slippery and Slanted Terrain Using Human-Inspired Models,\textquotedblright{} \emph{IEEE Trans. Robot.}, vol. 32, no. 4, pp. 868--879, 2016, doi: \href{https://doi.org/10.1109/TRO.2016.2581219}{\nolinkurl{10.1109/TRO.2016.2581219}}.
+M. Brandão, K. Hashimoto, J. Santos-Victor, and A. Takanishi, \textquotedblleft{}Footstep planning for slippery and slanted terrain using human-inspired models,\textquotedblright{} \emph{IEEE Trans. Robot.}, vol. 32, no. 4, pp. 868--879, 2016, doi: \href{https://doi.org/10.1109/TRO.2016.2581219}{\nolinkurl{10.1109/TRO.2016.2581219}}.
 
 \bibitem{pragr2022}
 M. Prágr, J. Bayer, and J. Faigl, \textquotedblleft{}Autonomous robotic exploration with simultaneous environment and traversability models learning,\textquotedblright{} \emph{Front. Robot. AI}, vol. 9, Art. no. 910113, 2022, doi: \href{https://doi.org/10.3389/frobt.2022.910113}{\nolinkurl{10.3389/frobt.2022.910113}}.
 
 \bibitem{fu2022}
-Z. Fu, A. Kumar, A. Agarwal, H. Qi, J. Malik, and D. Pathak, \textquotedblleft{}Coupling Vision and Proprioception for Navigation of Legged Robots,\textquotedblright{} in \emph{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, Jun. 2022, pp. 17252--17262, doi: \href{https://doi.org/10.1109/CVPR52688.2022.01676}{\nolinkurl{10.1109/CVPR52688.2022.01676}}.
+Z. Fu, A. Kumar, A. Agarwal, H. Qi, J. Malik, and D. Pathak, \textquotedblleft{}Coupling vision and proprioception for navigation of legged robots,\textquotedblright{} in \emph{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit.}, Jun. 2022, pp. 17252--17262, doi: \href{https://doi.org/10.1109/CVPR52688.2022.01676}{\nolinkurl{10.1109/CVPR52688.2022.01676}}.
 
 \bibitem{yang2021}
-B. Yang, L. Wellhausen, T. Miki, M. Liu, and M. Hutter, \textquotedblleft{}Real-time Optimal Navigation Planning Using Learned Motion Costs,\textquotedblright{} in \emph{Proc. IEEE Int. Conf. Robot. Autom.}, May 2021, pp. 9283--9289, doi: \href{https://doi.org/10.1109/ICRA48506.2021.9561861}{\nolinkurl{10.1109/ICRA48506.2021.9561861}}.
+B. Yang, L. Wellhausen, T. Miki, M. Liu, and M. Hutter, \textquotedblleft{}Real-time optimal navigation planning using learned motion costs,\textquotedblright{} in \emph{Proc. IEEE Int. Conf. Robot. Autom.}, May 2021, pp. 9283--9289, doi: \href{https://doi.org/10.1109/ICRA48506.2021.9561861}{\nolinkurl{10.1109/ICRA48506.2021.9561861}}.
 
 \bibitem{todorov2012}
 E. Todorov, T. Erez, and Y. Tassa, \textquotedblleft{}MuJoCo: A physics engine for model-based control,\textquotedblright{} in \emph{Proc. IEEE/RSJ Int. Conf. Intell. Robots Syst.}, Oct. 2012, pp. 5026--5033, doi: \href{https://doi.org/10.1109/IROS.2012.6386109}{\nolinkurl{10.1109/IROS.2012.6386109}}.
@@ -654,8 +659,7 @@ E. Todorov, T. Erez, and Y. Tassa, \textquotedblleft{}MuJoCo: A physics engine f
 D. McMordie, C. Prahacs, and M. Buehler, \textquotedblleft{}Towards a dynamic actuator model for a hexapod robot,\textquotedblright{} in \emph{Proc. IEEE Int. Conf. Robot. Autom.}, vol. 1, 2003, pp. 1386--1390, doi: \href{https://doi.org/10.1109/ROBOT.2003.1241785}{\nolinkurl{10.1109/ROBOT.2003.1241785}}.
 
 \bibitem{hwangbo2019}
-J. Hwangbo et al., \textquotedblleft{}Learning agile and dynamic motor skills for legged robots,\textquotedblright{} \emph{Sci. Robot.}, vol. 4, no. 26, Art. no. eaau5872, 2019, doi: \href{https://doi.org/10.1126/scirobotics.aau5872}{\nolinkurl{10.1126/scirobotics.aau5872}}.
+J. Hwangbo \emph{et al.}, \textquotedblleft{}Learning agile and dynamic motor skills for legged robots,\textquotedblright{} \emph{Sci. Robot.}, vol. 4, no. 26, Art. no. eaau5872, 2019, doi: \href{https://doi.org/10.1126/scirobotics.aau5872}{\nolinkurl{10.1126/scirobotics.aau5872}}.\EOD
 \end{thebibliography}
 
-\EOD
 \end{document}
