@@ -1,12 +1,24 @@
-# IEEE Access review source Version 3 with the hot-motor swap study
+# IEEE Access LaTeX manuscript with author biographies
 
-Open **manuscript.tex** as the main document. This directory contains the article source, editable author metadata, the figures and the support files from the official [IEEE Access LaTeX template](https://ieeeaccess.ieee.org/authors/preparing-your-article/) dated May 13, 2026. The official support files are copied unchanged.
-
-Select **pdfLaTeX**. With TeX Live installed, build from this directory:
+Open **manuscript.tex** as the main document and use **pdfLaTeX**. Upload the
+complete source ZIP to Overleaf, or extract it into a new folder and build
+from that folder with TeX Live.
 
     pdflatex -halt-on-error -interaction=nonstopmode manuscript.tex
     pdflatex -halt-on-error -interaction=nonstopmode manuscript.tex
 
-The bibliography is embedded in the source. There is no separate BibTeX step. The included `placeins.sty` keeps figures and tables before the bibliography.
+The bibliography is embedded in the manuscript. The source includes the
+IEEE Access class and support files, the research figures, and all nine
+supplied author portraits.
 
-The byline, affiliations and corresponding-author fields in **author-details.tex** are review placeholders. Confirm author order, affiliations, email, biographies and funding information before preparing the submission version. Journal-assigned publication metadata uses placeholders.
+Edit the byline, affiliations, and contact emails in **author-details.tex**.
+The two email addresses come from the Word manuscript. The corresponding
+author role is left open for confirmation. Publication dates, DOI, volume,
+and year are assigned by the journal.
+
+Edit the biographies in **author-biographies.tex**. They appear in byline
+order after the references. Their text and portraits come from the latest
+author biography document. The displayed names follow the article byline.
+
+The appendix uses the standard LaTeX multicol package for two-column prose
+and full-width tables. The reported table entries and results are preserved.

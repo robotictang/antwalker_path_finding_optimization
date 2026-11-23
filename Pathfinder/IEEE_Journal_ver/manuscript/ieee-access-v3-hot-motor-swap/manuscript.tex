@@ -22,20 +22,45 @@
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{etoolbox}
-\usepackage{placeins}
+\usepackage{multicol}
 \hypersetup{pdftitle={Swapping Initial Motor Temperatures Changes Route Feasibility for a Simulated Hexapod},
-  pdfsubject={IEEE Access author-review draft, Version 3 on hot-motor swaps}, pdfkeywords={hexapod, simulation, thermal management}}
+  pdfsubject={IEEE Access manuscript on hot-motor swaps}, pdfkeywords={hexapod, simulation, thermal management}}
+\makeatletter
+% Hide the DOI label until the journal assigns a DOI.
+\patchcmd{\@maketitle}
+  {{\vss\doifont Digital Object Identifier\space\@doi\vss}\vspace*{7.4mm}\par}
+  {\ifx\@doi\@empty\else
+     {\vss\doifont Digital Object Identifier\space\@doi\vss}\vspace*{7.4mm}\par
+   \fi}
+  {}{\PackageError{manuscript}{Could not adjust the DOI line}{}}
+% Keep page numbers and suppress the volume label until assignment.
+\newcommand{\accessVolumeFooter}{%
+  \ifx\thevol\@empty\else\footervolfont VOLUME\ \thevol, \theyear\fi}
+\newcommand{\adjustAccessVolumeFooter}[1]{%
+  \patchcmd{#1}{\footervolfont VOLUME\ \thevol, \theyear}{\accessVolumeFooter}{}{}%
+  \patchcmd{#1}{\footervolfont VOLUME\ \thevol, \theyear}{\accessVolumeFooter}{}{}}
+\adjustAccessVolumeFooter{\ps@titlepage}
+\adjustAccessVolumeFooter{\ps@headings}
+\pagestyle{headings}
+\makeatother
 \AtBeginDocument{%
   \patchcmd{\thebibliography}
     {\addcontentsline{toc}{section}{\refname}}
     {\phantomsection\addcontentsline{toc}{section}{\refname}}
     {}{}%
 }
+\makeatletter
+% Keep each appendix display and its caption together at its source position.
+\newenvironment{appendixdisplay}[1]
+  {\par\addvspace{4pt}\noindent\begin{minipage}{\linewidth}\def\@captype{#1}}
+  {\end{minipage}\par\addvspace{6pt}}
+\makeatother
+\setlength{\multicolsep}{5pt}
 \begin{document}
 \input{author-details.tex}
 \title{Swapping Initial Motor Temperatures Changes Route Feasibility for a Simulated Hexapod}
 \begin{abstract}
-We tested whether swapping which motors start warm changes which routes a hexapod can finish when its average and maximum starting temperatures are held fixed. In MuJoCo, the hexapod traversed four routes on each of 12 two-stage courses at three thermal settings. We executed all routes under both warm-side assignments, giving 288 continuous walks across 72 starts. In 11 of 36 course--setting pairs, each assignment had at least one finishable route and no route finished under both assignments. This occurred on eight courses. We compared a planner that received the motor temperatures individually with a planner that received their mean and maximum and averaged forecasts over the two possible assignments. Both used the same temperature-responsive speed controller with individual temperatures during walking. The per-motor planner finished 26 of 72 starts with two thermal stops. The aggregate planner finished seven with five stops. The gain was 26.4 percentage points, with a descriptive 95\% course-resampling interval of 15.3 to 40.3 points. The exhaustive outcomes and the matched planner comparison show how the initial distribution of heat across motors can change route feasibility and completion under the tested simulation conditions.
+We tested whether swapping which motors start warm changes which routes a hexapod can finish while its average and maximum starting temperatures are held fixed. The MuJoCo experiment used four routes on each of 12 two-stage courses at three thermal settings. We executed all four routes under both warm-side assignments, yielding 288 continuous walks across 72 starts. In 11 of the 36 course--setting pairs, each assignment had at least one finishable route and no route finished under both assignments. We compared a planner that received individual motor temperatures with a planner that received their mean and maximum and averaged forecasts over the two possible assignments. Both used the same temperature-responsive speed controller with individual motor temperatures during walking. The per-motor planner finished 26 of 72 starts and recorded two thermal stops. The aggregate planner finished 7 of 72 starts and recorded five thermal stops. The gain was 26.4 percentage points, with a descriptive 95\% course-resampling interval of 15.3 to 40.3 percentage points. The exhaustive replays and the matched planner comparison show how the distribution of initial heat across motors can change route feasibility and completion under the tested simulation conditions.
 \end{abstract}
 
 \begin{keywords}
@@ -299,7 +324,7 @@ Per-motor temperatures & 35 & 16 & 7 & 230 \\
 
 \subsection{Sensitivity To The Route Screening Cutoff}
 
-We performed a retrospective check by changing only the peak-temperature cutoff used to admit routes. The predictions and replay outcomes came from the original experiment. The speed governor kept its $69.50\,{}^\circ\mathrm{C}$ target in forecasting and execution. At each alternative cutoff, we reapplied the original arrival and peak ranking to the admitted routes and retrieved the corresponding exhaustive replay outcomes.
+We performed a retrospective check that varied the predicted peak-temperature cutoff for route admission. We used the original forecasts and replay outcomes. The speed governor kept the same target in forecasting and execution. At each alternative cutoff, we applied the original arrival-time and peak-temperature ranking to the admitted routes and retrieved the corresponding exhaustive replay outcomes.
 
 \begin{table}[!t]
 \caption{Retrospective route selection at five forecast cutoffs}
@@ -332,11 +357,16 @@ Equation~\eqref{eq:thermal-update} gives a mechanism for an effect of the starti
 
 The disjoint pairs occurred in every course family and at each thermal setting. They were most frequent under the 0.44 setting and on persistent-bank courses. Each setting describes a combination of model parameters and initial temperatures. The experiment compares these tested combinations. The deadline screen excluded no forecast and every execution terminated with a finish or a thermal stop. The results characterize a thermal feasibility problem on these courses.
 
+\onecolumn
+\raggedbottom
+\begin{multicols}{2}
 The heightfields are synthetic. The thermal parameters are specified simulation inputs, and the initial motor temperatures are supplied to the controllers. The absence of heat transfer between motors is an assumption of Eq.~\eqref{eq:thermal-update}. The replay audit reproduced all 18 temperature histories from the recorded torques and checked the completion and termination events. The experiment tests left--right assignments with two temperature values. Its aggregate comparator uses that prior explicitly.
 
 \section{Conclusion}
 
 Swapping which side started warm changed which routes the simulated hexapod could finish even with the same starting mean and maximum. On 11 of 36 matched pairs there was a finishable route for each assignment and no shared finishable route. With the same adaptive speed controller during walking, the planner given individual temperatures finished 26 of 72 starts with two thermal stops. The planner given the mean and maximum finished seven with five stops. These results establish the value of preserving the assignment of motor temperatures for route selection under the tested simulated conditions.
+
+\end{multicols}
 
 \appendices
 
@@ -345,16 +375,17 @@ Swapping which side started warm changed which routes the simulated hexapod coul
 
 Table~\ref{tab:geometry} reports the course geometry. The projected length of a stage is twice the turn length plus the bank length and a 1 m landing allowance. Offsets are lateral centerline displacements. Bank shifts translate the bank envelope longitudinally along each branch. The angle signs specify the direction of the height gradient in the lateral coordinate.
 
-\begin{table*}[!t]
+\begin{appendixdisplay}{table}
 \caption{Geometry of the twelve hot-motor swap courses}
 \label{tab:geometry}
 \centering
 \footnotesize
-\setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.12}
-\begin{tabular}{@{}lrrrrrrrrrr@{}}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.00}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrrrrrr@{}}
 \hline
 & & \multicolumn{3}{c}{Longitudinal geometry} & \multicolumn{2}{c}{Offsets (m)} & \multicolumn{2}{c}{Bank angles (deg)} & \multicolumn{2}{c}{Bank shifts (m)} \\
+\cline{3-5}\cline{6-7}\cline{8-9}\cline{10-11}
 Course & Stage & Turn (m) & Bank (m) & Deadline (s) & Branch 1 & Branch 2 & Branch 1 & Branch 2 & Branch 1 & Branch 2 \\
 \hline
 A1 & 1 & 6.77 & 5.14 & 358 & $-2.15$ & $2.23$ & $-8.38$ & $8.17$ & $0.01$ & $-0.17$ \\
@@ -384,21 +415,21 @@ S3 & 1 & 6.57 & 4.31 & 356 & $-2.21$ & $2.35$ & $-9.01$ & $8.71$ & $0.11$ & $-0.
 S4 & 1 & 6.73 & 4.57 & 366 & $-2.21$ & $2.36$ & $7.83$ & $-9.04$ & $-0.09$ & $0.05$ \\
  & 2 & 7.18 & 5.17 &  & $-2.18$ & $2.18$ & $7.36$ & $8.04$ & $0.36$ & $-0.22$ \\
 \hline
-\end{tabular}
-\end{table*}
+\end{tabular*}
+\end{appendixdisplay}
 
-Table~\ref{tab:finishable-routes} lists all routes that finished in the 288 warm replays, including routes that neither planner admitted.
-
-\begin{table*}[!t]
+\begin{appendixdisplay}{table}
+Table~\ref{tab:finishable-routes} lists the routes that finished among the 288 warm replays, including routes that neither planner admitted.\par
 \caption{Finishable routes for both assignments at every setting}
 \label{tab:finishable-routes}
 \centering
 \footnotesize
-\setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.12}
-\begin{tabular}{@{}lcccccc@{}}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.00}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
 \hline
 & \multicolumn{2}{c}{Heating 0.44} & \multicolumn{2}{c}{Heating 0.45} & \multicolumn{2}{c}{Heating 0.46} \\
+\cline{2-3}\cline{4-5}\cline{6-7}
 Course & Left warm & Right warm & Left warm & Right warm & Left warm & Right warm \\
 \hline
 A1 & 4 & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
@@ -414,11 +445,12 @@ S2 & 4 & 1, 2 & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
 S3 & 1 & 1, 2 & 1 & $\varnothing$ & 1 & $\varnothing$ \\
 S4 & 3 & 1, 2 & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
 \hline
-\end{tabular}
-\smallskip
-\parbox{0.93\textwidth}{Routes 1 through 4 denote $(1,1)$, $(1,2)$, $(2,1)$, and $(2,2)$, respectively. $\varnothing$ indicates that every route reached the thermal limit.}
-\end{table*}
+\end{tabular*}
+\par\smallskip
+\parbox{\linewidth}{\raggedright Routes 1 through 4 denote $(1,1)$, $(1,2)$, $(2,1)$, and $(2,2)$, respectively. $\varnothing$ indicates that every route reached the thermal limit.}
+\end{appendixdisplay}
 
+\begin{multicols}{2}
 \section{Matched Junction-Pause Experiment}
 \label{app:pause}
 
@@ -437,13 +469,13 @@ q_{i,\mathrm{hold}}^2 =
 
 We averaged inferred squared torques within each approach speed and then weighted the two speeds equally. The paused forecasts used those fitted loads (Table~\ref{tab:hold-loads}). Equation~\eqref{eq:thermal-update} predicts cooling for a motor when its junction-entry temperature exceeds the equilibrium implied by the hold load. At pause exit, the forecast resumes progress with the evolved temperature vector and current speed state. It evaluates the cutoff over the entire prediction, including the initial stand and the pause.
 
-\begin{table}[!t]
+\begin{appendixdisplay}{table}
 \caption{Fitted squared torque during a 12 s hold in $(\mathrm{N}{\cdot}\mathrm{m})^2$}
 \label{tab:hold-loads}
 \centering
 \footnotesize
 \renewcommand{\arraystretch}{1.12}
-\begin{tabular}{@{}lrrr@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr@{}}
 \hline
 Leg & Coxa & Femur & Tibia \\
 \hline
@@ -454,24 +486,28 @@ Right front & 2.627 & 3030.600 & 29.827 \\
 Right middle & 1.695 & 3578.708 & 34.374 \\
 Right rear & 2.913 & 2911.345 & 29.891 \\
 \hline
-\end{tabular}
-\end{table}
+\end{tabular*}
+\end{appendixdisplay}
 
 The optional-pause arm finished 29 starts with four thermal stops and 39 rejections. The no-pause arm finished 25 with two thermal stops and 45 rejections. All 25 starts that finished under the no-pause arm also finished under the optional arm. The four additional finishes gave a gain of 5.6 percentage points. The gain fell short of the specified 10-point target, and the thermal-stop count increased by two.
 
 The no-pause arm admitted 27 starts. The optional arm retained their schedules and selected a pause for six initially rejected starts. The 27 identical selections shared one replay each. The pauses lasted all 12 s. We replayed each of the six selected routes with zero pause, using the same starting temperatures and controller. There were 39 distinct physics replays including the six diagnostics. The paired traces matched through the sample immediately before the pause. The diagnostics are separate from the no-pause arm's counts.
 
-\begin{table*}[!t]
+\end{multicols}
+
+\begin{appendixdisplay}{table}
 \caption{Fixed-route diagnostic for the six selected pauses}
 \label{tab:matched-same-route}
 \centering
+\setlength{\tabcolsep}{4pt}
 \footnotesize
 \renewcommand{\arraystretch}{1.12}
-\begin{tabular}{@{}llrrrrll@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrrrrll@{}}
 \hline
 & & \multicolumn{2}{c}{Forecast peak (\ensuremath{{}^{\circ}\mathrm{C}})}
   & \multicolumn{2}{c}{Observed peak (\ensuremath{{}^{\circ}\mathrm{C}})}
   & \multicolumn{2}{c}{Physics outcome} \\
+\cline{3-4}\cline{5-6}\cline{7-8}
 Course & Start & 0 s & 12 s & 0 s & 12 s & 0 s & 12 s \\
 \hline
 Alternating balanced & 0.44 left & 69.553 & 69.096 & 70.014 & 69.304 & Thermal stop & Finish \\
@@ -481,37 +517,41 @@ Shared entry & 0.44 right & 69.552 & 69.469 & 69.860 & 69.830 & Finish & Finish 
 Shared entry & 0.45 left & 71.376 & 69.378 & 70.009 & 70.001 & Thermal stop & Thermal stop \\
 Shared long exit & 0.44 right & 70.136 & 69.492 & 70.011 & 69.962 & Thermal stop & Finish \\
 \hline
-\end{tabular}
+\end{tabular*}
 
-\smallskip
-\parbox{.96\textwidth}{Start gives relative heating and the initially warmer side. All zero-pause forecasts in this table failed the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} gate. They were replayed as diagnostics and do not count as control-arm attempts. Observed peaks for thermal stops are limited by the first sample at or above 70 \ensuremath{{}^{\circ}\mathrm{C}}.}
-\end{table*}
+\par\smallskip
+\parbox{\linewidth}{\raggedright Start gives relative heating and the initially warmer side. All zero-pause forecasts in this table failed the 69.50 \ensuremath{{}^{\circ}\mathrm{C}} gate. They were replayed as diagnostics and do not count as control-arm attempts. Observed peaks for thermal stops are limited by the first sample at or above 70 \ensuremath{{}^{\circ}\mathrm{C}}.}
+\end{appendixdisplay}
 
-\begin{figure*}[!t]
+\begin{appendixdisplay}{figure}
 \centering
 \includegraphics[width=.98\textwidth]{figures/matched_pause_outcomes.png}
 \caption{Supporting junction-pause experiment on 12 courses. Panel (a) gives the number of completed starts per course. Panel (b) shows the forecast change from adding a 12 s pause to the same route for each of the 288 route-and-start pairs. Negative peak changes indicate a lower predicted peak motor temperature. Six paused plans were selected.}
 \label{fig:matched}
-\end{figure*}
+\end{appendixdisplay}
+
+\begin{multicols}{2}
+\raggedcolumns
 
 Three selected routes changed from a thermal stop to a finish in their same-route diagnostic, one finished at both durations, and two stopped thermally at both durations (Table~\ref{tab:matched-same-route}). The motor that was hottest at pause entry cooled by $1.01$--$1.44\,{}^\circ\mathrm{C}$ over the pause. In the two stopped paused walks, the motor later reached the thermal threshold after walking resumed. Forecast peaks for those two paused walks were about $0.52$ and $0.62\,{}^\circ\mathrm{C}$ below the recorded peaks at the thermal stop. One additional finish, on the shared-entry course, came from admitting a paused route whose zero-pause version also finished in its diagnostic. Its zero-pause forecast peak was $69.552\,{}^\circ\mathrm{C}$, just above the forecast cutoff.
 
 The time-only fallback in the earlier comparison also allowed a diagnosis on 48 fixed schedules. Applying the full paused forecast at $69.50\,{}^\circ\mathrm{C}$ rejected 38 thermal stops and nine finishable schedules, while admitting one finishable schedule. At $70.00\,{}^\circ\mathrm{C}$, the same forecasts admitted ten finishes and one thermal stop. The diagnostic kept the candidate schedules fixed. It measures the screening trade-off on these schedules.
 
+\columnbreak
 \section{Earlier Routing And Pause Comparisons}
 \label{app:earlier-benchmark}
 
 Earlier development runs included a single split on each of six asymmetric courses at nine thermal settings. The only finishable branch switched in 15 of 54 matched pairs. In a later network experiment, the planners selected routes and discrete speed schedules, and both used a reactive slowdown rule during the walk. The planner given individual motor temperatures finished 32 of 36 starts. A planner that averaged thermal forecasts over the two possible assignments finished 31. The current experiment evaluates every complete route under both assignments on a separate course set, with the same adapted speed governor for both planners.
 
-Table~\ref{tab:earlier-planners} summarizes the earlier pause benchmark. The first three planners shared a reactive execution controller. The time-only fallback reached the junction on ten of its 38 stopped walks. The adapted speed rule reused the same 72 starts and ranked candidates by predicted arrival. Route ranking and the execution controller changed between that comparison and the first three planners.
+Table~\ref{tab:earlier-planners} summarizes the earlier pause benchmark. The first three planners used the same reactive execution controller. Of the 38 time-only fallback walks that stopped, ten reached the junction. The adapted speed rule reused the same 72 starts and ranked candidates by predicted arrival. Its route ranking and execution controller differed from those used by the first three planners.
 
-\begin{table}[!t]
+\begin{appendixdisplay}{table}
 \caption{Earlier planner comparison over 72 starts per method}
 \label{tab:earlier-planners}
 \centering
 \footnotesize
 \renewcommand{\arraystretch}{1.13}
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
 \hline
 Planner & Finish & Thermal stop \\
 \hline
@@ -520,11 +560,12 @@ Time-only pause fallback & 28 & 38 \\
 Thermally screened pause fallback & 20 & 0 \\
 Adapted thermal speed rule & 30 & 3 \\
 \hline
-\end{tabular}
-\end{table}
+\end{tabular*}
+\end{appendixdisplay}
 
-\FloatBarrier
-\clearpage
+\end{multicols}
+
+\twocolumn
 \raggedbottom
 \begin{thebibliography}{00}
 \interlinepenalty=10000
@@ -630,7 +671,18 @@ E. Todorov, T. Erez, and Y. Tassa, \textquotedblleft{}MuJoCo: A physics engine f
 D. McMordie, C. Prahacs, and M. Buehler, \textquotedblleft{}Towards a dynamic actuator model for a hexapod robot,\textquotedblright{} in \emph{Proc. IEEE Int. Conf. Robot. Autom.}, vol. 1, 2003, pp. 1386--1390, doi: \href{https://doi.org/10.1109/ROBOT.2003.1241785}{\nolinkurl{10.1109/ROBOT.2003.1241785}}.
 
 \bibitem{hwangbo2019}
-J. Hwangbo \emph{et al.}, \textquotedblleft{}Learning agile and dynamic motor skills for legged robots,\textquotedblright{} \emph{Sci. Robot.}, vol. 4, no. 26, Art. no. eaau5872, 2019, doi: \href{https://doi.org/10.1126/scirobotics.aau5872}{\nolinkurl{10.1126/scirobotics.aau5872}}.\EOD
+J. Hwangbo \emph{et al.}, \textquotedblleft{}Learning agile and dynamic motor skills for legged robots,\textquotedblright{} \emph{Sci. Robot.}, vol. 4, no. 26, Art. no. eaau5872, 2019, doi: \href{https://doi.org/10.1126/scirobotics.aau5872}{\nolinkurl{10.1126/scirobotics.aau5872}}.
 \end{thebibliography}
+
+\clearpage
+\pdfbookmark[1]{Author Biographies}{author-biographies}
+\begingroup
+\hypersetup{bookmarksdepth=1}
+\makeatletter
+\renewcommand{\@IEEEBIOskipN}{.5\baselineskip}
+\makeatother
+\input{author-biographies.tex}
+\endgroup
+\EOD
 
 \end{document}

@@ -30,7 +30,7 @@ Use an unused output directory for a new nominal run. Restarting the warm-run co
 
 ## IEEE Access review package
 
-Version 3 leads with the exhaustive hot-motor swap study. Open the [review PDF](output/pdf/hexapod-hot-motor-swap-ieee-access-v3.pdf), [editable LaTeX](manuscript/ieee-access-v3-hot-motor-swap/README.md), or [source ZIP](output/hexapod-hot-motor-swap-ieee-access-v3-source.zip).
+Version 3 covers the exhaustive hot-motor swap study and includes the author biographies. Open the [latest PDF](output/pdf/hexapod-hot-motor-swap-ieee-access-juo-bio-updated.pdf), [editable LaTeX](manuscript/ieee-access-v3-hot-motor-swap/README.md), or [source ZIP](output/hexapod-hot-motor-swap-ieee-access-juo-bio-updated-source.zip).
 
 The [editable LaTeX source](manuscript/ieee-access/README.md) uses the official IEEE Access class. Open the [compiled review PDF](output/pdf/hexapod-junction-pause-ieee-access-review.pdf) or download the [portable LaTeX archive](output/hexapod-junction-pause-ieee-access-source.zip). The byline and corresponding-author details are placeholders in [author-details.tex](manuscript/ieee-access/author-details.tex).
 
