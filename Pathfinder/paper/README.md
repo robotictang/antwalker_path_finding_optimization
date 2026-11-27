@@ -6,4 +6,4 @@ Edit [Pathfinder-IJ3C-Final.docx](latest/Pathfinder-IJ3C-Final.docx) in [latest/
 - [archive/reviews/](archive/reviews/) — Review notes, intermediate renders and historical editing scripts. Some snapshots refer to their original file paths.
 - [archive/reference-links/](archive/reference-links/) — Shortcuts to previous publication packages and study materials. Shortcuts named `current_manuscript` or `plain_language_manuscript` refer to the preserved 5 November package.
 
-The [study evidence map](../publication_2026_11_05_revised/Evidence_Map.md), [raw planning records](../publication_2026_11_05_revised/raw_study/), and [computed results](../publication_2026_11_05_revised/results/) are still in the original publication package. The folder reorganization did not change the manuscript or research data.
+See the [study evidence map](archive/drafts/publication_2026_11_05_revised/Evidence_Map.md), [raw planning records](../workbench/mujoco/outputs/research/publication_ij3c_20261104/primary.json), and [computed results](archive/drafts/publication_2026_11_05_revised/results/). The folder reorganization did not change the manuscript or research data.

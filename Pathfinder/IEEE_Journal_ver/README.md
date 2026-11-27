@@ -1,6 +1,6 @@
 # Pathfinder thermal routing
 
-A simulation-only study of whether knowing which hexapod motors start warm changes the route the robot should take. This project is independent of the earlier IJ3C experiment. The current development pilot has two banked routes in one MuJoCo scene with a shared start and goal.
+A simulation-only study of whether knowing which hexapod motors start warm changes the route the robot should take. This project is independent of the earlier IJ3C experiment. Start with the [Array study page](Elsevier%2CArray/README.md) for the manuscript and versioned simulation data. The development pilot below has two banked routes in one MuJoCo scene with a shared start and goal.
 
 ## Run the pilot
 
