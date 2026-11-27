@@ -1,9 +1,0 @@
-10
-Both zero-assistance conditions complete none and  
-time out at 180 s, with leg-body gravity compensation 
-enabled or verified disabled. Under the defined 6-foot 
-test, all assisted executions show no foot contact. The  
-study thus separates the acceptance of a limited body  
-route from the validation of an unassisted locomotion  
-of the body. The costs and tradeoffs reported are for  
-the particular simulation and objective.

@@ -1,9 +1,0 @@
-phase,method,tracking_policy,assistance,scheduled,admitted,executed,successful,mean_destination_s_success_only,mean_safety_stops_executed,outcomes
-v6_physics_legacy,proposed_v4,legacy,1.0,12,12,12,12,28.99600000000198,0.0,{'arrived': 12}
-v6_physics_reduced,proposed_v4,safe_v6,0.5,12,12,12,12,31.229333333335163,0.0,{'arrived': 12}
-v6_physics_safe,proposed_v4,safe_v6,1.0,12,12,12,12,31.214666666668496,0.0,{'arrived': 12}
-v6_physics_safe,pso_polished,safe_v6,1.0,12,12,12,12,31.424000000001715,0.0,{'arrived': 12}
-v6_physics_safe,aco_polished,safe_v6,1.0,12,12,12,12,31.49866666666834,0.0,{'arrived': 12}
-v6_physics_safe,ompl_rrtstar,safe_v6,1.0,12,11,11,11,35.048727272727255,0.0,"{'arrived': 11, 'no_route': 1}"
-v6_physics_safe,ompl_seeded_rrtstar,safe_v6,1.0,12,12,12,12,31.416000000001716,0.0,{'arrived': 12}
-v6_physics_safe,ompl_rrtconnect,safe_v6,1.0,12,12,12,12,35.810666666667416,0.0,{'arrived': 12}

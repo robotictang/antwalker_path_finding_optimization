@@ -1,9 +1,0 @@
-phase,case,method,status,destination_reached,motion_s,distance_m,safety_stops,penetration_substeps,solver_warnings,predicted_destination_s
-v5_physics_assistance_1p0,v5test_02,proposed_v4,timeout,False,179.9999999999433,0.904111527214599,10900,0,0,34.99468652550367
-v5_physics_assistance_1p0,v5test_02,pso_polished,timeout,False,179.9999999999433,0.904111527214599,10900,0,0,34.99468652550367
-v5_physics_assistance_1p0,v5test_02,aco_polished,timeout,False,179.9999999999433,0.904111527214599,10900,0,0,34.99468652550367
-v5_physics_assistance_1p0,v5test_02,proposed_v5,timeout,False,179.9999999999433,0.904111527214599,10900,0,0,34.99468652550367
-v5_physics_assistance_0p5,v5test_02,proposed_v4,timeout,False,179.9999999999433,0.912674860800488,10898,0,0,34.99468652550367
-v5_physics_assistance_0p5,v5test_02,pso_polished,timeout,False,179.9999999999433,0.912674860800488,10898,0,0,34.99468652550367
-v5_physics_assistance_0p5,v5test_02,aco_polished,timeout,False,179.9999999999433,0.912674860800488,10898,0,0,34.99468652550367
-v5_physics_assistance_0p5,v5test_02,proposed_v5,timeout,False,179.9999999999433,0.912674860800488,10898,0,0,34.99468652550367

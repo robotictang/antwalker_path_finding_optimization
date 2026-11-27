@@ -1,5 +1,0 @@
-11
-[11] B. Efron, “Bootstrap methods: Another look at 
-the jackknife”, The Annals of Statistics, Vol. 7, 
-No. 1, pp. 1–26, 1979. doi: 
-10.1214/aos/1176344552.

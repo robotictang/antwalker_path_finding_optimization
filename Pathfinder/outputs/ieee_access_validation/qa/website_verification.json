@@ -1,9 +1,0 @@
-{
-  "http": "passed",
-  "study_version": 5,
-  "phases": 9,
-  "attempts": 800,
-  "dashboard_attempts": 384,
-  "snapshot_sha256": "b2d8bfaa44fad338fcd1ff5301ed332a8e629d6b6a5779b1f823c24a1d249a2c",
-  "browser_visual_check": "unavailable"
-}

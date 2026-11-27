@@ -1,6 +1,0 @@
-case,method,status,admissible,success,planning_seconds,distance_m,predicted_seconds,predicted_energy_percent,terrain_exposure,measured_task_seconds,positive_actuator_work_j,max_tilt_deg,charging_stops,modeled_swap_events
-smoke,b2_terrain,found,True,False,0.0025482409982942045,4.0,9.074925986923125,3.2874513020910303,0.8712220812243401,,,,,
-smoke,b1_distance,found,True,False,0.0027562289615161717,4.0,9.074925986923125,3.2874513020910303,0.8712220812243401,,,,,
-smoke,b4_weighted,found,True,False,0.017160504998173565,4.0,9.074925986923125,3.2874513020910303,0.8712220812243401,,,,,
-smoke,proposed,found,True,False,0.13998530298704281,4.0,9.074925986923125,3.2874513020910303,0.8712220812243401,,,,,
-smoke,b3_energy,found,True,False,0.0027319310465827584,4.0,9.074925986923125,3.2874513020910303,0.8712220812243401,,,,,

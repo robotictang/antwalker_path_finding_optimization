@@ -1,6 +1,6 @@
 # Larger benchmark of the per-motor junction-pause planner
 
-The [earlier four-course study](pause_forecast.md) recovered two finishes on one course with no observed thermal stops. This benchmark tests the same planner on 12 different courses, with six paired starts per course. The simulator, controller, thermal conditions, candidate speeds, learned hold loads, 12 s pause and 0.50 °C admission margin are frozen to that study.
+The [earlier four-course study](https://github.com/robotictang/antwalker_path_finding_optimization/blob/46a385b8432d0887319d89abb04efd643e7e6c0e/Pathfinder/IEEE_Journal_ver/docs/pause_forecast.md) recovered two finishes on one course with no observed thermal stops. This benchmark tests the same planner on 12 different courses, with six paired starts per course. The simulator, controller, thermal conditions, candidate speeds, learned hold loads, 12 s pause and 0.50 °C admission margin are frozen to that study.
 
 ## Design and decision rule
 

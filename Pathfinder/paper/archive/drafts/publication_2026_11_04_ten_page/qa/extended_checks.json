@@ -1,9 +1,0 @@
-{
-  "state": "passed",
-  "family_cells": 24,
-  "computation_groups": 6,
-  "omission_groups": 5,
-  "corrected_replays": 4,
-  "primary_records_unchanged": true,
-  "scope": "Raw-record reconciliation of added tables, omission effects and realized compensation settings; not physical validation"
-}

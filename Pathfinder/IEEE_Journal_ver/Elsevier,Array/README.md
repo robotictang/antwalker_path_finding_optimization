@@ -15,5 +15,3 @@
 | Appendix C | [Earlier pause and adapted speed comparisons](https://github.com/robotictang/antwalker_path_finding_optimization/blob/hot-motor-swap-data-v1.0.0/results/published_speed_baseline/summary.json) |
 
 The versioned snapshot includes the trace files, execution indexes, summaries, and study manifests for these comparisons. The code and configuration are in [the thermal routing project](../README.md).
-
-[Springer-formatted copy](../Springer%2CComplex-Intelligent-system-Submission/) · [Earlier IEEE draft](../manuscript/ieee-access-v3-hot-motor-swap/README.md)

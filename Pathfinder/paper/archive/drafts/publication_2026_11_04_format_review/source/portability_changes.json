@@ -1,6 +1,0 @@
-{
-  "urdf_source_sha256": "961759f816a1e25aca69c49298667f3c79090a4c31a21012dcb2278d314b57a4",
-  "urdf_workbench_sha256": "11cac3962b98e15204afda7b18080665adcaa697ca2cf9fbb6260bc61a8fbb82",
-  "urdf_change": "Removed invalid XML comments only; links, joints, inertias and geometry unchanged.",
-  "strict_asset_change": "Resolve source assets from portable workbench root instead of missing Downloads path."
-}

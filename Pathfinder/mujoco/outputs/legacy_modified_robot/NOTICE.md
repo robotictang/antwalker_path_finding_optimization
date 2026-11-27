@@ -1,1 +1,0 @@
-These previews and mission validation results belong to the previous modified robot. They do not validate the current source-only model. The current hybrid mission is blocked by missing source parts. See ../asset_integrity.json.

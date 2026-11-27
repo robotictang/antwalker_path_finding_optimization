@@ -1,7 +1,0 @@
-method,scheduled,admitted,mean_q_admitted,mean_planning_seconds,max_planning_seconds,statuses
-proposed_v4,96,93,1.1955317478092393,0.3759657198747088,0.7756075530051021,"{'found': 93, 'resource_rejected': 3}"
-pso_polished,96,93,1.2107305506406993,0.22260172142697834,0.6354713740001898,"{'found': 93, 'resource_rejected': 3}"
-aco_polished,96,93,1.2106969850197582,0.33465146526054923,0.8948379089997616,"{'found': 93, 'resource_rejected': 3}"
-continuous_pso,96,94,1.2127618022139495,0.7312554656981926,1.2030679360032082,"{'found': 94, 'resource_rejected': 2}"
-proposed_v4_no_landmarks,96,93,1.210805258946557,0.19581282620849075,0.586347055999795,"{'found': 93, 'resource_rejected': 3}"
-proposed_v4_no_polish,96,90,1.1840701279958759,0.32924666890600446,0.6343590430042241,"{'found': 90, 'resource_rejected': 6}"

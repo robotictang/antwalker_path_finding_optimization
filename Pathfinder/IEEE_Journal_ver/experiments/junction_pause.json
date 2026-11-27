@@ -1,9 +1,0 @@
-{
-  "name": "unequal_banks_junction_pause_v1",
-  "source_config": "reactive_margin_transfer.json",
-  "map": "unequal_banks",
-  "setting": "warm_start",
-  "start": "left_warm",
-  "junction_index": 1,
-  "pause_s": [6.0, 12.0, 24.0]
-}

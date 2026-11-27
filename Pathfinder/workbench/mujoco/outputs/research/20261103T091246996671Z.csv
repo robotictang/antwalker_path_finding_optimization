@@ -1,2 +1,0 @@
-case,method,repeat,seed,status,admissible,success,planning_seconds,quality_score,fitness_evaluations,distance_m,predicted_seconds,predicted_energy_percent,terrain_exposure,measured_task_seconds,positive_actuator_work_j,max_tilt_deg,charging_stops,modeled_swap_events
-smoke,b1_distance,0,101,found,True,False,0.0033457279996582656,0.3013044970508178,,4.0,9.074925986923127,3.2874513020910303,0.8712220812243401,,,,,

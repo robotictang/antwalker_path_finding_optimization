@@ -1,1 +1,0 @@
-PASS: all four scalarizations match independent Dijkstra; all destinations have checked non-dominated alternatives; shared energy ledger and weight validation passed.

@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/home/user123456/Downloads/hexapod_asset/mujoco/preview_multi_place_mission.py", line 1251, in <module>
-    run_mission(parser.parse_args())
-  File "/home/user123456/Downloads/hexapod_asset/mujoco/preview_multi_place_mission.py", line 172, in run_mission
-    validate_sources(require_hybrid=True)
-  File "/home/user123456/Downloads/hexapod_asset/mujoco/strict_asset.py", line 45, in validate_sources
-    raise MissingAssetError('\n'.join(errors))
-strict_asset.MissingAssetError: Missing wheel assembly: supplied meshes/URDF contain no wheel asset or wheel joint definitions. Hybrid wheel/leg mission cannot start.

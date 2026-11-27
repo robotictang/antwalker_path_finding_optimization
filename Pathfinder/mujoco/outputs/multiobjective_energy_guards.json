@@ -1,6 +1,0 @@
-{
-  "full_capacity_infeasible_task_stops_without_charging_loop": true,
-  "idle_returns_before_losing_charger_reserve": true,
-  "idle_departure_battery": 25.80609015026882,
-  "idle_charger_requirement": 25.207100987096425
-}

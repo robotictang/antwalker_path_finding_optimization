@@ -1,8 +1,0 @@
-{
-  "library": "OMPL",
-  "version": "2.0.1",
-  "binary_sha256": {
-    "ompl/_ompl.cpython-310-x86_64-linux-gnu.so": "16ccc417ed3432e7e36115712232ea84b4d3ce83643eb50092ae97c8c71a1db2",
-    "ompl/libompl.so": "2d018b2497d7924c781a91fa53c411592a7409b6e3f2ffbb0564e694f06526a3"
-  }
-}

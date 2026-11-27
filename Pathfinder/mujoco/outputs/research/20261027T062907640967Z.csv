@@ -1,6 +1,0 @@
-case,method,status,admissible,success,planning_seconds,distance_m,predicted_seconds,predicted_energy_percent,terrain_exposure,measured_task_seconds,positive_actuator_work_j,max_tilt_deg,charging_stops,modeled_swap_events
-smoke,b2_terrain,error,False,False,,,,,,,,,,
-smoke,b1_distance,error,False,False,,,,,,,,,,
-smoke,b4_weighted,error,False,False,,,,,,,,,,
-smoke,proposed,error,False,False,,,,,,,,,,
-smoke,b3_energy,error,False,False,,,,,,,,,,

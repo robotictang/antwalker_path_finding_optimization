@@ -1,4 +1,0 @@
-#!/bin/sh
-export FONTCONFIG_FILE='/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/publication_2026_11_04_template_checked/qa/runtime/fonts.conf'
-export POPPLER_DATADIR=/home/user123456/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/share/poppler
-exec '/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/outputs/hexapod_journal/qa/render_runtime/root/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2' --library-path '/home/user123456/Desktop/Git/antwalker/Foo Jin Wayne/Pathfinder/outputs/hexapod_journal/qa/render_runtime/root/usr/lib/x86_64-linux-gnu:/home/user123456/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/lib' /home/user123456/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin/pdftoppm "$@"

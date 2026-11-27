@@ -1,1 +1,0 @@
-../../outputs/uploaded_research_brief.txt
