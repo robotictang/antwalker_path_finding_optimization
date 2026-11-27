@@ -1,0 +1,1037 @@
+[
+  {
+    "map": "switch_shallow",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04959754699939367,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_shallow",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.050985378000405035,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_shallow",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_shallow_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04648077299953002,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 249.45952310989438,
+    "predicted_peak_c": 69.35338584101956
+  },
+  {
+    "map": "switch_shallow",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_shallow_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04393278499992448,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 249.07527104685687,
+    "predicted_peak_c": 69.4866408871089
+  },
+  {
+    "map": "switch_shallow",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04624882600001001,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_shallow",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.06248366299951158,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_early",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05421103100070468,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_early",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05376951800008101,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_early",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_early_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05023378600071737,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 253.3489075238275,
+    "predicted_peak_c": 69.32065873675745
+  },
+  {
+    "map": "switch_early",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_early_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05038343900014297,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 254.9192550366502,
+    "predicted_peak_c": 69.38425885902691
+  },
+  {
+    "map": "switch_early",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.052181856999595766,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_early",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.052900411000337044,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05453085699991789,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05481376299940166,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.049627965999206936,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_long_second_near_boundary_right_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04641167800036783,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 267.445289880799,
+    "predicted_peak_c": 69.4484340410867
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05321958100012125,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_second",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05494313999952283,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05459446199984086,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05175152699939645,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_long_first_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04652969800008577,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 258.7237939320606,
+    "predicted_peak_c": 69.23991931353424
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "switch_long_first_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.047550915999636345,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 262.08084767451084,
+    "predicted_peak_c": 69.46862690098853
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04874287000075128,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "switch_long_first",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.048840300999472674,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_slower_cooling_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04527074100042228,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 247.75799512739337,
+    "predicted_peak_c": 69.14890662380104
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_slower_cooling_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04763852600081009,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 248.16089241790522,
+    "predicted_peak_c": 69.42838605245848
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_near_boundary_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04173618299955706,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 247.67552305080002,
+    "predicted_peak_c": 67.50141852060517
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04344544899959146,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 246.42703330008467,
+    "predicted_peak_c": 68.10968199462921
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_warm_start_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.049729160999959277,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 247.67552305080002,
+    "predicted_peak_c": 68.50378323222834
+  },
+  {
+    "map": "persistent_shallow",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_shallow_warm_start_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.06471233299998858,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 246.4415280923577,
+    "predicted_peak_c": 69.17096577197937
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05259260699949664,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05039426599978469,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_offset_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.045310618999792496,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 252.93115797124173,
+    "predicted_peak_c": 69.27315938963547
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_offset_near_boundary_right_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04359825300070952,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 251.18157012956274,
+    "predicted_peak_c": 69.48856530539912
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04628704700007802,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_offset",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04512380699998175,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_slower_cooling_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.0487241279997761,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 265.44305844756286,
+    "predicted_peak_c": 69.4262210182063
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_slower_cooling_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05166540800018993,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 267.8341172404049,
+    "predicted_peak_c": 69.36409328720156
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_near_boundary_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.046155291000104626,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 264.41448080182676,
+    "predicted_peak_c": 68.00483171072392
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04762804799975129,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 266.0819396356688,
+    "predicted_peak_c": 67.96966126993604
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_warm_start_left_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.050200474000121176,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 264.41448080182676,
+    "predicted_peak_c": 69.10651437892513
+  },
+  {
+    "map": "persistent_long_second",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_second_warm_start_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05591907000052743,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 266.89377869052777,
+    "predicted_peak_c": 69.2691635375127
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05502445699949021,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05391817000054289,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_first_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05093684300027235,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 261.80726930212177,
+    "predicted_peak_c": 69.2609576667342
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "persistent_long_first_near_boundary_right_warm",
+    "route": [
+      "s1_b1",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04601430999991862,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 260.2736495804793,
+    "predicted_peak_c": 69.49139214424824
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.04824702099995193,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "persistent_long_first",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05058521299997665,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05328843099960068,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_first_slower_cooling_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05095612399964011,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 252.29917949162476,
+    "predicted_peak_c": 69.3544599179163
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_first_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.049278585000138264,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 253.81006035953726,
+    "predicted_peak_c": 69.35608151667435
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_first_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04779897600019467,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 251.24941718583847,
+    "predicted_peak_c": 68.10683426196644
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05419673500000499,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_first",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_first_warm_start_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.050248653999915405,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 251.25900197268356,
+    "predicted_peak_c": 69.08709972194364
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.0516206880001846,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.055076972000279056,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_second_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.04921226299939008,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 257.33259166604523,
+    "predicted_peak_c": 69.40516157202899
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.051829005000399775,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05107821199999307,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_second",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05393168900081946,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.053826467000362754,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.054151271000591805,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_reversal_near_boundary_left_warm",
+    "route": [
+      "s1_b2",
+      "s2_b1"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.049401756999941426,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 259.29836721749575,
+    "predicted_peak_c": 69.49099203669746
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_reversal_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.051097247999678075,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 260.6768540300649,
+    "predicted_peak_c": 69.4722556492363
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05308894100016914,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_reversal",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.053906195999843476,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "slower_cooling",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05703904700021667,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "slower_cooling",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_late_long_slower_cooling_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.05403288700017583,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 267.7083151074473,
+    "predicted_peak_c": 69.37896687677409
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "near_boundary",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.053016674999526,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "near_boundary",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_late_long_near_boundary_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.0508167850002792,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 267.40206216278483,
+    "predicted_peak_c": 67.67466053696783
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "warm_start",
+    "start": "left_warm",
+    "method": "published_gait_period_speed",
+    "execution": null,
+    "route": [],
+    "planning_failure": "no_route",
+    "planning_s": 0.05722767699990072,
+    "routes_examined": 4,
+    "predicted_elapsed_s": null,
+    "predicted_peak_c": null
+  },
+  {
+    "map": "shared_bank_late_long",
+    "setting": "warm_start",
+    "start": "right_warm",
+    "method": "published_gait_period_speed",
+    "execution": "shared_bank_late_long_warm_start_right_warm",
+    "route": [
+      "s1_b2",
+      "s2_b2"
+    ],
+    "planning_failure": null,
+    "planning_s": 0.053241630000229634,
+    "routes_examined": 4,
+    "predicted_elapsed_s": 267.40206216278483,
+    "predicted_peak_c": 68.68290060607501
+  }
+]

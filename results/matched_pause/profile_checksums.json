@@ -1,0 +1,482 @@
+{
+  "matched_alternating_balanced_s1_b1_speed1.npz": {
+    "sha256": "8a212a08710a26605e6dd6dce84b8691cdfa4ace5a01d804ce16d4277e8a5770",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s1_b1_speed0.65.npz": {
+    "sha256": "9425a59d3f9f1f58e8817642f70432fe1dc00044f63cf5d9b0708120ebecc285",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s1_b2_speed1.npz": {
+    "sha256": "96da3e60ecf487c7de610a491182c5e10e7b147fb72537201f780bd90f865ddb",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s1_b2_speed0.65.npz": {
+    "sha256": "a72ef6f2a74c24daa39cfe53699fc6f88d2bfc2893c2d253df8e135605160732",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s2_b1_speed1.npz": {
+    "sha256": "20c74e392ab0ba910e74f74b8c15a79a3afb03c9ea121be6255558d8b76ee691",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s2_b1_speed0.65.npz": {
+    "sha256": "1c953ea4f75b723b38b26fe72afc5db73ee5ced50f9a1edda3e8a72618490be8",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s2_b2_speed1.npz": {
+    "sha256": "8211502ab8acddf4f2387aaae509b8a9747d11fa462c4d7ff4015afe23d17ac1",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_balanced_s2_b2_speed0.65.npz": {
+    "sha256": "12919265bd4d960e48a869cb868e95c237b2f235ea8d248f6b284fef81e21e45",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s1_b1_speed1.npz": {
+    "sha256": "979e6b31d691841a99f8f2bd26b2ec5277329325023746941d5c9679bb5f93a0",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s1_b1_speed0.65.npz": {
+    "sha256": "a35fbccf18f674a7f6064037f298b46a7f9e9de046cd0ec68edad18048edf80b",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s1_b2_speed1.npz": {
+    "sha256": "9679a58979c33b846518b67a3bd9bd352d9ae6c46190285d4f9433485aac3229",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s1_b2_speed0.65.npz": {
+    "sha256": "e91b8d467d8fc57b1a15db5c5c3ec97f9e821c743fa8b2b0e0b4c8039184995d",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s2_b1_speed1.npz": {
+    "sha256": "d5be67b9fd3439b9130659ed18d328375af78d1f82d815ef6e5f5720a29e1a32",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s2_b1_speed0.65.npz": {
+    "sha256": "1bd6b575ed0dc09b834c45260d81fa1233bf00c7e9e120c01c8803dee04e296e",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s2_b2_speed1.npz": {
+    "sha256": "956c41033b9d0947d4f71c07651dcc61dfe5a8a2fd645577bed523fa05fdb0ca",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_entry_s2_b2_speed0.65.npz": {
+    "sha256": "5784de09894144a118b56c47c0e62b3ddc3eb6746c9c3b6c0ad420bd5c0b6924",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s1_b1_speed1.npz": {
+    "sha256": "bc00c71a5d8d585157a117249d828b877d556fb7989d66fbb6977b941bcf8e7c",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s1_b1_speed0.65.npz": {
+    "sha256": "daf74e7ee2dbe5bf40d037f6f8dca002c891478a81d113dbfb4a8f8d59e59344",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s1_b2_speed1.npz": {
+    "sha256": "b2490caf5fec2ac04de6195fee17f09d2285f7e7633b4f57aad22de94416dae6",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s1_b2_speed0.65.npz": {
+    "sha256": "ba6194dc66086d1b8b5387d3fc319e1ad248032bbc43411b0f2e59b82c6264a0",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s2_b1_speed1.npz": {
+    "sha256": "ba6051c8d0a8d81021c1f1916077ef9c3c552fd32495dd7b4da3d26d61026451",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s2_b1_speed0.65.npz": {
+    "sha256": "6e78652273672ca5d7295fea30b10e99efb1ba503ef0abfcc35fade1eb424d64",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s2_b2_speed1.npz": {
+    "sha256": "6e955da3118b55e5a4ffe9dd2fa37e185eae83b5085762b8e0bf6480c94d10f3",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_long_exit_s2_b2_speed0.65.npz": {
+    "sha256": "ba41f21f77136e745a37c44b11b7eebf50984d68108c375cb803a0870dbcdd89",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s1_b1_speed1.npz": {
+    "sha256": "75bf5eb61ced895f7cf766d96429fb68cc5b7fc271ee5608850ed66a65df6c98",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s1_b1_speed0.65.npz": {
+    "sha256": "0a0c2852d5fdd0574dc68eafac10ba5421fb39736fa2229ae4a586c58c7ab42a",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s1_b2_speed1.npz": {
+    "sha256": "4592a5b30f7d454de5d2a9d0bc7fa24c7eca706749571346532f6e69c04eaa95",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s1_b2_speed0.65.npz": {
+    "sha256": "1ce7619d9774cbc4602d6d28c72118b696e1620d123b5c8bffce8dcec46739d5",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s2_b1_speed1.npz": {
+    "sha256": "1c779c9c3c8fb8fcf45e4119ab930599b4d9109a6b897183182d244d4f9ae9e8",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s2_b1_speed0.65.npz": {
+    "sha256": "a4a9e335bf63d6df8e5037b57c6b566dfe62d392901518aa231acf314d367e8f",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s2_b2_speed1.npz": {
+    "sha256": "0992b9d2629197f3bf2b313c227533b20d405c889ea42b37e0912ceb471094ed",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_alternating_offset_s2_b2_speed0.65.npz": {
+    "sha256": "489537808350435897eb9790623fbb79d19a61877b5f0dd985f73ca91ce03fca",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s1_b1_speed1.npz": {
+    "sha256": "c2bf3c40b421a91f0c703beef3151cea6d2a77e694196e79455aac02ec940b74",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s1_b1_speed0.65.npz": {
+    "sha256": "9c3601d23b7660243b7eb62f57d0b7b0671047b031f2406e8899d41a5d041c70",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s1_b2_speed1.npz": {
+    "sha256": "e5cb653c92c12fc86b3dd2517faffee9023456d48b9aeeacf935a71c8d081314",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s1_b2_speed0.65.npz": {
+    "sha256": "6fec0f4e2d502a6e36564fc774884676bc0c46217f5221509de07216910356be",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s2_b1_speed1.npz": {
+    "sha256": "71233a61032c66d1f5111e98c1a70c6c75142471ea427366edd2ebb5a8dce99c",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s2_b1_speed0.65.npz": {
+    "sha256": "8828eebfb1a31f844514f8f5940c3f124a378d8bd45dccf200b3027d313d913b",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s2_b2_speed1.npz": {
+    "sha256": "a1c5713a380a432e0ef77c108e659aa415aec9f3eb23de98ad8b8d2229307855",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_balanced_s2_b2_speed0.65.npz": {
+    "sha256": "10030dcc3cbd05ede15b2ca6d7c4497b9fe748eb7b2d810d3aca39fcc627cc55",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s1_b1_speed1.npz": {
+    "sha256": "54a4b80e5d4a8d6395c68e0ebed868ee91be5ec261a52749ca5de530994ab2eb",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s1_b1_speed0.65.npz": {
+    "sha256": "d9d3e26271899f26616206bcf3d5a9ac40895682696ac7d733dac0725209da0a",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s1_b2_speed1.npz": {
+    "sha256": "7c32748bc9a96d67349b5d2e2bfe9bc05649e327461c297ab699b934612a7154",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s1_b2_speed0.65.npz": {
+    "sha256": "3fb2c496e1f5d6a869b7bebc651209878c5d7972ff1c49e170003cd1a696e65b",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s2_b1_speed1.npz": {
+    "sha256": "1fc856c22225d90ab9b198e609c1ede914d63dc39bfb3bf246aacfd32eccf00e",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s2_b1_speed0.65.npz": {
+    "sha256": "9981c3fe4873b8ce1bed7829b0e0a862556c1ee7a0eb68063de4e692a5cd1fed",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s2_b2_speed1.npz": {
+    "sha256": "2ef6669752ee8811369aa4255275cb92d62b1799b6969081d4dcb95be19042a8",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_entry_s2_b2_speed0.65.npz": {
+    "sha256": "be1218de5e32c9aa7c7cc41852ac295dc7d676854614a16317bb05f2dcf5e598",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s1_b1_speed1.npz": {
+    "sha256": "338c1909e3459e29b6b78b44c0b28ce82bacd9e39875f2baf4aa69d2d002a481",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s1_b1_speed0.65.npz": {
+    "sha256": "63377ac00c34f0039490c1732f504377320b1c2c7db7ca380afb5f1b88a00882",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s1_b2_speed1.npz": {
+    "sha256": "9ed1e96e8906f5069abdb2f3181d0dbab253977fdc37b2b8d90da5a922be1d2a",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s1_b2_speed0.65.npz": {
+    "sha256": "f24af1acc14183271bfe65c020e8d991d2df4ea8f25b3417be2f4665ded4bfbc",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s2_b1_speed1.npz": {
+    "sha256": "3c2b233cb9be095332ec1d371a36565ddff08338ab89a9deaa1b6aebeb2f0d3b",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s2_b1_speed0.65.npz": {
+    "sha256": "2998ed86d5e4cc7c6ba310bf81d7fa5d5c90723f8cc6d67407e0ffa884718832",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s2_b2_speed1.npz": {
+    "sha256": "0bf3ba7356a2a905ed318d85dc4adfc2f268ef5b626e1d995b40dc11961723c2",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_long_exit_s2_b2_speed0.65.npz": {
+    "sha256": "55da8aa861382c3d16c917a1b889c2838dd9b00369a999e0429d084a0e5bec15",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s1_b1_speed1.npz": {
+    "sha256": "69c530f147722d179accbc58ea594d3ada04e587cd18c0eba61255eca2c994d9",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s1_b1_speed0.65.npz": {
+    "sha256": "1575c1f242981b2dbb0fa1455a56e2a042d8c4934a765bf814d594505d7fc6ba",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s1_b2_speed1.npz": {
+    "sha256": "f6f3e162450a186cbd5d455756fedf9e61d1a47825937b3b90ae58cd13028079",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s1_b2_speed0.65.npz": {
+    "sha256": "faac1e54e64deb664aed7cf5febab74cd444eef629181c077808042999cc3a3f",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s2_b1_speed1.npz": {
+    "sha256": "5d2463df69d5b076ba85139feeb1605294198c61c4bfedba6bd047cf90984edd",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s2_b1_speed0.65.npz": {
+    "sha256": "d93af262e16a6a77364063fd34f1672654b7a22276212a61ccc0c75142c7e282",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s2_b2_speed1.npz": {
+    "sha256": "39493be57b052e68b394561ba2c0c9fe44da4c163c692896ca534990a5b91af3",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_persistent_offset_s2_b2_speed0.65.npz": {
+    "sha256": "2990b049d0c19f08e8883011b990bbcf8fe239648fdc567cca460b0f0a8ecb47",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s1_b1_speed1.npz": {
+    "sha256": "03429d66062681bbafe1b8de81f70024f671fa65acc764db36e1768e37e5be84",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s1_b1_speed0.65.npz": {
+    "sha256": "906a4d4110c5af250d4a0b21e47b50da53669e45133d5b8f0e261a1cfa2743a2",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s1_b2_speed1.npz": {
+    "sha256": "d9af84ebf684bd84725a707fd725381146bd930b349255657e6b49b21b5a34cc",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s1_b2_speed0.65.npz": {
+    "sha256": "e1fd79410796b91cf300beda5f0e6781e0bb917e0a0236f37b4fae367a3721ce",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s2_b1_speed1.npz": {
+    "sha256": "541b33be2b91456690bc717ebdfaa3209c08d48fa08a7970c55db28bdcf37350",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s2_b1_speed0.65.npz": {
+    "sha256": "bfa8204828e30342f7bf7c26e57c17f2279abc01813b31dfc4fba49bff4843ac",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s2_b2_speed1.npz": {
+    "sha256": "e8f239bb1e1ea4ed3c3f3598d23acc6dc0fcf91b70f085cb705cdd8de81e2a23",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_entry_s2_b2_speed0.65.npz": {
+    "sha256": "c6afe4e8b93bf16e8fd173789a79e6fecdfd78b7a431dbba0c93d99f5d53e291",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s1_b1_speed1.npz": {
+    "sha256": "b9f22a21f2259e5e668cb67f4e0ad2912ec8c2dc56a2daebe10082c9363081d5",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s1_b1_speed0.65.npz": {
+    "sha256": "33aac8ba84a42934d131a6a6cc414c838bc29e20248feb3179e5b25eac4cb06c",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s1_b2_speed1.npz": {
+    "sha256": "65309438f6b4aac506bd9cda0dbdbabcba3cd2c9009195d928b29c0dd9e1a0de",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s1_b2_speed0.65.npz": {
+    "sha256": "cb03d240fca059ca6f580841d1bd22fdcac29df11bc87c4d9d4ad4db352d94d5",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s2_b1_speed1.npz": {
+    "sha256": "93e37f678fa2bf926199950ba9dac686116b548f34f7e034030c9cd8337f0384",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s2_b1_speed0.65.npz": {
+    "sha256": "e3753d917733b0b89c7374fd038334643bf09cdb743773f6cc45d68fb8ff67bd",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s2_b2_speed1.npz": {
+    "sha256": "08873cd5266216ba1eaaaec1580b94c58732fb2ee7255e3299bab9f61cc324e9",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_exit_s2_b2_speed0.65.npz": {
+    "sha256": "663a65c304f5252c08b4f57e7aee2dffc55cbe7a2898c38893ca7a6bf265e3e6",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s1_b1_speed1.npz": {
+    "sha256": "ebbd8417c8be506b07ac065ef52c9efc080f0df9500281bd5f8ab0548b346769",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s1_b1_speed0.65.npz": {
+    "sha256": "40f5808bd38e6140d5920f44e0089b075b0635fac0bdd85ebce980b208e5ac23",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s1_b2_speed1.npz": {
+    "sha256": "500b3c5b8572cfd4cedf4ed1e7f64fdd8f52a4bce316b9fe86bf45d0a436b79e",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s1_b2_speed0.65.npz": {
+    "sha256": "6eb01b9b851d1661bc31fe9ffc4246b6255e7168622044612270d5070ef1909a",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s2_b1_speed1.npz": {
+    "sha256": "e5d22d7ec0ebca1caa61e049b915a13c03d3a26fc549f99878e943f09bbcd884",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s2_b1_speed0.65.npz": {
+    "sha256": "1886b2d8147d56003b8f14445695059b61239e22acc999e10abe2790a308eca0",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s2_b2_speed1.npz": {
+    "sha256": "f499d4c3623b92f3164acd7e0695904980cda9b7b3b3ed57602a408afa308cb2",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_reversal_s2_b2_speed0.65.npz": {
+    "sha256": "0a7b9cadbf1a839f4febd629b06f2c74ec03b3c906ac57fae0a5927a5fd8e8b9",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s1_b1_speed1.npz": {
+    "sha256": "2ff26e55bcb9e269ab700db3396c2017e527eab44ef37b4c907329d6412e45ba",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s1_b1_speed0.65.npz": {
+    "sha256": "9195725451470ad3f5e4106adc9dfaf99b6de5a0b22b2b1dccb5652e2c07a22d",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s1_b2_speed1.npz": {
+    "sha256": "85fee9e2de07aecf4ea12735d46f27dafff842dea5242473e502f1db42545029",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s1_b2_speed0.65.npz": {
+    "sha256": "d6a7438b6b9b1e0491532c0f629afb5cb124b9dfd5514e02795e2229a22c0067",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s2_b1_speed1.npz": {
+    "sha256": "cab3b3c4ca86dc0b73401d25a31167b05333131f60638a9022139dddb12c5fa4",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s2_b1_speed0.65.npz": {
+    "sha256": "a08c76eabeff11b1f85c67398fd9669c24e49ff4daa29685c9ea9f4b9f47599e",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s2_b2_speed1.npz": {
+    "sha256": "86bf9f3757568cba60d112a9f0791596fbfa391c46e21e831fb644051a21b7d3",
+    "common_candidate": true,
+    "outcome": "completed"
+  },
+  "matched_shared_long_exit_s2_b2_speed0.65.npz": {
+    "sha256": "2f33ea35552e536d84fc0bb5bfac505ec9dab744d77df9edc9d69bfab4b1d002",
+    "common_candidate": true,
+    "outcome": "completed"
+  }
+}

@@ -1,0 +1,5037 @@
+{
+  "persistent_long_first_near_boundary_left_warm_s1_b2_v0.65_s2_b1_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 352.9800000009573,
+    "forward_m": 38.8322166542391,
+    "max_lateral_m": 0.09991210372090853,
+    "max_tilt_deg": 17.263283825131303,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.1478018899402546e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.039856058444713,
+      "LF_femur": 61.5185076796141,
+      "LF_tibia": 11.316964401324281,
+      "LM_coxa": 7.369460091993942,
+      "LM_femur": 60.55907693653727,
+      "LM_tibia": 9.345206408130139,
+      "LR_coxa": 7.340266407131499,
+      "LR_femur": 48.53746930610122,
+      "LR_tibia": 8.591933980830454,
+      "RF_coxa": 8.089096597062904,
+      "RF_femur": 62.23157894202276,
+      "RF_tibia": 10.945190359220229,
+      "RM_coxa": 7.397274624121922,
+      "RM_femur": 61.22847626984443,
+      "RM_tibia": 9.143152644764651,
+      "RR_coxa": 7.3265744425569785,
+      "RR_femur": 49.54925075376522,
+      "RR_tibia": 8.399414175336162
+    },
+    "peak_c": 69.97020831396426,
+    "trace": "missions/persistent_long_first_near_boundary_left_warm_s1_b2_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.73008989270056,
+        "walking_time_s": 200.22000000023746,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 22.819999999997123,
+        "hottest_c": 67.00958623819805,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 102.69999999993739,
+        "hottest_c": 65.49568952587828,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 246.60000000045892,
+        "hottest_c": 67.00311857295642,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 271.8800000005796,
+        "hottest_c": 65.49464655199289,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 322.78000000082267,
+        "hottest_c": 67.00302092934686,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 202.22000000023746,
+      "resumed_s": 214.22000000029476,
+      "peak_before_c": 64.58275971740427,
+      "peak_after_c": 63.71544511100761,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -0.8673146063966612,
+      "temperature_before_c": [
+        33.241401200134796,
+        61.88422637498014,
+        34.101744950353094,
+        33.186296223663426,
+        62.53163068346022,
+        33.639341449305995,
+        33.17042386856593,
+        52.099116810956914,
+        33.41351234874073,
+        29.128410172750883,
+        64.58275971740427,
+        29.417083489899465,
+        29.071362367469284,
+        62.079811891005704,
+        29.29200439940927,
+        29.069704533792393,
+        49.64476919750305,
+        29.24127195531483
+      ],
+      "temperature_after_c": [
+        32.460157133929684,
+        61.385119667903,
+        33.26359520519477,
+        32.408685266927144,
+        62.533130071148136,
+        32.85045658863826,
+        32.39785814515052,
+        52.478427875350164,
+        32.638457142982524,
+        28.73681951031603,
+        63.71544511100761,
+        29.023856333547897,
+        28.687679528478547,
+        62.35655894899185,
+        28.916799755358028,
+        28.68377393456033,
+        50.07821585175906,
+        28.864053184436365
+      ],
+      "maximum_planar_displacement_m": 0.06359426664760096
+    },
+    "trace_sha256": "96c3913b5d47905d00d245f763fa04cfc6d1ac92f1f4a9a6d43c92e9aea4b576"
+  },
+  "persistent_long_first_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 50.72000000001602,
+    "forward_m": 5.059122959497617,
+    "max_lateral_m": 0.027510954680251887,
+    "max_tilt_deg": 7.085050299890868,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 3.724150017525412e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.845092420323053,
+      "LF_femur": 55.39616115083249,
+      "LF_tibia": 12.192547916045807,
+      "LM_coxa": 7.2096923656097465,
+      "LM_femur": 59.75546444985387,
+      "LM_tibia": 6.713121497382084,
+      "LR_coxa": 7.112648891371141,
+      "LR_femur": 50.69538607010763,
+      "LR_tibia": 3.1171590916235843,
+      "RF_coxa": 6.587731997829165,
+      "RF_femur": 68.88746960571999,
+      "RF_tibia": 5.366461743347986,
+      "RM_coxa": 6.251191266136835,
+      "RM_femur": 61.62835716004406,
+      "RM_tibia": 3.2432549496129646,
+      "RR_coxa": 6.185290343423548,
+      "RR_femur": 45.13305200400133,
+      "RR_tibia": 5.493388634115735
+    },
+    "peak_c": 70.000882596653,
+    "trace": "missions/persistent_long_first_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 21.39999999999791,
+        "hottest_c": 67.00410900117576,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "73cacdf797a3f34fdab3ab1117c9739a59efd5020057ba82d31ebc91cb4ef83a"
+  },
+  "persistent_long_first_slower_cooling_left_warm_s1_b2_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 40.12000000000307,
+    "forward_m": 4.372356194228473,
+    "max_lateral_m": 0.026343813211816336,
+    "max_tilt_deg": 8.24680335796731,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.00022155754957350172,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.852523370027111,
+      "LF_femur": 68.72803203147188,
+      "LF_tibia": 5.162848733298408,
+      "LM_coxa": 6.4911245694398945,
+      "LM_femur": 61.30728586099603,
+      "LM_tibia": 3.390290116397676,
+      "LR_coxa": 6.414227291391541,
+      "LR_femur": 45.6081410489894,
+      "LR_tibia": 5.687977605404929,
+      "RF_coxa": 8.836799646747629,
+      "RF_femur": 56.02121209631505,
+      "RF_tibia": 11.793687203530668,
+      "RM_coxa": 8.23742739815613,
+      "RM_femur": 59.86832356189152,
+      "RM_tibia": 6.316456886618391,
+      "RR_coxa": 7.95427805276106,
+      "RR_femur": 50.55943503850232,
+      "RR_tibia": 3.09411852247954
+    },
+    "peak_c": 70.00036718666337,
+    "trace": "missions/persistent_long_first_slower_cooling_left_warm_s1_b2_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.859999999999962,
+        "hottest_c": 67.00514295527145,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "f84987332947c158567343134933772c4e5045a7548c70ab81cfc1405ea8a0c8"
+  },
+  "persistent_long_first_slower_cooling_right_warm_s1_b1_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 35.339999999997225,
+    "forward_m": 4.028515421867153,
+    "max_lateral_m": 0.02678981087379917,
+    "max_tilt_deg": 6.434256817634628,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.0001414827391058291,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.209613165236796,
+      "LF_femur": 56.24266821693185,
+      "LF_tibia": 11.935405180442025,
+      "LM_coxa": 8.534375886499394,
+      "LM_femur": 59.871781704618726,
+      "LM_tibia": 6.61456650513808,
+      "LR_coxa": 8.608315587304359,
+      "LR_femur": 50.12440032889195,
+      "LR_tibia": 3.1428876056199444,
+      "RF_coxa": 7.101754102115635,
+      "RF_femur": 69.59190834468365,
+      "RF_tibia": 5.196895898995782,
+      "RM_coxa": 6.797967904394487,
+      "RM_femur": 61.31090856935854,
+      "RM_tibia": 3.008390171058463,
+      "RR_coxa": 6.381523804363182,
+      "RR_femur": 44.85162862942703,
+      "RR_tibia": 5.302654456784881
+    },
+    "peak_c": 70.00637133376033,
+    "trace": "missions/persistent_long_first_slower_cooling_right_warm_s1_b1_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 9.08000000000037,
+        "hottest_c": 67.00008078960991,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "286298a1bdd66ac0b634b0d6ceafdebc5ab0db1e443c19364263a6787ee52c3f"
+  },
+  "persistent_long_first_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 40.10000000000304,
+    "forward_m": 4.023960567393114,
+    "max_lateral_m": 0.0273920410757742,
+    "max_tilt_deg": 5.510345010546887,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 3.879190911609864e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.1603548794091365,
+      "LF_femur": 67.70030495510476,
+      "LF_tibia": 4.986742964010422,
+      "LM_coxa": 5.871277468030465,
+      "LM_femur": 61.020958406816334,
+      "LM_tibia": 3.6712858788146066,
+      "LR_coxa": 5.684795719780891,
+      "LR_femur": 46.087766229978406,
+      "LR_tibia": 5.418629276413943,
+      "RF_coxa": 8.123524688878314,
+      "RF_femur": 55.80434447433442,
+      "RF_tibia": 11.272142917379462,
+      "RM_coxa": 7.51394684588086,
+      "RM_femur": 59.867493600870894,
+      "RM_tibia": 6.386964364848692,
+      "RR_coxa": 7.309442716322342,
+      "RR_femur": 50.111873165869184,
+      "RR_tibia": 3.2122251443302434
+    },
+    "peak_c": 70.00438587833818,
+    "trace": "missions/persistent_long_first_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71186553919273,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "3a38b83cbbf4c9901969c59b0cf7a22f0af87fb97361f3264eebc2e419d6fbb4"
+  },
+  "persistent_long_first_warm_start_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 41.140000000004314,
+    "forward_m": 4.0562173521278355,
+    "max_lateral_m": 0.02751302011723533,
+    "max_tilt_deg": 7.020499036629946,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 9.722897423432182e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.865538507102129,
+      "LF_femur": 55.787980420648516,
+      "LF_tibia": 11.558964999449959,
+      "LM_coxa": 7.396759881368371,
+      "LM_femur": 59.61685973404277,
+      "LM_tibia": 6.524207391403393,
+      "LR_coxa": 7.326564631684811,
+      "LR_femur": 50.371221087780896,
+      "LR_tibia": 3.204304609155667,
+      "RF_coxa": 6.223542874655178,
+      "RF_femur": 67.64623389648683,
+      "RF_tibia": 5.011838750893973,
+      "RM_coxa": 5.922006917100384,
+      "RM_femur": 61.1853171450297,
+      "RM_tibia": 3.383846569956029,
+      "RR_coxa": 5.612988422867712,
+      "RR_femur": 45.767871171346854,
+      "RR_tibia": 5.451539786779502
+    },
+    "peak_c": 70.00740212012693,
+    "trace": "missions/persistent_long_first_warm_start_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71179621419624,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0bb80137ae724e38219d1fca96630b5c8d8e7f0acd1edebc83fdc23a4fb5259c"
+  },
+  "persistent_long_second_near_boundary_left_warm_s1_b1_v1_s2_b1_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 300.1800000007052,
+    "forward_m": 39.49004317160958,
+    "max_lateral_m": 0.10716988861607923,
+    "max_tilt_deg": 19.309112462125505,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 9.623855316439766e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.796295751524445,
+      "LF_femur": 61.89917538910663,
+      "LF_tibia": 11.625692237876587,
+      "LM_coxa": 8.816205384416019,
+      "LM_femur": 59.59066900372483,
+      "LM_tibia": 9.111104144471662,
+      "LR_coxa": 8.726342853941512,
+      "LR_femur": 47.0149911511359,
+      "LR_tibia": 8.40283559593059,
+      "RF_coxa": 9.261116929952125,
+      "RF_femur": 64.30390839224589,
+      "RF_tibia": 10.190692336442424,
+      "RM_coxa": 8.41257151695698,
+      "RM_femur": 62.203838550143146,
+      "RM_tibia": 7.615774629844783,
+      "RR_coxa": 8.386922125575468,
+      "RR_femur": 50.1118471484572,
+      "RR_tibia": 7.2768625363425405
+    },
+    "peak_c": 67.4849855536617,
+    "trace": "missions/persistent_long_second_near_boundary_left_warm_s1_b1_v1_s2_b1_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.140253881597843,
+        "walking_time_s": 136.91999999993521,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 107.159999999927,
+        "hottest_c": 67.00191601041053,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 159.82000000004456,
+        "hottest_c": 65.49808331824248,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 219.38000000032895,
+        "hottest_c": 67.01144341282462,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 257.3400000005102,
+        "hottest_c": 65.49490184819044,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 277.8800000006083,
+        "hottest_c": 67.00421508589802,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "b56b26bd828c63545b170766b7dfbb7ec5df35bd394a76e1cd5affd29329a55e"
+  },
+  "persistent_long_second_near_boundary_right_warm_s1_b2_v1_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 302.9600000007185,
+    "forward_m": 39.49149332655817,
+    "max_lateral_m": 0.10726854211617098,
+    "max_tilt_deg": 18.969901282864353,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.246955960449491e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.145164783302533,
+      "LF_femur": 64.15058454747908,
+      "LF_tibia": 10.454114229548217,
+      "LM_coxa": 8.304349456671835,
+      "LM_femur": 62.3212522243706,
+      "LM_tibia": 8.152185580791599,
+      "LR_coxa": 8.321435082782061,
+      "LR_femur": 50.39945673326372,
+      "LR_tibia": 7.776156570806473,
+      "RF_coxa": 9.767390689625303,
+      "RF_femur": 61.87735481342361,
+      "RF_tibia": 11.783379127968889,
+      "RM_coxa": 8.784563805849904,
+      "RM_femur": 59.51279591936505,
+      "RM_tibia": 9.335887289882791,
+      "RR_coxa": 8.671911539932346,
+      "RR_femur": 46.93010338980697,
+      "RR_tibia": 8.635949578768333
+    },
+    "peak_c": 67.84283457757988,
+    "trace": "missions/persistent_long_second_near_boundary_right_warm_s1_b2_v1_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.14015482928888,
+        "walking_time_s": 138.35799999994208,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 108.3599999999242,
+        "hottest_c": 67.01527538698588,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 160.72000000004886,
+        "hottest_c": 65.49784036302492,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 218.3200000003239,
+        "hottest_c": 67.00018940115058,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 264.74000000054554,
+        "hottest_c": 65.49941734202888,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 282.36000000062967,
+        "hottest_c": 67.00347060228665,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "b4d38069c3439f9f8b92a8ea4569db415392db59000b1a59dfb2504542f4182d"
+  },
+  "persistent_long_second_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 338.58000000088856,
+    "forward_m": 39.49261703228098,
+    "max_lateral_m": 0.10716988861607923,
+    "max_tilt_deg": 15.9804637482103,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.6408398474675277e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.59532077403019,
+      "LF_femur": 61.220493877160976,
+      "LF_tibia": 11.660544257895156,
+      "LM_coxa": 7.843854783332955,
+      "LM_femur": 59.53502434695442,
+      "LM_tibia": 9.423754523083208,
+      "LR_coxa": 7.7753416178750605,
+      "LR_femur": 46.765407790935406,
+      "LR_tibia": 8.564813053105546,
+      "RF_coxa": 8.090047320626777,
+      "RF_femur": 63.80194813226389,
+      "RF_tibia": 9.990843830519095,
+      "RM_coxa": 7.4700920825845,
+      "RM_femur": 62.13555354863374,
+      "RM_tibia": 7.618882157995336,
+      "RR_coxa": 7.411373469614435,
+      "RR_femur": 50.17109869768246,
+      "RR_tibia": 7.077099769272399
+    },
+    "peak_c": 69.33771444286798,
+    "trace": "missions/persistent_long_second_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.140111741582363,
+        "walking_time_s": 141.11799999995526,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 97.83999999994872,
+        "hottest_c": 67.020753332948,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0192b72a99e1ffcdf1f839427b9196eb6fe8bfd23bdb93b16ee17370db12b121"
+  },
+  "persistent_long_second_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 353.0600000009577,
+    "forward_m": 39.49006038266094,
+    "max_lateral_m": 0.09951606497992271,
+    "max_tilt_deg": 18.017933341044355,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 8.182430433605871e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.902861068407417,
+      "LF_femur": 63.46980189661121,
+      "LF_tibia": 10.369778277251637,
+      "LM_coxa": 7.286458954830755,
+      "LM_femur": 62.2317861980155,
+      "LM_tibia": 8.363440880843285,
+      "LR_coxa": 7.291383515749612,
+      "LR_femur": 50.712020004600554,
+      "LR_tibia": 7.724888138145562,
+      "RF_coxa": 8.455902811105828,
+      "RF_femur": 60.743605196076494,
+      "RF_tibia": 11.88412937457303,
+      "RM_coxa": 7.709803799396646,
+      "RM_femur": 59.47227585112264,
+      "RM_tibia": 9.728248859601186,
+      "RR_coxa": 7.57662095728135,
+      "RR_femur": 47.05387626312748,
+      "RR_tibia": 8.93626812003516
+    },
+    "peak_c": 69.94715200733341,
+    "trace": "missions/persistent_long_second_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.140117144715823,
+        "walking_time_s": 143.02599999996437,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 97.29999999994997,
+        "hottest_c": 67.00101931834047,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 185.22000000016584,
+        "hottest_c": 65.49463975842146,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 215.1400000003087,
+        "hottest_c": 67.00045592484885,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 145.02599999996437,
+      "resumed_s": 157.02600000002167,
+      "peak_before_c": 68.26357496825598,
+      "peak_after_c": 67.09818768584256,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -1.1653872824134197,
+      "temperature_before_c": [
+        31.599534813726745,
+        60.61504853629638,
+        31.828148600456906,
+        31.491632086953828,
+        59.94436872857318,
+        31.37377541080547,
+        31.483242252591133,
+        51.073248571947545,
+        31.304590233606,
+        38.23502338907365,
+        68.26357496825598,
+        38.352135799217876,
+        38.10300786983602,
+        65.41192260409456,
+        38.04894388828397,
+        38.09496457538985,
+        54.26956285109663,
+        38.03729420192524
+      ],
+      "temperature_after_c": [
+        30.97451462088707,
+        60.35785137669664,
+        31.20940254897779,
+        30.87571931291793,
+        60.2848688574892,
+        30.80314972111554,
+        30.875999997869833,
+        51.72676565644919,
+        30.73335047024405,
+        36.977270869245686,
+        67.09818768584256,
+        37.11051259915212,
+        36.86007759300173,
+        65.57811944961472,
+        36.84404188398155,
+        36.850538148125736,
+        54.396571941419325,
+        36.82569236624607
+      ],
+      "maximum_planar_displacement_m": 0.06320460566695536
+    },
+    "trace_sha256": "e9f05342b07ac7cf9999ff912823065fe21233567d7b0e40b0a291148d86083b"
+  },
+  "persistent_long_second_warm_start_left_warm_s1_b1_v1_s2_b1_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 346.4400000009261,
+    "forward_m": 39.49058146506599,
+    "max_lateral_m": 0.10530002463691623,
+    "max_tilt_deg": 18.046827046479226,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.8865027133125507e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.396017879411088,
+      "LF_femur": 60.78888395925613,
+      "LF_tibia": 11.84809857794837,
+      "LM_coxa": 7.685695677267792,
+      "LM_femur": 59.434023800082,
+      "LM_tibia": 9.563347837402913,
+      "LR_coxa": 7.609626084893858,
+      "LR_femur": 46.935475326858935,
+      "LR_tibia": 8.595582886524593,
+      "RF_coxa": 7.984229414057537,
+      "RF_femur": 63.75351011991949,
+      "RF_tibia": 9.843035372192832,
+      "RM_coxa": 7.295288802425316,
+      "RM_femur": 62.21321854829486,
+      "RM_tibia": 7.629100058148534,
+      "RR_coxa": 7.249412843436913,
+      "RR_femur": 50.17574431412996,
+      "RR_tibia": 7.125350272368939
+    },
+    "peak_c": 68.66814995598438,
+    "trace": "missions/persistent_long_second_warm_start_left_warm_s1_b1_v1_s2_b1_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.14022439945326,
+        "walking_time_s": 156.13000000002694,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.7124645575392,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 67.26000000001999,
+        "hottest_c": 65.49653277716155,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 130.89999999990647,
+        "hottest_c": 67.0147971620452,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 180.68000000014416,
+        "hottest_c": 65.49900628637884,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 200.9000000002407,
+        "hottest_c": 67.01086129424857,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "7dacb39cb38d30e3c584066f8b6e16943255dc2c02c326be073ce82c6838c432"
+  },
+  "persistent_long_second_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": false,
+    "failure": "deadline",
+    "elapsed_s": 371.00000000104336,
+    "forward_m": 39.4029658988787,
+    "max_lateral_m": 0.10002038970087801,
+    "max_tilt_deg": 16.93531416395591,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 5.989817310572028e-07,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.251418794768229,
+      "LF_femur": 63.505281756444234,
+      "LF_tibia": 10.44322755924606,
+      "LM_coxa": 6.751769402009209,
+      "LM_femur": 62.357149910190365,
+      "LM_tibia": 8.57066813930244,
+      "LR_coxa": 6.712865125437998,
+      "LR_femur": 50.58329462708941,
+      "LR_tibia": 7.728106717331555,
+      "RF_coxa": 7.750123883931715,
+      "RF_femur": 60.46326820110385,
+      "RF_tibia": 12.296512973700283,
+      "RM_coxa": 7.164733308363428,
+      "RM_femur": 59.2232464851855,
+      "RM_tibia": 10.30232928468049,
+      "RR_coxa": 7.029592967926745,
+      "RR_femur": 46.51076258251578,
+      "RR_tibia": 9.324813167815543
+    },
+    "peak_c": 69.47938474861442,
+    "trace": "missions/persistent_long_second_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.140115077868558,
+        "walking_time_s": 184.76600000016367,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71225481484404,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 72.14000000000861,
+        "hottest_c": 65.49925242175509,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 159.2200000000417,
+        "hottest_c": 67.00919450094744,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 209.48000000028168,
+        "hottest_c": 65.49953258813628,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 235.86000000040764,
+        "hottest_c": 67.00351548468535,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0ce61a7557f39a60f6e28e976943fc29bff97bd35403fd4d7e780355787f411f"
+  },
+  "persistent_offset_near_boundary_left_warm_s1_b2_v0.65_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 43.24000000000688,
+    "forward_m": 4.28998070386937,
+    "max_lateral_m": 0.03213348449359921,
+    "max_tilt_deg": 7.796873774895456,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.00012591222119436734,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.408994186934927,
+      "LF_femur": 69.63629709956822,
+      "LF_tibia": 6.184151493536256,
+      "LM_coxa": 6.0169259374815365,
+      "LM_femur": 61.616628587912444,
+      "LM_tibia": 3.49338569803278,
+      "LR_coxa": 6.095424538832243,
+      "LR_femur": 45.449540920843276,
+      "LR_tibia": 5.427675627054506,
+      "RF_coxa": 8.209713885472496,
+      "RF_femur": 55.46270942176351,
+      "RF_tibia": 12.512259241673133,
+      "RM_coxa": 7.547685680793246,
+      "RM_femur": 59.87404802375711,
+      "RM_tibia": 6.654806102749341,
+      "RR_coxa": 7.375193243151095,
+      "RR_femur": 50.048489453230175,
+      "RR_tibia": 3.189367944366097
+    },
+    "peak_c": 70.00464407462832,
+    "trace": "missions/persistent_offset_near_boundary_left_warm_s1_b2_v0.65_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 19.879999999998752,
+        "hottest_c": 67.00648920403336,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "933a7bc8d222a8a1c061e1cc012802bc43565b1bd704376734533d03bd136c80"
+  },
+  "persistent_offset_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 47.28000000001182,
+    "forward_m": 4.691288996925547,
+    "max_lateral_m": 0.028382470453338193,
+    "max_tilt_deg": 5.93517130220298,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 7.050197405527355e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.941709911548213,
+      "LF_femur": 55.52799323120349,
+      "LF_tibia": 12.489189057304547,
+      "LM_coxa": 7.310224518961495,
+      "LM_femur": 59.745243386978764,
+      "LM_tibia": 6.732529750976374,
+      "LR_coxa": 7.232182808748279,
+      "LR_femur": 50.503980022240164,
+      "LR_tibia": 3.07860276812719,
+      "RF_coxa": 6.640563165326123,
+      "RF_femur": 69.26966370923873,
+      "RF_tibia": 5.720744408543761,
+      "RM_coxa": 6.276272709672635,
+      "RM_femur": 61.60114589558559,
+      "RM_tibia": 3.259207443666174,
+      "RR_coxa": 6.061133173063735,
+      "RR_femur": 45.05335020746285,
+      "RR_tibia": 5.4995131834879265
+    },
+    "peak_c": 70.0016058678469,
+    "trace": "missions/persistent_offset_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 18.859999999999317,
+        "hottest_c": 67.00261658241945,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "96b630678dd7bc01cba50ab811c278b3b85b8e5c61c1054ef7a7c36e13645e40"
+  },
+  "persistent_offset_slower_cooling_left_warm_s1_b2_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 36.61999999999879,
+    "forward_m": 3.957025754329618,
+    "max_lateral_m": 0.029581904938901893,
+    "max_tilt_deg": 9.530532713405155,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.0004551247041689423,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.876658113214038,
+      "LF_femur": 69.36714284843639,
+      "LF_tibia": 5.756011772237688,
+      "LM_coxa": 6.4501525587861765,
+      "LM_femur": 61.42143128367779,
+      "LM_tibia": 3.1939617571702015,
+      "LR_coxa": 6.413434311670541,
+      "LR_femur": 45.68439191564793,
+      "LR_tibia": 5.728720164916844,
+      "RF_coxa": 9.076252587499841,
+      "RF_femur": 55.89639651009383,
+      "RF_tibia": 12.714036358342804,
+      "RM_coxa": 8.614942513952915,
+      "RM_femur": 59.666642005389775,
+      "RM_tibia": 6.326523690299367,
+      "RR_coxa": 8.290922307989337,
+      "RR_femur": 50.45304414424073,
+      "RR_tibia": 3.184547566939149
+    },
+    "peak_c": 70.00757783374982,
+    "trace": "missions/persistent_offset_slower_cooling_left_warm_s1_b2_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.759999999999929,
+        "hottest_c": 67.00372315525485,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "ee170d08fe1c02ed0c8c3d10147da0ec6f7c526a3fe44321d9763be7a2159b6c"
+  },
+  "persistent_offset_slower_cooling_right_warm_s1_b1_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 32.75999999999407,
+    "forward_m": 3.7438507070005276,
+    "max_lateral_m": 0.02896962062512176,
+    "max_tilt_deg": 7.537323990348243,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.0002679419346086013,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.406218586453928,
+      "LF_femur": 56.09299468178819,
+      "LF_tibia": 11.922419999447225,
+      "LM_coxa": 8.691449965724866,
+      "LM_femur": 59.93389303415229,
+      "LM_tibia": 6.529906093152864,
+      "LR_coxa": 8.771619259531278,
+      "LR_femur": 50.29561550794499,
+      "LR_tibia": 3.1044074868617857,
+      "RF_coxa": 7.02302657496477,
+      "RF_femur": 70.08541773028054,
+      "RF_tibia": 5.480028063447705,
+      "RM_coxa": 6.7274995385372565,
+      "RM_femur": 61.37617540305258,
+      "RM_tibia": 3.0201471946228136,
+      "RR_coxa": 6.533411319424015,
+      "RR_femur": 44.57310374823916,
+      "RR_tibia": 5.356828205132864
+    },
+    "peak_c": 70.00313585962999,
+    "trace": "missions/persistent_offset_slower_cooling_right_warm_s1_b1_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 9.000000000000343,
+        "hottest_c": 67.0013313886385,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "d12e85bb603dc456289126f0a3e9e28bb1ff083917c870d99c478dad786f362b"
+  },
+  "persistent_offset_warm_start_left_warm_s1_b2_v0.65_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 36.65999999999884,
+    "forward_m": 3.6080859524479956,
+    "max_lateral_m": 0.03211520926660194,
+    "max_tilt_deg": 6.1791368057979,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 6.0617081893677636e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.044375418655846,
+      "LF_femur": 68.07433310374778,
+      "LF_tibia": 5.581444862480295,
+      "LM_coxa": 5.720796234830434,
+      "LM_femur": 61.11255387041704,
+      "LM_tibia": 3.648973859438969,
+      "LR_coxa": 5.48769771254995,
+      "LR_femur": 46.249383015514745,
+      "LR_tibia": 5.405461843871214,
+      "RF_coxa": 8.138676523235555,
+      "RF_femur": 55.857170877083824,
+      "RF_tibia": 11.745825912874489,
+      "RM_coxa": 7.661591921876102,
+      "RM_femur": 59.71758222650066,
+      "RM_tibia": 6.400349779108565,
+      "RR_coxa": 7.500701717197967,
+      "RR_femur": 49.7943040684431,
+      "RR_tibia": 3.256490028935711
+    },
+    "peak_c": 70.0010071709898,
+    "trace": "missions/persistent_offset_warm_start_left_warm_s1_b2_v0.65_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71272157549996,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "11c27034383b905879a6ccd62aee95d5b63dcdb7618d250a9b4baa8dfb016a07"
+  },
+  "persistent_offset_warm_start_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 38.1000000000006,
+    "forward_m": 3.7517955641128395,
+    "max_lateral_m": 0.028378765896831082,
+    "max_tilt_deg": 5.616916945248438,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 4.082822980460776e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.943052015512018,
+      "LF_femur": 55.79068070452102,
+      "LF_tibia": 11.635533427811826,
+      "LM_coxa": 7.486037869203335,
+      "LM_femur": 59.585876766660526,
+      "LM_tibia": 6.496447527697004,
+      "LR_coxa": 7.447098645538395,
+      "LR_femur": 50.365239485763766,
+      "LR_tibia": 3.1561017514569425,
+      "RF_coxa": 6.152998097070936,
+      "RF_femur": 67.9689399671176,
+      "RF_tibia": 5.234802038167648,
+      "RM_coxa": 5.867246384549392,
+      "RM_femur": 61.16422815979013,
+      "RM_tibia": 3.427172720565605,
+      "RR_coxa": 5.504303335901858,
+      "RR_femur": 45.63256561889648,
+      "RR_tibia": 5.458329556486135
+    },
+    "peak_c": 70.00413514988054,
+    "trace": "missions/persistent_offset_warm_start_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71238537824448,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "06fddc348fb3534382ff46e4bf16cf10771b9bd1366ba749f62d6450f508b6d0"
+  },
+  "persistent_shallow_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 309.6400000007504,
+    "forward_m": 36.691332296811446,
+    "max_lateral_m": 0.08216662721559986,
+    "max_tilt_deg": 16.495237990074525,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0765189682642209e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.731164550548298,
+      "LF_femur": 61.26974513798222,
+      "LF_tibia": 11.617162494407886,
+      "LM_coxa": 7.999681621075697,
+      "LM_femur": 59.56935177209735,
+      "LM_tibia": 9.16577573662265,
+      "LR_coxa": 7.922472576992338,
+      "LR_femur": 46.99281883985017,
+      "LR_tibia": 8.287195882402587,
+      "RF_coxa": 8.329519734554188,
+      "RF_femur": 63.9058334163198,
+      "RF_tibia": 9.663834339157049,
+      "RM_coxa": 7.643390855547757,
+      "RM_femur": 62.05754651115065,
+      "RM_tibia": 6.97541636592504,
+      "RR_coxa": 7.602209027832885,
+      "RR_femur": 49.96169864711716,
+      "RR_tibia": 6.498348049217583
+    },
+    "peak_c": 67.38879025571217,
+    "trace": "missions/persistent_shallow_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.68027978507701,
+        "walking_time_s": 133.9619999999211,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 103.71999999993501,
+        "hottest_c": 67.00242346520798,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 156.1000000000268,
+        "hottest_c": 65.49956415868286,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 231.74000000038797,
+        "hottest_c": 67.00181993082786,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 265.8400000005508,
+        "hottest_c": 65.49832009517458,
+        "slowdown_active": false
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "60856ab3847945a3f787961c22b1fa6c21ac0f0e694970740d921af9cce4321c"
+  },
+  "persistent_shallow_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 310.0400000007523,
+    "forward_m": 36.69281421442151,
+    "max_lateral_m": 0.0770578062750884,
+    "max_tilt_deg": 18.22040712681284,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0034547513582477e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.360154219856838,
+      "LF_femur": 63.68727680800091,
+      "LF_tibia": 9.44287421859184,
+      "LM_coxa": 7.639494348896054,
+      "LM_femur": 61.9461247418651,
+      "LM_tibia": 6.704691762555763,
+      "LR_coxa": 7.5890556950183425,
+      "LR_femur": 50.01007520041226,
+      "LR_tibia": 6.279666442894279,
+      "RF_coxa": 8.766563573766028,
+      "RF_femur": 61.37345469000793,
+      "RF_tibia": 11.345903481182225,
+      "RM_coxa": 7.99110424119113,
+      "RM_femur": 59.70135149357022,
+      "RM_tibia": 8.864059789002908,
+      "RR_coxa": 7.9020810819751475,
+      "RR_femur": 47.060866361988715,
+      "RR_tibia": 8.040096352929107
+    },
+    "peak_c": 67.30313094712145,
+    "trace": "missions/persistent_shallow_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.680051660511776,
+        "walking_time_s": 180.3720000001427,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 285.3200000006438,
+        "hottest_c": 67.01099946139874,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "7c66ff71bb240216a4a3208cb49f218e9b005a8f7c9aef14089d914cf9842784"
+  },
+  "persistent_shallow_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 314.9200000007756,
+    "forward_m": 36.69060720175457,
+    "max_lateral_m": 0.08219510270487396,
+    "max_tilt_deg": 16.495237990074525,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0584698759473305e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.604202731465932,
+      "LF_femur": 61.35281873068192,
+      "LF_tibia": 11.499001205389739,
+      "LM_coxa": 7.855459695274415,
+      "LM_femur": 59.665985942303486,
+      "LM_tibia": 9.078573714327906,
+      "LR_coxa": 7.7956692491242086,
+      "LR_femur": 46.95870211274627,
+      "LR_tibia": 8.296862669691404,
+      "RF_coxa": 8.133826447434128,
+      "RF_femur": 63.66684858295368,
+      "RF_tibia": 9.706959740112524,
+      "RM_coxa": 7.524878900935218,
+      "RM_femur": 62.00813693792735,
+      "RM_tibia": 6.994404346277588,
+      "RR_coxa": 7.485931168168728,
+      "RR_femur": 50.0390116258229,
+      "RR_tibia": 6.454408406508188
+    },
+    "peak_c": 68.99498949028396,
+    "trace": "missions/persistent_shallow_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.680074767421942,
+        "walking_time_s": 138.79199999994415,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 92.21999999996181,
+        "hottest_c": 67.00436117640535,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "8df568c0850bff23eab85311fd2b172ae9c8883ce22ca66d7b0214113ef02004"
+  },
+  "persistent_shallow_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 312.6200000007646,
+    "forward_m": 36.69123977227906,
+    "max_lateral_m": 0.07924121067356094,
+    "max_tilt_deg": 17.760945265022297,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.8433525970471785e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.219831092115262,
+      "LF_femur": 63.61618466021195,
+      "LF_tibia": 9.478747178832057,
+      "LM_coxa": 7.56647868395612,
+      "LM_femur": 61.91078323591559,
+      "LM_tibia": 6.700273350225623,
+      "LR_coxa": 7.536380594747439,
+      "LR_femur": 50.02017447914009,
+      "LR_tibia": 6.214278105616056,
+      "RF_coxa": 8.651998933283513,
+      "RF_femur": 61.53036816275505,
+      "RF_tibia": 11.327543247402799,
+      "RM_coxa": 7.915630163723946,
+      "RM_femur": 59.672174866732114,
+      "RM_tibia": 8.866665197578715,
+      "RR_coxa": 7.813341943533798,
+      "RR_femur": 46.89405290884916,
+      "RR_tibia": 8.059926222093132
+    },
+    "peak_c": 68.80527661538973,
+    "trace": "missions/persistent_shallow_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.680211493381083,
+        "walking_time_s": 138.54599999994298,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 96.2599999999524,
+        "hottest_c": 67.00985585229013,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "e15febcdefa102ffc4af67a9bc26dfa868687e42380e949fdd30e4a3fe6c8063"
+  },
+  "persistent_shallow_warm_start_left_warm_s1_b1_v0.65_s2_b1_v1_pause0": {
+    "completed": false,
+    "failure": "deadline",
+    "elapsed_s": 344.00000000091444,
+    "forward_m": 36.42736289449396,
+    "max_lateral_m": 0.08223583259453404,
+    "max_tilt_deg": 17.534435172534806,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.6149870801033591e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.709126791149231,
+      "LF_femur": 60.85609380642077,
+      "LF_tibia": 11.680770468801525,
+      "LM_coxa": 7.106399581090264,
+      "LM_femur": 59.47103659894681,
+      "LM_tibia": 9.479458236326922,
+      "LR_coxa": 7.024719751948551,
+      "LR_femur": 46.72790601155695,
+      "LR_tibia": 8.520373354077597,
+      "RF_coxa": 7.3214662738249245,
+      "RF_femur": 63.249154953235454,
+      "RF_tibia": 9.564113418243783,
+      "RM_coxa": 6.811119101734478,
+      "RM_femur": 62.03104762533054,
+      "RM_tibia": 7.05456563894694,
+      "RR_coxa": 6.722339575318189,
+      "RR_femur": 50.12169940086253,
+      "RR_tibia": 6.3878283650127825
+    },
+    "peak_c": 68.53055045224697,
+    "trace": "missions/persistent_shallow_warm_start_left_warm_s1_b1_v0.65_s2_b1_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.680113916540098,
+        "walking_time_s": 178.98400000013606,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.7113846804087,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 70.28000000001295,
+        "hottest_c": 65.49407466452065,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 148.87999999999232,
+        "hottest_c": 67.0038595867543,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 204.86000000025962,
+        "hottest_c": 65.49730827555844,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 225.58000000035855,
+        "hottest_c": 67.00295260357082,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "a34379909b063bbad6ffb821531225db230a2795d039d5823f8c720d6f79cdb0"
+  },
+  "persistent_shallow_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": false,
+    "failure": "deadline",
+    "elapsed_s": 344.00000000091444,
+    "forward_m": 36.44066838146498,
+    "max_lateral_m": 0.07384054829710429,
+    "max_tilt_deg": 18.16432482101838,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.583979328165375e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.302218441640981,
+      "LF_femur": 63.1919699918745,
+      "LF_tibia": 9.391751172574038,
+      "LM_coxa": 6.799029641753959,
+      "LM_femur": 62.023558210742245,
+      "LM_tibia": 6.887501555516134,
+      "LR_coxa": 6.740431644730009,
+      "LR_femur": 50.06308138171475,
+      "LR_tibia": 6.186703967071894,
+      "RF_coxa": 7.740544117189864,
+      "RF_femur": 60.899904435616634,
+      "RF_tibia": 11.537417594251053,
+      "RM_coxa": 7.132134805640972,
+      "RM_femur": 59.48887471301668,
+      "RM_tibia": 9.323241443868747,
+      "RR_coxa": 7.006911110394121,
+      "RR_femur": 46.84418993420554,
+      "RR_tibia": 8.376405395327394
+    },
+    "peak_c": 68.09898963681906,
+    "trace": "missions/persistent_shallow_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.680051660511776,
+        "walking_time_s": 180.3720000001427,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71140051657969,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 72.400000000008,
+        "hottest_c": 65.49801518409271,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 153.24000000001314,
+        "hottest_c": 67.00084290453105,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 205.74000000026382,
+        "hottest_c": 65.49840508987486,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 227.40000000036724,
+        "hottest_c": 67.00243270404066,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "ad5a3beb43ca9a3aef38eba62516b993f8491e692b07a92820d562e70842215a"
+  },
+  "shared_bank_first_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 334.20000000086765,
+    "forward_m": 37.3013291601299,
+    "max_lateral_m": 0.10167317784777907,
+    "max_tilt_deg": 18.296661220913006,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0639005253008844e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.210607146033919,
+      "LF_femur": 62.35401960517193,
+      "LF_tibia": 10.376131499833622,
+      "LM_coxa": 7.469018365724258,
+      "LM_femur": 61.05167814419324,
+      "LM_tibia": 8.089568471385824,
+      "LR_coxa": 7.408629752759033,
+      "LR_femur": 49.14401903715903,
+      "LR_tibia": 7.432345778602574,
+      "RF_coxa": 8.185249882527609,
+      "RF_femur": 61.91764371992439,
+      "RF_tibia": 11.050299389026991,
+      "RM_coxa": 7.518632987245217,
+      "RM_femur": 60.757838541924926,
+      "RM_tibia": 8.832658115023968,
+      "RR_coxa": 7.4622154820035105,
+      "RR_femur": 48.47215217240312,
+      "RR_tibia": 8.165122413765717
+    },
+    "peak_c": 69.47703104794896,
+    "trace": "missions/shared_bank_first_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.700036226949667,
+        "walking_time_s": 180.53400000014346,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 133.69999999991984,
+        "hottest_c": 67.00636582772538,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 219.24000000032828,
+        "hottest_c": 65.49841859001054,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 310.48000000076394,
+        "hottest_c": 67.00126509365798,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 182.53400000014346,
+      "resumed_s": 194.53400000020076,
+      "peak_before_c": 68.47694310396565,
+      "peak_after_c": 67.17245992799712,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.304483175968528,
+      "temperature_before_c": [
+        34.58956540231065,
+        68.47694310396565,
+        34.75024238113677,
+        34.53115243542654,
+        65.96974818821062,
+        34.56651089970469,
+        34.53124408915498,
+        54.05159152101333,
+        34.552489910359625,
+        29.812331451190794,
+        57.65601059756865,
+        30.581311599411535,
+        29.757303479122413,
+        57.998752674467696,
+        30.11120426826075,
+        29.736396280925725,
+        47.999841751178366,
+        29.90330879290219
+      ],
+      "temperature_after_c": [
+        33.678615827069656,
+        67.17245992799712,
+        33.8494797896462,
+        33.62796717210365,
+        65.92224698697828,
+        33.689837625422435,
+        33.625870137948816,
+        54.07777754989562,
+        33.67064792264419,
+        29.357241829675715,
+        57.55546242477945,
+        30.078420316952247,
+        29.306333430965992,
+        58.385234424317765,
+        29.657075564825423,
+        29.29485811195098,
+        48.821275908870646,
+        29.462688077820335
+      ],
+      "maximum_planar_displacement_m": 0.06393136714369449
+    },
+    "trace_sha256": "cc805ca14e4e7162d01874d718165f3ba10e65f86a9f6c06369568adedb260a2"
+  },
+  "shared_bank_first_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 323.02000000081426,
+    "forward_m": 37.302253269077276,
+    "max_lateral_m": 0.09163825194716324,
+    "max_tilt_deg": 21.104687172355916,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.8230725307686487e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.140586200272278,
+      "LF_femur": 63.475485727852,
+      "LF_tibia": 9.73917612204264,
+      "LM_coxa": 7.429099039704602,
+      "LM_femur": 61.9563335778226,
+      "LM_tibia": 7.011381781911072,
+      "LR_coxa": 7.415787800030568,
+      "LR_femur": 50.07209884064018,
+      "LR_tibia": 6.5409318263530265,
+      "RF_coxa": 8.684434975156558,
+      "RF_femur": 61.4181708998411,
+      "RF_tibia": 11.464820091337772,
+      "RM_coxa": 7.88787304076461,
+      "RM_femur": 59.68706541711676,
+      "RM_tibia": 8.94195017713297,
+      "RR_coxa": 7.747244398182358,
+      "RR_femur": 47.11292008165012,
+      "RR_tibia": 8.191481481225022
+    },
+    "peak_c": 67.5518756351322,
+    "trace": "missions/shared_bank_first_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.7002667722503,
+        "walking_time_s": 180.57600000014367,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 253.7800000004932,
+        "hottest_c": 67.00347240839295,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 279.5600000006163,
+        "hottest_c": 65.4978653727338,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 297.3400000007012,
+        "hottest_c": 67.00156769574625,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "2e019d4cacbb0bda2b9e5203eb43e38ce6a17a5c5a0a1d189ae4de06e4915762"
+  },
+  "shared_bank_first_slower_cooling_left_warm_s1_b1_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 114.75999999991394,
+    "forward_m": 14.457936235385274,
+    "max_lateral_m": 0.08860620538694342,
+    "max_tilt_deg": 17.417204297007245,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 6.777429224274815e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.85051696521092,
+      "LF_femur": 64.09332615397369,
+      "LF_tibia": 10.385736468091803,
+      "LM_coxa": 7.902387716836721,
+      "LM_femur": 62.35935780809991,
+      "LM_tibia": 7.971664029622542,
+      "LR_coxa": 7.822893111727964,
+      "LR_femur": 51.41079457872923,
+      "LR_tibia": 7.547849975096048,
+      "RF_coxa": 9.49858371882351,
+      "RF_femur": 61.61068732622479,
+      "RF_tibia": 12.150457784032227,
+      "RM_coxa": 8.775798355927575,
+      "RM_femur": 59.28408431664352,
+      "RM_tibia": 10.233327520664465,
+      "RR_coxa": 8.710537284180074,
+      "RR_femur": 45.9487522388557,
+      "RR_tibia": 9.41382099856921
+    },
+    "peak_c": 70.01102710713302,
+    "trace": "missions/shared_bank_first_slower_cooling_left_warm_s1_b1_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 59.400000000029074,
+        "hottest_c": 67.0039272456263,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "8dcde2009437869d5a42db0eaf31827873e1da997e5db52a1775d6ee88203141"
+  },
+  "shared_bank_first_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 319.400000000797,
+    "forward_m": 37.300151725566735,
+    "max_lateral_m": 0.08661992486288828,
+    "max_tilt_deg": 17.28105984489692,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.1308703819661867e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.205747836185822,
+      "LF_femur": 63.75584808651972,
+      "LF_tibia": 9.8992276116001,
+      "LM_coxa": 7.542036787324825,
+      "LM_femur": 62.0343128603791,
+      "LM_tibia": 7.23689165542937,
+      "LR_coxa": 7.52705590860183,
+      "LR_femur": 50.11575474399206,
+      "LR_tibia": 6.685107093375278,
+      "RF_coxa": 8.6475111716549,
+      "RF_femur": 61.39849361941342,
+      "RF_tibia": 11.611233963827068,
+      "RM_coxa": 7.892750259512103,
+      "RM_femur": 59.669136767801675,
+      "RM_tibia": 9.1304873491417,
+      "RR_coxa": 7.793912502453463,
+      "RR_femur": 46.89723508660586,
+      "RR_tibia": 8.325233205394586
+    },
+    "peak_c": 69.39075101116117,
+    "trace": "missions/shared_bank_first_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.70018207716861,
+        "walking_time_s": 138.547999999943,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 96.21999999995249,
+        "hottest_c": 67.01336359334235,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "58545641ecddb681f34ff1e5ef50f27fa8d89479c3b0c486c5b83cae555b086b"
+  },
+  "shared_bank_first_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": false,
+    "failure": "deadline",
+    "elapsed_s": 348.00000000093354,
+    "forward_m": 36.83871470651161,
+    "max_lateral_m": 0.08767818851460518,
+    "max_tilt_deg": 18.572037097608074,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.5542784163473817e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.325957501330018,
+      "LF_femur": 63.23048455774245,
+      "LF_tibia": 9.785296693033295,
+      "LM_coxa": 6.795850345731805,
+      "LM_femur": 62.12265069305571,
+      "LM_tibia": 7.3586143823565555,
+      "LR_coxa": 6.73799634270945,
+      "LR_femur": 50.247645513974824,
+      "LR_tibia": 6.639349692842408,
+      "RF_coxa": 7.765760097197346,
+      "RF_femur": 60.88826354401799,
+      "RF_tibia": 11.817625103573805,
+      "RM_coxa": 7.139693342270385,
+      "RM_femur": 59.503838809849235,
+      "RM_tibia": 9.581841086607366,
+      "RR_coxa": 7.0419231013666295,
+      "RR_femur": 46.73531515290132,
+      "RR_tibia": 8.641479363534053
+    },
+    "peak_c": 68.69269215811863,
+    "trace": "missions/shared_bank_first_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.7002667722503,
+        "walking_time_s": 180.57600000014367,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71125500193205,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 72.22000000000843,
+        "hottest_c": 65.49996365396426,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 153.22000000001304,
+        "hottest_c": 67.00263897421135,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 206.08000000026544,
+        "hottest_c": 65.49797678360144,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 229.4000000003768,
+        "hottest_c": 67.00017405678493,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "49fbdd37d3bba58fb73d01661bc4c42b13986318f477cabf84ded15ccceaef96"
+  },
+  "shared_bank_late_long_near_boundary_left_warm_s1_b2_v0.65_s2_b1_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 353.80000000096123,
+    "forward_m": 39.800597451645544,
+    "max_lateral_m": 0.10771470738999422,
+    "max_tilt_deg": 15.155355023716528,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 5.9669618742541296e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.891576448010936,
+      "LF_femur": 63.746647844738796,
+      "LF_tibia": 9.643837376742239,
+      "LM_coxa": 7.225511309672076,
+      "LM_femur": 62.1740170974551,
+      "LM_tibia": 7.766229314559077,
+      "LR_coxa": 7.217427545555464,
+      "LR_femur": 50.097070353213155,
+      "LR_tibia": 7.281516540389911,
+      "RF_coxa": 8.310644108985649,
+      "RF_femur": 60.61020858027237,
+      "RF_tibia": 11.57494260558107,
+      "RM_coxa": 7.74089995920147,
+      "RM_femur": 59.48023213865928,
+      "RM_tibia": 9.370502246926195,
+      "RR_coxa": 7.626375420614522,
+      "RR_femur": 47.14647005007593,
+      "RR_tibia": 8.388113208530855
+    },
+    "peak_c": 69.98272387468612,
+    "trace": "missions/shared_bank_late_long_near_boundary_left_warm_s1_b2_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.20011595354276,
+        "walking_time_s": 194.886000000212,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 22.739999999997167,
+        "hottest_c": 67.00367537929635,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 178.44000000013347,
+        "hottest_c": 65.49906508425885,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 299.9800000007138,
+        "hottest_c": 67.0012106348619,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 196.886000000212,
+      "resumed_s": 208.8860000002693,
+      "peak_before_c": 65.16436629231904,
+      "peak_after_c": 65.0120280771956,
+      "hottest_at_entry_joint_index": 4,
+      "entry_hottest_motor_delta_c": -0.15233821512345003,
+      "temperature_before_c": [
+        33.54261221528265,
+        64.84860963592817,
+        33.98811095612219,
+        33.491501441830565,
+        65.16436629231904,
+        33.62918628672621,
+        33.48116370645009,
+        54.83563079899054,
+        33.49439174384399,
+        29.333038614773052,
+        61.18929238594415,
+        29.798226507845744,
+        29.2790423368721,
+        58.97813495758432,
+        29.578391033337336,
+        29.266690341870994,
+        47.054851956097025,
+        29.49697636532702
+      ],
+      "temperature_after_c": [
+        32.73424202114719,
+        63.99578607988751,
+        33.16081069304683,
+        32.68569340643942,
+        65.0120280771956,
+        32.84091830673268,
+        32.67544645521159,
+        54.87192503957332,
+        32.71270756915003,
+        28.922697605028766,
+        60.7677220777413,
+        29.370081512099382,
+        28.874521987324588,
+        59.448223908052675,
+        29.174997762541253,
+        28.862982823947792,
+        47.792089345531664,
+        29.096921625522867
+      ],
+      "maximum_planar_displacement_m": 0.077699977229323
+    },
+    "trace_sha256": "e307aaeee19b778a2c3db5815cbde673af7bda45b8beeb686274075400e0c09c"
+  },
+  "shared_bank_late_long_near_boundary_right_warm_s1_b2_v1_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 299.7000000007029,
+    "forward_m": 39.80038282101992,
+    "max_lateral_m": 0.09037021954948266,
+    "max_tilt_deg": 20.216654792598533,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0380751121491862e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.357848821259404,
+      "LF_femur": 63.90129679786126,
+      "LF_tibia": 9.82391127991072,
+      "LM_coxa": 8.472138508736162,
+      "LM_femur": 61.998546709356525,
+      "LM_tibia": 7.107456068612091,
+      "LR_coxa": 8.479552190823904,
+      "LR_femur": 50.09219936768092,
+      "LR_tibia": 6.886433515038421,
+      "RF_coxa": 9.868721747999318,
+      "RF_femur": 62.042800501257865,
+      "RF_tibia": 11.084754806966453,
+      "RM_coxa": 8.883141065232534,
+      "RM_femur": 59.726683513303115,
+      "RM_tibia": 8.552993602383522,
+      "RR_coxa": 8.77481152980878,
+      "RR_femur": 47.274163446340694,
+      "RR_tibia": 7.973270120366532
+    },
+    "peak_c": 67.33563348575535,
+    "trace": "missions/shared_bank_late_long_near_boundary_right_warm_s1_b2_v1_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.200117471939546,
+        "walking_time_s": 143.92399999996866,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 114.67999999990947,
+        "hottest_c": 67.00432380983028,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 163.82000000006366,
+        "hottest_c": 65.49960207528666,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 226.78000000036428,
+        "hottest_c": 67.0087386312316,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 252.76000000048833,
+        "hottest_c": 65.49787420402956,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 273.08000000058536,
+        "hottest_c": 67.00095149803425,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "2766f1b3c616746769821226432a5caccfcff7dcebbafe425a8f521e48ca4c30"
+  },
+  "shared_bank_late_long_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 310.18000000075295,
+    "forward_m": 35.46808288592102,
+    "max_lateral_m": 0.10149955792385246,
+    "max_tilt_deg": 18.203463516140044,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.438863455627915e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.327362542037612,
+      "LF_femur": 62.45884430350158,
+      "LF_tibia": 11.131620196962354,
+      "LM_coxa": 7.568462372499808,
+      "LM_femur": 61.15867019879413,
+      "LM_tibia": 8.98375443759592,
+      "LR_coxa": 7.49539914616696,
+      "LR_femur": 49.53399765959376,
+      "LR_tibia": 8.094422403166218,
+      "RF_coxa": 8.432403684303308,
+      "RF_femur": 62.23344036497586,
+      "RF_tibia": 11.163968299933357,
+      "RM_coxa": 7.787133443840199,
+      "RM_femur": 60.58973545005014,
+      "RM_tibia": 9.067447784398912,
+      "RR_coxa": 7.720248292956783,
+      "RR_femur": 48.01554211760811,
+      "RR_tibia": 8.398342193676768
+    },
+    "peak_c": 70.0038989501373,
+    "trace": "missions/shared_bank_late_long_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.200151894393475,
+        "walking_time_s": 149.65399999999602,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 100.59999999994228,
+        "hottest_c": 67.00198887166596,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 198.60000000022973,
+        "hottest_c": 65.49573405612765,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 216.22000000031386,
+        "hottest_c": 67.00440717932105,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 151.65399999999602,
+      "resumed_s": 163.65400000005332,
+      "peak_before_c": 68.87847938409405,
+      "peak_after_c": 67.73917215409018,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.1393072300038654,
+      "temperature_before_c": [
+        37.55615611371141,
+        68.87847938409405,
+        37.64383929109779,
+        37.44004808927549,
+        65.41911794594911,
+        37.341965049966404,
+        37.437310916846855,
+        53.8293529173832,
+        37.32480457819067,
+        31.3058573104421,
+        60.88873966091892,
+        31.50160975554311,
+        31.184664119964815,
+        60.25915368975111,
+        31.011021992230738,
+        31.17717120069013,
+        50.77864156567857,
+        30.927433465386777
+      ],
+      "temperature_after_c": [
+        36.36561667973842,
+        67.73917215409018,
+        36.470052880552714,
+        36.258447306694165,
+        65.38261876972189,
+        36.2032876169958,
+        36.25580655074777,
+        54.17332743312578,
+        36.181177698039725,
+        30.70750122208367,
+        60.58282230760811,
+        30.91267104807867,
+        30.605772169438918,
+        60.806632398877646,
+        30.472272683416875,
+        30.59154842798116,
+        51.282508593205144,
+        30.394235055771414
+      ],
+      "maximum_planar_displacement_m": 0.06981940202327733
+    },
+    "trace_sha256": "8a9bf82eb717f42856fa7bf9277699640723c4e091995e45c8ad006f6ec7ebae"
+  },
+  "shared_bank_late_long_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 339.3200000008921,
+    "forward_m": 39.800863678132856,
+    "max_lateral_m": 0.09037021954948266,
+    "max_tilt_deg": 15.874570635722934,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 0.0,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.11612569162494,
+      "LF_femur": 63.60561504308812,
+      "LF_tibia": 9.72575553764386,
+      "LM_coxa": 7.492459343191577,
+      "LM_femur": 62.00873866844085,
+      "LM_tibia": 7.339745082492774,
+      "LR_coxa": 7.468721965600509,
+      "LR_femur": 50.1319417421616,
+      "LR_tibia": 6.779171978916616,
+      "RF_coxa": 8.566066504853326,
+      "RF_femur": 61.33704153565319,
+      "RF_tibia": 11.35009287501595,
+      "RM_coxa": 7.87167089989941,
+      "RM_femur": 59.59976269189562,
+      "RM_tibia": 9.11908325089746,
+      "RR_coxa": 7.771689268766723,
+      "RR_femur": 46.79693123046849,
+      "RR_tibia": 8.325776500554234
+    },
+    "peak_c": 69.52871536886197,
+    "trace": "missions/shared_bank_late_long_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.200094255044156,
+        "walking_time_s": 149.03199999999305,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 103.09999999993646,
+        "hottest_c": 67.00044615567185,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "253652defcc01a822ad51cf7a3fa5f5b7316792c7ff912fd0a7d775ca55bbf68"
+  },
+  "shared_bank_late_long_warm_start_left_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 339.6600000008937,
+    "forward_m": 36.78488381341759,
+    "max_lateral_m": 0.10040703622574254,
+    "max_tilt_deg": 17.015795124461107,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.570197648629021e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.694415403702653,
+      "LF_femur": 61.99869030959569,
+      "LF_tibia": 11.058264432537513,
+      "LM_coxa": 7.159769060107784,
+      "LM_femur": 61.10429789068459,
+      "LM_tibia": 8.866445538799306,
+      "LR_coxa": 7.057981844386479,
+      "LR_femur": 49.32137920984632,
+      "LR_tibia": 7.848622603147825,
+      "RF_coxa": 8.01760755577773,
+      "RF_femur": 62.288269314826685,
+      "RF_tibia": 10.99242317974759,
+      "RM_coxa": 7.340149797708761,
+      "RM_femur": 60.607979934934384,
+      "RM_tibia": 8.791945768384775,
+      "RR_coxa": 7.2701262769839925,
+      "RR_femur": 47.994720526559725,
+      "RR_tibia": 8.152432532830385
+    },
+    "peak_c": 70.00041853613351,
+    "trace": "missions/shared_bank_late_long_warm_start_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.200052587062277,
+        "walking_time_s": 166.33000000007564,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71125063023237,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 70.80000000001174,
+        "hottest_c": 65.4989831300244,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 133.59999999991936,
+        "hottest_c": 67.00838403557327,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 192.72000000020165,
+        "hottest_c": 65.49677550308103,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 228.14000000037078,
+        "hottest_c": 67.00428422745509,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 266.1400000005522,
+        "hottest_c": 65.49638228218669,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 307.9000000007516,
+        "hottest_c": 67.00879298746206,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 168.33000000007564,
+      "resumed_s": 180.33000000013294,
+      "peak_before_c": 67.0118861451465,
+      "peak_after_c": 66.09974058738652,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -0.9121455577599846,
+      "temperature_before_c": [
+        36.194333374578534,
+        67.0118861451465,
+        36.423326948050615,
+        36.112403464288434,
+        64.7151691227568,
+        36.10604241287996,
+        36.107916477227,
+        53.29297707164488,
+        36.036736102789774,
+        31.294361591130915,
+        62.60606842437563,
+        31.453575199113544,
+        31.162854624039433,
+        61.197810007842925,
+        31.008541730579715,
+        31.150750895532408,
+        50.99920947003812,
+        30.950499466426557
+      ],
+      "temperature_after_c": [
+        35.13100096119042,
+        66.09974058738652,
+        35.36411703655389,
+        35.05858850035637,
+        64.73299478043205,
+        35.080870580882994,
+        35.05314622042422,
+        53.51479027989967,
+        35.014195666810856,
+        30.699916651281747,
+        62.00672356488761,
+        30.86929775435138,
+        30.578606999132113,
+        61.49772052979806,
+        30.47175034111561,
+        30.566938696117035,
+        51.48355231461971,
+        30.413374200051273
+      ],
+      "maximum_planar_displacement_m": 0.0755573823960785
+    },
+    "trace_sha256": "7b8e63895ef7c2c3f572ab7d85c4235f583c24ebbea72f958bcb224823612656"
+  },
+  "shared_bank_late_long_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 365.9400000010192,
+    "forward_m": 39.80121430385487,
+    "max_lateral_m": 0.08511785944981387,
+    "max_tilt_deg": 16.684746097830377,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.5181602327036005e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.431409924962184,
+      "LF_femur": 63.067112123604986,
+      "LF_tibia": 9.719107151635175,
+      "LM_coxa": 6.905263309195769,
+      "LM_femur": 62.10607741707723,
+      "LM_tibia": 7.627533833769073,
+      "LR_coxa": 6.868134347301645,
+      "LR_femur": 50.375704165284944,
+      "LR_tibia": 6.88416316219923,
+      "RF_coxa": 7.983809248554149,
+      "RF_femur": 60.86703381249336,
+      "RF_tibia": 11.656544946256329,
+      "RM_coxa": 7.325979201979528,
+      "RM_femur": 59.44500582013811,
+      "RM_tibia": 9.660919835351669,
+      "RR_coxa": 7.2133890082034515,
+      "RR_femur": 46.733460439304174,
+      "RR_tibia": 8.815872519976098
+    },
+    "peak_c": 68.58550927617206,
+    "trace": "missions/shared_bank_late_long_warm_start_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.20021738487636,
+        "walking_time_s": 194.888000000212,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71097462181031,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 75.3200000000012,
+        "hottest_c": 65.49819573361373,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 241.3000000004336,
+        "hottest_c": 67.00567917363247,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "e5606c2990f4090fd54418e7af52da238b3573937f5c5c163ec3839dffbaa996"
+  },
+  "shared_bank_reversal_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 324.5200000008214,
+    "forward_m": 38.53131475015939,
+    "max_lateral_m": 0.09769140776301777,
+    "max_tilt_deg": 16.35280784377696,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.739088157552351e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.565642918869576,
+      "LF_femur": 62.95449333799807,
+      "LF_tibia": 10.25158837774415,
+      "LM_coxa": 7.806289620289877,
+      "LM_femur": 60.97477097500633,
+      "LM_tibia": 7.814266803326303,
+      "LR_coxa": 7.731561066177214,
+      "LR_femur": 48.7002662244505,
+      "LR_tibia": 7.163039521743529,
+      "RF_coxa": 8.442950572670595,
+      "RF_femur": 62.29672662278994,
+      "RF_tibia": 11.005935902064204,
+      "RM_coxa": 7.7941224287978175,
+      "RM_femur": 60.632208769765576,
+      "RM_tibia": 8.689419136356337,
+      "RR_coxa": 7.743136701712912,
+      "RR_femur": 48.124306547202785,
+      "RR_tibia": 7.915006532840554
+    },
+    "peak_c": 69.70692302752414,
+    "trace": "missions/shared_bank_reversal_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.330115130525527,
+        "walking_time_s": 139.3699999999469,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 107.03999999992728,
+        "hottest_c": 67.00028203347887,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 162.86000000005907,
+        "hottest_c": 65.49662222832598,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 277.64000000060713,
+        "hottest_c": 67.01114375610354,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "5284a08518e0ffbba640e878a555ff481b6dcb8a8552e020e39209800230556a"
+  },
+  "shared_bank_reversal_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 343.48000000091196,
+    "forward_m": 38.53141045959805,
+    "max_lateral_m": 0.10224429244201749,
+    "max_tilt_deg": 19.575676178431124,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.5583504781129097e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.014088973127283,
+      "LF_femur": 62.357409310146544,
+      "LF_tibia": 10.79849697000129,
+      "LM_coxa": 7.369889531807451,
+      "LM_femur": 60.74717379911734,
+      "LM_tibia": 8.535051922550505,
+      "LR_coxa": 7.331657158642751,
+      "LR_femur": 48.380327863969484,
+      "LR_tibia": 7.769644254919375,
+      "RF_coxa": 8.03104040638193,
+      "RF_femur": 62.32775400974479,
+      "RF_tibia": 10.280676508324868,
+      "RM_coxa": 7.377998512857784,
+      "RM_femur": 60.88081964771401,
+      "RM_tibia": 7.827958429327665,
+      "RR_coxa": 7.286566819050296,
+      "RR_femur": 48.4571877076318,
+      "RR_tibia": 7.107942784652263
+    },
+    "peak_c": 69.49868805426541,
+    "trace": "missions/shared_bank_reversal_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.330089717779142,
+        "walking_time_s": 184.7120000001634,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 135.31999999992757,
+        "hottest_c": 67.01263102092037,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 224.18000000035187,
+        "hottest_c": 65.4963389731446,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 269.2800000005672,
+        "hottest_c": 67.0020781547236,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 297.3400000007012,
+        "hottest_c": 65.4971186712786,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 318.02000000079994,
+        "hottest_c": 67.00427210197043,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "4d338b012893fa15d37cdda41cd761c86745a223f3f99495986386147247fe4e"
+  },
+  "shared_bank_reversal_slower_cooling_left_warm_s1_b2_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 39.78000000000265,
+    "forward_m": 4.332100408314106,
+    "max_lateral_m": 0.027167377294686212,
+    "max_tilt_deg": 8.766692870401933,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.0001955198033629406,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.900243168516619,
+      "LF_femur": 68.86695601026562,
+      "LF_tibia": 5.239792937847343,
+      "LM_coxa": 6.544836262786665,
+      "LM_femur": 61.42580011354406,
+      "LM_tibia": 3.244674185952187,
+      "LR_coxa": 6.45007264794006,
+      "LR_femur": 45.625623888270404,
+      "LR_tibia": 5.652829832516048,
+      "RF_coxa": 8.891662778456753,
+      "RF_femur": 55.90828052163947,
+      "RF_tibia": 12.145953493902724,
+      "RM_coxa": 8.311729111902952,
+      "RM_femur": 59.785934771596324,
+      "RM_tibia": 6.391673886240839,
+      "RR_coxa": 8.024241243414805,
+      "RR_femur": 50.71651585083424,
+      "RR_tibia": 3.0880433569118844
+    },
+    "peak_c": 70.00912871568418,
+    "trace": "missions/shared_bank_reversal_slower_cooling_left_warm_s1_b2_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.879999999999969,
+        "hottest_c": 67.0133063171614,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "c5ce14d85879f422fdcfe445661ecca61ba8a64b64ce9198cd4596c3346008c8"
+  },
+  "shared_bank_reversal_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 113.17999999991763,
+    "forward_m": 14.901814344606679,
+    "max_lateral_m": 0.08055869483407374,
+    "max_tilt_deg": 16.522938914035464,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 6.872042567395103e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.672979976647436,
+      "LF_femur": 62.40472578174838,
+      "LF_tibia": 11.431227559512106,
+      "LM_coxa": 8.994889242189657,
+      "LM_femur": 59.549876481996115,
+      "LM_tibia": 9.341854350628529,
+      "LR_coxa": 9.029546584251822,
+      "LR_femur": 46.03580330049112,
+      "LR_tibia": 8.491365122424012,
+      "RF_coxa": 9.147709174234208,
+      "RF_femur": 64.10540288346363,
+      "RF_tibia": 9.865505866948583,
+      "RM_coxa": 8.245258820039522,
+      "RM_femur": 61.96613479870496,
+      "RM_tibia": 6.904311778328573,
+      "RR_coxa": 8.06605931479525,
+      "RR_femur": 50.462512352316914,
+      "RR_tibia": 6.633024343371883
+    },
+    "peak_c": 70.00196532370025,
+    "trace": "missions/shared_bank_reversal_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 69.30000000001523,
+        "hottest_c": 67.00111911309929,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "e91b22d5ad96c6a8d9606a33722dff433207245fc5a9a9273b9c5c5832187d0b"
+  },
+  "shared_bank_reversal_warm_start_left_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 334.20000000086765,
+    "forward_m": 36.2539558165663,
+    "max_lateral_m": 0.09960968593191044,
+    "max_tilt_deg": 15.90886606630446,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 5.651971540660948e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.741971074694077,
+      "LF_femur": 61.914569043974225,
+      "LF_tibia": 10.534799123494762,
+      "LM_coxa": 7.196076755853955,
+      "LM_femur": 60.85980542273833,
+      "LM_tibia": 8.073959441581875,
+      "LR_coxa": 7.12334108143925,
+      "LR_femur": 48.91701341461594,
+      "LR_tibia": 7.197346582579384,
+      "RF_coxa": 7.988073260944184,
+      "RF_femur": 62.462385570725885,
+      "RF_tibia": 10.727159741814233,
+      "RM_coxa": 7.298553792674121,
+      "RM_femur": 60.828079153540415,
+      "RM_tibia": 8.588968759076966,
+      "RR_coxa": 7.236504357612194,
+      "RR_femur": 48.233591972176455,
+      "RR_tibia": 7.902672004778216
+    },
+    "peak_c": 70.00007170293787,
+    "trace": "missions/shared_bank_reversal_warm_start_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.33015395815723,
+        "walking_time_s": 157.95200000003564,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71187391712076,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 67.76000000001882,
+        "hottest_c": 65.49889845528233,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 130.69999999990551,
+        "hottest_c": 67.00817232925066,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 177.8200000001305,
+        "hottest_c": 65.49681778239928,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 219.24000000032828,
+        "hottest_c": 67.00637597715877,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 257.48000000051087,
+        "hottest_c": 65.49843966855684,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 304.9000000007373,
+        "hottest_c": 67.0133890892413,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 159.95200000003564,
+      "resumed_s": 171.95200000009294,
+      "peak_before_c": 66.92246749739846,
+      "peak_after_c": 66.06494798691104,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -0.8575195104874211,
+      "temperature_before_c": [
+        36.96077310321914,
+        66.92246749739846,
+        37.25329247523449,
+        36.87881910897026,
+        64.56473587064725,
+        36.92072163551017,
+        36.87391846638547,
+        53.53927702430635,
+        36.83935248069362,
+        31.69545707250822,
+        62.51162739505661,
+        31.917756742052074,
+        31.562961024022137,
+        61.27004641533529,
+        31.51092883131149,
+        31.555021091568236,
+        51.01995577663068,
+        31.43809110466493
+      ],
+      "temperature_after_c": [
+        35.825295795956805,
+        66.06494798691104,
+        36.11691967714656,
+        35.74992620531776,
+        64.44150383581442,
+        35.820104871008354,
+        35.747135205069135,
+        53.7579166284134,
+        35.740693515882874,
+        31.060017990827582,
+        61.969639886887094,
+        31.287959372969528,
+        30.942123653164224,
+        61.655689885118335,
+        30.924969224233145,
+        30.93281521072684,
+        51.33892324851727,
+        30.85283243245136
+      ],
+      "maximum_planar_displacement_m": 0.06801684157258596
+    },
+    "trace_sha256": "926630f3421d8476476d3b1ddfdcf4fc86efdf1335c3147b1557352cc95b12da"
+  },
+  "shared_bank_second_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 332.46000000085934,
+    "forward_m": 38.22327270745547,
+    "max_lateral_m": 0.09731469044010632,
+    "max_tilt_deg": 15.711845478667199,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 6.015761294591831e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.156090183687624,
+      "LF_femur": 62.44135912123823,
+      "LF_tibia": 10.278972579811914,
+      "LM_coxa": 7.507494376913843,
+      "LM_femur": 60.88881283256491,
+      "LM_tibia": 7.814490087358603,
+      "LR_coxa": 7.452394243817121,
+      "LR_femur": 48.53670275641886,
+      "LR_tibia": 7.056012260440638,
+      "RF_coxa": 8.20019136463075,
+      "RF_femur": 62.508683551425,
+      "RF_tibia": 10.782482240946827,
+      "RM_coxa": 7.5680714807625575,
+      "RM_femur": 60.71149500702129,
+      "RM_tibia": 8.497698689706096,
+      "RR_coxa": 7.492215516744946,
+      "RR_femur": 48.17449694674108,
+      "RR_tibia": 7.795170527498295
+    },
+    "peak_c": 69.60197163315372,
+    "trace": "missions/shared_bank_second_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.150077850768817,
+        "walking_time_s": 183.32200000015678,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 133.8399999999205,
+        "hottest_c": 67.00450896716758,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 222.90000000034576,
+        "hottest_c": 65.49848021242973,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 304.8000000007368,
+        "hottest_c": 67.00950899533751,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "283976b093ced8b66e4467fc9c645f29c46583ecbb4d273a4629e643a1a1e172"
+  },
+  "shared_bank_second_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 47.52000000001211,
+    "forward_m": 4.71793240608597,
+    "max_lateral_m": 0.027979997631164988,
+    "max_tilt_deg": 6.125316192114696,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 1.1690983913206135e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.943734804224788,
+      "LF_femur": 55.50152999596412,
+      "LF_tibia": 12.397250866710753,
+      "LM_coxa": 7.295076244231538,
+      "LM_femur": 59.80533814912742,
+      "LM_tibia": 6.729662135221123,
+      "LR_coxa": 7.215087619336413,
+      "LR_femur": 50.523411331075295,
+      "LR_tibia": 3.0923567881701004,
+      "RF_coxa": 6.610956232580469,
+      "RF_femur": 69.23123012477203,
+      "RF_tibia": 5.642572867987634,
+      "RM_coxa": 6.243094169833978,
+      "RM_femur": 61.584376847376305,
+      "RM_tibia": 3.261275376729281,
+      "RR_coxa": 6.035988369641873,
+      "RR_femur": 44.98105433551645,
+      "RR_tibia": 5.484419862860575
+    },
+    "peak_c": 70.0027295230109,
+    "trace": "missions/shared_bank_second_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 21.119999999998065,
+        "hottest_c": 67.00079370187089,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "4c5f2cec9e3c4d13c5da13c6f03daf85b7c84185d1ef2db867f685814de5a0fa"
+  },
+  "shared_bank_second_slower_cooling_left_warm_s1_b2_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 37.33999999999967,
+    "forward_m": 4.027771920088212,
+    "max_lateral_m": 0.027771539772360576,
+    "max_tilt_deg": 8.966840728090558,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.000336249479259656,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.812152087809519,
+      "LF_femur": 69.22411452024166,
+      "LF_tibia": 5.456024045986189,
+      "LM_coxa": 6.423975721798141,
+      "LM_femur": 61.586890880085654,
+      "LM_tibia": 3.2361948637394002,
+      "LR_coxa": 6.560485118833142,
+      "LR_femur": 45.36885981277045,
+      "LR_tibia": 5.712896692452638,
+      "RF_coxa": 9.06741490123462,
+      "RF_femur": 55.6496917105338,
+      "RF_tibia": 12.213788299257157,
+      "RM_coxa": 8.480016947078585,
+      "RM_femur": 59.84365874418263,
+      "RM_tibia": 6.315949796184373,
+      "RR_coxa": 8.158415309498082,
+      "RR_femur": 50.975750231640895,
+      "RR_tibia": 3.160237918031346
+    },
+    "peak_c": 70.00234043774856,
+    "trace": "missions/shared_bank_second_slower_cooling_left_warm_s1_b2_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.799999999999942,
+        "hottest_c": 67.00163280359787,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "361b7e61e7f635489bfd65d63bfd772dd8f48fade9a7867c0f085169c75b97c0"
+  },
+  "shared_bank_second_slower_cooling_right_warm_s1_b1_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 38.080000000000574,
+    "forward_m": 4.140694291264368,
+    "max_lateral_m": 0.026366984228337165,
+    "max_tilt_deg": 8.430953654036841,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.000169234360410831,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.703557172243027,
+      "LF_femur": 55.88717052696338,
+      "LF_tibia": 12.299001409009266,
+      "LM_coxa": 8.217635879536129,
+      "LM_femur": 59.53277417644477,
+      "LM_tibia": 6.573814958078015,
+      "LR_coxa": 8.214178921520265,
+      "LR_femur": 50.77960282651806,
+      "LR_tibia": 3.035187724490378,
+      "RF_coxa": 6.926372029439674,
+      "RF_femur": 69.16919298978426,
+      "RF_tibia": 5.387582362396118,
+      "RM_coxa": 6.637291972321985,
+      "RM_femur": 61.535898386994965,
+      "RM_tibia": 2.9587747252395586,
+      "RR_coxa": 6.253683320175683,
+      "RR_femur": 45.07958593519186,
+      "RR_tibia": 5.527457380713283
+    },
+    "peak_c": 70.00904378134459,
+    "trace": "missions/shared_bank_second_slower_cooling_right_warm_s1_b1_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 6.919999999999648,
+        "hottest_c": 67.00126894021965,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "7fa41dc5bda65eefe8231af261977b296a34761c758fdcce51d0921ece0d52d5"
+  },
+  "shared_bank_second_warm_start_left_warm_s1_b2_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 37.099999999999376,
+    "forward_m": 3.691844519951522,
+    "max_lateral_m": 0.02965608023230981,
+    "max_tilt_deg": 5.87176435780175,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 4.791853848457622e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.069117679326378,
+      "LF_femur": 68.0359223176961,
+      "LF_tibia": 5.263041575454405,
+      "LM_coxa": 5.770068789420692,
+      "LM_femur": 61.02037543792052,
+      "LM_tibia": 3.6455652340339686,
+      "LR_coxa": 5.574589846785293,
+      "LR_femur": 46.06561132154479,
+      "LR_tibia": 5.473305249110419,
+      "RF_coxa": 8.264867708097864,
+      "RF_femur": 55.65373772854207,
+      "RF_tibia": 11.432507849211492,
+      "RM_coxa": 7.657719852410592,
+      "RM_femur": 59.942966947615645,
+      "RM_tibia": 6.315884856730967,
+      "RR_coxa": 7.451323356283932,
+      "RR_femur": 50.216903145254065,
+      "RR_tibia": 3.218204959657379
+    },
+    "peak_c": 70.00177770838272,
+    "trace": "missions/shared_bank_second_warm_start_left_warm_s1_b2_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71293505969172,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0941e741b37c306a91a44d6f5fc03b18287989924d87c741ee113d08a6ae0395"
+  },
+  "shared_bank_second_warm_start_right_warm_s1_b1_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 38.180000000000696,
+    "forward_m": 3.820470846879905,
+    "max_lateral_m": 0.02798502061456487,
+    "max_tilt_deg": 6.630087278863695,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 3.20121063966009e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.051074996112714,
+      "LF_femur": 55.6662811960866,
+      "LF_tibia": 11.647704613241006,
+      "LM_coxa": 7.532563931268357,
+      "LM_femur": 59.67551090743695,
+      "LM_tibia": 6.535415080130508,
+      "LR_coxa": 7.521042716429216,
+      "LR_femur": 50.490184927238744,
+      "LR_tibia": 3.161067856050743,
+      "RF_coxa": 6.237618254945695,
+      "RF_femur": 67.96320489074029,
+      "RF_tibia": 5.16444604575762,
+      "RM_coxa": 5.9744582960235935,
+      "RM_femur": 61.202713104314746,
+      "RM_tibia": 3.344942951149118,
+      "RR_coxa": 5.566563932074921,
+      "RR_femur": 45.73402886484403,
+      "RR_tibia": 5.48595462867306
+    },
+    "peak_c": 70.0056089150116,
+    "trace": "missions/shared_bank_second_warm_start_right_warm_s1_b1_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71280561438266,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "accfba272bbb66e735de47d82d7c6526546f617b9d8e5aabfcb908d2c035ce7c"
+  },
+  "switch_early_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 337.36000000088274,
+    "forward_m": 37.74055545913294,
+    "max_lateral_m": 0.10402033299583868,
+    "max_tilt_deg": 17.87147713089882,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 7.904513477195478e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.21986568710068,
+      "LF_femur": 62.34309484685918,
+      "LF_tibia": 10.659347821974862,
+      "LM_coxa": 7.5269156190284825,
+      "LM_femur": 61.02991951156917,
+      "LM_tibia": 8.443695076602571,
+      "LR_coxa": 7.45009265173515,
+      "LR_femur": 49.15456023720182,
+      "LR_tibia": 7.724412313840349,
+      "RF_coxa": 8.185188072299535,
+      "RF_femur": 61.952569049770915,
+      "RF_tibia": 11.161786927730315,
+      "RM_coxa": 7.504385088641693,
+      "RM_femur": 60.735463252928604,
+      "RM_tibia": 8.996956754351555,
+      "RR_coxa": 7.469186516756785,
+      "RR_femur": 48.49826236580537,
+      "RR_tibia": 8.370462620830834
+    },
+    "peak_c": 69.57631426566907,
+    "trace": "missions/switch_early_near_boundary_left_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.04012631356571,
+        "walking_time_s": 184.17600000016085,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 136.5199999999333,
+        "hottest_c": 67.00418369840425,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 225.10000000035626,
+        "hottest_c": 65.49650586798214,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 319.76000000080825,
+        "hottest_c": 67.0002027926793,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 186.17600000016085,
+      "resumed_s": 198.17600000021815,
+      "peak_before_c": 68.46050418093327,
+      "peak_after_c": 67.27735110149558,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.1831530794376874,
+      "temperature_before_c": [
+        34.31755821294656,
+        68.46050418093327,
+        34.52766338458753,
+        34.2610129319192,
+        65.88327648763467,
+        34.34829559642982,
+        34.26009876145834,
+        54.013748019922204,
+        34.321181841009455,
+        29.682883906262887,
+        57.7455572974424,
+        30.476164018718762,
+        29.627659740203846,
+        58.18558971400853,
+        29.992481221104853,
+        29.61491766332629,
+        47.95434062229729,
+        29.78535990643372
+      ],
+      "temperature_after_c": [
+        33.4325678009682,
+        67.27735110149558,
+        33.64992346593407,
+        33.388732288992784,
+        65.71426456577703,
+        33.49046914822138,
+        33.381094005778735,
+        54.10326281060571,
+        33.46456456983572,
+        29.24149124138946,
+        57.500235437585175,
+        29.984306533283167,
+        29.189379480195242,
+        58.66593240881581,
+        29.552994231301255,
+        29.177739953752386,
+        48.72951398328758,
+        29.35980506395861
+      ],
+      "maximum_planar_displacement_m": 0.06580572096154641
+    },
+    "trace_sha256": "2b0bf8533c741a5e0217bdd0b21ebdcfc2a2fbe0c0547d0252ae89a09b01fabe"
+  },
+  "switch_early_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 341.180000000901,
+    "forward_m": 37.74158348383227,
+    "max_lateral_m": 0.09295321098831577,
+    "max_tilt_deg": 20.457267005396556,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.833304023291713e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.962870924093692,
+      "LF_femur": 62.29191360917223,
+      "LF_tibia": 10.91681495067178,
+      "LM_coxa": 7.302178626331161,
+      "LM_femur": 60.75175299280215,
+      "LM_tibia": 8.430291136944827,
+      "LR_coxa": 7.257021163712444,
+      "LR_femur": 48.51908888666831,
+      "LR_tibia": 7.627542592865232,
+      "RF_coxa": 7.96685291514911,
+      "RF_femur": 62.50725561215332,
+      "RF_tibia": 10.441365227205328,
+      "RM_coxa": 7.327303840887065,
+      "RM_femur": 60.93754619598125,
+      "RM_tibia": 7.820223873086234,
+      "RR_coxa": 7.204448479529625,
+      "RR_femur": 48.43004668749989,
+      "RR_tibia": 7.152785035259041
+    },
+    "peak_c": 69.45744505743663,
+    "trace": "missions/switch_early_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 19.040220703050316,
+        "walking_time_s": 182.45400000015263,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 132.63999999991478,
+        "hottest_c": 67.00055458447991,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 220.8800000003361,
+        "hottest_c": 65.49973855066366,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 265.8200000005507,
+        "hottest_c": 67.00241766218153,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 294.3000000006867,
+        "hottest_c": 65.49683375341058,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 304.20000000073395,
+        "hottest_c": 67.00070312571482,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "425190c255069e253ca00ca65c7dac29d241ddc961be708bd7ba25fd76b24c24"
+  },
+  "switch_early_slower_cooling_left_warm_s1_b2_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 39.76000000000263,
+    "forward_m": 4.303537717125838,
+    "max_lateral_m": 0.02747793224532813,
+    "max_tilt_deg": 8.891549711593454,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.000287838139950816,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.874880892637224,
+      "LF_femur": 68.85982892603371,
+      "LF_tibia": 5.321974321625498,
+      "LM_coxa": 6.514815143314434,
+      "LM_femur": 61.41810721837006,
+      "LM_tibia": 3.2726937906626667,
+      "LR_coxa": 6.424156151599448,
+      "LR_femur": 45.67422773614908,
+      "LR_tibia": 5.737100059529073,
+      "RF_coxa": 8.885565529524708,
+      "RF_femur": 55.79276351193943,
+      "RF_tibia": 12.214935594195468,
+      "RM_coxa": 8.30377388794971,
+      "RM_femur": 59.822789243580154,
+      "RM_tibia": 6.305728537602119,
+      "RR_coxa": 8.002480013039959,
+      "RR_femur": 50.90438125896322,
+      "RR_tibia": 3.1033451577259235
+    },
+    "peak_c": 70.00027568354538,
+    "trace": "missions/switch_early_slower_cooling_left_warm_s1_b2_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.8399999999999554,
+        "hottest_c": 67.00373125415105,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0326ce87a334baa5077ecee35a39994253c0a9c82981454371110974fcc79f6b"
+  },
+  "switch_early_slower_cooling_right_warm_s1_b1_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 33.49999999999498,
+    "forward_m": 3.809111336789674,
+    "max_lateral_m": 0.026318363932267053,
+    "max_tilt_deg": 7.308363860941623,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.0001890547263681592,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.300095808424393,
+      "LF_femur": 56.30412487115328,
+      "LF_tibia": 12.00571760813848,
+      "LM_coxa": 8.812098323934853,
+      "LM_femur": 59.537522098587836,
+      "LM_tibia": 6.455638301539882,
+      "LR_coxa": 8.690891194229593,
+      "LR_femur": 50.60839946302037,
+      "LR_tibia": 3.1063314294830238,
+      "RF_coxa": 6.936845184834673,
+      "RF_femur": 69.94620925276548,
+      "RF_tibia": 5.450705700959646,
+      "RM_coxa": 6.639689470228116,
+      "RM_femur": 61.263926558065634,
+      "RM_tibia": 2.9805820180135005,
+      "RR_coxa": 6.540720488799723,
+      "RR_femur": 44.398757667986416,
+      "RR_tibia": 5.388456233954541
+    },
+    "peak_c": 70.00094500355365,
+    "trace": "missions/switch_early_slower_cooling_right_warm_s1_b1_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 9.02000000000035,
+        "hottest_c": 67.00141514321629,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "8fa7ef8c058e5fbcbd72f7903718aba91d6befee2d6e4e7e58c896b7cbf0e990"
+  },
+  "switch_early_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 37.98000000000045,
+    "forward_m": 3.7822152364069175,
+    "max_lateral_m": 0.0297622128357955,
+    "max_tilt_deg": 8.070357121313322,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.00026914750453455033,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 5.994764850535407,
+      "LF_femur": 67.92493427130347,
+      "LF_tibia": 5.224025799213737,
+      "LM_coxa": 5.715775761521137,
+      "LM_femur": 61.046057267954005,
+      "LM_tibia": 3.618159404033768,
+      "LR_coxa": 5.829761653807817,
+      "LR_femur": 45.88295738989762,
+      "LR_tibia": 5.4517246720494095,
+      "RF_coxa": 8.131711645883497,
+      "RF_femur": 55.857841376092395,
+      "RF_tibia": 11.409538185900391,
+      "RM_coxa": 7.751159966445563,
+      "RM_femur": 59.52914794461812,
+      "RM_tibia": 6.296273367674377,
+      "RR_coxa": 7.3405096114466195,
+      "RR_femur": 50.52045763554992,
+      "RR_tibia": 3.2311357501979643
+    },
+    "peak_c": 70.00142840476374,
+    "trace": "missions/switch_early_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71269618229937,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "4107b849822d4188c4fb52d97303fc4f5e29c6727131c0c0e0fe2129e89dc9d9"
+  },
+  "switch_early_warm_start_right_warm_s1_b1_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 38.080000000000574,
+    "forward_m": 3.8106495194654744,
+    "max_lateral_m": 0.028634303487773627,
+    "max_tilt_deg": 6.180948896439045,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 4.376750700280112e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.995324744692762,
+      "LF_femur": 55.736718585519945,
+      "LF_tibia": 11.745934885477475,
+      "LM_coxa": 7.559646100678158,
+      "LM_femur": 59.57732375608004,
+      "LM_tibia": 6.5259581454607005,
+      "LR_coxa": 7.54590131788516,
+      "LR_femur": 50.32157999280373,
+      "LR_tibia": 3.1558007823217187,
+      "RF_coxa": 6.24807208961219,
+      "RF_femur": 67.98562067199099,
+      "RF_tibia": 5.207594420748503,
+      "RM_coxa": 5.974417633281007,
+      "RM_femur": 61.196042591568954,
+      "RM_tibia": 3.3559768337167166,
+      "RR_coxa": 5.5814637254755795,
+      "RR_femur": 45.760745749641764,
+      "RR_tibia": 5.470596707574324
+    },
+    "peak_c": 70.00955232082634,
+    "trace": "missions/switch_early_warm_start_right_warm_s1_b1_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71300626279401,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "deb9356fde8fff92158f315730291860911a7eff4c8c023c7b55b6df7d6b30ab"
+  },
+  "switch_long_first_near_boundary_left_warm_s1_b2_v0.65_s2_b2_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 347.88000000093297,
+    "forward_m": 38.4806728453859,
+    "max_lateral_m": 0.1018518884888091,
+    "max_tilt_deg": 18.601269681448024,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.4692167158534872e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.950717593942013,
+      "LF_femur": 61.46243914404663,
+      "LF_tibia": 11.571300910360899,
+      "LM_coxa": 7.394609327930674,
+      "LM_femur": 60.57397088140738,
+      "LM_tibia": 9.51098371719874,
+      "LR_coxa": 7.317667209193412,
+      "LR_femur": 48.39559585044738,
+      "LR_tibia": 8.684097041302705,
+      "RF_coxa": 8.219700774848283,
+      "RF_femur": 62.81813411079309,
+      "RF_tibia": 11.210479406048979,
+      "RM_coxa": 7.473215012449412,
+      "RM_femur": 61.2462201213203,
+      "RM_tibia": 9.286320397952782,
+      "RR_coxa": 7.445480902296222,
+      "RR_femur": 49.25418237461002,
+      "RR_tibia": 8.494536815658865
+    },
+    "peak_c": 69.8683233527717,
+    "trace": "missions/switch_long_first_near_boundary_left_warm_s1_b2_v0.65_s2_b2_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.630090546749475,
+        "walking_time_s": 199.07000000023197,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 22.919999999997067,
+        "hottest_c": 67.00209432019736,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 102.35999999993818,
+        "hottest_c": 65.49994177449491,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 272.14000000058087,
+        "hottest_c": 67.00127340859072,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 318.82000000080376,
+        "hottest_c": 65.49538778185865,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 342.6800000009177,
+        "hottest_c": 67.00082390282051,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 201.07000000023197,
+      "resumed_s": 213.07000000028927,
+      "peak_before_c": 64.66086753984996,
+      "peak_after_c": 63.748148355540785,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -0.9127191843091751,
+      "temperature_before_c": [
+        33.31945934737195,
+        61.67456734478955,
+        34.178107473965724,
+        33.25521980827298,
+        62.579385670234764,
+        33.72830785678477,
+        33.24295102470926,
+        52.10907940329993,
+        33.50258143254465,
+        29.157781572976525,
+        64.66086753984996,
+        29.461353265636518,
+        29.10966494875186,
+        61.9010431291562,
+        29.335729303290368,
+        29.10750217050362,
+        49.56514449741677,
+        29.28436094233183
+      ],
+      "temperature_after_c": [
+        32.52945493615914,
+        61.121696657114654,
+        33.33264024592421,
+        32.4802161582314,
+        62.749477002815,
+        32.92906943108638,
+        32.460748026172595,
+        52.383474852347426,
+        32.72402462786473,
+        28.766206744270313,
+        63.748148355540785,
+        29.06698936959881,
+        28.720622137408622,
+        62.01774705454317,
+        28.95942165296201,
+        28.718922197703325,
+        50.226972808140445,
+        28.906351660803026
+      ],
+      "maximum_planar_displacement_m": 0.0654547046935635
+    },
+    "trace_sha256": "d5778b563556591b5e97e427df2eb0eb4d5054d2be84dd5b3b6f238f455ab213"
+  },
+  "switch_long_first_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 348.44000000093564,
+    "forward_m": 38.4813250731886,
+    "max_lateral_m": 0.1018520313029927,
+    "max_tilt_deg": 19.05705134355828,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.1160856643579638e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.192761708974475,
+      "LF_femur": 61.677020558748744,
+      "LF_tibia": 11.485643481117345,
+      "LM_coxa": 7.501047888303988,
+      "LM_femur": 60.47886162481872,
+      "LM_tibia": 9.313669156500545,
+      "LR_coxa": 7.411597453673105,
+      "LR_femur": 48.44501399552105,
+      "LR_tibia": 8.593284014157629,
+      "RF_coxa": 7.978148210129479,
+      "RF_femur": 62.48872351036297,
+      "RF_tibia": 10.901974833950627,
+      "RM_coxa": 7.361904307176955,
+      "RM_femur": 61.26452301489064,
+      "RM_tibia": 8.938129304598933,
+      "RR_coxa": 7.296041254097169,
+      "RR_femur": 49.28575588492636,
+      "RR_tibia": 8.143638645972782
+    },
+    "peak_c": 69.72614171246289,
+    "trace": "missions/switch_long_first_near_boundary_right_warm_s1_b2_v0.65_s2_b2_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 20.630092150082536,
+        "walking_time_s": 199.07000000023197,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 106.87999999992765,
+        "hottest_c": 67.00911284160088,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 238.78000000042158,
+        "hottest_c": 65.49830614484799,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 324.70000000083184,
+        "hottest_c": 67.00407457334293,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 201.07000000023197,
+      "resumed_s": 213.07000000028927,
+      "peak_before_c": 68.7795035878272,
+      "peak_after_c": 67.47484477636286,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -1.3046588114643356,
+      "temperature_before_c": [
+        29.200738713942975,
+        57.55628909808381,
+        30.05938607054858,
+        29.136499482191383,
+        58.46055992794715,
+        29.609589506057766,
+        29.124236848568298,
+        47.990350016119365,
+        29.383865056053654,
+        33.27649943419487,
+        68.7795035878272,
+        33.58007827598465,
+        33.228384106390514,
+        66.0197806499255,
+        33.45445025536044,
+        33.22622191038094,
+        53.683903528943425,
+        33.40308052914017
+      ],
+      "temperature_after_c": [
+        28.802682392490837,
+        57.395323649076175,
+        29.605867052026795,
+        28.753443883666893,
+        59.02260879647895,
+        29.202299068201903,
+        28.733981322333655,
+        48.656694066282476,
+        28.997256050130648,
+        32.492976779670336,
+        67.47484477636286,
+        32.79376579050829,
+        32.447393345616945,
+        65.74453520615562,
+        32.686194399009594,
+        32.4456939315867,
+        53.95378125229284,
+        32.633123132572756
+      ],
+      "maximum_planar_displacement_m": 0.0654547652459162
+    },
+    "trace_sha256": "1689fa03d3b284b495925e85bf53584da619bd64eae99f399aad8e61bd13b919"
+  },
+  "switch_long_first_slower_cooling_left_warm_s1_b2_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 41.00000000000414,
+    "forward_m": 4.472964160291824,
+    "max_lateral_m": 0.026287127612621974,
+    "max_tilt_deg": 8.432411492021412,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 0.00018699186991869918,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.79546081867497,
+      "LF_femur": 68.63592191806569,
+      "LF_tibia": 4.9821584247028685,
+      "LM_coxa": 6.440558644170216,
+      "LM_femur": 61.2950203823509,
+      "LM_tibia": 3.330524793241298,
+      "LR_coxa": 6.666123003901707,
+      "LR_femur": 45.389082522357754,
+      "LR_tibia": 5.570709112837756,
+      "RF_coxa": 8.740643634797536,
+      "RF_femur": 56.16798748195514,
+      "RF_tibia": 11.89196987508314,
+      "RM_coxa": 8.317754728168167,
+      "RM_femur": 59.444754651269804,
+      "RM_tibia": 6.382845389207695,
+      "RR_coxa": 7.885401720903176,
+      "RR_femur": 50.74133055461331,
+      "RR_tibia": 3.1104620076881733
+    },
+    "peak_c": 70.0008662474635,
+    "trace": "missions/switch_long_first_slower_cooling_left_warm_s1_b2_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 7.879999999999969,
+        "hottest_c": 67.00842988461662,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "bd2d56ec3caaef4870a950175bc7e35cbe7907b06a1c9140f4cda5dc3ec4087c"
+  },
+  "switch_long_first_slower_cooling_right_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 35.3999999999973,
+    "forward_m": 4.024412368711842,
+    "max_lateral_m": 0.027633215236954944,
+    "max_tilt_deg": 5.7983056629779,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 4.394224733207784e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.225521344526157,
+      "LF_femur": 56.25056106644513,
+      "LF_tibia": 11.854540780577734,
+      "LM_coxa": 8.522187817824296,
+      "LM_femur": 59.97509911601718,
+      "LM_tibia": 6.560643453506566,
+      "LR_coxa": 8.586363614292313,
+      "LR_femur": 50.156188859067306,
+      "LR_tibia": 3.1105548905607887,
+      "RF_coxa": 7.085592245292787,
+      "RF_femur": 69.55443434908264,
+      "RF_tibia": 5.207574340481475,
+      "RM_coxa": 6.774831921965844,
+      "RM_femur": 61.27689909909916,
+      "RM_tibia": 3.040600527670242,
+      "RR_coxa": 6.374705968792236,
+      "RR_femur": 44.85065800672945,
+      "RR_tibia": 5.347165350627891
+    },
+    "peak_c": 70.00241589444708,
+    "trace": "missions/switch_long_first_slower_cooling_right_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 9.120000000000383,
+        "hottest_c": 67.00241250319482,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "0e9a99adbf6e0db77ac8892f9c1da5ffd32f525dec8a3593273b6f419b045eab"
+  },
+  "switch_long_first_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 42.78000000000632,
+    "forward_m": 4.290304062996798,
+    "max_lateral_m": 0.026040935626640005,
+    "max_tilt_deg": 6.651597819739096,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 2.0778141395252196e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 6.265492681459039,
+      "LF_femur": 67.4727049064226,
+      "LF_tibia": 4.86670207870019,
+      "LM_coxa": 5.988293736631646,
+      "LM_femur": 61.11111040960427,
+      "LM_tibia": 3.6400016446378016,
+      "LR_coxa": 5.7777381409505955,
+      "LR_femur": 46.20684024196107,
+      "LR_tibia": 5.484830630651148,
+      "RF_coxa": 7.9698274328715,
+      "RF_femur": 55.88081268226137,
+      "RF_tibia": 11.281552348611061,
+      "RM_coxa": 7.4154926252916,
+      "RM_femur": 59.82606649488918,
+      "RM_tibia": 6.359167766356974,
+      "RR_coxa": 7.211230876534883,
+      "RR_femur": 50.244041912428955,
+      "RR_tibia": 3.1994251647965215
+    },
+    "peak_c": 70.00505129761137,
+    "trace": "missions/switch_long_first_warm_start_left_warm_s1_b2_v1_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71182197360119,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "b2c0f080d4737669534a67cb2ece5a98524b577238037b9145e0b9098fe8bb96"
+  },
+  "switch_long_first_warm_start_right_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 38.900000000001576,
+    "forward_m": 3.896565380081678,
+    "max_lateral_m": 0.026893678323229198,
+    "max_tilt_deg": 6.564488124843931,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 8.854612967723507e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.06825503922058,
+      "LF_femur": 55.558365281940354,
+      "LF_tibia": 11.146821382175089,
+      "LM_coxa": 7.423158562024188,
+      "LM_femur": 59.81651255993018,
+      "LM_tibia": 6.500080005900474,
+      "LR_coxa": 7.427396896298479,
+      "LR_femur": 50.5743307797251,
+      "LR_tibia": 3.1873030433208824,
+      "RF_coxa": 6.158295773929626,
+      "RF_femur": 67.82311244021298,
+      "RF_tibia": 4.9345790831918155,
+      "RM_coxa": 5.891249615783715,
+      "RM_femur": 61.229058894854454,
+      "RM_tibia": 3.4289844616946583,
+      "RR_coxa": 5.801942056277974,
+      "RR_femur": 45.58366412427513,
+      "RR_tibia": 5.449108518031397
+    },
+    "peak_c": 70.00350195562964,
+    "trace": "missions/switch_long_first_warm_start_right_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71186879129677,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "7692e5f9d03a1fdbf265baf59cbf879edc05ca82c3db5b0fc956672518e645c2"
+  },
+  "switch_long_second_near_boundary_left_warm_s1_b1_v0.65_s2_b2_v1_pause0": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 352.500000000955,
+    "forward_m": 38.860699247515576,
+    "max_lateral_m": 0.09716504306559592,
+    "max_tilt_deg": 15.698781288185453,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 5.04334121355398e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.024127415201546,
+      "LF_femur": 60.51674203229634,
+      "LF_tibia": 11.985274101896142,
+      "LM_coxa": 7.458360493240242,
+      "LM_femur": 59.37545453151163,
+      "LM_tibia": 9.897296740785137,
+      "LR_coxa": 7.376938901461448,
+      "LR_femur": 46.74666178492242,
+      "LR_tibia": 8.928029866549402,
+      "RF_coxa": 7.664428321740425,
+      "RF_femur": 63.81124297884114,
+      "RF_tibia": 10.048503644420464,
+      "RM_coxa": 7.020325697132341,
+      "RM_femur": 62.267876397923,
+      "RM_tibia": 7.996017129216692,
+      "RR_coxa": 6.968088188605145,
+      "RR_femur": 50.36925288897197,
+      "RR_tibia": 7.325768552232261
+    },
+    "peak_c": 69.00399044841315,
+    "trace": "missions/switch_long_second_near_boundary_left_warm_s1_b1_v0.65_s2_b2_v1_pause0.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.830005769743465,
+        "walking_time_s": 182.4080000001524,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 202.60000000024883,
+        "hottest_c": 67.00445304443065,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 276.30000000060073,
+        "hottest_c": 65.49846434414265,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 309.7800000007606,
+        "hottest_c": 67.00119257827308,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "2749f76c7e01ca6975820d120fe1f832a902f36d8d33b959c930aa97b9e021cc"
+  },
+  "switch_long_second_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 50.36000000001558,
+    "forward_m": 4.992116744280901,
+    "max_lateral_m": 0.028747770707423737,
+    "max_tilt_deg": 7.354808625965627,
+    "min_contacts": 5,
+    "torque_saturation_fraction": 3.530138557938399e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.792234029113865,
+      "LF_femur": 55.41822906080601,
+      "LF_tibia": 12.478288081788328,
+      "LM_coxa": 7.187582500454197,
+      "LM_femur": 59.76197436834994,
+      "LM_tibia": 6.711867930437496,
+      "LR_coxa": 7.0907562055422595,
+      "LR_femur": 50.706032867930446,
+      "LR_tibia": 3.0806340649575645,
+      "RF_coxa": 6.757013237219059,
+      "RF_femur": 69.0232061829931,
+      "RF_tibia": 5.517103111330608,
+      "RM_coxa": 6.403442716728106,
+      "RM_femur": 61.613998345514,
+      "RM_tibia": 3.234976352764979,
+      "RR_coxa": 6.225389193274347,
+      "RR_femur": 45.08890928505019,
+      "RR_tibia": 5.569821106257033
+    },
+    "peak_c": 70.00569285334677,
+    "trace": "missions/switch_long_second_near_boundary_right_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [],
+    "slowdown_events": [
+      {
+        "walking_time_s": 21.159999999998043,
+        "hottest_c": 67.00991465771976,
+        "slowdown_active": true
+      }
+    ],
+    "pause": null,
+    "trace_sha256": "44f5fcf4d7ff1b2296bb71735ae39e57abbe2819d02a590ec7053e436df551f8"
+  },
+  "switch_long_second_slower_cooling_left_warm_s1_b1_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 195.60000000020585,
+    "forward_m": 23.31636498064745,
+    "max_lateral_m": 0.09314828581178336,
+    "max_tilt_deg": 17.71693047233834,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.5337423312883436e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 9.06612476326098,
+      "LF_femur": 63.051905093106505,
+      "LF_tibia": 9.96871617253236,
+      "LM_coxa": 8.145605844266914,
+      "LM_femur": 60.16757002434596,
+      "LM_tibia": 7.751964325961751,
+      "LR_coxa": 8.085217032665476,
+      "LR_femur": 47.38876778950309,
+      "LR_tibia": 7.659951398658274,
+      "RF_coxa": 8.898458972320343,
+      "RF_femur": 61.74317660705917,
+      "RF_tibia": 10.385673287451505,
+      "RM_coxa": 8.144318876209061,
+      "RM_femur": 61.4522726603831,
+      "RM_tibia": 7.172027747181841,
+      "RR_coxa": 8.06912255517313,
+      "RR_femur": 50.6483310480753,
+      "RR_tibia": 6.425560217714207
+    },
+    "peak_c": 70.00365595686924,
+    "trace": "missions/switch_long_second_slower_cooling_left_warm_s1_b1_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.830030759065682,
+        "walking_time_s": 138.07799999994074,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 100.49999999994252,
+        "hottest_c": 67.00347232556929,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 140.07799999994074,
+      "resumed_s": 152.07799999999804,
+      "peak_before_c": 67.95882031149571,
+      "peak_after_c": 66.82345850427595,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.1353618072197662,
+      "temperature_before_c": [
+        38.76178816728988,
+        67.95882031149571,
+        38.89001501958858,
+        38.63854753199069,
+        65.16401974426628,
+        38.59855209931812,
+        38.63831996339903,
+        54.52540834656407,
+        38.576403301629085,
+        31.87332519422681,
+        60.589970597282786,
+        32.057785145465715,
+        31.757084437079566,
+        59.85046329448241,
+        31.647480141067117,
+        31.743176072660354,
+        50.92208693965291,
+        31.58405286671846
+      ],
+      "temperature_after_c": [
+        37.46342537529609,
+        66.82345850427595,
+        37.59567072513775,
+        37.343763319197976,
+        65.2748495293668,
+        37.338062550226454,
+        37.34236179812632,
+        54.749294916886015,
+        37.31154408299379,
+        31.2219540965243,
+        60.317658306801476,
+        31.416272676163725,
+        31.11610912510035,
+        60.28260110778302,
+        31.049843447499487,
+        31.10420164327413,
+        51.563406887668144,
+        30.98845508122076
+      ],
+      "maximum_planar_displacement_m": 0.057745398880281226
+    },
+    "trace_sha256": "9ab96ee45651130002a7288a6f44a62f74dcedf52a4fbe59d1b14d3cc6154ab5"
+  },
+  "switch_long_second_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 305.1200000007288,
+    "forward_m": 34.668915866987305,
+    "max_lateral_m": 0.10187404095337138,
+    "max_tilt_deg": 18.255208244000027,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.0589057857018006e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.417286661797098,
+      "LF_femur": 62.25447251564168,
+      "LF_tibia": 11.555351505968229,
+      "LM_coxa": 7.756605056986508,
+      "LM_femur": 60.62805473437912,
+      "LM_tibia": 9.609296069665573,
+      "LR_coxa": 7.701344709278606,
+      "LR_femur": 48.20025528408219,
+      "LR_tibia": 8.936237672671478,
+      "RF_coxa": 8.382842247188362,
+      "RF_femur": 62.27125702481232,
+      "RF_tibia": 11.234581196712849,
+      "RM_coxa": 7.573149688933343,
+      "RM_femur": 61.120552719731116,
+      "RM_tibia": 8.956738607720029,
+      "RR_coxa": 7.428029295640252,
+      "RR_femur": 49.65488452257105,
+      "RR_tibia": 8.10789942269784
+    },
+    "peak_c": 70.00025300307578,
+    "trace": "missions/switch_long_second_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.830130956177634,
+        "walking_time_s": 139.7879999999489,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 99.01999999994597,
+        "hottest_c": 67.00774705361583,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 182.14000000015113,
+        "hottest_c": 65.49877319530641,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 209.18000000028024,
+        "hottest_c": 67.00375109262563,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 141.7879999999489,
+      "resumed_s": 153.7880000000062,
+      "peak_before_c": 68.19943564345552,
+      "peak_after_c": 67.13863152308541,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -1.0608041203701077,
+      "temperature_before_c": [
+        31.790343348321123,
+        60.75676381333716,
+        32.07749820061629,
+        31.665940844525466,
+        59.97717831143016,
+        31.619451839124935,
+        31.65174910716447,
+        51.08156190920685,
+        31.53974203867071,
+        38.58613102201403,
+        68.19943564345552,
+        38.763548661597426,
+        38.455745624970625,
+        65.32193205608054,
+        38.4212608478974,
+        38.444709388511015,
+        54.464404438306985,
+        38.39185915101618
+      ],
+      "temperature_after_c": [
+        31.14664173010585,
+        60.54830734308678,
+        31.434027496343234,
+        31.03322474291152,
+        60.38174770179782,
+        31.023967081719253,
+        31.021693655380997,
+        51.622145111937186,
+        30.946551631615588,
+        37.29715537854975,
+        67.13863152308541,
+        37.482653096363066,
+        37.17873266817815,
+        65.41270570916589,
+        37.1786106949727,
+        37.16691158612439,
+        54.56979373819635,
+        37.14507294807758
+      ],
+      "maximum_planar_displacement_m": 0.06789225705672623
+    },
+    "trace_sha256": "5b9a428b9b07564c0a2ff7f7c0de24428ecb44adece53c27ebb748cc9d8cdeba"
+  },
+  "switch_long_second_warm_start_left_warm_s1_b1_v1_s2_b2_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 343.96000000091425,
+    "forward_m": 38.86088243221538,
+    "max_lateral_m": 0.0950535874806393,
+    "max_tilt_deg": 17.672239478833266,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.9059063715419105e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.317873869396538,
+      "LF_femur": 60.53076604029612,
+      "LF_tibia": 11.757253713650316,
+      "LM_coxa": 7.759955852727045,
+      "LM_femur": 59.441397504391816,
+      "LM_tibia": 9.546765937067988,
+      "LR_coxa": 7.678629888415488,
+      "LR_femur": 47.03325324779551,
+      "LR_tibia": 8.521893136026213,
+      "RF_coxa": 8.01754413253739,
+      "RF_femur": 64.03864259557145,
+      "RF_tibia": 9.869551928237447,
+      "RM_coxa": 7.323115483710728,
+      "RM_femur": 62.22102432097277,
+      "RM_tibia": 7.833391471079373,
+      "RR_coxa": 7.283564967811238,
+      "RR_femur": 50.093760572621775,
+      "RR_tibia": 7.307690270782999
+    },
+    "peak_c": 69.926876535715,
+    "trace": "missions/switch_long_second_warm_start_left_warm_s1_b1_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.830183136390023,
+        "walking_time_s": 154.468000000019,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71107547610575,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 70.98000000001132,
+        "hottest_c": 65.49926160291795,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 131.1599999999077,
+        "hottest_c": 67.00319020637659,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 171.84000000010195,
+        "hottest_c": 65.49854251351363,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 184.84000000016403,
+        "hottest_c": 67.0039311753922,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 273.420000000587,
+        "hottest_c": 65.49984292715241,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 294.08000000068563,
+        "hottest_c": 67.00562188911337,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 156.468000000019,
+      "resumed_s": 168.4680000000763,
+      "peak_before_c": 66.6751516062367,
+      "peak_after_c": 65.81713846562786,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -0.8580131406088327,
+      "temperature_before_c": [
+        37.29798166837131,
+        66.6751516062367,
+        37.56871763751195,
+        37.213764549182315,
+        64.54784587340204,
+        37.266942236865056,
+        37.20671053986103,
+        53.82297352642254,
+        37.18852467804297,
+        31.855955378007085,
+        62.39326055828185,
+        32.0636102294547,
+        31.732662928480373,
+        60.99359485473721,
+        31.67561537679628,
+        31.72462797238328,
+        50.97768965098644,
+        31.619898319543584
+      ],
+      "temperature_after_c": [
+        36.13000194302149,
+        65.81713846562786,
+        36.40237165726107,
+        36.05324210807668,
+        64.54522454163221,
+        36.13352022742518,
+        36.04758449748587,
+        53.972077778492036,
+        36.057596312164534,
+        31.20854877537984,
+        61.86096727228888,
+        31.420621937047102,
+        31.094515749523644,
+        61.337851772159574,
+        31.073168785579323,
+        31.086130619663862,
+        51.39858678817737,
+        31.01684473939988
+      ],
+      "maximum_planar_displacement_m": 0.07135483155780895
+    },
+    "trace_sha256": "1f01c278ca45c3d287afd2be2e07189b4b33bfae9d6bc1b28797e622d38e10eb"
+  },
+  "switch_long_second_warm_start_right_warm_s1_b2_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 218.64000000031587,
+    "forward_m": 24.12817778009381,
+    "max_lateral_m": 0.10217475911318585,
+    "max_tilt_deg": 18.169168216872894,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.8458755132739766e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.360047807180214,
+      "LF_femur": 62.37187393142465,
+      "LF_tibia": 10.823868437296046,
+      "LM_coxa": 7.48040684242706,
+      "LM_femur": 61.66425208989859,
+      "LM_tibia": 7.612237572251847,
+      "LR_coxa": 7.436312418582926,
+      "LR_femur": 50.342485095004406,
+      "LR_tibia": 6.663877603654547,
+      "RF_coxa": 8.185944358788774,
+      "RF_femur": 62.602758714915765,
+      "RF_tibia": 10.641697430871773,
+      "RM_coxa": 7.609140153869162,
+      "RM_femur": 60.15620566076405,
+      "RM_tibia": 8.106213680665807,
+      "RR_coxa": 7.5497673342396485,
+      "RR_femur": 46.923486722647795,
+      "RR_tibia": 7.612060145062919
+    },
+    "peak_c": 70.00045663341257,
+    "trace": "missions/switch_long_second_warm_start_right_warm_s1_b2_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.83000729365868,
+        "walking_time_s": 153.89200000001625,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71109280417754,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 66.1400000000226,
+        "hottest_c": 65.49883800594914,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 129.21999999989845,
+        "hottest_c": 67.00532677802957,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 155.89200000001625,
+      "resumed_s": 167.89200000007355,
+      "peak_before_c": 66.97512784132427,
+      "peak_after_c": 66.09929239777799,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -0.8758354435462792,
+      "temperature_before_c": [
+        31.917449909146963,
+        62.46494585581289,
+        32.21638403615834,
+        31.769715596205366,
+        61.208686982184894,
+        31.77839040534718,
+        31.763304493767897,
+        51.30484945816225,
+        31.692719798245108,
+        37.36049545823982,
+        66.97512784132427,
+        37.72066438662619,
+        37.275062290289476,
+        64.65899164005117,
+        37.34677302055772,
+        37.27356514220003,
+        53.56143227606832,
+        37.264307255331175
+      ],
+      "temperature_after_c": [
+        31.260406583769516,
+        61.96277423124569,
+        31.558832385126614,
+        31.129521909858486,
+        61.60557061441147,
+        31.16705231161736,
+        31.121113351963963,
+        51.62001401389144,
+        31.08205815022107,
+        36.18786385284302,
+        66.09929239777799,
+        36.53885954922409,
+        36.10851218799296,
+        64.590063912874,
+        36.20605470991159,
+        36.1080258702128,
+        53.768014604720605,
+        36.124774222878806
+      ],
+      "maximum_planar_displacement_m": 0.07768354824615532
+    },
+    "trace_sha256": "bfe0488526fb1959fbf07a2344564cf70a1e13972c4bf121be1c623a9dfce0d3"
+  },
+  "switch_shallow_near_boundary_left_warm_s1_b1_v0.65_s2_b2_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 340.02000000089544,
+    "forward_m": 36.53105229861135,
+    "max_lateral_m": 0.08208032611880967,
+    "max_tilt_deg": 17.29885683817533,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 6.2087851041442005e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.003743991468557,
+      "LF_femur": 60.81614633341368,
+      "LF_tibia": 11.482257416462987,
+      "LM_coxa": 7.398932148433761,
+      "LM_femur": 59.55707372208146,
+      "LM_tibia": 9.28344717111594,
+      "LR_coxa": 7.289232625230559,
+      "LR_femur": 47.06425990463088,
+      "LR_tibia": 8.36487515535311,
+      "RF_coxa": 7.6617405791331805,
+      "RF_femur": 63.266799999608885,
+      "RF_tibia": 9.394408933240227,
+      "RM_coxa": 7.0266793424013745,
+      "RM_femur": 62.06734008699275,
+      "RM_tibia": 6.944076241869545,
+      "RR_coxa": 6.988201659972473,
+      "RR_femur": 50.18919333156236,
+      "RR_tibia": 6.314504582700698
+    },
+    "peak_c": 68.95924982100783,
+    "trace": "missions/switch_shallow_near_boundary_left_warm_s1_b1_v0.65_s2_b2_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340209445597097,
+        "walking_time_s": 175.93000000012148,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 205.8800000002645,
+        "hottest_c": 67.01513753013748,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 273.8800000005892,
+        "hottest_c": 65.49494595150368,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 312.8800000007754,
+        "hottest_c": 67.00023882940948,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 177.93000000012148,
+      "resumed_s": 189.93000000017878,
+      "peak_before_c": 66.10532572076401,
+      "peak_after_c": 65.28247433757795,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -0.8228513831860624,
+      "temperature_before_c": [
+        34.974974343147935,
+        66.10532572076401,
+        35.39183716219512,
+        34.92434600401046,
+        63.54392859491618,
+        35.133654300715605,
+        34.913026992184086,
+        51.938137502826876,
+        35.04337806320012,
+        29.94782174766361,
+        60.03088424216302,
+        30.316006784461795,
+        29.888558510238727,
+        60.19039378742903,
+        29.92197362289123,
+        29.877782286470065,
+        49.892708010985906,
+        29.796992582921394
+      ],
+      "temperature_after_c": [
+        34.028281524665104,
+        65.28247433757795,
+        34.43093887155439,
+        33.98139923503034,
+        63.444462024604206,
+        34.20121267765509,
+        33.97271895670286,
+        52.23028789414143,
+        34.11459811444988,
+        29.47869078518028,
+        59.66132372677931,
+        29.839191675316133,
+        29.426954418392835,
+        60.589949826995536,
+        29.487849195798187,
+        29.41516778798443,
+        50.24908568805573,
+        29.367089339632948
+      ],
+      "maximum_planar_displacement_m": 0.074635836691461
+    },
+    "trace_sha256": "f59480a3f677e99495c890e840fed31be23203adbdf70f1a54cb1eb09aa9ad5b"
+  },
+  "switch_shallow_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 321.1000000008051,
+    "forward_m": 36.53217955192958,
+    "max_lateral_m": 0.08860369829544501,
+    "max_tilt_deg": 17.699986410899456,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.5917505796048305e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.346790255690662,
+      "LF_femur": 62.77638935195733,
+      "LF_tibia": 10.31311852651858,
+      "LM_coxa": 7.605999547577109,
+      "LM_femur": 61.23714558653431,
+      "LM_tibia": 8.096730509791236,
+      "LR_coxa": 7.580644556216328,
+      "LR_femur": 49.09160410941432,
+      "LR_tibia": 7.399213531757606,
+      "RF_coxa": 8.356651499269363,
+      "RF_femur": 61.929309211813546,
+      "RF_tibia": 11.041724825947119,
+      "RM_coxa": 7.69678864732933,
+      "RM_femur": 60.467800668977695,
+      "RM_tibia": 8.5742077898913,
+      "RR_coxa": 7.604011268564572,
+      "RR_femur": 48.19444626991045,
+      "RR_tibia": 7.778211325878197
+    },
+    "peak_c": 69.66490657182479,
+    "trace": "missions/switch_shallow_near_boundary_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340031869390664,
+        "walking_time_s": 132.04999999991196,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 98.81999999994643,
+        "hottest_c": 67.00029406135202,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 144.87999999997322,
+        "hottest_c": 65.49966064375594,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 274.7400000005933,
+        "hottest_c": 67.00963551576082,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 134.04999999991196,
+      "resumed_s": 146.04999999996926,
+      "peak_before_c": 66.87145930510502,
+      "peak_after_c": 65.71847545438379,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.1529838507212276,
+      "temperature_before_c": [
+        39.39008311303228,
+        66.87145930510502,
+        39.450455488375006,
+        39.28795620352895,
+        64.15997510331361,
+        39.18218227752132,
+        39.28880502784928,
+        54.03416181877433,
+        39.15029465193467,
+        32.18183171844742,
+        59.256959321369344,
+        32.246958641496036,
+        32.06525304002654,
+        58.13405590521804,
+        31.850823568836336,
+        32.0489919442987,
+        49.514947373652674,
+        31.792135382528578
+      ],
+      "temperature_after_c": [
+        38.03182151533711,
+        65.71847545438379,
+        38.102878849129816,
+        37.931277233666705,
+        64.18928524736027,
+        37.865466765159084,
+        37.930904268813094,
+        54.156335997291215,
+        37.830477726305354,
+        31.50085471324786,
+        58.99695054245494,
+        31.585573136620695,
+        31.39483361735811,
+        58.571064642314454,
+        31.23180657498945,
+        31.380758764638507,
+        50.138807742851185,
+        31.174774108391738
+      ],
+      "maximum_planar_displacement_m": 0.06440023688614736
+    },
+    "trace_sha256": "715bc823415473e9cf7a1f25aae98f199f071898c32247323233321fbae0cc7e"
+  },
+  "switch_shallow_near_boundary_right_warm_s1_b2_v0.65_s2_b1_v1_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 341.4400000009022,
+    "forward_m": 36.53195296629897,
+    "max_lateral_m": 0.08932967917527623,
+    "max_tilt_deg": 14.65337850091342,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.905029678225555e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.569671563452116,
+      "LF_femur": 63.586836237745736,
+      "LF_tibia": 9.837344060048512,
+      "LM_coxa": 6.9495479965299,
+      "LM_femur": 62.24055461046527,
+      "LM_tibia": 7.668373981282334,
+      "LR_coxa": 6.9407869163085625,
+      "LR_femur": 50.18391125679237,
+      "LR_tibia": 6.925577085688574,
+      "RF_coxa": 7.982208639548318,
+      "RF_femur": 60.761611435444365,
+      "RF_tibia": 11.852538353129457,
+      "RM_coxa": 7.405446480751169,
+      "RM_femur": 59.44128051297039,
+      "RM_tibia": 9.662662079313773,
+      "RR_coxa": 7.284172317913361,
+      "RR_femur": 46.80392401697079,
+      "RR_tibia": 8.653910865107337
+    },
+    "peak_c": 69.20869730671158,
+    "trace": "missions/switch_shallow_near_boundary_right_warm_s1_b2_v0.65_s2_b1_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340114700366374,
+        "walking_time_s": 177.35000000012826,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 209.76000000028301,
+        "hottest_c": 67.00294641723183,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 277.7800000006078,
+        "hottest_c": 65.49700736742804,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 307.9000000007516,
+        "hottest_c": 67.00479238364196,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 179.35000000012826,
+      "resumed_s": 191.35000000018556,
+      "peak_before_c": 65.85497790397352,
+      "peak_after_c": 65.03111877304654,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -0.8238591309269765,
+      "temperature_before_c": [
+        29.88834842994369,
+        60.08507990652926,
+        30.332608758455248,
+        29.828208671245754,
+        60.435019345675016,
+        29.934652576523934,
+        29.819975381874244,
+        50.359157892801534,
+        29.807812999103525,
+        34.86995553939825,
+        65.85497790397352,
+        35.35072313772602,
+        34.815106112826456,
+        63.457428965526596,
+        35.08659763687295,
+        34.80403861907782,
+        51.85665131359547,
+        35.00174609333652
+      ],
+      "temperature_after_c": [
+        29.426753348726024,
+        59.701682080299676,
+        29.85165965990226,
+        29.372456815527645,
+        60.829889929952124,
+        29.49632905734795,
+        29.362973422409084,
+        50.70745930314366,
+        29.375452306630276,
+        33.93318004100114,
+        65.03111877304654,
+        34.39588046796051,
+        33.8825725898953,
+        63.357730997979964,
+        34.16144079443622,
+        33.874058191820595,
+        52.165747886393184,
+        34.07886987833042
+      ],
+      "maximum_planar_displacement_m": 0.07177649506604641
+    },
+    "trace_sha256": "041bcd01ec70e0c4439e2e6e844f9b834cc06836b43964d7bd97fddea912331f"
+  },
+  "switch_shallow_near_boundary_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": true,
+    "failure": null,
+    "elapsed_s": 321.9800000008093,
+    "forward_m": 36.53209657591358,
+    "max_lateral_m": 0.08834635269258317,
+    "max_tilt_deg": 19.279441373574365,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.0697696889385814e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.349159423557882,
+      "LF_femur": 61.862044549923894,
+      "LF_tibia": 10.893242397575774,
+      "LM_coxa": 7.6709245473844465,
+      "LM_femur": 60.54632181942585,
+      "LM_tibia": 8.457984124137187,
+      "LR_coxa": 7.594948967668064,
+      "LR_femur": 48.61941785503699,
+      "LR_tibia": 7.776553882038873,
+      "RF_coxa": 8.423873799045815,
+      "RF_femur": 62.61171514497398,
+      "RF_tibia": 10.196544869724537,
+      "RM_coxa": 7.669737006328484,
+      "RM_femur": 61.13450835832649,
+      "RM_tibia": 7.7292484649596656,
+      "RR_coxa": 7.5939972650093805,
+      "RR_femur": 49.12454332266749,
+      "RR_tibia": 7.182973162059222
+    },
+    "peak_c": 69.42832412938917,
+    "trace": "missions/switch_shallow_near_boundary_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340089828754017,
+        "walking_time_s": 133.1459999999172,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 102.81999999993711,
+        "hottest_c": 67.0027803670412,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 145.69999999997714,
+        "hottest_c": 65.49753066140667,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 279.6800000006169,
+        "hottest_c": 67.00310859971098,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 135.1459999999172,
+      "resumed_s": 147.1459999999745,
+      "peak_before_c": 66.70114086027301,
+      "peak_after_c": 65.61856394431295,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -1.0825769159600611,
+      "temperature_before_c": [
+        32.131538200490375,
+        58.99636407424002,
+        32.233363196203925,
+        31.99757853617705,
+        58.32789544313409,
+        31.838901465274816,
+        31.993163949551317,
+        49.9891359018148,
+        31.794662004500704,
+        39.290954468834926,
+        66.70114086027301,
+        39.38298698880402,
+        39.17663823184548,
+        64.1569380393324,
+        39.0883227826227,
+        39.168104054376656,
+        54.19771576180321,
+        39.07089300230417
+      ],
+      "temperature_after_c": [
+        31.454517371275298,
+        58.72975911066095,
+        31.572644307741932,
+        31.34100146686948,
+        58.8867857346314,
+        31.218493350613024,
+        31.329824916477527,
+        50.457176130553144,
+        31.17679875440293,
+        37.93518390810904,
+        65.61856394431295,
+        38.04340078543764,
+        37.829690207180214,
+        64.06502498345961,
+        37.7831124441283,
+        37.82183970553484,
+        54.3762929195852,
+        37.760592996251745
+      ],
+      "maximum_planar_displacement_m": 0.06527033455182873
+    },
+    "trace_sha256": "e603376ece1597ad0e6dae5d546f0cb448bd588c35847b0d9265f43bfefb0c5c"
+  },
+  "switch_shallow_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 288.5400000006496,
+    "forward_m": 32.875403595494625,
+    "max_lateral_m": 0.08935306157882783,
+    "max_tilt_deg": 17.699986410899456,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 2.849595280454087e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.287218818534777,
+      "LF_femur": 62.39367830156484,
+      "LF_tibia": 10.717154088244518,
+      "LM_coxa": 7.550556365507246,
+      "LM_femur": 61.14261965329049,
+      "LM_tibia": 8.429543539816507,
+      "LR_coxa": 7.467719084098855,
+      "LR_femur": 49.45302932380782,
+      "LR_tibia": 7.620711868622054,
+      "RF_coxa": 8.422566156274309,
+      "RF_femur": 62.35946658673942,
+      "RF_tibia": 10.952743252422348,
+      "RM_coxa": 7.800287012605092,
+      "RM_femur": 60.55030405460187,
+      "RM_tibia": 8.803042347397799,
+      "RR_coxa": 7.731383129960421,
+      "RR_femur": 47.95176982138203,
+      "RR_tibia": 8.116704907281733
+    },
+    "peak_c": 70.00995576322921,
+    "trace": "missions/switch_shallow_slower_cooling_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.34010557399273,
+        "walking_time_s": 135.38399999992788,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 91.55999999996335,
+        "hottest_c": 67.00416764744958,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 177.4000000001285,
+        "hottest_c": 65.49923785062643,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 249.3200000004719,
+        "hottest_c": 67.00471979480038,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 137.38399999992788,
+      "resumed_s": 149.38399999998518,
+      "peak_before_c": 68.21409897608038,
+      "peak_after_c": 67.2020517330672,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -1.0120472430131855,
+      "temperature_before_c": [
+        39.023312468838256,
+        68.21409897608038,
+        39.086916030240964,
+        38.91229938069379,
+        65.50201743883284,
+        38.81848184706053,
+        38.91256482066912,
+        54.609210318368255,
+        38.803200008572006,
+        31.990976970134195,
+        60.50410894751564,
+        32.10954158436967,
+        31.884199041383322,
+        59.4484381873321,
+        31.68863489791291,
+        31.86763238682565,
+        50.43772213965532,
+        31.615772790227513
+      ],
+      "temperature_after_c": [
+        37.69177724447433,
+        67.2020517330672,
+        37.77438437860921,
+        37.59232388907796,
+        65.57915594403352,
+        37.536181720248294,
+        37.59035129902516,
+        54.660262975232925,
+        37.51610780015107,
+        31.328329789475518,
+        60.331577323727934,
+        31.46453682985461,
+        31.230619010119245,
+        59.883385760664616,
+        31.08833464970458,
+        31.217289507848562,
+        50.9996455641348,
+        31.015978923043658
+      ],
+      "maximum_planar_displacement_m": 0.07406388468283258
+    },
+    "trace_sha256": "b0b75f4d2b66864a500b698bb8dbbcdbe7ec27aa05578b5e95dde2b69c692d2c"
+  },
+  "switch_shallow_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 292.94000000067064,
+    "forward_m": 33.23924502722591,
+    "max_lateral_m": 0.08834635269258317,
+    "max_tilt_deg": 19.279441373574365,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 1.7826934601700764e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.432711404716667,
+      "LF_femur": 62.20231287726345,
+      "LF_tibia": 10.905071649101316,
+      "LM_coxa": 7.750950400835701,
+      "LM_femur": 60.66889612716442,
+      "LM_tibia": 8.646713232803824,
+      "LR_coxa": 7.734149811699353,
+      "LR_femur": 48.390390420692086,
+      "LR_tibia": 8.054504497390502,
+      "RF_coxa": 8.35962986921053,
+      "RF_femur": 62.30770032101941,
+      "RF_tibia": 10.516722042671892,
+      "RM_coxa": 7.607007650268261,
+      "RM_femur": 61.03608062288916,
+      "RM_tibia": 7.9723765628649845,
+      "RR_coxa": 7.485506946628693,
+      "RR_femur": 49.39218136197616,
+      "RR_tibia": 7.3401238693360895
+    },
+    "peak_c": 70.00122371877302,
+    "trace": "missions/switch_shallow_slower_cooling_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340013911073857,
+        "walking_time_s": 135.8899999999303,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 96.33999999995221,
+        "hottest_c": 67.00991112634685,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 176.18000000012267,
+        "hottest_c": 65.49793601402179,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 250.7400000004787,
+        "hottest_c": 67.003556172456,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 137.8899999999303,
+      "resumed_s": 149.8899999999876,
+      "peak_before_c": 68.2134997071418,
+      "peak_after_c": 67.27504975006103,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -0.9384499570807776,
+      "temperature_before_c": [
+        31.978820429655887,
+        60.12981847510453,
+        32.13929343874828,
+        31.853162032872724,
+        59.71616641260546,
+        31.710352678846,
+        31.8497637178455,
+        50.81576269524585,
+        31.65385353489554,
+        38.98711142332638,
+        68.2134997071418,
+        39.09084057757819,
+        38.872572761637464,
+        65.35766485965237,
+        38.79278985276102,
+        38.86293758192308,
+        54.699673492445314,
+        38.78262922602383
+      ],
+      "temperature_after_c": [
+        31.315945664690727,
+        59.91598986141415,
+        31.489199941474766,
+        31.20518071396816,
+        60.34319924543069,
+        31.10543924450646,
+        31.199369912810525,
+        51.24476011202765,
+        31.047189507504193,
+        37.659850837441006,
+        67.27504975006103,
+        37.779662303338014,
+        37.554052642229294,
+        65.2960738604954,
+        37.51584862482198,
+        37.546342547469905,
+        54.873241301455465,
+        37.49889871900486
+      ],
+      "maximum_planar_displacement_m": 0.07419619029324273
+    },
+    "trace_sha256": "6083e8d9a6d1561c9fbed8769851ce759c03ecd17f564f59ef311dd6961d8e6d"
+  },
+  "switch_shallow_warm_start_left_warm_s1_b1_v1_s2_b2_v1_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 210.74000000027814,
+    "forward_m": 23.06471820128603,
+    "max_lateral_m": 0.0780074328028455,
+    "max_tilt_deg": 15.604670267452317,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 3.110731496420023e-05,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 7.986794358648833,
+      "LF_femur": 62.701841548566016,
+      "LF_tibia": 9.980758777194222,
+      "LM_coxa": 7.47307970206255,
+      "LM_femur": 60.23682310399534,
+      "LM_tibia": 7.519442725724748,
+      "LR_coxa": 7.372497520070583,
+      "LR_femur": 47.1679940073359,
+      "LR_tibia": 6.997516747686844,
+      "RF_coxa": 8.229517964209023,
+      "RF_femur": 61.99159608441085,
+      "RF_tibia": 9.851299047678445,
+      "RM_coxa": 7.476766504735318,
+      "RM_femur": 61.37827648567757,
+      "RM_tibia": 6.396092620382296,
+      "RR_coxa": 7.414749289494262,
+      "RR_femur": 49.88035564929403,
+      "RR_tibia": 5.525887895281044
+    },
+    "peak_c": 70.00054508952286,
+    "trace": "missions/switch_shallow_warm_start_left_warm_s1_b1_v1_s2_b2_v1_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.3402521924305,
+        "walking_time_s": 151.02400000000256,
+        "target_fraction": 1.0
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71327708598392,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 67.3800000000197,
+        "hottest_c": 65.49885758485047,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 122.31999999989166,
+        "hottest_c": 67.00087840806069,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 153.02400000000256,
+      "resumed_s": 165.02400000005986,
+      "peak_before_c": 66.83913089493183,
+      "peak_after_c": 65.87147822869815,
+      "hottest_at_entry_joint_index": 1,
+      "entry_hottest_motor_delta_c": -0.9676526662336755,
+      "temperature_before_c": [
+        37.59954125641,
+        66.83913089493183,
+        37.83498647157659,
+        37.5181823764581,
+        64.83262659131152,
+        37.52710809040827,
+        37.51751913749066,
+        53.86019796527159,
+        37.44443570067572,
+        32.022214449558994,
+        62.07624536817831,
+        32.1375699612333,
+        31.90784900359234,
+        60.67477204505389,
+        31.753010515104087,
+        31.898087265268725,
+        50.66234914193631,
+        31.69139768495802
+      ],
+      "temperature_after_c": [
+        36.40235186915839,
+        65.87147822869815,
+        36.63986185443051,
+        36.3378916142854,
+        64.89767527577467,
+        36.36440349940167,
+        36.32869997288336,
+        54.039918215715474,
+        36.28967656665006,
+        31.35795417033606,
+        61.47425692655432,
+        31.490097367581384,
+        31.25255668125736,
+        60.97806690200468,
+        31.14869459280506,
+        31.244145354998878,
+        51.29023687583444,
+        31.08625990477641
+      ],
+      "maximum_planar_displacement_m": 0.06837235675446264
+    },
+    "trace_sha256": "14cc33a5f4711e44b3ec6b490218f51ff5d16c498505aea67a55ee0ce092c733"
+  },
+  "switch_shallow_warm_start_right_warm_s1_b2_v1_s2_b2_v0.65_pause12": {
+    "completed": false,
+    "failure": "thermal_limit",
+    "elapsed_s": 317.5400000007881,
+    "forward_m": 34.17519116211721,
+    "max_lateral_m": 0.08700255366302434,
+    "max_tilt_deg": 18.648852368630326,
+    "min_contacts": 4,
+    "torque_saturation_fraction": 6.998243440896335e-06,
+    "leg_contact_samples": 0,
+    "rms_torque_by_joint_nm": {
+      "LF_coxa": 8.0280267192794,
+      "LF_femur": 62.39077003456764,
+      "LF_tibia": 10.730461865737267,
+      "LM_coxa": 7.325350125901767,
+      "LM_femur": 60.760668891344885,
+      "LM_tibia": 8.428019066781902,
+      "LR_coxa": 7.253378003944284,
+      "LR_femur": 48.32404019006004,
+      "LR_tibia": 7.839854221493644,
+      "RF_coxa": 7.768930152560046,
+      "RF_femur": 61.86632382899199,
+      "RF_tibia": 10.65813847115533,
+      "RM_coxa": 7.204786751861793,
+      "RM_femur": 60.94679848241258,
+      "RM_tibia": 8.062717447116167,
+      "RR_coxa": 7.121399577469925,
+      "RR_femur": 49.177852275567254,
+      "RR_tibia": 7.227717468847841
+    },
+    "peak_c": 70.00146302205678,
+    "trace": "missions/switch_shallow_warm_start_right_warm_s1_b2_v1_s2_b2_v0.65_pause12.npz",
+    "junction_events": [
+      {
+        "stage": 2,
+        "x_m": 18.340058002478862,
+        "walking_time_s": 151.16200000000322,
+        "target_fraction": 0.65
+      }
+    ],
+    "slowdown_events": [
+      {
+        "walking_time_s": 1.3322676295501878e-15,
+        "hottest_c": 67.71305760584943,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 71.90000000000917,
+        "hottest_c": 65.49857529192917,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 131.89999999991124,
+        "hottest_c": 67.00762247045648,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 164.40000000006643,
+        "hottest_c": 65.49567212406255,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 208.66000000027776,
+        "hottest_c": 67.00420229767397,
+        "slowdown_active": true
+      },
+      {
+        "walking_time_s": 243.68000000044498,
+        "hottest_c": 65.49872910950874,
+        "slowdown_active": false
+      },
+      {
+        "walking_time_s": 294.2000000006862,
+        "hottest_c": 67.00536951330504,
+        "slowdown_active": true
+      }
+    ],
+    "pause": {
+      "started_s": 153.16200000000322,
+      "resumed_s": 165.16200000006052,
+      "peak_before_c": 66.79533310152947,
+      "peak_after_c": 65.76946246082427,
+      "hottest_at_entry_joint_index": 10,
+      "entry_hottest_motor_delta_c": -1.0258706407051932,
+      "temperature_before_c": [
+        32.04169494083487,
+        61.91890774200591,
+        32.19124459694331,
+        31.903348355790207,
+        60.81991814867724,
+        31.79309018163941,
+        31.895098901433023,
+        51.26435988380341,
+        31.750131603313942,
+        37.6213924441833,
+        66.79533310152947,
+        37.88780406518462,
+        37.537641462673804,
+        64.70929477935164,
+        37.5556188817248,
+        37.536485971934454,
+        53.93364772059685,
+        37.49276790465042
+      ],
+      "temperature_after_c": [
+        31.373235688953116,
+        61.43717574412326,
+        31.53522380972052,
+        31.2551047046909,
+        61.22962603645652,
+        31.178149716036025,
+        31.241090017261016,
+        51.681055031148794,
+        31.13746532532427,
+        36.424567015532055,
+        65.76946246082427,
+        36.69098995333193,
+        36.346657387800704,
+        64.65213257144919,
+        36.39685409434383,
+        36.345525289257445,
+        54.21301626091391,
+        36.332995861776105
+      ],
+      "maximum_planar_displacement_m": 0.06426195505771294
+    },
+    "trace_sha256": "2ca99728627ff620b5842b98750e3cc361967805c199bbfd137b7a6628888594"
+  }
+}

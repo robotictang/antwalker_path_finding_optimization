@@ -1,0 +1,255 @@
+{
+  "starts": 72,
+  "physics_replays": 33,
+  "outcomes": {
+    "published_gait_period_speed": {
+      "no_route": 39,
+      "thermal_limit": 3,
+      "completed": 30
+    },
+    "fixed_reactive": {
+      "no_route": 50,
+      "completed": 18,
+      "deadline": 4
+    },
+    "time_only_fallback": {
+      "thermal_limit": 38,
+      "completed": 28,
+      "deadline": 4,
+      "no_route": 2
+    },
+    "pause_forecast_fallback": {
+      "no_route": 48,
+      "completed": 20,
+      "deadline": 4
+    }
+  },
+  "by_course": {
+    "switch_shallow": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "thermal_limit": 2
+      },
+      "fixed_reactive": {
+        "no_route": 6
+      },
+      "time_only_fallback": {
+        "thermal_limit": 4,
+        "completed": 2
+      },
+      "pause_forecast_fallback": {
+        "no_route": 4,
+        "completed": 2
+      }
+    },
+    "switch_early": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "completed": 1,
+        "thermal_limit": 1
+      },
+      "fixed_reactive": {
+        "no_route": 5,
+        "completed": 1
+      },
+      "time_only_fallback": {
+        "thermal_limit": 4,
+        "completed": 2
+      },
+      "pause_forecast_fallback": {
+        "no_route": 5,
+        "completed": 1
+      }
+    },
+    "switch_long_second": {
+      "published_gait_period_speed": {
+        "no_route": 5,
+        "completed": 1
+      },
+      "fixed_reactive": {
+        "no_route": 5,
+        "completed": 1
+      },
+      "time_only_fallback": {
+        "thermal_limit": 4,
+        "completed": 2
+      },
+      "pause_forecast_fallback": {
+        "no_route": 5,
+        "completed": 1
+      }
+    },
+    "switch_long_first": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "completed": 2
+      },
+      "fixed_reactive": {
+        "no_route": 6
+      },
+      "time_only_fallback": {
+        "thermal_limit": 4,
+        "completed": 2
+      },
+      "pause_forecast_fallback": {
+        "no_route": 6
+      }
+    },
+    "persistent_shallow": {
+      "published_gait_period_speed": {
+        "completed": 6
+      },
+      "fixed_reactive": {
+        "completed": 4,
+        "deadline": 2
+      },
+      "time_only_fallback": {
+        "completed": 4,
+        "deadline": 2
+      },
+      "pause_forecast_fallback": {
+        "completed": 4,
+        "deadline": 2
+      }
+    },
+    "persistent_offset": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "completed": 2
+      },
+      "fixed_reactive": {
+        "no_route": 6
+      },
+      "time_only_fallback": {
+        "thermal_limit": 6
+      },
+      "pause_forecast_fallback": {
+        "no_route": 6
+      }
+    },
+    "persistent_long_second": {
+      "published_gait_period_speed": {
+        "completed": 6
+      },
+      "fixed_reactive": {
+        "completed": 4,
+        "no_route": 1,
+        "deadline": 1
+      },
+      "time_only_fallback": {
+        "completed": 5,
+        "deadline": 1
+      },
+      "pause_forecast_fallback": {
+        "completed": 4,
+        "no_route": 1,
+        "deadline": 1
+      }
+    },
+    "persistent_long_first": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "completed": 2
+      },
+      "fixed_reactive": {
+        "no_route": 6
+      },
+      "time_only_fallback": {
+        "thermal_limit": 5,
+        "completed": 1
+      },
+      "pause_forecast_fallback": {
+        "no_route": 6
+      }
+    },
+    "shared_bank_first": {
+      "published_gait_period_speed": {
+        "no_route": 2,
+        "completed": 4
+      },
+      "fixed_reactive": {
+        "no_route": 3,
+        "completed": 2,
+        "deadline": 1
+      },
+      "time_only_fallback": {
+        "thermal_limit": 1,
+        "completed": 3,
+        "no_route": 1,
+        "deadline": 1
+      },
+      "pause_forecast_fallback": {
+        "no_route": 3,
+        "completed": 2,
+        "deadline": 1
+      }
+    },
+    "shared_bank_second": {
+      "published_gait_period_speed": {
+        "no_route": 5,
+        "completed": 1
+      },
+      "fixed_reactive": {
+        "no_route": 5,
+        "completed": 1
+      },
+      "time_only_fallback": {
+        "thermal_limit": 5,
+        "completed": 1
+      },
+      "pause_forecast_fallback": {
+        "no_route": 5,
+        "completed": 1
+      }
+    },
+    "shared_bank_reversal": {
+      "published_gait_period_speed": {
+        "no_route": 4,
+        "completed": 2
+      },
+      "fixed_reactive": {
+        "no_route": 4,
+        "completed": 2
+      },
+      "time_only_fallback": {
+        "thermal_limit": 3,
+        "completed": 2,
+        "no_route": 1
+      },
+      "pause_forecast_fallback": {
+        "no_route": 4,
+        "completed": 2
+      }
+    },
+    "shared_bank_late_long": {
+      "published_gait_period_speed": {
+        "no_route": 3,
+        "completed": 3
+      },
+      "fixed_reactive": {
+        "no_route": 3,
+        "completed": 3
+      },
+      "time_only_fallback": {
+        "thermal_limit": 2,
+        "completed": 4
+      },
+      "pause_forecast_fallback": {
+        "no_route": 3,
+        "completed": 3
+      }
+    }
+  },
+  "pause_minus_published": {
+    "mean_gain_pp": -13.888888888888891,
+    "descriptive_map_bootstrap_95_pp": [
+      -25.0,
+      -2.777777777777777
+    ],
+    "pause_only": 4,
+    "published_only": 14,
+    "additional_thermal_stops_pause_minus_published": -3
+  },
+  "maximum_selection_s": 0.06471233299998858,
+  "no_feasible_speed_updates": 428
+}

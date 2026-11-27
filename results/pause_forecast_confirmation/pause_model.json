@@ -1,0 +1,47 @@
+{
+  "approach_counts": {
+    "s1_b1_v1": 4,
+    "s1_b1_v0.65": 4
+  },
+  "traces_sha256": {
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v1_s2_b1_v1_pause12.npz": "ef311e81ea22cb89de3ff0fd54468fb22da109276f21a97124403b77726c0ad4",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v1_s2_b1_v0.65_pause12.npz": "f744d6142e6131a9390b90133b6cc0c871f0dfb6de2c03b8ebfc72b63c1e0c2b",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v1_s2_b2_v1_pause12.npz": "8778c4035da5231cf2b38a5415cf5954ca3617e9ed6ff4fc8bfa828da183420b",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v1_s2_b2_v0.65_pause12.npz": "f1676bf890e7746ce9ee1ccbe8c519e1fe82ee980886cd8c0ba05eac4a732ba7",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v0.65_s2_b1_v1_pause12.npz": "ee1e35ad33fd4a91039b1302abf41cc0b57497ca884ee5878db424ea7e6bd024",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v0.65_s2_b1_v0.65_pause12.npz": "80963892514dad7e4a116b75b2e525bde9e68a0ccf4731620c3af32e80b08c63",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v0.65_s2_b2_v1_pause12.npz": "13576e52de69f08a57ece49e82af86dddc247f69bbf2e15020bf9cb8dabc645f",
+    "missions/unequal_banks_warm_start_left_warm_s1_b1_v0.65_s2_b2_v0.65_pause12.npz": "13576e52de69f08a57ece49e82af86dddc247f69bbf2e15020bf9cb8dabc645f"
+  },
+  "squared_torque_nm2": {
+    "LF_coxa": 5.9427739422959975,
+    "LF_femur": 2904.156783426375,
+    "LF_tibia": 28.293161033111637,
+    "LM_coxa": 3.3201088479290157,
+    "LM_femur": 3758.819478708043,
+    "LM_tibia": 34.012783773464434,
+    "LR_coxa": 1.6692380101255337,
+    "LR_femur": 2809.037318050274,
+    "LR_tibia": 27.23760411219775,
+    "RF_coxa": 2.6271881543498097,
+    "RF_femur": 3030.600385327532,
+    "RF_tibia": 29.827238026599964,
+    "RM_coxa": 1.6952184561249963,
+    "RM_femur": 3578.7079740798376,
+    "RM_tibia": 34.37395070674911,
+    "RR_coxa": 2.912981342799469,
+    "RR_femur": 2911.3450598675954,
+    "RR_tibia": 29.89127854477531
+  },
+  "development_summary_sha256": "4026f2b60133ff6e5f4ecbbe660ce70b226b02791809b4ed4d14a40688e93b2b",
+  "pause_s": 12.0,
+  "thermal_margin_c": 0.5,
+  "held_out_config_sha256": "481e7d9f9465cf331ac243608b23edce2044246998e6ef3d9415e235e17e6151",
+  "sources_sha256": {
+    "pause_forecast.py": "00e465208da4bf5d3b9b829d7e551b50ee93091c7b48c9706d422b1f84ce7f0e",
+    "pause_forecast_study.py": "26351c9dce1e1ea41b27e7fd5e2d661868eac318df8bddaa5765cbfc32e0d72f",
+    "junction_pause.py": "c7adf731114ca9b452d161707c34c61ea836380451e260449fe8ff0adf614823",
+    "reactive_forecast.py": "d0afbaf7b2312ccb0b80ba4e3eeeeb0902548edb75df6b790e9b9a899b90fcda",
+    "reactive_study.py": "971cd86572333141543ea5f6c8d1ad5c1a00fdcd171413da6be87c7924691be3"
+  }
+}

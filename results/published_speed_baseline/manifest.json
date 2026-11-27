@@ -1,0 +1,17 @@
+{
+  "method": "published_gait_period_speed",
+  "paper": "https://doi.org/10.1109/ROBOT.2009.5152870",
+  "paper_section": "III-D, Eq. (8)",
+  "reference_hashes": {
+    "confirmation_lock.json": "4c6ab3ad7ee3b5dcc04d8632e3a7c019ed522d5db72e26c6b59978266df63ce5",
+    "manifest.json": "cacde2892b0db8fe02a7ba6ab84979bee43ec58401314564bba2e89e640ef3bc",
+    "evaluation_manifest.json": "fe2f7d9f7d860038d890db8523025021e20ebc174513c43f589bd39f06647ea5",
+    "plans.json": "49a45d797ce930da537db7f288bd02afe9b9ce6edb772978a604bb4bc6a303d6",
+    "executions.json": "ee5996cd5c7b103ef2aac464d18ca913fc750e1217e363b9a0d8b0bccb0b60ae"
+  },
+  "source_sha256": "56a50795242fa4a4d36bd649b3aeab9957d8751eddb8fe872c6e32886f7bb9eb",
+  "gait_horizon_s": 3.0,
+  "footfall_s": 0.5,
+  "thermal_margin_c": 0.5,
+  "planning_budget_s": 2.0
+}

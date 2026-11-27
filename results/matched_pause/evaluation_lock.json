@@ -1,0 +1,50 @@
+{
+  "protocol_sha256": "eaa02e2634c08137191dcbfddcabf30ee259b662250b57091a24d1cee0fbbe91",
+  "hold_model_sha256": "3bd084697887f45f3c4c6286c1f3785e680d1fbaf5ba69b36d83b1c627273cae",
+  "design_and_sources_sha256": {
+    "matched_pause.json": "9409894b077334b7df4f326726c7c41b59d78a0f08b7caa9139d0e4a68f10b1f",
+    "connected_pilot.json": "b16bd56061a3b13b45a9883d1a49d11fd9801a033eb020d51565d6a30663be5f",
+    "fan_network.py": "8f16b00f6a1c2601bf3f853137ba3982c9bf1c540eddf6d21c594ebca4b01014",
+    "mission_profiles.py": "ac9e283b236b70a1ff51de2c258ea35e1765d656ef7d2c2b2f140fe5592c65ca",
+    "mission_completion.py": "cf45004c4e8098c56cad0df87bbec5ac28248865a02117433d23510e4ed20269",
+    "mission_analysis.py": "d6484ecebe6eb9dcae0e579018d3d091365c30489b8609d3d5b51075fa97e341",
+    "network.py": "c7ed191162312dabb93c537b0cfe7caf2961a67af16834a27d5bec09bd03021b",
+    "network_study.py": "920f2fe427bf10916e00b691da056ef85eda1374695182757627981626d7d5b1",
+    "network_planning.py": "63a5da3d5fac5a8e4ac4cb95b74ce2167ca6e96578f3657c5934fd6edc1256b2",
+    "connected_terrain.py": "0590087e14fd22bf7d5d064778d0c5276c1c5b0ad67bb1aee55ef548ec887a8b",
+    "connected_walk.py": "029758bc41cc475d5fcda6b694d634fbbed067c3b7f0c2d89c952d0cab947731",
+    "walking.py": "1b9eb85372ca5a700d9e9f0661980b9543eb262533d8a20ab4844a9d31c548b1",
+    "model.py": "f04da04fdd0c1fce4cea1dcff0bb476bf0d3c2799b4abe37eab918ed53b358af",
+    "pilot.py": "ba2d8428609f9240a0aa8db80cb5e6d96c193766c2f7b55c1155f1e44bc8f334",
+    "route_speed_study.py": "17cdb924496a045ca3ba0917ff8920228e3c2475b26ed22a39f04348d7fa9d8a",
+    "route_speed_profiles.py": "d094cb3feefa198eed75dd29e67aa9799c67b739ad0123817d82d1d978087e61",
+    "speed_policy.py": "15709072066cfa7e289d162cce155737d9bb030fd3e16bd5c1e42d96a9037bee",
+    "thermal.py": "2a817eacfff1d2b2335ec4be3566029b1d545bed4d1f1f0fdf3153c23d88d8d9",
+    "matched_pause.py": "66182d17f1b60943cb8819632fe0fa9e9f72ed7ccf0bef9635fdcab587523c78",
+    "published_speed_baseline.py": "56a50795242fa4a4d36bd649b3aeab9957d8751eddb8fe872c6e32886f7bb9eb",
+    "junction_pause.py": "c7adf731114ca9b452d161707c34c61ea836380451e260449fe8ff0adf614823",
+    "pause_confirmation.py": "4417796cfd1263537bf01831cfe95e70602d841925ed263f56922b90cc4b0493",
+    "reactive_forecast.py": "d0afbaf7b2312ccb0b80ba4e3eeeeb0902548edb75df6b790e9b9a899b90fcda",
+    "reactive_study.py": "971cd86572333141543ea5f6c8d1ad5c1a00fdcd171413da6be87c7924691be3",
+    "margin_profiles.py": "66ecde9ba93bbfbac4f2e3536642dc6b0399cee9ffb7a35f81a1a8a820dc00aa",
+    "audit_network.py": "23e6c1c84465bb27a57610d4fffaabaaeb015f85198597792bc38e50b7205e44"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "mujoco": "3.9.0",
+    "numpy": "2.2.6"
+  },
+  "methods": [
+    "governor_only",
+    "governor_with_optional_pause"
+  ],
+  "expected_pairs": 72,
+  "pause_s": 12.0,
+  "terrain_families": {
+    "alternating": 4,
+    "persistent": 4,
+    "same_sign_stage": 4
+  },
+  "minimum_gain_pp": 10.0,
+  "maximum_extra_thermal_stops": 0
+}

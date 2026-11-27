@@ -1,0 +1,118 @@
+{
+  "starts": 72,
+  "decisions": 216,
+  "replays": 72,
+  "by_method": {
+    "fixed_reactive": {
+      "outcomes": {
+        "no_route": 50,
+        "completed": 18,
+        "deadline": 4
+      },
+      "max_planning_s": 0.08525291600017226
+    },
+    "time_only_fallback": {
+      "outcomes": {
+        "thermal_limit": 38,
+        "completed": 28,
+        "deadline": 4,
+        "no_route": 2
+      },
+      "max_planning_s": 0.16677310500017484
+    },
+    "pause_forecast_fallback": {
+      "outcomes": {
+        "no_route": 48,
+        "completed": 20,
+        "deadline": 4
+      },
+      "max_planning_s": 0.1694099379965337
+    }
+  },
+  "completed_by_map": {
+    "switch_shallow": {
+      "fixed_reactive": 0,
+      "time_only_fallback": 2,
+      "pause_forecast_fallback": 2
+    },
+    "switch_early": {
+      "fixed_reactive": 1,
+      "time_only_fallback": 2,
+      "pause_forecast_fallback": 1
+    },
+    "switch_long_second": {
+      "fixed_reactive": 1,
+      "time_only_fallback": 2,
+      "pause_forecast_fallback": 1
+    },
+    "switch_long_first": {
+      "fixed_reactive": 0,
+      "time_only_fallback": 2,
+      "pause_forecast_fallback": 0
+    },
+    "persistent_shallow": {
+      "fixed_reactive": 4,
+      "time_only_fallback": 4,
+      "pause_forecast_fallback": 4
+    },
+    "persistent_offset": {
+      "fixed_reactive": 0,
+      "time_only_fallback": 0,
+      "pause_forecast_fallback": 0
+    },
+    "persistent_long_second": {
+      "fixed_reactive": 4,
+      "time_only_fallback": 5,
+      "pause_forecast_fallback": 4
+    },
+    "persistent_long_first": {
+      "fixed_reactive": 0,
+      "time_only_fallback": 1,
+      "pause_forecast_fallback": 0
+    },
+    "shared_bank_first": {
+      "fixed_reactive": 2,
+      "time_only_fallback": 3,
+      "pause_forecast_fallback": 2
+    },
+    "shared_bank_second": {
+      "fixed_reactive": 1,
+      "time_only_fallback": 1,
+      "pause_forecast_fallback": 1
+    },
+    "shared_bank_reversal": {
+      "fixed_reactive": 2,
+      "time_only_fallback": 2,
+      "pause_forecast_fallback": 2
+    },
+    "shared_bank_late_long": {
+      "fixed_reactive": 3,
+      "time_only_fallback": 4,
+      "pause_forecast_fallback": 3
+    }
+  },
+  "comparisons": {
+    "fixed_reactive": {
+      "mean_gain_pp": 2.777777777777778,
+      "descriptive_map_bootstrap_95_pp": [
+        0.0,
+        8.333333333333334
+      ],
+      "pause_forecast_only": 2,
+      "baseline_only": 0,
+      "additional_thermal_stops": 0,
+      "meets_completion_target_without_more_stops": false
+    },
+    "time_only_fallback": {
+      "mean_gain_pp": -11.111111111111112,
+      "descriptive_map_bootstrap_95_pp": [
+        -16.666666666666668,
+        -5.555555555555556
+      ],
+      "pause_forecast_only": 0,
+      "baseline_only": 8,
+      "additional_thermal_stops": -38,
+      "meets_completion_target_without_more_stops": false
+    }
+  }
+}

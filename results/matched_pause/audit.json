@@ -1,0 +1,98 @@
+{
+  "audit_source_sha256": "afd8660a43075a0e78f98cb3cce8b030d8c5156879121dc909ba3e9db84e983c",
+  "audited_sha256": {
+    "evaluation_lock.json": "1355c8f239c48c6bb86059bd4931badc2ce3a6b056877ee68188fd1ee957506e",
+    "manifest.json": "bc2e71a4e8f1a0beb76d8dea2189f28c726647baac43327b8ab30502eb67cea1",
+    "edge_profiles.json": "6b7e4bdf4c438d9f3e9f147ee7f4780cca6c9f996eace0ce1b19a9de88bbb536",
+    "profile_checksums.json": "17ccebcb0b249f878a6c28811c3fa3c335a782ae3be804944ce50741184b6793",
+    "plans.json": "453304b6af30f36b96da94a9805971ee0bcb29b9bbcca2a4774352d2968327e2",
+    "executions.json": "7d02993682910f6d692b34c1f242d12050395d3362756d4f7006e5c0077294e3",
+    "summary.json": "a9aa873f59f365129c4e28b1031a61dfcc1f6eee9cc119f1d3a8ad0fa34b2541"
+  },
+  "verified_start_pairs": 72,
+  "verified_planning_decisions": 144,
+  "verified_profile_outcomes": {
+    "completed": 96
+  },
+  "verified_forecasts": {
+    "original_governor_forecasts": 288,
+    "paused_forecasts": 288
+  },
+  "verified_physics_replays": 39,
+  "max_logged_thermal_update_residual_c": 0.0,
+  "verified_same_route_prefix_samples": {
+    "matched_alternating_balanced_near_boundary_left_warm_s1_b1_s2_b2_pause12": 6226,
+    "matched_alternating_long_exit_near_boundary_right_warm_s1_b2_s2_b1_pause12": 6515,
+    "matched_alternating_long_exit_warm_start_left_warm_s1_b1_s2_b2_pause12": 6454,
+    "matched_shared_entry_near_boundary_right_warm_s1_b1_s2_b2_pause12": 6852,
+    "matched_shared_entry_warm_start_left_warm_s1_b1_s2_b2_pause12": 6313,
+    "matched_shared_long_exit_near_boundary_right_warm_s1_b1_s2_b2_pause12": 6620
+  },
+  "selected_pause_forecast_minus_observed": {
+    "matched_alternating_balanced_near_boundary_left_warm_s1_b1_s2_b2_pause12": {
+      "elapsed_s": -1.6924787021143288,
+      "peak_c": -0.20858195138922042,
+      "junction_entry_s": -0.5379999998911558,
+      "junction_entry_peak_c": -0.17774875487987174,
+      "pause_exit_peak_c": 0.08772281565771323
+    },
+    "matched_alternating_long_exit_near_boundary_right_warm_s1_b2_s2_b1_pause12": {
+      "elapsed_s": -0.6002256448304593,
+      "peak_c": -0.17718786003381126,
+      "junction_entry_s": -0.8139999998941221,
+      "junction_entry_peak_c": 0.07701524280001593,
+      "pause_exit_peak_c": 0.09555688816504926
+    },
+    "matched_alternating_long_exit_warm_start_left_warm_s1_b1_s2_b2_pause12": {
+      "elapsed_s": 103.74314353219808,
+      "peak_c": -0.5174111065071543,
+      "junction_entry_s": 0.41400000011174143,
+      "junction_entry_peak_c": -0.6716955599204653,
+      "pause_exit_peak_c": -0.60524945600379
+    },
+    "matched_shared_entry_near_boundary_right_warm_s1_b1_s2_b2_pause12": {
+      "elapsed_s": -11.300532829044243,
+      "peak_c": -0.36128171606765136,
+      "junction_entry_s": -6.539999999926238,
+      "junction_entry_peak_c": 0.16844139686888582,
+      "pause_exit_peak_c": 0.27499314936873986
+    },
+    "matched_shared_entry_warm_start_left_warm_s1_b1_s2_b2_pause12": {
+      "elapsed_s": 84.65900610380652,
+      "peak_c": -0.6228597670707927,
+      "junction_entry_s": -0.7639999998871332,
+      "junction_entry_peak_c": -0.005129964462838643,
+      "pause_exit_peak_c": -0.1455422837311744
+    },
+    "matched_shared_long_exit_near_boundary_right_warm_s1_b1_s2_b2_pause12": {
+      "elapsed_s": -6.0413697131151025,
+      "peak_c": -0.47032390507013133,
+      "junction_entry_s": -1.9139999999041493,
+      "junction_entry_peak_c": 0.5776595549941277,
+      "pause_exit_peak_c": 0.6797923610125736
+    }
+  },
+  "outcomes": {
+    "governor_only": {
+      "no_route": 45,
+      "thermal_limit": 2,
+      "completed": 25
+    },
+    "governor_with_optional_pause": {
+      "no_route": 39,
+      "completed": 29,
+      "thermal_limit": 4
+    }
+  },
+  "paired_comparison": {
+    "mean_gain_pp": 5.555555555555556,
+    "descriptive_map_bootstrap_95_pp": [
+      1.388888888888889,
+      9.722222222222223
+    ],
+    "optional_pause_only": 4,
+    "governor_only": 0,
+    "extra_thermal_stops": 2,
+    "meets_practical_target": false
+  }
+}

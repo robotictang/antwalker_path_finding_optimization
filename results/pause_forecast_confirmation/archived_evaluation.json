@@ -1,0 +1,442 @@
+{
+  "schedules": 22,
+  "finished": 7,
+  "reached_pause": 16,
+  "screening": {
+    "time_only_admits": {
+      "admit/thermal_limit": 15,
+      "admit/completed": 7
+    },
+    "thermal_forecast_admits": {
+      "reject/thermal_limit": 15,
+      "reject/completed": 3,
+      "admit/completed": 4
+    }
+  },
+  "completed_peak_mae_c": 0.09205086586140762,
+  "completed_pause_time_mae_s": 1.559572520709878,
+  "completed_time_only_mae_s": 1.7534674741566991,
+  "hold_exit_hottest_mae_c": 0.19489208101064914,
+  "hold_exit_motor_mae_c_given_observed_entry": 0.02973200876586663,
+  "cases": [
+    {
+      "map": "crossed_split",
+      "setting": "slower_cooling",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 291.7800000006651,
+      "actual_peak_c": 70.00685794974216,
+      "observed_pause_exit_peak_c": 67.4058859985176,
+      "observed_entry_conditioned_motor_mae_c": 0.007956046829303374,
+      "time_only_s": 327.5227636776893,
+      "pause_forecast": {
+        "peak_c": 71.68717915108495,
+        "elapsed_s": 327.5227636776893,
+        "junction_entry_peak_c": 68.81998294697875,
+        "pause_exit_peak_c": 67.67583690876783
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossed_split",
+      "setting": "slower_cooling",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 296.3200000006868,
+      "actual_peak_c": 70.00390134433158,
+      "observed_pause_exit_peak_c": 66.71687814379467,
+      "observed_entry_conditioned_motor_mae_c": 0.042519237463571,
+      "time_only_s": 327.9677676315472,
+      "pause_forecast": {
+        "peak_c": 71.58301326854254,
+        "elapsed_s": 327.9677676315472,
+        "junction_entry_peak_c": 68.27410870011663,
+        "pause_exit_peak_c": 67.31365260904076
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossed_split",
+      "setting": "near_boundary",
+      "start": "left_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 326.28000000082983,
+      "actual_peak_c": 69.82872258553827,
+      "observed_pause_exit_peak_c": 65.87145697239646,
+      "observed_entry_conditioned_motor_mae_c": 0.009133480555102757,
+      "time_only_s": 324.9633431344082,
+      "pause_forecast": {
+        "peak_c": 69.64939042918279,
+        "elapsed_s": 324.9633431344082,
+        "junction_entry_peak_c": 66.97243525180465,
+        "pause_exit_peak_c": 65.87254676688805
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossed_split",
+      "setting": "near_boundary",
+      "start": "right_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 324.84000000082295,
+      "actual_peak_c": 69.66744356899144,
+      "observed_pause_exit_peak_c": 65.43562197645065,
+      "observed_entry_conditioned_motor_mae_c": 0.037711733791284355,
+      "time_only_s": 322.4657344263858,
+      "pause_forecast": {
+        "peak_c": 69.60288026583771,
+        "elapsed_s": 322.4657344263858,
+        "junction_entry_peak_c": 66.61429460654031,
+        "pause_exit_peak_c": 65.6745028917103
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossed_split",
+      "setting": "warm_start",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 214.18000000029457,
+      "actual_peak_c": 70.0035109212045,
+      "observed_pause_exit_peak_c": 66.10201564312777,
+      "observed_entry_conditioned_motor_mae_c": 0.06455041717427158,
+      "time_only_s": 338.5404546976503,
+      "pause_forecast": {
+        "peak_c": 69.89113687701459,
+        "elapsed_s": 336.5546066756972,
+        "junction_entry_peak_c": 66.90806536088763,
+        "pause_exit_peak_c": 65.88008240883154
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossed_split",
+      "setting": "warm_start",
+      "start": "right_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 343.8200000009136,
+      "actual_peak_c": 69.82738042466164,
+      "observed_pause_exit_peak_c": 65.76208592142592,
+      "observed_entry_conditioned_motor_mae_c": 0.011802842040078766,
+      "time_only_s": 343.10672469333224,
+      "pause_forecast": {
+        "peak_c": 69.87424798926098,
+        "elapsed_s": 343.10672469333224,
+        "junction_entry_peak_c": 66.66085301359453,
+        "pause_exit_peak_c": 65.78527458977669
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "staggered_split",
+      "setting": "slower_cooling",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 117.85999999990672,
+      "actual_peak_c": 70.00950251999701,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 354.07749686926013,
+      "pause_forecast": {
+        "peak_c": 71.45004744659654,
+        "elapsed_s": 354.07749686926013,
+        "junction_entry_peak_c": 70.66298507427797,
+        "pause_exit_peak_c": 69.34345419506806
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "staggered_split",
+      "setting": "slower_cooling",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 308.04000000074274,
+      "actual_peak_c": 70.00587031669318,
+      "observed_pause_exit_peak_c": 66.84473454102579,
+      "observed_entry_conditioned_motor_mae_c": 0.04958752890048422,
+      "time_only_s": 339.4481762975113,
+      "pause_forecast": {
+        "peak_c": 71.31921331413943,
+        "elapsed_s": 339.4481762975113,
+        "junction_entry_peak_c": 68.44302370681203,
+        "pause_exit_peak_c": 67.46649322756654
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "staggered_split",
+      "setting": "near_boundary",
+      "start": "left_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 341.1600000009009,
+      "actual_peak_c": 69.27635305073181,
+      "observed_pause_exit_peak_c": 67.15663616675954,
+      "observed_entry_conditioned_motor_mae_c": 0.04615705369178791,
+      "time_only_s": 344.11271108278515,
+      "pause_forecast": {
+        "peak_c": 69.13356345843114,
+        "elapsed_s": 336.7977949201464,
+        "junction_entry_peak_c": 68.41876813166797,
+        "pause_exit_peak_c": 67.1812428755241
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": true
+    },
+    {
+      "map": "staggered_split",
+      "setting": "near_boundary",
+      "start": "right_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 335.50000000087385,
+      "actual_peak_c": 69.32460457401356,
+      "observed_pause_exit_peak_c": 65.79919919885566,
+      "observed_entry_conditioned_motor_mae_c": 0.01299519186827701,
+      "time_only_s": 333.99451274011284,
+      "pause_forecast": {
+        "peak_c": 69.31058111142669,
+        "elapsed_s": 333.99451274011284,
+        "junction_entry_peak_c": 66.67823021445919,
+        "pause_exit_peak_c": 65.73235422210023
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": true
+    },
+    {
+      "map": "staggered_split",
+      "setting": "warm_start",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 332.44000000085924,
+      "actual_peak_c": 70.00146976846652,
+      "observed_pause_exit_peak_c": 65.5792158352949,
+      "observed_entry_conditioned_motor_mae_c": 0.03747180951444741,
+      "time_only_s": 349.56916714240197,
+      "pause_forecast": {
+        "peak_c": 70.14941180823344,
+        "elapsed_s": 349.9917297542868,
+        "junction_entry_peak_c": 66.87438492034002,
+        "pause_exit_peak_c": 65.97848624894459
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossover_banks",
+      "setting": "slower_cooling",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 39.72000000000258,
+      "actual_peak_c": 70.00976396281553,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 338.58955121980125,
+      "pause_forecast": {
+        "peak_c": 70.78596718615218,
+        "elapsed_s": 338.1837883732885,
+        "junction_entry_peak_c": 66.17144340077809,
+        "pause_exit_peak_c": 65.41108236859344
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossover_banks",
+      "setting": "slower_cooling",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 38.20000000000072,
+      "actual_peak_c": 70.01230344115342,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 340.1987071274369,
+      "pause_forecast": {
+        "peak_c": 71.25358807221808,
+        "elapsed_s": 337.8994155584707,
+        "junction_entry_peak_c": 65.21889025684388,
+        "pause_exit_peak_c": 64.54917664129395
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossover_banks",
+      "setting": "near_boundary",
+      "start": "left_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 328.6600000008412,
+      "actual_peak_c": 69.25565787230185,
+      "observed_pause_exit_peak_c": 67.04925605686479,
+      "observed_entry_conditioned_motor_mae_c": 0.012947807871266469,
+      "time_only_s": 331.68718023218105,
+      "pause_forecast": {
+        "peak_c": 69.21065222335332,
+        "elapsed_s": 328.3995784424993,
+        "junction_entry_peak_c": 68.04118883813315,
+        "pause_exit_peak_c": 66.8395950024582
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": true
+    },
+    {
+      "map": "crossover_banks",
+      "setting": "near_boundary",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 155.8600000000161,
+      "actual_peak_c": 70.00207002291123,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 336.86738035488736,
+      "pause_forecast": {
+        "peak_c": 70.0299025822665,
+        "elapsed_s": 332.0869469272608,
+        "junction_entry_peak_c": 69.06405942206962,
+        "pause_exit_peak_c": 67.89114176218919
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "crossover_banks",
+      "setting": "warm_start",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 37.07999999999935,
+      "actual_peak_c": 70.00030098102006,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 338.19645015584894,
+      "pause_forecast": {
+        "peak_c": 70.91676352518505,
+        "elapsed_s": 335.6249251459572,
+        "junction_entry_peak_c": 66.18056586587518,
+        "pause_exit_peak_c": 65.35069280711845
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "slower_cooling",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 304.3000000007249,
+      "actual_peak_c": 70.004399408435,
+      "observed_pause_exit_peak_c": 67.75493827922996,
+      "observed_entry_conditioned_motor_mae_c": 0.04320272236065333,
+      "time_only_s": 345.1690616496163,
+      "pause_forecast": {
+        "peak_c": 72.02617939890105,
+        "elapsed_s": 345.1690616496163,
+        "junction_entry_peak_c": 68.90023032975525,
+        "pause_exit_peak_c": 67.74844774340347
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "slower_cooling",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 313.960000000771,
+      "actual_peak_c": 70.0022446822374,
+      "observed_pause_exit_peak_c": 67.09367278542919,
+      "observed_entry_conditioned_motor_mae_c": 0.016898241675723586,
+      "time_only_s": 345.0618320757225,
+      "pause_forecast": {
+        "peak_c": 70.99450373494595,
+        "elapsed_s": 345.0618320757225,
+        "junction_entry_peak_c": 68.04101113400809,
+        "pause_exit_peak_c": 67.10273720917266
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "near_boundary",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 58.120000000025065,
+      "actual_peak_c": 70.00204770130406,
+      "observed_pause_exit_peak_c": null,
+      "observed_entry_conditioned_motor_mae_c": null,
+      "time_only_s": 360.47886229894686,
+      "pause_forecast": {
+        "peak_c": 70.0984012254253,
+        "elapsed_s": 356.54591766812223,
+        "junction_entry_peak_c": 65.36796744126404,
+        "pause_exit_peak_c": 65.27253115521877
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "near_boundary",
+      "start": "right_warm",
+      "actual_outcome": "completed",
+      "actual_elapsed_s": 340.140000000896,
+      "actual_peak_c": 69.20970935786053,
+      "observed_pause_exit_peak_c": 65.66105125876496,
+      "observed_entry_conditioned_motor_mae_c": 0.023522367350854348,
+      "time_only_s": 340.5246959975676,
+      "pause_forecast": {
+        "peak_c": 69.05793502477532,
+        "elapsed_s": 340.5246959975676,
+        "junction_entry_peak_c": 66.39498380678901,
+        "pause_exit_peak_c": 65.47606227391603
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": true
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "warm_start",
+      "start": "left_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 222.9000000003362,
+      "actual_peak_c": 70.00874741508727,
+      "observed_pause_exit_peak_c": 65.97965921050223,
+      "observed_entry_conditioned_motor_mae_c": 0.011629286734987964,
+      "time_only_s": 356.5419384875807,
+      "pause_forecast": {
+        "peak_c": 70.1908164911148,
+        "elapsed_s": 354.07271666951107,
+        "junction_entry_peak_c": 67.20193462426968,
+        "pause_exit_peak_c": 66.14598631435027
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    },
+    {
+      "map": "long_entry_split",
+      "setting": "warm_start",
+      "start": "right_warm",
+      "actual_outcome": "thermal_limit",
+      "actual_elapsed_s": 341.80000000090394,
+      "actual_peak_c": 70.00029176624977,
+      "observed_pause_exit_peak_c": 65.63218903154556,
+      "observed_entry_conditioned_motor_mae_c": 0.04762637243177201,
+      "time_only_s": 361.55195276975286,
+      "pause_forecast": {
+        "peak_c": 69.88479309508023,
+        "elapsed_s": 361.55195276975286,
+        "junction_entry_peak_c": 66.40608019637023,
+        "pause_exit_peak_c": 65.5547466116537
+      },
+      "time_only_admits": true,
+      "thermal_forecast_admits": false
+    }
+  ],
+  "reference_sha256": "8a3a0bb2b118246720331a6fa2e5db6e3f00571a1c4c3721194377380938b4b6"
+}

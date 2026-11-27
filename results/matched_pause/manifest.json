@@ -1,0 +1,601 @@
+{
+  "study": {
+    "name": "matched_published_speed_junction_pause_v1",
+    "base_config": "connected_pilot.json",
+    "planning_budget_s": 2.0,
+    "minimum_gain_pp": 10.0,
+    "thermal_margin_c": 0.5,
+    "pause_s": 12.0,
+    "speed_fractions": [
+      1.0,
+      0.65
+    ],
+    "transition_s": 2.0,
+    "edge_deadline_s": 245,
+    "resolution_m": 0.12,
+    "progress_bin_m": 0.3,
+    "forecast_step_s": 0.5,
+    "bootstrap_seed": 261127,
+    "thermal_settings": [
+      {
+        "id": "slower_cooling",
+        "heating_multiplier": 0.46,
+        "cooling_time_constant_s": 120,
+        "warm_c": 67,
+        "cool_c": 45
+      },
+      {
+        "id": "near_boundary",
+        "heating_multiplier": 0.44,
+        "cooling_time_constant_s": 120,
+        "warm_c": 67,
+        "cool_c": 45
+      },
+      {
+        "id": "warm_start",
+        "heating_multiplier": 0.45,
+        "cooling_time_constant_s": 120,
+        "warm_c": 68,
+        "cool_c": 48
+      }
+    ],
+    "reactive": {
+      "trigger_c": 67.0,
+      "resume_c": 65.5,
+      "speed_fraction": 0.65,
+      "ramp_s": 2.0
+    },
+    "maps": [
+      {
+        "id": "matched_alternating_balanced",
+        "family": "alternating",
+        "deadline_s": 347,
+        "stages": [
+          {
+            "turn_m": 6.62,
+            "bank_m": 4.29,
+            "offsets_m": [
+              -2.14,
+              2.24
+            ],
+            "banks_deg": [
+              -7.5,
+              8.4
+            ],
+            "shifts_m": [
+              -0.36,
+              0.28
+            ]
+          },
+          {
+            "turn_m": 6.74,
+            "bank_m": 4.43,
+            "offsets_m": [
+              -2.19,
+              2.11
+            ],
+            "banks_deg": [
+              8.3,
+              -7.2
+            ],
+            "shifts_m": [
+              0.23,
+              -0.35
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_alternating_long_entry",
+        "family": "alternating",
+        "deadline_s": 359,
+        "stages": [
+          {
+            "turn_m": 7.21,
+            "bank_m": 4.94,
+            "offsets_m": [
+              -2.33,
+              2.15
+            ],
+            "banks_deg": [
+              8.5,
+              -9.4
+            ],
+            "shifts_m": [
+              0.35,
+              -0.4
+            ]
+          },
+          {
+            "turn_m": 6.67,
+            "bank_m": 4.08,
+            "offsets_m": [
+              -2.14,
+              2.26
+            ],
+            "banks_deg": [
+              -7.8,
+              8.8
+            ],
+            "shifts_m": [
+              -0.28,
+              0.22
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_alternating_long_exit",
+        "family": "alternating",
+        "deadline_s": 370,
+        "stages": [
+          {
+            "turn_m": 6.86,
+            "bank_m": 4.38,
+            "offsets_m": [
+              -2.15,
+              2.3
+            ],
+            "banks_deg": [
+              -8.8,
+              7.9
+            ],
+            "shifts_m": [
+              0.46,
+              -0.31
+            ]
+          },
+          {
+            "turn_m": 7.37,
+            "bank_m": 5.13,
+            "offsets_m": [
+              -2.3,
+              2.22
+            ],
+            "banks_deg": [
+              9.5,
+              -8.7
+            ],
+            "shifts_m": [
+              -0.41,
+              0.23
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_alternating_offset",
+        "family": "alternating",
+        "deadline_s": 356,
+        "stages": [
+          {
+            "turn_m": 6.92,
+            "bank_m": 4.64,
+            "offsets_m": [
+              -2.31,
+              2.09
+            ],
+            "banks_deg": [
+              9.1,
+              -7.4
+            ],
+            "shifts_m": [
+              -0.5,
+              0.37
+            ]
+          },
+          {
+            "turn_m": 6.84,
+            "bank_m": 4.34,
+            "offsets_m": [
+              -2.1,
+              2.31
+            ],
+            "banks_deg": [
+              -8.2,
+              9.3
+            ],
+            "shifts_m": [
+              0.34,
+              -0.49
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_persistent_balanced",
+        "family": "persistent",
+        "deadline_s": 347,
+        "stages": [
+          {
+            "turn_m": 6.69,
+            "bank_m": 4.18,
+            "offsets_m": [
+              -2.1,
+              2.23
+            ],
+            "banks_deg": [
+              7.6,
+              -8.2
+            ],
+            "shifts_m": [
+              0.31,
+              -0.18
+            ]
+          },
+          {
+            "turn_m": 6.7,
+            "bank_m": 4.52,
+            "offsets_m": [
+              -2.19,
+              2.16
+            ],
+            "banks_deg": [
+              8.4,
+              -7.5
+            ],
+            "shifts_m": [
+              -0.34,
+              0.29
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_persistent_long_entry",
+        "family": "persistent",
+        "deadline_s": 365,
+        "stages": [
+          {
+            "turn_m": 7.36,
+            "bank_m": 5.02,
+            "offsets_m": [
+              -2.18,
+              2.33
+            ],
+            "banks_deg": [
+              -9.3,
+              8.6
+            ],
+            "shifts_m": [
+              -0.39,
+              0.43
+            ]
+          },
+          {
+            "turn_m": 6.77,
+            "bank_m": 4.14,
+            "offsets_m": [
+              -2.26,
+              2.15
+            ],
+            "banks_deg": [
+              -7.9,
+              9.0
+            ],
+            "shifts_m": [
+              0.23,
+              -0.3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_persistent_long_exit",
+        "family": "persistent",
+        "deadline_s": 367,
+        "stages": [
+          {
+            "turn_m": 6.64,
+            "bank_m": 4.41,
+            "offsets_m": [
+              -2.14,
+              2.25
+            ],
+            "banks_deg": [
+              8.2,
+              -9.0
+            ],
+            "shifts_m": [
+              0.34,
+              -0.45
+            ]
+          },
+          {
+            "turn_m": 7.43,
+            "bank_m": 5.09,
+            "offsets_m": [
+              -2.3,
+              2.18
+            ],
+            "banks_deg": [
+              9.4,
+              -8.6
+            ],
+            "shifts_m": [
+              -0.32,
+              0.41
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_persistent_offset",
+        "family": "persistent",
+        "deadline_s": 359,
+        "stages": [
+          {
+            "turn_m": 6.9,
+            "bank_m": 4.1,
+            "offsets_m": [
+              -2.35,
+              2.12
+            ],
+            "banks_deg": [
+              -8.3,
+              7.3
+            ],
+            "shifts_m": [
+              -0.18,
+              0.48
+            ]
+          },
+          {
+            "turn_m": 7.11,
+            "bank_m": 4.66,
+            "offsets_m": [
+              -2.11,
+              2.33
+            ],
+            "banks_deg": [
+              -9.1,
+              8.4
+            ],
+            "shifts_m": [
+              0.42,
+              -0.51
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_shared_entry",
+        "family": "same_sign_stage",
+        "deadline_s": 347,
+        "stages": [
+          {
+            "turn_m": 6.57,
+            "bank_m": 4.36,
+            "offsets_m": [
+              -2.17,
+              2.2
+            ],
+            "banks_deg": [
+              -7.8,
+              -8.6
+            ],
+            "shifts_m": [
+              0.25,
+              -0.32
+            ]
+          },
+          {
+            "turn_m": 6.76,
+            "bank_m": 4.5,
+            "offsets_m": [
+              -2.23,
+              2.15
+            ],
+            "banks_deg": [
+              8.3,
+              -7.6
+            ],
+            "shifts_m": [
+              -0.42,
+              0.28
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_shared_exit",
+        "family": "same_sign_stage",
+        "deadline_s": 360,
+        "stages": [
+          {
+            "turn_m": 6.85,
+            "bank_m": 4.28,
+            "offsets_m": [
+              -2.2,
+              2.25
+            ],
+            "banks_deg": [
+              -8.0,
+              9.2
+            ],
+            "shifts_m": [
+              -0.37,
+              0.23
+            ]
+          },
+          {
+            "turn_m": 7.12,
+            "bank_m": 4.64,
+            "offsets_m": [
+              -2.16,
+              2.32
+            ],
+            "banks_deg": [
+              7.8,
+              8.7
+            ],
+            "shifts_m": [
+              0.43,
+              -0.35
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_shared_reversal",
+        "family": "same_sign_stage",
+        "deadline_s": 364,
+        "stages": [
+          {
+            "turn_m": 7.08,
+            "bank_m": 4.46,
+            "offsets_m": [
+              -2.26,
+              2.18
+            ],
+            "banks_deg": [
+              8.6,
+              7.2
+            ],
+            "shifts_m": [
+              0.32,
+              -0.48
+            ]
+          },
+          {
+            "turn_m": 7.15,
+            "bank_m": 4.43,
+            "offsets_m": [
+              -2.22,
+              2.29
+            ],
+            "banks_deg": [
+              -8.4,
+              -9.1
+            ],
+            "shifts_m": [
+              -0.44,
+              0.24
+            ]
+          }
+        ]
+      },
+      {
+        "id": "matched_shared_long_exit",
+        "family": "same_sign_stage",
+        "deadline_s": 373,
+        "stages": [
+          {
+            "turn_m": 6.97,
+            "bank_m": 4.52,
+            "offsets_m": [
+              -2.14,
+              2.29
+            ],
+            "banks_deg": [
+              8.2,
+              -7.7
+            ],
+            "shifts_m": [
+              0.23,
+              -0.38
+            ]
+          },
+          {
+            "turn_m": 7.41,
+            "bank_m": 5.01,
+            "offsets_m": [
+              -2.34,
+              2.19
+            ],
+            "banks_deg": [
+              -9.3,
+              -8.3
+            ],
+            "shifts_m": [
+              -0.41,
+              0.48
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "base": {
+    "name": "connected_cross_slope_development_pilot",
+    "terrain": {
+      "bank_deg": 8,
+      "branch_offset_m": 2,
+      "turn_length_m": 6,
+      "bank_length_m": 3,
+      "resolution_m": 0.1
+    },
+    "command_speed_m_s": 0.12,
+    "deadline_s": 130,
+    "max_corridor_drift_m": 0.85,
+    "goal_radius_m": 0.55,
+    "starting_temperatures_c": {
+      "warm": 66.0,
+      "cool": 45.0
+    },
+    "thermal": {
+      "ambient_c": 25.0,
+      "derate_start_c": 67.0,
+      "limit_c": 70.0,
+      "time_constant_s": 100.0,
+      "rise_at_reference_c": 60.0,
+      "reference_torque_nm": 55.0,
+      "torque_fraction_at_limit": 0.75
+    }
+  },
+  "sample_interval_s": 0.02,
+  "runtime": {
+    "python": "3.12.14",
+    "mujoco": "3.9.0",
+    "numpy": "2.2.6"
+  },
+  "thermal": {
+    "slower_cooling": {
+      "ambient_c": 25.0,
+      "derate_start_c": 67.0,
+      "limit_c": 70.0,
+      "time_constant_s": 120,
+      "rise_at_reference_c": 33.12,
+      "reference_torque_nm": 55.0,
+      "torque_fraction_at_limit": 0.75
+    },
+    "near_boundary": {
+      "ambient_c": 25.0,
+      "derate_start_c": 67.0,
+      "limit_c": 70.0,
+      "time_constant_s": 120,
+      "rise_at_reference_c": 31.68,
+      "reference_torque_nm": 55.0,
+      "torque_fraction_at_limit": 0.75
+    },
+    "warm_start": {
+      "ambient_c": 25.0,
+      "derate_start_c": 67.0,
+      "limit_c": 70.0,
+      "time_constant_s": 120,
+      "rise_at_reference_c": 32.4,
+      "reference_torque_nm": 55.0,
+      "torque_fraction_at_limit": 0.75
+    }
+  },
+  "sha256": {
+    "matched_pause.json": "9409894b077334b7df4f326726c7c41b59d78a0f08b7caa9139d0e4a68f10b1f",
+    "connected_pilot.json": "b16bd56061a3b13b45a9883d1a49d11fd9801a033eb020d51565d6a30663be5f",
+    "fan_network.py": "8f16b00f6a1c2601bf3f853137ba3982c9bf1c540eddf6d21c594ebca4b01014",
+    "mission_profiles.py": "ac9e283b236b70a1ff51de2c258ea35e1765d656ef7d2c2b2f140fe5592c65ca",
+    "mission_completion.py": "cf45004c4e8098c56cad0df87bbec5ac28248865a02117433d23510e4ed20269",
+    "mission_analysis.py": "d6484ecebe6eb9dcae0e579018d3d091365c30489b8609d3d5b51075fa97e341",
+    "network.py": "c7ed191162312dabb93c537b0cfe7caf2961a67af16834a27d5bec09bd03021b",
+    "network_study.py": "920f2fe427bf10916e00b691da056ef85eda1374695182757627981626d7d5b1",
+    "network_planning.py": "63a5da3d5fac5a8e4ac4cb95b74ce2167ca6e96578f3657c5934fd6edc1256b2",
+    "connected_terrain.py": "0590087e14fd22bf7d5d064778d0c5276c1c5b0ad67bb1aee55ef548ec887a8b",
+    "connected_walk.py": "029758bc41cc475d5fcda6b694d634fbbed067c3b7f0c2d89c952d0cab947731",
+    "walking.py": "1b9eb85372ca5a700d9e9f0661980b9543eb262533d8a20ab4844a9d31c548b1",
+    "model.py": "f04da04fdd0c1fce4cea1dcff0bb476bf0d3c2799b4abe37eab918ed53b358af",
+    "pilot.py": "ba2d8428609f9240a0aa8db80cb5e6d96c193766c2f7b55c1155f1e44bc8f334",
+    "route_speed_study.py": "17cdb924496a045ca3ba0917ff8920228e3c2475b26ed22a39f04348d7fa9d8a",
+    "route_speed_profiles.py": "d094cb3feefa198eed75dd29e67aa9799c67b739ad0123817d82d1d978087e61",
+    "speed_policy.py": "15709072066cfa7e289d162cce155737d9bb030fd3e16bd5c1e42d96a9037bee",
+    "thermal.py": "2a817eacfff1d2b2335ec4be3566029b1d545bed4d1f1f0fdf3153c23d88d8d9"
+  }
+}
