@@ -1,6 +1,6 @@
 # Reproduce the hot-motor-swap study
 
-Use the [Array paper and evidence map](Elsevier%2CArray/README.md) to find the exact results for each part of the paper. The [protocol](docs/hot_motor_swap_protocol.md) and [frozen configuration](experiments/hot_motor_swap.json) specify the main experiment. [Model provenance](Hexapod_Model/README.md) describes the simplified geometry.
+See the [main study results](docs/hot_motor_swap.md) for the outcome summary and saved records. The [protocol](docs/hot_motor_swap_protocol.md) and [frozen configuration](experiments/hot_motor_swap.json) specify the main experiment. [Model provenance](Hexapod_Model/README.md) describes the simplified geometry.
 
 ## Environment
 
@@ -33,6 +33,6 @@ Restarting the warm-run command in the same output directory verifies the frozen
 .venv/bin/python -m thermal_pathfinder.pause_screening_diagnostic
 ```
 
-The first command re-audits the saved warm traces and recomputes the main summary. The other two verify the matched-pause comparison and the 48 fixed schedules in Appendix B. [Earlier planner outcomes](docs/published_speed_baseline.md) links the saved comparison used in Appendix C.
+The first command re-audits the saved warm traces and recomputes the main summary. The other two verify the matched-pause comparison and the 48 fixed schedules in Appendix B. [Earlier planner outcomes](https://github.com/robotictang/antwalker_path_finding_optimization/blob/hot-motor-swap-data-v1.0.0/results/published_speed_baseline/summary.json) links the saved comparison used in Appendix C.
 
 To regenerate the matched-pause figure from the saved results, install Matplotlib 3.10.3 in the virtual environment and run `.venv/bin/python -m thermal_pathfinder.matched_pause_figure`.
